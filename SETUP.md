@@ -52,7 +52,7 @@ When the script changes later, use **Deploy → Manage deployments → ✏️ �
 When `apps-script/Code.gs` changes:
 
 1. In the Apps Script editor, replace all of `Code.gs` with the new file and **Save**.
-2. If the change notes say so, run the function they name (for the October 2026 update: **upgrade**, once).
+2. Run **upgrade** (safe to run every time). It brings the Orders, Summary and Settings tabs and the form up to date, and shows the admin key.
 3. **Deploy → Manage deployments → ✏️ (edit) → Version: New version → Deploy.** The web app URL stays the same.
 
 ## The admin page
@@ -60,11 +60,12 @@ When `apps-script/Code.gs` changes:
 <https://nurmdabd.github.io/study-notes/admin.html> sets the prices and order options:
 
 - taking orders on or off
-- the price note
-- the price per printed page and whether the page shows an estimate
+- the price note, and whether the page shows prices
+- print types with a price per page each (black and white, colour)
 - binding options with their prices
 - pickup and payment options
 - whether to ask for department and batch
+- which subjects and papers are shown (a hidden one is left off the page and the form, and can't be ordered)
 
 An option you untick as *available* stays saved but is hidden. On saving, the order page and the Google Form use the new settings at once.
 
@@ -84,6 +85,6 @@ An option you untick as *available* stays saved but is hidden. On saving, the or
 | To change | Do this |
 |---|---|
 | Add or update packs | I run `tools/publish.py` and push. The page updates at once, and the form within the hour (or run **syncNow**). |
-| Price, price note, binding, pickup or payment options, pausing orders, asking for department and batch | The admin page. The page and the form follow at once. |
+| Prices, print types, price note, binding, pickup or payment options, pausing orders, department and batch, hiding a subject or paper | The admin page. The page and the form follow at once. |
 | WhatsApp number | `site.whatsapp` in `catalogue.json` (I can do it). |
 | Ask for department and batch in the Google Form | Besides the admin page, add a dropdown question titled exactly **Department** (or **Batch**) on the form's first page. |

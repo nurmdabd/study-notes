@@ -49,6 +49,11 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
 .opts { display: grid; gap: 6px; }
 .opt { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; }
 .opt.priced { grid-template-columns: 1fr 90px auto auto; }
+.vis-subject { padding: 8px 0; border-top: 1px solid var(--line); }
+.vis-subject:first-child { border-top: 0; }
+.vis-subject > .check { font-weight: 600; margin: 0; }
+.vis-packs { display: flex; flex-wrap: wrap; gap: 4px 16px; padding-left: 26px; }
+.vis-packs .check { margin: 4px 0 0; font-size: 0.88rem; }
 .opt .avail { display: flex; align-items: center; gap: 5px; font-size: 0.84rem; white-space: nowrap; }
 .opt .avail input { width: 18px; height: 18px; }
 .row { display: flex; gap: 8px; align-items: end; flex-wrap: wrap; }
@@ -88,11 +93,15 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
       <h2>Price</h2>
       <label for="note">Price note (shown at the top of the page)</label>
       <textarea id="note"></textarea>
-      <div class="row">
-        <div><label for="rate">Price per printed page, BDT (one side)</label><input type="number" id="rate" min="0" step="0.05"></div>
-      </div>
-      <label class="check"><input type="checkbox" id="estimate"> Show an estimated price on the order page</label>
-      <p class="help">Estimate = pages × copies × price per page + binding price × copies, marked “final price on WhatsApp”. Each order's estimate is also saved in the sheet.</p>
+      <label class="check"><input type="checkbox" id="estimate"> Show prices on the order page</label>
+      <p class="help">Each pack shows its price (pages × price per page + binding), and the order shows the total. Each order's estimate is also saved in the sheet. Prices show only for print types with a price above 0.</p>
+    </div>
+
+    <div class="card">
+      <h2>Print types</h2>
+      <p class="help">Price in BDT per printed page (one side). With one type available, the page shows it as plain text; with more, the student picks one.</p>
+      <div class="opts" id="print"></div>
+      <button class="btn small" type="button" data-add="print">+ Add print type</button>
     </div>
 
     <div class="card">
@@ -130,6 +139,12 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
       <p class="help">The Google Form only asks for these if a question titled exactly “Department” or “Batch” is added to it.</p>
     </div>
 
+    <div class="card">
+      <h2>Subjects and papers shown</h2>
+      <p class="help">Untick to hide a subject (all its packs) or one pack from the page and the form. Hidden packs cannot be ordered; nothing is deleted.</p>
+      <div id="vis"></div>
+    </div>
+
     <div class="bar">
       <button class="btn primary" type="button" id="save">Save</button>
       <span class="links" id="links"></span>
@@ -145,12 +160,12 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
     set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } },
     del(k) { try { localStorage.removeItem(k); } catch (e) { /* private mode */ } },
   };
-  let endpoint = '';
+  let endpoint = '', catalogue = null;
   const saved = store.get('sn-admin-key');
   if (saved) { $('key').value = saved; $('remember').checked = true; }
 
   fetch('catalogue.json', { cache: 'no-cache' }).then(r => r.json()).then(c => {
-    endpoint = c.site.order_endpoint;
+    endpoint = c.site.order_endpoint; catalogue = c;
     if (!endpoint) msg('err', 'The order web app is not connected yet (order_endpoint in catalogue.json).');
     else if (saved) call('adminLoad');
   });
@@ -183,13 +198,16 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
 
   function optRow(kind, o) {
     const row = document.createElement('div');
-    row.className = 'opt' + (kind === 'binding' ? ' priced' : '');
+    const priced = kind === 'binding' || kind === 'print';
+    row.className = 'opt' + (priced ? ' priced' : '');
     row.innerHTML = '<input type="text" class="name" aria-label="Option name">' +
-      (kind === 'binding' ? '<input type="number" class="price" min="0" step="1" aria-label="Price per copy, BDT" placeholder="৳">' : '') +
+      (kind === 'binding' ? '<input type="number" class="price" min="0" step="1" aria-label="Price per copy, BDT" placeholder="৳/copy">' : '') +
+      (kind === 'print' ? '<input type="number" class="price" min="0" step="0.05" aria-label="Price per page, BDT" placeholder="৳/page">' : '') +
       '<label class="avail"><input type="checkbox" class="on"> available</label>' +
       '<button class="btn small" type="button" aria-label="Remove option">✕</button>';
     row.querySelector('.name').value = o.name || '';
     if (kind === 'binding') row.querySelector('.price').value = Number(o.price) || 0;
+    if (kind === 'print') row.querySelector('.price').value = Number(o.price_per_page) || 0;
     row.querySelector('.on').checked = o.available !== false;
     row.querySelector('button').addEventListener('click', () => row.remove());
     $(kind).appendChild(row);
@@ -199,25 +217,52 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
   function fill(s) {
     $('accepting').checked = !!s.accepting_orders;
     $('note').value = s.price_note || '';
-    $('rate').value = Number(s.price_per_page) || 0;
     $('estimate').checked = !!s.show_estimate;
-    ['binding', 'pickup', 'payment'].forEach(k => { $(k).innerHTML = ''; (s[k] || []).forEach(o => optRow(k, o)); });
+    fillVisibility(s.hidden || { subjects: [], items: [] });
+    ['print', 'binding', 'pickup', 'payment'].forEach(k => { $(k).innerHTML = ''; (s[k] || []).forEach(o => optRow(k, o)); });
     $('dept-ask').checked = !!s.department.ask; $('dept-default').value = s.department.default || '';
     $('dept-options').value = (s.department.options || []).join(', ');
     $('batch-ask').checked = !!s.batch.ask; $('batch-default').value = s.batch.default || '';
     $('batch-options').value = (s.batch.options || []).join(', ');
   }
 
+  function fillVisibility(h) {
+    const box = $('vis');
+    box.innerHTML = '';
+    catalogue.subjects.forEach(s => {
+      const packs = catalogue.items.filter(it => it.subject === s.code);
+      if (!packs.length) return;
+      const div = document.createElement('div');
+      div.className = 'vis-subject';
+      div.innerHTML = '<label class="check"><input type="checkbox" data-subject="' + s.code + '"' + (h.subjects.includes(s.code) ? '' : ' checked') + '> ' +
+        s.code + ' ' + s.title + '</label><div class="vis-packs">' +
+        packs.map(it => '<label class="check"><input type="checkbox" data-item="' + it.id + '"' + (h.items.includes(it.id) ? '' : ' checked') + '> ' +
+          it.session + ' ' + it.document.toLowerCase() + '</label>').join('') + '</div>';
+      const sub = div.querySelector('[data-subject]');
+      const sync = () => div.querySelectorAll('[data-item]').forEach(x => { x.disabled = !sub.checked; });
+      sub.addEventListener('change', sync); sync();
+      box.appendChild(div);
+    });
+  }
+
+  function collectVisibility() {
+    return {
+      subjects: [...$('vis').querySelectorAll('[data-subject]:not(:checked)')].map(x => x.dataset.subject),
+      items: [...$('vis').querySelectorAll('[data-item]:not(:checked)')].map(x => x.dataset.item),
+    };
+  }
+
   function collect() {
     const list = k => [...$(k).querySelectorAll('.opt')].map(r => {
       const o = { name: r.querySelector('.name').value.trim(), available: r.querySelector('.on').checked };
       if (k === 'binding') o.price = Number(r.querySelector('.price').value) || 0;
+      if (k === 'print') o.price_per_page = Number(r.querySelector('.price').value) || 0;
       return o;
     }).filter(o => o.name);
     const split = v => v.split(',').map(x => x.trim()).filter(Boolean);
     return {
       accepting_orders: $('accepting').checked, price_note: $('note').value.trim(),
-      price_per_page: Number($('rate').value) || 0, show_estimate: $('estimate').checked,
+      show_estimate: $('estimate').checked, print: list('print'), hidden: collectVisibility(),
       binding: list('binding'), pickup: list('pickup'), payment: list('payment'),
       department: { ask: $('dept-ask').checked, default: $('dept-default').value.trim(), options: split($('dept-options').value) },
       batch: { ask: $('batch-ask').checked, default: $('batch-default').value.trim(), options: split($('batch-options').value) },

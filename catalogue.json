@@ -5,7 +5,17 @@
     "whatsapp": "8801352679856",
     "order_endpoint": "https://script.google.com/macros/s/AKfycbyI6qt1H_VxLz4zk8gPeY1QW3rLA35StK6Q_gvABcwK8gYvr5XVSBUaR7ULoX7aA3gLUQ/exec",
     "google_form": "",
-    "price_note": "At printing cost, no profit. The price can move a little with paper and printing costs, so I'll confirm it on WhatsApp before printing.",
+    "price_note": "At printing cost. The price can vary slightly with paper and shop rates—check each card for the exact price.",
+    "print": [
+      {
+        "name": "Black and white",
+        "available": true
+      },
+      {
+        "name": "Colour",
+        "available": false
+      }
+    ],
     "department": {
       "ask": false,
       "default": "EEE",
@@ -93,7 +103,7 @@
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
       "pages": 60,
-      "file": "EEE329-COM/2021-22-pack.pdf",
+      "file": "EEE329-COM/COM-2021-22-pack.pdf",
       "printable": true
     },
     {
@@ -103,7 +113,7 @@
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
       "pages": 92,
-      "file": "EEE337-PSII/2021-22-pack.pdf",
+      "file": "EEE337-PSII/PSII-2021-22-pack.pdf",
       "printable": true
     },
     {
@@ -113,7 +123,7 @@
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
       "pages": 118,
-      "file": "EEE421-SSD/2020-21-pack.pdf",
+      "file": "EEE421-SSD/SSD-2020-21-pack.pdf",
       "printable": true
     },
     {
@@ -123,7 +133,7 @@
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
       "pages": 58,
-      "file": "EEE443-PPE/2020-21-pack.pdf",
+      "file": "EEE443-PPE/PPE-2020-21-pack.pdf",
       "printable": true
     },
     {
@@ -133,7 +143,7 @@
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
       "pages": 90,
-      "file": "EEE455-VLSI/2020-21-pack.pdf",
+      "file": "EEE455-VLSI/VLSI-2020-21-pack.pdf",
       "printable": true
     },
     {
@@ -143,7 +153,7 @@
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
       "pages": 106,
-      "file": "EEE459-Semi/2020-21-pack.pdf",
+      "file": "EEE459-Semi/Semi-2020-21-pack.pdf",
       "printable": true
     },
     {
@@ -153,7 +163,7 @@
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
       "pages": 70,
-      "file": "EEE475-RF/2019-20-pack.pdf",
+      "file": "EEE475-RF/RF-2019-20-pack.pdf",
       "printable": true
     },
     {
@@ -163,7 +173,7 @@
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
       "pages": 76,
-      "file": "EEE475-RF/2020-21-pack.pdf",
+      "file": "EEE475-RF/RF-2020-21-pack.pdf",
       "printable": true
     }
   ]

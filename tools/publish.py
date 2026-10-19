@@ -5,7 +5,8 @@ Usage:  python3 tools/publish.py [path/to/academic-material]   (default: ../acad
 
 catalogue.json keeps its "site" and "subjects" parts as they are; only "items" is rebuilt.
 Each exam pack's share copy (<subject>/past-papers/pdf/<session>-pack_share.pdf) is copied to
-<subject>/<session>-pack.pdf here. "pages" is the page count of the print copy, which is what gets printed.
+<subject>/<short>-<session>-pack.pdf here, <short> being the folder's short name (EEE475-RF -> RF-2019-20-pack.pdf),
+so a downloaded file says its subject. PDFs left over from an older name are removed. "pages" is the page count of the print copy, which is what gets printed.
 A subject folder not yet listed under "subjects" stops the script, so its title is added by hand first.
 """
 import json
@@ -24,6 +25,7 @@ catalogue = json.loads(CAT.read_text(encoding="utf-8"))
 subjects = {s["folder"]: s for s in catalogue["subjects"]}
 
 items = []
+published = set()
 for share in sorted(SRC.glob("EEE*/past-papers/pdf/*-pack_share.pdf")):
     folder = share.parts[-4]
     session = re.match(r"(\d{4}-\d{2})-pack_share\.pdf$", share.name).group(1)
@@ -31,9 +33,10 @@ for share in sorted(SRC.glob("EEE*/past-papers/pdf/*-pack_share.pdf")):
         sys.exit(f"{folder} is not listed under 'subjects' in catalogue.json; add it first.")
     printed = share.with_name(f"{session}-pack_print.pdf")
     pages = len(PdfReader(printed if printed.exists() else share).pages)
-    dest = SITE / folder / f"{session}-pack.pdf"
+    dest = SITE / folder / f"{folder.split('-', 1)[1]}-{session}-pack.pdf"
     dest.parent.mkdir(exist_ok=True)
     shutil.copy2(share, dest)
+    published.add(dest)
     code = subjects[folder]["code"]
     items.append({
         "id": f"{code}-{session}-pack",
@@ -42,9 +45,14 @@ for share in sorted(SRC.glob("EEE*/past-papers/pdf/*-pack_share.pdf")):
         "document": "Exam pack",
         "detail": "Past-paper solution + formula sheet",
         "pages": pages,
-        "file": f"{folder}/{session}-pack.pdf",
+        "file": f"{folder}/{dest.name}",
         "printable": True,
     })
+
+for old in SITE.glob("EEE*/*.pdf"):
+    if old not in published:
+        old.unlink()
+        print(f"  removed {old.relative_to(SITE)}")
 
 catalogue["items"] = items
 CAT.write_text(json.dumps(catalogue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

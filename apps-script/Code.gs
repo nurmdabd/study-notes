@@ -29,8 +29,9 @@ const SHEETS = { orders: 'Orders', catalogue: 'Catalogue', summary: 'Summary', s
 const ORDER_HEADERS = [
   'Received', 'Order ID', 'Source', 'Name', 'Student ID', 'Department', 'Batch', 'WhatsApp',
   'Subject', 'Session', 'Document', 'Item ID', 'Copies', 'Pages', 'Binding', 'Pickup',
-  'Payment', 'Transaction ID', 'Notes', 'Status', 'Estimate (BDT)',
+  'Payment', 'Transaction ID', 'Notes', 'Status', 'Estimate (BDT)', 'Print',
 ];
+const STATUS_COL = ORDER_HEADERS.indexOf('Status') + 1; // T
 const STATUSES = ['New', 'Price sent', 'Paid', 'Printed', 'Delivered', 'Cancelled'];
 const STATUS_COLOURS = {
   'New': '#fde68a', 'Price sent': '#bfdbfe', 'Paid': '#bbf7d0',
@@ -40,7 +41,7 @@ const STATUS_COLOURS = {
 // Form question titles that are fixed (the subject questions are named from the catalogue).
 const Q = {
   name: 'Name', id: 'Student ID', phone: 'WhatsApp number', dept: 'Department', batch: 'Batch',
-  copies: 'Copies of each pack', binding: 'Binding', pickup: 'Pickup', payment: 'Payment',
+  copies: 'Copies of each pack', print: 'Print', binding: 'Binding', pickup: 'Pickup', payment: 'Payment',
   trx: 'Transaction ID', notes: 'Notes',
 };
 
@@ -79,13 +80,29 @@ function syncNow() {
   writePrefilledLinks_(ss, form, cat);
 }
 
-/** Run once after updating the script: makes the Settings tab and the admin key, and shows the key. */
+/**
+ * Run once after updating the script (safe to run again): brings the Orders and Summary tabs, the
+ * Settings tab and the form up to date, and shows the admin key.
+ */
 function upgrade() {
   const ss = ss_();
-  ss.getSheetByName(SHEETS.orders).getRange(1, ORDER_HEADERS.length).setValue(ORDER_HEADERS[ORDER_HEADERS.length - 1])
+  ss.getSheetByName(SHEETS.orders).getRange(1, 1, 1, ORDER_HEADERS.length).setValues([ORDER_HEADERS])
     .setFontWeight('bold').setBackground('#1f2937').setFontColor('#ffffff');
+  writeSettings_(settings_()); // adds new settings with their defaults
+  const id = PropertiesService.getScriptProperties().getProperty('FORM_ID');
+  if (id) addPrintQuestion_(FormApp.openById(id), settings_());
+  setupSummarySheet_(ss);
   syncNow();
   showAdminKey();
+}
+
+/** Adds the "Print" question (black and white or colour) to a form made before it existed. */
+function addPrintQuestion_(form, st) {
+  if (form.getItems(FormApp.ItemType.MULTIPLE_CHOICE).some(it => it.getTitle() === Q.print)) return;
+  const binding = form.getItems(FormApp.ItemType.MULTIPLE_CHOICE).find(it => it.getTitle() === Q.binding);
+  const q = form.addMultipleChoiceItem().setTitle(Q.print).setRequired(true)
+    .setChoiceValues(st.print.filter(o => o.available).map(o => o.name));
+  if (binding) form.moveItem(q.getIndex(), binding.getIndex());
 }
 
 /** Shows the admin page's key in the Execution log (makes one the first time). Keep it private. */
@@ -211,9 +228,10 @@ function getOrCreateForm_(cat) {
     .setHelpText('Different numbers for different packs? Write them in Notes.')
     .setValidation(FormApp.createTextValidation()
       .requireNumberBetween(1, CONFIG.MAX_COPIES).build());
-  form.addMultipleChoiceItem().setTitle(Q.binding).setChoiceValues(s.binding).setRequired(true);
-  form.addMultipleChoiceItem().setTitle(Q.pickup).setChoiceValues(s.pickup).setRequired(true);
-  form.addMultipleChoiceItem().setTitle(Q.payment).setChoiceValues(s.payment).setRequired(true)
+  form.addMultipleChoiceItem().setTitle(Q.print).setChoiceValues(['Black and white']).setRequired(true);
+  form.addMultipleChoiceItem().setTitle(Q.binding).setChoiceValues(['Stapled']).setRequired(true);
+  form.addMultipleChoiceItem().setTitle(Q.pickup).setChoiceValues(['On campus']).setRequired(true);
+  form.addMultipleChoiceItem().setTitle(Q.payment).setChoiceValues(['Cash at pickup']).setRequired(true)
     .setHelpText('bKash or Nagad: I send the number with the price.');
   form.addTextItem().setTitle(Q.trx).setHelpText('Only if you already paid by bKash or Nagad.');
   form.addParagraphTextItem().setTitle(Q.notes);
@@ -222,6 +240,7 @@ function getOrCreateForm_(cat) {
   props.setProperty('FORM_ID', form.getId());
   props.setProperty('PB_PACKS', String(packs.getId()));
   props.setProperty('PB_PRINTING', String(printing.getId()));
+  syncFormOptions_(form, settings_()); // the real options, from the Settings tab
   return form;
 }
 
@@ -230,7 +249,8 @@ function syncForm_(form, cat) {
   const props = PropertiesService.getScriptProperties();
   const known = JSON.parse(props.getProperty('SUBJECT_ITEMS') || '{}'); // subject code -> item id
   const bySubject = {};
-  cat.items.filter(it => it.printable).forEach(it => {
+  const hidden = settings_().hidden || { subjects: [], items: [] };
+  cat.items.filter(it => it.printable && !isHidden_(hidden, it)).forEach(it => {
     (bySubject[it.subject] = bySubject[it.subject] || []).push(it);
   });
   const printingId = Number(props.getProperty('PB_PRINTING'));
@@ -302,6 +322,7 @@ function handleFormSubmit(e) {
       case Q.dept: order.department = answer; break;
       case Q.batch: order.batch = answer; break;
       case Q.copies: copies = Number(answer) || 1; break;
+      case Q.print: order.print = answer; break;
       case Q.binding: order.binding = answer; break;
       case Q.pickup: order.pickup = answer; break;
       case Q.payment: order.payment = answer; break;
@@ -321,13 +342,19 @@ function handleFormSubmit(e) {
  * The Settings tab: one row per setting, the value as JSON. Edit it on the admin page; by hand only
  * with care. Options are lists of {name, available} (binding also has price, in BDT per copy).
  */
-const SETTING_KEYS = ['accepting_orders', 'price_note', 'price_per_page', 'show_estimate',
-  'binding', 'pickup', 'payment', 'department', 'batch'];
+const SETTING_KEYS = ['accepting_orders', 'price_note', 'show_estimate', 'print',
+  'binding', 'pickup', 'payment', 'department', 'batch', 'hidden'];
+const PRICE_NOTE = 'At printing cost. The price can vary slightly with paper and shop rates\u2014check each card for the exact price.';
+const OLD_PRICE_NOTES = [
+  "Printing cost only, no profit. I'll confirm the price on WhatsApp before printing.",
+  "At printing cost, no profit. The price can move a little with paper and printing costs, so I'll confirm it on WhatsApp before printing.",
+];
 const SETTING_NOTES = {
   accepting_orders: 'true or false. false pauses ordering on the page.',
   price_note: 'The price line shown on the order page.',
-  price_per_page: 'BDT per printed page (one side). 0 hides the estimate.',
-  show_estimate: 'true or false: show an estimated price on the order page.',
+  show_estimate: 'true or false: show the prices on the order page (on each pack and for the order).',
+  print: 'List of {"name", "price_per_page" (BDT per printed page side), "available"}, e.g. black and white, colour.',
+  hidden: '{"subjects": [subject codes], "items": [pack IDs]} hidden from the page and the form.',
   binding: 'List of {"name", "price" (BDT per copy), "available"}.',
   pickup: 'List of {"name", "available"}.',
   payment: 'List of {"name", "available"}.',
@@ -343,9 +370,11 @@ function defaultSettings_() {
     Object.assign({ available: true }, extra || {}, typeof n === 'string' ? { name: n } : n));
   return {
     accepting_orders: true,
-    price_note: site.price_note || "Printed copies at printing cost, no profit. I'll confirm the price on WhatsApp before printing.",
-    price_per_page: 0,
+    price_note: site.price_note || PRICE_NOTE,
     show_estimate: false,
+    print: [{ name: 'Black and white', price_per_page: 0, available: true },
+      { name: 'Colour', price_per_page: 0, available: false }],
+    hidden: { subjects: [], items: [] },
     binding: list(site.binding || ['Stapled'], { price: 0 }),
     pickup: list(site.pickup || ['On campus']),
     payment: list(site.payment || ['Cash at pickup', 'bKash', 'Nagad']),
@@ -363,13 +392,21 @@ function settings_() {
     writeSettings_(defaultSettings_());
     return settings_();
   }
-  const out = { accepting_orders: true, price_per_page: 0, show_estimate: false }; // if a row was deleted
+  const out = { accepting_orders: true, show_estimate: false }; // if a row was deleted
   if (sh.getLastRow() > 1) {
     sh.getRange(2, 1, sh.getLastRow() - 1, 2).getValues().forEach(([k, v]) => {
       if (!k) return;
       try { out[k] = JSON.parse(v); } catch (e) { out[k] = v; }
     });
   }
+  // settings older than this script: one price per page became the print types
+  if (!Array.isArray(out.print)) {
+    out.print = [{ name: 'Black and white', price_per_page: Number(out.price_per_page) || 0, available: true },
+      { name: 'Colour', price_per_page: 0, available: false }];
+  }
+  delete out.price_per_page;
+  if (!out.hidden) out.hidden = { subjects: [], items: [] };
+  if (OLD_PRICE_NOTES.includes(out.price_note)) out.price_note = PRICE_NOTE;
   return out;
 }
 
@@ -395,8 +432,10 @@ function publicSettings_(st) {
   } catch (e) { /* no form */ }
   return {
     accepting_orders: !!st.accepting_orders, price_note: st.price_note,
-    price_per_page: Number(st.price_per_page) || 0, show_estimate: !!st.show_estimate,
+    show_estimate: !!st.show_estimate,
+    print: avail(st.print).map(o => ({ name: o.name, price_per_page: Number(o.price_per_page) || 0 })),
     binding: avail(st.binding).map(o => ({ name: o.name, price: Number(o.price) || 0 })),
+    hidden: st.hidden,
     pickup: avail(st.pickup).map(o => o.name), payment: avail(st.payment).map(o => o.name),
     department: st.department, batch: st.batch, google_form: formUrl,
   };
@@ -406,7 +445,9 @@ function publicSettings_(st) {
 function checkSettings_(st) {
   const isList = l => Array.isArray(l) && l.every(o => o && typeof o.name === 'string' && o.name.trim());
   if (typeof st.price_note !== 'string') return 'The price note is missing.';
-  if (!(Number(st.price_per_page) >= 0)) return 'The price per page must be 0 or more.';
+  if (!isList(st.print) || st.print.some(o => !(Number(o.price_per_page) >= 0))) return 'Every print type needs a name and a price of 0 or more.';
+  if (!st.print.some(o => o.available)) return 'At least one print type must be available.';
+  if (!st.hidden || !Array.isArray(st.hidden.subjects) || !Array.isArray(st.hidden.items)) return 'The hidden list is malformed.';
   for (const k of ['binding', 'pickup', 'payment']) {
     if (!isList(st[k])) return 'Every ' + k + ' option needs a name.';
     if (!st[k].some(o => o.available)) return 'At least one ' + k + ' option must be available.';
@@ -419,9 +460,13 @@ function checkSettings_(st) {
   return '';
 }
 
-/** Gives the form's binding, pickup and payment questions the available options. */
+function isHidden_(hidden, it) {
+  return hidden.subjects.includes(it.subject) || hidden.items.includes(it.id);
+}
+
+/** Gives the form's print, binding, pickup and payment questions the available options. */
 function syncFormOptions_(form, st) {
-  const want = { [Q.binding]: st.binding, [Q.pickup]: st.pickup, [Q.payment]: st.payment };
+  const want = { [Q.print]: st.print, [Q.binding]: st.binding, [Q.pickup]: st.pickup, [Q.payment]: st.payment };
   form.getItems(FormApp.ItemType.MULTIPLE_CHOICE).forEach(it => {
     const list = want[it.getTitle()];
     if (!list) return;
@@ -484,7 +529,15 @@ function admin_(data) {
     try {
       writeSettings_(st);
       const id = PropertiesService.getScriptProperties().getProperty('FORM_ID');
-      if (id) syncFormOptions_(FormApp.openById(id), st);
+      if (id) {
+        const form = FormApp.openById(id);
+        syncFormOptions_(form, st);
+        try { // shown and hidden packs; the hourly sync catches up if the website does not answer
+          const cat = fetchCatalogue_();
+          syncForm_(form, cat);
+          writePrefilledLinks_(ss_(), form, cat);
+        } catch (e) { /* later */ }
+      }
     } finally {
       lock.releaseLock();
     }
@@ -504,12 +557,13 @@ function checkOrder_(d) {
   const st = settings_();
   if (!st.accepting_orders) return 'Print orders are paused right now. Please message me on WhatsApp.';
   const ok = (list, v) => (list || []).some(o => o.available && o.name === v);
+  if (!ok(st.print, d.print)) return 'That print type is not available now.';
   if (!ok(st.binding, d.binding)) return 'That binding is not available now.';
   if (!ok(st.pickup, d.pickup)) return 'That pickup option is not available now.';
   if (!ok(st.payment, d.payment)) return 'That payment option is not available now.';
   const cat = catalogueById_();
   for (const it of d.items) {
-    if (!cat[it.id] || !cat[it.id].printable) return 'Unknown pack: ' + it.id;
+    if (!cat[it.id] || !cat[it.id].printable || isHidden_(st.hidden, cat[it.id])) return 'Unknown pack: ' + it.id;
     const n = Number(it.copies);
     if (!(n >= 1 && n <= CONFIG.MAX_COPIES)) return 'Copies must be 1 to ' + CONFIG.MAX_COPIES + '.';
   }
@@ -533,7 +587,8 @@ function appendOrder_(order, source, when) {
   const t = v => (v == null ? '' : String(v).slice(0, 500));
   const items = order.items.length ? order.items : [{ id: '', label: '(no pack ticked)', copies: 0 }];
   const st = settings_();
-  const rate = Number(st.price_per_page) || 0;
+  const type = (st.print || []).find(o => o.name === order.print);
+  const rate = type ? Number(type.price_per_page) || 0 : 0;
   const bind = (st.binding || []).find(o => o.name === order.binding);
   const bindPrice = bind ? Number(bind.price) || 0 : 0;
   const rows = items.map(it => {
@@ -545,7 +600,7 @@ function appendOrder_(order, source, when) {
       t(order.department || site.department), t(order.batch || site.batch), "'" + t(order.phone),
       c.subject || '', c.session || '', c.document || t(it.label), it.id || '',
       Number(it.copies) || 0, c.pages || '', t(order.binding), t(order.pickup),
-      t(order.payment), t(order.trx), t(order.notes), 'New', estimate,
+      t(order.payment), t(order.trx), t(order.notes), 'New', estimate, t(order.print),
     ];
   });
   sh.getRange(sh.getLastRow() + 1, 1, rows.length, ORDER_HEADERS.length).setValues(rows);
@@ -574,7 +629,7 @@ function notify_(orderId, source, order, rows) {
     MailApp.sendEmail(Session.getEffectiveUser().getEmail(),
       'New print order ' + orderId + ' (' + source + ')',
       order.name + ' (' + order.studentId + '), WhatsApp ' + order.phone + '\n\n' + lines +
-      '\n\nBinding: ' + (order.binding || '') + '\nPickup: ' + (order.pickup || '') +
+      '\n\nPrint: ' + (order.print || '') + '\nBinding: ' + (order.binding || '') + '\nPickup: ' + (order.pickup || '') +
       '\nPayment: ' + (order.payment || '') + (order.trx ? ' (' + order.trx + ')' : '') +
       (order.notes ? '\nNotes: ' + order.notes : '') + '\n\n' + ss_().getUrl());
   } catch (e) { /* an order is never lost because an email failed */ }
@@ -588,7 +643,7 @@ function setupOrdersSheet_(ss) {
     .setFontWeight('bold').setBackground('#1f2937').setFontColor('#ffffff');
   sh.setFrozenRows(1);
   sh.getRange('A2:A').setNumberFormat('yyyy-mm-dd hh:mm');
-  const status = sh.getRange(2, ORDER_HEADERS.length, sh.getMaxRows() - 1, 1);
+  const status = sh.getRange(2, STATUS_COL, sh.getMaxRows() - 1, 1);
   status.setDataValidation(SpreadsheetApp.newDataValidation().requireValueInList(STATUSES, true).build());
   const rules = STATUSES.map(s => SpreadsheetApp.newConditionalFormatRule()
     .whenFormulaSatisfied('=$T2="' + s + '"').setBackground(STATUS_COLOURS[s])
@@ -600,13 +655,13 @@ function setupOrdersSheet_(ss) {
 function setupSummarySheet_(ss) {
   const sh = ss.getSheetByName(SHEETS.summary) || ss.insertSheet(SHEETS.summary, 1);
   sh.clear();
-  const o = "'" + SHEETS.orders + "'!A:T";
+  const o = "'" + SHEETS.orders + "'!A:V";
   const blocks = [
     ['A1', 'To print (New, Price sent, Paid)',
-      '=QUERY(' + o + ',"select I, J, K, sum(M), max(N) where (T = \'New\' or T = \'Price sent\' or T = \'Paid\') and L <> \'\' group by I, J, K label sum(M) \'Copies\', max(N) \'Pages each\'",1)'],
-    ['G1', 'By department and batch',
+      '=QUERY(' + o + ',"select I, J, K, V, sum(M), max(N) where (T = \'New\' or T = \'Price sent\' or T = \'Paid\') and L <> \'\' group by I, J, K, V label V \'Print\', sum(M) \'Copies\', max(N) \'Pages each\'",1)'],
+    ['H1', 'By department and batch',
       '=QUERY(' + o + ',"select F, G, I, J, sum(M) where B is not null and T <> \'Cancelled\' group by F, G, I, J label sum(M) \'Copies\'",1)'],
-    ['M1', 'Orders by status',
+    ['N1', 'Orders by status',
       '=QUERY(' + o + ',"select T, count(B) where B is not null group by T label count(B) \'Lines\'",1)'],
   ];
   blocks.forEach(([cell, title, formula]) => {
