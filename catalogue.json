@@ -1,0 +1,162 @@
+{
+  "site": {
+    "title": "Study notes",
+    "owner": "Nur Mohammad",
+    "whatsapp": "8801352679856",
+    "order_endpoint": "",
+    "google_form": "",
+    "price_note": "Printing cost only, no profit. I'll confirm the price on WhatsApp before printing.",
+    "department": {
+      "ask": false,
+      "default": "EEE",
+      "options": [
+        "EEE"
+      ]
+    },
+    "batch": {
+      "ask": false,
+      "default": "2021-22",
+      "options": [
+        "2021-22"
+      ]
+    },
+    "binding": [
+      "Stapled",
+      "Spiral binding"
+    ],
+    "pickup": [
+      "On campus (place confirmed on WhatsApp)"
+    ],
+    "payment": [
+      "Cash at pickup",
+      "bKash",
+      "Nagad"
+    ]
+  },
+  "subjects": [
+    {
+      "folder": "EEE329-COM",
+      "code": "EEE329",
+      "short": "COM",
+      "title": "Communication Engineering I"
+    },
+    {
+      "folder": "EEE337-PSII",
+      "code": "EEE337",
+      "short": "PS II",
+      "title": "Power System II"
+    },
+    {
+      "folder": "EEE421-SSD",
+      "code": "EEE421",
+      "short": "SSD",
+      "title": "Solid State Devices"
+    },
+    {
+      "folder": "EEE443-PPE",
+      "code": "EEE443",
+      "short": "PPE",
+      "title": "Power Plant Engineering"
+    },
+    {
+      "folder": "EEE455-VLSI",
+      "code": "EEE455",
+      "short": "VLSI",
+      "title": "VLSI Design and Testing"
+    },
+    {
+      "folder": "EEE459-Semi",
+      "code": "EEE459",
+      "short": "Semi",
+      "title": "Compound Semiconductor and Hetero-Junction Devices"
+    },
+    {
+      "folder": "EEE475-RF",
+      "code": "EEE475",
+      "short": "RF",
+      "title": "RF and Microwave Engineering"
+    }
+  ],
+  "items": [
+    {
+      "id": "EEE329-2021-22-pack",
+      "subject": "EEE329",
+      "session": "2021-22",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 60,
+      "file": "EEE329-COM/2021-22-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE337-2021-22-pack",
+      "subject": "EEE337",
+      "session": "2021-22",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 92,
+      "file": "EEE337-PSII/2021-22-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE421-2020-21-pack",
+      "subject": "EEE421",
+      "session": "2020-21",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 118,
+      "file": "EEE421-SSD/2020-21-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE443-2020-21-pack",
+      "subject": "EEE443",
+      "session": "2020-21",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 58,
+      "file": "EEE443-PPE/2020-21-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE455-2020-21-pack",
+      "subject": "EEE455",
+      "session": "2020-21",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 90,
+      "file": "EEE455-VLSI/2020-21-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE459-2020-21-pack",
+      "subject": "EEE459",
+      "session": "2020-21",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 106,
+      "file": "EEE459-Semi/2020-21-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE475-2019-20-pack",
+      "subject": "EEE475",
+      "session": "2019-20",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 70,
+      "file": "EEE475-RF/2019-20-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE475-2020-21-pack",
+      "subject": "EEE475",
+      "session": "2020-21",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 76,
+      "file": "EEE475-RF/2020-21-pack.pdf",
+      "printable": true
+    }
+  ]
+}

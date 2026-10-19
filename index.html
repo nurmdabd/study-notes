@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study Notes</title>
+<meta name="description" content="Free exam packs (past-paper solutions with formula sheets) by Nur Mohammad, and printed copies at printing cost.">
+<style>
+:root {
+  --bg: #f7f7f5; --surface: #ffffff; --text: #1c1d1f; --muted: #5d6168; --line: #e3e3df;
+  --accent: #1f5fbf; --accent-text: #ffffff; --accent-soft: #e8effa; --ok: #1e7a46; --ok-soft: #e4f4ea;
+  --err: #b42318; --err-soft: #fdecea; --wa: #1a8f4c;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141517; --surface: #1d1f22; --text: #ececea; --muted: #a2a6ad; --line: #2e3136;
+    --accent: #7aa7ec; --accent-text: #0f1a2b; --accent-soft: #1d2a3d; --ok: #6cc893; --ok-soft: #173024;
+    --err: #f2877d; --err-soft: #3a1d1b; --wa: #4cc483;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141517; --surface: #1d1f22; --text: #ececea; --muted: #a2a6ad; --line: #2e3136;
+  --accent: #7aa7ec; --accent-text: #0f1a2b; --accent-soft: #1d2a3d; --ok: #6cc893; --ok-soft: #173024;
+  --err: #f2877d; --err-soft: #3a1d1b; --wa: #4cc483;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+header { padding: 32px 0 16px; }
+h1 { font-size: 1.75rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+.lead { color: var(--muted); margin: 0; max-width: 60ch; }
+.note { margin-top: 12px; display: inline-block; background: var(--accent-soft); padding: 6px 12px;
+  border-radius: 8px; font-size: 0.92rem; }
+.layout { display: grid; grid-template-columns: 1fr; gap: 24px; padding-bottom: 48px; }
+@media (min-width: 900px) { .layout { grid-template-columns: 1fr 360px; align-items: start; }
+  .panel { position: sticky; top: 16px; } }
+h2 { font-size: 1.1rem; margin: 0 0 12px; }
+.subject { background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin-bottom: 16px; }
+.subject h3 { margin: 0; font-size: 1rem; }
+.subject .code { color: var(--muted); font-weight: 500; font-size: 0.9rem; }
+.pack { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 12px 0 0;
+  margin-top: 12px; border-top: 1px solid var(--line); }
+.pack .info { flex: 1 1 220px; min-width: 0; }
+.pack .name { font-weight: 600; }
+.pack .meta { color: var(--muted); font-size: 0.88rem; }
+.pack.picked { }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px;
+  padding: 0 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface);
+  color: var(--text); font: inherit; font-size: 0.92rem; cursor: pointer; text-decoration: none; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); font-weight: 600; }
+.btn.wa { background: var(--wa); color: #fff; border-color: var(--wa); font-weight: 600; }
+.btn.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn.block { width: 100%; }
+.stepper { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.stepper button { width: 36px; height: 38px; border: 0; background: var(--surface); color: var(--text); font-size: 1.1rem; cursor: pointer; }
+.stepper span { min-width: 28px; text-align: center; font-variant-numeric: tabular-nums; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.cart { list-style: none; margin: 0 0 8px; padding: 0; }
+.cart li { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; border-bottom: 1px dashed var(--line); font-size: 0.92rem; }
+.cart .empty { color: var(--muted); border: 0; }
+.total { color: var(--muted); font-size: 0.88rem; margin-bottom: 12px; }
+label { display: block; font-size: 0.88rem; font-weight: 600; margin: 10px 0 4px; }
+label .opt { color: var(--muted); font-weight: 400; }
+input, select, textarea { width: 100%; min-height: 40px; padding: 8px 10px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--text); font: inherit; font-size: 0.95rem; }
+textarea { min-height: 64px; resize: vertical; }
+input:focus, select:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.actions { display: grid; gap: 8px; margin-top: 16px; }
+.msg { margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 0.92rem; }
+.msg.ok { background: var(--ok-soft); color: var(--ok); }
+.msg.err { background: var(--err-soft); color: var(--err); }
+.small { font-size: 0.85rem; color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding: 16px 0 32px; color: var(--muted); font-size: 0.85rem; }
+.jump { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 5; box-shadow: 0 4px 16px rgba(0,0,0,.18); }
+@media (min-width: 900px) { .jump { display: none !important; } }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Study notes</h1>
+    <p class="lead">Exam packs by <span id="owner">Nur Mohammad</span>: each past paper fully solved, with its formula sheet. Download the PDF free, or order a printed copy.</p>
+    <div class="note" id="price-note"></div>
+  </header>
+
+  <div class="layout">
+    <main>
+      <h2>Exam packs</h2>
+      <div id="subjects"><p class="small">Loading the list…</p></div>
+    </main>
+
+    <aside class="panel" id="order" aria-labelledby="order-title">
+      <h2 id="order-title">Print order</h2>
+      <ul class="cart" id="cart"></ul>
+      <div class="total" id="total"></div>
+
+      <form id="form" novalidate>
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" autocomplete="name" required>
+        <label for="f-id">Student ID</label>
+        <input id="f-id" name="studentId" required>
+        <label for="f-phone">WhatsApp number</label>
+        <input id="f-phone" name="phone" type="tel" inputmode="tel" placeholder="01XXXXXXXXX" autocomplete="tel" required>
+        <div id="dept-wrap" hidden><label for="f-dept">Department</label><select id="f-dept" name="department"></select></div>
+        <div id="batch-wrap" hidden><label for="f-batch">Batch</label><select id="f-batch" name="batch"></select></div>
+        <label for="f-binding">Binding</label>
+        <select id="f-binding" name="binding"></select>
+        <label for="f-pickup">Pickup</label>
+        <select id="f-pickup" name="pickup"></select>
+        <label for="f-payment">Payment</label>
+        <select id="f-payment" name="payment"></select>
+        <div id="trx-wrap" hidden>
+          <label for="f-trx">Transaction ID <span class="opt">(if already paid)</span></label>
+          <input id="f-trx" name="trx">
+        </div>
+        <label for="f-notes">Notes <span class="opt">(optional)</span></label>
+        <textarea id="f-notes" name="notes"></textarea>
+        <div class="hp" aria-hidden="true"><label for="f-web">Website</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+
+        <div class="actions">
+          <button class="btn primary block" type="submit" id="send" hidden>Send order</button>
+          <a class="btn wa block" id="wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+          <a class="btn block" id="gform" href="#" target="_blank" rel="noopener" hidden>Use the Google Form instead</a>
+        </div>
+        <div class="msg" id="msg" role="status" hidden></div>
+      </form>
+    </aside>
+  </div>
+
+  <footer>
+    Free shared copies by <span id="owner2">Nur Mohammad</span>. The PDFs are for reading on screen; printed copies come from the print edition.
+  </footer>
+</div>
+
+<a class="btn primary jump" id="jump" href="#order" hidden>View print order</a>
+
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } },
+  };
+  const PHONE = /^[+0-9 -]{11,16}$/;
+  let cat, site, subjects = {}, items = {};
+  const picked = new Map(); // item id -> copies
+  let lastSent = null; // {d, orderId} of the order just sent, for its WhatsApp message
+
+  fetch('catalogue.json', { cache: 'no-cache' })
+    .then(r => r.json())
+    .then(init)
+    .catch(() => { $('subjects').innerHTML = '<p class="msg err">Could not load the list. Please reload the page.</p>'; });
+
+  function init(data) {
+    cat = data; site = data.site;
+    data.subjects.forEach(s => { subjects[s.code] = s; });
+    data.items.forEach(it => { items[it.id] = it; });
+    $('owner').textContent = $('owner2').textContent = site.owner;
+    $('price-note').textContent = 'Printed copy: ' + site.price_note.charAt(0).toLowerCase() + site.price_note.slice(1);
+    fill('f-binding', site.binding); fill('f-pickup', site.pickup); fill('f-payment', site.payment);
+    if (site.department.ask) { fill('f-dept', site.department.options); $('dept-wrap').hidden = false; }
+    if (site.batch.ask) { fill('f-batch', site.batch.options); $('batch-wrap').hidden = false; }
+    $('send').hidden = !site.order_endpoint;
+    if (site.google_form) { $('gform').hidden = false; $('gform').href = site.google_form; }
+    ['name', 'id', 'phone'].forEach(k => { const v = store.get('sn-' + k); if (v) $('f-' + k).value = v; });
+
+    const pre = new URLSearchParams(location.search).getAll('item');
+    pre.forEach(id => { if (items[id] && items[id].printable) picked.set(id, 1); });
+    renderSubjects(); renderCart();
+    const order = $('order');
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(es => { $('jump').style.visibility = es[0].isIntersecting ? 'hidden' : ''; }).observe(order);
+    }
+    if (pre.length && picked.size) {
+      const first = document.querySelector('[data-pack="' + CSS.escape(pre[0]) + '"]');
+      if (first) first.scrollIntoView({ block: 'center' });
+    }
+  }
+
+  function fill(id, options) {
+    $(id).innerHTML = '';
+    options.forEach(o => { const op = document.createElement('option'); op.textContent = o; $(id).appendChild(op); });
+  }
+
+  function packName(it) { return it.session + ' ' + it.document.toLowerCase(); }
+  function lineName(it) { const s = subjects[it.subject]; return s.code + ' ' + s.short + ', ' + packName(it); }
+
+  function renderSubjects() {
+    const box = $('subjects');
+    box.innerHTML = '';
+    cat.subjects.forEach(s => {
+      const list = cat.items.filter(it => it.subject === s.code);
+      if (!list.length) return;
+      const sec = document.createElement('section');
+      sec.className = 'subject';
+      sec.innerHTML = '<h3>' + esc(s.title) + ' <span class="code">' + esc(s.code + ' · ' + s.short) + '</span></h3>';
+      list.forEach(it => {
+        const row = document.createElement('div');
+        row.className = 'pack';
+        row.dataset.pack = it.id;
+        const on = picked.has(it.id);
+        row.innerHTML =
+          '<div class="info"><div class="name">' + esc(packName(it)) + '</div>' +
+          '<div class="meta">' + esc(it.detail) + ' · ' + it.pages + ' pages</div></div>' +
+          '<a class="btn" href="' + encodeURI(it.file) + '" target="_blank" rel="noopener" download>Download free</a>' +
+          (it.printable
+            ? (on
+              ? '<span class="stepper" aria-label="Copies"><button type="button" data-dec aria-label="One copy fewer">−</button>' +
+                '<span>' + picked.get(it.id) + '</span><button type="button" data-inc aria-label="One copy more">+</button></span>' +
+                '<button class="btn on" type="button" data-toggle aria-pressed="true">In order ✓</button>'
+              : '<button class="btn" type="button" data-toggle aria-pressed="false">Add to print order</button>')
+            : '');
+        row.addEventListener('click', e => {
+          const t = e.target.closest('button');
+          if (!t) return;
+          lastSent = null;
+          if (t.hasAttribute('data-toggle')) { picked.has(it.id) ? picked.delete(it.id) : picked.set(it.id, 1); }
+          if (t.hasAttribute('data-inc')) picked.set(it.id, Math.min(20, picked.get(it.id) + 1));
+          if (t.hasAttribute('data-dec')) { const n = picked.get(it.id) - 1; n < 1 ? picked.delete(it.id) : picked.set(it.id, n); }
+          renderSubjects(); renderCart();
+        });
+        sec.appendChild(row);
+      });
+      box.appendChild(sec);
+    });
+  }
+
+  function renderCart() {
+    const ul = $('cart');
+    ul.innerHTML = '';
+    let pages = 0;
+    if (!picked.size) ul.innerHTML = '<li class="empty">Nothing yet. Press “Add to print order” on any pack.</li>';
+    picked.forEach((n, id) => {
+      const it = items[id];
+      pages += it.pages * n;
+      const li = document.createElement('li');
+      li.innerHTML = '<span>' + esc(lineName(it)) + '</span><span>× ' + n + '</span>';
+      ul.appendChild(li);
+    });
+    $('total').textContent = picked.size
+      ? pages + ' pages in all, about ' + Math.ceil(pages / 2) + ' sheets printed on both sides.'
+      : '';
+    $('send').disabled = !picked.size;
+    $('jump').hidden = !picked.size;
+    $('jump').textContent = 'View print order (' + picked.size + ')';
+    updateWhatsApp();
+  }
+
+  function details() {
+    return {
+      name: $('f-name').value.trim(), studentId: $('f-id').value.trim(), phone: $('f-phone').value.trim(),
+      department: site.department.ask ? $('f-dept').value : site.department.default,
+      batch: site.batch.ask ? $('f-batch').value : site.batch.default,
+      binding: $('f-binding').value, pickup: $('f-pickup').value, payment: $('f-payment').value,
+      trx: $('f-trx').value.trim(), notes: $('f-notes').value.trim(), website: $('f-web').value,
+      items: [...picked].map(([id, copies]) => ({ id, copies })),
+    };
+  }
+
+  function whatsappText(d, orderId) {
+    const lines = [orderId ? 'Print order ' + orderId : 'Print order'];
+    if (d.name) lines.push('Name: ' + d.name + (d.studentId ? ' (' + d.studentId + ')' : ''));
+    lines.push('');
+    d.items.forEach(x => lines.push('• ' + lineName(items[x.id]) + ' × ' + x.copies));
+    if (!d.items.length) lines.push('(which packs?)');
+    lines.push('', 'Binding: ' + d.binding, 'Pickup: ' + d.pickup, 'Payment: ' + d.payment);
+    if (d.trx) lines.push('Transaction ID: ' + d.trx);
+    if (d.notes) lines.push('Notes: ' + d.notes);
+    return lines.join('\n');
+  }
+
+  function updateWhatsApp() {
+    const text = !picked.size && lastSent ? whatsappText(lastSent.d, lastSent.orderId) : whatsappText(details());
+    $('wa').href = 'https://wa.me/' + site.whatsapp + '?text=' + encodeURIComponent(text);
+  }
+
+  $('f-payment').addEventListener('change', () => { $('trx-wrap').hidden = !/bkash|nagad/i.test($('f-payment').value); });
+  $('form').addEventListener('input', () => updateWhatsApp());
+  $('form').addEventListener('change', () => updateWhatsApp());
+
+  function show(kind, html) { const m = $('msg'); m.className = 'msg ' + kind; m.innerHTML = html; m.hidden = false; }
+
+  $('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const d = details();
+    if (!d.items.length) return show('err', 'Add at least one pack to the order.');
+    if (!d.name || !d.studentId) return show('err', 'Please fill in your name and student ID.');
+    if (!PHONE.test(d.phone)) return show('err', 'Please enter a valid WhatsApp number, for example 01XXXXXXXXX.');
+    ['name', 'id', 'phone'].forEach(k => store.set('sn-' + k, $('f-' + k).value.trim()));
+    const btn = $('send');
+    btn.disabled = true; btn.textContent = 'Sending…';
+    fetch(site.order_endpoint, { method: 'POST', body: JSON.stringify(d) }) // text/plain: no preflight
+      .then(r => r.json())
+      .then(res => {
+        if (!res.ok) throw new Error(res.error || 'The order was not saved.');
+        lastSent = { d, orderId: res.orderId };
+        show('ok', 'Order <strong>' + esc(res.orderId) + '</strong> received. I’ll message you on WhatsApp with the price before printing. ' +
+          'To reach me sooner, press “Send on WhatsApp”.');
+        picked.clear(); renderSubjects(); renderCart();
+        $('cart').innerHTML = '<li class="empty">Sent. Add more packs for a new order.</li>';
+      })
+      .catch(err => show('err', esc(err.message || 'Could not send the order.') + ' Please use “Send on WhatsApp” instead.'))
+      .finally(() => { btn.textContent = 'Send order'; btn.disabled = !picked.size; });
+  });
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+})();
+</script>
+</body>
+</html>
