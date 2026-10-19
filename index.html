@@ -39,10 +39,10 @@ body { margin: 0; background: var(--bg); color: var(--text);
   font: 14.5px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); }
 svg { flex: none; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
 /* top bar */
-.top { background: var(--surface); border-bottom: 1px solid var(--card-line); }
+.top { background: var(--surface); border-bottom: 1px solid var(--card-line); position: sticky; top: 0; z-index: 20; }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); min-width: 0; }
 .mark { width: 30px; height: 30px; border-radius: 8px; background: var(--accent); color: var(--accent-text);
@@ -60,8 +60,9 @@ h1 { font-size: 1.45rem; line-height: 1.25; margin: 0 0 4px; letter-spacing: -0.
 .note b { font-weight: 600; }
 
 .layout { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 6px 0 96px; }
-@media (min-width: 940px) { .layout { grid-template-columns: minmax(0, 1fr) 340px; align-items: start; }
-  .panel { position: sticky; top: 14px; } }
+@media (min-width: 940px) { .layout { grid-template-columns: minmax(0, 1fr) 380px; align-items: start; }
+  .panel { position: sticky; top: 70px; max-height: calc(100vh - 84px); overflow-y: auto; } }
+html { scroll-padding-top: 70px; }
 
 .toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 .search { position: relative; flex: 1; max-width: 340px; }
@@ -115,6 +116,14 @@ h1 { font-size: 1.45rem; line-height: 1.25; margin: 0 0 4px; letter-spacing: -0.
 .cart { list-style: none; margin: 0; padding: 0; }
 .cart li { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; font-size: 0.86rem; border-bottom: 1px solid var(--line); }
 .cart li { align-items: center; }
+.cart li.cl { display: block; padding: 8px 0; }
+.cl-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.cl-bot { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.cl-bot select { width: auto; min-height: 30px; padding: 2px 8px; font-size: 0.82rem; }
+.cl-bot .type { font-size: 0.82rem; color: var(--muted); }
+.cl-bot .amt { margin-left: auto; color: var(--text); font-weight: 500; }
+.check-inline { display: flex; gap: 8px; align-items: center; font-weight: 500; font-size: 0.84rem; margin: 8px 0 0; color: var(--muted); }
+.check-inline input { width: 16px; height: 16px; min-height: 0; margin: 0; }
 .cart li .line { flex: 1; min-width: 0; }
 .cart li .amt { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); }
 .cart li .rm { flex: none; width: 26px; height: 26px; border: 0; border-radius: 6px; background: transparent;
@@ -200,16 +209,20 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
         <div class="msg warn" id="paused" hidden>Print orders are paused right now. The PDFs are still free to download.</div>
         <div id="order-body">
           <ul class="cart" id="cart"></ul>
-          <div class="sum" id="sum" hidden><span id="pages"></span><span id="total-wrap">Estimate <b id="total"></b></span></div>
+          <div class="sum" id="sum" hidden><span id="pages"></span><span id="total-wrap">Total <b id="total"></b></span></div>
 
           <form id="form" novalidate>
-            <div id="print-wrap"><span class="label" id="print-label">Print</span><div class="seg" id="print" role="radiogroup" aria-labelledby="print-label"></div></div>
             <label for="f-name">Name</label>
             <input id="f-name" name="name" autocomplete="name" required>
             <label for="f-id">Student ID</label>
             <input id="f-id" name="studentId" required>
             <label for="f-phone">WhatsApp number</label>
             <input id="f-phone" name="phone" type="tel" inputmode="tel" placeholder="01XXXXXXXXX" autocomplete="tel" required>
+            <label class="check-inline"><input type="checkbox" id="f-same" checked> Same number for calls</label>
+            <div id="mobile-wrap" hidden>
+              <label for="f-mobile">Mobile number (for calls)</label>
+              <input id="f-mobile" name="mobile" type="tel" inputmode="tel" placeholder="01XXXXXXXXX">
+            </div>
             <div id="f-department-wrap"><label for="f-department">Department</label><select id="f-department"></select></div>
             <div id="f-batch-wrap"><label for="f-batch">Batch</label><select id="f-batch"></select></div>
             <div id="f-binding-wrap"><label for="f-binding">Binding</label><select id="f-binding"></select></div>
@@ -228,7 +241,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
             <div class="actions">
               <button class="btn primary block" type="submit" id="send" hidden>Send order</button>
               <a class="btn wa block" id="wa" href="#" target="_blank" rel="noopener" hidden>Send on WhatsApp</a>
-              <div class="hint" id="wa-hint">Add a pack and fill in your name, student ID and WhatsApp number to send the order.</div>
+              <div class="hint" id="wa-hint">Add a pack and fill in your name, student ID and phone number to send the order.</div>
               <a class="btn ghost block" id="gform" href="#" target="_blank" rel="noopener" hidden>Use the Google Form instead</a>
             </div>
             <div class="msg" id="msg" role="status" hidden></div>
@@ -254,7 +267,10 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   };
   const PHONE = /^[+0-9 -]{11,16}$/;
   let cat, site, subjects = {}, items = {};
-  const picked = new Map(); // item id -> copies
+  // the order: "packId|print type" -> copies, so one order can mix print types, even for the same pack
+  const picked = new Map();
+  const key = (id, type) => id + '|' + type;
+  const split = k => { const i = k.indexOf('|'); return [k.slice(0, i), k.slice(i + 1)]; };
   let lastSent = null; // {d, orderId} of the order just sent, for its WhatsApp message
   let S = null; // settings: from the web app when it answers, else from catalogue.json
 
@@ -282,12 +298,13 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     data.items.forEach(it => { items[it.id] = it; });
     document.querySelectorAll('.owner').forEach(el => { el.textContent = site.owner; });
     $('contact').href = 'https://wa.me/' + site.whatsapp + '?text=' + encodeURIComponent('Hi, I have a question about the study notes.');
-    ['name', 'id', 'phone'].forEach(k => { const v = store.get('sn-' + k); if (v) $('f-' + k).value = v; });
+    ['name', 'id', 'phone', 'mobile'].forEach(k => { const v = store.get('sn-' + k); if (v) $('f-' + k).value = v; });
+    if ($('f-mobile').value) { $('f-same').checked = false; $('mobile-wrap').hidden = false; }
     new URLSearchParams(location.search).getAll('item')
-      .forEach(id => { if (items[id] && items[id].printable) picked.set(id, 1); });
+      .forEach(id => { if (items[id] && items[id].printable) picked.set(key(id, ''), 1); });
     applySettings(fromCatalogue(site));
     if (picked.size) {
-      const first = document.querySelector('[data-pack="' + CSS.escape([...picked.keys()][0]) + '"]');
+      const first = document.querySelector('[data-pack="' + CSS.escape(split([...picked.keys()][0])[0]) + '"]');
       if (first) first.scrollIntoView({ block: 'center' });
     }
     if ('IntersectionObserver' in window) {
@@ -305,19 +322,28 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     const h = S.hidden || { subjects: [], items: [] };
     return h.subjects.includes(it.subject) || h.items.includes(it.id);
   }
+  const defaultType = () => (S.print[0] ? S.print[0].name : '');
 
   function applySettings(s) {
     S = s;
     $('price-note').textContent = s.price_note;
-    picked.forEach((n, id) => { if (hidden(items[id])) picked.delete(id); });
+    // drop hidden packs; a line whose print type is gone (or not set yet) takes the first type
+    const lines = [...picked];
+    picked.clear();
+    lines.forEach(([k, n]) => {
+      const [id, type] = split(k);
+      if (hidden(items[id])) return;
+      const t = s.print.some(p => p.name === type) ? type : defaultType();
+      picked.set(key(id, t), (picked.get(key(id, t)) || 0) + n);
+    });
     const fixed = [];
-    const field = (key, label, options) => {
-      const sel = $('f-' + key), keep = sel.value;
+    const field = (name, label, options) => {
+      const sel = $('f-' + name), keep = sel.value;
       sel.innerHTML = '';
       options.forEach(o => { const op = document.createElement('option'); op.textContent = o; sel.appendChild(op); });
       if (options.includes(keep)) sel.value = keep;
       const one = options.length <= 1;
-      $('f-' + key + '-wrap').hidden = one;
+      $('f-' + name + '-wrap').hidden = one;
       if (one && options.length) fixed.push('<div>' + label + ': <b>' + esc(options[0]) + '</b></div>');
     };
     field('department', 'Department', s.department.ask ? s.department.options : []);
@@ -325,17 +351,9 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     field('binding', 'Binding', s.binding.map(b => b.name));
     field('pickup', 'Pickup', s.pickup);
     field('payment', 'Payment', s.payment);
-    // print type: buttons when there is a choice, plain text when there is one
-    const keepPrint = printType();
-    $('print').innerHTML = s.print.map((p, i) =>
-      '<label><input type="radio" name="print" value="' + esc(p.name) + '"' +
-      ((keepPrint ? p.name === keepPrint : i === 0) ? ' checked' : '') + '><span>' + esc(p.name) + '</span></label>').join('');
-    if (!$('print').querySelector(':checked') && s.print.length) $('print').querySelector('input').checked = true;
-    $('print-wrap').hidden = s.print.length <= 1;
     if (s.print.length === 1) fixed.unshift('<div>Print: <b>' + esc(s.print[0].name) + '</b></div>');
     $('fixed').innerHTML = fixed.join('');
     $('fixed').hidden = !fixed.length;
-    paymentChanged();
     const open = s.accepting_orders !== false;
     $('paused').hidden = open; $('order-body').hidden = !open;
     $('send').hidden = !site.order_endpoint;
@@ -343,7 +361,6 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     renderSubjects(); renderCart();
   }
 
-  function printType() { const c = $('print').querySelector(':checked'); return c ? c.value : (S && S.print[0] ? S.print[0].name : ''); }
   function bindingPrice() {
     const b = S.binding.find(x => x.name === $('f-binding').value) || S.binding[0];
     return b ? Number(b.price) || 0 : 0;
@@ -356,6 +373,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   const shortType = n => (/black|b\s*&\s*w|mono/i.test(n) ? 'B&W' : n);
   function packName(it) { return it.session + ' ' + it.document.toLowerCase(); }
   function lineName(it) { const s = subjects[it.subject]; return s.short + ' ' + packName(it); }
+  const copiesOf = id => [...picked].reduce((n, [k, c]) => n + (split(k)[0] === id ? c : 0), 0);
 
   function renderSubjects() {
     const box = $('subjects');
@@ -373,7 +391,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
       card.innerHTML = '<div class="subject-head"><span class="code">' + esc(s.code) + '</span>' +
         '<h3>' + esc(s.title) + ' <span class="small">(' + esc(s.short) + ')</span></h3></div>';
       list.forEach(it => {
-        const on = picked.has(it.id);
+        const inOrder = copiesOf(it.id);
         const prices = showPrices() && it.printable
           ? '<div class="prices">' + S.print.map(p => {
               const v = priceOf(it, p.name);
@@ -381,31 +399,24 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
             }).join('') + '</div>'
           : '';
         const row = document.createElement('div');
-        row.className = 'pack' + (on ? ' on' : '');
+        row.className = 'pack' + (inOrder ? ' on' : '');
         row.dataset.pack = it.id;
         const fileName = it.file.split('/').pop();
         row.innerHTML =
           '<div class="info"><span class="year">' + esc(it.session) + '</span>' +
-          '<span class="meta">' + esc(it.document) + ' · ' + it.pages + ' pages</span>' + prices + '</div>' +
+          '<span class="meta">' + esc(it.document) + ' · ' + it.pages + ' pages' + (inOrder ? ' · <b>' + inOrder + ' in order</b>' : '') + '</span>' + prices + '</div>' +
           '<div class="actions-row">' +
           '<a class="btn pdf" href="' + encodeURI(it.file) + '" download="' + esc(fileName) + '" ' +
           'aria-label="Download ' + esc(lineName(it)) + ' (free PDF)">' +
           '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg><span>PDF</span></a>' +
           (it.printable && open
-            ? (on
-              ? '<span class="stepper" role="group" aria-label="Copies of ' + esc(lineName(it)) + '">' +
-                '<button type="button" data-dec aria-label="One copy fewer">−</button>' +
-                '<span aria-live="polite">' + picked.get(it.id) + '</span>' +
-                '<button type="button" data-inc aria-label="One copy more">+</button></span>'
-              : '<button class="btn add" type="button" data-add aria-label="Add ' + esc(lineName(it)) + ' to the print order">+ Print</button>')
+            ? '<button class="btn add" type="button" data-add aria-label="Add ' + esc(lineName(it)) + ' to the print order">+ Print</button>'
             : '') + '</div>';
-        row.addEventListener('click', e => {
-          const t = e.target.closest('button');
-          if (!t) return;
+        const add = row.querySelector('[data-add]');
+        if (add) add.addEventListener('click', () => {
           lastSent = null;
-          if (t.hasAttribute('data-add')) picked.set(it.id, 1);
-          if (t.hasAttribute('data-inc')) picked.set(it.id, Math.min(20, picked.get(it.id) + 1));
-          if (t.hasAttribute('data-dec')) { const n = picked.get(it.id) - 1; n < 1 ? picked.delete(it.id) : picked.set(it.id, n); }
+          const k = key(it.id, defaultType());
+          picked.set(k, Math.min(20, (picked.get(k) || 0) + 1));
           renderSubjects(); renderCart();
         });
         card.appendChild(row);
@@ -416,51 +427,86 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     $('count').textContent = nPack + (nPack === 1 ? ' pack' : ' packs') + ' · ' + nSub + (nSub === 1 ? ' subject' : ' subjects');
   }
 
+  let total = null; // the order's price, or null when prices are not shown
   function renderCart() {
     const ul = $('cart');
     ul.innerHTML = '';
-    let pages = 0, total = 0, priced = showPrices();
-    const type = printType();
+    let pages = 0, sum = 0, priced = showPrices();
     if (!picked.size) ul.innerHTML = '<li class="empty">Nothing yet. Press “+ Print” on any pack.</li>';
-    picked.forEach((n, id) => {
+    picked.forEach((n, k) => {
+      const [id, type] = split(k);
       const it = items[id];
       pages += it.pages * n;
       const each = priceOf(it, type);
-      if (each == null) priced = false; else total += each * n;
+      if (each == null) priced = false; else sum += each * n;
       const li = document.createElement('li');
-      li.innerHTML = '<span class="line">' + esc(lineName(it)) + ' × ' + n + '</span><span class="amt">' + (each == null ? '' : '৳' + each * n) + '</span>' +
-        '<button type="button" class="rm" aria-label="Remove ' + esc(lineName(it)) + '" title="Remove">✕</button>';
-      li.querySelector('.rm').addEventListener('click', () => { picked.delete(id); lastSent = null; renderSubjects(); renderCart(); });
+      li.className = 'cl';
+      const typePick = S.print.length > 1
+        ? '<select aria-label="Print type for ' + esc(lineName(it)) + '">' + S.print.map(p =>
+            '<option' + (p.name === type ? ' selected' : '') + '>' + esc(p.name) + '</option>').join('') + '</select>'
+        : '';
+      li.innerHTML =
+        '<div class="cl-top"><span class="line">' + esc(lineName(it)) + '</span>' +
+        '<button type="button" class="rm" aria-label="Remove ' + esc(lineName(it)) + ' (' + esc(type) + ')" title="Remove">✕</button></div>' +
+        '<div class="cl-bot">' + typePick +
+        '<span class="stepper" role="group" aria-label="Copies"><button type="button" data-dec aria-label="One copy fewer">−</button>' +
+        '<span aria-live="polite">' + n + '</span><button type="button" data-inc aria-label="One copy more">+</button></span>' +
+        '<span class="amt">' + (each == null ? '' : '৳' + each * n) + '</span></div>';
+      const change = f => { lastSent = null; f(); renderSubjects(); renderCart(); };
+      li.querySelector('.rm').addEventListener('click', () => change(() => picked.delete(k)));
+      li.querySelector('[data-inc]').addEventListener('click', () => change(() => picked.set(k, Math.min(20, n + 1))));
+      li.querySelector('[data-dec]').addEventListener('click', () => change(() => (n > 1 ? picked.set(k, n - 1) : picked.delete(k))));
+      const sel = li.querySelector('select');
+      // a new type for this line; it joins a line of the same pack that already has that type
+      if (sel) sel.addEventListener('change', () => change(() => {
+        const to = key(id, sel.value);
+        const lines = [...picked].map(([kk, c]) => (kk === k ? [to, c] : [kk, c]));
+        picked.clear();
+        lines.forEach(([kk, c]) => picked.set(kk, Math.min(20, (picked.get(kk) || 0) + c)));
+      }));
       ul.appendChild(li);
     });
+    total = picked.size && priced ? sum : null;
     $('sum').hidden = !picked.size;
     $('pages').textContent = pages + ' pages · ' + Math.ceil(pages / 2) + ' sheets';
-    $('total-wrap').hidden = !priced;
-    $('total').textContent = '৳' + total;
-    $('order-count').textContent = picked.size ? picked.size + (picked.size === 1 ? ' pack' : ' packs') : '';
-    $('send').disabled = !picked.size;
-    $('jump').hidden = !picked.size || S.accepting_orders === false;
-    $('jump').textContent = 'View print order (' + picked.size + ')';
+    $('total-wrap').hidden = total == null;
+    $('total').textContent = '৳' + sum;
+    const lines = picked.size;
+    $('order-count').textContent = lines ? lines + (lines === 1 ? ' line' : ' lines') : '';
+    $('send').disabled = !lines;
+    $('jump').hidden = !lines || S.accepting_orders === false;
+    $('jump').textContent = 'View print order (' + lines + ')';
+    paymentChanged();
     updateWhatsApp();
   }
 
   function details() {
+    const its = [...picked].map(([k, copies]) => { const [id, print] = split(k); return { id, copies, print }; });
     return {
       name: $('f-name').value.trim(), studentId: $('f-id').value.trim(), phone: $('f-phone').value.trim(),
+      mobile: $('f-same').checked ? '' : $('f-mobile').value.trim(),
       department: S.department.ask ? $('f-department').value : S.department.default,
       batch: S.batch.ask ? $('f-batch').value : S.batch.default,
-      print: printType(), binding: $('f-binding').value, pickup: $('f-pickup').value, payment: $('f-payment').value,
+      print: its.length ? its[0].print : defaultType(), // for a web app that predates one type per line
+      binding: $('f-binding').value, pickup: $('f-pickup').value, payment: $('f-payment').value,
       trx: $('f-trx').value.trim(), notes: $('f-notes').value.trim(), website: $('f-web').value,
-      items: [...picked].map(([id, copies]) => ({ id, copies })),
+      items: its, total,
     };
   }
-  const complete = d => d.items.length > 0 && d.name && d.studentId && PHONE.test(d.phone);
+  const complete = d => d.items.length > 0 && d.name && d.studentId && PHONE.test(d.phone) && (!d.mobile ? $('f-same').checked || lastSent : PHONE.test(d.mobile));
 
   function whatsappText(d, orderId) {
+    const many = S.print.length > 1;
     const lines = [orderId ? 'Print order ' + orderId : 'Print order'];
-    lines.push('Name: ' + d.name + ' (' + d.studentId + ')', '');
-    d.items.forEach(x => lines.push('• ' + subjects[items[x.id].subject].code + ' ' + lineName(items[x.id]) + ' × ' + x.copies));
-    lines.push('', 'Print: ' + d.print, 'Binding: ' + d.binding, 'Pickup: ' + d.pickup, 'Payment: ' + d.payment);
+    lines.push('Name: ' + d.name + ' (' + d.studentId + ')');
+    if (d.mobile) lines.push('Mobile: ' + d.mobile);
+    lines.push('');
+    d.items.forEach(x => lines.push('• ' + subjects[items[x.id].subject].code + ' ' + lineName(items[x.id]) +
+      (many ? ', ' + x.print : '') + ' × ' + x.copies));
+    if (d.total != null) lines.push('Total: ৳' + d.total);
+    lines.push('');
+    if (!many) lines.push('Print: ' + d.print);
+    lines.push('Binding: ' + d.binding, 'Pickup: ' + d.pickup, 'Payment: ' + d.payment);
     if (d.trx) lines.push('Transaction ID: ' + d.trx);
     if (d.notes) lines.push('Notes: ' + d.notes);
     return lines.join('\n');
@@ -475,12 +521,15 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   }
 
   $('q').addEventListener('input', renderSubjects);
-  $('print').addEventListener('change', () => { renderSubjects(); renderCart(); });
-  // the chosen method's number (from the admin page), and the transaction ID field for paying ahead
+  $('f-same').addEventListener('change', () => { $('mobile-wrap').hidden = $('f-same').checked; updateWhatsApp(); });
+  // the chosen method's number (from the admin page) with the amount to send, and the transaction ID field
   function paymentChanged() {
     const name = $('f-payment').value, det = (S.payment_details || {})[name];
     $('paybox').hidden = !det;
-    if (det) $('paytext').innerHTML = esc(name) + ': <b>' + esc(det) + '</b><br><span class="small">Pay after I confirm the price.</span>';
+    if (det) {
+      $('paytext').innerHTML = esc(name) + ': <b>' + esc(det) + '</b><br><span class="small">' +
+        (total != null ? 'Send <b>৳' + total + '</b>, then' : 'Send the total, then') + ' enter the Transaction ID below.</span>';
+    }
     $('trx-wrap').hidden = !det && !/bkash|nagad|rocket|upay/i.test(name);
   }
   $('f-payment').addEventListener('change', paymentChanged);
@@ -501,7 +550,9 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     if (!d.items.length) return show('err', 'Add at least one pack to the order.');
     if (!d.name || !d.studentId) return show('err', 'Please fill in your name and student ID.');
     if (!PHONE.test(d.phone)) return show('err', 'Please enter a valid WhatsApp number, for example 01XXXXXXXXX.');
-    ['name', 'id', 'phone'].forEach(k => store.set('sn-' + k, $('f-' + k).value.trim()));
+    if (!$('f-same').checked && !PHONE.test(d.mobile)) return show('err', 'Please enter a valid mobile number for calls, or tick “Same number for calls”.');
+    ['name', 'id', 'phone', 'mobile'].forEach(k => store.set('sn-' + k, $('f-' + k).value.trim()));
+    if ($('f-same').checked) store.set('sn-mobile', '');
     const btn = $('send');
     btn.disabled = true; btn.textContent = 'Sending…';
     fetch(site.order_endpoint, { method: 'POST', body: JSON.stringify(d) }) // text/plain: no preflight
@@ -509,8 +560,8 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
       .then(res => {
         if (!res.ok) throw new Error(res.error || 'The order was not saved.');
         lastSent = { d, orderId: res.orderId };
-        show('ok', 'Order <strong>' + esc(res.orderId) + '</strong> received. I’ll confirm the price on WhatsApp before printing. ' +
-          'To reach me sooner, press “Send on WhatsApp”.');
+        show('ok', 'Order <strong>' + esc(res.orderId) + '</strong> received' + (d.total != null ? ', total <strong>৳' + d.total + '</strong>' : '') +
+          '. I’ll message you on WhatsApp when it’s ready. To reach me sooner, press “Send on WhatsApp”.');
         picked.clear(); renderSubjects(); renderCart();
         $('cart').innerHTML = '<li class="empty">Sent. Add more packs for a new order.</li>';
       })

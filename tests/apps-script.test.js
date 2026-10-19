@@ -27,36 +27,52 @@ function Sheet(name) {
   return new Proxy(this, { get: (t, k) => k in t ? t[k] : () => chain() });
 }
 
-// ---- a mock Google Form, for setup, upgrade, the form sync and form orders
+// ---- a mock Google Form, for setup, upgrade, the form sync and form orders. Like Google's: a question
+// just added is a typed item (CheckboxItem, ListItem, ...) without the as...Item() methods; one read
+// back with getItems or getItemById is a plain Item with them.
 function makeForm() {
-  let next = 1; const items = [];
-  const item = (type, extra = {}) => {
-    const it = { id: next++, type, title: '', choices: [], getId() { return this.id; }, getTitle() { return this.title; },
-      getIndex() { return items.indexOf(this); }, getType() { return this.type; } };
-    const self = new Proxy(it, { get: (t, k) => {
-      if (k in t) return t[k];
-      if (k === 'setTitle') return v => { t.title = v; return self; };
-      if (k === 'setChoiceValues') return v => { t.choices = v.slice(); return self; };
-      if (k === 'setHelpText') return v => { t.help = v; return self; };
-      if (k === 'asCheckboxItem' || k === 'asMultipleChoiceItem') return () => self;
-      if (k === 'createResponse') return v => ({ item: t, v });
-      return () => self;
-    } });
-    items.push(self); return self;
+  let next = 1; const items = []; // plain-Item handles
+  const header = { title: '', description: '' };
+  const AS = ['asCheckboxItem', 'asMultipleChoiceItem', 'asListItem', 'asTextItem', 'asParagraphTextItem', 'asPageBreakItem'];
+  const handles = t => {
+    let typed, plain;
+    const get = isPlain => (o, k) => {
+      if (k in o) return o[k];
+      if (k === 'getId') return () => o.id;
+      if (k === 'getTitle') return () => o.title;
+      if (k === 'getType') return () => o.type;
+      if (k === 'getIndex') return () => items.findIndex(i => i.__t === o);
+      if (k === '__t') return o;
+      if (AS.includes(k)) {
+        if (!isPlain) return undefined; // a typed item has no as...Item(): calling it throws, as in Apps Script
+        return () => typed;
+      }
+      if (k === 'setTitle') return v => { o.title = v; return typed; };
+      if (k === 'setChoiceValues') return v => { o.choices = v.slice(); return typed; };
+      if (k === 'setHelpText') return v => { o.help = v; return typed; };
+      if (k === 'createResponse') return v => ({ item: o, v });
+      return () => typed;
+    };
+    typed = new Proxy(t, { get: get(false) });
+    plain = new Proxy(t, { get: get(true) });
+    return { typed, plain };
   };
-  const form = new Proxy({ items }, { get: (t, k) => {
+  const form = new Proxy({}, { get: (_, k) => {
     if (k === 'items') return items;
+    if (k === 'header') return header;
     if (k === 'getId') return () => 'F';
     if (k === 'getPublishedUrl') return () => 'https://forms/F/viewform';
     if (k === 'getEditUrl') return () => 'https://forms/F/edit';
-    if (k === 'getItems') return type => items.filter(i => !type || i.type === type);
-    if (k === 'getItemById') return id => items.find(i => i.id === id) || null;
-    if (k === 'deleteItem') return i => { items.splice(items.indexOf(i), 1); };
+    if (k === 'setTitle') return v => { header.title = v; return form; };
+    if (k === 'setDescription') return v => { header.description = v; return form; };
+    if (k === 'getItems') return type => items.filter(i => !type || i.__t.type === type);
+    if (k === 'getItemById') return id => items.find(i => i.__t.id === id) || null;
+    if (k === 'deleteItem') return i => { const n = items.findIndex(x => x.__t === i.__t); if (n >= 0) items.splice(n, 1); };
     if (k === 'moveItem') return (from, to) => { const [i] = items.splice(from, 1); items.splice(to, 0, i); };
     if (k === 'createResponse') return () => { const r = { parts: [] }; r.withItemResponse = x => { r.parts.push(x); return r; }; r.toPrefilledUrl = () => 'https://forms/F/prefill?' + r.parts.map(x => x.v.join(',')).join('&'); return r; };
     const add = { addTextItem: 'TEXT', addParagraphTextItem: 'PARA', addListItem: 'LIST', addPageBreakItem: 'PB',
       addCheckboxItem: 'CHECKBOX', addMultipleChoiceItem: 'MC' }[k];
-    if (add) return () => item(add);
+    if (add) return () => { const h = handles({ id: next++, type: add, title: '', choices: [] }); items.push(h.plain); return h.typed; };
     return () => form;
   } });
   return form;
@@ -78,7 +94,7 @@ const ctx = {
   ContentService: { MimeType: { JSON: 'json' }, createTextOutput: s => ({ setMimeType: () => ({ body: s }) }) },
   MailApp: { sendEmail: (...a) => { ctx.__mail.push(a); } }, __mail: [],
   Logger: { log: s => console.log('  LOG', s) },
-  FormApp: { ItemType: { MULTIPLE_CHOICE: 'MC', LIST: 'LIST' }, DestinationType: { SPREADSHEET: 'S' },
+  FormApp: { ItemType: { MULTIPLE_CHOICE: 'MC', LIST: 'LIST', CHECKBOX: 'CHECKBOX', TEXT: 'TEXT' }, DestinationType: { SPREADSHEET: 'S' },
     openById: () => { if (!ctx.__form) throw new Error('no form'); return ctx.__form; },
     create: () => (ctx.__form = makeForm()), createTextValidation: chain },
   ScriptApp: { getProjectTriggers: () => [], deleteTrigger() {}, newTrigger: chain },
@@ -166,23 +182,23 @@ run(`(function(){ const st = settings_(); st.accepting_orders = true; st.hidden 
 delete props.FORM_ID;
 run('setup()');
 let F = ctx.__form;
-const titles = () => F.items.map(i => i.title);
+const titles = () => F.items.map(i => i.__t.title);
 check('setup made a form with the Print question', titles().includes('Print') && titles().indexOf('Print') < titles().indexOf('Binding'), titles().join(' | '));
-check('form options from settings', F.items.find(i => i.title === 'Binding').choices.join() === 'Stapled');
+check('form options from settings', F.items.find(i => i.__t.title === 'Binding').choices.join() === 'Stapled');
 // a form made before "Print" existed
-F.deleteItem(F.items.find(i => i.title === 'Print'));
+F.deleteItem(F.items.find(i => i.__t.title === 'Print'));
 run(`(function(){ const st = settings_(); st.print.push({ name: 'Colour', price_per_page: 3, available: true });
   st.hidden = { subjects: ['EEE337'], items: ['EEE475-2020-21-pack'] }; writeSettings_(st); })()`);
 run('upgrade()');
 F = ctx.__form;
-const pq = F.items.find(i => i.title === 'Print');
+const pq = F.items.find(i => i.__t.title === 'Print');
 check('upgrade adds Print before Binding', pq && titles().indexOf('Print') === titles().indexOf('Binding') - 1 && pq.choices.join() === 'Black and white,Colour', titles().join(' | '));
 check('upgrade wrote all order headers', sheets.Orders.data[0][21] === 'Print' && sheets.Orders.data[0][19] === 'Status');
 check('hidden subject has no question', !titles().some(t => t.startsWith('EEE337')));
-const rf = F.items.find(i => i.title.startsWith('EEE475'));
+const rf = F.items.find(i => i.__t.title.startsWith('EEE475'));
 check('hidden pack not offered', rf && rf.choices.length === 1 && rf.choices[0].startsWith('2019-20'), rf && rf.choices.join());
 // a form response
-const resp = (title, v) => ({ getItem: () => F.items.find(i => i.title === title), getResponse: () => v });
+const resp = (title, v) => ({ getItem: () => F.items.find(i => i.__t.title === title), getResponse: () => v });
 const before = sheets.Orders.data.filter(x => x.length).length;
 run('handleFormSubmit')( { response: { getTimestamp: () => new Date(), getItemResponses: () => [
   resp('Name', 'Form User'), resp('Student ID', '9'), resp('WhatsApp number', '01700000000'),
@@ -198,9 +214,9 @@ run(`(function(){ const st = settings_(); st.payment = [{ name: 'Cash at pickup'
   st.department = { ask: true, default: 'EEE', options: ['EEE', 'CSE'] }; writeSettings_(st); syncFormOptions_(ctx_form(), st); })()`.replace('ctx_form()', 'FormApp.openById("F")'));
 const gp = JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings;
 check('page gets payment details of available methods only', JSON.stringify(gp.payment_details) === '{"bKash":"01352679856 (personal, Send Money)"}', JSON.stringify(gp.payment_details));
-const pay = F.items.find(i => i.title === 'Payment');
+const pay = F.items.find(i => i.__t.title === 'Payment');
 check('form payment help lists the number', /bKash: 01352679856/.test(pay.help) && !/Nagad/.test(pay.help), pay.help);
-const dq = F.items.find(i => i.title === 'Department');
+const dq = F.items.find(i => i.__t.title === 'Department');
 check('department question added on the first page', dq && dq.choices.join() === 'EEE,CSE' && titles().indexOf('Department') === titles().indexOf('Choose packs') - 1, titles().slice(0, 6).join(' | '));
 run(`(function(){ const st = settings_(); st.department.ask = false; writeSettings_(st); syncFormOptions_(FormApp.openById("F"), st); })()`);
 check('department question removed when not asked', !titles().includes('Department'));
@@ -209,9 +225,42 @@ const catText = ctx.UrlFetchApp.fetch().getContentText();
 const grown = JSON.parse(catText); grown.items.find(i => i.id === 'EEE475-2019-20-pack').pages = 74;
 ctx.UrlFetchApp.fetch = () => ({ getResponseCode: () => 200, getContentText: () => JSON.stringify(grown) });
 run('syncNow()');
-const rf2 = F.items.find(i => i.title.startsWith('EEE475'));
+const rf2 = F.items.find(i => i.__t.title.startsWith('EEE475'));
 check('form label follows the new page count', rf2.choices[0] === '2019-20 exam pack (74 pages)', rf2.choices.join());
 const cm = JSON.parse(props.CHOICE_MAP);
 check('old label still maps to the pack', cm['EEE475|2019-20 exam pack (70 pages)'] === 'EEE475-2019-20-pack' && cm['EEE475|2019-20 exam pack (74 pages)'] === 'EEE475-2019-20-pack');
 check('catalogue tab has the new page count', run('catalogueById_()')['EEE475-2019-20-pack'].pages === 74);
+
+// ---- the empty questions an interrupted sync left in the live form are removed, the rest filled in
+F.addCheckboxItem(); F.addCheckboxItem();
+check('two orphan tick-box questions present', F.items.filter(i => i.__t.type === 'CHECKBOX' && !i.__t.title).length === 2);
+run('syncNow()');
+const boxes = F.items.filter(i => i.__t.type === 'CHECKBOX');
+check('orphans removed, subject questions kept', boxes.every(i => i.__t.title) && boxes.length === 6, boxes.map(i => i.__t.title || '(empty)').join(' | '));
+// a first sync on a fresh form (where the old script failed): every question gets its title and boxes
+delete props.FORM_ID; delete props.SUBJECT_ITEMS; delete props.CHOICE_MAP;
+run('setup()'); F = ctx.__form;
+const fresh = F.items.filter(i => i.__t.type === 'CHECKBOX');
+check('fresh form: subject questions titled and filled', fresh.length >= 5 && fresh.every(i => i.__t.title && i.__t.choices.length), fresh.map(i => i.__t.title).join(' | '));
+check('form title and description from the settings', F.header.title === 'Print order: Study Notes by Nur Mohammad' &&
+  F.header.description.includes('Printed copies: At printing cost.') && F.header.description.includes('https://nurmdabd.github.io/study-notes/'), JSON.stringify(F.header));
+check('mobile question after WhatsApp', titles().indexOf('Mobile number (for calls)') === titles().indexOf('WhatsApp number') + 1, titles().slice(0, 5).join(' | '));
+run('syncNow()');
+check('mobile question not duplicated', titles().filter(t => t === 'Mobile number (for calls)').length === 1);
+
+// ---- one web order mixing black and white and colour, with a mobile number
+run(`(function(){ const st = settings_(); st.accepting_orders = true; st.hidden = { subjects: [], items: [] };
+  st.print = [{ name: 'Black and white', price_per_page: 0.5, available: true }, { name: 'Colour', price_per_page: 3, available: true }];
+  st.binding = [{ name: 'Stapled', price: 10, available: true }]; writeSettings_(st); })()`);
+r = post({ ...order, print: 'Black and white', mobile: '01800000000', items: [
+  { id: 'EEE475-2019-20-pack', copies: 1, print: 'Black and white' }, { id: 'EEE475-2019-20-pack', copies: 1, print: 'Colour' },
+  { id: 'EEE443-2020-21-pack', copies: 2, print: 'Colour' }] });
+const mixed = sheets.Orders.data.filter(x => x.length).slice(-3);
+// 74 pages now: 74*0.5+10=47 ; 74*3+10=232 ; 58*3+10=184 x2=368
+check('mixed order: a print type and price per line', r.ok && mixed.map(x => x[21] + ' ' + x[20]).join(',') === 'Black and white 47,Colour 232,Colour 368', mixed.map(x => x[21] + ' ' + x[20]).join(','));
+check('mobile saved', mixed[0][22] === "'01800000000" && sheets.Orders.data[0][22] === 'Mobile');
+check('no mobile: WhatsApp number used', post({ ...order, items: [{ id: 'EEE443-2020-21-pack', copies: 1 }] }).ok &&
+  sheets.Orders.data.filter(x => x.length).slice(-1)[0][22] === "'01352679856");
+check('bad mobile refused', /valid mobile/.test(post({ ...order, mobile: '12' }).error || ''));
+check('a line with an unavailable print type refused', /print type/.test(post({ ...order, items: [{ id: 'EEE443-2020-21-pack', copies: 1, print: 'Gold' }] }).error || ''));
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;

@@ -19,7 +19,8 @@
 
 const CONFIG = {
   CATALOGUE_URL: 'https://nurmdabd.github.io/study-notes/catalogue.json',
-  FORM_TITLE: "Printed copy order: Nur Mohammad's study notes",
+  FORM_TITLE: 'Print order: Study Notes by Nur Mohammad',
+  SITE_URL: 'https://nurmdabd.github.io/study-notes/',
   NOTIFY_BY_EMAIL: true, // an email to you for every new order
   MAX_COPIES: 20,
 };
@@ -29,7 +30,7 @@ const SHEETS = { orders: 'Orders', catalogue: 'Catalogue', summary: 'Summary', s
 const ORDER_HEADERS = [
   'Received', 'Order ID', 'Source', 'Name', 'Student ID', 'Department', 'Batch', 'WhatsApp',
   'Subject', 'Session', 'Document', 'Item ID', 'Copies', 'Pages', 'Binding', 'Pickup',
-  'Payment', 'Transaction ID', 'Notes', 'Status', 'Estimate (BDT)', 'Print',
+  'Payment', 'Transaction ID', 'Notes', 'Status', 'Price (BDT)', 'Print', 'Mobile',
 ];
 const STATUS_COL = ORDER_HEADERS.indexOf('Status') + 1; // T
 const STATUSES = ['New', 'Price sent', 'Paid', 'Printed', 'Delivered', 'Cancelled'];
@@ -40,7 +41,7 @@ const STATUS_COLOURS = {
 
 // Form question titles that are fixed (the subject questions are named from the catalogue).
 const Q = {
-  name: 'Name', id: 'Student ID', phone: 'WhatsApp number', dept: 'Department', batch: 'Batch',
+  name: 'Name', id: 'Student ID', phone: 'WhatsApp number', mobile: 'Mobile number (for calls)', dept: 'Department', batch: 'Batch',
   copies: 'Copies of each pack', print: 'Print', binding: 'Binding', pickup: 'Pickup', payment: 'Payment',
   trx: 'Transaction ID', notes: 'Notes',
 };
@@ -199,12 +200,7 @@ function getOrCreateForm_(cat) {
   if (id) {
     try { return FormApp.openById(id); } catch (e) { /* deleted: make a new one */ }
   }
-  const s = cat.site;
   const form = FormApp.create(CONFIG.FORM_TITLE);
-  form.setDescription(
-    'Printed copies of my exam packs (past-paper solution + formula sheet), black and white.\n' +
-    s.price_note + '\n' +
-    'Free PDFs and a quicker order page: https://nurmdabd.github.io/study-notes/');
   form.setCollectEmail(false);
   try { form.setRequireLogin(false); } catch (e) { /* only Workspace accounts have this setting */ }
   form.setLimitOneResponsePerUser(false);
@@ -253,6 +249,12 @@ function syncForm_(form, cat) {
   });
   const printingId = Number(props.getProperty('PB_PRINTING'));
   const indexOfPrinting = () => form.getItemById(printingId).getIndex();
+  // every tick-box question is a subject's; one the script lost track of (an unnamed one left by
+  // an interrupted sync) is removed
+  const ours = Object.values(known);
+  form.getItems(FormApp.ItemType.CHECKBOX).forEach(it => {
+    if (!ours.includes(String(it.getId()))) form.deleteItem(it);
+  });
 
   cat.subjects.forEach(s => {
     const items = bySubject[s.code];
@@ -262,9 +264,11 @@ function syncForm_(form, cat) {
       return;
     }
     if (!q) {
-      q = form.addCheckboxItem();
-      form.moveItem(q.getIndex(), indexOfPrinting());
-      known[s.code] = String(q.getId());
+      const made = form.addCheckboxItem(); // a CheckboxItem: as...Item() exists only on a plain Item
+      form.moveItem(made.getIndex(), indexOfPrinting());
+      known[s.code] = String(made.getId());
+      props.setProperty('SUBJECT_ITEMS', JSON.stringify(known)); // remembered at once, so it is never orphaned
+      q = form.getItemById(made.getId());
     }
     q.asCheckboxItem().setTitle(subjectQuestionTitle_(s)).setChoiceValues(items.map(it => it.choice));
   });
@@ -318,6 +322,7 @@ function handleFormSubmit(e) {
       case Q.name: order.name = answer; break;
       case Q.id: order.studentId = answer; break;
       case Q.phone: order.phone = answer; break;
+      case Q.mobile: order.mobile = answer; break;
       case Q.dept: order.department = answer; break;
       case Q.batch: order.batch = answer; break;
       case Q.copies: copies = Number(answer) || 1; break;
@@ -460,6 +465,18 @@ function checkSettings_(st) {
   return '';
 }
 
+/** The form's title and description, from the settings (the price note and the print types). */
+function syncFormHeader_(form, st) {
+  const types = (st.print || []).filter(o => o.available);
+  const prices = st.show_estimate && types.some(o => Number(o.price_per_page) > 0)
+    ? 'Print: ' + types.map(o => o.name + ' ৳' + o.price_per_page + ' a page').join(', ') + '.\n' : '';
+  form.setTitle(CONFIG.FORM_TITLE);
+  form.setDescription(
+    'Printed copies of my exam packs (each past paper solved, with its formula sheet).\n' +
+    'Printed copies: ' + st.price_note + '\n' + prices +
+    'Free PDFs, and each pack\'s price, on the order page: ' + CONFIG.SITE_URL);
+}
+
 function isHidden_(hidden, it) {
   return hidden.subjects.includes(it.subject) || hidden.items.includes(it.id);
 }
@@ -474,21 +491,31 @@ function syncFormOptions_(form, st) {
     if (names.length) it.asMultipleChoiceItem().setChoiceValues(names);
     if (it.getTitle() === Q.payment) {
       const details = list.filter(o => o.available && o.details).map(o => o.name + ': ' + o.details);
-      it.asMultipleChoiceItem().setHelpText(details.length
-        ? 'Pay after I confirm the price on WhatsApp. ' + details.join('. ') + '.'
-        : 'Pay after I confirm the price on WhatsApp.');
+      it.asMultipleChoiceItem().setHelpText('Each pack\'s price is on the order page (' + CONFIG.SITE_URL + ').' +
+        (details.length ? ' Send the total to: ' + details.join('; ') + '.' : ''));
     }
   });
+  syncFormHeader_(form, st);
+  // a mobile number for calls, after the WhatsApp number (forms made before it existed get it here)
+  if (!form.getItems(FormApp.ItemType.TEXT).some(x => x.getTitle() === Q.mobile)) {
+    const made = form.addTextItem();
+    const phone = form.getItems(FormApp.ItemType.TEXT).find(x => x.getTitle() === Q.phone);
+    if (phone) form.moveItem(made.getIndex(), phone.getIndex() + 1);
+    form.getItemById(made.getId()).asTextItem().setTitle(Q.mobile)
+      .setHelpText('To call you if needed. Leave empty if it is your WhatsApp number.');
+  }
   // department and batch: a dropdown on the first page while they are asked, none otherwise
   [[Q.dept, st.department], [Q.batch, st.batch]].forEach(([title, d]) => {
     const it = form.getItems(FormApp.ItemType.LIST).find(x => x.getTitle() === title);
     if (d && d.ask && d.options.length) {
-      const q = it || form.addListItem().setTitle(title).setRequired(true);
-      q.asListItem().setChoiceValues(d.options);
-      if (!it) {
+      let q = it;
+      if (!q) {
+        const made = form.addListItem();
         const packs = form.getItemById(Number(PropertiesService.getScriptProperties().getProperty('PB_PACKS')));
-        if (packs) form.moveItem(q.getIndex(), packs.getIndex());
+        if (packs) form.moveItem(made.getIndex(), packs.getIndex());
+        q = form.getItemById(made.getId());
       }
+      q.asListItem().setTitle(title).setRequired(true).setChoiceValues(d.options);
     } else if (it) {
       form.deleteItem(it);
     }
@@ -572,18 +599,19 @@ function checkOrder_(d) {
   const str = v => typeof v === 'string' && v.trim().length > 0;
   if (!str(d.name) || !str(d.studentId) || !str(d.phone)) return 'Name, student ID and WhatsApp number are needed.';
   if (!/^[+0-9 -]{11,16}$/.test(d.phone.trim())) return 'Please enter a valid phone number.';
+  if (str(d.mobile) && !/^[+0-9 -]{11,16}$/.test(d.mobile.trim())) return 'Please enter a valid mobile number.';
   if (!Array.isArray(d.items) || d.items.length === 0) return 'No pack chosen.';
   if (d.items.length > 50) return 'Too many lines in one order.';
   const st = settings_();
   if (!st.accepting_orders) return 'Print orders are paused right now. Please message me on WhatsApp.';
   const ok = (list, v) => (list || []).some(o => o.available && o.name === v);
-  if (!ok(st.print, d.print)) return 'That print type is not available now.';
   if (!ok(st.binding, d.binding)) return 'That binding is not available now.';
   if (!ok(st.pickup, d.pickup)) return 'That pickup option is not available now.';
   if (!ok(st.payment, d.payment)) return 'That payment option is not available now.';
   const cat = catalogueById_();
   for (const it of d.items) {
     if (!cat[it.id] || !cat[it.id].printable || isHidden_(st.hidden, cat[it.id])) return 'Unknown pack: ' + it.id;
+    if (!ok(st.print, it.print || d.print)) return 'That print type is not available now.';
     const n = Number(it.copies);
     if (!(n >= 1 && n <= CONFIG.MAX_COPIES)) return 'Copies must be 1 to ' + CONFIG.MAX_COPIES + '.';
   }
@@ -607,20 +635,22 @@ function appendOrder_(order, source, when) {
   const t = v => (v == null ? '' : String(v).slice(0, 500));
   const items = order.items.length ? order.items : [{ id: '', label: '(no pack ticked)', copies: 0 }];
   const st = settings_();
-  const type = (st.print || []).find(o => o.name === order.print);
-  const rate = type ? Number(type.price_per_page) || 0 : 0;
+  const rateOf = name => { const p = (st.print || []).find(o => o.name === name); return p ? Number(p.price_per_page) || 0 : 0; };
   const bind = (st.binding || []).find(o => o.name === order.binding);
   const bindPrice = bind ? Number(bind.price) || 0 : 0;
   const rows = items.map(it => {
     const c = cat[it.id] || {};
     const n = Number(it.copies) || 0;
-    const estimate = rate && c.pages ? Math.round((c.pages * rate + bindPrice) * n) : '';
+    const print = it.print || order.print; // the web page sends one per pack, the form one per order
+    const rate = rateOf(print);
+    const price = rate && c.pages ? Math.round((c.pages * rate + bindPrice) * n) : '';
     return [
       when, orderId, source, t(order.name), t(order.studentId),
       t(order.department || site.department), t(order.batch || site.batch), "'" + t(order.phone),
       c.subject || '', c.session || '', c.document || t(it.label), it.id || '',
       Number(it.copies) || 0, c.pages || '', t(order.binding), t(order.pickup),
-      t(order.payment), t(order.trx), t(order.notes), 'New', estimate, t(order.print),
+      t(order.payment), t(order.trx), t(order.notes), 'New', price, t(print),
+      "'" + t(order.mobile || order.phone),
     ];
   });
   sh.getRange(sh.getLastRow() + 1, 1, rows.length, ORDER_HEADERS.length).setValues(rows);
@@ -645,11 +675,13 @@ function siteDefaults_() {
 
 function notify_(orderId, source, order, rows) {
   try {
-    const lines = rows.map(r => '  ' + [r[8], r[9], r[10]].filter(String).join(' ') + ' x ' + r[12]).join('\n');
+    const lines = rows.map(r => '  ' + [r[8], r[9], r[10]].filter(String).join(' ') + ' x ' + r[12] +
+      (r[21] ? ', ' + r[21] : '') + (r[20] !== '' ? ', ৳' + r[20] : '')).join('\n');
     MailApp.sendEmail(Session.getEffectiveUser().getEmail(),
       'New print order ' + orderId + ' (' + source + ')',
-      order.name + ' (' + order.studentId + '), WhatsApp ' + order.phone + '\n\n' + lines +
-      '\n\nPrint: ' + (order.print || '') + '\nBinding: ' + (order.binding || '') + '\nPickup: ' + (order.pickup || '') +
+      order.name + ' (' + order.studentId + '), WhatsApp ' + order.phone +
+      (order.mobile ? ', mobile ' + order.mobile : '') + '\n\n' + lines +
+      '\n\nBinding: ' + (order.binding || '') + '\nPickup: ' + (order.pickup || '') +
       '\nPayment: ' + (order.payment || '') + (order.trx ? ' (' + order.trx + ')' : '') +
       (order.notes ? '\nNotes: ' + order.notes : '') + '\n\n' + ss_().getUrl());
   } catch (e) { /* an order is never lost because an email failed */ }
