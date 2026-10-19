@@ -263,4 +263,15 @@ check('no mobile: WhatsApp number used', post({ ...order, items: [{ id: 'EEE443-
   sheets.Orders.data.filter(x => x.length).slice(-1)[0][22] === "'01352679856");
 check('bad mobile refused', /valid mobile/.test(post({ ...order, mobile: '12' }).error || ''));
 check('a line with an unavailable print type refused', /print type/.test(post({ ...order, items: [{ id: 'EEE443-2020-21-pack', copies: 1, print: 'Gold' }] }).error || ''));
+
+// ---- subject order: the page gets it, the form's subject questions follow it
+run(`(function(){ const st = settings_(); st.subject_order = ['EEE475', 'EEE443']; writeSettings_(st); })()`);
+check('page gets the subject order', JSON.stringify(JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.subject_order) === '["EEE475","EEE443"]');
+run('syncNow()');
+const qs = titles().filter(t => /^EEE\d{3} /.test(t)).map(t => t.slice(0, 6));
+check('form subject questions in the admin order', qs.join() === 'EEE475,EEE443,EEE329,EEE337,EEE421,EEE455,EEE459', qs.join());
+check('they stay on the "Choose packs" page', titles().indexOf('Choose packs') < titles().indexOf(titles().find(t => t.startsWith('EEE475'))) &&
+  titles().indexOf(titles().find(t => t.startsWith('EEE459'))) === titles().indexOf('Printing and payment') - 1);
+ctx.__cache = {}; // the lockout test above left the admin locked
+check('save refuses a malformed order', /subject order/.test(post({ action: 'adminSave', key, settings: Object.assign(run('settings_()'), { subject_order: 'x' }) }).error || ''));
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;
