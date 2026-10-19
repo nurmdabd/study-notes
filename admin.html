@@ -60,6 +60,9 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
 .sortbar .help { margin: 0; }
 .vis-packs { display: flex; flex-wrap: wrap; gap: 4px 16px; padding-left: 26px; }
 .vis-packs .check { margin: 4px 0 0; font-size: 0.88rem; }
+.vis-pack { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; padding: 2px 4px 2px 0; }
+.vis-pack .check { margin: 0; }
+.vis-pack .mv { min-height: 24px; padding: 0 6px; font-size: 0.78rem; }
 .opt .avail { display: flex; align-items: center; gap: 5px; font-size: 0.84rem; white-space: nowrap; }
 .opt .avail input { width: 18px; height: 18px; }
 .row { display: flex; gap: 8px; align-items: end; flex-wrap: wrap; }
@@ -147,11 +150,12 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
 
     <div class="card">
       <h2>Subjects: order and what is shown</h2>
-      <p class="help">Move a subject with ↑ ↓ to set the order on the page. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted.</p>
+      <p class="help">Move a subject with ↑ ↓ and a paper with ← → to set the order on the page; papers are newest year first unless you move them. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted.</p>
       <div class="sortbar"><span class="help">Sort:</span>
         <button class="btn small" type="button" data-sort="code">By code</button>
         <button class="btn small" type="button" data-sort="title">By title</button>
-        <button class="btn small" type="button" data-sort="recent">Newest paper first</button></div>
+        <button class="btn small" type="button" data-sort="recent">Newest paper first</button>
+        <button class="btn small" type="button" id="papers-newest">Papers: newest year first</button></div>
       <div id="vis"></div>
     </div>
 
@@ -230,7 +234,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
     $('accepting').checked = !!s.accepting_orders;
     $('note').value = s.price_note || '';
     $('estimate').checked = !!s.show_estimate;
-    fillVisibility(s.hidden || { subjects: [], items: [] }, s.subject_order || []);
+    fillVisibility(s.hidden || { subjects: [], items: [] }, s.subject_order || [], s.item_order || {});
     ['print', 'binding', 'pickup', 'payment'].forEach(k => { $(k).innerHTML = ''; (s[k] || []).forEach(o => optRow(k, o)); });
     $('dept-ask').checked = !!s.department.ask; $('dept-default').value = s.department.default || '';
     $('dept-options').value = (s.department.options || []).join(', ');
@@ -238,8 +242,32 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
     $('batch-options').value = (s.batch.options || []).join(', ');
   }
 
+  // papers: newest year first, unless an order was saved; papers not in it (added since) come first
+  const newest = (a, b) => b.session.localeCompare(a.session);
+  function sortPapers(list, code, itemOrder) {
+    const saved = itemOrder[code] || [];
+    return list.filter(it => !saved.includes(it.id)).sort(newest)
+      .concat(saved.map(id => list.find(it => it.id === id)).filter(Boolean));
+  }
+  // the paper order to save: only for subjects whose papers are not newest first
+  function collectItemOrder() {
+    const out = {};
+    [...$('vis').children].forEach(div => {
+      const chips = [...div.querySelectorAll('.vis-pack')];
+      const ids = chips.map(c => c.dataset.pack);
+      const def = chips.slice().sort((a, b) => b.dataset.session.localeCompare(a.dataset.session)).map(c => c.dataset.pack);
+      if (ids.join() !== def.join()) out[div.dataset.code] = ids;
+    });
+    return out;
+  }
+  $('papers-newest').addEventListener('click', () => {
+    $('vis').querySelectorAll('.vis-packs').forEach(row => {
+      [...row.children].sort((a, b) => b.dataset.session.localeCompare(a.dataset.session)).forEach(c => row.appendChild(c));
+    });
+  });
+
   // one row per subject, in the saved order (subjects not in it follow in catalogue order)
-  function fillVisibility(h, order) {
+  function fillVisibility(h, order, itemOrder) {
     const box = $('vis');
     box.innerHTML = '';
     const pos = c => { const i = order.indexOf(c); return i < 0 ? 1e6 : i; };
@@ -254,11 +282,19 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
         s.code + ' ' + s.title + '</label>' +
         '<button class="btn small" type="button" data-up aria-label="Move ' + s.code + ' up">↑</button>' +
         '<button class="btn small" type="button" data-down aria-label="Move ' + s.code + ' down">↓</button></div><div class="vis-packs">' +
-        packs.map(it => '<label class="check"><input type="checkbox" data-item="' + it.id + '"' + (h.items.includes(it.id) ? '' : ' checked') + '> ' +
-          it.session + ' ' + it.document.toLowerCase() + '</label>').join('') + '</div>';
+        sortPapers(packs, s.code, itemOrder).map(it => '<span class="vis-pack" data-pack="' + it.id + '" data-session="' + it.session + '">' +
+          '<button class="btn small mv" type="button" data-left aria-label="Move ' + it.id + ' earlier">←</button>' +
+          '<label class="check"><input type="checkbox" data-item="' + it.id + '"' + (h.items.includes(it.id) ? '' : ' checked') + '> ' +
+          it.session + ' ' + it.document.toLowerCase() + '</label>' +
+          '<button class="btn small mv" type="button" data-right aria-label="Move ' + it.id + ' later">→</button></span>').join('') + '</div>';
       const sub = div.querySelector('[data-subject]');
       const sync = () => div.querySelectorAll('[data-item]').forEach(x => { x.disabled = !sub.checked; });
       sub.addEventListener('change', sync); sync();
+      div.querySelectorAll('.vis-pack').forEach(chip => {
+        const row = chip.parentNode;
+        chip.querySelector('[data-left]').addEventListener('click', () => { if (chip.previousElementSibling) row.insertBefore(chip, chip.previousElementSibling); });
+        chip.querySelector('[data-right]').addEventListener('click', () => { if (chip.nextElementSibling) row.insertBefore(chip.nextElementSibling, chip); });
+      });
       div.querySelector('[data-up]').addEventListener('click', () => { if (div.previousElementSibling) box.insertBefore(div, div.previousElementSibling); });
       div.querySelector('[data-down]').addEventListener('click', () => { if (div.nextElementSibling) box.insertBefore(div.nextElementSibling, div); });
       box.appendChild(div);
@@ -292,6 +328,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
       accepting_orders: $('accepting').checked, price_note: $('note').value.trim(),
       show_estimate: $('estimate').checked, print: list('print'), hidden: collectVisibility(),
       subject_order: [...$('vis').children].map(d => d.dataset.code),
+      item_order: collectItemOrder(),
       binding: list('binding'), pickup: list('pickup'), payment: list('payment'),
       department: { ask: $('dept-ask').checked, default: $('dept-default').value.trim(), options: split($('dept-options').value) },
       batch: { ask: $('batch-ask').checked, default: $('batch-default').value.trim(), options: split($('batch-options').value) },

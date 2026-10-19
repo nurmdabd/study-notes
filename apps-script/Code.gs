@@ -175,7 +175,7 @@ function catalogueById_() {
  * with care. Options are lists of {name, available} (binding also has price, in BDT per copy).
  */
 const SETTING_KEYS = ['accepting_orders', 'price_note', 'show_estimate', 'print',
-  'binding', 'pickup', 'payment', 'department', 'batch', 'hidden', 'subject_order'];
+  'binding', 'pickup', 'payment', 'department', 'batch', 'hidden', 'subject_order', 'item_order'];
 const PRICE_NOTE = 'At printing cost. The price can vary slightly with paper and shop rates\u2014check each card for the exact price.';
 const OLD_PRICE_NOTES = [
   "Printing cost only, no profit. I'll confirm the price on WhatsApp before printing.",
@@ -188,6 +188,7 @@ const SETTING_NOTES = {
   print: 'List of {"name", "price_per_page" (BDT per printed page side), "available"}, e.g. black and white, colour.',
   hidden: '{"subjects": [subject codes], "items": [pack IDs]} hidden from the page (and not orderable).',
   subject_order: 'Subject codes in the order the page lists them; subjects not named follow in catalogue order.',
+  item_order: '{subject code: [pack IDs]} for subjects whose papers are not newest first; packs not named come first, newest first.',
   binding: 'List of {"name", "price" (BDT per copy), "available"}.',
   pickup: 'List of {"name", "available"}.',
   payment: 'List of {"name", "details" (number and how to send, shown when chosen), "available"}.',
@@ -209,6 +210,7 @@ function defaultSettings_() {
       { name: 'Colour', price_per_page: 0, available: false }],
     hidden: { subjects: [], items: [] },
     subject_order: [],
+    item_order: {},
     binding: list(site.binding || ['Stapled'], { price: 0 }),
     pickup: list(site.pickup || ['On campus']),
     payment: list(site.payment || ['Cash at pickup', 'bKash', 'Nagad']),
@@ -241,6 +243,7 @@ function settings_() {
   delete out.price_per_page;
   if (!out.hidden) out.hidden = { subjects: [], items: [] };
   if (!Array.isArray(out.subject_order)) out.subject_order = [];
+  if (!out.item_order || typeof out.item_order !== 'object' || Array.isArray(out.item_order)) out.item_order = {};
   if (OLD_PRICE_NOTES.includes(out.price_note)) out.price_note = PRICE_NOTE;
   return out;
 }
@@ -265,7 +268,7 @@ function publicSettings_(st) {
     show_estimate: !!st.show_estimate,
     print: avail(st.print).map(o => ({ name: o.name, price_per_page: Number(o.price_per_page) || 0 })),
     binding: avail(st.binding).map(o => ({ name: o.name, price: Number(o.price) || 0 })),
-    hidden: st.hidden, subject_order: st.subject_order || [],
+    hidden: st.hidden, subject_order: st.subject_order || [], item_order: st.item_order || {},
     pickup: avail(st.pickup).map(o => o.name), payment: avail(st.payment).map(o => o.name),
     payment_details: Object.fromEntries(avail(st.payment).filter(o => o.details).map(o => [o.name, String(o.details)])),
     department: st.department, batch: st.batch,
@@ -280,6 +283,8 @@ function checkSettings_(st) {
   if (!st.print.some(o => o.available)) return 'At least one print type must be available.';
   if (!st.hidden || !Array.isArray(st.hidden.subjects) || !Array.isArray(st.hidden.items)) return 'The hidden list is malformed.';
   if (st.subject_order && !Array.isArray(st.subject_order)) return 'The subject order is malformed.';
+  if (st.item_order && (typeof st.item_order !== 'object' || Array.isArray(st.item_order) ||
+    Object.values(st.item_order).some(v => !Array.isArray(v)))) return 'The paper order is malformed.';
   for (const k of ['binding', 'pickup', 'payment']) {
     if (!isList(st[k])) return 'Every ' + k + ' option needs a name.';
     if (!st[k].some(o => o.available)) return 'At least one ' + k + ' option must be available.';

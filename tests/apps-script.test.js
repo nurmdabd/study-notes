@@ -233,4 +233,10 @@ run(`(function(){ const st = settings_(); st.subject_order = ['EEE475', 'EEE443'
 check('page gets the subject order', JSON.stringify(JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.subject_order) === '["EEE475","EEE443"]');
 ctx.__cache = {}; // the lockout test above left the admin locked
 check('save refuses a malformed order', /subject order/.test(post({ action: 'adminSave', key, settings: Object.assign(run('settings_()'), { subject_order: 'x' }) }).error || ''));
+
+// ---- paper order within a subject
+run(`(function(){ const st = settings_(); st.item_order = { EEE475: ['EEE475-2019-20-pack', 'EEE475-2020-21-pack'] }; writeSettings_(st); })()`);
+check('page gets the paper order', JSON.stringify(JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.item_order) === '{"EEE475":["EEE475-2019-20-pack","EEE475-2020-21-pack"]}');
+check('save refuses a malformed paper order', /paper order/.test(post({ action: 'adminSave', key, settings: Object.assign(run('settings_()'), { item_order: { EEE475: 'x' } }) }).error || ''));
+check('settings without a paper order get an empty one', (() => { const st = run('settings_()'); return typeof st.item_order === 'object'; })());
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;

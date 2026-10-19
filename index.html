@@ -288,7 +288,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
       binding: list(s.binding).map(o => ({ name: o.name, price: Number(o.price) || 0 })),
       pickup: list(s.pickup).map(o => o.name), payment: list(s.payment).map(o => o.name),
       department: s.department, batch: s.batch,
-      hidden: { subjects: [], items: [] }, payment_details: {}, subject_order: [],
+      hidden: { subjects: [], items: [] }, payment_details: {}, subject_order: [], item_order: {},
     };
   }
 
@@ -374,6 +374,15 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   function lineName(it) { const s = subjects[it.subject]; return s.short + ' ' + packName(it); }
   const copiesOf = id => [...picked].reduce((n, [k, c]) => n + (split(k)[0] === id ? c : 0), 0);
 
+  // a subject's papers: newest year first, unless the admin saved an order (item_order); papers not in
+  // that order (added since) come first, newest first
+  function sortPapers(list, code) {
+    const saved = (S.item_order || {})[code] || [];
+    const newest = (a, b) => b.session.localeCompare(a.session);
+    return list.filter(it => !saved.includes(it.id)).sort(newest)
+      .concat(saved.map(id => list.find(it => it.id === id)).filter(Boolean));
+  }
+
   function renderSubjects() {
     const box = $('subjects');
     const open = S.accepting_orders !== false;
@@ -384,7 +393,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     const order = S.subject_order || [];
     const pos = c => { const i = order.indexOf(c); return i < 0 ? 1e6 : i; };
     cat.subjects.map((s, i) => [s, i]).sort((a, b) => pos(a[0].code) - pos(b[0].code) || a[1] - b[1]).forEach(([s]) => {
-      const list = cat.items.filter(it => it.subject === s.code && !hidden(it));
+      const list = sortPapers(cat.items.filter(it => it.subject === s.code && !hidden(it)), s.code);
       if (!list.length) return;
       if (q && ![s.code, s.short, s.title].join(' ').toLowerCase().includes(q)) return;
       nSub++; nPack += list.length;
