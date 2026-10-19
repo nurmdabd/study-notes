@@ -528,7 +528,8 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     $('paybox').hidden = !det;
     if (det) {
       $('paytext').innerHTML = esc(name) + ': <b>' + esc(det) + '</b><br><span class="small">' +
-        (total != null ? 'Send <b>৳' + total + '</b>, then' : 'Send the total, then') + ' enter the Transaction ID below.</span>';
+        (total != null ? 'Send <b>৳' + total + '</b>' : 'Send the total') +
+        (/bkash|nagad|rocket|upay/i.test(name) ? ' with Cash Out charge' : '') + ', then enter the Transaction ID below.</span>';
     }
     $('trx-wrap').hidden = !det && !/bkash|nagad|rocket|upay/i.test(name);
   }
