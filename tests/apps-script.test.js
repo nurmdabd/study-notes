@@ -239,4 +239,26 @@ run(`(function(){ const st = settings_(); st.item_order = { EEE475: ['EEE475-201
 check('page gets the paper order', JSON.stringify(JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.item_order) === '{"EEE475":["EEE475-2019-20-pack","EEE475-2020-21-pack"]}');
 check('save refuses a malformed paper order', /paper order/.test(post({ action: 'adminSave', key, settings: Object.assign(run('settings_()'), { item_order: { EEE475: 'x' } }) }).error || ''));
 check('settings without a paper order get an empty one', (() => { const st = run('settings_()'); return typeof st.item_order === 'object'; })());
+
+// ---- a new subject stays hidden until it is saved on the admin page
+{
+  const Sh = sheets.Settings.data; const i = Sh.findIndex(r => r[0] === 'known_subjects'); if (i > 0) Sh.splice(i, 1);
+  const st0 = run('settings_()');
+  check('existing subjects count as seen', st0.known_subjects.length === 7 && sheets.Settings.data.some(r => r[0] === 'known_subjects'), JSON.stringify(st0.known_subjects));
+  const withNew = JSON.parse(JSON.stringify(grown));
+  withNew.subjects.push({ folder: 'EEE999-NEW', code: 'EEE999', short: 'NEW', title: 'New Subject' });
+  withNew.items.push({ id: 'EEE999-2021-22-pack', subject: 'EEE999', session: '2021-22', document: 'Exam pack', detail: '', pages: 10, file: 'EEE999-NEW/NEW-2021-22-pack.pdf', printable: true });
+  ctx.UrlFetchApp.fetch = () => ({ getResponseCode: () => 200, getContentText: () => JSON.stringify(withNew) });
+  run('syncNow()');
+  const st1 = run('settings_()');
+  check('a new subject is not seen yet', !st1.known_subjects.includes('EEE999'));
+  check('page settings carry the seen subjects', JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.known_subjects.length === 7);
+  const newOrder = { ...order, items: [{ id: 'EEE999-2021-22-pack', copies: 1, print: 'Black and white' }] };
+  check('a pack of a new subject cannot be ordered', /Unknown pack/.test(post(newOrder).error || ''));
+  ctx.__cache = {};
+  const L2 = post({ action: 'adminLoad', key });
+  check('save refuses settings without the seen list', /seen subjects/.test(post({ action: 'adminSave', key, settings: Object.assign({}, L2.settings, { known_subjects: undefined }) }).error || ''));
+  post({ action: 'adminSave', key, settings: Object.assign({}, L2.settings, { known_subjects: L2.settings.known_subjects.concat('EEE999') }) });
+  check('after the admin saves it, it can be ordered', post(newOrder).ok);
+}
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;

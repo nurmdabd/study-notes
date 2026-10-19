@@ -320,7 +320,9 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
 
   function hidden(it) {
     const h = S.hidden || { subjects: [], items: [] };
-    return h.subjects.includes(it.subject) || h.items.includes(it.id);
+    // a subject the admin page has not seen yet (a new one) stays hidden until it is saved there
+    return h.subjects.includes(it.subject) || h.items.includes(it.id) ||
+      (Array.isArray(S.known_subjects) && !S.known_subjects.includes(it.subject));
   }
   const defaultType = () => (S.print[0] ? S.print[0].name : '');
 

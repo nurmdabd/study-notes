@@ -175,7 +175,7 @@ function catalogueById_() {
  * with care. Options are lists of {name, available} (binding also has price, in BDT per copy).
  */
 const SETTING_KEYS = ['accepting_orders', 'price_note', 'show_estimate', 'print',
-  'binding', 'pickup', 'payment', 'department', 'batch', 'hidden', 'subject_order', 'item_order'];
+  'binding', 'pickup', 'payment', 'department', 'batch', 'hidden', 'subject_order', 'item_order', 'known_subjects'];
 const PRICE_NOTE = 'At printing cost. The price can vary slightly with paper and shop rates\u2014check each card for the exact price.';
 const OLD_PRICE_NOTES = [
   "Printing cost only, no profit. I'll confirm the price on WhatsApp before printing.",
@@ -189,6 +189,7 @@ const SETTING_NOTES = {
   hidden: '{"subjects": [subject codes], "items": [pack IDs]} hidden from the page (and not orderable).',
   subject_order: 'Subject codes in the order the page lists them; subjects not named follow in catalogue order.',
   item_order: '{subject code: [pack IDs]} for subjects whose papers are not newest first; packs not named come first, newest first.',
+  known_subjects: 'Subject codes already seen on the admin page. A subject not listed (a new one) stays hidden until it is saved there.',
   binding: 'List of {"name", "price" (BDT per copy), "available"}.',
   pickup: 'List of {"name", "available"}.',
   payment: 'List of {"name", "details" (number and how to send, shown when chosen), "available"}.',
@@ -245,6 +246,15 @@ function settings_() {
   if (!Array.isArray(out.subject_order)) out.subject_order = [];
   if (!out.item_order || typeof out.item_order !== 'object' || Array.isArray(out.item_order)) out.item_order = {};
   if (OLD_PRICE_NOTES.includes(out.price_note)) out.price_note = PRICE_NOTE;
+  // the subjects there are when this setting first appears count as seen; later ones start hidden
+  if (!Array.isArray(out.known_subjects)) {
+    try {
+      out.known_subjects = fetchCatalogue_().subjects.map(s => s.code);
+      writeSettings_(out);
+    } catch (e) {
+      out.known_subjects = null; // the website did not answer: hide nothing, decide next time
+    }
+  }
   return out;
 }
 
@@ -269,6 +279,7 @@ function publicSettings_(st) {
     print: avail(st.print).map(o => ({ name: o.name, price_per_page: Number(o.price_per_page) || 0 })),
     binding: avail(st.binding).map(o => ({ name: o.name, price: Number(o.price) || 0 })),
     hidden: st.hidden, subject_order: st.subject_order || [], item_order: st.item_order || {},
+    known_subjects: Array.isArray(st.known_subjects) ? st.known_subjects : null,
     pickup: avail(st.pickup).map(o => o.name), payment: avail(st.payment).map(o => o.name),
     payment_details: Object.fromEntries(avail(st.payment).filter(o => o.details).map(o => [o.name, String(o.details)])),
     department: st.department, batch: st.batch,
@@ -283,6 +294,7 @@ function checkSettings_(st) {
   if (!st.print.some(o => o.available)) return 'At least one print type must be available.';
   if (!st.hidden || !Array.isArray(st.hidden.subjects) || !Array.isArray(st.hidden.items)) return 'The hidden list is malformed.';
   if (st.subject_order && !Array.isArray(st.subject_order)) return 'The subject order is malformed.';
+  if (!Array.isArray(st.known_subjects)) return 'The list of seen subjects is missing (reload the admin page).';
   if (st.item_order && (typeof st.item_order !== 'object' || Array.isArray(st.item_order) ||
     Object.values(st.item_order).some(v => !Array.isArray(v)))) return 'The paper order is malformed.';
   for (const k of ['binding', 'pickup', 'payment']) {
@@ -297,8 +309,11 @@ function checkSettings_(st) {
   return '';
 }
 
-function isHidden_(hidden, it) {
-  return hidden.subjects.includes(it.subject) || hidden.items.includes(it.id);
+/** Hidden: its subject or the pack was unticked on the admin page, or its subject is new (not yet seen there). */
+function isHidden_(st, it) {
+  const h = st.hidden || { subjects: [], items: [] };
+  return h.subjects.includes(it.subject) || h.items.includes(it.id) ||
+    (Array.isArray(st.known_subjects) && !st.known_subjects.includes(it.subject));
 }
 
 /** A wrong admin key is answered slowly, and ten wrong keys in ten minutes lock the admin out for a while. */
@@ -376,7 +391,7 @@ function checkOrder_(d) {
   if (!ok(st.payment, d.payment)) return 'That payment option is not available now.';
   const cat = catalogueById_();
   for (const it of d.items) {
-    if (!cat[it.id] || !cat[it.id].printable || isHidden_(st.hidden, cat[it.id])) return 'Unknown pack: ' + it.id;
+    if (!cat[it.id] || !cat[it.id].printable || isHidden_(st, cat[it.id])) return 'Unknown pack: ' + it.id;
     if (!ok(st.print, it.print || d.print)) return 'That print type is not available now.';
     const n = Number(it.copies);
     if (!(n >= 1 && n <= CONFIG.MAX_COPIES)) return 'Copies must be 1 to ' + CONFIG.MAX_COPIES + '.';

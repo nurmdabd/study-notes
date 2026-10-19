@@ -56,6 +56,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
 .vis-subject > .vis-head { display: flex; align-items: center; gap: 8px; }
 .vis-subject > .vis-head .check { font-weight: 600; margin: 0; flex: 1; }
 .vis-head .btn { min-height: 28px; padding: 0 9px; }
+.new-badge { font-size: 0.72rem; font-weight: 700; color: #fff; background: #c2410c; border-radius: 999px; padding: 1px 8px; margin-left: 6px; vertical-align: 1px; }
 .sortbar { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
 .sortbar .help { margin: 0; }
 .vis-packs { display: flex; flex-wrap: wrap; gap: 4px 16px; padding-left: 26px; }
@@ -150,7 +151,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
 
     <div class="card">
       <h2>Subjects: order and what is shown</h2>
-      <p class="help">Move a subject with ↑ ↓ and a paper with ← → to set the order on the page; papers are newest year first unless you move them. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted.</p>
+      <p class="help">Move a subject with ↑ ↓ and a paper with ← → to set the order on the page; papers are newest year first unless you move them. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted. A subject added to the site since your last save is marked <b>New</b> and stays hidden until you tick it and save.</p>
       <div class="sortbar"><span class="help">Sort:</span>
         <button class="btn small" type="button" data-sort="code">By code</button>
         <button class="btn small" type="button" data-sort="title">By title</button>
@@ -234,7 +235,8 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
     $('accepting').checked = !!s.accepting_orders;
     $('note').value = s.price_note || '';
     $('estimate').checked = !!s.show_estimate;
-    fillVisibility(s.hidden || { subjects: [], items: [] }, s.subject_order || [], s.item_order || {});
+    fillVisibility(s.hidden || { subjects: [], items: [] }, s.subject_order || [], s.item_order || {},
+      Array.isArray(s.known_subjects) ? s.known_subjects : null);
     ['print', 'binding', 'pickup', 'payment'].forEach(k => { $(k).innerHTML = ''; (s[k] || []).forEach(o => optRow(k, o)); });
     $('dept-ask').checked = !!s.department.ask; $('dept-default').value = s.department.default || '';
     $('dept-options').value = (s.department.options || []).join(', ');
@@ -267,7 +269,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
   });
 
   // one row per subject, in the saved order (subjects not in it follow in catalogue order)
-  function fillVisibility(h, order, itemOrder) {
+  function fillVisibility(h, order, itemOrder, known) {
     const box = $('vis');
     box.innerHTML = '';
     const pos = c => { const i = order.indexOf(c); return i < 0 ? 1e6 : i; };
@@ -278,8 +280,10 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
       div.className = 'vis-subject';
       div.dataset.code = s.code; div.dataset.title = s.title;
       div.dataset.latest = packs.map(it => it.session).sort().pop();
-      div.innerHTML = '<div class="vis-head"><label class="check"><input type="checkbox" data-subject="' + s.code + '"' + (h.subjects.includes(s.code) ? '' : ' checked') + '> ' +
-        s.code + ' ' + s.title + '</label>' +
+      const isNew = known && !known.includes(s.code);
+      div.innerHTML = '<div class="vis-head"><label class="check"><input type="checkbox" data-subject="' + s.code + '"' +
+        (h.subjects.includes(s.code) || isNew ? '' : ' checked') + '> ' +
+        s.code + ' ' + s.title + (isNew ? '<span class="new-badge">New</span>' : '') + '</label>' +
         '<button class="btn small" type="button" data-up aria-label="Move ' + s.code + ' up">↑</button>' +
         '<button class="btn small" type="button" data-down aria-label="Move ' + s.code + ' down">↓</button></div><div class="vis-packs">' +
         sortPapers(packs, s.code, itemOrder).map(it => '<span class="vis-pack" data-pack="' + it.id + '" data-session="' + it.session + '">' +
@@ -329,6 +333,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
       show_estimate: $('estimate').checked, print: list('print'), hidden: collectVisibility(),
       subject_order: [...$('vis').children].map(d => d.dataset.code),
       item_order: collectItemOrder(),
+      known_subjects: [...$('vis').children].map(d => d.dataset.code), // every subject listed here has now been seen
       binding: list('binding'), pickup: list('pickup'), payment: list('payment'),
       department: { ask: $('dept-ask').checked, default: $('dept-default').value.trim(), options: split($('dept-options').value) },
       batch: { ask: $('batch-ask').checked, default: $('batch-default').value.trim(), options: split($('batch-options').value) },
