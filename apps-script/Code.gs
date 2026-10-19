@@ -11,6 +11,10 @@
  * (https://nurmdabd.github.io/study-notes/admin.html, with the key from showAdminKey) or in the tab.
  * The order page reads them from this web app, so a change shows at once.
  *
+ * Fast page: with a GitHub token in the script properties (GITHUB_TOKEN, see SETUP.md), every save on the
+ * admin page (and the hourly sync) also writes the page's settings to settings.json on the website, so
+ * the order page loads them from GitHub instead of waiting for this web app to wake up.
+ *
  * Setup: see SETUP.md. In short: paste this file, run setup once, deploy as a web app.
  */
 
@@ -18,6 +22,7 @@ const CONFIG = {
   CATALOGUE_URL: 'https://nurmdabd.github.io/study-notes/catalogue.json',
   NOTIFY_BY_EMAIL: true, // an email to you for every new order
   MAX_COPIES: 20,
+  GITHUB_REPO: 'nurmdabd/study-notes', // settings.json is written here (branch main) when GITHUB_TOKEN is set
 };
 
 const SHEETS = { orders: 'Orders', catalogue: 'Catalogue', summary: 'Summary', settings: 'Settings' };
@@ -49,12 +54,49 @@ function setup() {
   Logger.log('Next: Deploy > New deployment > Web app (Execute as: Me, Who has access: Anyone).');
 }
 
+/**
+ * Writes what the order page needs (publicSettings_) to settings.json in the site's repo, so the page
+ * loads it from GitHub Pages at once. Returns 'published', 'unchanged' or 'no token'.
+ */
+function publishSettings_() {
+  const token = PropertiesService.getScriptProperties().getProperty('GITHUB_TOKEN');
+  if (!token) return 'no token';
+  const api = 'https://api.github.com/repos/' + CONFIG.GITHUB_REPO + '/contents/settings.json';
+  const headers = { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json' };
+  const body = JSON.stringify(publicSettings_(settings_()), null, 2) + '\n';
+  let sha;
+  const cur = UrlFetchApp.fetch(api + '?ref=main', { headers: headers, muteHttpExceptions: true });
+  if (cur.getResponseCode() === 200) {
+    const file = JSON.parse(cur.getContentText());
+    sha = file.sha;
+    const old = Utilities.newBlob(Utilities.base64Decode(file.content.replace(/\n/g, ''))).getDataAsString('UTF-8');
+    if (old === body) return 'unchanged';
+  }
+  const res = UrlFetchApp.fetch(api, {
+    method: 'put', headers: headers, contentType: 'application/json', muteHttpExceptions: true,
+    payload: JSON.stringify({
+      message: 'Settings from the admin page', branch: 'main', sha: sha,
+      content: Utilities.base64Encode(body, Utilities.Charset.UTF_8),
+    }),
+  });
+  if (res.getResponseCode() >= 300) {
+    throw new Error('GitHub answered ' + res.getResponseCode() + ': ' + res.getContentText().slice(0, 200));
+  }
+  return 'published';
+}
+
+/** Run once after adding GITHUB_TOKEN, to check it works: writes settings.json now. */
+function publishSettingsNow() {
+  Logger.log('settings.json: ' + publishSettings_());
+}
+
 /** Run any time to copy the catalogue into the Catalogue tab now (the hourly trigger does the same). */
 function syncNow() {
   const cat = fetchCatalogue_();
   PropertiesService.getScriptProperties().setProperty('SITE_DEFAULTS',
     JSON.stringify({ department: cat.site.department.default, batch: cat.site.batch.default }));
   writeCatalogueSheet_(ss_(), cat);
+  try { publishSettings_(); } catch (e) { Logger.log('settings.json not written: ' + e.message); }
 }
 
 /**
@@ -378,6 +420,9 @@ function admin_(data) {
     } finally {
       lock.releaseLock();
     }
+    let published;
+    try { published = publishSettings_(); } catch (e) { published = 'error: ' + e.message; }
+    return json_({ ok: true, settings: settings_(), sheet: ss_().getUrl(), published: published });
   }
   return json_({ ok: true, settings: settings_(), sheet: ss_().getUrl() });
 }

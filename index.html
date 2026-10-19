@@ -305,25 +305,34 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(es => { $('jump').style.visibility = es[0].isIntersecting ? 'hidden' : ''; }).observe($('order'));
     }
-    // The admin's settings (order, hidden packs, prices) come from the web app, which can take a few
-    // seconds to wake. Draw from the settings this device saw last time, if any; otherwise wait (up to
-    // 8 s, then fall back to the catalogue's defaults), so the page never shows a wrong list first.
-    let first = true;
+    // The admin's settings (order, hidden packs, prices): from settings.json on this site when the web app
+    // has written it (fast), else from the web app, which can take seconds to wake. Until they arrive the
+    // list says "Loading…" and the order form is hidden, so the page never shows a wrong list first.
+    $('order-body').hidden = true;
+    const show = (st, keep) => {
+      applySettings(st);
+      if (keep) { try { localStorage.setItem('sn-settings', JSON.stringify(st)); } catch (e) { /* private mode */ } }
+    };
+    if (!site.order_endpoint) return show(fromCatalogue(site));
+    // fastest: settings.json, written to this site by the web app on every admin save
+    fetch('settings.json', { cache: 'no-cache' })
+      .then(r => (r.ok ? r.json() : null))
+      .then(st => { if (st && st.print) show(st, true); else fromWebApp(); })
+      .catch(fromWebApp);
+  }
+
+  // without settings.json: the settings this device saw last time, then the (slower) web app
+  function fromWebApp() {
     const show = (s, keep) => {
       applySettings(s);
       if (keep) { try { localStorage.setItem('sn-settings', JSON.stringify(s)); } catch (e) { /* private mode */ } }
-      if (first && picked.size) {
-        const row = document.querySelector('[data-pack="' + CSS.escape(split([...picked.keys()][0])[0]) + '"]');
-        if (row) row.scrollIntoView({ block: 'center' });
-      }
-      first = false;
     };
-    if (!site.order_endpoint) return show(fromCatalogue(site));
+    let first = true;
     let cached = null;
     try { cached = JSON.parse(localStorage.getItem('sn-settings') || 'null'); } catch (e) { /* none */ }
-    if (cached && cached.print) show(cached);
+    if (cached && cached.print) { show(cached); first = false; }
     else $('order-body').hidden = true; // the "Loading…" text stays in the list until settings arrive
-    const fallback = setTimeout(() => { if (first) show(fromCatalogue(site)); }, 8000);
+    const fallback = setTimeout(() => { if (first) { show(fromCatalogue(site)); first = false; } }, 8000);
     fetch(site.order_endpoint + '?action=settings')
       .then(r => r.json())
       .then(res => {
@@ -377,7 +386,13 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     $('paused').hidden = open; $('order-body').hidden = !open;
     $('send').hidden = !site.order_endpoint;
     renderSubjects(); renderCart();
+    if (!scrolled && picked.size) { // a ?item= link: show its pack once, on the first draw
+      scrolled = true;
+      const row = document.querySelector('[data-pack="' + CSS.escape(split([...picked.keys()][0])[0]) + '"]');
+      if (row) row.scrollIntoView({ block: 'center' });
+    }
   }
+  let scrolled = false;
 
   function bindingPrice() {
     const b = S.binding.find(x => x.name === $('f-binding').value) || S.binding[0];

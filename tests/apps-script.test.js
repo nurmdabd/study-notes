@@ -89,7 +89,9 @@ const ctx = {
   CacheService: { getScriptCache: () => { const m = ctx.__cache; return { get: k => m[k] || null, put: (k, v) => { m[k] = v; } }; } },
   __cache: {},
   LockService: { getScriptLock: () => ({ waitLock() {}, releaseLock() {} }) },
-  Utilities: { getUuid: () => 'abcd1234-ef56-7890-abcd-1234567890ab', sleep() {}, formatDate: () => '261019' },
+  Utilities: { getUuid: () => 'abcd1234-ef56-7890-abcd-1234567890ab', sleep() {}, formatDate: () => '261019',
+    Charset: { UTF_8: 'utf8' }, base64Encode: (str) => Buffer.from(str, 'utf8').toString('base64'),
+    base64Decode: b64 => Buffer.from(b64, 'base64'), newBlob: bytes => ({ getDataAsString: () => Buffer.from(bytes).toString('utf8') }) },
   Session: { getScriptTimeZone: () => 'Asia/Dhaka', getEffectiveUser: () => ({ getEmail: () => 'me@x' }) },
   ContentService: { MimeType: { JSON: 'json' }, createTextOutput: s => ({ setMimeType: () => ({ body: s }) }) },
   MailApp: { sendEmail: (...a) => { ctx.__mail.push(a); } }, __mail: [],
@@ -271,5 +273,36 @@ check('settings without a paper order get an empty one', (() => { const st = run
   check('a new paper of a shown subject stays hidden', /Unknown pack/.test(post(rfNew).error || '') &&
     !JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.known_items.includes('EEE475-2021-22-pack'));
   check('existing packs count as seen', run('settings_()').known_items.includes('EEE475-2019-20-pack'));
+}
+
+// ---- settings.json on GitHub: written on save and by the hourly sync, skipped when unchanged
+{
+  const gh = { file: null, puts: 0 };
+  const catFetch = ctx.UrlFetchApp.fetch;
+  ctx.UrlFetchApp.fetch = (url, opt) => {
+    if (!url.startsWith('https://api.github.com/')) return catFetch(url, opt);
+    if (!opt || !opt.method) { // GET
+      if (!gh.file) return { getResponseCode: () => 404, getContentText: () => '{}' };
+      return { getResponseCode: () => 200, getContentText: () => JSON.stringify({ sha: 'S' + gh.puts, content: Buffer.from(gh.file).toString('base64').replace(/(.{60})/g, '$1\n') }) };
+    }
+    const p = JSON.parse(opt.payload);
+    gh.auth = opt.headers.Authorization; gh.sha = p.sha; gh.branch = p.branch;
+    gh.file = Buffer.from(p.content, 'base64').toString('utf8'); gh.puts++;
+    return { getResponseCode: () => 201, getContentText: () => '{}' };
+  };
+  delete props.GITHUB_TOKEN;
+  check('no token: nothing written', run('publishSettings_()') === 'no token' && gh.puts === 0);
+  props.GITHUB_TOKEN = 'ghp_test';
+  check('first write creates settings.json on main', run('publishSettings_()') === 'published' && gh.puts === 1 && gh.branch === 'main' && !gh.sha && gh.auth === 'Bearer ghp_test');
+  const pub = JSON.parse(gh.file);
+  check('settings.json holds the page settings, not the sheet link or key', Array.isArray(pub.print) && pub.subject_order && !('sheet' in pub) && !gh.file.includes('abcd1234ef567890'));
+  check('unchanged settings are not written again', run('publishSettings_()') === 'unchanged' && gh.puts === 1);
+  ctx.__cache = {};
+  const L3 = post({ action: 'adminLoad', key });
+  const S3 = post({ action: 'adminSave', key, settings: Object.assign({}, L3.settings, { price_note: 'New note ৳' }) });
+  check('a save publishes the change (with the old sha)', S3.published === 'published' && gh.puts === 2 && gh.sha === 'S1' && JSON.parse(gh.file).price_note === 'New note ৳', S3.published);
+  run('syncNow()');
+  check('the hourly sync does not write when nothing changed', gh.puts === 2);
+  delete props.GITHUB_TOKEN;
 }
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;

@@ -44,6 +44,18 @@ Every order goes into the **Orders** tab, one row per pack.
 4. Copy the **Web app URL**, which ends in `/exec`. Open it once in a browser: it should show `{"ok":true,...}`.
 5. Send me (Claude) the web app URL. I put it in `catalogue.json` (`order_endpoint`), and the page's **Send order** button appears.
 
+## 4. Make the page load fast (GitHub token, once)
+
+The order page needs your settings (order, hidden packs, prices). Asking the Apps Script for them takes 2–5 seconds, because Google wakes the script first. With a GitHub token, every save on the admin page (and the hourly sync) also writes them to `settings.json` on the website, and the page loads that in a fraction of a second.
+
+1. Open <https://github.com/settings/personal-access-tokens/new> (Settings → Developer settings → Personal access tokens → **Fine-grained tokens** → Generate new token).
+2. **Token name:** `study-notes settings`. **Expiration:** the longest offered (GitHub emails you before it runs out; then make a new one and replace it in step 4).
+3. **Repository access:** *Only select repositories* → `nurmdabd/study-notes`. **Permissions → Repository permissions → Contents:** *Read and write*. Then **Generate token** and copy it (it is shown once).
+4. In the Apps Script editor: ⚙ **Project Settings** → **Script properties** → **Add script property**: name `GITHUB_TOKEN`, value the token → **Save script properties**.
+5. Back in the editor, run **publishSettingsNow**. The Execution log says `settings.json: published`, and a commit "Settings from the admin page" appears in the repo.
+
+After this, a save on the admin page reaches the page within about a minute (the time GitHub takes to republish the site). The token can only change this one repository; it is stored in the script's properties, never in the repo.
+
 ## Updating the script
 
 When `apps-script/Code.gs` changes:

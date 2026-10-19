@@ -202,7 +202,11 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
         $('links').innerHTML = '<a href="' + res.sheet + '" target="_blank" rel="noopener">Open the orders sheet</a>' +
           '';
         $('editor').hidden = false;
-        msg('ok', action === 'adminSave' ? 'Saved. The order page uses the new settings now.' : '');
+        const pub = res.published || '';
+        msg('ok', action !== 'adminSave' ? '' :
+          pub === 'published' || pub === 'unchanged' ? 'Saved. The order page shows it within about a minute.' :
+          pub === 'no token' ? 'Saved. The order page uses it now (add a GitHub token to make the page load faster; see SETUP.md).' :
+          'Saved, but settings.json was not updated (' + pub + '). The page still gets the settings from the sheet, more slowly.');
       })
       .catch(err => msg('err', err.message))
       .finally(() => { btn.disabled = false; });
