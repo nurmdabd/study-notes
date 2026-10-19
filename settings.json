@@ -1,0 +1,85 @@
+{
+  "accepting_orders": true,
+  "price_note": "At printing cost. Check each card for the exact price.",
+  "show_estimate": true,
+  "print": [
+    {
+      "name": "Black and white",
+      "price_per_page": 1.75
+    },
+    {
+      "name": "Colour",
+      "price_per_page": 2.5
+    }
+  ],
+  "binding": [
+    {
+      "name": "Stapled",
+      "price": 0
+    }
+  ],
+  "hidden": {
+    "subjects": [
+      "EEE329",
+      "EEE337"
+    ],
+    "items": []
+  },
+  "subject_order": [
+    "EEE329",
+    "EEE337",
+    "EEE475",
+    "EEE455",
+    "EEE421",
+    "EEE459",
+    "EEE443"
+  ],
+  "item_order": {},
+  "known_subjects": [
+    "EEE329",
+    "EEE337",
+    "EEE421",
+    "EEE443",
+    "EEE455",
+    "EEE459",
+    "EEE475"
+  ],
+  "known_items": [
+    "EEE329-2021-22-pack",
+    "EEE337-2021-22-pack",
+    "EEE421-2020-21-pack",
+    "EEE443-2020-21-pack",
+    "EEE455-2020-21-pack",
+    "EEE459-2020-21-pack",
+    "EEE475-2019-20-pack",
+    "EEE475-2020-21-pack"
+  ],
+  "pickup": [
+    "On campus (place confirmed on WhatsApp)"
+  ],
+  "payment": [
+    "Cash at pickup",
+    "bKash",
+    "Nagad",
+    "Rocket"
+  ],
+  "payment_details": {
+    "bKash": "01352679856",
+    "Nagad": "01319095426",
+    "Rocket": "01319095426"
+  },
+  "department": {
+    "ask": false,
+    "default": "EEE",
+    "options": [
+      "EEE"
+    ]
+  },
+  "batch": {
+    "ask": false,
+    "default": "2021-22",
+    "options": [
+      "2021-22"
+    ]
+  }
+}
