@@ -63,6 +63,7 @@ When `apps-script/Code.gs` changes:
 - the price note, and whether the page shows prices
 - print types with a price per page each (black and white, colour)
 - binding options with their prices
+- the payment numbers (for example bKash: 01XXXXXXXXX, personal, Send Money), shown on the page when a student picks that method and listed in the form
 - pickup and payment options
 - whether to ask for department and batch
 - which subjects and papers are shown (a hidden one is left off the page and the form, and can't be ordered)
@@ -80,6 +81,10 @@ An option you untick as *available* stays saved but is hidden. On saving, the or
 - **Summary → To print** tells you how many copies of each pack to print in one go.
 - To filter by subject, department or batch without disturbing others: **Data → Create filter view** on Orders.
 
+## The Google Form
+
+The script keeps the form in step by itself; you never edit it by hand. Its subject questions and tick boxes follow `catalogue.json` and the shown or hidden packs; its Print, Binding, Pickup and Payment options (and the payment numbers) follow the settings; and it gets a Department or Batch question while the admin page asks for one. This happens when you save on the admin page and every hour.
+
 ## Changing things
 
 | To change | Do this |
@@ -87,4 +92,4 @@ An option you untick as *available* stays saved but is hidden. On saving, the or
 | Add or update packs | I run `tools/publish.py` and push. The page updates at once, and the form within the hour (or run **syncNow**). |
 | Prices, print types, price note, binding, pickup or payment options, pausing orders, department and batch, hiding a subject or paper | The admin page. The page and the form follow at once. |
 | WhatsApp number | `site.whatsapp` in `catalogue.json` (I can do it). |
-| Ask for department and batch in the Google Form | Besides the admin page, add a dropdown question titled exactly **Department** (or **Batch**) on the form's first page. |
+| A pack replaced by a new version | I run `tools/publish.py` and push: the page count, the page's prices and the download change at once; the form's label (it shows the page count) and the sheet's Catalogue tab within the hour (or run **syncNow**). Orders already placed keep the page count and estimate they were made with. |

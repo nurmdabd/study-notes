@@ -218,8 +218,6 @@ function getOrCreateForm_(cat) {
     .setValidation(FormApp.createTextValidation()
       .requireTextMatchesPattern('^[+0-9 -]{11,16}$')
       .setHelpText('Please enter a valid phone number').build());
-  if (s.department.ask) form.addListItem().setTitle(Q.dept).setChoiceValues(s.department.options).setRequired(true);
-  if (s.batch.ask) form.addListItem().setTitle(Q.batch).setChoiceValues(s.batch.options).setRequired(true);
 
   const packs = form.addPageBreakItem().setTitle('Choose packs')
     .setHelpText('Tick every pack you want, in any subject.');
@@ -232,8 +230,8 @@ function getOrCreateForm_(cat) {
   form.addMultipleChoiceItem().setTitle(Q.binding).setChoiceValues(['Stapled']).setRequired(true);
   form.addMultipleChoiceItem().setTitle(Q.pickup).setChoiceValues(['On campus']).setRequired(true);
   form.addMultipleChoiceItem().setTitle(Q.payment).setChoiceValues(['Cash at pickup']).setRequired(true)
-    .setHelpText('bKash or Nagad: I send the number with the price.');
-  form.addTextItem().setTitle(Q.trx).setHelpText('Only if you already paid by bKash or Nagad.');
+    .setHelpText('Pay after I confirm the price on WhatsApp.');
+  form.addTextItem().setTitle(Q.trx).setHelpText('Only if you already paid by mobile banking.');
   form.addParagraphTextItem().setTitle(Q.notes);
 
   form.setDestination(FormApp.DestinationType.SPREADSHEET, ss_().getId());
@@ -279,7 +277,8 @@ function syncForm_(form, cat) {
   });
   props.setProperty('SUBJECT_ITEMS', JSON.stringify(known));
   // label -> item ID, to turn the ticks of a response back into packs
-  const choiceMap = {};
+  // (old labels are kept: a pack's label changes with its page count, and a response may use the old one)
+  const choiceMap = JSON.parse(props.getProperty('CHOICE_MAP') || '{}');
   cat.items.forEach(it => { choiceMap[it.subject + '|' + it.choice] = it.id; });
   props.setProperty('CHOICE_MAP', JSON.stringify(choiceMap));
 }
@@ -357,7 +356,7 @@ const SETTING_NOTES = {
   hidden: '{"subjects": [subject codes], "items": [pack IDs]} hidden from the page and the form.',
   binding: 'List of {"name", "price" (BDT per copy), "available"}.',
   pickup: 'List of {"name", "available"}.',
-  payment: 'List of {"name", "available"}.',
+  payment: 'List of {"name", "details" (number and how to send, shown when chosen), "available"}.',
   department: '{"ask": true/false, "default", "options": [...]}',
   batch: '{"ask": true/false, "default", "options": [...]}',
 };
@@ -437,6 +436,7 @@ function publicSettings_(st) {
     binding: avail(st.binding).map(o => ({ name: o.name, price: Number(o.price) || 0 })),
     hidden: st.hidden,
     pickup: avail(st.pickup).map(o => o.name), payment: avail(st.payment).map(o => o.name),
+    payment_details: Object.fromEntries(avail(st.payment).filter(o => o.details).map(o => [o.name, String(o.details)])),
     department: st.department, batch: st.batch, google_form: formUrl,
   };
 }
@@ -472,6 +472,26 @@ function syncFormOptions_(form, st) {
     if (!list) return;
     const names = list.filter(o => o.available).map(o => o.name);
     if (names.length) it.asMultipleChoiceItem().setChoiceValues(names);
+    if (it.getTitle() === Q.payment) {
+      const details = list.filter(o => o.available && o.details).map(o => o.name + ': ' + o.details);
+      it.asMultipleChoiceItem().setHelpText(details.length
+        ? 'Pay after I confirm the price on WhatsApp. ' + details.join('. ') + '.'
+        : 'Pay after I confirm the price on WhatsApp.');
+    }
+  });
+  // department and batch: a dropdown on the first page while they are asked, none otherwise
+  [[Q.dept, st.department], [Q.batch, st.batch]].forEach(([title, d]) => {
+    const it = form.getItems(FormApp.ItemType.LIST).find(x => x.getTitle() === title);
+    if (d && d.ask && d.options.length) {
+      const q = it || form.addListItem().setTitle(title).setRequired(true);
+      q.asListItem().setChoiceValues(d.options);
+      if (!it) {
+        const packs = form.getItemById(Number(PropertiesService.getScriptProperties().getProperty('PB_PACKS')));
+        if (packs) form.moveItem(q.getIndex(), packs.getIndex());
+      }
+    } else if (it) {
+      form.deleteItem(it);
+    }
   });
 }
 

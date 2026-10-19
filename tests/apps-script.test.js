@@ -37,6 +37,7 @@ function makeForm() {
       if (k in t) return t[k];
       if (k === 'setTitle') return v => { t.title = v; return self; };
       if (k === 'setChoiceValues') return v => { t.choices = v.slice(); return self; };
+      if (k === 'setHelpText') return v => { t.help = v; return self; };
       if (k === 'asCheckboxItem' || k === 'asMultipleChoiceItem') return () => self;
       if (k === 'createResponse') return v => ({ item: t, v });
       return () => self;
@@ -77,7 +78,7 @@ const ctx = {
   ContentService: { MimeType: { JSON: 'json' }, createTextOutput: s => ({ setMimeType: () => ({ body: s }) }) },
   MailApp: { sendEmail: (...a) => { ctx.__mail.push(a); } }, __mail: [],
   Logger: { log: s => console.log('  LOG', s) },
-  FormApp: { ItemType: { MULTIPLE_CHOICE: 'MC' }, DestinationType: { SPREADSHEET: 'S' },
+  FormApp: { ItemType: { MULTIPLE_CHOICE: 'MC', LIST: 'LIST' }, DestinationType: { SPREADSHEET: 'S' },
     openById: () => { if (!ctx.__form) throw new Error('no form'); return ctx.__form; },
     create: () => (ctx.__form = makeForm()), createTextValidation: chain },
   ScriptApp: { getProjectTriggers: () => [], deleteTrigger() {}, newTrigger: chain },
@@ -190,4 +191,27 @@ run('handleFormSubmit')( { response: { getTimestamp: () => new Date(), getItemRe
 const fr = sheets.Orders.data.filter(x => x.length).slice(-1)[0];
 check('form order row: pack, copies, colour, estimate', sheets.Orders.data.filter(x => x.length).length === before + 1 &&
   fr[2] === 'Form' && fr[11] === 'EEE475-2019-20-pack' && fr[12] === 2 && fr[21] === 'Colour' && fr[20] === 420, fr.slice(2, 22).join(' / '));
+
+// ---- payment details, department and batch questions, a pack whose page count changed
+run(`(function(){ const st = settings_(); st.payment = [{ name: 'Cash at pickup', available: true },
+  { name: 'bKash', details: '01352679856 (personal, Send Money)', available: true }, { name: 'Nagad', details: '01700000000', available: false }];
+  st.department = { ask: true, default: 'EEE', options: ['EEE', 'CSE'] }; writeSettings_(st); syncFormOptions_(ctx_form(), st); })()`.replace('ctx_form()', 'FormApp.openById("F")'));
+const gp = JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings;
+check('page gets payment details of available methods only', JSON.stringify(gp.payment_details) === '{"bKash":"01352679856 (personal, Send Money)"}', JSON.stringify(gp.payment_details));
+const pay = F.items.find(i => i.title === 'Payment');
+check('form payment help lists the number', /bKash: 01352679856/.test(pay.help) && !/Nagad/.test(pay.help), pay.help);
+const dq = F.items.find(i => i.title === 'Department');
+check('department question added on the first page', dq && dq.choices.join() === 'EEE,CSE' && titles().indexOf('Department') === titles().indexOf('Choose packs') - 1, titles().slice(0, 6).join(' | '));
+run(`(function(){ const st = settings_(); st.department.ask = false; writeSettings_(st); syncFormOptions_(FormApp.openById("F"), st); })()`);
+check('department question removed when not asked', !titles().includes('Department'));
+// the pack grows from 70 to 74 pages: the form shows the new label, an answer with the old one still maps
+const catText = ctx.UrlFetchApp.fetch().getContentText();
+const grown = JSON.parse(catText); grown.items.find(i => i.id === 'EEE475-2019-20-pack').pages = 74;
+ctx.UrlFetchApp.fetch = () => ({ getResponseCode: () => 200, getContentText: () => JSON.stringify(grown) });
+run('syncNow()');
+const rf2 = F.items.find(i => i.title.startsWith('EEE475'));
+check('form label follows the new page count', rf2.choices[0] === '2019-20 exam pack (74 pages)', rf2.choices.join());
+const cm = JSON.parse(props.CHOICE_MAP);
+check('old label still maps to the pack', cm['EEE475|2019-20 exam pack (70 pages)'] === 'EEE475-2019-20-pack' && cm['EEE475|2019-20 exam pack (74 pages)'] === 'EEE475-2019-20-pack');
+check('catalogue tab has the new page count', run('catalogueById_()')['EEE475-2019-20-pack'].pages === 74);
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;
