@@ -27,7 +27,7 @@ function Sheet(name) {
   return new Proxy(this, { get: (t, k) => k in t ? t[k] : () => chain() });
 }
 
-// ---- a mock Google Form, for setup, upgrade, the form sync and form orders. Like Google's: a question
+// ---- a mock Google Form (the script now only retires the old one, in removeForm). Like Google's: a question
 // just added is a typed item (CheckboxItem, ListItem, ...) without the as...Item() methods; one read
 // back with getItems or getItemById is a plain Item with them.
 function makeForm() {
@@ -175,78 +175,42 @@ for (let i = 0; i < 10; i++) post({ action: 'adminLoad', key: 'bad' });
 check('lockout after 10 wrong keys', /Too many/.test(post({ action: 'adminLoad', key }).error));
 check('emails sent per order', ctx.__mail.length === 2, ctx.__mail.length);
 
-// ---- the form: made by setup, brought up to date by upgrade, hidden packs left out, form orders
+// ---- setup and upgrade (no form any more), payment details, a pack whose page count changed
 ctx.__mail.length = 0;
 run(`(function(){ const st = settings_(); st.accepting_orders = true; st.hidden = { subjects: [], items: [] };
   st.print = [{ name: 'Black and white', price_per_page: 0.5, available: true }]; writeSettings_(st); })()`);
-delete props.FORM_ID;
 run('setup()');
-let F = ctx.__form;
-const titles = () => F.items.map(i => i.__t.title);
-check('setup made a form with the Print question', titles().includes('Print') && titles().indexOf('Print') < titles().indexOf('Binding'), titles().join(' | '));
-check('form options from settings', F.items.find(i => i.__t.title === 'Binding').choices.join() === 'Stapled');
-// a form made before "Print" existed
-F.deleteItem(F.items.find(i => i.__t.title === 'Print'));
-run(`(function(){ const st = settings_(); st.print.push({ name: 'Colour', price_per_page: 3, available: true });
-  st.hidden = { subjects: ['EEE337'], items: ['EEE475-2020-21-pack'] }; writeSettings_(st); })()`);
+check('setup makes no form', !ctx.__form && !props.FORM_ID);
 run('upgrade()');
-F = ctx.__form;
-const pq = F.items.find(i => i.__t.title === 'Print');
-check('upgrade adds Print before Binding', pq && titles().indexOf('Print') === titles().indexOf('Binding') - 1 && pq.choices.join() === 'Black and white,Colour', titles().join(' | '));
-check('upgrade wrote all order headers', sheets.Orders.data[0][21] === 'Print' && sheets.Orders.data[0][19] === 'Status');
-check('hidden subject has no question', !titles().some(t => t.startsWith('EEE337')));
-const rf = F.items.find(i => i.__t.title.startsWith('EEE475'));
-check('hidden pack not offered', rf && rf.choices.length === 1 && rf.choices[0].startsWith('2019-20'), rf && rf.choices.join());
-// a form response
-const resp = (title, v) => ({ getItem: () => F.items.find(i => i.__t.title === title), getResponse: () => v });
-const before = sheets.Orders.data.filter(x => x.length).length;
-run('handleFormSubmit')( { response: { getTimestamp: () => new Date(), getItemResponses: () => [
-  resp('Name', 'Form User'), resp('Student ID', '9'), resp('WhatsApp number', '01700000000'),
-  resp(rf.title, [rf.choices[0]]), resp('Copies of each pack', '2'), resp('Print', 'Colour'),
-  resp('Binding', 'Stapled'), resp('Pickup', 'On campus (place confirmed on WhatsApp)'), resp('Payment', 'Cash at pickup') ] } });
-const fr = sheets.Orders.data.filter(x => x.length).slice(-1)[0];
-check('form order row: pack, copies, colour, estimate', sheets.Orders.data.filter(x => x.length).length === before + 1 &&
-  fr[2] === 'Form' && fr[11] === 'EEE475-2019-20-pack' && fr[12] === 2 && fr[21] === 'Colour' && fr[20] === 420, fr.slice(2, 22).join(' / '));
-
-// ---- payment details, department and batch questions, a pack whose page count changed
+check('upgrade wrote all order headers', sheets.Orders.data[0][21] === 'Print' && sheets.Orders.data[0][19] === 'Status' && sheets.Orders.data[0][22] === 'Mobile');
+check('catalogue tab has no form-link column', sheets.Catalogue.data[0].length === 9 && sheets.Catalogue.data[0][8] === 'Download', sheets.Catalogue.data[0].join());
 run(`(function(){ const st = settings_(); st.payment = [{ name: 'Cash at pickup', available: true },
   { name: 'bKash', details: '01352679856 (personal, Send Money)', available: true }, { name: 'Nagad', details: '01700000000', available: false }];
-  st.department = { ask: true, default: 'EEE', options: ['EEE', 'CSE'] }; writeSettings_(st); syncFormOptions_(ctx_form(), st); })()`.replace('ctx_form()', 'FormApp.openById("F")'));
+  writeSettings_(st); })()`);
 const gp = JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings;
 check('page gets payment details of available methods only', JSON.stringify(gp.payment_details) === '{"bKash":"01352679856 (personal, Send Money)"}', JSON.stringify(gp.payment_details));
-const pay = F.items.find(i => i.__t.title === 'Payment');
-check('form payment help lists the number', /bKash: 01352679856/.test(pay.help) && !/Nagad/.test(pay.help), pay.help);
-const dq = F.items.find(i => i.__t.title === 'Department');
-check('department question added on the first page', dq && dq.choices.join() === 'EEE,CSE' && titles().indexOf('Department') === titles().indexOf('Choose packs') - 1, titles().slice(0, 6).join(' | '));
-run(`(function(){ const st = settings_(); st.department.ask = false; writeSettings_(st); syncFormOptions_(FormApp.openById("F"), st); })()`);
-check('department question removed when not asked', !titles().includes('Department'));
-// the pack grows from 70 to 74 pages: the form shows the new label, an answer with the old one still maps
+check('no google_form in the page settings', !('google_form' in gp));
 const catText = ctx.UrlFetchApp.fetch().getContentText();
 const grown = JSON.parse(catText); grown.items.find(i => i.id === 'EEE475-2019-20-pack').pages = 74;
 ctx.UrlFetchApp.fetch = () => ({ getResponseCode: () => 200, getContentText: () => JSON.stringify(grown) });
 run('syncNow()');
-const rf2 = F.items.find(i => i.__t.title.startsWith('EEE475'));
-check('form label follows the new page count', rf2.choices[0] === '2019-20 exam pack (74 pages)', rf2.choices.join());
-const cm = JSON.parse(props.CHOICE_MAP);
-check('old label still maps to the pack', cm['EEE475|2019-20 exam pack (70 pages)'] === 'EEE475-2019-20-pack' && cm['EEE475|2019-20 exam pack (74 pages)'] === 'EEE475-2019-20-pack');
 check('catalogue tab has the new page count', run('catalogueById_()')['EEE475-2019-20-pack'].pages === 74);
 
-// ---- the empty questions an interrupted sync left in the live form are removed, the rest filled in
-F.addCheckboxItem(); F.addCheckboxItem();
-check('two orphan tick-box questions present', F.items.filter(i => i.__t.type === 'CHECKBOX' && !i.__t.title).length === 2);
-run('syncNow()');
-const boxes = F.items.filter(i => i.__t.type === 'CHECKBOX');
-check('orphans removed, subject questions kept', boxes.every(i => i.__t.title) && boxes.length === 6, boxes.map(i => i.__t.title || '(empty)').join(' | '));
-// a first sync on a fresh form (where the old script failed): every question gets its title and boxes
-delete props.FORM_ID; delete props.SUBJECT_ITEMS; delete props.CHOICE_MAP;
-run('setup()'); F = ctx.__form;
-const fresh = F.items.filter(i => i.__t.type === 'CHECKBOX');
-check('fresh form: subject questions titled and filled', fresh.length >= 5 && fresh.every(i => i.__t.title && i.__t.choices.length), fresh.map(i => i.__t.title).join(' | '));
-check('form title and description from the settings', F.header.title === 'Print order: Study Notes by Nur Mohammad' &&
-  F.header.description.includes('Printed copies: At printing cost.') && F.header.description.includes('https://nurmdabd.github.io/study-notes/'), JSON.stringify(F.header));
-check('mobile question after WhatsApp', titles().indexOf('Mobile number (for calls)') === titles().indexOf('WhatsApp number') + 1, titles().slice(0, 5).join(' | '));
-run('syncNow()');
-check('mobile question not duplicated', titles().filter(t => t === 'Mobile number (for calls)').length === 1);
+// ---- removeForm: the old form is unlinked and trashed, its properties dropped, only the hourly trigger left
+ctx.__form = makeForm(); props.FORM_ID = 'F'; props.SUBJECT_ITEMS = '{}'; props.CHOICE_MAP = '{}';
+let unlinked = false, trashed = '';
+const realOpen = ctx.FormApp.openById;
+ctx.FormApp.openById = () => Object.assign(Object.create(null), { removeDestination: () => { unlinked = true; } });
+ctx.DriveApp = { getFileById: id => ({ setTrashed: v => { trashed = id + ':' + v; } }) };
+const made = [];
+ctx.ScriptApp = { getProjectTriggers: () => [], deleteTrigger() {}, newTrigger: name => { made.push(name); return chain(); } };
+run('removeForm()');
+check('form unlinked and trashed', unlinked && trashed === 'F:true');
+check('form properties removed', !props.FORM_ID && !props.SUBJECT_ITEMS && !props.CHOICE_MAP);
+check('only the hourly catalogue trigger is made', made.join() === 'syncNow', made.join());
+ctx.FormApp.openById = realOpen; delete ctx.__form;
+run('removeForm()'); // again, with no form: no error
+check('removeForm is safe to run twice', true);
 
 // ---- one web order mixing black and white and colour, with a mobile number
 run(`(function(){ const st = settings_(); st.accepting_orders = true; st.hidden = { subjects: [], items: [] };
@@ -264,14 +228,9 @@ check('no mobile: WhatsApp number used', post({ ...order, items: [{ id: 'EEE443-
 check('bad mobile refused', /valid mobile/.test(post({ ...order, mobile: '12' }).error || ''));
 check('a line with an unavailable print type refused', /print type/.test(post({ ...order, items: [{ id: 'EEE443-2020-21-pack', copies: 1, print: 'Gold' }] }).error || ''));
 
-// ---- subject order: the page gets it, the form's subject questions follow it
+// ---- subject order: the page gets it
 run(`(function(){ const st = settings_(); st.subject_order = ['EEE475', 'EEE443']; writeSettings_(st); })()`);
 check('page gets the subject order', JSON.stringify(JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.subject_order) === '["EEE475","EEE443"]');
-run('syncNow()');
-const qs = titles().filter(t => /^EEE\d{3} /.test(t)).map(t => t.slice(0, 6));
-check('form subject questions in the admin order', qs.join() === 'EEE475,EEE443,EEE329,EEE337,EEE421,EEE455,EEE459', qs.join());
-check('they stay on the "Choose packs" page', titles().indexOf('Choose packs') < titles().indexOf(titles().find(t => t.startsWith('EEE475'))) &&
-  titles().indexOf(titles().find(t => t.startsWith('EEE459'))) === titles().indexOf('Printing and payment') - 1);
 ctx.__cache = {}; // the lockout test above left the admin locked
 check('save refuses a malformed order', /subject order/.test(post({ action: 'adminSave', key, settings: Object.assign(run('settings_()'), { subject_order: 'x' }) }).error || ''));
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;

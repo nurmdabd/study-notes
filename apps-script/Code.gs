@@ -1,14 +1,11 @@
 /**
  * Print orders for https://nurmdabd.github.io/study-notes/
  *
- * One script, two ways to order, one list of orders:
- *   - the web order page sends each order here (doPost);
- *   - the Google Form this script makes calls handleFormSubmit.
- * Both write the same rows into the "Orders" tab, one row per pack ordered.
+ * The web order page sends each order here (doPost); it goes into the "Orders" tab, one row per
+ * pack ordered.
  *
  * The list of packs lives in catalogue.json on the website. Every hour (and when you run syncNow)
- * the script reads it, copies it into the "Catalogue" tab and rewrites the form's tick boxes,
- * so a new pack on the website reaches the form without touching it.
+ * the script copies it into the "Catalogue" tab, which orders are checked and priced against.
  *
  * Prices and order options live in the "Settings" tab. Change them on the admin page
  * (https://nurmdabd.github.io/study-notes/admin.html, with the key from showAdminKey) or in the tab.
@@ -19,8 +16,6 @@
 
 const CONFIG = {
   CATALOGUE_URL: 'https://nurmdabd.github.io/study-notes/catalogue.json',
-  FORM_TITLE: 'Print order: Study Notes by Nur Mohammad',
-  SITE_URL: 'https://nurmdabd.github.io/study-notes/',
   NOTIFY_BY_EMAIL: true, // an email to you for every new order
   MAX_COPIES: 20,
 };
@@ -39,71 +34,64 @@ const STATUS_COLOURS = {
   'Printed': '#ddd6fe', 'Delivered': '#e5e7eb', 'Cancelled': '#fecaca',
 };
 
-// Form question titles that are fixed (the subject questions are named from the catalogue).
-const Q = {
-  name: 'Name', id: 'Student ID', phone: 'WhatsApp number', mobile: 'Mobile number (for calls)', dept: 'Department', batch: 'Batch',
-  copies: 'Copies of each pack', print: 'Print', binding: 'Binding', pickup: 'Pickup', payment: 'Payment',
-  trx: 'Transaction ID', notes: 'Notes',
-};
-
 // ---------------------------------------------------------------- setup
 
-/** Run once from the editor: makes the tabs, the form and the triggers. Safe to run again. */
+/** Run once from the editor: makes the tabs and the hourly trigger. Safe to run again. */
 function setup() {
   const ss = SpreadsheetApp.getActive();
   PropertiesService.getScriptProperties().setProperty('SHEET_ID', ss.getId());
   setupOrdersSheet_(ss);
-  const cat = fetchCatalogue_();
-  writeCatalogueSheet_(ss, cat);
-  const form = getOrCreateForm_(cat);
-  syncForm_(form, cat);
-  writePrefilledLinks_(ss, form, cat);
+  writeCatalogueSheet_(ss, fetchCatalogue_());
   setupSummarySheet_(ss);
   settings_(); // makes the Settings tab from catalogue.json the first time
-  syncFormOptions_(form, settings_());
-  installTriggers_(form);
+  installTriggers_();
   showAdminKey();
-  Logger.log('Form (share this): ' + form.getPublishedUrl());
-  Logger.log('Form (edit): ' + form.getEditUrl());
   Logger.log('Next: Deploy > New deployment > Web app (Execute as: Me, Who has access: Anyone).');
 }
 
-/** Run any time to pull the catalogue and refresh the form now (the hourly trigger does the same). */
+/** Run any time to copy the catalogue into the Catalogue tab now (the hourly trigger does the same). */
 function syncNow() {
-  const ss = ss_();
   const cat = fetchCatalogue_();
   PropertiesService.getScriptProperties().setProperty('SITE_DEFAULTS',
     JSON.stringify({ department: cat.site.department.default, batch: cat.site.batch.default }));
-  writeCatalogueSheet_(ss, cat);
-  const form = getOrCreateForm_(cat);
-  syncForm_(form, cat);
-  syncFormOptions_(form, settings_());
-  writePrefilledLinks_(ss, form, cat);
+  writeCatalogueSheet_(ss_(), cat);
 }
 
 /**
- * Run once after updating the script (safe to run again): brings the Orders and Summary tabs, the
- * Settings tab and the form up to date, and shows the admin key.
+ * Run once to retire the Google Form (orders come only from the web page now): stops the form's
+ * trigger, unlinks it from this sheet and moves it to Drive's trash. The orders and the
+ * "Form Responses" tab stay; delete that tab yourself if you no longer want it.
+ */
+function removeForm() {
+  const props = PropertiesService.getScriptProperties();
+  installTriggers_(); // only the hourly catalogue copy is left
+  const id = props.getProperty('FORM_ID');
+  if (id) {
+    try {
+      const form = FormApp.openById(id);
+      try { form.removeDestination(); } catch (e) { /* not linked */ }
+      DriveApp.getFileById(id).setTrashed(true);
+      Logger.log('The form is unlinked and in the trash (restore it from Drive within 30 days if needed).');
+    } catch (e) {
+      Logger.log('The form was already gone: ' + e.message);
+    }
+  }
+  ['FORM_ID', 'PB_PACKS', 'PB_PRINTING', 'SUBJECT_ITEMS', 'CHOICE_MAP'].forEach(k => props.deleteProperty(k));
+  writeCatalogueSheet_(ss_(), fetchCatalogue_()); // without the form-link column
+}
+
+/**
+ * Run once after updating the script (safe to run again): brings the Orders and Summary tabs and the
+ * Settings tab up to date, and shows the admin key.
  */
 function upgrade() {
   const ss = ss_();
   ss.getSheetByName(SHEETS.orders).getRange(1, 1, 1, ORDER_HEADERS.length).setValues([ORDER_HEADERS])
     .setFontWeight('bold').setBackground('#1f2937').setFontColor('#ffffff');
   writeSettings_(settings_()); // adds new settings with their defaults
-  const id = PropertiesService.getScriptProperties().getProperty('FORM_ID');
-  if (id) addPrintQuestion_(FormApp.openById(id), settings_());
   setupSummarySheet_(ss);
   syncNow();
   showAdminKey();
-}
-
-/** Adds the "Print" question (black and white or colour) to a form made before it existed. */
-function addPrintQuestion_(form, st) {
-  if (form.getItems(FormApp.ItemType.MULTIPLE_CHOICE).some(it => it.getTitle() === Q.print)) return;
-  const binding = form.getItems(FormApp.ItemType.MULTIPLE_CHOICE).find(it => it.getTitle() === Q.binding);
-  const q = form.addMultipleChoiceItem().setTitle(Q.print).setRequired(true)
-    .setChoiceValues(st.print.filter(o => o.available).map(o => o.name));
-  if (binding) form.moveItem(q.getIndex(), binding.getIndex());
 }
 
 /** Shows the admin page's key in the Execution log (makes one the first time). Keep it private. */
@@ -129,9 +117,8 @@ function ss_() {
   return id ? SpreadsheetApp.openById(id) : SpreadsheetApp.getActive();
 }
 
-function installTriggers_(form) {
+function installTriggers_() {
   ScriptApp.getProjectTriggers().forEach(t => ScriptApp.deleteTrigger(t));
-  ScriptApp.newTrigger('handleFormSubmit').forForm(form).onFormSubmit().create();
   ScriptApp.newTrigger('syncNow').timeBased().everyHours(1).create();
 }
 
@@ -149,30 +136,17 @@ function fetchCatalogue_() {
   cat.items.forEach(it => {
     it.url = base + it.file;
     it.subjectInfo = subjects[it.subject];
-    it.choice = choiceLabel_(it);
   });
   cat.subjectMap = subjects;
   return cat;
 }
 
-/** The text of an item's tick box in the form, inside its subject's question. */
-function choiceLabel_(it) {
-  return it.session + ' ' + it.document.toLowerCase() + ' (' + it.pages + ' pages)';
-}
-
-function subjectQuestionTitle_(s) {
-  return s.code + ' ' + s.short + ': ' + s.title;
-}
-
 function writeCatalogueSheet_(ss, cat) {
   const sh = ss.getSheetByName(SHEETS.catalogue) || ss.insertSheet(SHEETS.catalogue);
-  const header = ['Item ID', 'Subject', 'Short', 'Title', 'Session', 'Document', 'Pages', 'Printable', 'Download', 'Form link (pre-filled)'];
-  const old = sh.getLastRow() > 1 ? sh.getRange(2, 1, sh.getLastRow() - 1, header.length).getValues() : [];
-  const oldLinks = {};
-  old.forEach(r => { oldLinks[r[0]] = r[9]; });
+  const header = ['Item ID', 'Subject', 'Short', 'Title', 'Session', 'Document', 'Pages', 'Printable', 'Download'];
   const rows = cat.items.map(it => [
     it.id, it.subject, it.subjectInfo.short, it.subjectInfo.title, it.session, it.document,
-    it.pages, it.printable ? 'yes' : 'no', it.url, oldLinks[it.id] || '',
+    it.pages, it.printable ? 'yes' : 'no', it.url,
   ]);
   sh.clear();
   sh.getRange(1, 1, 1, header.length).setValues([header]).setFontWeight('bold');
@@ -190,157 +164,6 @@ function catalogueById_() {
     map[r[0]] = { id: r[0], subject: r[1], session: r[4], document: r[5], pages: r[6], printable: r[7] === 'yes' };
   });
   return map;
-}
-
-// ---------------------------------------------------------------- the form
-
-function getOrCreateForm_(cat) {
-  const props = PropertiesService.getScriptProperties();
-  const id = props.getProperty('FORM_ID');
-  if (id) {
-    try { return FormApp.openById(id); } catch (e) { /* deleted: make a new one */ }
-  }
-  const form = FormApp.create(CONFIG.FORM_TITLE);
-  form.setCollectEmail(false);
-  try { form.setRequireLogin(false); } catch (e) { /* only Workspace accounts have this setting */ }
-  form.setLimitOneResponsePerUser(false);
-  form.setAllowResponseEdits(true);
-  form.setConfirmationMessage("Thanks! I'll message you on WhatsApp with the price before printing.");
-
-  form.addTextItem().setTitle(Q.name).setRequired(true);
-  form.addTextItem().setTitle(Q.id).setRequired(true);
-  form.addTextItem().setTitle(Q.phone).setRequired(true)
-    .setHelpText('For example 01XXXXXXXXX')
-    .setValidation(FormApp.createTextValidation()
-      .requireTextMatchesPattern('^[+0-9 -]{11,16}$')
-      .setHelpText('Please enter a valid phone number').build());
-
-  const packs = form.addPageBreakItem().setTitle('Choose packs')
-    .setHelpText('Tick every pack you want, in any subject.');
-  const printing = form.addPageBreakItem().setTitle('Printing and payment');
-  form.addTextItem().setTitle(Q.copies).setRequired(true)
-    .setHelpText('Different numbers for different packs? Write them in Notes.')
-    .setValidation(FormApp.createTextValidation()
-      .requireNumberBetween(1, CONFIG.MAX_COPIES).build());
-  form.addMultipleChoiceItem().setTitle(Q.print).setChoiceValues(['Black and white']).setRequired(true);
-  form.addMultipleChoiceItem().setTitle(Q.binding).setChoiceValues(['Stapled']).setRequired(true);
-  form.addMultipleChoiceItem().setTitle(Q.pickup).setChoiceValues(['On campus']).setRequired(true);
-  form.addMultipleChoiceItem().setTitle(Q.payment).setChoiceValues(['Cash at pickup']).setRequired(true)
-    .setHelpText('Pay after I confirm the price on WhatsApp.');
-  form.addTextItem().setTitle(Q.trx).setHelpText('Only if you already paid by mobile banking.');
-  form.addParagraphTextItem().setTitle(Q.notes);
-
-  form.setDestination(FormApp.DestinationType.SPREADSHEET, ss_().getId());
-  props.setProperty('FORM_ID', form.getId());
-  props.setProperty('PB_PACKS', String(packs.getId()));
-  props.setProperty('PB_PRINTING', String(printing.getId()));
-  syncFormOptions_(form, settings_()); // the real options, from the Settings tab
-  return form;
-}
-
-/** One tick-box question per subject, between the "Choose packs" and "Printing and payment" pages. */
-function syncForm_(form, cat) {
-  const props = PropertiesService.getScriptProperties();
-  const known = JSON.parse(props.getProperty('SUBJECT_ITEMS') || '{}'); // subject code -> item id
-  const bySubject = {};
-  const hidden = settings_().hidden || { subjects: [], items: [] };
-  cat.items.filter(it => it.printable && !isHidden_(hidden, it)).forEach(it => {
-    (bySubject[it.subject] = bySubject[it.subject] || []).push(it);
-  });
-  const printingId = Number(props.getProperty('PB_PRINTING'));
-  const indexOfPrinting = () => form.getItemById(printingId).getIndex();
-  // every tick-box question is a subject's; one the script lost track of (an unnamed one left by
-  // an interrupted sync) is removed
-  const ours = Object.values(known);
-  form.getItems(FormApp.ItemType.CHECKBOX).forEach(it => {
-    if (!ours.includes(String(it.getId()))) form.deleteItem(it);
-  });
-
-  cat.subjects.forEach(s => {
-    const items = bySubject[s.code];
-    let q = known[s.code] ? form.getItemById(Number(known[s.code])) : null;
-    if (!items) {
-      if (q) { form.deleteItem(q); delete known[s.code]; }
-      return;
-    }
-    if (!q) {
-      const made = form.addCheckboxItem(); // a CheckboxItem: as...Item() exists only on a plain Item
-      form.moveItem(made.getIndex(), indexOfPrinting());
-      known[s.code] = String(made.getId());
-      props.setProperty('SUBJECT_ITEMS', JSON.stringify(known)); // remembered at once, so it is never orphaned
-      q = form.getItemById(made.getId());
-    }
-    q.asCheckboxItem().setTitle(subjectQuestionTitle_(s)).setChoiceValues(items.map(it => it.choice));
-  });
-  Object.keys(known).forEach(code => {
-    if (!cat.subjectMap[code]) {
-      const q = form.getItemById(Number(known[code]));
-      if (q) form.deleteItem(q);
-      delete known[code];
-    }
-  });
-  // the subject questions in the admin's order: each in turn moves to the end of the "Choose packs" page
-  sortSubjects_(cat.subjects, settings_().subject_order).forEach(s => {
-    const q = known[s.code] ? form.getItemById(Number(known[s.code])) : null;
-    if (q) form.moveItem(q.getIndex(), indexOfPrinting() - 1);
-  });
-  props.setProperty('SUBJECT_ITEMS', JSON.stringify(known));
-  // label -> item ID, to turn the ticks of a response back into packs
-  // (old labels are kept: a pack's label changes with its page count, and a response may use the old one)
-  const choiceMap = JSON.parse(props.getProperty('CHOICE_MAP') || '{}');
-  cat.items.forEach(it => { choiceMap[it.subject + '|' + it.choice] = it.id; });
-  props.setProperty('CHOICE_MAP', JSON.stringify(choiceMap));
-}
-
-/** A link per pack that opens the form with that pack already ticked. */
-function writePrefilledLinks_(ss, form, cat) {
-  const known = JSON.parse(PropertiesService.getScriptProperties().getProperty('SUBJECT_ITEMS') || '{}');
-  const sh = ss.getSheetByName(SHEETS.catalogue);
-  cat.items.forEach((it, i) => {
-    if (!it.printable || !known[it.subject]) return;
-    const q = form.getItemById(Number(known[it.subject])).asCheckboxItem();
-    const url = form.createResponse().withItemResponse(q.createResponse([it.choice])).toPrefilledUrl();
-    sh.getRange(i + 2, 10).setValue(url);
-  });
-}
-
-function handleFormSubmit(e) {
-  const choiceMap = JSON.parse(PropertiesService.getScriptProperties().getProperty('CHOICE_MAP') || '{}');
-  const known = JSON.parse(PropertiesService.getScriptProperties().getProperty('SUBJECT_ITEMS') || '{}');
-  const subjectOfItem = {};
-  Object.keys(known).forEach(code => { subjectOfItem[known[code]] = code; });
-
-  const order = { items: [] };
-  let copies = 1;
-  e.response.getItemResponses().forEach(r => {
-    const item = r.getItem();
-    const title = item.getTitle();
-    const answer = r.getResponse();
-    const subject = subjectOfItem[String(item.getId())];
-    if (subject) {
-      (answer || []).forEach(label => {
-        order.items.push({ id: choiceMap[subject + '|' + label] || '', label: subject + ' ' + label });
-      });
-      return;
-    }
-    switch (title) {
-      case Q.name: order.name = answer; break;
-      case Q.id: order.studentId = answer; break;
-      case Q.phone: order.phone = answer; break;
-      case Q.mobile: order.mobile = answer; break;
-      case Q.dept: order.department = answer; break;
-      case Q.batch: order.batch = answer; break;
-      case Q.copies: copies = Number(answer) || 1; break;
-      case Q.print: order.print = answer; break;
-      case Q.binding: order.binding = answer; break;
-      case Q.pickup: order.pickup = answer; break;
-      case Q.payment: order.payment = answer; break;
-      case Q.trx: order.trx = answer; break;
-      case Q.notes: order.notes = answer; break;
-    }
-  });
-  order.items.forEach(it => { it.copies = copies; });
-  appendOrder_(order, 'Form', e.response.getTimestamp());
 }
 
 // ---------------------------------------------------------------- the web order page
@@ -363,8 +186,8 @@ const SETTING_NOTES = {
   price_note: 'The price line shown on the order page.',
   show_estimate: 'true or false: show the prices on the order page (on each pack and for the order).',
   print: 'List of {"name", "price_per_page" (BDT per printed page side), "available"}, e.g. black and white, colour.',
-  hidden: '{"subjects": [subject codes], "items": [pack IDs]} hidden from the page and the form.',
-  subject_order: 'Subject codes in the order the page and the form list them; subjects not named follow in catalogue order.',
+  hidden: '{"subjects": [subject codes], "items": [pack IDs]} hidden from the page (and not orderable).',
+  subject_order: 'Subject codes in the order the page lists them; subjects not named follow in catalogue order.',
   binding: 'List of {"name", "price" (BDT per copy), "available"}.',
   pickup: 'List of {"name", "available"}.',
   payment: 'List of {"name", "details" (number and how to send, shown when chosen), "available"}.',
@@ -437,11 +260,6 @@ function writeSettings_(st) {
 /** What the order page may see: only available options, no sheet links. */
 function publicSettings_(st) {
   const avail = l => (l || []).filter(o => o.available);
-  let formUrl = '';
-  try {
-    const id = PropertiesService.getScriptProperties().getProperty('FORM_ID');
-    if (id) formUrl = FormApp.openById(id).getPublishedUrl();
-  } catch (e) { /* no form */ }
   return {
     accepting_orders: !!st.accepting_orders, price_note: st.price_note,
     show_estimate: !!st.show_estimate,
@@ -450,7 +268,7 @@ function publicSettings_(st) {
     hidden: st.hidden, subject_order: st.subject_order || [],
     pickup: avail(st.pickup).map(o => o.name), payment: avail(st.payment).map(o => o.name),
     payment_details: Object.fromEntries(avail(st.payment).filter(o => o.details).map(o => [o.name, String(o.details)])),
-    department: st.department, batch: st.batch, google_form: formUrl,
+    department: st.department, batch: st.batch,
   };
 }
 
@@ -474,67 +292,8 @@ function checkSettings_(st) {
   return '';
 }
 
-/** The form's title and description, from the settings (the price note and the print types). */
-function syncFormHeader_(form, st) {
-  const types = (st.print || []).filter(o => o.available);
-  const prices = st.show_estimate && types.some(o => Number(o.price_per_page) > 0)
-    ? 'Print: ' + types.map(o => o.name + ' ৳' + o.price_per_page + ' a page').join(', ') + '.\n' : '';
-  form.setTitle(CONFIG.FORM_TITLE);
-  form.setDescription(
-    'Printed copies of my exam packs (each past paper solved, with its formula sheet).\n' +
-    'Printed copies: ' + st.price_note + '\n' + prices +
-    'Free PDFs, and each pack\'s price, on the order page: ' + CONFIG.SITE_URL);
-}
-
-/** The subjects in the admin's order: those named first, the rest in catalogue order. */
-function sortSubjects_(subjects, order) {
-  const pos = c => { const i = (order || []).indexOf(c); return i < 0 ? 1e6 : i; };
-  return subjects.map((s, i) => [s, i]).sort((a, b) => pos(a[0].code) - pos(b[0].code) || a[1] - b[1]).map(x => x[0]);
-}
-
 function isHidden_(hidden, it) {
   return hidden.subjects.includes(it.subject) || hidden.items.includes(it.id);
-}
-
-/** Gives the form's print, binding, pickup and payment questions the available options. */
-function syncFormOptions_(form, st) {
-  const want = { [Q.print]: st.print, [Q.binding]: st.binding, [Q.pickup]: st.pickup, [Q.payment]: st.payment };
-  form.getItems(FormApp.ItemType.MULTIPLE_CHOICE).forEach(it => {
-    const list = want[it.getTitle()];
-    if (!list) return;
-    const names = list.filter(o => o.available).map(o => o.name);
-    if (names.length) it.asMultipleChoiceItem().setChoiceValues(names);
-    if (it.getTitle() === Q.payment) {
-      const details = list.filter(o => o.available && o.details).map(o => o.name + ': ' + o.details);
-      it.asMultipleChoiceItem().setHelpText('Each pack\'s price is on the order page (' + CONFIG.SITE_URL + ').' +
-        (details.length ? ' Send the total to: ' + details.join('; ') + '.' : ''));
-    }
-  });
-  syncFormHeader_(form, st);
-  // a mobile number for calls, after the WhatsApp number (forms made before it existed get it here)
-  if (!form.getItems(FormApp.ItemType.TEXT).some(x => x.getTitle() === Q.mobile)) {
-    const made = form.addTextItem();
-    const phone = form.getItems(FormApp.ItemType.TEXT).find(x => x.getTitle() === Q.phone);
-    if (phone) form.moveItem(made.getIndex(), phone.getIndex() + 1);
-    form.getItemById(made.getId()).asTextItem().setTitle(Q.mobile)
-      .setHelpText('To call you if needed. Leave empty if it is your WhatsApp number.');
-  }
-  // department and batch: a dropdown on the first page while they are asked, none otherwise
-  [[Q.dept, st.department], [Q.batch, st.batch]].forEach(([title, d]) => {
-    const it = form.getItems(FormApp.ItemType.LIST).find(x => x.getTitle() === title);
-    if (d && d.ask && d.options.length) {
-      let q = it;
-      if (!q) {
-        const made = form.addListItem();
-        const packs = form.getItemById(Number(PropertiesService.getScriptProperties().getProperty('PB_PACKS')));
-        if (packs) form.moveItem(made.getIndex(), packs.getIndex());
-        q = form.getItemById(made.getId());
-      }
-      q.asListItem().setTitle(title).setRequired(true).setChoiceValues(d.options);
-    } else if (it) {
-      form.deleteItem(it);
-    }
-  });
 }
 
 /** A wrong admin key is answered slowly, and ten wrong keys in ten minutes lock the admin out for a while. */
@@ -590,24 +349,11 @@ function admin_(data) {
     lock.waitLock(20000);
     try {
       writeSettings_(st);
-      const id = PropertiesService.getScriptProperties().getProperty('FORM_ID');
-      if (id) {
-        const form = FormApp.openById(id);
-        syncFormOptions_(form, st);
-        try { // shown and hidden packs; the hourly sync catches up if the website does not answer
-          const cat = fetchCatalogue_();
-          syncForm_(form, cat);
-          writePrefilledLinks_(ss_(), form, cat);
-        } catch (e) { /* later */ }
-      }
     } finally {
       lock.releaseLock();
     }
   }
-  const props = PropertiesService.getScriptProperties();
-  let formEdit = '';
-  try { formEdit = FormApp.openById(props.getProperty('FORM_ID')).getEditUrl(); } catch (e) { /* no form */ }
-  return json_({ ok: true, settings: settings_(), sheet: ss_().getUrl(), formEdit: formEdit });
+  return json_({ ok: true, settings: settings_(), sheet: ss_().getUrl() });
 }
 
 function checkOrder_(d) {
@@ -656,7 +402,7 @@ function appendOrder_(order, source, when) {
   const rows = items.map(it => {
     const c = cat[it.id] || {};
     const n = Number(it.copies) || 0;
-    const print = it.print || order.print; // the web page sends one per pack, the form one per order
+    const print = it.print || order.print; // one per pack; an older page sent one per order
     const rate = rateOf(print);
     const price = rate && c.pages ? Math.round((c.pages * rate + bindPrice) * n) : '';
     return [

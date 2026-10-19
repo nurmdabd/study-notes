@@ -75,7 +75,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
 <body>
 <div class="wrap">
   <h1>Order settings</h1>
-  <p class="lead">Prices and order options for the <a href="./">study notes order page</a>. Changes show on the page and in the Google Form as soon as you save.</p>
+  <p class="lead">Prices and order options for the <a href="./">study notes order page</a>. Changes show on the page as soon as you save.</p>
 
   <form class="card" id="login">
     <h2>Admin key</h2>
@@ -125,7 +125,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
 
     <div class="card">
       <h2>Payment</h2>
-      <p class="help">For mobile banking, write the number and how to send, for example “01XXXXXXXXX (personal, Send Money)”. The page shows it when a student picks that method, with a copy button; the form lists it under Payment.</p>
+      <p class="help">For mobile banking, write the number and how to send, for example “01XXXXXXXXX (personal, Send Money)”. The page shows it, with the amount to send and a copy button, when a student picks that method.</p>
       <div class="opts" id="payment"></div>
       <button class="btn small" type="button" data-add="payment">+ Add payment option</button>
     </div>
@@ -143,12 +143,11 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
         <div><label for="batch-default">Default</label><input type="text" id="batch-default"></div>
         <div><label for="batch-options">Options</label><input type="text" id="batch-options" placeholder="2021-22, 2022-23"></div>
       </div>
-      <p class="help">The Google Form follows: it gets a Department or Batch question while you ask for it.</p>
     </div>
 
     <div class="card">
       <h2>Subjects: order and what is shown</h2>
-      <p class="help">Move a subject with ↑ ↓ to set the order on the page and in the form. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted.</p>
+      <p class="help">Move a subject with ↑ ↓ to set the order on the page. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted.</p>
       <div class="sortbar"><span class="help">Sort:</span>
         <button class="btn small" type="button" data-sort="code">By code</button>
         <button class="btn small" type="button" data-sort="title">By title</button>
@@ -196,9 +195,9 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
         if ($('remember').checked) store.set('sn-admin-key', key); else store.del('sn-admin-key');
         fill(res.settings);
         $('links').innerHTML = '<a href="' + res.sheet + '" target="_blank" rel="noopener">Open the orders sheet</a>' +
-          (res.formEdit ? ' · <a href="' + res.formEdit + '" target="_blank" rel="noopener">Edit the form</a>' : '');
+          '';
         $('editor').hidden = false;
-        msg('ok', action === 'adminSave' ? 'Saved. The order page and the form use the new settings now.' : '');
+        msg('ok', action === 'adminSave' ? 'Saved. The order page uses the new settings now.' : '');
       })
       .catch(err => msg('err', err.message))
       .finally(() => { btn.disabled = false; });

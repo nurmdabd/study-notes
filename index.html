@@ -243,7 +243,6 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
               <button class="btn primary block" type="submit" id="send" hidden>Send order</button>
               <a class="btn wa block" id="wa" href="#" target="_blank" rel="noopener" hidden>Send on WhatsApp</a>
               <div class="hint" id="wa-hint">Add a pack and fill in your name, student ID and phone numbers to send the order.</div>
-              <a class="btn ghost block" id="gform" href="#" target="_blank" rel="noopener" hidden>Use the Google Form instead</a>
             </div>
             <div class="msg" id="msg" role="status" hidden></div>
           </form>
@@ -288,7 +287,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
       print: list(s.print || ['Black and white']).map(o => ({ name: o.name, price_per_page: 0 })),
       binding: list(s.binding).map(o => ({ name: o.name, price: Number(o.price) || 0 })),
       pickup: list(s.pickup).map(o => o.name), payment: list(s.payment).map(o => o.name),
-      department: s.department, batch: s.batch, google_form: s.google_form || '',
+      department: s.department, batch: s.batch,
       hidden: { subjects: [], items: [] }, payment_details: {}, subject_order: [],
     };
   }
@@ -358,7 +357,6 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     const open = s.accepting_orders !== false;
     $('paused').hidden = open; $('order-body').hidden = !open;
     $('send').hidden = !site.order_endpoint;
-    $('gform').hidden = !s.google_form; if (s.google_form) $('gform').href = s.google_form;
     renderSubjects(); renderCart();
   }
 
