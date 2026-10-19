@@ -3,9 +3,9 @@
     "title": "Study notes",
     "owner": "Nur Mohammad",
     "whatsapp": "8801352679856",
-    "order_endpoint": "",
+    "order_endpoint": "https://script.google.com/macros/s/AKfycbyI6qt1H_VxLz4zk8gPeY1QW3rLA35StK6Q_gvABcwK8gYvr5XVSBUaR7ULoX7aA3gLUQ/exec",
     "google_form": "",
-    "price_note": "Printing cost only, no profit. I'll confirm the price on WhatsApp before printing.",
+    "price_note": "At printing cost, no profit. The price can move a little with paper and printing costs, so I'll confirm it on WhatsApp before printing.",
     "department": {
       "ask": false,
       "default": "EEE",
@@ -21,8 +21,16 @@
       ]
     },
     "binding": [
-      "Stapled",
-      "Spiral binding"
+      {
+        "name": "Stapled",
+        "price": 0,
+        "available": true
+      },
+      {
+        "name": "Spiral binding",
+        "price": 0,
+        "available": false
+      }
     ],
     "pickup": [
       "On campus (place confirmed on WhatsApp)"

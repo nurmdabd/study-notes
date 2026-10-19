@@ -10,6 +10,10 @@
  * the script reads it, copies it into the "Catalogue" tab and rewrites the form's tick boxes,
  * so a new pack on the website reaches the form without touching it.
  *
+ * Prices and order options live in the "Settings" tab. Change them on the admin page
+ * (https://nurmdabd.github.io/study-notes/admin.html, with the key from showAdminKey) or in the tab.
+ * The order page reads them from this web app, so a change shows at once.
+ *
  * Setup: see SETUP.md. In short: paste this file, run setup once, deploy as a web app.
  */
 
@@ -20,12 +24,12 @@ const CONFIG = {
   MAX_COPIES: 20,
 };
 
-const SHEETS = { orders: 'Orders', catalogue: 'Catalogue', summary: 'Summary' };
+const SHEETS = { orders: 'Orders', catalogue: 'Catalogue', summary: 'Summary', settings: 'Settings' };
 
 const ORDER_HEADERS = [
   'Received', 'Order ID', 'Source', 'Name', 'Student ID', 'Department', 'Batch', 'WhatsApp',
   'Subject', 'Session', 'Document', 'Item ID', 'Copies', 'Pages', 'Binding', 'Pickup',
-  'Payment', 'Transaction ID', 'Notes', 'Status',
+  'Payment', 'Transaction ID', 'Notes', 'Status', 'Estimate (BDT)',
 ];
 const STATUSES = ['New', 'Price sent', 'Paid', 'Printed', 'Delivered', 'Cancelled'];
 const STATUS_COLOURS = {
@@ -53,7 +57,10 @@ function setup() {
   syncForm_(form, cat);
   writePrefilledLinks_(ss, form, cat);
   setupSummarySheet_(ss);
+  settings_(); // makes the Settings tab from catalogue.json the first time
+  syncFormOptions_(form, settings_());
   installTriggers_(form);
+  showAdminKey();
   Logger.log('Form (share this): ' + form.getPublishedUrl());
   Logger.log('Form (edit): ' + form.getEditUrl());
   Logger.log('Next: Deploy > New deployment > Web app (Execute as: Me, Who has access: Anyone).');
@@ -68,7 +75,34 @@ function syncNow() {
   writeCatalogueSheet_(ss, cat);
   const form = getOrCreateForm_(cat);
   syncForm_(form, cat);
+  syncFormOptions_(form, settings_());
   writePrefilledLinks_(ss, form, cat);
+}
+
+/** Run once after updating the script: makes the Settings tab and the admin key, and shows the key. */
+function upgrade() {
+  const ss = ss_();
+  ss.getSheetByName(SHEETS.orders).getRange(1, ORDER_HEADERS.length).setValue(ORDER_HEADERS[ORDER_HEADERS.length - 1])
+    .setFontWeight('bold').setBackground('#1f2937').setFontColor('#ffffff');
+  syncNow();
+  showAdminKey();
+}
+
+/** Shows the admin page's key in the Execution log (makes one the first time). Keep it private. */
+function showAdminKey() {
+  const props = PropertiesService.getScriptProperties();
+  let key = props.getProperty('ADMIN_KEY');
+  if (!key) {
+    key = Utilities.getUuid().replace(/-/g, '').slice(0, 16);
+    props.setProperty('ADMIN_KEY', key);
+  }
+  Logger.log('Admin key: ' + key + '   (admin page: https://nurmdabd.github.io/study-notes/admin.html)');
+}
+
+/** Run to make a new admin key, for example if the old one was seen by someone else. */
+function newAdminKey() {
+  PropertiesService.getScriptProperties().deleteProperty('ADMIN_KEY');
+  showAdminKey();
 }
 
 /** The order spreadsheet; opened by ID because triggers and the web app have no active sheet. */
@@ -281,8 +315,138 @@ function handleFormSubmit(e) {
 
 // ---------------------------------------------------------------- the web order page
 
-/** Check the web app is live: open its URL in a browser. */
-function doGet() {
+// ---------------------------------------------------------------- settings
+
+/*
+ * The Settings tab: one row per setting, the value as JSON. Edit it on the admin page; by hand only
+ * with care. Options are lists of {name, available} (binding also has price, in BDT per copy).
+ */
+const SETTING_KEYS = ['accepting_orders', 'price_note', 'price_per_page', 'show_estimate',
+  'binding', 'pickup', 'payment', 'department', 'batch'];
+const SETTING_NOTES = {
+  accepting_orders: 'true or false. false pauses ordering on the page.',
+  price_note: 'The price line shown on the order page.',
+  price_per_page: 'BDT per printed page (one side). 0 hides the estimate.',
+  show_estimate: 'true or false: show an estimated price on the order page.',
+  binding: 'List of {"name", "price" (BDT per copy), "available"}.',
+  pickup: 'List of {"name", "available"}.',
+  payment: 'List of {"name", "available"}.',
+  department: '{"ask": true/false, "default", "options": [...]}',
+  batch: '{"ask": true/false, "default", "options": [...]}',
+};
+
+function defaultSettings_() {
+  let site = {};
+  try { site = fetchCatalogue_().site; } catch (e) { /* the website is down: plain defaults */ }
+  // catalogue options are names, or {name, available, price}
+  const list = (names, extra) => (names || []).map(n =>
+    Object.assign({ available: true }, extra || {}, typeof n === 'string' ? { name: n } : n));
+  return {
+    accepting_orders: true,
+    price_note: site.price_note || "Printed copies at printing cost, no profit. I'll confirm the price on WhatsApp before printing.",
+    price_per_page: 0,
+    show_estimate: false,
+    binding: list(site.binding || ['Stapled'], { price: 0 }),
+    pickup: list(site.pickup || ['On campus']),
+    payment: list(site.payment || ['Cash at pickup', 'bKash', 'Nagad']),
+    department: site.department || { ask: false, default: 'EEE', options: ['EEE'] },
+    batch: site.batch || { ask: false, default: '', options: [] },
+  };
+}
+
+/** All settings, read from the Settings tab (made from the defaults the first time). */
+function settings_() {
+  const ss = ss_();
+  let sh = ss.getSheetByName(SHEETS.settings);
+  if (!sh) {
+    sh = ss.insertSheet(SHEETS.settings);
+    writeSettings_(defaultSettings_());
+    return settings_();
+  }
+  const out = { accepting_orders: true, price_per_page: 0, show_estimate: false }; // if a row was deleted
+  if (sh.getLastRow() > 1) {
+    sh.getRange(2, 1, sh.getLastRow() - 1, 2).getValues().forEach(([k, v]) => {
+      if (!k) return;
+      try { out[k] = JSON.parse(v); } catch (e) { out[k] = v; }
+    });
+  }
+  return out;
+}
+
+function writeSettings_(st) {
+  const sh = ss_().getSheetByName(SHEETS.settings) || ss_().insertSheet(SHEETS.settings);
+  sh.clear();
+  sh.getRange(1, 1, 1, 3).setValues([['Setting', 'Value (JSON)', 'What it is']])
+    .setFontWeight('bold').setBackground('#1f2937').setFontColor('#ffffff');
+  const rows = SETTING_KEYS.map(k => [k, JSON.stringify(st[k]), SETTING_NOTES[k]]);
+  sh.getRange(2, 1, rows.length, 3).setValues(rows);
+  sh.getRange(2, 2, rows.length, 1).setNumberFormat('@').setWrap(true);
+  sh.setFrozenRows(1);
+  sh.setColumnWidth(1, 150); sh.setColumnWidth(2, 420); sh.setColumnWidth(3, 340);
+}
+
+/** What the order page may see: only available options, no sheet links. */
+function publicSettings_(st) {
+  const avail = l => (l || []).filter(o => o.available);
+  let formUrl = '';
+  try {
+    const id = PropertiesService.getScriptProperties().getProperty('FORM_ID');
+    if (id) formUrl = FormApp.openById(id).getPublishedUrl();
+  } catch (e) { /* no form */ }
+  return {
+    accepting_orders: !!st.accepting_orders, price_note: st.price_note,
+    price_per_page: Number(st.price_per_page) || 0, show_estimate: !!st.show_estimate,
+    binding: avail(st.binding).map(o => ({ name: o.name, price: Number(o.price) || 0 })),
+    pickup: avail(st.pickup).map(o => o.name), payment: avail(st.payment).map(o => o.name),
+    department: st.department, batch: st.batch, google_form: formUrl,
+  };
+}
+
+/** Checks a settings object from the admin page; returns '' or what is wrong. */
+function checkSettings_(st) {
+  const isList = l => Array.isArray(l) && l.every(o => o && typeof o.name === 'string' && o.name.trim());
+  if (typeof st.price_note !== 'string') return 'The price note is missing.';
+  if (!(Number(st.price_per_page) >= 0)) return 'The price per page must be 0 or more.';
+  for (const k of ['binding', 'pickup', 'payment']) {
+    if (!isList(st[k])) return 'Every ' + k + ' option needs a name.';
+    if (!st[k].some(o => o.available)) return 'At least one ' + k + ' option must be available.';
+  }
+  for (const k of ['department', 'batch']) {
+    const d = st[k];
+    if (!d || !Array.isArray(d.options)) return k + ': the options are missing.';
+    if (d.ask && !d.options.length) return k + ': add options, or stop asking for it.';
+  }
+  return '';
+}
+
+/** Gives the form's binding, pickup and payment questions the available options. */
+function syncFormOptions_(form, st) {
+  const want = { [Q.binding]: st.binding, [Q.pickup]: st.pickup, [Q.payment]: st.payment };
+  form.getItems(FormApp.ItemType.MULTIPLE_CHOICE).forEach(it => {
+    const list = want[it.getTitle()];
+    if (!list) return;
+    const names = list.filter(o => o.available).map(o => o.name);
+    if (names.length) it.asMultipleChoiceItem().setChoiceValues(names);
+  });
+}
+
+/** A wrong admin key is answered slowly, and ten wrong keys in ten minutes lock the admin out for a while. */
+function checkAdminKey_(key) {
+  const cache = CacheService.getScriptCache();
+  const fails = Number(cache.get('admin_fails') || 0);
+  if (fails >= 10) return 'Too many wrong keys. Try again in ten minutes.';
+  const real = PropertiesService.getScriptProperties().getProperty('ADMIN_KEY');
+  if (real && key === real) return '';
+  cache.put('admin_fails', String(fails + 1), 600);
+  Utilities.sleep(1500);
+  return 'Wrong admin key.';
+}
+
+/** ?action=settings gives the order page its settings; with no action it only says the web app is live. */
+function doGet(e) {
+  if (e && e.parameter && e.parameter.action === 'settings') {
+    return json_({ ok: true, settings: publicSettings_(settings_()) });
+  }
   return json_({ ok: true, service: 'study-notes print orders' });
 }
 
@@ -290,6 +454,7 @@ function doGet() {
 function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
+    if (data.action === 'adminLoad' || data.action === 'adminSave') return admin_(data);
     if (data.website) return json_({ ok: true, orderId: 'SN-0' }); // filled only by spam bots
     const err = checkOrder_(data);
     if (err) return json_({ ok: false, error: err });
@@ -306,12 +471,42 @@ function doPost(e) {
   }
 }
 
+/** The admin page: load the settings, or save them. */
+function admin_(data) {
+  const bad = checkAdminKey_(String(data.key || ''));
+  if (bad) return json_({ ok: false, error: bad });
+  if (data.action === 'adminSave') {
+    const st = data.settings || {};
+    const err = checkSettings_(st);
+    if (err) return json_({ ok: false, error: err });
+    const lock = LockService.getScriptLock();
+    lock.waitLock(20000);
+    try {
+      writeSettings_(st);
+      const id = PropertiesService.getScriptProperties().getProperty('FORM_ID');
+      if (id) syncFormOptions_(FormApp.openById(id), st);
+    } finally {
+      lock.releaseLock();
+    }
+  }
+  const props = PropertiesService.getScriptProperties();
+  let formEdit = '';
+  try { formEdit = FormApp.openById(props.getProperty('FORM_ID')).getEditUrl(); } catch (e) { /* no form */ }
+  return json_({ ok: true, settings: settings_(), sheet: ss_().getUrl(), formEdit: formEdit });
+}
+
 function checkOrder_(d) {
   const str = v => typeof v === 'string' && v.trim().length > 0;
   if (!str(d.name) || !str(d.studentId) || !str(d.phone)) return 'Name, student ID and WhatsApp number are needed.';
   if (!/^[+0-9 -]{11,16}$/.test(d.phone.trim())) return 'Please enter a valid phone number.';
   if (!Array.isArray(d.items) || d.items.length === 0) return 'No pack chosen.';
   if (d.items.length > 50) return 'Too many lines in one order.';
+  const st = settings_();
+  if (!st.accepting_orders) return 'Print orders are paused right now. Please message me on WhatsApp.';
+  const ok = (list, v) => (list || []).some(o => o.available && o.name === v);
+  if (!ok(st.binding, d.binding)) return 'That binding is not available now.';
+  if (!ok(st.pickup, d.pickup)) return 'That pickup option is not available now.';
+  if (!ok(st.payment, d.payment)) return 'That payment option is not available now.';
   const cat = catalogueById_();
   for (const it of d.items) {
     if (!cat[it.id] || !cat[it.id].printable) return 'Unknown pack: ' + it.id;
@@ -337,14 +532,20 @@ function appendOrder_(order, source, when) {
     Math.random().toString(36).slice(2, 6).toUpperCase();
   const t = v => (v == null ? '' : String(v).slice(0, 500));
   const items = order.items.length ? order.items : [{ id: '', label: '(no pack ticked)', copies: 0 }];
+  const st = settings_();
+  const rate = Number(st.price_per_page) || 0;
+  const bind = (st.binding || []).find(o => o.name === order.binding);
+  const bindPrice = bind ? Number(bind.price) || 0 : 0;
   const rows = items.map(it => {
     const c = cat[it.id] || {};
+    const n = Number(it.copies) || 0;
+    const estimate = rate && c.pages ? Math.round((c.pages * rate + bindPrice) * n) : '';
     return [
       when, orderId, source, t(order.name), t(order.studentId),
       t(order.department || site.department), t(order.batch || site.batch), "'" + t(order.phone),
       c.subject || '', c.session || '', c.document || t(it.label), it.id || '',
       Number(it.copies) || 0, c.pages || '', t(order.binding), t(order.pickup),
-      t(order.payment), t(order.trx), t(order.notes), 'New',
+      t(order.payment), t(order.trx), t(order.notes), 'New', estimate,
     ];
   });
   sh.getRange(sh.getLastRow() + 1, 1, rows.length, ORDER_HEADERS.length).setValues(rows);

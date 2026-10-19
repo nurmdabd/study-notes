@@ -7,78 +7,89 @@
 <meta name="description" content="Free exam packs (past-paper solutions with formula sheets) by Nur Mohammad, and printed copies at printing cost.">
 <style>
 :root {
-  --bg: #f7f7f5; --surface: #ffffff; --text: #1c1d1f; --muted: #5d6168; --line: #e3e3df;
+  --bg: #f4f4f1; --surface: #ffffff; --text: #1c1d1f; --muted: #5d6168; --line: #e4e4df; --line-strong: #d3d3cc;
   --accent: #1f5fbf; --accent-text: #ffffff; --accent-soft: #e8effa; --ok: #1e7a46; --ok-soft: #e4f4ea;
-  --err: #b42318; --err-soft: #fdecea; --wa: #1a8f4c;
+  --err: #b42318; --err-soft: #fdecea; --warn-soft: #fff4d6; --wa: #1a8f4c;
+  --shadow: 0 1px 2px rgba(20, 20, 20, .06), 0 4px 14px rgba(20, 20, 20, .05);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #141517; --surface: #1d1f22; --text: #ececea; --muted: #a2a6ad; --line: #2e3136;
+    --bg: #131416; --surface: #1d1f22; --text: #ececea; --muted: #a2a6ad; --line: #2c2f34; --line-strong: #3a3e45;
     --accent: #7aa7ec; --accent-text: #0f1a2b; --accent-soft: #1d2a3d; --ok: #6cc893; --ok-soft: #173024;
-    --err: #f2877d; --err-soft: #3a1d1b; --wa: #4cc483;
+    --err: #f2877d; --err-soft: #3a1d1b; --warn-soft: #33290f; --wa: #4cc483; --shadow: none;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #141517; --surface: #1d1f22; --text: #ececea; --muted: #a2a6ad; --line: #2e3136;
+  --bg: #131416; --surface: #1d1f22; --text: #ececea; --muted: #a2a6ad; --line: #2c2f34; --line-strong: #3a3e45;
   --accent: #7aa7ec; --accent-text: #0f1a2b; --accent-soft: #1d2a3d; --ok: #6cc893; --ok-soft: #173024;
-  --err: #f2877d; --err-soft: #3a1d1b; --wa: #4cc483;
+  --err: #f2877d; --err-soft: #3a1d1b; --warn-soft: #33290f; --wa: #4cc483; --shadow: none;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text);
-  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
 a { color: var(--accent); }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
-header { padding: 32px 0 16px; }
-h1 { font-size: 1.75rem; margin: 0 0 4px; letter-spacing: -0.01em; }
-.lead { color: var(--muted); margin: 0; max-width: 60ch; }
-.note { margin-top: 12px; display: inline-block; background: var(--accent-soft); padding: 6px 12px;
-  border-radius: 8px; font-size: 0.92rem; }
-.layout { display: grid; grid-template-columns: 1fr; gap: 24px; padding-bottom: 48px; }
-@media (min-width: 900px) { .layout { grid-template-columns: 1fr 360px; align-items: start; }
-  .panel { position: sticky; top: 16px; } }
-h2 { font-size: 1.1rem; margin: 0 0 12px; }
-.subject { background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
-  padding: 16px; margin-bottom: 16px; }
-.subject h3 { margin: 0; font-size: 1rem; }
-.subject .code { color: var(--muted); font-weight: 500; font-size: 0.9rem; }
-.pack { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 12px 0 0;
-  margin-top: 12px; border-top: 1px solid var(--line); }
-.pack .info { flex: 1 1 220px; min-width: 0; }
-.pack .name { font-weight: 600; }
-.pack .meta { color: var(--muted); font-size: 0.88rem; }
-.pack.picked { }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px;
-  padding: 0 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface);
-  color: var(--text); font: inherit; font-size: 0.92rem; cursor: pointer; text-decoration: none; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+header { padding: 24px 0 14px; }
+h1 { font-size: 1.6rem; margin: 0 0 2px; letter-spacing: -0.01em; }
+.lead { color: var(--muted); margin: 0; max-width: 62ch; }
+.note { margin-top: 10px; display: flex; gap: 8px; align-items: flex-start; max-width: 62ch;
+  background: var(--accent-soft); padding: 8px 12px; border-radius: 10px; font-size: 0.9rem; }
+.note b { white-space: nowrap; }
+.layout { display: grid; grid-template-columns: 1fr; gap: 20px; padding-bottom: 96px; }
+@media (min-width: 960px) { .layout { grid-template-columns: 1fr 340px; align-items: start; }
+  .panel { position: sticky; top: 14px; } }
+h2 { font-size: 1rem; margin: 0 0 10px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; align-items: start; }
+.card { background: var(--surface); border: 1px solid var(--line-strong); border-radius: 12px;
+  box-shadow: var(--shadow); overflow: hidden; }
+.card-head { display: flex; gap: 10px; align-items: center; padding: 11px 14px; border-bottom: 1px solid var(--line); }
+.badge { flex: none; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 0.78rem;
+  padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.card-head h3 { margin: 0; font-size: 0.95rem; line-height: 1.3; }
+.row { display: flex; align-items: center; gap: 8px; padding: 9px 14px; }
+.row + .row { border-top: 1px solid var(--line); }
+.row.on { background: var(--accent-soft); }
+.row .info { flex: 1; min-width: 0; }
+.row .year { font-weight: 700; }
+.row .meta { color: var(--muted); font-size: 0.82rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 34px;
+  padding: 0 11px; border-radius: 8px; border: 1px solid var(--line-strong); background: var(--surface);
+  color: var(--text); font: inherit; font-size: 0.86rem; cursor: pointer; text-decoration: none; white-space: nowrap; }
 .btn:hover { border-color: var(--accent); }
-.btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); font-weight: 600; }
-.btn.wa { background: var(--wa); color: #fff; border-color: var(--wa); font-weight: 600; }
-.btn.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.btn.add { color: var(--accent); border-color: var(--accent); font-weight: 600; }
+.btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); font-weight: 600; min-height: 40px; }
+.btn.wa { background: var(--wa); color: #fff; border-color: var(--wa); font-weight: 600; min-height: 40px; }
 .btn:disabled { opacity: 0.55; cursor: not-allowed; }
 .btn.block { width: 100%; }
-.stepper { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-.stepper button { width: 36px; height: 38px; border: 0; background: var(--surface); color: var(--text); font-size: 1.1rem; cursor: pointer; }
-.stepper span { min-width: 28px; text-align: center; font-variant-numeric: tabular-nums; }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
-.cart { list-style: none; margin: 0 0 8px; padding: 0; }
-.cart li { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; border-bottom: 1px dashed var(--line); font-size: 0.92rem; }
+.stepper { display: inline-flex; align-items: center; border: 1px solid var(--accent); border-radius: 8px;
+  overflow: hidden; background: var(--surface); }
+.stepper button { width: 32px; height: 32px; border: 0; background: transparent; color: var(--accent); font-size: 1.05rem; cursor: pointer; }
+.stepper span { min-width: 22px; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+.panel { background: var(--surface); border: 1px solid var(--line-strong); border-radius: 12px; padding: 14px; box-shadow: var(--shadow); }
+.cart { list-style: none; margin: 0 0 6px; padding: 0; }
+.cart li { display: flex; justify-content: space-between; gap: 8px; padding: 5px 0; border-bottom: 1px dashed var(--line); font-size: 0.88rem; }
 .cart .empty { color: var(--muted); border: 0; }
-.total { color: var(--muted); font-size: 0.88rem; margin-bottom: 12px; }
-label { display: block; font-size: 0.88rem; font-weight: 600; margin: 10px 0 4px; }
+.total { color: var(--muted); font-size: 0.84rem; }
+.estimate { margin-top: 4px; font-weight: 700; }
+.estimate small { font-weight: 400; color: var(--muted); }
+.fixed { font-size: 0.86rem; color: var(--muted); margin-top: 10px; }
+.fixed b { color: var(--text); }
+label { display: block; font-size: 0.84rem; font-weight: 600; margin: 10px 0 4px; }
 label .opt { color: var(--muted); font-weight: 400; }
-input, select, textarea { width: 100%; min-height: 40px; padding: 8px 10px; border-radius: 8px;
-  border: 1px solid var(--line); background: var(--bg); color: var(--text); font: inherit; font-size: 0.95rem; }
-textarea { min-height: 64px; resize: vertical; }
-input:focus, select:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+input, select, textarea { width: 100%; min-height: 38px; padding: 7px 10px; border-radius: 8px;
+  border: 1px solid var(--line-strong); background: var(--bg); color: var(--text); font: inherit; font-size: 0.92rem; }
+textarea { min-height: 58px; resize: vertical; }
+input:focus, select:focus, textarea:focus, .btn:focus-visible, .stepper button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-.actions { display: grid; gap: 8px; margin-top: 16px; }
-.msg { margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 0.92rem; }
+.actions { display: grid; gap: 8px; margin-top: 14px; }
+.msg { margin-top: 10px; padding: 9px 12px; border-radius: 8px; font-size: 0.88rem; }
 .msg.ok { background: var(--ok-soft); color: var(--ok); }
 .msg.err { background: var(--err-soft); color: var(--err); }
-.small { font-size: 0.85rem; color: var(--muted); }
-footer { border-top: 1px solid var(--line); padding: 16px 0 32px; color: var(--muted); font-size: 0.85rem; }
-.jump { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 5; box-shadow: 0 4px 16px rgba(0,0,0,.18); }
-@media (min-width: 900px) { .jump { display: none !important; } }
+.msg.warn { background: var(--warn-soft); color: var(--text); }
+.small { font-size: 0.84rem; color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--muted); font-size: 0.82rem; }
+.jump { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 5; box-shadow: 0 4px 16px rgba(0,0,0,.22); }
+@media (min-width: 960px) { .jump { display: none !important; } }
 [hidden] { display: none !important; }
 </style>
 </head>
@@ -86,56 +97,59 @@ footer { border-top: 1px solid var(--line); padding: 16px 0 32px; color: var(--m
 <div class="wrap">
   <header>
     <h1>Study notes</h1>
-    <p class="lead">Exam packs by <span id="owner">Nur Mohammad</span>: each past paper fully solved, with its formula sheet. Download the PDF free, or order a printed copy.</p>
-    <div class="note" id="price-note"></div>
+    <p class="lead">Exam packs by <span class="owner">Nur Mohammad</span>: each past paper fully solved, with its formula sheet. Download the PDF free, or order a printed copy.</p>
+    <div class="note"><b>Printed copies</b><span id="price-note"></span></div>
   </header>
 
   <div class="layout">
     <main>
       <h2>Exam packs</h2>
-      <div id="subjects"><p class="small">Loading the list…</p></div>
+      <div class="grid" id="subjects"><p class="small">Loading the list…</p></div>
     </main>
 
     <aside class="panel" id="order" aria-labelledby="order-title">
       <h2 id="order-title">Print order</h2>
-      <ul class="cart" id="cart"></ul>
-      <div class="total" id="total"></div>
+      <div class="msg warn" id="paused" hidden>Print orders are paused right now. The PDFs are still free to download, and you can ask me on WhatsApp.</div>
+      <div id="order-body">
+        <ul class="cart" id="cart"></ul>
+        <div class="total" id="total"></div>
+        <div class="estimate" id="estimate" hidden></div>
 
-      <form id="form" novalidate>
-        <label for="f-name">Name</label>
-        <input id="f-name" name="name" autocomplete="name" required>
-        <label for="f-id">Student ID</label>
-        <input id="f-id" name="studentId" required>
-        <label for="f-phone">WhatsApp number</label>
-        <input id="f-phone" name="phone" type="tel" inputmode="tel" placeholder="01XXXXXXXXX" autocomplete="tel" required>
-        <div id="dept-wrap" hidden><label for="f-dept">Department</label><select id="f-dept" name="department"></select></div>
-        <div id="batch-wrap" hidden><label for="f-batch">Batch</label><select id="f-batch" name="batch"></select></div>
-        <label for="f-binding">Binding</label>
-        <select id="f-binding" name="binding"></select>
-        <label for="f-pickup">Pickup</label>
-        <select id="f-pickup" name="pickup"></select>
-        <label for="f-payment">Payment</label>
-        <select id="f-payment" name="payment"></select>
-        <div id="trx-wrap" hidden>
-          <label for="f-trx">Transaction ID <span class="opt">(if already paid)</span></label>
-          <input id="f-trx" name="trx">
-        </div>
-        <label for="f-notes">Notes <span class="opt">(optional)</span></label>
-        <textarea id="f-notes" name="notes"></textarea>
-        <div class="hp" aria-hidden="true"><label for="f-web">Website</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
+        <form id="form" novalidate>
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" autocomplete="name" required>
+          <label for="f-id">Student ID</label>
+          <input id="f-id" name="studentId" required>
+          <label for="f-phone">WhatsApp number</label>
+          <input id="f-phone" name="phone" type="tel" inputmode="tel" placeholder="01XXXXXXXXX" autocomplete="tel" required>
+          <div id="f-department-wrap"><label for="f-department">Department</label><select id="f-department"></select></div>
+          <div id="f-batch-wrap"><label for="f-batch">Batch</label><select id="f-batch"></select></div>
+          <div id="f-binding-wrap"><label for="f-binding">Binding</label><select id="f-binding"></select></div>
+          <div id="f-pickup-wrap"><label for="f-pickup">Pickup</label><select id="f-pickup"></select></div>
+          <div id="f-payment-wrap"><label for="f-payment">Payment</label><select id="f-payment"></select></div>
+          <div class="fixed" id="fixed"></div>
+          <div id="trx-wrap" hidden>
+            <label for="f-trx">Transaction ID <span class="opt">(if already paid)</span></label>
+            <input id="f-trx" name="trx">
+          </div>
+          <label for="f-notes">Notes <span class="opt">(optional)</span></label>
+          <textarea id="f-notes" name="notes"></textarea>
+          <div class="hp" aria-hidden="true"><label for="f-web">Website</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
 
-        <div class="actions">
-          <button class="btn primary block" type="submit" id="send" hidden>Send order</button>
-          <a class="btn wa block" id="wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
-          <a class="btn block" id="gform" href="#" target="_blank" rel="noopener" hidden>Use the Google Form instead</a>
-        </div>
-        <div class="msg" id="msg" role="status" hidden></div>
-      </form>
+          <div class="actions">
+            <button class="btn primary block" type="submit" id="send" hidden>Send order</button>
+            <a class="btn wa block" id="wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+            <a class="btn block" id="gform" href="#" target="_blank" rel="noopener" hidden>Use the Google Form instead</a>
+          </div>
+          <div class="msg" id="msg" role="status" hidden></div>
+        </form>
+      </div>
+      <a class="btn wa block" id="wa-paused" href="#" target="_blank" rel="noopener" hidden>Ask on WhatsApp</a>
     </aside>
   </div>
 
   <footer>
-    Free shared copies by <span id="owner2">Nur Mohammad</span>. The PDFs are for reading on screen; printed copies come from the print edition.
+    Free shared copies by <span class="owner">Nur Mohammad</span>. The PDFs are for reading on screen; printed copies come from the print edition.
   </footer>
 </div>
 
@@ -152,41 +166,76 @@ footer { border-top: 1px solid var(--line); padding: 16px 0 32px; color: var(--m
   let cat, site, subjects = {}, items = {};
   const picked = new Map(); // item id -> copies
   let lastSent = null; // {d, orderId} of the order just sent, for its WhatsApp message
+  // settings: from the web app when it answers, else from catalogue.json
+  let S = null;
 
   fetch('catalogue.json', { cache: 'no-cache' })
     .then(r => r.json())
     .then(init)
     .catch(() => { $('subjects').innerHTML = '<p class="msg err">Could not load the list. Please reload the page.</p>'; });
 
+  // catalogue options are names, or {name, available, price}
+  function fromCatalogue(s) {
+    const list = l => l.map(o => (typeof o === 'string' ? { name: o, available: true } : o)).filter(o => o.available !== false);
+    return {
+      accepting_orders: true, price_note: s.price_note, price_per_page: 0, show_estimate: false,
+      binding: list(s.binding).map(o => ({ name: o.name, price: Number(o.price) || 0 })),
+      pickup: list(s.pickup).map(o => o.name), payment: list(s.payment).map(o => o.name),
+      department: s.department, batch: s.batch, google_form: s.google_form || '',
+    };
+  }
+
   function init(data) {
     cat = data; site = data.site;
     data.subjects.forEach(s => { subjects[s.code] = s; });
     data.items.forEach(it => { items[it.id] = it; });
-    $('owner').textContent = $('owner2').textContent = site.owner;
-    $('price-note').textContent = 'Printed copy: ' + site.price_note.charAt(0).toLowerCase() + site.price_note.slice(1);
-    fill('f-binding', site.binding); fill('f-pickup', site.pickup); fill('f-payment', site.payment);
-    if (site.department.ask) { fill('f-dept', site.department.options); $('dept-wrap').hidden = false; }
-    if (site.batch.ask) { fill('f-batch', site.batch.options); $('batch-wrap').hidden = false; }
-    $('send').hidden = !site.order_endpoint;
-    if (site.google_form) { $('gform').hidden = false; $('gform').href = site.google_form; }
+    document.querySelectorAll('.owner').forEach(el => { el.textContent = site.owner; });
     ['name', 'id', 'phone'].forEach(k => { const v = store.get('sn-' + k); if (v) $('f-' + k).value = v; });
-
-    const pre = new URLSearchParams(location.search).getAll('item');
-    pre.forEach(id => { if (items[id] && items[id].printable) picked.set(id, 1); });
-    renderSubjects(); renderCart();
-    const order = $('order');
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(es => { $('jump').style.visibility = es[0].isIntersecting ? 'hidden' : ''; }).observe(order);
-    }
-    if (pre.length && picked.size) {
-      const first = document.querySelector('[data-pack="' + CSS.escape(pre[0]) + '"]');
+    new URLSearchParams(location.search).getAll('item')
+      .forEach(id => { if (items[id] && items[id].printable) picked.set(id, 1); });
+    applySettings(fromCatalogue(site));
+    if (picked.size) {
+      const first = document.querySelector('[data-pack="' + CSS.escape([...picked.keys()][0]) + '"]');
       if (first) first.scrollIntoView({ block: 'center' });
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(es => { $('jump').style.visibility = es[0].isIntersecting ? 'hidden' : ''; }).observe($('order'));
+    }
+    if (site.order_endpoint) {
+      fetch(site.order_endpoint + '?action=settings')
+        .then(r => r.json())
+        .then(res => { if (res.ok && res.settings) applySettings(res.settings); })
+        .catch(() => { /* keep the catalogue's settings */ });
     }
   }
 
-  function fill(id, options) {
-    $(id).innerHTML = '';
-    options.forEach(o => { const op = document.createElement('option'); op.textContent = o; $(id).appendChild(op); });
+  function applySettings(s) {
+    S = s;
+    $('price-note').textContent = s.price_note;
+    const fixed = [];
+    const field = (key, label, options) => {
+      const sel = $('f-' + key), keep = sel.value;
+      sel.innerHTML = '';
+      options.forEach(o => { const op = document.createElement('option'); op.textContent = o; sel.appendChild(op); });
+      if (options.includes(keep)) sel.value = keep;
+      const one = options.length <= 1;
+      $('f-' + key + '-wrap').hidden = one;
+      if (one && options.length) fixed.push('<div>' + label + ': <b>' + esc(options[0]) + '</b></div>');
+    };
+    field('department', 'Department', s.department.ask ? s.department.options : []);
+    field('batch', 'Batch', s.batch.ask ? s.batch.options : []);
+    field('binding', 'Binding', s.binding.map(b => b.name));
+    field('pickup', 'Pickup', s.pickup);
+    field('payment', 'Payment', s.payment);
+    $('fixed').innerHTML = fixed.join('');
+    $('fixed').hidden = !fixed.length;
+    $('trx-wrap').hidden = !/bkash|nagad/i.test($('f-payment').value);
+    const open = s.accepting_orders !== false;
+    $('paused').hidden = open; $('order-body').hidden = !open; $('wa-paused').hidden = open;
+    $('send').hidden = !site.order_endpoint;
+    $('gform').hidden = !s.google_form; if (s.google_form) $('gform').href = s.google_form;
+    $('wa-paused').href = 'https://wa.me/' + site.whatsapp;
+    renderSubjects(); renderCart();
   }
 
   function packName(it) { return it.session + ' ' + it.document.toLowerCase(); }
@@ -194,61 +243,76 @@ footer { border-top: 1px solid var(--line); padding: 16px 0 32px; color: var(--m
 
   function renderSubjects() {
     const box = $('subjects');
+    const open = S.accepting_orders !== false;
     box.innerHTML = '';
     cat.subjects.forEach(s => {
       const list = cat.items.filter(it => it.subject === s.code);
       if (!list.length) return;
-      const sec = document.createElement('section');
-      sec.className = 'subject';
-      sec.innerHTML = '<h3>' + esc(s.title) + ' <span class="code">' + esc(s.code + ' · ' + s.short) + '</span></h3>';
+      const card = document.createElement('section');
+      card.className = 'card';
+      card.innerHTML = '<div class="card-head"><span class="badge">' + esc(s.code + ' · ' + s.short) + '</span>' +
+        '<h3>' + esc(s.title) + '</h3></div>';
       list.forEach(it => {
-        const row = document.createElement('div');
-        row.className = 'pack';
-        row.dataset.pack = it.id;
         const on = picked.has(it.id);
+        const row = document.createElement('div');
+        row.className = 'row' + (on ? ' on' : '');
+        row.dataset.pack = it.id;
         row.innerHTML =
-          '<div class="info"><div class="name">' + esc(packName(it)) + '</div>' +
-          '<div class="meta">' + esc(it.detail) + ' · ' + it.pages + ' pages</div></div>' +
-          '<a class="btn" href="' + encodeURI(it.file) + '" target="_blank" rel="noopener" download>Download free</a>' +
-          (it.printable
+          '<div class="info"><div class="year">' + esc(it.session) + '</div>' +
+          '<div class="meta">' + esc(it.document) + ' · ' + it.pages + ' pages</div></div>' +
+          '<a class="btn" href="' + encodeURI(it.file) + '" target="_blank" rel="noopener" download ' +
+          'aria-label="Download ' + esc(lineName(it)) + ' (free PDF)">↓ PDF</a>' +
+          (it.printable && open
             ? (on
-              ? '<span class="stepper" aria-label="Copies"><button type="button" data-dec aria-label="One copy fewer">−</button>' +
-                '<span>' + picked.get(it.id) + '</span><button type="button" data-inc aria-label="One copy more">+</button></span>' +
-                '<button class="btn on" type="button" data-toggle aria-pressed="true">In order ✓</button>'
-              : '<button class="btn" type="button" data-toggle aria-pressed="false">Add to print order</button>')
+              ? '<span class="stepper" role="group" aria-label="Copies of ' + esc(lineName(it)) + '">' +
+                '<button type="button" data-dec aria-label="One copy fewer">−</button>' +
+                '<span aria-live="polite">' + picked.get(it.id) + '</span>' +
+                '<button type="button" data-inc aria-label="One copy more">+</button></span>'
+              : '<button class="btn add" type="button" data-add aria-label="Add ' + esc(lineName(it)) + ' to the print order">+ Print</button>')
             : '');
         row.addEventListener('click', e => {
           const t = e.target.closest('button');
           if (!t) return;
           lastSent = null;
-          if (t.hasAttribute('data-toggle')) { picked.has(it.id) ? picked.delete(it.id) : picked.set(it.id, 1); }
+          if (t.hasAttribute('data-add')) picked.set(it.id, 1);
           if (t.hasAttribute('data-inc')) picked.set(it.id, Math.min(20, picked.get(it.id) + 1));
           if (t.hasAttribute('data-dec')) { const n = picked.get(it.id) - 1; n < 1 ? picked.delete(it.id) : picked.set(it.id, n); }
           renderSubjects(); renderCart();
         });
-        sec.appendChild(row);
+        card.appendChild(row);
       });
-      box.appendChild(sec);
+      box.appendChild(card);
     });
+  }
+
+  function bindingPrice() {
+    const b = S.binding.find(x => x.name === $('f-binding').value) || S.binding[0];
+    return b ? Number(b.price) || 0 : 0;
   }
 
   function renderCart() {
     const ul = $('cart');
     ul.innerHTML = '';
-    let pages = 0;
-    if (!picked.size) ul.innerHTML = '<li class="empty">Nothing yet. Press “Add to print order” on any pack.</li>';
+    let pages = 0, copies = 0;
+    if (!picked.size) ul.innerHTML = '<li class="empty">Nothing yet. Press “+ Print” on any pack.</li>';
     picked.forEach((n, id) => {
       const it = items[id];
-      pages += it.pages * n;
+      pages += it.pages * n; copies += n;
       const li = document.createElement('li');
       li.innerHTML = '<span>' + esc(lineName(it)) + '</span><span>× ' + n + '</span>';
       ul.appendChild(li);
     });
     $('total').textContent = picked.size
-      ? pages + ' pages in all, about ' + Math.ceil(pages / 2) + ' sheets printed on both sides.'
-      : '';
+      ? pages + ' pages in all, about ' + Math.ceil(pages / 2) + ' sheets printed on both sides.' : '';
+    const rate = Number(S.price_per_page) || 0;
+    const showEst = picked.size && S.show_estimate && rate > 0;
+    $('estimate').hidden = !showEst;
+    if (showEst) {
+      const est = Math.round(pages * rate + bindingPrice() * copies);
+      $('estimate').innerHTML = 'Estimate: about ৳' + est + ' <small>(final price on WhatsApp)</small>';
+    }
     $('send').disabled = !picked.size;
-    $('jump').hidden = !picked.size;
+    $('jump').hidden = !picked.size || S.accepting_orders === false;
     $('jump').textContent = 'View print order (' + picked.size + ')';
     updateWhatsApp();
   }
@@ -256,8 +320,8 @@ footer { border-top: 1px solid var(--line); padding: 16px 0 32px; color: var(--m
   function details() {
     return {
       name: $('f-name').value.trim(), studentId: $('f-id').value.trim(), phone: $('f-phone').value.trim(),
-      department: site.department.ask ? $('f-dept').value : site.department.default,
-      batch: site.batch.ask ? $('f-batch').value : site.batch.default,
+      department: S.department.ask ? $('f-department').value : S.department.default,
+      batch: S.batch.ask ? $('f-batch').value : S.batch.default,
       binding: $('f-binding').value, pickup: $('f-pickup').value, payment: $('f-payment').value,
       trx: $('f-trx').value.trim(), notes: $('f-notes').value.trim(), website: $('f-web').value,
       items: [...picked].map(([id, copies]) => ({ id, copies })),
@@ -282,6 +346,7 @@ footer { border-top: 1px solid var(--line); padding: 16px 0 32px; color: var(--m
   }
 
   $('f-payment').addEventListener('change', () => { $('trx-wrap').hidden = !/bkash|nagad/i.test($('f-payment').value); });
+  $('f-binding').addEventListener('change', () => renderCart());
   $('form').addEventListener('input', () => updateWhatsApp());
   $('form').addEventListener('change', () => updateWhatsApp());
 

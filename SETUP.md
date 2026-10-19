@@ -47,6 +47,31 @@ Both ways of ordering write into the same **Orders** tab, one row per pack.
 
 When the script changes later, use **Deploy → Manage deployments → ✏️ → Version: New version → Deploy**. That keeps the same URL; a *New deployment* would get a new one.
 
+## Updating the script
+
+When `apps-script/Code.gs` changes:
+
+1. In the Apps Script editor, replace all of `Code.gs` with the new file and **Save**.
+2. If the change notes say so, run the function they name (for the October 2026 update: **upgrade**, once).
+3. **Deploy → Manage deployments → ✏️ (edit) → Version: New version → Deploy.** The web app URL stays the same.
+
+## The admin page
+
+<https://nurmdabd.github.io/study-notes/admin.html> sets the prices and order options:
+
+- taking orders on or off
+- the price note
+- the price per printed page and whether the page shows an estimate
+- binding options with their prices
+- pickup and payment options
+- whether to ask for department and batch
+
+An option you untick as *available* stays saved but is hidden. On saving, the order page and the Google Form use the new settings at once.
+
+- It asks for the **admin key**: in the Apps Script editor run **showAdminKey** and copy the key from the Execution log. Keep it private; run **newAdminKey** to replace it.
+- The settings are stored in the sheet's **Settings** tab (one row per setting, the value as JSON). Editing that tab by hand also works, but the admin page checks your input.
+- After 10 wrong keys in 10 minutes the admin page is locked for 10 minutes.
+
 ## Day to day
 
 - Every order emails you, with the order ID and the packs. To stop the emails, set `NOTIFY_BY_EMAIL: false` at the top of the script.
@@ -59,5 +84,6 @@ When the script changes later, use **Deploy → Manage deployments → ✏️ �
 | To change | Do this |
 |---|---|
 | Add or update packs | I run `tools/publish.py` and push. The page updates at once, and the form within the hour (or run **syncNow**). |
-| Price note, binding, pickup or payment options, WhatsApp number | Edit `site` in `catalogue.json` (I can do it). The page picks it up at once. For the form's binding, pickup or payment choices, edit them in the form too, since the form only sets them when it is made. |
-| Ask for department and batch | Set `"ask": true` and the options in `catalogue.json`. For the form, add a dropdown question titled exactly **Department** (or **Batch**) on its first page. |
+| Price, price note, binding, pickup or payment options, pausing orders, asking for department and batch | The admin page. The page and the form follow at once. |
+| WhatsApp number | `site.whatsapp` in `catalogue.json` (I can do it). |
+| Ask for department and batch in the Google Form | Besides the admin page, add a dropdown question titled exactly **Department** (or **Batch**) on the form's first page. |

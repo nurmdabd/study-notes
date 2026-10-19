@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Order Settings</title>
+<style>
+:root {
+  --bg: #f4f4f1; --surface: #ffffff; --text: #1c1d1f; --muted: #5d6168; --line: #e4e4df; --line-strong: #d3d3cc;
+  --accent: #1f5fbf; --accent-text: #ffffff; --accent-soft: #e8effa; --ok: #1e7a46; --ok-soft: #e4f4ea;
+  --err: #b42318; --err-soft: #fdecea;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131416; --surface: #1d1f22; --text: #ececea; --muted: #a2a6ad; --line: #2c2f34; --line-strong: #3a3e45;
+    --accent: #7aa7ec; --accent-text: #0f1a2b; --accent-soft: #1d2a3d; --ok: #6cc893; --ok-soft: #173024;
+    --err: #f2877d; --err-soft: #3a1d1b;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131416; --surface: #1d1f22; --text: #ececea; --muted: #a2a6ad; --line: #2c2f34; --line-strong: #3a3e45;
+  --accent: #7aa7ec; --accent-text: #0f1a2b; --accent-soft: #1d2a3d; --ok: #6cc893; --ok-soft: #173024;
+  --err: #f2877d; --err-soft: #3a1d1b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--accent); }
+.wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 1.5rem; margin: 0 0 4px; }
+.lead { color: var(--muted); margin: 0 0 16px; }
+.card { background: var(--surface); border: 1px solid var(--line-strong); border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; }
+.card h2 { font-size: 1rem; margin: 0 0 4px; }
+.help { color: var(--muted); font-size: 0.84rem; margin: 0 0 10px; }
+label { display: block; font-size: 0.86rem; font-weight: 600; margin: 10px 0 4px; }
+input[type=text], input[type=number], input[type=password], textarea {
+  width: 100%; min-height: 38px; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--line-strong);
+  background: var(--bg); color: var(--text); font: inherit; font-size: 0.92rem; }
+textarea { min-height: 70px; resize: vertical; }
+input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.check { display: flex; align-items: center; gap: 8px; font-weight: 500; margin: 8px 0; }
+.check input { width: 18px; height: 18px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 0 14px; border-radius: 8px;
+  border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); font: inherit; font-size: 0.9rem; cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); font-weight: 600; }
+.btn.small { min-height: 32px; padding: 0 10px; font-size: 0.84rem; }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
+.opts { display: grid; gap: 6px; }
+.opt { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; }
+.opt.priced { grid-template-columns: 1fr 90px auto auto; }
+.opt .avail { display: flex; align-items: center; gap: 5px; font-size: 0.84rem; white-space: nowrap; }
+.opt .avail input { width: 18px; height: 18px; }
+.row { display: flex; gap: 8px; align-items: end; flex-wrap: wrap; }
+.row > div { flex: 1 1 180px; }
+.msg { padding: 9px 12px; border-radius: 8px; font-size: 0.9rem; margin: 10px 0; }
+.msg.ok { background: var(--ok-soft); color: var(--ok); }
+.msg.err { background: var(--err-soft); color: var(--err); }
+.bar { position: sticky; bottom: 0; background: var(--bg); padding: 10px 0; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.links { font-size: 0.88rem; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Order settings</h1>
+  <p class="lead">Prices and order options for the <a href="./">study notes order page</a>. Changes show on the page and in the Google Form as soon as you save.</p>
+
+  <form class="card" id="login">
+    <h2>Admin key</h2>
+    <p class="help">From the Apps Script editor: run <b>showAdminKey</b> and copy the key from the Execution log.</p>
+    <div class="row">
+      <div><label for="key">Key</label><input type="password" id="key" autocomplete="current-password" required></div>
+      <button class="btn primary" type="submit" id="load">Open settings</button>
+    </div>
+    <label class="check"><input type="checkbox" id="remember"> Remember the key on this device</label>
+  </form>
+  <div class="msg" id="msg" role="status" hidden></div>
+
+  <div id="editor" hidden>
+    <div class="card">
+      <h2>Orders</h2>
+      <label class="check"><input type="checkbox" id="accepting"> Taking print orders</label>
+      <p class="help">Untick to pause ordering. The page keeps the free downloads and shows an “Ask on WhatsApp” button.</p>
+    </div>
+
+    <div class="card">
+      <h2>Price</h2>
+      <label for="note">Price note (shown at the top of the page)</label>
+      <textarea id="note"></textarea>
+      <div class="row">
+        <div><label for="rate">Price per printed page, BDT (one side)</label><input type="number" id="rate" min="0" step="0.05"></div>
+      </div>
+      <label class="check"><input type="checkbox" id="estimate"> Show an estimated price on the order page</label>
+      <p class="help">Estimate = pages × copies × price per page + binding price × copies, marked “final price on WhatsApp”. Each order's estimate is also saved in the sheet.</p>
+    </div>
+
+    <div class="card">
+      <h2>Binding</h2>
+      <p class="help">Price in BDT for each copy. Untick “available” to hide an option without deleting it. With one option left, the page shows it as plain text instead of a choice.</p>
+      <div class="opts" id="binding"></div>
+      <button class="btn small" type="button" data-add="binding">+ Add binding</button>
+    </div>
+
+    <div class="card">
+      <h2>Pickup</h2>
+      <div class="opts" id="pickup"></div>
+      <button class="btn small" type="button" data-add="pickup">+ Add pickup option</button>
+    </div>
+
+    <div class="card">
+      <h2>Payment</h2>
+      <div class="opts" id="payment"></div>
+      <button class="btn small" type="button" data-add="payment">+ Add payment option</button>
+    </div>
+
+    <div class="card">
+      <h2>Department and batch</h2>
+      <p class="help">When not asked, every order is saved with the default. Options are separated by commas.</p>
+      <label class="check"><input type="checkbox" id="dept-ask"> Ask for the department</label>
+      <div class="row">
+        <div><label for="dept-default">Default</label><input type="text" id="dept-default"></div>
+        <div><label for="dept-options">Options</label><input type="text" id="dept-options" placeholder="EEE, CSE"></div>
+      </div>
+      <label class="check"><input type="checkbox" id="batch-ask"> Ask for the batch</label>
+      <div class="row">
+        <div><label for="batch-default">Default</label><input type="text" id="batch-default"></div>
+        <div><label for="batch-options">Options</label><input type="text" id="batch-options" placeholder="2021-22, 2022-23"></div>
+      </div>
+      <p class="help">The Google Form only asks for these if a question titled exactly “Department” or “Batch” is added to it.</p>
+    </div>
+
+    <div class="bar">
+      <button class="btn primary" type="button" id="save">Save</button>
+      <span class="links" id="links"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } },
+    del(k) { try { localStorage.removeItem(k); } catch (e) { /* private mode */ } },
+  };
+  let endpoint = '';
+  const saved = store.get('sn-admin-key');
+  if (saved) { $('key').value = saved; $('remember').checked = true; }
+
+  fetch('catalogue.json', { cache: 'no-cache' }).then(r => r.json()).then(c => {
+    endpoint = c.site.order_endpoint;
+    if (!endpoint) msg('err', 'The order web app is not connected yet (order_endpoint in catalogue.json).');
+    else if (saved) call('adminLoad');
+  });
+
+  function msg(kind, text) { const m = $('msg'); m.className = 'msg ' + kind; m.textContent = text; m.hidden = !text; }
+
+  function call(action, settings) {
+    const key = $('key').value.trim();
+    if (!key) return msg('err', 'Enter the admin key.');
+    const btn = action === 'adminSave' ? $('save') : $('load');
+    btn.disabled = true;
+    msg('ok', action === 'adminSave' ? 'Saving…' : 'Loading…');
+    return fetch(endpoint, { method: 'POST', body: JSON.stringify({ action, key, settings }) })
+      .then(r => r.json())
+      .then(res => {
+        if (!res.ok) throw new Error(res.error || 'Something went wrong.');
+        if ($('remember').checked) store.set('sn-admin-key', key); else store.del('sn-admin-key');
+        fill(res.settings);
+        $('links').innerHTML = '<a href="' + res.sheet + '" target="_blank" rel="noopener">Open the orders sheet</a>' +
+          (res.formEdit ? ' · <a href="' + res.formEdit + '" target="_blank" rel="noopener">Edit the form</a>' : '');
+        $('editor').hidden = false;
+        msg('ok', action === 'adminSave' ? 'Saved. The order page and the form use the new settings now.' : '');
+      })
+      .catch(err => msg('err', err.message))
+      .finally(() => { btn.disabled = false; });
+  }
+
+  $('login').addEventListener('submit', e => { e.preventDefault(); call('adminLoad'); });
+  $('save').addEventListener('click', () => call('adminSave', collect()));
+
+  function optRow(kind, o) {
+    const row = document.createElement('div');
+    row.className = 'opt' + (kind === 'binding' ? ' priced' : '');
+    row.innerHTML = '<input type="text" class="name" aria-label="Option name">' +
+      (kind === 'binding' ? '<input type="number" class="price" min="0" step="1" aria-label="Price per copy, BDT" placeholder="৳">' : '') +
+      '<label class="avail"><input type="checkbox" class="on"> available</label>' +
+      '<button class="btn small" type="button" aria-label="Remove option">✕</button>';
+    row.querySelector('.name').value = o.name || '';
+    if (kind === 'binding') row.querySelector('.price').value = Number(o.price) || 0;
+    row.querySelector('.on').checked = o.available !== false;
+    row.querySelector('button').addEventListener('click', () => row.remove());
+    $(kind).appendChild(row);
+  }
+  document.querySelectorAll('[data-add]').forEach(b => b.addEventListener('click', () => optRow(b.dataset.add, { available: true })));
+
+  function fill(s) {
+    $('accepting').checked = !!s.accepting_orders;
+    $('note').value = s.price_note || '';
+    $('rate').value = Number(s.price_per_page) || 0;
+    $('estimate').checked = !!s.show_estimate;
+    ['binding', 'pickup', 'payment'].forEach(k => { $(k).innerHTML = ''; (s[k] || []).forEach(o => optRow(k, o)); });
+    $('dept-ask').checked = !!s.department.ask; $('dept-default').value = s.department.default || '';
+    $('dept-options').value = (s.department.options || []).join(', ');
+    $('batch-ask').checked = !!s.batch.ask; $('batch-default').value = s.batch.default || '';
+    $('batch-options').value = (s.batch.options || []).join(', ');
+  }
+
+  function collect() {
+    const list = k => [...$(k).querySelectorAll('.opt')].map(r => {
+      const o = { name: r.querySelector('.name').value.trim(), available: r.querySelector('.on').checked };
+      if (k === 'binding') o.price = Number(r.querySelector('.price').value) || 0;
+      return o;
+    }).filter(o => o.name);
+    const split = v => v.split(',').map(x => x.trim()).filter(Boolean);
+    return {
+      accepting_orders: $('accepting').checked, price_note: $('note').value.trim(),
+      price_per_page: Number($('rate').value) || 0, show_estimate: $('estimate').checked,
+      binding: list('binding'), pickup: list('pickup'), payment: list('payment'),
+      department: { ask: $('dept-ask').checked, default: $('dept-default').value.trim(), options: split($('dept-options').value) },
+      batch: { ask: $('batch-ask').checked, default: $('batch-default').value.trim(), options: split($('batch-options').value) },
+    };
+  }
+})();
+</script>
+</body>
+</html>
