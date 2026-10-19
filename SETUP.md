@@ -84,7 +84,7 @@ An option you untick as *available* stays saved but is hidden. On saving, the or
 
 | To change | Do this |
 |---|---|
-| Add or update packs | I run `tools/publish.py` and push. The page updates at once, and the sheet's Catalogue tab within the hour (or run **syncNow**). A new paper of a shown subject appears at once, newest first. A **new subject** stays hidden: on the admin page it is marked **New**; place it with ↑ ↓, tick it and save. |
+| Add or update packs | I run `tools/publish.py` and push. The page updates at once, and the sheet's Catalogue tab within the hour (or run **syncNow**). A **new subject** or **new paper** stays hidden: on the admin page it is marked **New**; place it (↑ ↓ for subjects, ← → for papers), tick it and save. |
 | Prices, print types, price note, binding, pickup or payment options, pausing orders, department and batch, subject order, hiding a subject or paper | The admin page. The page follows at once. |
 | WhatsApp number | `site.whatsapp` in `catalogue.json` (I can do it). |
 | A pack replaced by a new version | I run `tools/publish.py` and push: the page count, the page's prices and the download change at once, the sheet's Catalogue tab within the hour (or run **syncNow**). Orders already placed keep the page count and price they were made with. |

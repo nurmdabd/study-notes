@@ -242,7 +242,8 @@ check('settings without a paper order get an empty one', (() => { const st = run
 
 // ---- a new subject stays hidden until it is saved on the admin page
 {
-  const Sh = sheets.Settings.data; const i = Sh.findIndex(r => r[0] === 'known_subjects'); if (i > 0) Sh.splice(i, 1);
+  const Sh = sheets.Settings.data;
+  ['known_subjects', 'known_items'].forEach(k => { const i = Sh.findIndex(r => r[0] === k); if (i > 0) Sh.splice(i, 1); });
   const st0 = run('settings_()');
   check('existing subjects count as seen', st0.known_subjects.length === 7 && sheets.Settings.data.some(r => r[0] === 'known_subjects'), JSON.stringify(st0.known_subjects));
   const withNew = JSON.parse(JSON.stringify(grown));
@@ -257,8 +258,18 @@ check('settings without a paper order get an empty one', (() => { const st = run
   check('a pack of a new subject cannot be ordered', /Unknown pack/.test(post(newOrder).error || ''));
   ctx.__cache = {};
   const L2 = post({ action: 'adminLoad', key });
-  check('save refuses settings without the seen list', /seen subjects/.test(post({ action: 'adminSave', key, settings: Object.assign({}, L2.settings, { known_subjects: undefined }) }).error || ''));
+  check('save refuses settings without the seen list', /seen subjects and papers/.test(post({ action: 'adminSave', key, settings: Object.assign({}, L2.settings, { known_subjects: undefined }) }).error || ''));
   post({ action: 'adminSave', key, settings: Object.assign({}, L2.settings, { known_subjects: L2.settings.known_subjects.concat('EEE999') }) });
+  check('a seen subject whose paper is not seen yet: still hidden', /Unknown pack/.test(post(newOrder).error || ''));
+  post({ action: 'adminSave', key, settings: Object.assign({}, L2.settings, { known_subjects: L2.settings.known_subjects.concat('EEE999'),
+    known_items: L2.settings.known_items.concat('EEE999-2021-22-pack') }) });
   check('after the admin saves it, it can be ordered', post(newOrder).ok);
+  // a new paper in a subject that is already shown
+  withNew.items.push({ id: 'EEE475-2021-22-pack', subject: 'EEE475', session: '2021-22', document: 'Exam pack', detail: '', pages: 80, file: 'EEE475-RF/RF-2021-22-pack.pdf', printable: true });
+  run('syncNow()');
+  const rfNew = { ...order, items: [{ id: 'EEE475-2021-22-pack', copies: 1, print: 'Black and white' }] };
+  check('a new paper of a shown subject stays hidden', /Unknown pack/.test(post(rfNew).error || '') &&
+    !JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.known_items.includes('EEE475-2021-22-pack'));
+  check('existing packs count as seen', run('settings_()').known_items.includes('EEE475-2019-20-pack'));
 }
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;

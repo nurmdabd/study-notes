@@ -151,7 +151,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
 
     <div class="card">
       <h2>Subjects: order and what is shown</h2>
-      <p class="help">Move a subject with ↑ ↓ and a paper with ← → to set the order on the page; papers are newest year first unless you move them. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted. A subject added to the site since your last save is marked <b>New</b> and stays hidden until you tick it and save.</p>
+      <p class="help">Move a subject with ↑ ↓ and a paper with ← → to set the order on the page; papers are newest year first unless you move them. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted. A subject or paper added to the site since your last save is marked <b>New</b> and stays hidden until you tick it and save.</p>
       <div class="sortbar"><span class="help">Sort:</span>
         <button class="btn small" type="button" data-sort="code">By code</button>
         <button class="btn small" type="button" data-sort="title">By title</button>
@@ -236,7 +236,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
     $('note').value = s.price_note || '';
     $('estimate').checked = !!s.show_estimate;
     fillVisibility(s.hidden || { subjects: [], items: [] }, s.subject_order || [], s.item_order || {},
-      Array.isArray(s.known_subjects) ? s.known_subjects : null);
+      Array.isArray(s.known_subjects) ? s.known_subjects : null, Array.isArray(s.known_items) ? s.known_items : null);
     ['print', 'binding', 'pickup', 'payment'].forEach(k => { $(k).innerHTML = ''; (s[k] || []).forEach(o => optRow(k, o)); });
     $('dept-ask').checked = !!s.department.ask; $('dept-default').value = s.department.default || '';
     $('dept-options').value = (s.department.options || []).join(', ');
@@ -269,7 +269,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
   });
 
   // one row per subject, in the saved order (subjects not in it follow in catalogue order)
-  function fillVisibility(h, order, itemOrder, known) {
+  function fillVisibility(h, order, itemOrder, known, knownItems) {
     const box = $('vis');
     box.innerHTML = '';
     const pos = c => { const i = order.indexOf(c); return i < 0 ? 1e6 : i; };
@@ -288,8 +288,9 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
         '<button class="btn small" type="button" data-down aria-label="Move ' + s.code + ' down">↓</button></div><div class="vis-packs">' +
         sortPapers(packs, s.code, itemOrder).map(it => '<span class="vis-pack" data-pack="' + it.id + '" data-session="' + it.session + '">' +
           '<button class="btn small mv" type="button" data-left aria-label="Move ' + it.id + ' earlier">←</button>' +
-          '<label class="check"><input type="checkbox" data-item="' + it.id + '"' + (h.items.includes(it.id) ? '' : ' checked') + '> ' +
-          it.session + ' ' + it.document.toLowerCase() + '</label>' +
+          '<label class="check"><input type="checkbox" data-item="' + it.id + '"' +
+          (h.items.includes(it.id) || (knownItems && !knownItems.includes(it.id)) ? '' : ' checked') + '> ' +
+          it.session + ' ' + it.document.toLowerCase() + (knownItems && !knownItems.includes(it.id) ? '<span class="new-badge">New</span>' : '') + '</label>' +
           '<button class="btn small mv" type="button" data-right aria-label="Move ' + it.id + ' later">→</button></span>').join('') + '</div>';
       const sub = div.querySelector('[data-subject]');
       const sync = () => div.querySelectorAll('[data-item]').forEach(x => { x.disabled = !sub.checked; });
@@ -333,7 +334,8 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
       show_estimate: $('estimate').checked, print: list('print'), hidden: collectVisibility(),
       subject_order: [...$('vis').children].map(d => d.dataset.code),
       item_order: collectItemOrder(),
-      known_subjects: [...$('vis').children].map(d => d.dataset.code), // every subject listed here has now been seen
+      known_subjects: [...$('vis').children].map(d => d.dataset.code), // every subject and paper listed here has now been seen
+      known_items: [...$('vis').querySelectorAll('.vis-pack')].map(c => c.dataset.pack),
       binding: list('binding'), pickup: list('pickup'), payment: list('payment'),
       department: { ask: $('dept-ask').checked, default: $('dept-default').value.trim(), options: split($('dept-options').value) },
       batch: { ask: $('batch-ask').checked, default: $('batch-default').value.trim(), options: split($('batch-options').value) },
