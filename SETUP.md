@@ -4,7 +4,8 @@ You do this once. It takes about 15 minutes. Afterwards, new packs reach the web
 
 ```
 catalogue.json (this repo) ──► the order page (website) ──► Apps Script web app ──► Google Sheet "Orders"
-        │                                                         ▲
+        │                              ▲                          ▲   │
+        │                              └── settings.json ◄────────┼───┘ written on every admin save (GitHub token)
         └── copied every hour into the sheet's Catalogue tab ─────┘ (orders are checked and priced against it)
 ```
 
@@ -50,7 +51,7 @@ The order page needs your settings (order, hidden packs, prices). Asking the App
 
 1. Open <https://github.com/settings/personal-access-tokens/new> (Settings → Developer settings → Personal access tokens → **Fine-grained tokens** → Generate new token).
 2. **Token name:** `study-notes settings`. **Expiration:** the longest offered (GitHub emails you before it runs out; then make a new one and replace it in step 4).
-3. **Repository access:** *Only select repositories* → `nurmdabd/study-notes`. **Permissions → Repository permissions → Contents:** *Read and write*. Then **Generate token** and copy it (it is shown once).
+3. **Repository access:** *Only select repositories* → `nurmdabd/study-notes`. **Permissions → Contents:** *Read and write* (if clicking it in the menu does nothing, use ↓ and Enter, or remove Contents and add it again). Then **Generate token** and copy it (it is shown once).
 4. In the Apps Script editor: ⚙ **Project Settings** → **Script properties** → **Add script property**: name `GITHUB_TOKEN`, value the token → **Save script properties**.
 5. Back in the editor, run **publishSettingsNow**. The Execution log says `settings.json: published`, and a commit "Settings from the admin page" appears in the repo.
 
@@ -78,7 +79,7 @@ When `apps-script/Code.gs` changes:
 - whether to ask for department and batch
 - the order of the subjects, and which subjects and papers are shown (a hidden one is left off the page and can't be ordered)
 
-An option you untick as *available* stays saved but is hidden. On saving, the order page uses the new settings at once.
+An option you untick as *available* stays saved but is hidden. On saving, the order page shows the new settings within about a minute (the time GitHub takes to republish `settings.json`).
 
 - It asks for the **admin key**: in the Apps Script editor run **showAdminKey** and copy the key from the Execution log. Keep it private; run **newAdminKey** to replace it.
 - The key is stored only in the script's properties, never in this repo, and checked by the script on every load and save; `admin.html` itself is public but does nothing without it.
@@ -97,6 +98,6 @@ An option you untick as *available* stays saved but is hidden. On saving, the or
 | To change | Do this |
 |---|---|
 | Add or update packs | I run `tools/publish.py` and push. The page updates at once, and the sheet's Catalogue tab within the hour (or run **syncNow**). A **new subject** or **new paper** stays hidden: on the admin page it is marked **New**; place it (↑ ↓ for subjects, ← → for papers), tick it and save. |
-| Prices, print types, price note, binding, pickup or payment options, pausing orders, department and batch, subject order, hiding a subject or paper | The admin page. The page follows at once. |
+| Prices, print types, price note, binding, pickup or payment options, pausing orders, department and batch, subject order, hiding a subject or paper | The admin page. The page follows within about a minute. |
 | WhatsApp number | `site.whatsapp` in `catalogue.json` (I can do it). |
 | A pack replaced by a new version | I run `tools/publish.py` and push: the page count, the page's prices and the download change at once, the sheet's Catalogue tab within the hour (or run **syncNow**). Orders already placed keep the page count and price they were made with. |
