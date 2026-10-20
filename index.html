@@ -500,6 +500,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
         if (flag) flag.addEventListener('click', () => track('report/' + it.id, 'Report a mistake: ' + lineName(it)));
         const add = row.querySelector('[data-add]');
         if (add) add.addEventListener('click', () => {
+          track('print/' + it.id, 'Add to print order: ' + lineName(it));
           lastSent = null;
           const k = key(it.id, defaultType());
           picked.set(k, Math.min(20, (picked.get(k) || 0) + 1));
