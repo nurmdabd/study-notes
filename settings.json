@@ -19,40 +19,37 @@
     }
   ],
   "hidden": {
-    "subjects": [
-      "EEE329",
-      "EEE337"
-    ],
+    "subjects": [],
     "items": []
   },
   "subject_order": [
-    "EEE329",
-    "EEE337",
     "EEE475",
     "EEE455",
     "EEE421",
+    "EEE329",
     "EEE459",
-    "EEE443"
+    "EEE443",
+    "EEE337"
   ],
   "item_order": {},
   "known_subjects": [
-    "EEE329",
-    "EEE337",
-    "EEE421",
-    "EEE443",
+    "EEE475",
     "EEE455",
+    "EEE421",
+    "EEE329",
     "EEE459",
-    "EEE475"
+    "EEE443",
+    "EEE337"
   ],
   "known_items": [
-    "EEE329-2021-22-pack",
-    "EEE337-2021-22-pack",
-    "EEE421-2020-21-pack",
-    "EEE443-2020-21-pack",
-    "EEE455-2020-21-pack",
-    "EEE459-2020-21-pack",
+    "EEE475-2020-21-pack",
     "EEE475-2019-20-pack",
-    "EEE475-2020-21-pack"
+    "EEE455-2020-21-pack",
+    "EEE421-2020-21-pack",
+    "EEE329-2021-22-pack",
+    "EEE459-2020-21-pack",
+    "EEE443-2020-21-pack",
+    "EEE337-2021-22-pack"
   ],
   "pickup": [
     "On campus (place confirmed on WhatsApp)"
