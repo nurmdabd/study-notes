@@ -187,6 +187,8 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
 }
 [hidden] { display: none !important; }
 </style>
+<!-- anonymous visit counts (GoatCounter: no cookies, no personal data); dashboard at nurmdabd-notes.goatcounter.com -->
+<script data-goatcounter="https://nurmdabd-notes.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 <header class="top">
@@ -274,7 +276,8 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
 
 <footer>
   <div class="wrap">Free shared copies by <span class="owner">Nur Mohammad</span>. The PDFs are for reading on screen; printed copies come from the print edition.
-    <span id="report-wrap" hidden>Found a mistake? <a id="report" href="#" target="_blank" rel="noopener noreferrer">Report a mistake</a>.</span></div>
+    <span id="report-wrap" hidden>Found a mistake? <a id="report" href="#" target="_blank" rel="noopener noreferrer">Report a mistake</a>.</span>
+    Visits are counted anonymously, with no cookies.</div>
 </footer>
 
 <a class="btn primary jump" id="jump" href="#order" hidden>View print order</a>
@@ -324,6 +327,8 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     if (site.report_form) {
       $('report').href = $('report-top').href = site.report_form;
       $('report-wrap').hidden = $('report-top').hidden = false;
+      $('report-top').addEventListener('click', () => track('report/top-bar', 'Report a mistake (top bar)'));
+      $('report').addEventListener('click', () => track('report/footer', 'Report a mistake (footer)'));
     }
     DETAILS.forEach(k => { const v = store.get('sn-' + k); if (v) $('f-' + k).value = v; });
     $('forget').hidden = !DETAILS.some(k => store.get('sn-' + k));
@@ -490,6 +495,9 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
               'title="Report a mistake" aria-label="Report a mistake in ' + esc(lineName(it)) + '">' +
               '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg></a>'
             : '') + '</div>';
+        row.querySelector('.btn.pdf').addEventListener('click', () => track('download/' + it.id, 'Download ' + lineName(it)));
+        const flag = row.querySelector('.btn.report');
+        if (flag) flag.addEventListener('click', () => track('report/' + it.id, 'Report a mistake: ' + lineName(it)));
         const add = row.querySelector('[data-add]');
         if (add) add.addEventListener('click', () => {
           lastSent = null;
@@ -661,6 +669,10 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
       .finally(() => { btn.textContent = 'Send order'; btn.disabled = !picked.size; });
   });
 
+  // count an event (a PDF download, a "Report a mistake" click) in GoatCounter, when its script has loaded
+  function track(path, title) {
+    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: path, title: title, event: true }); } catch (e) {}
+  }
   function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
 })();
 </script>
