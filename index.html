@@ -102,6 +102,10 @@ html { scroll-padding-top: 70px; }
 .btn.wa:hover { background: var(--wa-hover); }
 .btn.wa-outline { color: var(--wa); border-color: var(--line-strong); }
 .btn.ghost { border-color: transparent; background: transparent; color: var(--muted); }
+.btn.report { border-color: transparent; background: transparent; color: var(--muted); font-size: 0.78rem; padding: 0 6px; }
+.btn.report:hover { color: var(--text); background: var(--subtle); border-color: transparent; }
+footer a { color: var(--muted); }
+footer a:hover { color: var(--text); }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
 .btn.block { width: 100%; }
 .stepper { display: inline-flex; align-items: center; border: 1px solid var(--accent); border-radius: 8px;
@@ -173,6 +177,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   .pack .info { gap: 2px 8px; }
   .btn.pdf span { display: none; }
   .btn.pdf { padding: 0 9px; }
+  .btn.report span { display: none; }
 }
 [hidden] { display: none !important; }
 </style>
@@ -257,7 +262,8 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
 </div>
 
 <footer>
-  <div class="wrap">Free shared copies by <span class="owner">Nur Mohammad</span>. The PDFs are for reading on screen; printed copies come from the print edition.</div>
+  <div class="wrap">Free shared copies by <span class="owner">Nur Mohammad</span>. The PDFs are for reading on screen; printed copies come from the print edition.
+    <span id="report-wrap" hidden>Found a mistake? <a id="report" href="#" target="_blank" rel="noopener noreferrer">Report a mistake</a>.</span></div>
 </footer>
 
 <a class="btn primary jump" id="jump" href="#order" hidden>View print order</a>
@@ -304,6 +310,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     data.items.forEach(it => { items[it.id] = it; });
     document.querySelectorAll('.owner').forEach(el => { el.textContent = site.owner; });
     $('contact').href = 'https://wa.me/' + site.whatsapp + '?text=' + encodeURIComponent('Hi, I have a question about the study notes.');
+    if (site.report_form) { $('report').href = site.report_form; $('report-wrap').hidden = false; }
     DETAILS.forEach(k => { const v = store.get('sn-' + k); if (v) $('f-' + k).value = v; });
     $('forget').hidden = !DETAILS.some(k => store.get('sn-' + k));
     if (store.get('sn-same') === '1') { $('f-same').checked = true; $('mobile-wrap').hidden = true; }
@@ -463,6 +470,11 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
           '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg><span>PDF</span></a>' +
           (it.printable && open
             ? '<button class="btn add" type="button" data-add aria-label="Add ' + esc(lineName(it)) + ' to the print order">+ Print</button>'
+            : '') +
+          (site.report_form
+            ? '<a class="btn report" href="' + esc(site.report_form) + '" target="_blank" rel="noopener noreferrer" ' +
+              'title="Report a mistake" aria-label="Report a mistake in ' + esc(lineName(it)) + '">' +
+              '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg><span>Report a mistake</span></a>'
             : '') + '</div>';
         const add = row.querySelector('[data-add]');
         if (add) add.addEventListener('click', () => {

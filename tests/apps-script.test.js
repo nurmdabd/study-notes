@@ -136,8 +136,10 @@ const order = { name: 'A', studentId: '1', phone: '01352679856', print: 'Black a
 let r = post(order);
 check('order accepted', r.ok && /^SN-261019-/.test(r.orderId), JSON.stringify(r));
 let rows = sheets.Orders.data.slice(1).filter(x => x.length);
-// 70*0.5*2 = 70 ; 118*0.5 = 59
-check('two rows, estimate and print type saved', rows.length === 2 && rows[0][20] === 70 && rows[1][20] === 59 && rows[0][21] === 'Black and white',
+// estimate = pages x 0.5 x copies, rounded; the page counts come from catalogue.json (they change when a pack is rebuilt)
+const pagesOf = id => JSON.parse(catalogue).items.find(it => it.id === id).pages;
+const est1 = Math.round(pagesOf('EEE475-2019-20-pack') * 0.5 * 2), est2 = Math.round(pagesOf('EEE421-2020-21-pack') * 0.5);
+check('two rows, estimate and print type saved', rows.length === 2 && rows[0][20] === est1 && rows[1][20] === est2 && rows[0][21] === 'Black and white',
   rows.map(x => x[11] + ' x' + x[12] + ' est=' + x[20] + ' ' + x[21]).join('; '));
 check('status in column T', ORDER_STATUS_OK());
 function ORDER_STATUS_OK() { return rows[0][19] === 'New' && run('STATUS_COL') === 20; }
