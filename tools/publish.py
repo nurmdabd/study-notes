@@ -4,7 +4,7 @@
 Usage:  python3 tools/publish.py [path/to/academic-material]   (default: ../academic-material)
 
 catalogue.json keeps its "site" and "subjects" parts as they are; only "items" is rebuilt.
-Each exam pack's share copy (<subject>/past-papers/pdf/<session>-pack_share.pdf) is copied to
+Each exam pack's share copy (<subject>/past-papers/<session>/pdf/<session>-pack_share.pdf) is copied to
 <subject>/<short>-<session>-pack.pdf here, <short> being the folder's short name (EEE475-RF -> RF-2019-20-pack.pdf),
 so a downloaded file says its subject. A Bangla pack (<session>-pack_Bangla_share.pdf) is published beside it as
 <short>-<session>-pack-Bangla.pdf, its own item with the ID <code>-<session>-pack-bn ("Exam pack (Bangla)").
@@ -29,9 +29,9 @@ subjects = {s["folder"]: s for s in catalogue["subjects"]}
 items = []
 published = set()
 # the English pack of a session first, its Bangla pack right after
-for share in sorted(SRC.glob("EEE*/past-papers/pdf/*-pack*_share.pdf"),
+for share in sorted(SRC.glob("EEE*/past-papers/*/pdf/*-pack*_share.pdf"),
                     key=lambda p: (str(p.parent), p.name.replace("_Bangla", ""), "_Bangla" in p.name)):
-    folder = share.parts[-4]
+    folder = share.parts[-5]   # <subject>/past-papers/<session>/pdf/<file>
     m = re.match(r"(\d{4}-\d{2})-pack(_Bangla)?_share\.pdf$", share.name)
     if not m:
         continue
