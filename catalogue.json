@@ -56,43 +56,143 @@
       "folder": "EEE329-COM",
       "code": "EEE329",
       "short": "COM",
-      "title": "Communication Engineering I"
+      "title": "Communication Engineering I",
+      "offerings": [
+        {
+          "dept": "EEE",
+          "semester": "3-2",
+          "code": "EEE 329",
+          "syllabus": "old",
+          "title": "Basic Communication Engineering"
+        },
+        {
+          "dept": "EEE",
+          "semester": "3-2",
+          "code": "EEE 0714 3229",
+          "syllabus": "new"
+        }
+      ]
     },
     {
       "folder": "EEE337-PSII",
       "code": "EEE337",
       "short": "PS II",
-      "title": "Power System II"
+      "title": "Power System II",
+      "offerings": [
+        {
+          "dept": "EEE",
+          "semester": "3-2",
+          "code": "EEE 337",
+          "syllabus": "old"
+        },
+        {
+          "dept": "EEE",
+          "semester": "3-2",
+          "code": "EEE 0713 3237",
+          "syllabus": "new"
+        }
+      ]
     },
     {
       "folder": "EEE421-SSD",
       "code": "EEE421",
       "short": "SSD",
-      "title": "Solid State Devices"
+      "title": "Solid State Devices",
+      "offerings": [
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 421",
+          "syllabus": "old"
+        },
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 0714 4121",
+          "syllabus": "new"
+        }
+      ]
     },
     {
       "folder": "EEE443-PPE",
       "code": "EEE443",
       "short": "PPE",
-      "title": "Power Plant Engineering"
+      "title": "Power Plant Engineering",
+      "offerings": [
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 443",
+          "syllabus": "old"
+        },
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 0713 4143",
+          "syllabus": "new"
+        }
+      ]
     },
     {
       "folder": "EEE455-VLSI",
       "code": "EEE455",
       "short": "VLSI",
-      "title": "VLSI Design and Testing"
+      "title": "VLSI Design and Testing",
+      "offerings": [
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 455",
+          "syllabus": "old"
+        },
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 0714 4155",
+          "syllabus": "new",
+          "title": "VLSI Design"
+        }
+      ]
     },
     {
       "folder": "EEE459-Semi",
       "code": "EEE459",
       "short": "Semi",
-      "title": "Compound Semiconductor and Hetero-Junction Devices"
+      "title": "Compound Semiconductor and Hetero-Junction Devices",
+      "offerings": [
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 459",
+          "syllabus": "old"
+        },
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 0714 4159",
+          "syllabus": "new"
+        }
+      ]
     },
     {
       "folder": "EEE475-RF",
       "code": "EEE475",
       "short": "RF",
-      "title": "RF and Microwave Engineering"
+      "title": "RF and Microwave Engineering",
+      "offerings": [
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 475",
+          "syllabus": "old"
+        },
+        {
+          "dept": "EEE",
+          "semester": "4-1",
+          "code": "EEE 0714 4175",
+          "syllabus": "new"
+        }
+      ]
     }
   ],
   "items": [

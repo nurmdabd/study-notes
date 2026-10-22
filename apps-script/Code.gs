@@ -217,7 +217,8 @@ function catalogueById_() {
  * with care. Options are lists of {name, available} (binding also has price, in BDT per copy).
  */
 const SETTING_KEYS = ['accepting_orders', 'price_note', 'show_estimate', 'print',
-  'binding', 'pickup', 'payment', 'department', 'batch', 'hidden', 'subject_order', 'item_order', 'known_subjects', 'known_items'];
+  'binding', 'pickup', 'payment', 'department', 'batch', 'hidden', 'subject_order', 'default_sort', 'item_order', 'known_subjects', 'known_items'];
+const SORTS = ['custom', 'name', 'code', 'semester'];   // default_sort: how the page orders the subjects first
 const PRICE_NOTE = 'At printing cost. The price can vary slightly with paper and shop rates\u2014check each card for the exact price.';
 const OLD_PRICE_NOTES = [
   "Printing cost only, no profit. I'll confirm the price on WhatsApp before printing.",
@@ -230,6 +231,7 @@ const SETTING_NOTES = {
   print: 'List of {"name", "price_per_page" (BDT per printed page side), "available"}, e.g. black and white, colour.',
   hidden: '{"subjects": [subject codes], "items": [pack IDs]} hidden from the page (and not orderable).',
   subject_order: 'Subject codes in the order the page lists them; subjects not named follow in catalogue order.',
+  default_sort: '"custom" (subject_order), "name", "code" or "semester": the order visitors see first; they can change it.',
   item_order: '{subject code: [pack IDs]} for subjects whose papers are not newest first; packs not named come first, newest first.',
   known_subjects: 'Subject codes already seen on the admin page. A subject not listed (a new one) stays hidden until it is saved there.',
   known_items: 'Pack IDs already seen on the admin page. A pack not listed (a new paper) stays hidden until it is saved there.',
@@ -254,6 +256,7 @@ function defaultSettings_() {
       { name: 'Colour', price_per_page: 0, available: false }],
     hidden: { subjects: [], items: [] },
     subject_order: [],
+    default_sort: 'custom',
     item_order: {},
     binding: list(site.binding || ['Stapled'], { price: 0 }),
     pickup: list(site.pickup || ['On campus']),
@@ -287,6 +290,7 @@ function settings_() {
   delete out.price_per_page;
   if (!out.hidden) out.hidden = { subjects: [], items: [] };
   if (!Array.isArray(out.subject_order)) out.subject_order = [];
+  if (!SORTS.includes(out.default_sort)) out.default_sort = 'custom';
   if (!out.item_order || typeof out.item_order !== 'object' || Array.isArray(out.item_order)) out.item_order = {};
   if (OLD_PRICE_NOTES.includes(out.price_note)) out.price_note = PRICE_NOTE;
   // the subjects and packs there are when these settings first appear count as seen; later ones start hidden
@@ -325,6 +329,7 @@ function publicSettings_(st) {
     print: avail(st.print).map(o => ({ name: o.name, price_per_page: Number(o.price_per_page) || 0 })),
     binding: avail(st.binding).map(o => ({ name: o.name, price: Number(o.price) || 0 })),
     hidden: st.hidden, subject_order: st.subject_order || [], item_order: st.item_order || {},
+    default_sort: SORTS.includes(st.default_sort) ? st.default_sort : 'custom',
     known_subjects: Array.isArray(st.known_subjects) ? st.known_subjects : null,
     known_items: Array.isArray(st.known_items) ? st.known_items : null,
     pickup: avail(st.pickup).map(o => o.name), payment: avail(st.payment).map(o => o.name),
@@ -341,6 +346,7 @@ function checkSettings_(st) {
   if (!st.print.some(o => o.available)) return 'At least one print type must be available.';
   if (!st.hidden || !Array.isArray(st.hidden.subjects) || !Array.isArray(st.hidden.items)) return 'The hidden list is malformed.';
   if (st.subject_order && !Array.isArray(st.subject_order)) return 'The subject order is malformed.';
+  if (st.default_sort != null && !SORTS.includes(st.default_sort)) return 'The default order must be custom, name, code or semester.';
   if (!Array.isArray(st.known_subjects) || !Array.isArray(st.known_items)) return 'The list of seen subjects and papers is missing (reload the admin page).';
   if (st.item_order && (typeof st.item_order !== 'object' || Array.isArray(st.item_order) ||
     Object.values(st.item_order).some(v => !Array.isArray(v)))) return 'The paper order is malformed.';

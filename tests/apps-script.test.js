@@ -238,6 +238,17 @@ check('page gets the subject order', JSON.stringify(JSON.parse(run(`doGet({param
 ctx.__cache = {}; // the lockout test above left the admin locked
 check('save refuses a malformed order', /subject order/.test(post({ action: 'adminSave', key, settings: Object.assign(run('settings_()'), { subject_order: 'x' }) }).error || ''));
 
+// ---- the default order of the subjects on the page
+const pageSort = () => JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.default_sort;
+check('default order is custom when never set', pageSort() === 'custom');
+run(`(function(){ const st = settings_(); st.default_sort = 'name'; writeSettings_(st); })()`);
+check('page gets the default order', pageSort() === 'name');
+run(`(function(){ const st = settings_(); st.default_sort = 'shoe size'; writeSettings_(st); })()`);
+check('an unknown default order reads as custom', pageSort() === 'custom');
+check('save refuses an unknown default order', /default order/.test(post({ action: 'adminSave', key, settings: Object.assign(run('settings_()'), { default_sort: 'x' }) }).error || ''));
+check('save accepts semester', post({ action: 'adminSave', key, settings: Object.assign(run('settings_()'), { default_sort: 'semester' }) }).ok === true && pageSort() === 'semester');
+run(`(function(){ const st = settings_(); st.default_sort = 'custom'; writeSettings_(st); })()`);
+
 // ---- paper order within a subject
 run(`(function(){ const st = settings_(); st.item_order = { EEE475: ['EEE475-2019-20-pack', 'EEE475-2020-21-pack'] }; writeSettings_(st); })()`);
 check('page gets the paper order', JSON.stringify(JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.item_order) === '{"EEE475":["EEE475-2019-20-pack","EEE475-2020-21-pack"]}');

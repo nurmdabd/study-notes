@@ -33,11 +33,11 @@ h1 { font-size: 1.5rem; margin: 0 0 4px; }
 .card h2 { font-size: 1rem; margin: 0 0 4px; }
 .help { color: var(--muted); font-size: 0.84rem; margin: 0 0 10px; }
 label { display: block; font-size: 0.86rem; font-weight: 600; margin: 10px 0 4px; }
-input[type=text], input[type=number], input[type=password], textarea {
+input[type=text], input[type=number], input[type=password], textarea, select {
   width: 100%; min-height: 38px; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--line-strong);
   background: var(--bg); color: var(--text); font: inherit; font-size: 0.92rem; }
 textarea { min-height: 70px; resize: vertical; }
-input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+input:focus, textarea:focus, select:focus, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .check { display: flex; align-items: center; gap: 8px; font-weight: 500; margin: 8px 0; }
 .check input { width: 18px; height: 18px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 0 14px; border-radius: 8px;
@@ -158,6 +158,12 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
         <button class="btn small" type="button" data-sort="recent">Newest paper first</button>
         <button class="btn small" type="button" id="papers-newest">Papers: newest year first</button></div>
       <div id="vis"></div>
+      <label for="default-sort">Order visitors see first</label>
+      <select id="default-sort" style="max-width:320px; width:100%">
+        <option value="custom">Suggested: the order above</option><option value="name">By name</option>
+        <option value="code">By code</option><option value="semester">By semester</option>
+      </select>
+      <p class="help">Visitors can still change it with the Sort menu on the page; their choice is kept in their browser.</p>
     </div>
 
     <div class="bar">
@@ -239,6 +245,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
     $('accepting').checked = !!s.accepting_orders;
     $('note').value = s.price_note || '';
     $('estimate').checked = !!s.show_estimate;
+    $('default-sort').value = ['custom', 'name', 'code', 'semester'].includes(s.default_sort) ? s.default_sort : 'custom';
     fillVisibility(s.hidden || { subjects: [], items: [] }, s.subject_order || [], s.item_order || {},
       Array.isArray(s.known_subjects) ? s.known_subjects : null, Array.isArray(s.known_items) ? s.known_items : null);
     ['print', 'binding', 'pickup', 'payment'].forEach(k => { $(k).innerHTML = ''; (s[k] || []).forEach(o => optRow(k, o)); });
@@ -337,6 +344,7 @@ input:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accen
       accepting_orders: $('accepting').checked, price_note: $('note').value.trim(),
       show_estimate: $('estimate').checked, print: list('print'), hidden: collectVisibility(),
       subject_order: [...$('vis').children].map(d => d.dataset.code),
+      default_sort: $('default-sort').value,
       item_order: collectItemOrder(),
       known_subjects: [...$('vis').children].map(d => d.dataset.code), // every subject and paper listed here has now been seen
       known_items: [...$('vis').querySelectorAll('.vis-pack')].map(c => c.dataset.pack),

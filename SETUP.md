@@ -78,6 +78,7 @@ When `apps-script/Code.gs` changes:
 - pickup and payment options, with the number for each mobile-banking method (for example bKash: 01XXXXXXXXX, personal, Send Money), shown on the page with the amount to send
 - whether to ask for department and batch
 - the order of the subjects, and which subjects and papers are shown (a hidden one is left off the page and can't be ordered)
+- the order visitors see first: your order (suggested), by name, by code or by semester; visitors can change it with the Sort menu
 
 An option you untick as *available* stays saved but is hidden. On saving, the order page shows the new settings within about a minute (the time GitHub takes to republish `settings.json`).
 
