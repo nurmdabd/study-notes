@@ -28,8 +28,8 @@
     "EEE421",
     "EEE459",
     "EEE443",
-    "EEE329",
-    "EEE337"
+    "EEE337",
+    "EEE329"
   ],
   "item_order": {},
   "default_sort": "custom",
@@ -39,8 +39,8 @@
     "EEE421",
     "EEE459",
     "EEE443",
-    "EEE329",
-    "EEE337"
+    "EEE337",
+    "EEE329"
   ],
   "known_items": [
     "EEE475-2020-21-pack",
@@ -51,8 +51,9 @@
     "EEE421-2020-21-pack",
     "EEE459-2020-21-pack",
     "EEE443-2020-21-pack",
-    "EEE329-2021-22-pack",
-    "EEE337-2021-22-pack"
+    "EEE337-2021-22-pack",
+    "EEE337-2020-21-pack",
+    "EEE329-2021-22-pack"
   ],
   "pickup": [
     "On campus (place confirmed on WhatsApp)"
