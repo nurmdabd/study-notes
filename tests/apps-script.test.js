@@ -260,7 +260,7 @@ check('settings without a paper order get an empty one', (() => { const st = run
   const Sh = sheets.Settings.data;
   ['known_subjects', 'known_items'].forEach(k => { const i = Sh.findIndex(r => r[0] === k); if (i > 0) Sh.splice(i, 1); });
   const st0 = run('settings_()');
-  check('existing subjects count as seen', st0.known_subjects.length === 7 && sheets.Settings.data.some(r => r[0] === 'known_subjects'), JSON.stringify(st0.known_subjects));
+  check('existing subjects count as seen', st0.known_subjects.length === JSON.parse(catalogue).subjects.length && sheets.Settings.data.some(r => r[0] === 'known_subjects'), JSON.stringify(st0.known_subjects));
   const withNew = JSON.parse(JSON.stringify(grown));
   withNew.subjects.push({ folder: 'EEE999-NEW', code: 'EEE999', short: 'NEW', title: 'New Subject' });
   withNew.items.push({ id: 'EEE999-2021-22-pack', subject: 'EEE999', session: '2021-22', document: 'Exam pack', detail: '', pages: 10, file: 'EEE999-NEW/NEW-2021-22-pack.pdf', printable: true });
@@ -268,7 +268,7 @@ check('settings without a paper order get an empty one', (() => { const st = run
   run('syncNow()');
   const st1 = run('settings_()');
   check('a new subject is not seen yet', !st1.known_subjects.includes('EEE999'));
-  check('page settings carry the seen subjects', JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.known_subjects.length === 7);
+  check('page settings carry the seen subjects', JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settings.known_subjects.length === JSON.parse(catalogue).subjects.length);
   const newOrder = { ...order, items: [{ id: 'EEE999-2021-22-pack', copies: 1, print: 'Black and white' }] };
   check('a pack of a new subject cannot be ordered', /Unknown pack/.test(post(newOrder).error || ''));
   ctx.__cache = {};

@@ -94,6 +94,26 @@
       ]
     },
     {
+      "folder": "EEE339-PE",
+      "code": "EEE339",
+      "short": "PE",
+      "title": "Power Electronics",
+      "offerings": [
+        {
+          "dept": "EEE",
+          "semester": "3-2",
+          "code": "EEE 339",
+          "syllabus": "old"
+        },
+        {
+          "dept": "EEE",
+          "semester": "3-2",
+          "code": "EEE 0713 3239",
+          "syllabus": "new"
+        }
+      ]
+    },
+    {
       "folder": "EEE421-SSD",
       "code": "EEE421",
       "short": "SSD",
@@ -234,6 +254,16 @@
       "detail": "Past-paper solution + formula sheet",
       "pages": 92,
       "file": "EEE337-PSII/PSII-2021-22-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE339-2020-21-pack",
+      "subject": "EEE339",
+      "session": "2020-21",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 80,
+      "file": "EEE339-PE/PE-2020-21-pack.pdf",
       "printable": true
     },
     {
