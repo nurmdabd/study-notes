@@ -227,6 +227,16 @@
       "printable": true
     },
     {
+      "id": "EEE329-2020-21-question-paper",
+      "subject": "EEE329",
+      "session": "2020-21",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 3,
+      "file": "EEE329-COM/COM-2020-21-question-paper.pdf",
+      "printable": true
+    },
+    {
       "id": "EEE329-2021-22-pack",
       "subject": "EEE329",
       "session": "2021-22",
@@ -234,6 +244,16 @@
       "detail": "Past-paper solution + formula sheet",
       "pages": 62,
       "file": "EEE329-COM/COM-2021-22-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE329-2021-22-question-paper",
+      "subject": "EEE329",
+      "session": "2021-22",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 2,
+      "file": "EEE329-COM/COM-2021-22-question-paper.pdf",
       "printable": true
     },
     {
@@ -247,6 +267,16 @@
       "printable": true
     },
     {
+      "id": "EEE337-2020-21-question-paper",
+      "subject": "EEE337",
+      "session": "2020-21",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 2,
+      "file": "EEE337-PSII/PSII-2020-21-question-paper.pdf",
+      "printable": true
+    },
+    {
       "id": "EEE337-2021-22-pack",
       "subject": "EEE337",
       "session": "2021-22",
@@ -254,6 +284,16 @@
       "detail": "Past-paper solution + formula sheet",
       "pages": 94,
       "file": "EEE337-PSII/PSII-2021-22-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE337-2021-22-question-paper",
+      "subject": "EEE337",
+      "session": "2021-22",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 4,
+      "file": "EEE337-PSII/PSII-2021-22-question-paper.pdf",
       "printable": true
     },
     {
@@ -267,6 +307,16 @@
       "printable": true
     },
     {
+      "id": "EEE339-2020-21-question-paper",
+      "subject": "EEE339",
+      "session": "2020-21",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 3,
+      "file": "EEE339-PE/PE-2020-21-question-paper.pdf",
+      "printable": true
+    },
+    {
       "id": "EEE421-2020-21-pack",
       "subject": "EEE421",
       "session": "2020-21",
@@ -274,6 +324,16 @@
       "detail": "Past-paper solution + formula sheet",
       "pages": 120,
       "file": "EEE421-SSD/SSD-2020-21-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE421-2020-21-question-paper",
+      "subject": "EEE421",
+      "session": "2020-21",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 3,
+      "file": "EEE421-SSD/SSD-2020-21-question-paper.pdf",
       "printable": true
     },
     {
@@ -287,6 +347,16 @@
       "printable": true
     },
     {
+      "id": "EEE443-2020-21-question-paper",
+      "subject": "EEE443",
+      "session": "2020-21",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 2,
+      "file": "EEE443-PPE/PPE-2020-21-question-paper.pdf",
+      "printable": true
+    },
+    {
       "id": "EEE455-2019-20-pack",
       "subject": "EEE455",
       "session": "2019-20",
@@ -294,6 +364,16 @@
       "detail": "Past-paper solution + formula sheet",
       "pages": 76,
       "file": "EEE455-VLSI/VLSI-2019-20-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE455-2019-20-question-paper",
+      "subject": "EEE455",
+      "session": "2019-20",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 3,
+      "file": "EEE455-VLSI/VLSI-2019-20-question-paper.pdf",
       "printable": true
     },
     {
@@ -307,6 +387,16 @@
       "printable": true
     },
     {
+      "id": "EEE455-2020-21-question-paper",
+      "subject": "EEE455",
+      "session": "2020-21",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 4,
+      "file": "EEE455-VLSI/VLSI-2020-21-question-paper.pdf",
+      "printable": true
+    },
+    {
       "id": "EEE459-2020-21-pack",
       "subject": "EEE459",
       "session": "2020-21",
@@ -317,6 +407,16 @@
       "printable": true
     },
     {
+      "id": "EEE459-2020-21-question-paper",
+      "subject": "EEE459",
+      "session": "2020-21",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 3,
+      "file": "EEE459-Semi/Semi-2020-21-question-paper.pdf",
+      "printable": true
+    },
+    {
       "id": "EEE475-2019-20-pack",
       "subject": "EEE475",
       "session": "2019-20",
@@ -324,6 +424,16 @@
       "detail": "Past-paper solution + formula sheet",
       "pages": 72,
       "file": "EEE475-RF/RF-2019-20-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE475-2019-20-question-paper",
+      "subject": "EEE475",
+      "session": "2019-20",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 2,
+      "file": "EEE475-RF/RF-2019-20-question-paper.pdf",
       "printable": true
     },
     {
@@ -344,6 +454,16 @@
       "detail": "Past-paper solution + formula sheet",
       "pages": 78,
       "file": "EEE475-RF/RF-2020-21-pack-Bangla.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE475-2020-21-question-paper",
+      "subject": "EEE475",
+      "session": "2020-21",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 3,
+      "file": "EEE475-RF/RF-2020-21-question-paper.pdf",
       "printable": true
     }
   ]
