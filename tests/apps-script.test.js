@@ -164,7 +164,8 @@ const g2 = JSON.parse(run(`doGet({parameter:{action:'settings'}})`).body).settin
 check('page sees colour, spiral and hidden', g2.print.length === 2 && g2.binding.length === 2 && g2.hidden.items[0] === 'EEE475-2020-21-pack');
 r = post({ ...order, print: 'Colour', binding: 'Spiral binding', items: [{ id: 'EEE475-2019-20-pack', copies: 1 }] });
 const last = sheets.Orders.data.filter(x => x.length).slice(-1)[0];
-check('colour estimate (70*3+30=240)', r.ok && last[20] === 240 && last[21] === 'Colour', last[20] + ' ' + last[21]);
+const colourEst = pagesOf('EEE475-2019-20-pack') * 3 + 30;
+check(`colour estimate (pages*3+30=${colourEst})`, r.ok && last[20] === colourEst && last[21] === 'Colour', last[20] + ' ' + last[21]);
 check('hidden pack refused', /Unknown pack/.test(post({ ...order, items: [{ id: 'EEE475-2020-21-pack', copies: 1 }] }).error));
 check('pack of hidden subject refused', /Unknown pack/.test(post({ ...order, items: [{ id: 'EEE337-2021-22-pack', copies: 1 }] }).error));
 st.print.forEach(o => { o.available = false; });
@@ -224,8 +225,9 @@ r = post({ ...order, print: 'Black and white', mobile: '01800000000', items: [
   { id: 'EEE475-2019-20-pack', copies: 1, print: 'Black and white' }, { id: 'EEE475-2019-20-pack', copies: 1, print: 'Colour' },
   { id: 'EEE443-2020-21-pack', copies: 2, print: 'Colour' }] });
 const mixed = sheets.Orders.data.filter(x => x.length).slice(-3);
-// 74 pages now: 74*0.5+10=47 ; 74*3+10=232 ; 58*3+10=184 x2=368
-check('mixed order: a print type and price per line', r.ok && mixed.map(x => x[21] + ' ' + x[20]).join(',') === 'Black and white 47,Colour 232,Colour 368', mixed.map(x => x[21] + ' ' + x[20]).join(','));
+// 74 pages now: 74*0.5+10=47 ; 74*3+10=232 ; the third line is (pages*3+10) x 2
+const mixedThird = (pagesOf('EEE443-2020-21-pack') * 3 + 10) * 2;
+check('mixed order: a print type and price per line', r.ok && mixed.map(x => x[21] + ' ' + x[20]).join(',') === `Black and white 47,Colour 232,Colour ${mixedThird}`, mixed.map(x => x[21] + ' ' + x[20]).join(','));
 check('mobile saved', mixed[0][22] === "'01800000000" && sheets.Orders.data[0][22] === 'Mobile');
 check('no mobile: WhatsApp number used', post({ ...order, items: [{ id: 'EEE443-2020-21-pack', copies: 1 }] }).ok &&
   sheets.Orders.data.filter(x => x.length).slice(-1)[0][22] === "'01352679856");
