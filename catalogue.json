@@ -197,6 +197,16 @@
   ],
   "items": [
     {
+      "id": "EEE329-2020-21-pack",
+      "subject": "EEE329",
+      "session": "2020-21",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 62,
+      "file": "EEE329-COM/COM-2020-21-pack.pdf",
+      "printable": true
+    },
+    {
       "id": "EEE329-2021-22-pack",
       "subject": "EEE329",
       "session": "2021-22",
