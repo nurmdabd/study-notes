@@ -9,49 +9,195 @@
    "id": "power",
    "title": "Power computations",
    "book": "Hart Ch. 2",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$I_n$",
+     "meaning": "rms value of harmonic $n$ (A)"
+    },
+    {
+     "symbol": "$I_1$",
+     "meaning": "rms fundamental (A)"
+    },
+    {
+     "symbol": "$I_{rms}$",
+     "meaning": "rms of the whole wave (A)"
+    },
+    {
+     "symbol": "$\\theta_1$",
+     "meaning": "angle of the fundamental current"
+    },
+    {
+     "symbol": "$I_{peak}$",
+     "meaning": "peak of the wave (A)"
+    },
+    {
+     "symbol": "$V_1$",
+     "meaning": "rms source voltage (V)"
+    }
+   ]
   },
   {
    "id": "devices",
    "title": "Power devices",
    "book": "Rashid Ch. 2, 4, 9",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$t_a$",
+     "meaning": "time to the reverse peak (s)"
+    },
+    {
+     "symbol": "$t_b$",
+     "meaning": "fall time after the peak (s)"
+    },
+    {
+     "symbol": "$di/dt$",
+     "meaning": "rate of fall of current (A/s)"
+    },
+    {
+     "symbol": "$\\alpha$",
+     "meaning": "common-base gain"
+    },
+    {
+     "symbol": "$I_{CBO}$",
+     "meaning": "leakage current (A)"
+    },
+    {
+     "symbol": "$I_G$",
+     "meaning": "gate current (A)"
+    }
+   ]
   },
   {
    "id": "rectifiers",
    "title": "Rectifiers",
    "book": "Hart Ch. 3, 4",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$V_m$",
+     "meaning": "peak source voltage (V); peak line-to-line voltage (V)"
+    },
+    {
+     "symbol": "$\\alpha$",
+     "meaning": "delay angle (rad)"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "extinction angle, $i(\\beta) = 0$"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "load resistance (Ω)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "harmonic order (6, 12, 18, …)"
+    }
+   ]
   },
   {
    "id": "acvc",
    "title": "AC control and cycloconverters",
    "book": "Hart Ch. 5; Rashid Ch. 11",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": []
   },
   {
    "id": "dcdc",
    "title": "DC-DC converters",
    "book": "Hart Ch. 6",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$D$",
+     "meaning": "duty ratio"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "switching frequency (Hz)"
+    },
+    {
+     "symbol": "$I_L$",
+     "meaning": "average inductor current (A)"
+    },
+    {
+     "symbol": "$\\delta$",
+     "meaning": "chopper duty ratio"
+    },
+    {
+     "symbol": "$R_f$",
+     "meaning": "field resistance (Ω)"
+    },
+    {
+     "symbol": "$E_b = K_vI_f\\omega$",
+     "meaning": "back voltage (V)"
+    },
+    {
+     "symbol": "$K_v$",
+     "meaning": "motor constant"
+    }
+   ]
   },
   {
    "id": "supplies",
    "title": "DC power supplies",
    "book": "Hart Ch. 7",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$V_{ref}$",
+     "meaning": "reference (V)"
+    },
+    {
+     "symbol": "$V_s$",
+     "meaning": "input voltage (V)"
+    },
+    {
+     "symbol": "$I_L$",
+     "meaning": "load current (A)"
+    }
+   ]
   },
   {
    "id": "inverters",
    "title": "Inverters",
    "book": "Hart Ch. 8",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$V_{dc}$",
+     "meaning": "dc source (V)"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "number of cells"
+    },
+    {
+     "symbol": "$m_a$",
+     "meaning": "amplitude ratio"
+    },
+    {
+     "symbol": "$m_f$",
+     "meaning": "frequency ratio"
+    },
+    {
+     "symbol": "$\\omega_0$",
+     "meaning": "tuned frequency (rad/s)"
+    },
+    {
+     "symbol": "$I_1$",
+     "meaning": "peak fundamental load current (A)"
+    }
+   ]
   },
   {
    "id": "apps",
    "title": "Applications",
-   "book": "Rashid Ch. 16; Power Electronics Handbook",
-   "tier": "Must know"
+   "book": "Rashid Ch. 10, 16; Power Electronics Handbook",
+   "tier": "Must know",
+   "symbols": []
   }
  ],
  "questions": [
@@ -68,6 +214,20 @@
    "text": "Define distortion factor (DF) and total harmonic distortion (THD). Derive that $DF = \\sqrt{\\dfrac{1}{1+(THD)^2}}$",
    "repeat_of": "",
    "outline": "Square the THD; add 1; use the definition of DF."
+  },
+  {
+   "id": "2020-21-1(d)",
+   "label": "20-21 1(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "power",
+   "subtopic": "Distortion",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=15",
+   "text": "A sinusoidal current of 10A rms at a 60 Hz fundamental frequency is contaminated with a ninth harmonic current. The current is expressed as $i(t) = 10\\sqrt{2}\\sin(2\\pi 60t)$ $+\\, I_9\\sqrt{2}\\sin(18\\pi 60t)$ A. Determine the value of the ninth harmonic rms current I9 if the THD is -i) 5 percent ii) 20 percent.",
+   "repeat_of": "",
+   "outline": ""
   },
   {
    "id": "2020-21-1(b)",
@@ -98,16 +258,16 @@
    "outline": ""
   },
   {
-   "id": "2020-21-1(d)",
-   "label": "20-21 1(d)",
+   "id": "2020-21-7(a)",
+   "label": "20-21 TT1 7(a)",
    "session": "2020-21",
-   "term_test": false,
-   "topic": "power",
-   "subtopic": "Distortion",
+   "term_test": true,
+   "topic": "devices",
+   "subtopic": "Diodes",
    "type": "numerical",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=15",
-   "text": "A sinusoidal current of 10A rms at a 60 Hz fundamental frequency is contaminated with a ninth harmonic current. The current is expressed as $i(t) = 10\\sqrt{2}\\sin(2\\pi 60t)$ $+\\, I_9\\sqrt{2}\\sin(18\\pi 60t)$ A. Determine the value of the ninth harmonic rms current I9 if the THD is -i) 5 percent ii) 20 percent.",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=59",
+   "text": "Explain the reverse recovery time of diode with diagram.",
    "repeat_of": "",
    "outline": ""
   },
@@ -122,6 +282,20 @@
    "marks": 7.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=17",
    "text": "Draw the two transistors model of a thyristor and explain the turn-on condition of a thyristor with equations from this model.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-7(b)",
+   "label": "20-21 TT1 7(b)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=60",
+   "text": "Draw the I-V curve of thyristor. Define Holding current and Latching current for thyristor",
    "repeat_of": "",
    "outline": ""
   },
@@ -154,6 +328,20 @@
    "outline": ""
   },
   {
+   "id": "2020-21-7(c)",
+   "label": "20-21 TT1 7(c)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=62",
+   "text": "With proper alignment, show the waveshape of output voltage, output current, diode currents and source current for a full wave bridge rectifier with sinusoidal source and R-L load.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-3(a)",
    "label": "20-21 3(a)",
    "session": "2020-21",
@@ -164,6 +352,34 @@
    "marks": 8.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=25",
    "text": "Draw the configuration of three phase uncontrolled rectifier. Show the source voltages, output voltage, diode currents and line currents with proper alignment.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(d)",
+   "label": "20-21 3(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=30",
+   "text": "A three phase controlled rectifier has an input voltage of 480 V rms at 60 Hz. The load of the rectifier is resistor of 10 $\\Omega$ in series with 50 mH inductance. (i) Determine the delay angle required to produce an average current of 50A in the load (ii) Determine the amplitude of the harmonics n=6 and n=12. For harmonics calculation, Fig. 3(d) can be utilized.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-8(d)",
+   "label": "20-21 TT2 8(d)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=70",
+   "text": "A three phase rectifier is supplied by 480 V rms line to line 60 Hz source. The RL load is 100 $\\Omega$ resistor in series with 15 mH inductor. Determine the rms load current and rms diode currents.",
    "repeat_of": "",
    "outline": ""
   },
@@ -196,20 +412,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-3(d)",
-   "label": "20-21 3(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "rectifiers",
-   "subtopic": "Three-phase",
-   "type": "numerical",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=30",
-   "text": "A three phase controlled rectifier has an input voltage of 480 V rms at 60 Hz. The load of the rectifier is resistor of 10 $\\Omega$ in series with 50 mH inductance. (i) Determine the delay angle required to produce an average current of 50A in the load (ii) Determine the amplitude of the harmonics n=6 and n=12. For harmonics calculation, Fig. 3(d) can be utilized.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-4(a)",
    "label": "20-21 4(a)",
    "session": "2020-21",
@@ -238,6 +440,20 @@
    "outline": "Read the diode current from the waveform; average it over a period; use the mean inductor current."
   },
   {
+   "id": "2020-21-8(b)",
+   "label": "20-21 TT2 8(b)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "dcdc",
+   "subtopic": "Buck",
+   "type": "numerical",
+   "marks": 7.5,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=68",
+   "text": "A buck converter has parameters, Vs=50 V, D=0.4, R=20 $\\Omega$, L=400 $\\mu$H and C=100 $\\mu$F. The switching frequency is 20 kHz. a) Determine the output voltage, b) Determine the average, minimum and maximum inductor current c) The output ripple voltage.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-4(c)",
    "label": "20-21 4(c)",
    "session": "2020-21",
@@ -248,6 +464,20 @@
    "marks": 6.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38",
    "text": "A boost converter has an input of [unclear: 5 V] and an output of 25 W at 15 V. The minimum inductor current must be no less than 50% of the average. The ripple output must be less than 1 percent. The switching frequency is [unclear: 300 kHz]. (i) Determine the duty ratio. (ii) Minimum inductor value (iii) Minimum capacitor value",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-8(a)",
+   "label": "20-21 TT2 8(a)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "dcdc",
+   "subtopic": "Boost",
+   "type": "diagram",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=66",
+   "text": "Draw the circuit diagram, equivalent circuit for switch on and off condition and the waveforms of the inductor current, diode current and load voltage for a typical boost converter.",
    "repeat_of": "",
    "outline": ""
   },
@@ -378,48 +608,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-7(a)",
-   "label": "20-21 TT1 7(a)",
-   "session": "2020-21",
-   "term_test": true,
-   "topic": "devices",
-   "subtopic": "Diodes",
-   "type": "numerical",
-   "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=59",
-   "text": "Explain the reverse recovery time of diode with diagram.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-7(b)",
-   "label": "20-21 TT1 7(b)",
-   "session": "2020-21",
-   "term_test": true,
-   "topic": "devices",
-   "subtopic": "Thyristors",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=60",
-   "text": "Draw the I-V curve of thyristor. Define Holding current and Latching current for thyristor",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-7(c)",
-   "label": "20-21 TT1 7(c)",
-   "session": "2020-21",
-   "term_test": true,
-   "topic": "rectifiers",
-   "subtopic": "Full-wave",
-   "type": "numerical",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=62",
-   "text": "With proper alignment, show the waveshape of output voltage, output current, diode currents and source current for a full wave bridge rectifier with sinusoidal source and R-L load.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-7(d)",
    "label": "20-21 TT1 7(d)",
    "session": "2020-21",
@@ -434,34 +622,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-8(a)",
-   "label": "20-21 TT2 8(a)",
-   "session": "2020-21",
-   "term_test": true,
-   "topic": "dcdc",
-   "subtopic": "Boost",
-   "type": "diagram",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=66",
-   "text": "Draw the circuit diagram, equivalent circuit for switch on and off condition and the waveforms of the inductor current, diode current and load voltage for a typical boost converter.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-8(b)",
-   "label": "20-21 TT2 8(b)",
-   "session": "2020-21",
-   "term_test": true,
-   "topic": "dcdc",
-   "subtopic": "Buck",
-   "type": "numerical",
-   "marks": 7.5,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=68",
-   "text": "A buck converter has parameters, Vs=50 V, D=0.4, R=20 $\\Omega$, L=400 $\\mu$H and C=100 $\\mu$F. The switching frequency is 20 kHz. a) Determine the output voltage, b) Determine the average, minimum and maximum inductor current c) The output ripple voltage.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-8(c)",
    "label": "20-21 TT2 8(c)",
    "session": "2020-21",
@@ -472,20 +632,6 @@
    "marks": 2.5,
    "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=69",
    "text": "Draw the circuit diagram to control the speed of a separately excited dc motor by chopping field current supply. Explain the operation using required equations.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-8(d)",
-   "label": "20-21 TT2 8(d)",
-   "session": "2020-21",
-   "term_test": true,
-   "topic": "rectifiers",
-   "subtopic": "Three-phase",
-   "type": "numerical",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=70",
-   "text": "A three phase rectifier is supplied by 480 V rms line to line 60 Hz source. The RL load is 100 $\\Omega$ resistor in series with 15 mH inductor. Determine the rms load current and rms diode currents.",
    "repeat_of": "",
    "outline": ""
   }
