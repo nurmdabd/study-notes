@@ -11,7 +11,9 @@ so a downloaded file says its subject. A Bangla pack (<session>-pack_Bangla_shar
 A session's standalone question paper (<session>-question-paper_share.pdf) becomes <short>-<session>-question-paper.pdf,
 its own item with the ID <code>-<session>-question-paper ("Question paper"), listed after that session's packs. A new ID
 stays hidden on the site until it is ticked on the admin page.
-PDFs left over from an older name are removed. "pages" is the page count of the print copy, which is what gets printed.
+A subject's question analysis (<subject>/past-papers/analysis/) becomes <short>-question-analysis.pdf, its data
+<short>-question-analysis.json, and one item with the ID <code>-question-analysis, listed last for the subject; its
+"page" opens analysis.html. PDFs left over from an older name are removed. "pages" is the page count of the print copy, which is what gets printed.
 A subject folder not yet listed under "subjects" stops the script, so its title is added by hand first.
 """
 import json
@@ -84,6 +86,29 @@ for share in sorted(SRC.glob("EEE*/past-papers/*/pdf/*-question-paper_share.pdf"
     }
     last = max((i for i, it in enumerate(items) if it["subject"] == code and it["session"] == session), default=len(items) - 1)
     items.insert(last + 1, item)
+
+# each subject's question analysis: its share copy, and the data of the interactive page
+for share in sorted(SRC.glob("EEE*/past-papers/analysis/pdf/*-question-analysis_share.pdf")):
+    folder = share.parts[-5]
+    if folder not in subjects:
+        sys.exit(f"{folder} is not listed under 'subjects' in catalogue.json; add it first.")
+    short, code = folder.split("-", 1)[1], subjects[folder]["code"]
+    dest = SITE / folder / f"{short}-question-analysis.pdf"
+    shutil.copy2(share, dest)
+    published.add(dest)
+    shutil.copy2(share.parents[1] / f"{code}-question-analysis.json", SITE / folder / f"{short}-question-analysis.json")
+    printed = share.with_name(f"{code}-question-analysis_print.pdf")
+    items.append({
+        "id": f"{code}-question-analysis",
+        "subject": code,
+        "session": "All papers",
+        "document": "Question analysis",
+        "detail": "Topics, marks and formulas across the papers",
+        "pages": len(PdfReader(printed if printed.exists() else share).pages),
+        "file": f"{folder}/{dest.name}",
+        "page": f"analysis.html?subject={code}",
+        "printable": True,
+    })
 
 for old in SITE.glob("EEE*/*.pdf"):
     if old not in published:

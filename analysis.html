@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question Analysis</title>
+<meta name="description" content="Past-paper questions by topic, with filters, formulas and a progress counter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<style>
+:root {
+  --bg: #e9ecf1; --surface: #ffffff; --subtle: #f6f7f9; --text: #111827; --muted: #5f6774;
+  --line: #e3e6eb; --line-strong: #cfd4dc; --card-line: #d6dbe2;
+  --accent: #0f4c81; --accent-text: #ffffff; --accent-soft: #eef4fa; --accent-line: #c9dcef;
+  --ok: #166534; --band: #fdf1e3; --shadow: 0 1px 3px rgba(16, 24, 40, .08); --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b0d10; --surface: #181b21; --subtle: #1c2026; --text: #e7e9ec; --muted: #9aa1ab;
+    --line: #262a31; --line-strong: #343944; --card-line: #2c3139;
+    --accent: #79a9e0; --accent-text: #0b1420; --accent-soft: #17222f; --accent-line: #2a3e55;
+    --ok: #6dd39a; --band: #2a2116; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b0d10; --surface: #181b21; --subtle: #1c2026; --text: #e7e9ec; --muted: #9aa1ab;
+  --line: #262a31; --line-strong: #343944; --card-line: #2c3139;
+  --accent: #79a9e0; --accent-text: #0b1420; --accent-soft: #17222f; --accent-line: #2a3e55;
+  --ok: #6dd39a; --band: #2a2116; --shadow: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 14.5px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+.top { background: var(--surface); border-bottom: 1px solid var(--card-line); position: sticky; top: 0; z-index: 20; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; }
+.top a { font-weight: 600; text-decoration: none; }
+.count { color: var(--muted); font-size: .86rem; white-space: nowrap; }
+.count b { color: var(--ok); }
+h1 { font-size: 1.35rem; margin: 18px 0 2px; }
+.lead { color: var(--muted); margin: 0 0 12px; }
+.filters { background: var(--surface); border: 1px solid var(--card-line); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 12px 14px; display: grid; gap: 10px; margin-bottom: 12px; }
+.frow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.frow > .name { color: var(--muted); font-size: .82rem; min-width: 64px; }
+.chip { border: 1px solid var(--line-strong); background: var(--surface); color: var(--text); border-radius: 999px;
+  padding: 3px 11px; font: inherit; font-size: .84rem; cursor: pointer; min-height: 30px; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+input[type=search], select { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--line-strong);
+  border-radius: 8px; padding: 6px 10px; min-height: 34px; max-width: 100%; }
+input[type=search] { flex: 1 1 220px; }
+.check { display: inline-flex; gap: 6px; align-items: center; font-size: .86rem; color: var(--muted); }
+.topic { background: var(--surface); border: 1px solid var(--card-line); border-radius: var(--radius); box-shadow: var(--shadow);
+  margin-bottom: 12px; overflow: hidden; }
+.thead { padding: 10px 14px; background: var(--subtle); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap;
+  gap: 2px 12px; align-items: baseline; justify-content: space-between; }
+.thead h2 { font-size: 1.02rem; margin: 0; }
+.thead span { color: var(--muted); font-size: .82rem; }
+.tier { color: var(--accent); font-weight: 600; }
+.sub { background: var(--band); padding: 4px 14px; font-weight: 600; font-size: .86rem; }
+.q { display: grid; grid-template-columns: 26px 92px 1fr; gap: 4px 8px; padding: 9px 14px; border-top: 1px solid var(--line); }
+.q input { margin-top: 4px; width: 17px; height: 17px; }
+.q .lab { font-size: .84rem; font-weight: 600; }
+.q .tags { color: var(--muted); font-size: .78rem; }
+.q.done .text { color: var(--muted); }
+.q .outline { color: var(--muted); font-size: .84rem; margin-top: 2px; }
+.q .text { overflow-wrap: anywhere; }
+.katex-display, .text .katex { overflow-x: auto; overflow-y: hidden; }
+details { border-top: 1px solid var(--line); }
+summary { padding: 7px 14px; cursor: pointer; font-size: .86rem; color: var(--accent); font-weight: 600; }
+.ftable { width: 100%; border-collapse: collapse; font-size: .86rem; }
+.ftable td { border-top: 1px solid var(--line); padding: 6px 14px; vertical-align: top; }
+.ftable td:nth-child(2) { overflow-x: auto; max-width: 56vw; }
+.empty, .notice { background: var(--surface); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 18px; color: var(--muted); }
+footer { color: var(--muted); font-size: .82rem; padding: 10px 0 26px; }
+button.link { background: none; border: 0; color: var(--accent); font: inherit; cursor: pointer; padding: 0; }
+@media (max-width: 560px) {
+  .q { grid-template-columns: 26px 1fr; }
+  .q .text { grid-column: 1 / -1; }
+  .ftable td:nth-child(3) { display: none; }
+}
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a href="./">‹ Study Notes</a>
+  <span class="count" id="count"></span>
+</div></header>
+<main class="wrap">
+  <h1 id="title">Question Analysis</h1>
+  <p class="lead" id="lead"></p>
+  <div id="notice" class="notice" hidden></div>
+  <section class="filters" id="filters" hidden aria-label="Filters">
+    <div class="frow"><input type="search" id="q" placeholder="Search the questions" aria-label="Search the questions">
+      <select id="topic" aria-label="Topic"></select>
+      <label class="check"><input type="checkbox" id="todo"> Not done only</label></div>
+    <div class="frow" id="papers"><span class="name">Paper</span></div>
+    <div class="frow" id="types"><span class="name">Type</span></div>
+    <div class="frow" id="marks"><span class="name">Marks</span></div>
+  </section>
+  <div id="list"></div>
+  <footer id="foot" hidden>This shows what past papers asked; it does not predict the next paper. Your ticks stay in this browser.
+    <button class="link" id="reset">Clear my ticks</button></footer>
+</main>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const code = new URLSearchParams(location.search).get('subject') || '';
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const fmt = m => String(Math.round(m * 100) / 100);
+  const store = {
+    key: 'analysis-done-' + code,
+    read() { try { return new Set(JSON.parse(localStorage.getItem(this.key) || '[]')); } catch (e) { return new Set(); } },
+    write(set) { try { localStorage.setItem(this.key, JSON.stringify([...set])); } catch (e) { /* private window */ } }
+  };
+  const state = { q: '', topic: '', todo: false, paper: 'all', type: 'all', marks: 'all' };
+  const bands = { all: 'All', small: 'Up to 5', mid: '6 to 9', big: '10 and more' };
+  const inBand = (m, b) => b === 'all' || (b === 'small' && m <= 5) || (b === 'mid' && m > 5 && m < 10) || (b === 'big' && m >= 10);
+  let D = null, done = store.read();
+
+  function stop(text) { $('notice').textContent = text; $('notice').hidden = false; }
+
+  function tex(s) {   // the paper's own text: only *italic*, **bold** and maths
+    return esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*([^*$]+?)\*/g, '<i>$1</i>');
+  }
+  function maths(el) {
+    if (window.renderMathInElement) {
+      renderMathInElement(el, { delimiters: [{ left: '$', right: '$', display: false }], throwOnError: false });
+    }
+  }
+  function chips(box, list, key) {
+    list.forEach(([value, label]) => {
+      const b = document.createElement('button');
+      b.className = 'chip'; b.type = 'button'; b.textContent = label;
+      b.setAttribute('aria-pressed', state[key] === value);
+      b.addEventListener('click', () => {
+        state[key] = value;
+        box.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c === b));
+        draw();
+      });
+      box.appendChild(b);
+    });
+  }
+  function shown(q) {
+    return (!state.topic || q.topic === state.topic) && (state.paper === 'all' || q.session === state.paper) &&
+      (state.type === 'all' || q.type === state.type) && inBand(q.marks, state.marks) && (!state.todo || !done.has(q.id)) &&
+      (!state.q || (q.text + ' ' + q.subtopic + ' ' + q.outline + ' ' + q.label).toLowerCase().includes(state.q));
+  }
+  function counter() {
+    const total = D.questions.reduce((a, q) => a + q.marks, 0);
+    const got = D.questions.filter(q => done.has(q.id)).reduce((a, q) => a + q.marks, 0);
+    $('count').innerHTML = '<b>' + fmt(got) + '</b> of ' + fmt(total) + ' marks done';
+  }
+  function draw() {
+    const list = $('list'); list.textContent = '';
+    D.topics.forEach(t => {
+      const qs = D.questions.filter(q => q.topic === t.id && shown(q));
+      if (!qs.length) return;
+      const sec = document.createElement('section'); sec.className = 'topic';
+      const all = D.questions.filter(q => q.topic === t.id);
+      let html = '<div class="thead"><h2>' + esc(t.title) + '</h2><span><span class="tier">' + esc(t.tier) + '</span> · ' +
+        fmt(all.reduce((a, q) => a + q.marks, 0)) + ' marks · ' + esc(t.book) + '</span></div>';
+      [...new Set(qs.map(q => q.subtopic))].forEach(sub => {
+        html += '<div class="sub">' + esc(sub) + '</div>';
+        qs.filter(q => q.subtopic === sub).forEach(q => {
+          const name = q.link ? '<a href="' + esc(q.link) + '" target="_blank" rel="noopener">' + esc(q.label) + '</a>' : esc(q.label);
+          html += '<div class="q' + (done.has(q.id) ? ' done' : '') + '"><input type="checkbox" data-id="' + esc(q.id) + '"' +
+            (done.has(q.id) ? ' checked' : '') + ' aria-label="Done: ' + esc(q.label) + '">' +
+            '<div><div class="lab">' + name + '</div><div class="tags">' + fmt(q.marks) + ' marks · ' + esc(q.type) +
+            (q.repeat_of ? '<br>repeats ' + esc(q.repeat_of) : '') + '</div></div>' +
+            '<div class="text">' + tex(q.text || '(See the paper.)') +
+            (q.outline ? '<div class="outline">Outline: ' + tex(q.outline) + '</div>' : '') + '</div></div>';
+        });
+      });
+      const fs = D.formulas.filter(f => f.topic === t.id);
+      if (fs.length) {
+        html += '<details><summary>Formulas (' + fs.length + ')</summary><table class="ftable">' + fs.map(f =>
+          '<tr><td>' + tex(f.title) + '</td><td>' + esc(f.eq) + '</td><td>' + f.used.map(u => u.link
+            ? '<a href="' + esc(u.link) + '" target="_blank" rel="noopener">' + esc(u.label) + '</a>' : esc(u.label)).join(', ') + '</td></tr>').join('') + '</table></details>';
+      }
+      sec.innerHTML = html;
+      list.appendChild(sec);
+    });
+    if (!list.children.length) list.innerHTML = '<div class="empty">No question matches these filters.</div>';
+    maths(list);
+  }
+  function start(data) {
+    D = data;
+    document.title = D.subject + ' Question Analysis';
+    $('title').textContent = D.subject + ': ' + D.title;
+    const marks = D.questions.reduce((a, q) => a + q.marks, 0);
+    $('lead').textContent = D.sessions.length + ' papers, ' + D.questions.length + ' questions, ' + fmt(marks) + ' marks offered.';
+    chips($('papers'), [['all', 'All']].concat(D.sessions.map(s => [s, s])), 'paper');
+    chips($('types'), [['all', 'All']].concat([...new Set(D.questions.map(q => q.type))].map(t => [t, t[0].toUpperCase() + t.slice(1)])), 'type');
+    chips($('marks'), Object.entries(bands), 'marks');
+    $('topic').innerHTML = '<option value="">All topics</option>' + D.topics.map(t => '<option value="' + esc(t.id) + '">' + esc(t.title) + '</option>').join('');
+    $('topic').addEventListener('change', e => { state.topic = e.target.value; draw(); });
+    $('q').addEventListener('input', e => { state.q = e.target.value.trim().toLowerCase(); draw(); });
+    $('todo').addEventListener('change', e => { state.todo = e.target.checked; draw(); });
+    $('list').addEventListener('change', e => {
+      const id = e.target.dataset && e.target.dataset.id;
+      if (!id) return;
+      if (e.target.checked) done.add(id); else done.delete(id);
+      store.write(done); counter();
+      e.target.closest('.q').classList.toggle('done', e.target.checked);
+      if (state.todo) draw();
+    });
+    $('reset').addEventListener('click', () => { done = new Set(); store.write(done); counter(); draw(); });
+    $('filters').hidden = false; $('foot').hidden = false;
+    counter(); draw();
+  }
+  window.addEventListener('load', () => {
+    if (!code) return stop('No subject was chosen. Please open this page from the Study Notes list.');
+    Promise.all([fetch('catalogue.json', { cache: 'no-cache' }).then(r => r.json()),
+      fetch('settings.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}))]).then(([cat, set]) => {
+      const it = cat.items.find(i => i.id === code + '-question-analysis');
+      const hidden = set.hidden || {};
+      const off = !it || (hidden.items || []).includes(it.id) || (hidden.subjects || []).includes(code) ||
+        (Array.isArray(set.known_items) && !set.known_items.includes(it.id));
+      if (off) return stop('This analysis is not available yet.');
+      const data = it.file.replace(/\.pdf$/, '.json');
+      return fetch(data, { cache: 'no-cache' }).then(r => r.json()).then(start);
+    }).catch(() => stop('The analysis could not be loaded. Please try again.'));
+  });
+})();
+</script>
+</body>
+</html>
