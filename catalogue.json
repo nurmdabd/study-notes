@@ -222,7 +222,7 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 62,
+      "pages": 64,
       "file": "EEE329-COM/COM-2020-21-pack.pdf",
       "printable": true
     },
@@ -282,7 +282,7 @@
       "session": "2021-22",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 94,
+      "pages": 96,
       "file": "EEE337-PSII/PSII-2021-22-pack.pdf",
       "printable": true
     },
@@ -417,12 +417,32 @@
       "printable": true
     },
     {
+      "id": "EEE475-2018-19-pack",
+      "subject": "EEE475",
+      "session": "2018-19",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 64,
+      "file": "EEE475-RF/RF-2018-19-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE475-2018-19-question-paper",
+      "subject": "EEE475",
+      "session": "2018-19",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 3,
+      "file": "EEE475-RF/RF-2018-19-question-paper.pdf",
+      "printable": true
+    },
+    {
       "id": "EEE475-2019-20-pack",
       "subject": "EEE475",
       "session": "2019-20",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 72,
+      "pages": 74,
       "file": "EEE475-RF/RF-2019-20-pack.pdf",
       "printable": true
     },
@@ -442,7 +462,7 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 76,
+      "pages": 80,
       "file": "EEE475-RF/RF-2020-21-pack.pdf",
       "printable": true
     },
@@ -452,7 +472,7 @@
       "session": "2020-21",
       "document": "Exam pack (Bangla)",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 78,
+      "pages": 80,
       "file": "EEE475-RF/RF-2020-21-pack-Bangla.pdf",
       "printable": true
     },
