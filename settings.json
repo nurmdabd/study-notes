@@ -20,7 +20,30 @@
   ],
   "hidden": {
     "subjects": [],
-    "items": []
+    "items": [
+      "EEE475-question-analysis",
+      "EEE475-2020-21-question-paper",
+      "EEE475-2019-20-question-paper",
+      "EEE475-2018-19-pack",
+      "EEE475-2018-19-question-paper",
+      "EEE455-question-analysis",
+      "EEE455-2020-21-question-paper",
+      "EEE455-2019-20-question-paper",
+      "EEE421-question-analysis",
+      "EEE421-2020-21-question-paper",
+      "EEE459-question-analysis",
+      "EEE459-2020-21-question-paper",
+      "EEE443-question-analysis",
+      "EEE443-2020-21-question-paper",
+      "EEE337-question-analysis",
+      "EEE337-2021-22-question-paper",
+      "EEE337-2020-21-question-paper",
+      "EEE329-question-analysis",
+      "EEE329-2021-22-question-paper",
+      "EEE329-2020-21-pack",
+      "EEE329-2020-21-question-paper",
+      "EEE339-question-analysis"
+    ]
   },
   "subject_order": [
     "EEE475",
@@ -29,7 +52,8 @@
     "EEE459",
     "EEE443",
     "EEE337",
-    "EEE329"
+    "EEE329",
+    "EEE339"
   ],
   "item_order": {},
   "default_sort": "custom",
@@ -40,20 +64,45 @@
     "EEE459",
     "EEE443",
     "EEE337",
-    "EEE329"
+    "EEE329",
+    "EEE339"
   ],
   "known_items": [
+    "EEE475-question-analysis",
     "EEE475-2020-21-pack",
     "EEE475-2020-21-pack-bn",
+    "EEE475-2020-21-question-paper",
     "EEE475-2019-20-pack",
+    "EEE475-2019-20-question-paper",
+    "EEE475-2018-19-pack",
+    "EEE475-2018-19-question-paper",
+    "EEE455-question-analysis",
     "EEE455-2020-21-pack",
+    "EEE455-2020-21-question-paper",
     "EEE455-2019-20-pack",
+    "EEE455-2019-20-question-paper",
+    "EEE421-question-analysis",
     "EEE421-2020-21-pack",
+    "EEE421-2020-21-question-paper",
+    "EEE459-question-analysis",
     "EEE459-2020-21-pack",
+    "EEE459-2020-21-question-paper",
+    "EEE443-question-analysis",
     "EEE443-2020-21-pack",
+    "EEE443-2020-21-question-paper",
+    "EEE337-question-analysis",
     "EEE337-2021-22-pack",
+    "EEE337-2021-22-question-paper",
     "EEE337-2020-21-pack",
-    "EEE329-2021-22-pack"
+    "EEE337-2020-21-question-paper",
+    "EEE329-question-analysis",
+    "EEE329-2021-22-pack",
+    "EEE329-2021-22-question-paper",
+    "EEE329-2020-21-pack",
+    "EEE329-2020-21-question-paper",
+    "EEE339-question-analysis",
+    "EEE339-2020-21-pack",
+    "EEE339-2020-21-question-paper"
   ],
   "pickup": [
     "On campus (place confirmed on WhatsApp)"
