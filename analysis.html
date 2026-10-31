@@ -164,7 +164,7 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
       if (!qs.length) return;
       const sec = document.createElement('section'); sec.className = 'topic';
       const all = D.questions.filter(q => q.topic === t.id);
-      let html = '<div class="thead"><h2>' + esc(t.title) + '</h2><span><span class="tier">' + esc(t.tier) + '</span> · ' +
+      let html = '<div class="thead"><h2>' + esc(t.title) + '</h2><span>' + (D.sessions.length > 1 ? '<span class="tier">' + esc(t.tier) + '</span> · ' : '') +
         fmt(all.reduce((a, q) => a + q.marks, 0)) + ' marks · ' + esc(t.book) + '</span></div>';
       [...new Set(qs.map(q => q.subtopic))].forEach(sub => {
         html += '<div class="sub">' + esc(sub) + '</div>';
@@ -195,7 +195,9 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
     document.title = D.subject + ' Question Analysis';
     $('title').textContent = D.subject + ': ' + D.title;
     const marks = D.questions.reduce((a, q) => a + q.marks, 0);
-    $('lead').textContent = D.sessions.length + ' papers, ' + D.questions.length + ' questions, ' + fmt(marks) + ' marks offered.';
+    const one = D.sessions.length === 1;
+    $('lead').textContent = D.sessions.length + (one ? ' paper, ' : ' papers, ') + D.questions.length + ' questions, ' + fmt(marks) + ' marks offered.' +
+      (one ? ' With one paper no trend can be read, so use this as a map of the topics.' : '');
     chips($('papers'), [['all', 'All']].concat(D.sessions.map(s => [s, s])), 'paper');
     chips($('types'), [['all', 'All']].concat([...new Set(D.questions.map(q => q.type))].map(t => [t, t[0].toUpperCase() + t.slice(1)])), 'type');
     chips($('marks'), Object.entries(bands), 'marks');
