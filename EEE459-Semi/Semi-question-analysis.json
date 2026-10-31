@@ -9,49 +9,277 @@
    "id": "bands",
    "title": "Band structure and materials",
    "book": "Neamen Ch. 3; Sze Ch. 1",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$E$",
+     "meaning": "energy from the band edge (J)"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "wave number (m$^{-1}$)"
+    },
+    {
+     "symbol": "$\\hbar$",
+     "meaning": "reduced Planck constant (J·s)"
+    },
+    {
+     "symbol": "$g$",
+     "meaning": "states per unit energy per unit volume"
+    },
+    {
+     "symbol": "$E_c$",
+     "meaning": "conduction-band edge"
+    },
+    {
+     "symbol": "$\\lambda$",
+     "meaning": "wavelength of a photon of energy $E_g$"
+    }
+   ]
   },
   {
    "id": "hifield",
    "title": "High-field transport",
    "book": "Sze Ch. 1, 10",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$\\mu$",
+     "meaning": "mobility (cm$^2$/V·s)"
+    },
+    {
+     "symbol": "$\\tau$",
+     "meaning": "mean time between collisions (s)"
+    },
+    {
+     "symbol": "$m^*$",
+     "meaning": "conductivity effective mass (kg)"
+    },
+    {
+     "symbol": "$v_d$",
+     "meaning": "drift velocity (cm/s)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "electric field (V/cm)"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "transit-time frequency (Hz)"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "length of the GaAs sample (cm)"
+    }
+   ]
   },
   {
    "id": "alloys",
    "title": "Alloys and strain",
    "book": "Neamen Ch. 14",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$a$",
+     "meaning": "lattice constant (Å)"
+    },
+    {
+     "symbol": "$x$",
+     "meaning": "mole fraction"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "lattice constant or band gap of the alloy, from the four binaries"
+    },
+    {
+     "symbol": "$a_{layer}$",
+     "meaning": "layer lattice constant"
+    },
+    {
+     "symbol": "$a_{sub}$",
+     "meaning": "substrate lattice constant"
+    }
+   ]
   },
   {
    "id": "pn",
    "title": "PN junction",
    "book": "Neamen Ch. 7",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$a$",
+     "meaning": "grading constant (cm$^{-4}$)"
+    },
+    {
+     "symbol": "$W$",
+     "meaning": "total depletion width (cm)"
+    }
+   ]
   },
   {
    "id": "ms",
    "title": "Metal-semiconductor contacts",
    "book": "Neamen Ch. 9; Sze Ch. 3",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$\\phi_m$",
+     "meaning": "metal work function (V)"
+    },
+    {
+     "symbol": "$\\chi$",
+     "meaning": "electron affinity (V)"
+    },
+    {
+     "symbol": "$\\phi_n$",
+     "meaning": "depth of $E_F$ below $E_c$ (V)"
+    },
+    {
+     "symbol": "$N_c$",
+     "meaning": "conduction-band density of states (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$V_R$",
+     "meaning": "reverse bias (V)"
+    },
+    {
+     "symbol": "$C'$",
+     "meaning": "capacitance per unit area (F/cm$^2$)"
+    },
+    {
+     "symbol": "$\\Delta\\phi$",
+     "meaning": "barrier lowering (V)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "field at the interface (V/cm)"
+    },
+    {
+     "symbol": "$x_m$",
+     "meaning": "distance of the barrier maximum from the metal (cm)"
+    },
+    {
+     "symbol": "$\\gamma$",
+     "meaning": "1 without interface states, 0 when the Fermi level is pinned"
+    },
+    {
+     "symbol": "$\\phi_0$",
+     "meaning": "neutral level of the interface states above $E_v$ (V)"
+    },
+    {
+     "symbol": "$\\phi_s$",
+     "meaning": "semiconductor work function (V)"
+    }
+   ]
   },
   {
    "id": "hetero",
    "title": "Heterojunctions",
    "book": "Neamen Ch. 9",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$\\chi_n$, $\\chi_w$",
+     "meaning": "electron affinities of the narrow- and wide-gap materials (V)"
+    },
+    {
+     "symbol": "$\\Delta E_c$, $\\Delta E_v$",
+     "meaning": "conduction- and valence-band offsets (eV)"
+    },
+    {
+     "symbol": "$N_v$",
+     "meaning": "valence-band effective density of states (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$p_P$, $p_N$",
+     "meaning": "hole concentrations in the P and N regions"
+    },
+    {
+     "symbol": "$N_{vP}$, $N_{vN}$",
+     "meaning": "their valence-band densities of states"
+    },
+    {
+     "symbol": "$N_{d1}$",
+     "meaning": "donors"
+    },
+    {
+     "symbol": "$\\epsilon_1$",
+     "meaning": "permittivity of side 1"
+    },
+    {
+     "symbol": "$N_{a2}$",
+     "meaning": "acceptors"
+    },
+    {
+     "symbol": "$\\epsilon_2$",
+     "meaning": "permittivity of side 2"
+    },
+    {
+     "symbol": "$V_{bi1}$, $V_{bi2}$",
+     "meaning": "parts of $V_{bi}$ dropped on each side"
+    }
+   ]
   },
   {
    "id": "bjt",
    "title": "Bipolar transistors",
    "book": "Neamen Ch. 12; Sze Ch. 5",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$\\alpha_F$, $\\alpha_R$",
+     "meaning": "forward and reverse common-base gains"
+    },
+    {
+     "symbol": "$I_{ES}$, $I_{CS}$",
+     "meaning": "reverse saturation currents of the B--E and B--C junctions (A)"
+    }
+   ]
   },
   {
    "id": "jfet",
    "title": "JFETs",
    "book": "Neamen Ch. 13; Sze Ch. 7",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$N_a$",
+     "meaning": "gate acceptors"
+    },
+    {
+     "symbol": "$N_d$",
+     "meaning": "channel donors (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$h$",
+     "meaning": "depletion width into the channel (cm)"
+    },
+    {
+     "symbol": "$V_{GS}$",
+     "meaning": "gate--source voltage (V)"
+    },
+    {
+     "symbol": "$a$",
+     "meaning": "metallurgical channel thickness (cm)"
+    },
+    {
+     "symbol": "$W$",
+     "meaning": "channel width"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "channel length (cm)"
+    },
+    {
+     "symbol": "$\\mu_n$",
+     "meaning": "electron mobility (cm$^2$/V·s)"
+    },
+    {
+     "symbol": "$g_{ms}$",
+     "meaning": "saturation transconductance (S)"
+    }
+   ]
   }
  ],
  "questions": [
@@ -182,20 +410,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-3(b)",
-   "label": "20-21 3(b)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "bands",
-   "subtopic": "Density of states",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45",
-   "text": "Explain how the density of states changes qualitatively as the dimensionality reduces from $3D \\rightarrow 2D \\rightarrow 1D$. Sketch $D(E)$ vs $E$ for each case.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-3(c)",
    "label": "20-21 3(c)",
    "session": "2020-21",
@@ -206,6 +420,20 @@
    "marks": 8.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49",
    "text": "Consider a contact between tungsten and n-type silicon doped to $N_d = 1\\times10^{16}~\\text{cm}^{-3}$ at $T = 300~\\text{K}$. Determine the (i) theoretical barrier height (ii) built-in potential barrier (iii) maximum electric field in the metal-semiconductor diode for zero applied bias, and (iv) the junction capacitance. Given that, the metal work function for tungsten (W) is 4.55 V and the electron affinity for silicon is 4.01 V. Assume $N_c = 2.8\\times10^{19}~\\text{cm}^{-3}$.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(b)",
+   "label": "20-21 3(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "bands",
+   "subtopic": "Density of states",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45",
+   "text": "Explain how the density of states changes qualitatively as the dimensionality reduces from $3D \\rightarrow 2D \\rightarrow 1D$. Sketch $D(E)$ vs $E$ for each case.",
    "repeat_of": "",
    "outline": ""
   },
@@ -224,20 +452,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-4(a)",
-   "label": "20-21 4(a)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "hetero",
-   "subtopic": "Fields and potentials",
-   "type": "derivation",
-   "marks": 12.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57",
-   "text": "A narrow bandgap N-type and a wide bandgap P-type material are used to form a heterojunction. If they are straddling type, then draw the energy band diagram of the heterojunction before contact and after contact at thermal equilibrium. With necessary assumption, derive expression for electric field and electrostatic potential in both regions.",
-   "repeat_of": "",
-   "outline": "Integrate Poisson's equation on each side; apply D continuity; integrate again for the potential."
-  },
-  {
    "id": "2020-21-4(b)",
    "label": "20-21 4(b)",
    "session": "2020-21",
@@ -250,6 +464,20 @@
    "text": "Discuss the following non-ideal effects on barrier height of a metal-semiconductor heterojunction: (i) Image-force-induced lowering (ii) Interface states",
    "repeat_of": "",
    "outline": ""
+  },
+  {
+   "id": "2020-21-4(a)",
+   "label": "20-21 4(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hetero",
+   "subtopic": "Fields and potentials",
+   "type": "derivation",
+   "marks": 12.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57",
+   "text": "A narrow bandgap N-type and a wide bandgap P-type material are used to form a heterojunction. If they are straddling type, then draw the energy band diagram of the heterojunction before contact and after contact at thermal equilibrium. With necessary assumption, derive expression for electric field and electrostatic potential in both regions.",
+   "repeat_of": "",
+   "outline": "Integrate Poisson's equation on each side; apply D continuity; integrate again for the potential."
   },
   {
    "id": "2020-21-4(c)",
