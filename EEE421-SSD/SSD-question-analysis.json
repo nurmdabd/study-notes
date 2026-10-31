@@ -9,49 +9,172 @@
    "id": "quantum",
    "title": "Quantum basics",
    "book": "Neamen Ch. 3",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$g_c$",
+     "meaning": "states per unit energy per unit volume"
+    }
+   ]
   },
   {
    "id": "equilibrium",
    "title": "Semiconductor in equilibrium",
    "book": "Neamen Ch. 4",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$f_F$",
+     "meaning": "probability that a state at energy $E$ holds an electron"
+    },
+    {
+     "symbol": "$E_F$",
+     "meaning": "Fermi level"
+    },
+    {
+     "symbol": "$N_c$",
+     "meaning": "effective density of states in the conduction band"
+    },
+    {
+     "symbol": "$N_v$",
+     "meaning": "effective density of states in the valence band"
+    },
+    {
+     "symbol": "$n_i$",
+     "meaning": "intrinsic carrier concentration"
+    },
+    {
+     "symbol": "$E_{Fi}$",
+     "meaning": "intrinsic Fermi level (near midgap)"
+    },
+    {
+     "symbol": "$N_a^-$, $N_d^+$",
+     "meaning": "ionized acceptors and donors (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$E_d$",
+     "meaning": "donor level"
+    },
+    {
+     "symbol": "$n_d$",
+     "meaning": "electrons still in donor states"
+    }
+   ]
   },
   {
    "id": "transport",
    "title": "Carrier transport",
    "book": "Neamen Ch. 5",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$\\mu$",
+     "meaning": "mobility (cm$^2$/V s)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "electric field (V/cm)"
+    },
+    {
+     "symbol": "$\\tau$",
+     "meaning": "mean time between collisions (s)"
+    },
+    {
+     "symbol": "$m^*$",
+     "meaning": "conductivity effective mass"
+    },
+    {
+     "symbol": "$\\mu_L$, $\\mu_I$",
+     "meaning": "lattice- and impurity-limited mobility"
+    },
+    {
+     "symbol": "$N_I$",
+     "meaning": "ionized impurity concentration"
+    },
+    {
+     "symbol": "$d$",
+     "meaning": "thickness along $B_z$"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "length along $x$, $W$ = width along $y$"
+    }
+   ]
   },
   {
    "id": "excess",
    "title": "Excess carriers",
    "book": "Neamen Ch. 6",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$D_n$, $D_p$",
+     "meaning": "diffusion coefficients (cm$^2$/s)"
+    },
+    {
+     "symbol": "$\\phi$",
+     "meaning": "potential (V)"
+    },
+    {
+     "symbol": "$\\rho$",
+     "meaning": "charge density (C/cm$^3$)"
+    },
+    {
+     "symbol": "$L_n$",
+     "meaning": "minority-electron diffusion length"
+    },
+    {
+     "symbol": "$N_0$",
+     "meaning": "pairs created per unit area at $x = 0$, $t = 0$"
+    }
+   ]
   },
   {
    "id": "pn",
    "title": "PN junction",
    "book": "Neamen Ch. 7, 8",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$x_n$, $x_p$",
+     "meaning": "depletion widths on the n and p sides"
+    }
+   ]
   },
   {
    "id": "tunnel",
    "title": "Tunnel diode",
    "book": "Neamen Ch. 8, 15",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": []
   },
   {
    "id": "mos",
    "title": "MOS structure",
    "book": "Neamen Ch. 10",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$\\phi_s$",
+     "meaning": "surface potential (band bending)"
+    }
+   ]
   },
   {
    "id": "bjt",
    "title": "Bipolar transistor",
    "book": "Neamen Ch. 12",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$N_E$, $N_B$, $N_C$",
+     "meaning": "emitter, base, collector doping"
+    },
+    {
+     "symbol": "$x_B$",
+     "meaning": "neutral base width"
+    }
+   ]
   }
  ],
  "questions": [
@@ -112,6 +235,20 @@
    "outline": ""
   },
   {
+   "id": "2020-21-6(b)",
+   "label": "20-21 6(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "equilibrium",
+   "subtopic": "Ionization",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=97",
+   "text": "Briefly explain the terms complete ionization and freeze out. Can we achieve complete ionization in room temperature? Prove your answer.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-2(a)",
    "label": "20-21 2(a)",
    "session": "2020-21",
@@ -152,6 +289,20 @@
    "text": "Using the expression for $V_{bi}$, find the width of the depletion region.\\",
    "repeat_of": "",
    "outline": "Integrate Poisson's equation for the field and potential; use charge balance; add the edges."
+  },
+  {
+   "id": "2020-21-6(d)",
+   "label": "20-21 6(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "pn",
+   "subtopic": "Depletion width",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=104",
+   "text": "A silicon PN junction at $T = 300$ K with zero applied bias has doping concentration of $N_d = 5\\times10^{16}$ cm$^{-3}$ and $N_a = 5\\times10^{15}$ cm$^{-3}$. Determine built-in potential, space charge width and electric field at metallurgical region ($\\epsilon_t = 11.7$ *[sic: should be $\\epsilon_r = 11.7$]*)",
+   "repeat_of": "",
+   "outline": ""
   },
   {
    "id": "2020-21-2(d)",
@@ -210,20 +361,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-3(d)",
-   "label": "20-21 3(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "excess",
-   "subtopic": "Steady state",
-   "type": "numerical",
-   "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=53",
-   "text": "For the following questions: (i) Solve the ambipolar transport equation for a semiconductor with $N_a = 5\\times10^{16}$ cm$^{-3}$ for $x > 0$ at steady state with zero electric field where excess charges are created only at $x = 0$. ($\\delta n_0 = 5\\times10^{15}$ cm$^{-3}$). (ii) Find the distance where the excess charge will drop to $10\\times10^{13}$ cm$^{-3}$. (Assume $\\tau_{n0} = 7\\times10^{-7}$ s, $\\tau_{p0} = 5\\times10^{-7}$ s, $D_n = 30$ cm$^2$ s$^{-1}$, $D_p = 25$ cm$^2$ s$^{-1}$) (iii) Plot n and p as function of x in log scale.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-4(a)",
    "label": "20-21 4(a)",
    "session": "2020-21",
@@ -234,6 +371,20 @@
    "marks": 5.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=59",
    "text": "Explain the effects of temperature on carrier mobility inside a semiconductor.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(d)",
+   "label": "20-21 3(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "excess",
+   "subtopic": "Steady state",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=53",
+   "text": "For the following questions: (i) Solve the ambipolar transport equation for a semiconductor with $N_a = 5\\times10^{16}$ cm$^{-3}$ for $x > 0$ at steady state with zero electric field where excess charges are created only at $x = 0$. ($\\delta n_0 = 5\\times10^{15}$ cm$^{-3}$). (ii) Find the distance where the excess charge will drop to $10\\times10^{13}$ cm$^{-3}$. (Assume $\\tau_{n0} = 7\\times10^{-7}$ s, $\\tau_{p0} = 5\\times10^{-7}$ s, $D_n = 30$ cm$^2$ s$^{-1}$, $D_p = 25$ cm$^2$ s$^{-1}$) (iii) Plot n and p as function of x in log scale.",
    "repeat_of": "",
    "outline": ""
   },
@@ -350,20 +501,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-6(b)",
-   "label": "20-21 6(b)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "equilibrium",
-   "subtopic": "Ionization",
-   "type": "numerical",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=97",
-   "text": "Briefly explain the terms complete ionization and freeze out. Can we achieve complete ionization in room temperature? Prove your answer.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-6(c)",
    "label": "20-21 6(c)",
    "session": "2020-21",
@@ -374,20 +511,6 @@
    "marks": 5.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=100",
    "text": "Explain production of inverse layer at oxide and semiconductor layer with proper sketches of energy band diagram.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-6(d)",
-   "label": "20-21 6(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "pn",
-   "subtopic": "Depletion width",
-   "type": "numerical",
-   "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=104",
-   "text": "A silicon PN junction at $T = 300$ K with zero applied bias has doping concentration of $N_d = 5\\times10^{16}$ cm$^{-3}$ and $N_a = 5\\times10^{15}$ cm$^{-3}$. Determine built-in potential, space charge width and electric field at metallurgical region ($\\epsilon_t = 11.7$ *[sic: should be $\\epsilon_r = 11.7$]*)",
    "repeat_of": "",
    "outline": ""
   }
