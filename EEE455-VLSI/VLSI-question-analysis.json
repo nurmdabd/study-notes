@@ -9,19 +9,19 @@
   {
    "id": "mos",
    "title": "MOS transistor theory",
-   "book": "Weste Ch. 2; Kang",
+   "book": "Weste Ch. 2; Kang Ch. 3",
    "tier": "Must know"
   },
   {
    "id": "inverter",
    "title": "CMOS inverter",
-   "book": "Weste Ch. 2; Kang",
+   "book": "Weste Ch. 2; Kang Ch. 5, 6",
    "tier": "Must know"
   },
   {
    "id": "fab",
    "title": "Fabrication",
-   "book": "Weste Ch. 3; Plummer",
+   "book": "Weste Ch. 3; Plummer Ch. 4, 5, 7, 8, 10",
    "tier": "Must know"
   },
   {

@@ -9,55 +9,55 @@
   {
    "id": "inductance",
    "title": "Line inductance",
-   "book": "Mehta; Grainger and Stevenson",
+   "book": "Mehta Ch. 9; Grainger Ch. 4",
    "tier": "Must know"
   },
   {
    "id": "capacitance",
    "title": "Line capacitance",
-   "book": "Mehta; Grainger and Stevenson",
+   "book": "Mehta Ch. 9; Grainger Ch. 5",
    "tier": "Must know"
   },
   {
    "id": "corona",
    "title": "Corona",
-   "book": "Mehta",
+   "book": "Mehta Ch. 8",
    "tier": "Must know"
   },
   {
    "id": "insulators",
    "title": "Overhead insulators",
-   "book": "Mehta",
+   "book": "Mehta Ch. 8",
    "tier": "Must know"
   },
   {
    "id": "mechanical",
    "title": "Mechanical design",
-   "book": "Mehta",
+   "book": "Mehta Ch. 8",
    "tier": "Must know"
   },
   {
    "id": "cables",
    "title": "Underground cables",
-   "book": "Mehta",
+   "book": "Mehta Ch. 11",
    "tier": "Must know"
   },
   {
    "id": "faults",
    "title": "Cable faults",
-   "book": "Mehta",
+   "book": "Mehta Ch. 11",
    "tier": "Must know"
   },
   {
    "id": "stability",
    "title": "Power system stability",
-   "book": "Grainger and Stevenson",
+   "book": "Grainger Ch. 16",
    "tier": "Must know"
   },
   {
    "id": "hvdc",
    "title": "HVDC and FACTS",
-   "book": "Hingorani and Gyugyi",
+   "book": "Hingorani and Gyugyi; Rashid Ch. 12",
    "tier": "Must know"
   }
  ],

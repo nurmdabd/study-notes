@@ -9,61 +9,61 @@
   {
    "id": "signals",
    "title": "Signals and spectrum",
-   "book": "Lathi; Forouzan Ch. 3",
+   "book": "Lathi Ch. 1, 3; Forouzan Ch. 3",
    "tier": "Must know"
   },
   {
    "id": "noise",
    "title": "Noise and channel capacity",
-   "book": "Lathi; Forouzan Ch. 3",
+   "book": "Lathi Ch. 1, 12; Forouzan Ch. 3",
    "tier": "Must know"
   },
   {
    "id": "am",
    "title": "Amplitude modulation",
-   "book": "Lathi",
+   "book": "Lathi Ch. 4",
    "tier": "Must know"
   },
   {
    "id": "fm",
    "title": "Angle modulation",
-   "book": "Lathi",
+   "book": "Lathi Ch. 4",
    "tier": "Must know"
   },
   {
    "id": "receivers",
    "title": "Receivers",
-   "book": "Lathi",
+   "book": "Lathi Ch. 4",
    "tier": "Likely"
   },
   {
    "id": "pulse",
    "title": "Sampling and pulse modulation",
-   "book": "Lathi",
+   "book": "Lathi Ch. 5",
    "tier": "Must know"
   },
   {
    "id": "digital",
    "title": "Digital modulation",
-   "book": "Lathi; Forouzan Ch. 5",
+   "book": "Lathi Ch. 6, 9; Forouzan Ch. 5",
    "tier": "Must know"
   },
   {
    "id": "mux",
    "title": "Multiplexing and multiple access",
-   "book": "Forouzan Ch. 6, 12",
+   "book": "Lathi Ch. 10; Forouzan Ch. 6, 12",
    "tier": "Must know"
   },
   {
    "id": "info",
    "title": "Information theory",
-   "book": "Lathi",
+   "book": "Lathi Ch. 12",
    "tier": "Must know"
   },
   {
    "id": "system",
    "title": "System design",
-   "book": "Lathi",
+   "book": "Lathi Ch. 1",
    "tier": "Likely"
   }
  ],

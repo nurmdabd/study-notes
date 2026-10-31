@@ -14,7 +14,7 @@
   {
    "id": "devices",
    "title": "Power devices",
-   "book": "Rashid",
+   "book": "Rashid Ch. 2, 4, 9",
    "tier": "Must know"
   },
   {
@@ -26,7 +26,7 @@
   {
    "id": "acvc",
    "title": "AC control and cycloconverters",
-   "book": "Hart Ch. 5; Rashid",
+   "book": "Hart Ch. 5; Rashid Ch. 11",
    "tier": "Must know"
   },
   {
@@ -50,7 +50,7 @@
   {
    "id": "apps",
    "title": "Applications",
-   "book": "Rashid; Power Electronics Handbook",
+   "book": "Rashid Ch. 16; Power Electronics Handbook",
    "tier": "Must know"
   }
  ],

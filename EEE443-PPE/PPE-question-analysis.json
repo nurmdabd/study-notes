@@ -8,61 +8,61 @@
   {
    "id": "load",
    "title": "Load curves and factors",
-   "book": "Mehta",
+   "book": "Mehta Ch. 3",
    "tier": "Must know"
   },
   {
    "id": "econ",
    "title": "Economics of generation",
-   "book": "Mehta",
+   "book": "Mehta Ch. 4",
    "tier": "Must know"
   },
   {
    "id": "tariff",
    "title": "Tariffs",
-   "book": "Mehta",
+   "book": "Mehta Ch. 5",
    "tier": "Must know"
   },
   {
    "id": "sharing",
    "title": "Economic load sharing",
-   "book": "Mehta",
+   "book": "Mehta Ch. 3, 4",
    "tier": "Must know"
   },
   {
    "id": "fuels",
    "title": "Fuels and handling",
-   "book": "Nag",
+   "book": "Nag Ch. 4, 5",
    "tier": "Must know"
   },
   {
    "id": "steam",
    "title": "Steam power plant",
-   "book": "Nag",
+   "book": "Nag Ch. 6, 8",
    "tier": "Must know"
   },
   {
    "id": "turbines",
    "title": "Steam turbines",
-   "book": "Nag",
+   "book": "Nag Ch. 7",
    "tier": "Must know"
   },
   {
    "id": "combined",
    "title": "Combined cycle plants",
-   "book": "Nag",
+   "book": "Nag Ch. 3",
    "tier": "Must know"
   },
   {
    "id": "hydro",
    "title": "Hydro plants",
-   "book": "Nag; Mehta",
+   "book": "Nag Ch. 10; Mehta Ch. 2",
    "tier": "Must know"
   },
   {
    "id": "nuclear",
    "title": "Nuclear plants",
-   "book": "Nag; Mehta",
+   "book": "Nag Ch. 9; Mehta Ch. 2",
    "tier": "Must know"
   }
  ],
