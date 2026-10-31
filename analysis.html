@@ -74,6 +74,8 @@ summary { padding: 7px 14px; cursor: pointer; font-size: .86rem; color: var(--ac
 .ftable { width: 100%; border-collapse: collapse; font-size: .86rem; }
 .ftable td { border-top: 1px solid var(--line); padding: 6px 14px; vertical-align: top; }
 .ftable td:nth-child(2) { overflow-x: auto; max-width: 56vw; }
+.symbols { columns: 220px; column-gap: 24px; padding: 6px 14px 10px; font-size: .86rem; }
+.symbols div { break-inside: avoid; padding: 2px 0; }
 .empty, .notice { background: var(--surface); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 18px; color: var(--muted); }
 footer { color: var(--muted); font-size: .82rem; padding: 10px 0 26px; }
 button.link { background: none; border: 0; color: var(--accent); font: inherit; cursor: pointer; padding: 0; }
@@ -183,6 +185,10 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
         html += '<details><summary>Formulas (' + fs.length + ')</summary><table class="ftable">' + fs.map(f =>
           '<tr><td>' + tex(f.title) + '</td><td>' + esc(f.eq) + '</td><td>' + f.used.map(u => u.link
             ? '<a href="' + esc(u.link) + '" target="_blank" rel="noopener">' + esc(u.label) + '</a>' : esc(u.label)).join(', ') + '</td></tr>').join('') + '</table></details>';
+      }
+      if (t.symbols && t.symbols.length) {
+        html += '<details><summary>Symbols (' + t.symbols.length + ')</summary><div class="symbols">' +
+          t.symbols.map(s => '<div>' + tex(s.symbol + ' = ' + s.meaning) + '</div>').join('') + '</div></details>';
       }
       sec.innerHTML = html;
       list.appendChild(sec);
