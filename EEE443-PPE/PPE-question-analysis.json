@@ -9,61 +9,217 @@
    "id": "load",
    "title": "Load curves and factors",
    "book": "Mehta Ch. 3",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$E$",
+     "meaning": "energy in the period (kWh)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "hours in the period (8760 for a year, 24 for a day)"
+    },
+    {
+     "symbol": "$P_{max}$",
+     "meaning": "maximum demand on the station"
+    },
+    {
+     "symbol": "$P_{max,i}$",
+     "meaning": "maximum demand of consumer group $i$"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "plant capacity (rated)"
+    },
+    {
+     "symbol": "$t_{op}$",
+     "meaning": "hours the plant was in operation"
+    }
+   ]
   },
   {
    "id": "econ",
    "title": "Economics of generation",
    "book": "Mehta Ch. 4",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$K$",
+     "meaning": "capital cost"
+    },
+    {
+     "symbol": "$i$, $d$",
+     "meaning": "interest and depreciation rates"
+    },
+    {
+     "symbol": "$W$",
+     "meaning": "wages, taxes"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "initial cost"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "salvage value"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "useful life (years)"
+    },
+    {
+     "symbol": "$r$",
+     "meaning": "fraction of the value left, charged each year"
+    },
+    {
+     "symbol": "$q$",
+     "meaning": "annual deposit"
+    },
+    {
+     "symbol": "$i$",
+     "meaning": "interest rate"
+    }
+   ]
   },
   {
    "id": "tariff",
    "title": "Tariffs",
    "book": "Mehta Ch. 5",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$a$",
+     "meaning": "Tk per kW connected"
+    },
+    {
+     "symbol": "$b$",
+     "meaning": "Tk per kWh"
+    }
+   ]
   },
   {
    "id": "sharing",
    "title": "Economic load sharing",
-   "book": "Mehta Ch. 3, 4",
-   "tier": "Must know"
+   "book": "Nag Ch. 1; Mehta Ch. 3",
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$I$",
+     "meaning": "heat input (kcal/h)"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "output (MW)"
+    },
+    {
+     "symbol": "$F$",
+     "meaning": "fuel cost (Tk/h)"
+    },
+    {
+     "symbol": "$\\lambda$",
+     "meaning": "common incremental rate"
+    }
+   ]
   },
   {
    "id": "fuels",
    "title": "Fuels and handling",
    "book": "Nag Ch. 4, 5",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": []
   },
   {
    "id": "steam",
    "title": "Steam power plant",
    "book": "Nag Ch. 6, 8",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$m_f$",
+     "meaning": "coal burnt (kg/h)"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "calorific value (kcal/kg)"
+    },
+    {
+     "symbol": "$m_w$",
+     "meaning": "steam (water) per hour (kg/h)"
+    },
+    {
+     "symbol": "$h$",
+     "meaning": "enthalpy of the steam"
+    },
+    {
+     "symbol": "$h_f$",
+     "meaning": "enthalpy of the water entering the boiler (kcal/kg)"
+    },
+    {
+     "symbol": "$t_1$, $t_2$",
+     "meaning": "water in and out"
+    },
+    {
+     "symbol": "$m_g$, $c_{pg}$",
+     "meaning": "flue-gas mass and specific heat"
+    },
+    {
+     "symbol": "$t_g$",
+     "meaning": "gas entering"
+    },
+    {
+     "symbol": "$t_a$",
+     "meaning": "atmosphere"
+    }
+   ]
   },
   {
    "id": "turbines",
    "title": "Steam turbines",
    "book": "Nag Ch. 7",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": []
   },
   {
    "id": "combined",
    "title": "Combined cycle plants",
    "book": "Nag Ch. 3",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": []
   },
   {
    "id": "hydro",
    "title": "Hydro plants",
    "book": "Nag Ch. 10; Mehta Ch. 2",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$\\rho$",
+     "meaning": "1000 kg/m$^3$"
+    },
+    {
+     "symbol": "$g$",
+     "meaning": "9.81 m/s$^2$"
+    },
+    {
+     "symbol": "$Q$",
+     "meaning": "flow (m$^3$/s)"
+    },
+    {
+     "symbol": "$H$",
+     "meaning": "head (m)"
+    },
+    {
+     "symbol": "$\\eta$",
+     "meaning": "overall efficiency"
+    }
+   ]
   },
   {
    "id": "nuclear",
    "title": "Nuclear plants",
    "book": "Nag Ch. 9; Mehta Ch. 2",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": []
   }
  ],
  "questions": [
@@ -134,6 +290,34 @@
    "marks": 3.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=17",
    "text": "What is the importance of load factor and diversity factor?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(a)",
+   "label": "20-21 4(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Factors",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31",
+   "text": "Define plant use factor and plant utility factor.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(c)",
+   "label": "20-21 4(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Factors",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33",
+   "text": "A generating station has a maximum demand of 20 MW, a load factor of 60%, a plant capacity factor of 48% and a plant use factor of 80%. Find: (i) The daily energy produced (ii) The reserve capacity of the plant (iii) The maximum energy that could be produced daily if the plant was running all the time (iv) The maximum energy that could be produced daily if the plant was running fully loaded and operating as per schedule.",
    "repeat_of": "",
    "outline": ""
   },
@@ -236,20 +420,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-4(a)",
-   "label": "20-21 4(a)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "load",
-   "subtopic": "Factors",
-   "type": "theory",
-   "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31",
-   "text": "Define plant use factor and plant utility factor.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-4(b)",
    "label": "20-21 4(b)",
    "session": "2020-21",
@@ -260,20 +430,6 @@
    "marks": 5.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31",
    "text": "Mention the types of reactors used in nuclear power plants.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-4(c)",
-   "label": "20-21 4(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "load",
-   "subtopic": "Factors",
-   "type": "numerical",
-   "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33",
-   "text": "A generating station has a maximum demand of 20 MW, a load factor of 60%, a plant capacity factor of 48% and a plant use factor of 80%. Find: (i) The daily energy produced (ii) The reserve capacity of the plant (iii) The maximum energy that could be produced daily if the plant was running all the time (iv) The maximum energy that could be produced daily if the plant was running fully loaded and operating as per schedule.",
    "repeat_of": "",
    "outline": ""
   },
