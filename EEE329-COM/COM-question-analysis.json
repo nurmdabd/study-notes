@@ -2,72 +2,376 @@
  "subject": "EEE329",
  "title": "Communication Engineering I",
  "sessions": [
-  "2020-21",
-  "2021-22"
+  "2021-22",
+  "2020-21"
  ],
  "topics": [
   {
    "id": "signals",
    "title": "Signals and spectrum",
    "book": "Lathi Ch. 1, 3; Forouzan Ch. 3",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$k$",
+     "meaning": "constant gain"
+    },
+    {
+     "symbol": "$t_d$",
+     "meaning": "constant delay (s)"
+    },
+    {
+     "symbol": "$\\theta_h$",
+     "meaning": "phase response (rad)"
+    },
+    {
+     "symbol": "$h_t$, $h_r$",
+     "meaning": "antenna heights (m), $\\frac43$-Earth radius"
+    }
+   ]
   },
   {
    "id": "noise",
    "title": "Noise and channel capacity",
-   "book": "Lathi Ch. 1, 12; Forouzan Ch. 3",
-   "tier": "Must know"
+   "book": "Lathi Ch. 1, 13; Forouzan Ch. 3",
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$L$",
+     "meaning": "number of levels"
+    },
+    {
+     "symbol": "$f_s$",
+     "meaning": "symbols per second"
+    },
+    {
+     "symbol": "$B$",
+     "meaning": "channel bandwidth (Hz)"
+    },
+    {
+     "symbol": "$S/N$",
+     "meaning": "plain power ratio"
+    },
+    {
+     "symbol": "$T$",
+     "meaning": "temperature (K)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "resistance ($\\Omega$); wanted data rate (bit/s)"
+    },
+    {
+     "symbol": "$P_t$, $P_r$",
+     "meaning": "sent and received power (W)"
+    },
+    {
+     "symbol": "$V_t$, $V_r$",
+     "meaning": "sent and received amplitude (V)"
+    },
+    {
+     "symbol": "$V_s$, $V_n$",
+     "meaning": "signal and noise amplitude (V), same resistance"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "largest error-free rate (bit/s)"
+    }
+   ]
   },
   {
    "id": "am",
    "title": "Amplitude modulation",
    "book": "Lathi Ch. 4",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$E_c$, $E_m$",
+     "meaning": "peak carrier and message (V)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "load ($\\Omega$)"
+    },
+    {
+     "symbol": "$P_t$",
+     "meaning": "total power"
+    },
+    {
+     "symbol": "$P_c$",
+     "meaning": "carrier power (W)"
+    },
+    {
+     "symbol": "$M(f)$",
+     "meaning": "message spectrum"
+    },
+    {
+     "symbol": "$W$",
+     "meaning": "message bandwidth"
+    },
+    {
+     "symbol": "$H_i$",
+     "meaning": "transmit filter"
+    },
+    {
+     "symbol": "$H_o(f)$",
+     "meaning": "receiver LPF, for $\\lvert f\\rvert \\le B$"
+    },
+    {
+     "symbol": "$A$",
+     "meaning": "carrier amplitude"
+    },
+    {
+     "symbol": "$\\omega_c$",
+     "meaning": "carrier frequency (rad/s)"
+    },
+    {
+     "symbol": "$I_t$",
+     "meaning": "rms current with modulation (A)"
+    },
+    {
+     "symbol": "$I_c$",
+     "meaning": "rms current of the carrier alone (A)"
+    },
+    {
+     "symbol": "$RC$",
+     "meaning": "load time constant (s)"
+    },
+    {
+     "symbol": "$\\Delta\\omega$",
+     "meaning": "local-carrier frequency error (rad/s)"
+    },
+    {
+     "symbol": "$\\theta$",
+     "meaning": "phase error (rad)"
+    },
+    {
+     "symbol": "$H_i(f)$",
+     "meaning": "VSB shaping filter"
+    }
+   ]
   },
   {
    "id": "fm",
    "title": "Angle modulation",
-   "book": "Lathi Ch. 4",
-   "tier": "Must know"
+   "book": "Lathi Ch. 5",
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$\\theta(t)$",
+     "meaning": "carrier angle"
+    },
+    {
+     "symbol": "$k_p$",
+     "meaning": "phase sensitivity"
+    },
+    {
+     "symbol": "$k_f$",
+     "meaning": "frequency sensitivity (rad/s per volt)"
+    },
+    {
+     "symbol": "$f_m$",
+     "meaning": "modulating frequency (Hz)"
+    },
+    {
+     "symbol": "$\\Delta f$",
+     "meaning": "peak frequency deviation (Hz)"
+    },
+    {
+     "symbol": "$B_T$",
+     "meaning": "FM bandwidth (Hz)"
+    }
+   ]
   },
   {
    "id": "receivers",
    "title": "Receivers",
    "book": "Lathi Ch. 4",
-   "tier": "Likely"
+   "tier": "Likely",
+   "symbols": []
   },
   {
    "id": "pulse",
    "title": "Sampling and pulse modulation",
-   "book": "Lathi Ch. 5",
-   "tier": "Must know"
+   "book": "Lathi Ch. 6",
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$B$",
+     "meaning": "highest message frequency (Hz)"
+    },
+    {
+     "symbol": "$f_s$",
+     "meaning": "sampling rate (samples/s)"
+    },
+    {
+     "symbol": "$R_b$",
+     "meaning": "bit rate (bit/s)"
+    },
+    {
+     "symbol": "$\\sigma$",
+     "meaning": "step size"
+    },
+    {
+     "symbol": "$r$",
+     "meaning": "symbol rate (symbols/s)"
+    },
+    {
+     "symbol": "$G(f)$",
+     "meaning": "message spectrum"
+    },
+    {
+     "symbol": "$T_s = 1/f_s$",
+     "meaning": "sampling interval (s)"
+    },
+    {
+     "symbol": "$f_0$",
+     "meaning": "filter cutoff (Hz)"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "number of levels"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "bits per code word"
+    },
+    {
+     "symbol": "$\\overline{m^2}$",
+     "meaning": "message power"
+    },
+    {
+     "symbol": "$\\mu$",
+     "meaning": "compression constant (255), not the AM index"
+    }
+   ]
   },
   {
    "id": "digital",
    "title": "Digital modulation",
-   "book": "Lathi Ch. 6, 9; Forouzan Ch. 5",
-   "tier": "Must know"
+   "book": "Lathi Ch. 7, 10; Forouzan Ch. 5",
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$R_b$",
+     "meaning": "bit rate"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "baud rate; signal (baud) rate"
+    },
+    {
+     "symbol": "$\\Delta f$",
+     "meaning": "half the spacing of $f_1$ and $f_2$ (Hz)"
+    },
+    {
+     "symbol": "$m_1$, $m_2$",
+     "meaning": "the two messages"
+    },
+    {
+     "symbol": "$I_k$",
+     "meaning": "data bit"
+    },
+    {
+     "symbol": "$q_k$",
+     "meaning": "encoded bit"
+    },
+    {
+     "symbol": "$a_k$",
+     "meaning": "polar symbol ($\\pm1$)"
+    },
+    {
+     "symbol": "$y_k$",
+     "meaning": "LPF output"
+    },
+    {
+     "symbol": "$d$",
+     "meaning": "filter factor, $0 \\le d \\le 1$; data (1 or 0)"
+    }
+   ]
   },
   {
    "id": "mux",
    "title": "Multiplexing and multiple access",
-   "book": "Lathi Ch. 10; Forouzan Ch. 6, 12",
-   "tier": "Must know"
+   "book": "Lathi Ch. 11; Forouzan Ch. 6, 12",
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$m_p$",
+     "meaning": "peak signal"
+    },
+    {
+     "symbol": "$N$",
+     "meaning": "number of channels"
+    },
+    {
+     "symbol": "$B_g$",
+     "meaning": "guard band"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "PN pattern bits"
+    },
+    {
+     "symbol": "$\\epsilon$",
+     "meaning": "allowed error as a fraction of $m_p$"
+    },
+    {
+     "symbol": "$R_i$",
+     "meaning": "input rates"
+    }
+   ]
   },
   {
    "id": "info",
    "title": "Information theory",
-   "book": "Lathi Ch. 12",
-   "tier": "Must know"
+   "book": "Lathi Ch. 13",
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$P$",
+     "meaning": "probability of the symbol"
+    },
+    {
+     "symbol": "$H$",
+     "meaning": "average information per symbol"
+    },
+    {
+     "symbol": "$p$",
+     "meaning": "probability of one symbol; probability of one of two symbols"
+    },
+    {
+     "symbol": "$P_i$",
+     "meaning": "probability of symbol $m_i$"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "number of symbols"
+    }
+   ]
   },
   {
    "id": "system",
    "title": "System design",
    "book": "Lathi Ch. 1",
-   "tier": "Likely"
+   "tier": "Likely",
+   "symbols": []
   }
  ],
  "questions": [
+  {
+   "id": "2021-22-1(a)",
+   "label": "21-22 1(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "info",
+   "subtopic": "Entropy",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=10",
+   "text": "Find the entropy $H(m)$ of a memoryless source.",
+   "repeat_of": "",
+   "outline": ""
+  },
   {
    "id": "2020-21-1(a)",
    "label": "20-21 1(a)",
@@ -111,6 +415,34 @@
    "outline": ""
   },
   {
+   "id": "2021-22-2(a)",
+   "label": "21-22 2(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "am",
+   "subtopic": "AM modulation index",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=17",
+   "text": "The antenna current of an AM transmitter is 8 A when only the carrier is sent. But it increases to 8.93 A when the carrier is modulated by a single sine wave. Find the percentage modulation. Determine the antenna current when the percentage of modulation changes to 0.8",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-3(d)",
+   "label": "21-22 3(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "am",
+   "subtopic": "AM modulation index",
+   "type": "diagram",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=27",
+   "text": "For the AM signal with $m(t)$ in Fig. 1 given below, sketch $\\Phi_AM(t)$ for $\\mu = 0.5, \\mu = 1$, and $\\mu = 1.5$.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-1(d)",
    "label": "20-21 1(d)",
    "session": "2020-21",
@@ -139,6 +471,34 @@
    "outline": ""
   },
   {
+   "id": "2021-22-6(c)",
+   "label": "21-22 6(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "mux",
+   "subtopic": "Multiple access",
+   "type": "theory",
+   "marks": 3.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=47",
+   "text": "Compare between FDMA and CDMA.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-6(e)",
+   "label": "21-22 6(e)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "mux",
+   "subtopic": "Multiple access",
+   "type": "theory",
+   "marks": 3.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=49",
+   "text": "Differentiate between multiplexing and multiple access technologies.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-2(a)",
    "label": "20-21 2(a)",
    "session": "2020-21",
@@ -149,6 +509,20 @@
    "marks": 5.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=19",
    "text": "Differentiate between multiplexing and multiple access technologies.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(a)",
+   "label": "20-21 5(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "mux",
+   "subtopic": "Multiple access",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=40",
+   "text": "Write down the comparison between TDMA and CDMA.",
    "repeat_of": "",
    "outline": ""
   },
@@ -181,6 +555,20 @@
    "outline": ""
   },
   {
+   "id": "2021-22-3(c)",
+   "label": "21-22 3(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "fm",
+   "subtopic": "Deviation and index",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=26",
+   "text": "A 93.2 MHz carrier is frequency modulated by a 5 kHz sine wave. The resultant FM signal has a frequency deviation of 40 kHz. (i) Find the carrier swing of the FM signal. (ii) What are the highest and lowest frequencies attained by the frequency modulated signal? (iii) Calculate the modulation index for the wave.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-2(d)",
    "label": "20-21 2(d)",
    "session": "2020-21",
@@ -191,6 +579,20 @@
    "marks": 10.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23",
    "text": "In an FM system, when the audio frequency is 500 Hz and modulating voltage 2.5 V, the deviation produced is 5 kHz. If the modulating voltage is now increased to 7.5 V, calculate the new value of frequency deviation produced. If the AF voltage is raised to 10 V while the modulating frequency dropped to 250 Hz, what is the frequency deviation? Calculate the modulation index in each case.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-5(a)",
+   "label": "21-22 5(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "pulse",
+   "subtopic": "Delta modulation",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=38",
+   "text": "Explain the principle of sigma-delta modulator. Also explain how it is advantageous over DM.",
    "repeat_of": "",
    "outline": ""
   },
@@ -223,6 +625,48 @@
    "outline": ""
   },
   {
+   "id": "2021-22-4(a)",
+   "label": "21-22 4(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "pulse",
+   "subtopic": "PCM",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=30",
+   "text": "What is PCM? Explain PCM system.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-4(c)",
+   "label": "21-22 4(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "pulse",
+   "subtopic": "PCM",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=33",
+   "text": "Write short note on: Companding, Information rate, and Entropy of a source.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-4(e)",
+   "label": "21-22 4(e)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "pulse",
+   "subtopic": "PCM",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=36",
+   "text": "An audio signal is sampled at 8 kHz rate using a 32-level quantizer. Find- (i) Peak signal power to peak quantization noise power. (ii) System bandwidth.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-3(c)",
    "label": "20-21 3(c)",
    "session": "2020-21",
@@ -233,6 +677,20 @@
    "marks": 5.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=28",
    "text": "Explain the basic block diagram of PCM system.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-1(c)",
+   "label": "21-22 1(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "noise",
+   "subtopic": "Channel capacity",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=13",
+   "text": "We have a communication channel with a bandwidth of 5 MHz. A signal with an amplitude of 10 V is transmitted, and the receiver detects a signal with an amplitude of 2 V and noise with an amplitude of 5 mV. (i) Calculate the attenuation. (ii) Determine the maximum channel capacity. (iii) To achieve a data rate of 100 Mbit s$^{-1}$, find the required signal level.",
    "repeat_of": "",
    "outline": ""
   },
@@ -251,6 +709,20 @@
    "outline": ""
   },
   {
+   "id": "2020-21-5(b)",
+   "label": "20-21 5(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "noise",
+   "subtopic": "Channel capacity",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=41",
+   "text": "A voice grade telephone channel has a bandwidth of 3400 Hz. If the signal to noise ratio (SNR) on the channel is 30 dB, determine the capacity of the channel. If the above channel is to be used to transmit 4.8 kbps of data, determine the minimum SNR required on the channel.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-4(a)",
    "label": "20-21 4(a)",
    "session": "2020-21",
@@ -265,6 +737,20 @@
    "outline": ""
   },
   {
+   "id": "2021-22-2(d)",
+   "label": "21-22 2(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "am",
+   "subtopic": "VSB",
+   "type": "derivation",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=21",
+   "text": "Find the condition of sideband shaping filter for VSB modulation.",
+   "repeat_of": "",
+   "outline": "Write the VSB spectrum; shift by the carrier; keep the baseband terms; require a constant bracket."
+  },
+  {
    "id": "2020-21-4(b)",
    "label": "20-21 4(b)",
    "session": "2020-21",
@@ -277,6 +763,20 @@
    "text": "Explain how the message signal is reconstructed from VSB signal.",
    "repeat_of": "",
    "outline": "Shape DSB-SC with a filter; multiply by the carrier; filter; require the sum of the shifted responses to be constant."
+  },
+  {
+   "id": "2021-22-4(b)",
+   "label": "21-22 4(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "pulse",
+   "subtopic": "Sampling",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=31",
+   "text": "\"A proper valued LPF filter can be used to reconstruct the sampled signal\"-justify the statement with the proper mathematical explanations.",
+   "repeat_of": "",
+   "outline": ""
   },
   {
    "id": "2020-21-4(c)",
@@ -303,412 +803,6 @@
    "marks": 4.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=38",
    "text": "State Carson's rule and its limitations.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-5(a)",
-   "label": "20-21 5(a)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "mux",
-   "subtopic": "Multiple access",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=40",
-   "text": "Write down the comparison between TDMA and CDMA.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-5(b)",
-   "label": "20-21 5(b)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "noise",
-   "subtopic": "Channel capacity",
-   "type": "numerical",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=41",
-   "text": "A voice grade telephone channel has a bandwidth of 3400 Hz. If the signal to noise ratio (SNR) on the channel is 30 dB, determine the capacity of the channel. If the above channel is to be used to transmit 4.8 kbps of data, determine the minimum SNR required on the channel.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-5(c)",
-   "label": "20-21 5(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "mux",
-   "subtopic": "TDM",
-   "type": "numerical",
-   "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=42",
-   "text": "It is desired to set up a central station for simultaneous monitoring of the electrocardiograms (ECGs) of 10 hospital patients. The data from the 10 patents *[sic: should be \"patients\"]* are brought to a processing center over wires and are sampled, quantized, binary-coded, and time-division-multiplexed. The multiplexed data are now transmitted to the monitoring station. The ECG signal bandwidth is 100 Hz. The maximum acceptable error in sample amplitude is 0.25% of the peak signal amplitude. The sampling rate must be at least twice the Nyquist rate. Determine the minimum cable bandwidth needed to transmit these multiplexed data.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-5(d)",
-   "label": "20-21 5(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "am",
-   "subtopic": "DSB-SC",
-   "type": "theory",
-   "marks": 0.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=44",
-   "text": "Consider a message signal m(t) with the spectrum shown in Fig. 1. The message bandwidth W = 1 kHz. This signal is applied to a product modulator, together with a carrier wave $A_c\\cos(2\\pi f_ct)$, producing the DSBSC modulated wave s(t). This modulated wave is next applied to a coherent detector. Assuming perfect synchronism between the carrier waves in the modulator and detector, determine the spectrum of the detector output when: (i) the carrier frequency $f_c = 1.25$ kHz and (ii) the carrier frequency $f_c = 0.75$ kHz.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-6(a)",
-   "label": "20-21 6(a)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "digital",
-   "subtopic": "FSK",
-   "type": "theory",
-   "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47",
-   "text": "Briefly describe FSK generation with the necessary block diagram. Include its spectrum and discuss the bandwidth requirements, along with the advantages and disadvantages of FSK.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-6(b)",
-   "label": "20-21 6(b)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "digital",
-   "subtopic": "QAM",
-   "type": "theory",
-   "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=49",
-   "text": "With proper block diagram explain the principle of coherent detection of QAM. Mention its advantages and drawbacks.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-6(c)",
-   "label": "20-21 6(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "mux",
-   "subtopic": "Spread spectrum",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=50",
-   "text": "Explain the principle of frequency hopping spread spectrum technique.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-6(d)",
-   "label": "20-21 6(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "digital",
-   "subtopic": "DPSK",
-   "type": "numerical",
-   "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=52",
-   "text": "Tabulate the values of signal at each stage of DPSK encoder and receiver for message signal '1010011100'",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-1(a)",
-   "label": "21-22 1(a)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "info",
-   "subtopic": "Entropy",
-   "type": "numerical",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=10",
-   "text": "Find the entropy $H(m)$ of a memoryless source.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-1(b)",
-   "label": "21-22 1(b)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "signals",
-   "subtopic": "Propagation modes",
-   "type": "theory",
-   "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=11",
-   "text": "Discuss the different modes of propagation of EM wave.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-1(c)",
-   "label": "21-22 1(c)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "noise",
-   "subtopic": "Channel capacity",
-   "type": "numerical",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=13",
-   "text": "We have a communication channel with a bandwidth of 5 MHz. A signal with an amplitude of 10 V is transmitted, and the receiver detects a signal with an amplitude of 2 V and noise with an amplitude of 5 mV. (i) Calculate the attenuation. (ii) Determine the maximum channel capacity. (iii) To achieve a data rate of 100 Mbit s$^{-1}$, find the required signal level.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-1(d)",
-   "label": "21-22 1(d)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "signals",
-   "subtopic": "Distortionless transmission",
-   "type": "derivation",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=15",
-   "text": "Explain the conditions required for distortionless transmission.",
-   "repeat_of": "",
-   "outline": "Write the output as a delayed scaled input; Fourier transform it; read magnitude and phase conditions."
-  },
-  {
-   "id": "2021-22-2(a)",
-   "label": "21-22 2(a)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "am",
-   "subtopic": "AM modulation index",
-   "type": "numerical",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=17",
-   "text": "The antenna current of an AM transmitter is 8 A when only the carrier is sent. But it increases to 8.93 A when the carrier is modulated by a single sine wave. Find the percentage modulation. Determine the antenna current when the percentage of modulation changes to 0.8",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-2(b)",
-   "label": "21-22 2(b)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "am",
-   "subtopic": "DSB-SC",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=18",
-   "text": "Explain how phase and frequency error affect the coherent detection of AM.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-2(c)",
-   "label": "21-22 2(c)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "am",
-   "subtopic": "DSB-SC",
-   "type": "theory",
-   "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=19",
-   "text": "With appropriate block diagram, briefly explain the working principle of Costas DSB-SC receiver.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-2(d)",
-   "label": "21-22 2(d)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "am",
-   "subtopic": "VSB",
-   "type": "derivation",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=21",
-   "text": "Find the condition of sideband shaping filter for VSB modulation.",
-   "repeat_of": "",
-   "outline": "Write the VSB spectrum; shift by the carrier; keep the baseband terms; require a constant bracket."
-  },
-  {
-   "id": "2021-22-3(a)",
-   "label": "21-22 3(a)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "fm",
-   "subtopic": "NBFM",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=23",
-   "text": "Explain NBFM generation process with necessary block diagrams and equations.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-3(b)",
-   "label": "21-22 3(b)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "am",
-   "subtopic": "Envelope detector",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=24",
-   "text": "Write a short note on the linear diode detection (envelope detector) method with proper diagrams and leveling.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-3(c)",
-   "label": "21-22 3(c)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "fm",
-   "subtopic": "Deviation and index",
-   "type": "numerical",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=26",
-   "text": "A 93.2 MHz carrier is frequency modulated by a 5 kHz sine wave. The resultant FM signal has a frequency deviation of 40 kHz. (i) Find the carrier swing of the FM signal. (ii) What are the highest and lowest frequencies attained by the frequency modulated signal? (iii) Calculate the modulation index for the wave.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-3(d)",
-   "label": "21-22 3(d)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "am",
-   "subtopic": "AM modulation index",
-   "type": "diagram",
-   "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=27",
-   "text": "For the AM signal with $m(t)$ in Fig. 1 given below, sketch $\\Phi_AM(t)$ for $\\mu = 0.5, \\mu = 1$, and $\\mu = 1.5$.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-4(a)",
-   "label": "21-22 4(a)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "pulse",
-   "subtopic": "PCM",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=30",
-   "text": "What is PCM? Explain PCM system.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-4(b)",
-   "label": "21-22 4(b)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "pulse",
-   "subtopic": "Sampling",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=31",
-   "text": "\"A proper valued LPF filter can be used to reconstruct the sampled signal\"-justify the statement with the proper mathematical explanations.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-4(c)",
-   "label": "21-22 4(c)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "pulse",
-   "subtopic": "PCM",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=33",
-   "text": "Write short note on: Companding, Information rate, and Entropy of a source.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-4(d)",
-   "label": "21-22 4(d)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "digital",
-   "subtopic": "ASK, FSK and PSK",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=34",
-   "text": "Name three mechanisms for the modulation of digital data into an analog signal. Show the differences among them.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-4(e)",
-   "label": "21-22 4(e)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "pulse",
-   "subtopic": "PCM",
-   "type": "numerical",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=36",
-   "text": "An audio signal is sampled at 8 kHz rate using a 32-level quantizer. Find- (i) Peak signal power to peak quantization noise power. (ii) System bandwidth.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-5(a)",
-   "label": "21-22 5(a)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "pulse",
-   "subtopic": "Delta modulation",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=38",
-   "text": "Explain the principle of sigma-delta modulator. Also explain how it is advantageous over DM.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-5(b)",
-   "label": "21-22 5(b)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "digital",
-   "subtopic": "QAM",
-   "type": "theory",
-   "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=39",
-   "text": "With proper block diagram explain the principle of coherent detection of QAM. Mention its advantages and drawbacks.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-5(c)",
-   "label": "21-22 5(c)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "digital",
-   "subtopic": "DPSK",
-   "type": "numerical",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=41",
-   "text": "Tabulate the values of signal at each stage of DPSK encoder and receiver for message signal '1010010110'.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-5(d)",
-   "label": "21-22 5(d)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "digital",
-   "subtopic": "ASK, FSK and PSK",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=42",
-   "text": "Briefly describe coherent and non-coherent detection of BASK and BFSK.",
    "repeat_of": "",
    "outline": ""
   },
@@ -741,16 +835,226 @@
    "outline": ""
   },
   {
-   "id": "2021-22-6(c)",
-   "label": "21-22 6(c)",
-   "session": "2021-22",
+   "id": "2020-21-5(c)",
+   "label": "20-21 5(c)",
+   "session": "2020-21",
    "term_test": false,
    "topic": "mux",
-   "subtopic": "Multiple access",
+   "subtopic": "TDM",
+   "type": "numerical",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=42",
+   "text": "It is desired to set up a central station for simultaneous monitoring of the electrocardiograms (ECGs) of 10 hospital patients. The data from the 10 patents *[sic: should be \"patients\"]* are brought to a processing center over wires and are sampled, quantized, binary-coded, and time-division-multiplexed. The multiplexed data are now transmitted to the monitoring station. The ECG signal bandwidth is 100 Hz. The maximum acceptable error in sample amplitude is 0.25% of the peak signal amplitude. The sampling rate must be at least twice the Nyquist rate. Determine the minimum cable bandwidth needed to transmit these multiplexed data.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-2(b)",
+   "label": "21-22 2(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "am",
+   "subtopic": "DSB-SC",
    "type": "theory",
-   "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=47",
-   "text": "Compare between FDMA and CDMA.",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=18",
+   "text": "Explain how phase and frequency error affect the coherent detection of AM.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-2(c)",
+   "label": "21-22 2(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "am",
+   "subtopic": "DSB-SC",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=19",
+   "text": "With appropriate block diagram, briefly explain the working principle of Costas DSB-SC receiver.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(d)",
+   "label": "20-21 5(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "am",
+   "subtopic": "DSB-SC",
+   "type": "theory",
+   "marks": 0.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=44",
+   "text": "Consider a message signal m(t) with the spectrum shown in Fig. 1. The message bandwidth W = 1 kHz. This signal is applied to a product modulator, together with a carrier wave $A_c\\cos(2\\pi f_ct)$, producing the DSBSC modulated wave s(t). This modulated wave is next applied to a coherent detector. Assuming perfect synchronism between the carrier waves in the modulator and detector, determine the spectrum of the detector output when: (i) the carrier frequency $f_c = 1.25$ kHz and (ii) the carrier frequency $f_c = 0.75$ kHz.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(a)",
+   "label": "20-21 6(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "digital",
+   "subtopic": "FSK",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47",
+   "text": "Briefly describe FSK generation with the necessary block diagram. Include its spectrum and discuss the bandwidth requirements, along with the advantages and disadvantages of FSK.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-5(b)",
+   "label": "21-22 5(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "digital",
+   "subtopic": "QAM",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=39",
+   "text": "With proper block diagram explain the principle of coherent detection of QAM. Mention its advantages and drawbacks.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(b)",
+   "label": "20-21 6(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "digital",
+   "subtopic": "QAM",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=49",
+   "text": "With proper block diagram explain the principle of coherent detection of QAM. Mention its advantages and drawbacks.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(c)",
+   "label": "20-21 6(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "mux",
+   "subtopic": "Spread spectrum",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=50",
+   "text": "Explain the principle of frequency hopping spread spectrum technique.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-5(c)",
+   "label": "21-22 5(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "digital",
+   "subtopic": "DPSK",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=41",
+   "text": "Tabulate the values of signal at each stage of DPSK encoder and receiver for message signal '1010010110'.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(d)",
+   "label": "20-21 6(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "digital",
+   "subtopic": "DPSK",
+   "type": "numerical",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=52",
+   "text": "Tabulate the values of signal at each stage of DPSK encoder and receiver for message signal '1010011100'",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-1(b)",
+   "label": "21-22 1(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "signals",
+   "subtopic": "Propagation modes",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=11",
+   "text": "Discuss the different modes of propagation of EM wave.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-1(d)",
+   "label": "21-22 1(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "signals",
+   "subtopic": "Distortionless transmission",
+   "type": "derivation",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=15",
+   "text": "Explain the conditions required for distortionless transmission.",
+   "repeat_of": "",
+   "outline": "Write the output as a delayed scaled input; Fourier transform it; read magnitude and phase conditions."
+  },
+  {
+   "id": "2021-22-3(a)",
+   "label": "21-22 3(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "fm",
+   "subtopic": "NBFM",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=23",
+   "text": "Explain NBFM generation process with necessary block diagrams and equations.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-3(b)",
+   "label": "21-22 3(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "am",
+   "subtopic": "Envelope detector",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=24",
+   "text": "Write a short note on the linear diode detection (envelope detector) method with proper diagrams and leveling.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-4(d)",
+   "label": "21-22 4(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "digital",
+   "subtopic": "ASK, FSK and PSK",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=34",
+   "text": "Name three mechanisms for the modulation of digital data into an analog signal. Show the differences among them.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-5(d)",
+   "label": "21-22 5(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "digital",
+   "subtopic": "ASK, FSK and PSK",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=42",
+   "text": "Briefly describe coherent and non-coherent detection of BASK and BFSK.",
    "repeat_of": "",
    "outline": ""
   },
@@ -765,20 +1069,6 @@
    "marks": 7.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=48",
    "text": "Discuss the design procedures of a communication system.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2021-22-6(e)",
-   "label": "21-22 6(e)",
-   "session": "2021-22",
-   "term_test": false,
-   "topic": "mux",
-   "subtopic": "Multiple access",
-   "type": "theory",
-   "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=49",
-   "text": "Differentiate between multiplexing and multiple access technologies.",
    "repeat_of": "",
    "outline": ""
   }
@@ -1031,12 +1321,12 @@
    "eq": "$P_t = P_c\\left(1 + \\dfrac{\\mu^2}{2}\\right)$",
    "used": [
     {
-     "label": "20-21 1(e)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=17"
-    },
-    {
      "label": "21-22 2(a)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=17"
+    },
+    {
+     "label": "20-21 1(e)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -1083,12 +1373,12 @@
    "eq": "$H_o(f) = \\dfrac{1}{H_i(f + f_c) + H_i(f - f_c)}$",
    "used": [
     {
-     "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=33"
-    },
-    {
      "label": "21-22 2(d)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=21"
+    },
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=33"
     }
    ]
   },
@@ -1255,12 +1545,12 @@
    "eq": "$\\beta = \\dfrac{\\Delta f}{f_m}$",
    "used": [
     {
-     "label": "20-21 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23"
-    },
-    {
      "label": "21-22 3(c)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=26"
+    },
+    {
+     "label": "20-21 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23"
     }
    ]
   },
@@ -1367,12 +1657,12 @@
    "eq": "$f_s \\ge 2B$",
    "used": [
     {
-     "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35"
-    },
-    {
      "label": "21-22 4(b)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=31"
+    },
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35"
     }
    ]
   },
@@ -1395,12 +1685,12 @@
    "eq": "$g(t) = \\sum_kg(kT_s)\\,\\text{sinc}(2\\pi Bt - k\\pi)$",
    "used": [
     {
-     "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35"
-    },
-    {
      "label": "21-22 4(b)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=31"
+    },
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35"
     }
    ]
   },
@@ -1423,12 +1713,12 @@
    "eq": "$R_b = nf_s$",
    "used": [
     {
-     "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=28"
-    },
-    {
      "label": "21-22 4(e)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=36"
+    },
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=28"
     }
    ]
   },
@@ -1619,12 +1909,12 @@
    "eq": "$B = (1 + d)S + 2\\Delta f$",
    "used": [
     {
-     "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47"
-    },
-    {
      "label": "21-22 4(d)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=34"
+    },
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47"
     }
    ]
   },
@@ -1659,12 +1949,12 @@
    "eq": "$q_k = I_k \\oplus q_{k-1}$",
    "used": [
     {
-     "label": "20-21 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=52"
-    },
-    {
      "label": "21-22 5(c)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=41"
+    },
+    {
+     "label": "20-21 6(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=52"
     }
    ]
   },
@@ -1675,12 +1965,12 @@
    "eq": "$y_k \\propto a_ka_{k-1}$",
    "used": [
     {
-     "label": "20-21 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=52"
-    },
-    {
      "label": "21-22 5(c)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=41"
+    },
+    {
+     "label": "20-21 6(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=52"
     }
    ]
   },
@@ -1775,12 +2065,12 @@
    "eq": "$R_b = Nf_sn$",
    "used": [
     {
-     "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=42"
-    },
-    {
      "label": "21-22 6(b)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=46"
+    },
+    {
+     "label": "20-21 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=42"
     }
    ]
   },
@@ -1863,12 +2153,12 @@
    "eq": "$H(p) = -p\\log_2p - (1 - p)\\log_2(1 - p)$",
    "used": [
     {
-     "label": "20-21 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=11"
-    },
-    {
      "label": "21-22 1(a)",
      "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=10"
+    },
+    {
+     "label": "20-21 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=11"
     }
    ]
   },
