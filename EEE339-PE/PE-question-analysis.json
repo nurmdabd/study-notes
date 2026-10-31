@@ -1,0 +1,1203 @@
+{
+ "subject": "EEE339",
+ "title": "Power Electronics",
+ "sessions": [
+  "2020-21"
+ ],
+ "topics": [
+  {
+   "id": "power",
+   "title": "Power computations",
+   "book": "Hart Ch. 2",
+   "tier": "Must know"
+  },
+  {
+   "id": "devices",
+   "title": "Power devices",
+   "book": "Rashid",
+   "tier": "Must know"
+  },
+  {
+   "id": "rectifiers",
+   "title": "Rectifiers",
+   "book": "Hart Ch. 3, 4",
+   "tier": "Must know"
+  },
+  {
+   "id": "acvc",
+   "title": "AC control and cycloconverters",
+   "book": "Hart Ch. 5; Rashid",
+   "tier": "Must know"
+  },
+  {
+   "id": "dcdc",
+   "title": "DC-DC converters",
+   "book": "Hart Ch. 6",
+   "tier": "Must know"
+  },
+  {
+   "id": "supplies",
+   "title": "DC power supplies",
+   "book": "Hart Ch. 7",
+   "tier": "Must know"
+  },
+  {
+   "id": "inverters",
+   "title": "Inverters",
+   "book": "Hart Ch. 8",
+   "tier": "Must know"
+  },
+  {
+   "id": "apps",
+   "title": "Applications",
+   "book": "Rashid; Power Electronics Handbook",
+   "tier": "Must know"
+  }
+ ],
+ "questions": [
+  {
+   "id": "2020-21-1(a)",
+   "label": "20-21 1(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "power",
+   "subtopic": "Distortion",
+   "type": "derivation",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=11",
+   "text": "Define distortion factor (DF) and total harmonic distortion (THD). Derive that $DF = \\sqrt{\\dfrac{1}{1+(THD)^2}}$",
+   "repeat_of": "",
+   "outline": "Square the THD; add 1; use the definition of DF."
+  },
+  {
+   "id": "2020-21-1(b)",
+   "label": "20-21 1(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "Diodes",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=13",
+   "text": "Define reverse recovery current and reverse recovery time for diode switching. What is the importance of these parameters?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(c)",
+   "label": "20-21 1(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "Diodes",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=14",
+   "text": "The manufacturer of a selected diode gives the rate of fall of the diode current di/dt=20 A/$\\mu$s, and its reserve *[sic: should be reverse]* recovery time t$_{rr}$=5 $\\mu$s. What value of peak reverse current and the storage charge do you expect?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(d)",
+   "label": "20-21 1(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "power",
+   "subtopic": "Distortion",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=15",
+   "text": "A sinusoidal current of 10A rms at a 60 Hz fundamental frequency is contaminated with a ninth harmonic current. The current is expressed as $i(t) = 10\\sqrt{2}\\sin(2\\pi 60t)$ $+\\, I_9\\sqrt{2}\\sin(18\\pi 60t)$ A. Determine the value of the ninth harmonic rms current I9 if the THD is -i) 5 percent ii) 20 percent.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(a)",
+   "label": "20-21 2(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=17",
+   "text": "Draw the two transistors model of a thyristor and explain the turn-on condition of a thyristor with equations from this model.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(b)",
+   "label": "20-21 2(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19",
+   "text": "For the circuit of Fig. 2(b), the source is 120 V rms at 60 Hz, R=20 Ohm, L=0.04 H, and the delay angle is 45°. Determine (i) an expression for i($\\omega$t) , (ii) the average current, (iii) the power absorbed by the load, and (iv) the power factor.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(c)",
+   "label": "20-21 2(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=22",
+   "text": "A full-wave controlled bridge rectifier has an ac input of 120 V rms at 60 Hz and a 20 $\\Omega$ load resistor. The delay angle is 40°. Determine the average current of the load, the power absorbed by the load, the apparent power of the sourced *[sic: should be source]* and the input pf.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(a)",
+   "label": "20-21 3(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=25",
+   "text": "Draw the configuration of three phase uncontrolled rectifier. Show the source voltages, output voltage, diode currents and line currents with proper alignment.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(b)",
+   "label": "20-21 3(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "IGBT",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=28",
+   "text": "Draw the cross section of an IGBT showing the layers. Differentiate between punch-through and non-punch through IGBTs.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(c)",
+   "label": "20-21 3(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "apps",
+   "subtopic": "HVDC",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=29",
+   "text": "Write down the advantages of DC power transmission.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(d)",
+   "label": "20-21 3(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=30",
+   "text": "A three phase controlled rectifier has an input voltage of 480 V rms at 60 Hz. The load of the rectifier is resistor of 10 $\\Omega$ in series with 50 mH inductance. (i) Determine the delay angle required to produce an average current of 50A in the load (ii) Determine the amplitude of the harmonics n=6 and n=12. For harmonics calculation, Fig. 3(d) can be utilized.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(a)",
+   "label": "20-21 4(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "supplies",
+   "subtopic": "Linear regulator",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=34",
+   "text": "Draw a typical circuit of a linear dc voltage regulator. What is the drawback of it? How can it be overcome?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(b)",
+   "label": "20-21 4(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "dcdc",
+   "subtopic": "Buck",
+   "type": "derivation",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=35",
+   "text": "Draw the circuit diagram and the waveform of inductor current, diode current and capacitor current for a typical buck converter. Also derive the relation between inductor current and diode current from the waveforms.",
+   "repeat_of": "",
+   "outline": "Read the diode current from the waveform; average it over a period; use the mean inductor current."
+  },
+  {
+   "id": "2020-21-4(c)",
+   "label": "20-21 4(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "dcdc",
+   "subtopic": "Boost",
+   "type": "design",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38",
+   "text": "A boost converter has an input of [unclear: 5 V] and an output of 25 W at 15 V. The minimum inductor current must be no less than 50% of the average. The ripple output must be less than 1 percent. The switching frequency is [unclear: 300 kHz]. (i) Determine the duty ratio. (ii) Minimum inductor value (iii) Minimum capacitor value",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(d)",
+   "label": "20-21 4(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "dcdc",
+   "subtopic": "SEPIC and Cuk",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=40",
+   "text": "Differentiate between SEPIC converter and $\\acute{\\mathrm{C}}$uk converter.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(a)",
+   "label": "20-21 5(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "apps",
+   "subtopic": "Solar PV",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=42",
+   "text": "Briefly explain the types of switch mode DC-DC converters used in a stand-alone solar PV system.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(b)",
+   "label": "20-21 5(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inverters",
+   "subtopic": "Multilevel",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=43",
+   "text": "Draw the circuit of a three-level cascade multi source inverter. Why pattern swapping is important in multi-source inverter circuit?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(c)",
+   "label": "20-21 5(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inverters",
+   "subtopic": "PWM",
+   "type": "design",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=45",
+   "text": "Design a bipolar PWM inverter that will produce a 75-V rms 60-Hz output from a 150 V dc source. The load is a series RL combination with R=12$\\Omega$ and L=60 mH. Select the switching frequency such that the current THD is less than 10%. Assume the impedance at the carrier frequency is entirely inductive.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(d)",
+   "label": "20-21 5(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inverters",
+   "subtopic": "Square-wave",
+   "type": "numerical",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=48",
+   "text": "Determine the voltage THD of a square wave inverter.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(a)",
+   "label": "20-21 6(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inverters",
+   "subtopic": "Filters",
+   "type": "numerical",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=50",
+   "text": "A 10 Ohm resistive load requires a 1000-Hz, 50-V rms sinusoidal voltage. The THD of the load voltage must be no more than 5 percent. An adjustable dc source is available. (i) Design an inverter for this application. (ii) What is maximum voltage across the capacitor?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(b)",
+   "label": "20-21 6(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "acvc",
+   "subtopic": "Cycloconverters",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=54",
+   "text": "What is cyclo-converter? Mention its applications.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(c)",
+   "label": "20-21 6(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "TRIAC and BJT",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=55",
+   "text": "Explain the structure of TRIAC with diagram. Mention the constructional feature of a Power BJT.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(d)",
+   "label": "20-21 6(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "Comparison",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=57",
+   "text": "Compare the following device in terms of power capacity and switching speed: BJT, MOSFET, GTO, IGBT, MCT",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-7(a)",
+   "label": "20-21 TT1 7(a)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "devices",
+   "subtopic": "Diodes",
+   "type": "numerical",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=59",
+   "text": "Explain the reverse recovery time of diode with diagram.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-7(b)",
+   "label": "20-21 TT1 7(b)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=60",
+   "text": "Draw the I-V curve of thyristor. Define Holding current and Latching current for thyristor",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-7(c)",
+   "label": "20-21 TT1 7(c)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=62",
+   "text": "With proper alignment, show the waveshape of output voltage, output current, diode currents and source current for a full wave bridge rectifier with sinusoidal source and R-L load.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-7(d)",
+   "label": "20-21 TT1 7(d)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "power",
+   "subtopic": "Nonlinear loads",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=64",
+   "text": "A sinusoidal voltage source of $v(t) = 240\\sqrt{2}\\sin(2\\pi60t)$ V is applied to a nonlinear load, resulting in a nonsinusoidal current which is expressed in Fourier series form as $i(t) = 8\\sin(2\\pi60t) + 4\\sin(4\\pi60t)$ A. Determine (a) the power absorbed by the load, (b) the power factor of the load, (c) the distortion factor of the load current, (d) the total harmonic distortion of the load current, (e) crest factor of the load current.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-8(a)",
+   "label": "20-21 TT2 8(a)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "dcdc",
+   "subtopic": "Boost",
+   "type": "diagram",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=66",
+   "text": "Draw the circuit diagram, equivalent circuit for switch on and off condition and the waveforms of the inductor current, diode current and load voltage for a typical boost converter.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-8(b)",
+   "label": "20-21 TT2 8(b)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "dcdc",
+   "subtopic": "Buck",
+   "type": "numerical",
+   "marks": 7.5,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=68",
+   "text": "A buck converter has parameters, Vs=50 V, D=0.4, R=20 $\\Omega$, L=400 $\\mu$H and C=100 $\\mu$F. The switching frequency is 20 kHz. a) Determine the output voltage, b) Determine the average, minimum and maximum inductor current c) The output ripple voltage.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-8(c)",
+   "label": "20-21 TT2 8(c)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "dcdc",
+   "subtopic": "Field chopping",
+   "type": "theory",
+   "marks": 2.5,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=69",
+   "text": "Draw the circuit diagram to control the speed of a separately excited dc motor by chopping field current supply. Explain the operation using required equations.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-8(d)",
+   "label": "20-21 TT2 8(d)",
+   "session": "2020-21",
+   "term_test": true,
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=70",
+   "text": "A three phase rectifier is supplied by 480 V rms line to line 60 Hz source. The RL load is 100 $\\Omega$ resistor in series with 15 mH inductor. Determine the rms load current and rms diode currents.",
+   "repeat_of": "",
+   "outline": ""
+  }
+ ],
+ "formulas": [
+  {
+   "topic": "power",
+   "subtopic": "Distortion",
+   "title": "Rms of a distorted wave",
+   "eq": "$I_{rms}^2 = \\sum_n I_n^2$",
+   "used": [
+    {
+     "label": "20-21 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=11"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Distortion",
+   "title": "**Distortion factor**",
+   "eq": "$DF = \\dfrac{I_1}{I_{rms}}$",
+   "used": [
+    {
+     "label": "20-21 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=11"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Distortion",
+   "title": "**Total harmonic distortion**",
+   "eq": "$THD = \\dfrac{\\sqrt{I_{rms}^2 - I_1^2}}{I_1}$",
+   "used": [
+    {
+     "label": "20-21 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=11"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Distortion",
+   "title": "**DF and THD**",
+   "eq": "$DF = \\sqrt{\\dfrac{1}{1 + THD^2}}$",
+   "used": [
+    {
+     "label": "20-21 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=11"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Distortion",
+   "title": "Power factor",
+   "eq": "$pf = \\dfrac{P}{S} = DF\\cos\\theta_1$",
+   "used": [
+    {
+     "label": "20-21 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=11"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Distortion",
+   "title": "One harmonic only",
+   "eq": "$I_n = THD\\,I_1$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=15"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Nonlinear loads",
+   "title": "Crest factor",
+   "eq": "$CF = \\dfrac{I_{peak}}{I_{rms}}$",
+   "used": [
+    {
+     "label": "20-21 7(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=64"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Nonlinear loads",
+   "title": "Power with a sine source",
+   "eq": "$P = V_1I_1\\cos\\theta_1$",
+   "used": [
+    {
+     "label": "20-21 7(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=64"
+    }
+   ]
+  },
+  {
+   "topic": "devices",
+   "subtopic": "Diodes",
+   "title": "Recovery time",
+   "eq": "$t_{rr} = t_a + t_b$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=13"
+    }
+   ]
+  },
+  {
+   "topic": "devices",
+   "subtopic": "Diodes",
+   "title": "Peak reverse current",
+   "eq": "$I_{RR} = t_a\\dfrac{di}{dt}$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=13"
+    }
+   ]
+  },
+  {
+   "topic": "devices",
+   "subtopic": "Diodes",
+   "title": "**Storage charge**",
+   "eq": "$Q_{RR} \\approx \\dfrac{1}{2}\\dfrac{di}{dt}t_{rr}^2$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "devices",
+   "subtopic": "Diodes",
+   "title": "**Peak from the charge**",
+   "eq": "$I_{RR} = \\sqrt{2Q_{RR}\\dfrac{di}{dt}}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "title": "**Two-transistor model**",
+   "eq": "$I_A = \\dfrac{\\alpha_2I_G + I_{CBO1} + I_{CBO2}}{1 - (\\alpha_1 + \\alpha_2)}$",
+   "used": [
+    {
+     "label": "20-21 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=17"
+    }
+   ]
+  },
+  {
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "title": "Turn-on condition",
+   "eq": "$\\alpha_1 + \\alpha_2 \\approx 1$",
+   "used": [
+    {
+     "label": "20-21 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=17"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "Impedance and angle",
+   "eq": "$Z = \\sqrt{R^2 + (\\omega L)^2},\\;\\theta = \\tan^{-1}\\dfrac{\\omega L}{R}$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "**RL load current**",
+   "eq": "$i = \\dfrac{V_m}{Z}\\sin(\\omega t - \\theta) + Ae^{-\\omega t/\\omega\\tau}$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "Constant",
+   "eq": "$A = -\\dfrac{V_m}{Z}\\sin(\\alpha - \\theta)e^{\\alpha/\\omega\\tau}$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "Average, half-wave",
+   "eq": "$I_o = \\dfrac{1}{2\\pi}\\displaystyle\\int_\\alpha^\\beta i\\,d(\\omega t)$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "Rms, half-wave",
+   "eq": "$I_{rms}^2 = \\dfrac{1}{2\\pi}\\displaystyle\\int_\\alpha^\\beta i^2\\,d(\\omega t)$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "Load power",
+   "eq": "$P = I_{rms}^2R$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "Half-wave output",
+   "eq": "$V_o = \\dfrac{V_m}{2\\pi}(\\cos\\alpha - \\cos\\beta)$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "**Controlled bridge, R load**",
+   "eq": "$V_o = \\dfrac{V_m}{\\pi}(1 + \\cos\\alpha)$",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=22"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "Rms, controlled bridge",
+   "eq": "$V_{rms} = \\dfrac{V_m}{\\sqrt2}\\sqrt{1 - \\dfrac{\\alpha}{\\pi} + \\dfrac{\\sin2\\alpha}{2\\pi}}$",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=22"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "Diode bridge",
+   "eq": "$V_o = \\dfrac{2V_m}{\\pi}$",
+   "used": [
+    {
+     "label": "20-21 7(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=62"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "**Diode bridge**",
+   "eq": "$V_o = \\dfrac{3V_m}{\\pi} = 0.955V_m$",
+   "used": [
+    {
+     "label": "20-21 3(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=25"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "**Controlled bridge**",
+   "eq": "$V_o = \\dfrac{3V_m}{\\pi}\\cos\\alpha$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=30"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "Harmonics (controlled)",
+   "eq": "$V_n = \\dfrac{3V_m}{\\pi}\\dfrac{2}{n^2 - 1}\\sqrt{\\cos^2\\alpha + n^2\\sin^2\\alpha}$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=30"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "Harmonics (diode)",
+   "eq": "$V_n = \\dfrac{2V_o}{n^2 - 1}$",
+   "used": [
+    {
+     "label": "20-21 8(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=70"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "Harmonic current",
+   "eq": "$I_n = \\dfrac{V_n}{\\sqrt{R^2 + (n\\omega L)^2}}$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=30"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "Rms load current",
+   "eq": "$I_{rms}^2 = I_o^2 + \\sum_n\\left(\\dfrac{I_n}{\\sqrt2}\\right)^2$",
+   "used": [
+    {
+     "label": "20-21 8(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=70"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "Rms diode current",
+   "eq": "$I_{D,rms} = \\dfrac{I_{rms}}{\\sqrt3}$",
+   "used": [
+    {
+     "label": "20-21 8(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=70"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "Line current",
+   "eq": "$i_a = i_{D1} - i_{D4}$",
+   "used": [
+    {
+     "label": "20-21 3(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=25"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Buck",
+   "title": "**Buck output**",
+   "eq": "$V_o = DV_s$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Buck",
+   "title": "Buck ripple current",
+   "eq": "$\\Delta i_L = \\dfrac{V_o(1 - D)}{Lf}$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Buck",
+   "title": "**Diode current**",
+   "eq": "$I_D = (1 - D)I_L$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Buck",
+   "title": "Switch current",
+   "eq": "$I_S = DI_L$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Buck",
+   "title": "Inductor extremes",
+   "eq": "$I_{max,min} = I_L \\pm \\dfrac{\\Delta i_L}{2}$",
+   "used": [
+    {
+     "label": "20-21 8(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=68"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Buck",
+   "title": "**Buck ripple voltage**",
+   "eq": "$\\dfrac{\\Delta V_o}{V_o} = \\dfrac{1 - D}{8LCf^2}$",
+   "used": [
+    {
+     "label": "20-21 8(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=68"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Boost",
+   "title": "**Boost output**",
+   "eq": "$V_o = \\dfrac{V_s}{1 - D}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Boost",
+   "title": "Boost inductor current",
+   "eq": "$I_L = \\dfrac{V_o^2}{V_sR}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Boost",
+   "title": "Boost ripple current",
+   "eq": "$\\Delta i_L = \\dfrac{V_sD}{Lf}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Boost",
+   "title": "**Boost ripple voltage**",
+   "eq": "$\\dfrac{\\Delta V_o}{V_o} = \\dfrac{D}{RCf}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "SEPIC and Cuk",
+   "title": "SEPIC",
+   "eq": "$V_o = V_s\\dfrac{D}{1 - D}$",
+   "used": [
+    {
+     "label": "20-21 4(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=40"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "SEPIC and Cuk",
+   "title": "Cuk",
+   "eq": "$V_o = -V_s\\dfrac{D}{1 - D}$",
+   "used": [
+    {
+     "label": "20-21 4(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=40"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Field chopping",
+   "title": "Field current",
+   "eq": "$I_f = \\dfrac{\\delta V_s}{R_f}$",
+   "used": [
+    {
+     "label": "20-21 8(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=69"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Field chopping",
+   "title": "Armature equation",
+   "eq": "$V_a = E_b + I_aR_a$",
+   "used": [
+    {
+     "label": "20-21 8(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=69"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Field chopping",
+   "title": "**Speed**",
+   "eq": "$\\omega = \\dfrac{V_a - I_aR_a}{K_vI_f}$",
+   "used": [
+    {
+     "label": "20-21 8(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=69"
+    }
+   ]
+  },
+  {
+   "topic": "supplies",
+   "subtopic": "Linear regulator",
+   "title": "Linear regulator",
+   "eq": "$V_o = V_{ref}\\left(1 + \\dfrac{R_1}{R_2}\\right)$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=34"
+    }
+   ]
+  },
+  {
+   "topic": "supplies",
+   "subtopic": "Linear regulator",
+   "title": "Regulator loss",
+   "eq": "$P_{loss} = (V_s - V_o)I_L,\\;\\eta \\approx \\dfrac{V_o}{V_s}$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=34"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "Square-wave",
+   "title": "Square-wave harmonics",
+   "eq": "$V_n = \\dfrac{4V_{dc}}{n\\pi}$",
+   "used": [
+    {
+     "label": "20-21 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=48"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "Square-wave",
+   "title": "**Square-wave THD**",
+   "eq": "$THD = 48.3~\\%$",
+   "used": [
+    {
+     "label": "20-21 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=48"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "Multilevel",
+   "title": "Cascade output",
+   "eq": "$v_o = v_1 + v_2 + v_3$",
+   "used": [
+    {
+     "label": "20-21 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=43"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "PWM",
+   "title": "Modulation ratios",
+   "eq": "$m_a = \\dfrac{V_{sine}}{V_{tri}},\\;m_f = \\dfrac{f_{carrier}}{f}$",
+   "used": [
+    {
+     "label": "20-21 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "PWM",
+   "title": "**PWM fundamental**",
+   "eq": "$V_1 = m_aV_{dc}$",
+   "used": [
+    {
+     "label": "20-21 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "PWM",
+   "title": "Harmonic current at the carrier",
+   "eq": "$I_n = \\dfrac{V_n}{n\\omega L}$",
+   "used": [
+    {
+     "label": "20-21 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "Filters",
+   "title": "Resonance",
+   "eq": "$\\omega_0 = \\dfrac{1}{\\sqrt{LC}}$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=50"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "Filters",
+   "title": "**Series filter reactance**",
+   "eq": "$X_n = \\omega_0L\\left(n - \\dfrac{1}{n}\\right)$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=50"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "Filters",
+   "title": "Load harmonic",
+   "eq": "$\\dfrac{V_{o,n}}{V_1} = \\dfrac{1}{n}\\dfrac{R}{\\sqrt{R^2 + X_n^2}}$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=50"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "Filters",
+   "title": "**Capacitor peak**",
+   "eq": "$V_{C,max} \\approx \\dfrac{I_1}{\\omega_0C}$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=50"
+    }
+   ]
+  }
+ ]
+}

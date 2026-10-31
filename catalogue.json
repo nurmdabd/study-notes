@@ -487,6 +487,83 @@
       "printable": true
     },
     {
+      "id": "EEE329-question-analysis",
+      "subject": "EEE329",
+      "session": "All papers",
+      "document": "Question analysis",
+      "detail": "Topics, marks and formulas across the papers",
+      "pages": 18,
+      "file": "EEE329-COM/COM-question-analysis.pdf",
+      "page": "analysis.html?subject=EEE329",
+      "printable": true
+    },
+    {
+      "id": "EEE337-question-analysis",
+      "subject": "EEE337",
+      "session": "All papers",
+      "document": "Question analysis",
+      "detail": "Topics, marks and formulas across the papers",
+      "pages": 20,
+      "file": "EEE337-PSII/PSII-question-analysis.pdf",
+      "page": "analysis.html?subject=EEE337",
+      "printable": true
+    },
+    {
+      "id": "EEE339-question-analysis",
+      "subject": "EEE339",
+      "session": "All papers",
+      "document": "Question analysis",
+      "detail": "Topics, marks and formulas across the papers",
+      "pages": 14,
+      "file": "EEE339-PE/PE-question-analysis.pdf",
+      "page": "analysis.html?subject=EEE339",
+      "printable": true
+    },
+    {
+      "id": "EEE421-question-analysis",
+      "subject": "EEE421",
+      "session": "All papers",
+      "document": "Question analysis",
+      "detail": "Topics, marks and formulas across the papers",
+      "pages": 14,
+      "file": "EEE421-SSD/SSD-question-analysis.pdf",
+      "page": "analysis.html?subject=EEE421",
+      "printable": true
+    },
+    {
+      "id": "EEE443-question-analysis",
+      "subject": "EEE443",
+      "session": "All papers",
+      "document": "Question analysis",
+      "detail": "Topics, marks and formulas across the papers",
+      "pages": 14,
+      "file": "EEE443-PPE/PPE-question-analysis.pdf",
+      "page": "analysis.html?subject=EEE443",
+      "printable": true
+    },
+    {
+      "id": "EEE455-question-analysis",
+      "subject": "EEE455",
+      "session": "All papers",
+      "document": "Question analysis",
+      "detail": "Topics, marks and formulas across the papers",
+      "pages": 20,
+      "file": "EEE455-VLSI/VLSI-question-analysis.pdf",
+      "page": "analysis.html?subject=EEE455",
+      "printable": true
+    },
+    {
+      "id": "EEE459-question-analysis",
+      "subject": "EEE459",
+      "session": "All papers",
+      "document": "Question analysis",
+      "detail": "Topics, marks and formulas across the papers",
+      "pages": 14,
+      "file": "EEE459-Semi/Semi-question-analysis.pdf",
+      "page": "analysis.html?subject=EEE459",
+      "printable": true
+    },
+    {
       "id": "EEE475-question-analysis",
       "subject": "EEE475",
       "session": "All papers",

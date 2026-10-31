@@ -1,0 +1,945 @@
+{
+ "subject": "EEE459",
+ "title": "Compound Semiconductor and Hetero-Junction Devices",
+ "sessions": [
+  "2020-21"
+ ],
+ "topics": [
+  {
+   "id": "bands",
+   "title": "Band structure and materials",
+   "book": "Neamen Ch. 3; Sze Ch. 1",
+   "tier": "Must know"
+  },
+  {
+   "id": "hifield",
+   "title": "High-field transport",
+   "book": "Sze Ch. 1, 10",
+   "tier": "Must know"
+  },
+  {
+   "id": "alloys",
+   "title": "Alloys and strain",
+   "book": "Neamen Ch. 14",
+   "tier": "Must know"
+  },
+  {
+   "id": "pn",
+   "title": "PN junction",
+   "book": "Neamen Ch. 7",
+   "tier": "Must know"
+  },
+  {
+   "id": "ms",
+   "title": "Metal-semiconductor contacts",
+   "book": "Neamen Ch. 9; Sze Ch. 3",
+   "tier": "Must know"
+  },
+  {
+   "id": "hetero",
+   "title": "Heterojunctions",
+   "book": "Neamen Ch. 9",
+   "tier": "Must know"
+  },
+  {
+   "id": "bjt",
+   "title": "Bipolar transistors",
+   "book": "Neamen Ch. 12; Sze Ch. 5",
+   "tier": "Must know"
+  },
+  {
+   "id": "jfet",
+   "title": "JFETs",
+   "book": "Neamen Ch. 13; Sze Ch. 7",
+   "tier": "Must know"
+  }
+ ],
+ "questions": [
+  {
+   "id": "2020-21-1(a)",
+   "label": "20-21 1(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hifield",
+   "subtopic": "Mobility",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=11",
+   "text": "Between Si and GaAs, which has higher electron mobility and why?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(b)",
+   "label": "20-21 1(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hifield",
+   "subtopic": "Gunn effect",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=15",
+   "text": "Discuss Velocity saturation and Gunn effect .",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(c)",
+   "label": "20-21 1(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "bands",
+   "subtopic": "Hole bands",
+   "type": "derivation",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=19",
+   "text": "Prove that along the [100] and [111] direction in k-space, for Si, the variation of electron energy with respect to wave number is higher for light holes than for heavy holes.",
+   "repeat_of": "",
+   "outline": "Differentiate the parabolic band; compare slopes; put in the effective masses."
+  },
+  {
+   "id": "2020-21-1(d)",
+   "label": "20-21 1(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hetero",
+   "subtopic": "Band diagrams",
+   "type": "derivation",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=23",
+   "text": "For a $GaAs - Al_xGa_{1-x}As$ heterojunction, determine the following: (i) Energy-Band diagram: Case-1: Before contact, Case-2: After contact (ii) Show that the built-in potential (using hole concentration) $\\displaystyle eV_{bi} = -\\Delta E_v + kT\\ln\\left(\\frac{P_P\\,N_{VN}}{P_N\\,N_{VP}}\\right)$. Given, GaAs is doped P type, $Al_xGa_{1-x}As$ is doped $N^+$ type. Assume: $x = 0.25$ & $\\Delta E_c = \\frac{1}{2}\\Delta E_g$ $P_p$ = hole concentration in P type region, $P_N$ = hole concentration in N type region, $N_{VN}$ and $N_{VP}$ are density of states of electron and hole respectively.",
+   "repeat_of": "",
+   "outline": "Write the hole concentrations; solve for the Fermi levels; subtract; use the valence-band offset."
+  },
+  {
+   "id": "2020-21-2(a)",
+   "label": "20-21 2(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "bands",
+   "subtopic": "Materials",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=29",
+   "text": "Which semiconductors are most extensively used in near infra-red region? Explain the reasons behind it.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(b)",
+   "label": "20-21 2(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "alloys",
+   "subtopic": "Lattice matching",
+   "type": "theory",
+   "marks": 9.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=32",
+   "text": "Why is lattice matching of semiconductor important for hetero-structured devices? Discuss the effect of strain and critical thickness in epitaxial growth.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(c)",
+   "label": "20-21 2(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "alloys",
+   "subtopic": "Isoelectronic traps",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=35",
+   "text": "Discuss the effect of isoelectric trap in the ternary compound semiconductor $GaAs_{1-x}P_x$.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(d)",
+   "label": "20-21 2(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "alloys",
+   "subtopic": "Quaternary alloys",
+   "type": "numerical",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=37",
+   "text": "Fig. 1 shows the Bandgap Vs. lattice constant for different binary compounds. Assume that a quaternary compound $In_xGa_{1-x}As_ySb_{1-y}$ is grown on InP substrate. Find the composition if the bandgap is 1 eV and lattice parameter is 5.93 Å.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(a)",
+   "label": "20-21 3(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "ms",
+   "subtopic": "Schottky junction",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=42",
+   "text": "Draw the ideal energy band diagram of a metal semiconductor junction under: (i) Reverse bias condition (ii) Forward bias condition",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(b)",
+   "label": "20-21 3(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "bands",
+   "subtopic": "Density of states",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45",
+   "text": "Explain how the density of states changes qualitatively as the dimensionality reduces from $3D \\rightarrow 2D \\rightarrow 1D$. Sketch $D(E)$ vs $E$ for each case.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(c)",
+   "label": "20-21 3(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "ms",
+   "subtopic": "Schottky junction",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49",
+   "text": "Consider a contact between tungsten and n-type silicon doped to $N_d = 1\\times10^{16}~\\text{cm}^{-3}$ at $T = 300~\\text{K}$. Determine the (i) theoretical barrier height (ii) built-in potential barrier (iii) maximum electric field in the metal-semiconductor diode for zero applied bias, and (iv) the junction capacitance. Given that, the metal work function for tungsten (W) is 4.55 V and the electron affinity for silicon is 4.01 V. Assume $N_c = 2.8\\times10^{19}~\\text{cm}^{-3}$.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(d)",
+   "label": "20-21 3(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "ms",
+   "subtopic": "Barrier lowering",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=53",
+   "text": "Consider a gallium arsenide metal-semiconductor contact in which the electric field in the semiconductor is assumed to be $E = 6.8\\times10^{4}~\\text{V cm}^{-1}$. Calculate the Schottky barrier lowering (due to image force induced lowering) and the position of the maximum barrier height.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(a)",
+   "label": "20-21 4(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hetero",
+   "subtopic": "Fields and potentials",
+   "type": "derivation",
+   "marks": 12.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57",
+   "text": "A narrow bandgap N-type and a wide bandgap P-type material are used to form a heterojunction. If they are straddling type, then draw the energy band diagram of the heterojunction before contact and after contact at thermal equilibrium. With necessary assumption, derive expression for electric field and electrostatic potential in both regions.",
+   "repeat_of": "",
+   "outline": "Integrate Poisson's equation on each side; apply D continuity; integrate again for the potential."
+  },
+  {
+   "id": "2020-21-4(b)",
+   "label": "20-21 4(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "ms",
+   "subtopic": "Barrier lowering",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=63",
+   "text": "Discuss the following non-ideal effects on barrier height of a metal-semiconductor heterojunction: (i) Image-force-induced lowering (ii) Interface states",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(c)",
+   "label": "20-21 4(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "pn",
+   "subtopic": "Graded junction",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=67",
+   "text": "Describe how a linearly graded junction is formed.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(a)",
+   "label": "20-21 5(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "jfet",
+   "subtopic": "Channel profiles",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=71",
+   "text": "Draw the channel space charge region profiles of a single gate n-channel JFET for the following operating regions: (where $V_p$, $V_g$, and $V_d$ are pinch-off, gate, and drain voltage respectively) (i) $V_g > V_p$ and $V_d < V_{d,sat}$ (ii) $V_g > V_p$ and $V_d = V_{d,sat}$ (iii) $V_g > V_p$ and $V_d > V_{d,sat}$",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(b)",
+   "label": "20-21 5(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "jfet",
+   "subtopic": "Pinch-off",
+   "type": "derivation",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=74",
+   "text": "Derive the formula of internal pinch-off voltage in an n-channel JFET.",
+   "repeat_of": "",
+   "outline": "Integrate Poisson's equation in the depletion layer; set the depletion width equal to the channel thickness."
+  },
+  {
+   "id": "2020-21-5(c)",
+   "label": "20-21 5(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "jfet",
+   "subtopic": "Pinch-off",
+   "type": "numerical",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=77",
+   "text": "Consider a GaAs n-channel pn JFET at $T = 300~\\text{K}$ with $N_a = 1\\times10^{18}~\\text{cm}^{-3}$, $N_d = 3\\times10^{15}~\\text{cm}^{-3}$, $\\epsilon_s = 13.1$, and $a = 0.70~\\mu\\text{m}$. Determine the forward-bias gate voltage required to open a channel region that is $0.10~\\mu\\text{m}$ thick with zero drain voltage.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(d)",
+   "label": "20-21 5(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "ms",
+   "subtopic": "Ohmic contacts",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=80",
+   "text": "Sketch the ideal energy band diagram of a metal semiconductor junction in which $\\Phi_m < \\Phi_s$. Explain why this is an ohmic contact.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(a)",
+   "label": "20-21 6(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "bjt",
+   "subtopic": "Ebers-Moll",
+   "type": "derivation",
+   "marks": 9.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84",
+   "text": "Draw the equivalent circuit for basic Ebers-Moll model as used in BJT. Also derive the expression of $V_{CE}(sat)$ from this model.",
+   "repeat_of": "",
+   "outline": "Write the terminal currents; solve for the diode currents; subtract the junction voltages."
+  },
+  {
+   "id": "2020-21-6(b)",
+   "label": "20-21 6(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "bjt",
+   "subtopic": "High-level injection",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=89",
+   "text": "Explain high level injection and current crowding effects in a BJT with necessary figures. How can the problem of current crowding be solved?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(c)",
+   "label": "20-21 6(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "jfet",
+   "subtopic": "Transconductance",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=93",
+   "text": "Consider a silicon n-channel JFET at $T = 300~\\text{K}$ with the following parameters: $N_a = 1\\times10^{18}~\\text{cm}^{-3}$, $N_d = 1\\times10^{16}~\\text{cm}^{-3}$, $a = 0.75~\\mu\\text{m}$, $L = 10~\\mu\\text{m}$, $W = 30~\\mu\\text{m}$, and $\\mu_n = 1000~\\text{cm}^2/(\\text{V s})$ (i) Calculate the maximum current in an n-channel JFET. (ii) Determine the maximum transconductance of an n-channel depletion mode JFET biased in the saturation region. $I_{P1} = 0.522~\\text{mA}$, $V_{bi} = 0.814~\\text{V}$, and $V_{po} = 4.35~\\text{V}$.",
+   "repeat_of": "",
+   "outline": ""
+  }
+ ],
+ "formulas": [
+  {
+   "topic": "bands",
+   "subtopic": "Hole bands",
+   "title": "**Parabolic band**",
+   "eq": "$E = \\dfrac{\\hbar^2k^2}{2m^*}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "bands",
+   "subtopic": "Hole bands",
+   "title": "Slope and curvature",
+   "eq": "$\\dfrac{dE}{dk} = \\dfrac{\\hbar^2k}{m^*},\\; \\dfrac{d^2E}{dk^2} = \\dfrac{\\hbar^2}{m^*}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "bands",
+   "subtopic": "Hole bands",
+   "title": "Si hole masses",
+   "eq": "$m_{hh,lh}[100] = \\dfrac{m_0}{\\gamma_1 \\mp 2\\gamma_2},\\; m_{hh,lh}[111] = \\dfrac{m_0}{\\gamma_1 \\mp 2\\gamma_3}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "bands",
+   "subtopic": "Density of states",
+   "title": "**Density of states, 3D**",
+   "eq": "$g_{3D}(E) = \\dfrac{4\\pi(2m^*)^{3/2}}{h^3}\\sqrt{E - E_c}$",
+   "used": [
+    {
+     "label": "20-21 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "bands",
+   "subtopic": "Density of states",
+   "title": "Density of states, 2D",
+   "eq": "$g_{2D}(E) = \\dfrac{m^*}{\\pi\\hbar^2}$ per subband",
+   "used": [
+    {
+     "label": "20-21 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "bands",
+   "subtopic": "Density of states",
+   "title": "Density of states, 1D",
+   "eq": "$g_{1D}(E) \\propto \\dfrac{1}{\\sqrt{E - E_n}}$",
+   "used": [
+    {
+     "label": "20-21 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "bands",
+   "subtopic": "Materials",
+   "title": "**Emission wavelength**",
+   "eq": "$\\lambda~(\\mu\\text{m}) = \\dfrac{1.24}{E_g~(\\text{eV})}$",
+   "used": [
+    {
+     "label": "20-21 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=29"
+    }
+   ]
+  },
+  {
+   "topic": "hifield",
+   "subtopic": "Mobility",
+   "title": "**Mobility**",
+   "eq": "$\\mu = \\dfrac{e\\,\\tau}{m^*}$",
+   "used": [
+    {
+     "label": "20-21 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=11"
+    }
+   ]
+  },
+  {
+   "topic": "hifield",
+   "subtopic": "Gunn effect",
+   "title": "Drift velocity, low field",
+   "eq": "$v_d = \\mu E$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=15"
+    }
+   ]
+  },
+  {
+   "topic": "hifield",
+   "subtopic": "Gunn effect",
+   "title": "Saturation velocity",
+   "eq": "$v_d \\to v_{sat} \\approx 10^{7}~\\text{cm/s}$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=15"
+    }
+   ]
+  },
+  {
+   "topic": "hifield",
+   "subtopic": "Gunn effect",
+   "title": "Gunn oscillation",
+   "eq": "$f = \\dfrac{v_d}{L}$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=15"
+    }
+   ]
+  },
+  {
+   "topic": "alloys",
+   "subtopic": "Quaternary alloys",
+   "title": "**Vegard's law, ternary**",
+   "eq": "$a(A_xB_{1-x}C) = x\\,a_{AC} + (1 - x)\\,a_{BC}$",
+   "used": [
+    {
+     "label": "20-21 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "alloys",
+   "subtopic": "Quaternary alloys",
+   "title": "**Quaternary $In_xGa_{1-x}As_ySb_{1-y}$**",
+   "eq": "$P = xy\\,P_{InAs} + x(1-y)\\,P_{InSb} + (1-x)y\\,P_{GaAs} + (1-x)(1-y)\\,P_{GaSb}$",
+   "used": [
+    {
+     "label": "20-21 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "alloys",
+   "subtopic": "Lattice matching",
+   "title": "**Lattice misfit**",
+   "eq": "$f = \\dfrac{a_{layer} - a_{sub}}{a_{sub}}$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=32"
+    }
+   ]
+  },
+  {
+   "topic": "alloys",
+   "subtopic": "Lattice matching",
+   "title": "Critical thickness, estimate",
+   "eq": "$h_c \\sim \\dfrac{a_{sub}}{2\\lvert f\\rvert}$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=32"
+    }
+   ]
+  },
+  {
+   "topic": "pn",
+   "subtopic": "Graded junction",
+   "title": "Net doping",
+   "eq": "$N_d - N_a = a\\,x$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=67"
+    }
+   ]
+  },
+  {
+   "topic": "pn",
+   "subtopic": "Graded junction",
+   "title": "**Depletion width**",
+   "eq": "$W = \\left[\\dfrac{12\\epsilon_s(V_{bi} + V_R)}{ea}\\right]^{1/3}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=67"
+    }
+   ]
+  },
+  {
+   "topic": "pn",
+   "subtopic": "Graded junction",
+   "title": "Junction capacitance",
+   "eq": "$C' = \\left[\\dfrac{ea\\epsilon_s^2}{12(V_{bi} + V_R)}\\right]^{1/3}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=67"
+    }
+   ]
+  },
+  {
+   "topic": "ms",
+   "subtopic": "Schottky junction",
+   "title": "**Barrier height (ideal)**",
+   "eq": "$\\phi_{B0} = \\phi_m - \\chi$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+    }
+   ]
+  },
+  {
+   "topic": "ms",
+   "subtopic": "Schottky junction",
+   "title": "**Built-in potential**",
+   "eq": "$V_{bi} = \\phi_{B0} - \\phi_n,\\; \\phi_n = \\dfrac{kT}{e}\\ln\\dfrac{N_c}{N_d}$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+    }
+   ]
+  },
+  {
+   "topic": "ms",
+   "subtopic": "Schottky junction",
+   "title": "Depletion width",
+   "eq": "$x_n = \\left[\\dfrac{2\\epsilon_s(V_{bi} + V_R)}{eN_d}\\right]^{1/2}$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+    }
+   ]
+  },
+  {
+   "topic": "ms",
+   "subtopic": "Schottky junction",
+   "title": "**Maximum field**",
+   "eq": "$E_{max} = \\dfrac{eN_dx_n}{\\epsilon_s} = \\dfrac{2(V_{bi} + V_R)}{x_n}$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+    }
+   ]
+  },
+  {
+   "topic": "ms",
+   "subtopic": "Schottky junction",
+   "title": "Junction capacitance",
+   "eq": "$C' = \\dfrac{\\epsilon_s}{x_n} = \\left[\\dfrac{e\\epsilon_sN_d}{2(V_{bi} + V_R)}\\right]^{1/2}$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+    }
+   ]
+  },
+  {
+   "topic": "ms",
+   "subtopic": "Barrier lowering",
+   "title": "**Image-force lowering**",
+   "eq": "$\\Delta\\phi = \\sqrt{\\dfrac{eE}{4\\pi\\epsilon_s}}$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=53"
+    }
+   ]
+  },
+  {
+   "topic": "ms",
+   "subtopic": "Barrier lowering",
+   "title": "Position of the peak",
+   "eq": "$x_m = \\sqrt{\\dfrac{e}{16\\pi\\epsilon_sE}}$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=53"
+    }
+   ]
+  },
+  {
+   "topic": "ms",
+   "subtopic": "Barrier lowering",
+   "title": "Barrier with interface states",
+   "eq": "$\\phi_{B0} = \\gamma(\\phi_m - \\chi) + (1 - \\gamma)\\left(\\dfrac{E_g}{e} - \\phi_0\\right)$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=63"
+    }
+   ]
+  },
+  {
+   "topic": "ms",
+   "subtopic": "Ohmic contacts",
+   "title": "Ohmic contact (ideal)",
+   "eq": "$\\phi_m < \\phi_s$ (n-type), $\\phi_m > \\phi_s$ (p-type)",
+   "used": [
+    {
+     "label": "20-21 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=80"
+    }
+   ]
+  },
+  {
+   "topic": "hetero",
+   "subtopic": "Band diagrams",
+   "title": "AlGaAs band gap",
+   "eq": "$E_g(Al_xGa_{1-x}As) = 1.424 + 1.247x~\\text{eV}$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=23"
+    }
+   ]
+  },
+  {
+   "topic": "hetero",
+   "subtopic": "Band diagrams",
+   "title": "**Band offsets (Anderson)**",
+   "eq": "$\\Delta E_c = e(\\chi_n - \\chi_w),\\; \\Delta E_g = \\Delta E_c + \\Delta E_v$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=23"
+    }
+   ]
+  },
+  {
+   "topic": "hetero",
+   "subtopic": "Band diagrams",
+   "title": "Hole concentration",
+   "eq": "$p = N_v\\exp\\left[-\\dfrac{E_F - E_v}{kT}\\right]$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=23"
+    }
+   ]
+  },
+  {
+   "topic": "hetero",
+   "subtopic": "Band diagrams",
+   "title": "**Built-in potential, pN**",
+   "eq": "$eV_{bi} = -\\Delta E_v + kT\\ln\\left(\\dfrac{p_P\\,N_{vN}}{p_N\\,N_{vP}}\\right)$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=23"
+    }
+   ]
+  },
+  {
+   "topic": "hetero",
+   "subtopic": "Fields and potentials",
+   "title": "Field, N side",
+   "eq": "$E_1(x) = \\dfrac{eN_{d1}}{\\epsilon_1}(x + x_n)$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+    }
+   ]
+  },
+  {
+   "topic": "hetero",
+   "subtopic": "Fields and potentials",
+   "title": "Field, P side",
+   "eq": "$E_2(x) = \\dfrac{eN_{a2}}{\\epsilon_2}(x_p - x)$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+    }
+   ]
+  },
+  {
+   "topic": "hetero",
+   "subtopic": "Fields and potentials",
+   "title": "**Interface condition**",
+   "eq": "$\\epsilon_1E_1(0) = \\epsilon_2E_2(0) \\Rightarrow N_{d1}x_n = N_{a2}x_p$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+    }
+   ]
+  },
+  {
+   "topic": "hetero",
+   "subtopic": "Fields and potentials",
+   "title": "Potential split",
+   "eq": "$V_{bi1} = \\dfrac{eN_{d1}x_n^2}{2\\epsilon_1},\\; V_{bi2} = \\dfrac{eN_{a2}x_p^2}{2\\epsilon_2},\\; V_{bi} = V_{bi1} + V_{bi2}$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+    }
+   ]
+  },
+  {
+   "topic": "hetero",
+   "subtopic": "Fields and potentials",
+   "title": "Depletion width, N side",
+   "eq": "$x_n = \\left[\\dfrac{2\\epsilon_1\\epsilon_2N_{a2}V_{bi}}{eN_{d1}(\\epsilon_1N_{d1} + \\epsilon_2N_{a2})}\\right]^{1/2}$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+    }
+   ]
+  },
+  {
+   "topic": "bjt",
+   "subtopic": "Ebers-Moll",
+   "title": "**Ebers--Moll currents**",
+   "eq": "$I_C = \\alpha_FI_F - I_R,\\; I_E = I_F - \\alpha_RI_R,\\; I_B = I_E - I_C$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84"
+    }
+   ]
+  },
+  {
+   "topic": "bjt",
+   "subtopic": "Ebers-Moll",
+   "title": "Diode currents",
+   "eq": "$I_F = I_{ES}\\left[e^{V_{BE}/V_t} - 1\\right],\\; I_R = I_{CS}\\left[e^{V_{BC}/V_t} - 1\\right]$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84"
+    }
+   ]
+  },
+  {
+   "topic": "bjt",
+   "subtopic": "Ebers-Moll",
+   "title": "Reciprocity",
+   "eq": "$\\alpha_FI_{ES} = \\alpha_RI_{CS}$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84"
+    }
+   ]
+  },
+  {
+   "topic": "bjt",
+   "subtopic": "Ebers-Moll",
+   "title": "**Saturation voltage**",
+   "eq": "$V_{CE}(sat) = V_t\\ln\\left[\\dfrac{I_C(1 - \\alpha_R) + I_B}{\\alpha_FI_B - (1 - \\alpha_F)I_C}\\cdot\\dfrac{\\alpha_F}{\\alpha_R}\\right]$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84"
+    }
+   ]
+  },
+  {
+   "topic": "jfet",
+   "subtopic": "Pinch-off",
+   "title": "pn built-in potential",
+   "eq": "$V_{bi} = V_t\\ln\\dfrac{N_aN_d}{n_i^2}$",
+   "used": [
+    {
+     "label": "20-21 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=77"
+    }
+   ]
+  },
+  {
+   "topic": "jfet",
+   "subtopic": "Pinch-off",
+   "title": "**Space-charge width**",
+   "eq": "$h = \\left[\\dfrac{2\\epsilon_s(V_{bi} - V_{GS})}{eN_d}\\right]^{1/2}$",
+   "used": [
+    {
+     "label": "20-21 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=74"
+    }
+   ]
+  },
+  {
+   "topic": "jfet",
+   "subtopic": "Pinch-off",
+   "title": "**Internal pinch-off voltage**",
+   "eq": "$V_{p0} = \\dfrac{ea^2N_d}{2\\epsilon_s}$",
+   "used": [
+    {
+     "label": "20-21 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=74"
+    }
+   ]
+  },
+  {
+   "topic": "jfet",
+   "subtopic": "Pinch-off",
+   "title": "Pinch-off voltage",
+   "eq": "$V_p = V_{bi} - V_{p0}$",
+   "used": [
+    {
+     "label": "20-21 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=74"
+    }
+   ]
+  },
+  {
+   "topic": "jfet",
+   "subtopic": "Channel profiles",
+   "title": "Saturation drain voltage",
+   "eq": "$V_{DS}(sat) = V_{p0} - (V_{bi} - V_{GS})$",
+   "used": [
+    {
+     "label": "20-21 5(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=71"
+    }
+   ]
+  },
+  {
+   "topic": "jfet",
+   "subtopic": "Transconductance",
+   "title": "**Pinch-off current**",
+   "eq": "$I_{P1} = \\dfrac{\\mu_n(eN_d)^2Wa^3}{6\\epsilon_sL}$",
+   "used": [
+    {
+     "label": "20-21 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=93"
+    }
+   ]
+  },
+  {
+   "topic": "jfet",
+   "subtopic": "Transconductance",
+   "title": "Saturation current",
+   "eq": "$I_{D1}(sat) = I_{P1}\\left[1 - 3\\left(\\dfrac{V_{bi} - V_{GS}}{V_{p0}}\\right)\\left(1 - \\dfrac{2}{3}\\sqrt{\\dfrac{V_{bi} - V_{GS}}{V_{p0}}}\\right)\\right]$",
+   "used": [
+    {
+     "label": "20-21 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=93"
+    }
+   ]
+  },
+  {
+   "topic": "jfet",
+   "subtopic": "Transconductance",
+   "title": "**Transconductance**",
+   "eq": "$g_{ms} = \\dfrac{3I_{P1}}{V_{p0}}\\left(1 - \\sqrt{\\dfrac{V_{bi} - V_{GS}}{V_{p0}}}\\right)$",
+   "used": [
+    {
+     "label": "20-21 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=93"
+    }
+   ]
+  }
+ ]
+}

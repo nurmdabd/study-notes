@@ -1,0 +1,2038 @@
+{
+ "subject": "EEE337",
+ "title": "Power System II",
+ "sessions": [
+  "2020-21",
+  "2021-22"
+ ],
+ "topics": [
+  {
+   "id": "inductance",
+   "title": "Line inductance",
+   "book": "Mehta; Grainger and Stevenson",
+   "tier": "Must know"
+  },
+  {
+   "id": "capacitance",
+   "title": "Line capacitance",
+   "book": "Mehta; Grainger and Stevenson",
+   "tier": "Must know"
+  },
+  {
+   "id": "corona",
+   "title": "Corona",
+   "book": "Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "insulators",
+   "title": "Overhead insulators",
+   "book": "Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "mechanical",
+   "title": "Mechanical design",
+   "book": "Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "cables",
+   "title": "Underground cables",
+   "book": "Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "faults",
+   "title": "Cable faults",
+   "book": "Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "stability",
+   "title": "Power system stability",
+   "book": "Grainger and Stevenson",
+   "tier": "Must know"
+  },
+  {
+   "id": "hvdc",
+   "title": "HVDC and FACTS",
+   "book": "Hingorani and Gyugyi",
+   "tier": "Must know"
+  }
+ ],
+ "questions": [
+  {
+   "id": "2020-21-1(a)",
+   "label": "20-21 1(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inductance",
+   "subtopic": "Basics",
+   "type": "theory",
+   "marks": 1.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=10",
+   "text": "Define Inductance with the required expression.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(b)",
+   "label": "20-21 1(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "type": "numerical",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=12",
+   "text": "Each conductor of the bundled-conductor line shown in Fig.1 is ACSR, 1,272,000-cmil Pheasant. Find the inductive reactance in ohms per km (and per mile) per phase for d=45cm.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(c)",
+   "label": "20-21 1(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "type": "derivation",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=15",
+   "text": "Derive the expression of Capacitance of a three phase line with unsymmetrical spacing.",
+   "repeat_of": "",
+   "outline": "Write V_ab in each section; average over the cycle; add V_ab and V_ac; use the phase voltage."
+  },
+  {
+   "id": "2020-21-1(d)",
+   "label": "20-21 1(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inductance",
+   "subtopic": "Mutual inductance",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=18",
+   "text": "A single phase 50Hz power line is supported on a horizontal cross-arm. The spacing between conductors is 2.5m. A telephone line is also supported on a horizontal cross-arm in the same horizontal plane as the power line. The conductors of the telephone line are of solid copper spaced 0.6m between centers. The distance between the nearest conductors of the two lines is 20m. Find the mutual inductance between the circuits and the voltage per km induced in the telephone line for 150A current flowing over the power line.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(a)",
+   "label": "20-21 2(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "corona",
+   "subtopic": "Corona effect",
+   "type": "theory",
+   "marks": 1.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=22",
+   "text": "Define Corona Effect.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(b)",
+   "label": "20-21 2(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inductance",
+   "subtopic": "Transposition",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=23",
+   "text": "Define Transposed Transmission line. Explain the reason behind Transpose.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(c)",
+   "label": "20-21 2(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inductance",
+   "subtopic": "Composite conductors",
+   "type": "derivation",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=24",
+   "text": "Derive the expression of Inductance of composite conductor lines.",
+   "repeat_of": "",
+   "outline": "Write a strand's flux linkage; combine the logarithms; average the strands; read off GMD and GMR."
+  },
+  {
+   "id": "2020-21-2(d)",
+   "label": "20-21 2(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=27",
+   "text": "A 33 kV single core cable has a conductor diameter of 1 cm and a sheath of inside diameter 4 cm. Find the maximum and minimum stress in the insulation.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(a)",
+   "label": "20-21 3(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "inductance",
+   "subtopic": "Skin effect",
+   "type": "theory",
+   "marks": 1.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=31",
+   "text": "Define Skin Effect.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(b)",
+   "label": "20-21 3(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hvdc",
+   "subtopic": "FACTS",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=32",
+   "text": "Describe different FACTS devices and applications.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(c)",
+   "label": "20-21 3(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "type": "derivation",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=34",
+   "text": "Derive the expression of dielectric stress in a single core cable.",
+   "repeat_of": "",
+   "outline": "Gauss's law gives the flux density; integrate the stress for V; remove Q; read the maximum and minimum."
+  },
+  {
+   "id": "2020-21-3(d)",
+   "label": "20-21 3(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Capacitance",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=36",
+   "text": "The capacitances of a 3-phase belted cable are 12·6 μF between the three cores bunched together and the lead sheath and 7·4 μF between one core and the other two connected to sheath. Find the charging current drawn by the cable when connected to 66 kV, 50 Hz supply.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(a)",
+   "label": "20-21 4(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "corona",
+   "subtopic": "Critical disruptive voltage",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=40",
+   "text": "Define critical disruptive voltage. Write down its significance.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(b)",
+   "label": "20-21 4(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "type": "theory",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=41",
+   "text": "What is String Efficiency? Discuss the methods of improving String Efficiency.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(c)",
+   "label": "20-21 4(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44",
+   "text": "The maximum and minimum stresses in the dielectric of a single core cable are 40 kV/cm (r.m.s.) and 10 kV/cm (r.m.s.) respectively. If the conductor diameter is 2 cm, find : (i) thickness of insulation (ii) operating voltage",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(a)",
+   "label": "20-21 5(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "insulators",
+   "subtopic": "Failure",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=47",
+   "text": "What are the causes of insulation failure?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(b)",
+   "label": "20-21 5(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "faults",
+   "subtopic": "Loop tests",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=48",
+   "text": "Varley loop test is performed to locate an earth fault on a 20 km long cable. The resistance per km of the single conductor is 20 ohm. The loop is completed with a similar healthy conductor. At balance, the variable resistance connected to the faulty conductor is 200 ohm. The fixed resistors have equal values. Calculate the distance of the fault from the test end.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(c)",
+   "label": "20-21 5(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "mechanical",
+   "subtopic": "Sag",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=51",
+   "text": "A 132 KV transmission line has the following data: Weight of the conductor= 680 kg/km, Length of span= 260 m, Ultimate strength= 3100 kg, Safety Factor= 2. Calculate the height above ground at which the conductor should be supported. Ground clearance required is 10 meters.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(a)",
+   "label": "20-21 6(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "stability",
+   "subtopic": "Equal area criterion",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54",
+   "text": "Define Power Angle. Briefly explain Equal Area Criterion.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(b)",
+   "label": "20-21 6(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "stability",
+   "subtopic": "Equal area criterion",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=57",
+   "text": "Explain what happens for sudden increase in mechanical input to generator using Pe-δ diagram.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(c)",
+   "label": "20-21 6(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "stability",
+   "subtopic": "Transient EMF",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=59",
+   "text": "The generator of Fig. 2 is delivering 1.0 pu power to the infinite bus (|V|=1.0 pu), with the generator terminal voltage (|Vt|=1.0 pu). Calculate the generator emf behind transient reactance. Find the maximum power that can be transferred under the following conditions: (a) System healthy (b) One line shorted (3 phase) in the middle.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-1(a)",
+   "label": "21-22 1(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "corona",
+   "subtopic": "Critical disruptive voltage",
+   "type": "numerical",
+   "marks": 2.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=13",
+   "text": "Define critical disruptive voltage. Write down it's significance.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-1(b)",
+   "label": "21-22 1(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "faults",
+   "subtopic": "Loop tests",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=16",
+   "text": "In a test for a fault to earth on a 500 m length of cable having a resistance of 1 Ω per 1000 m, the faulty cable is looped with a sound cable of the same length but having a resistance of 2.25 Ω per 1000 m. The resistance of the other two arms of the testing network at balance are in the ratio of 2.75 : 1. Calculate the distance of the fault from the testing end of the cable.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-1(c)",
+   "label": "21-22 1(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "inductance",
+   "subtopic": "Transposition",
+   "type": "derivation",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=18",
+   "text": "Define transpose transmission line. Derive the expression for the inductance of three phase transmission lines with unsymmetrical spacing.",
+   "repeat_of": "",
+   "outline": "Write the flux linkage in each section; average; use balanced currents; divide by the current."
+  },
+  {
+   "id": "2021-22-1(d)",
+   "label": "21-22 1(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "inductance",
+   "subtopic": "Mutual inductance",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=21",
+   "text": "A single-phase 50 Hz power line is supported on a horizontal cross-arm. The spacing between the conductors is 3 m. A telephone line is supported symmetrically below the power line as shown in Fig. 1. Find the mutual inductance between the two circuits and the voltage induced per kilometer in the telephone line if the current in the power line is 100 A. Assume the telephone line current to be zero.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-2(a)",
+   "label": "21-22 2(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "hvdc",
+   "subtopic": "HVDC",
+   "type": "theory",
+   "marks": 2.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=25",
+   "text": "What is monopolar link?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-2(b)",
+   "label": "21-22 2(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Construction",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=26",
+   "text": "Write down the general construction of a 3-conductor cable with required figure.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-2(c)",
+   "label": "21-22 2(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=28",
+   "text": "A single core cable for use on 11 kV, 50 Hz system has conductor area of 0.645 cm$^2$ and internal diameter of sheath is 2.18 cm. The permittivity of the dielectric used in the cable is 3.5. Find: (i) the maximum electrostatic stress in the cable, (ii) minimum electrostatic stress in the cable, (iii) capacitance of the cable per km length, and (iv) charging current.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-2(d)",
+   "label": "21-22 2(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Grading",
+   "type": "derivation",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=30",
+   "text": "Define grading of cables. Why is unequal stress distribution in a cable undesirable? Consider three dielectric layers for capacitance grading and derive the expression of potential difference between core and earthed sheath.",
+   "repeat_of": "",
+   "outline": "Same charge in each layer; integrate each layer's stress; add the voltages."
+  },
+  {
+   "id": "2021-22-3(a)",
+   "label": "21-22 3(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "insulators",
+   "subtopic": "Failure",
+   "type": "theory",
+   "marks": 2.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=34",
+   "text": "How electrical breakdown happen in a pin-type insulator?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-3(b)",
+   "label": "21-22 3(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "mechanical",
+   "subtopic": "Supports",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=35",
+   "text": "What kind of line supports are used for distribution purposes at low voltages (upto 11 kV)?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-3(c)",
+   "label": "21-22 3(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=37",
+   "text": "In a 33 kV overhead line, there are three units in the string of insulators. If the capacitance between each insulator pin and earth is 11% of self capacitance of each insulator, find (i) the distribution of voltage over 3 insulators and (ii) String efficiency.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-3(d)",
+   "label": "21-22 3(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "type": "derivation",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=39",
+   "text": "Derive the mathematical expression of String efficiency with proper diagram. What will happen if: (i) $K = 0.2$ ($K = \\frac{shunt~capacitance}{self~capacitance}$) (ii) $K = 0.8$ (iii) the number of disc increases in the string.",
+   "repeat_of": "",
+   "outline": "Apply KCL at each link; express each unit's voltage by V1; divide V by n times the line unit's voltage."
+  },
+  {
+   "id": "2021-22-4(a)",
+   "label": "21-22 4(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "mechanical",
+   "subtopic": "Sag",
+   "type": "theory",
+   "marks": 2.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=42",
+   "text": "What is Stringing charts?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-4(b)",
+   "label": "21-22 4(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Insulation resistance",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=43",
+   "text": "The insulation resistance of a single-core cable is 495 MΩ per km. If the core diameter is 2.5 cm and the resistivity of insulation is $4.5\\times10^{14}~\\Omega-cm$, find the insulation thickness.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-4(c)",
+   "label": "21-22 4(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "inductance",
+   "subtopic": "Composite conductors",
+   "type": "derivation",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=45",
+   "text": "Derive the expression of inductance of composite conductor lines.",
+   "repeat_of": "",
+   "outline": "Write a strand's flux linkage; combine the logarithms; average the strands; read off GMD and GMR."
+  },
+  {
+   "id": "2021-22-4(d)",
+   "label": "21-22 4(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Grading",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=48",
+   "text": "A 66 kV single-core lead sheathed cable is graded by using two dielectrics of relative permittivity 5 and 3 respectively; thickness of each being 1 cm. The core diameter is 2 cm. Determine the maximum stress in the two dielectrics.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-5(a)",
+   "label": "21-22 5(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "capacitance",
+   "subtopic": "Effect of earth",
+   "type": "theory",
+   "marks": 2.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=51",
+   "text": "How Earth affect on transmission line capacitance?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-5(b)",
+   "label": "21-22 5(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=52",
+   "text": "A three phase 50 Hz transmission line has flat horizontal spacing with 3.5 m between adjacent conductors. The conductors are No. 2/0 hard/drawn seven strand copper (outside conductor diameter= 1.05 cm). The voltage of the line is 110 kV. Find the capacitance to neutral and the charging current per kilometre of line.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-5(c)",
+   "label": "21-22 5(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=54",
+   "text": "A 3-phase transmission line is being supported by three-disc insulators. The potentials across top unit (near to the tower) and middle unit are 8 kV and 11 kV, respectively. (i) Draw the equivalent circuit (ii) Calculate the ratio of capacitance between pin and earth to the self-capacitance of each unit (iii) Calculate the line voltage and (iv) Calculate string efficiency.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-5(d)",
+   "label": "21-22 5(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "type": "derivation",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=56",
+   "text": "Derive the expression of capacitance of a three phase line with unsymmetrical spacing.",
+   "repeat_of": "",
+   "outline": "Write V_ab in each section; average over the cycle; add V_ab and V_ac; use the phase voltage."
+  },
+  {
+   "id": "2021-22-6(a)",
+   "label": "21-22 6(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "cables",
+   "subtopic": "Economical size",
+   "type": "theory",
+   "marks": 2.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=60",
+   "text": "Find the most economical size of a single-core cable working on a 132 kV, 3- phase system, if a dielectric stress of 60 kV/cm can be allowed.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-6(b)",
+   "label": "21-22 6(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "hvdc",
+   "subtopic": "HVDC",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=62",
+   "text": "Define HVDC. Discuss the Economics of Power transmission.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-6(c)",
+   "label": "21-22 6(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "stability",
+   "subtopic": "Equal area criterion",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=64",
+   "text": "Explain what happens for sudden increase in mechanical input to generator using $Pe - \\delta$ diagram.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-6(d)",
+   "label": "21-22 6(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "stability",
+   "subtopic": "Transient EMF",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=66",
+   "text": "The generator of Fig. 2 is delivering 1.0 pu power to the infinite bus ($|V| = 1.0~pu$), with the generator terminal voltage ($|V_t| = 1.0~pu$). Calculate the generator emf behind transient reactance. Find the maximum power that can be transferred under the following conditions: (i) System healthy, (ii) One line shorted (3 phase) in the middle and (iii) One line open. Plot all the three power angle curves.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-7(a)",
+   "label": "21-22 TT1 7(a)",
+   "session": "2021-22",
+   "term_test": true,
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=70",
+   "text": "A 500 kV line has a bundling arrangement of 2 conductors per phase as shown in the Figure 1. Compute the inductive reactance per phase of this line at 50 Hz. Each conductor carries 50% of the phase current.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-7(b)",
+   "label": "21-22 TT1 7(b)",
+   "session": "2021-22",
+   "term_test": true,
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "type": "derivation",
+   "marks": 0.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=72",
+   "text": "Derive the expression for the capacitance of a three-phase line with unsymmetrical spacing.",
+   "repeat_of": "2021-22 5(d)",
+   "outline": "Write V_ab in each section; average over the cycle; add V_ab and V_ac; use the phase voltage."
+  },
+  {
+   "id": "2021-22-8(a)",
+   "label": "21-22 TT2 8(a)",
+   "session": "2021-22",
+   "term_test": true,
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=75",
+   "text": "A string of 5 insulators is connected across a 100 kV line. If the capacitance of each disc to earth is 0.1 of the capacitance of the insulator, calculate (i) the distribution of voltage on the insulator discs and (ii) the string efficiency.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-8(b)",
+   "label": "21-22 TT2 8(b)",
+   "session": "2021-22",
+   "term_test": true,
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=76",
+   "text": "A single core cable for use on 11 kV, 50 Hz system has a conductor area of 0.645 cm$^2$ and internal diameter of sheath is 2.18 cm. The permittivity of the dielectric used in the cable is 3.5. Find (i) the maximum electrostatic stress in the cable (ii) the minimum electrostatic stress in the cable (iii) the capacitance of the cable per km length (iv) the charging current.",
+   "repeat_of": "2021-22 2(c)",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-9(a)",
+   "label": "21-22 TT3 9(a)",
+   "session": "2021-22",
+   "term_test": true,
+   "topic": "faults",
+   "subtopic": "Loop tests",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=79",
+   "text": "In a test for a fault to earth on a 500 m length of cable having a resistance of 1 Ω per 1000 m, the faulty cable is looped with a sound cable of the same length but having a resistance of 2.25 Ω per 1000 m. The resistance of the other two arms of the testing network at balance are in the ratio 2.75 : 1. Calculate the distance of the fault from the testing end of the cable.",
+   "repeat_of": "2021-22 1(b)",
+   "outline": ""
+  },
+  {
+   "id": "2021-22-9(b)",
+   "label": "21-22 TT3 9(b)",
+   "session": "2021-22",
+   "term_test": true,
+   "topic": "inductance",
+   "subtopic": "Mutual inductance",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=80",
+   "text": "A single phase 50Hz power line is supported on a horizontal cross-arm. The spacing between conductors is 2.5m. A telephone line is also supported on a horizontal cross-arm in the same horizontal plane as the power line. The conductors of the telephone line are of solid copper spaced 0.6m between centers. The distance between the nearest conductors of the two lines is 20m. Find the mutual inductance between the circuits and the voltage per km induced in the telephone line for 150A current flowing over the power line.",
+   "repeat_of": "",
+   "outline": ""
+  }
+ ],
+ "formulas": [
+  {
+   "topic": "inductance",
+   "subtopic": "Basics",
+   "title": "**Inductance**",
+   "eq": "$L = \\dfrac{\\psi}{I} = \\dfrac{N\\phi}{I}$",
+   "used": [
+    {
+     "label": "20-21 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=10"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Basics",
+   "title": "Induced voltage",
+   "eq": "$e = L\\dfrac{di}{dt}$",
+   "used": [
+    {
+     "label": "20-21 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=10"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "title": "Internal flux linkage",
+   "eq": "$\\psi_{int} = \\dfrac{\\mu_0 I}{8\\pi}$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=12"
+    },
+    {
+     "label": "21-22 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=18"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "title": "External flux linkage",
+   "eq": "$\\psi_{12} = \\dfrac{\\mu_0 I}{2\\pi}\\ln\\dfrac{D_2}{D_1} = 2\\times10^{-7}\\,I\\ln\\dfrac{D_2}{D_1}$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=12"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "title": "**GMR of a solid conductor**",
+   "eq": "$D_s = r' = r\\,e^{-1/4} = 0.7788\\,r$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=12"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Transposition",
+   "title": "Flux linkage in a group",
+   "eq": "$\\psi_a = 2\\times10^{-7}\\left[I_a\\ln\\dfrac{1}{D_s} + I_b\\ln\\dfrac{1}{D_{ab}} + I_c\\ln\\dfrac{1}{D_{ac}}\\right]$",
+   "used": [
+    {
+     "label": "20-21 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=23"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "title": "**Transposed 3-phase line**",
+   "eq": "$L = 2\\times10^{-7}\\ln\\dfrac{D_{eq}}{D_s}~\\text{H/m}$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=12"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "title": "**Equivalent spacing**",
+   "eq": "$D_{eq} = \\sqrt[3]{D_{ab}D_{bc}D_{ca}}$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=12"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "title": "**Two-conductor bundle**",
+   "eq": "$D_s^b = \\sqrt{D_s\\,d}$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=12"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "title": "**Inductive reactance**",
+   "eq": "$X_L = 2\\pi f L$",
+   "used": [
+    {
+     "label": "20-21 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=12"
+    },
+    {
+     "label": "21-22 7(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=70"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Composite conductors",
+   "title": "**Composite conductor**",
+   "eq": "$L_X = 2\\times10^{-7}\\ln\\dfrac{D_m}{D_{sX}}~\\text{H/m}$",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=24"
+    },
+    {
+     "label": "21-22 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Composite conductors",
+   "title": "Mutual GMD",
+   "eq": "$D_m = \\sqrt[mn]{(D_{aa'}D_{ab'}\\cdots D_{am})\\cdots(D_{na'}\\cdots D_{nm})}$",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=24"
+    },
+    {
+     "label": "21-22 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Composite conductors",
+   "title": "Self GMD",
+   "eq": "$D_{sX} = \\sqrt[n^2]{(D_{aa}D_{ab}\\cdots D_{an})\\cdots(D_{na}\\cdots D_{nn})}$",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=24"
+    },
+    {
+     "label": "21-22 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Composite conductors",
+   "title": "Strand inductance",
+   "eq": "$L_X = \\dfrac{L_a + L_b + \\dots + L_n}{n^2}$",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=24"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Composite conductors",
+   "title": "Composite line loop",
+   "eq": "$L = 2\\times10^{-7}\\ln\\dfrac{D_m^2}{D_{sX}D_{sY}}~\\text{H/m}$",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=24"
+    },
+    {
+     "label": "21-22 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Mutual inductance",
+   "title": "**Mutual inductance**",
+   "eq": "$M = 2\\times10^{-7}\\ln\\dfrac{D_{P_1T_2}\\,D_{P_2T_1}}{D_{P_1T_1}\\,D_{P_2T_2}}~\\text{H/m}$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=18"
+    },
+    {
+     "label": "21-22 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=21"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Mutual inductance",
+   "title": "Induced voltage",
+   "eq": "$E = 2\\pi f M I$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=18"
+    },
+    {
+     "label": "21-22 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=21"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Skin effect",
+   "title": "Skin depth",
+   "eq": "$\\delta = \\dfrac{1}{\\sqrt{\\pi f\\mu\\sigma}}$",
+   "used": [
+    {
+     "label": "20-21 3(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=31"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Transposition",
+   "title": "Inductance",
+   "eq": "$L = \\dfrac{\\psi}{I}$",
+   "used": [
+    {
+     "label": "21-22 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=18"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Transposition",
+   "title": "External flux linkage",
+   "eq": "$\\psi_{12} = \\dfrac{\\mu_0 I}{2\\pi}\\ln\\dfrac{D_2}{D_1}$",
+   "used": [
+    {
+     "label": "21-22 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=18"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Transposition",
+   "title": "**GMR of a solid conductor**",
+   "eq": "$r' = r\\,e^{-1/4} = 0.7788\\,r$",
+   "used": [
+    {
+     "label": "21-22 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=18"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Transposition",
+   "title": "Symmetrical 3-phase line",
+   "eq": "$L = 2\\times10^{-7}\\ln\\dfrac{D}{r'}~\\text{H/m}$",
+   "used": [
+    {
+     "label": "21-22 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=18"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Transposition",
+   "title": "**Unsymmetrical transposed line**",
+   "eq": "$L = 2\\times10^{-7}\\ln\\dfrac{D_{eq}}{r'} = 0.2\\ln\\dfrac{D_{eq}}{r'}~\\text{mH/km}$",
+   "used": [
+    {
+     "label": "21-22 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=18"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Transposition",
+   "title": "**Equivalent spacing**",
+   "eq": "$D_{eq} = \\sqrt[3]{D_{12}D_{23}D_{31}}$",
+   "used": [
+    {
+     "label": "21-22 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=18"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Bundled conductors",
+   "title": "Two-conductor bundle",
+   "eq": "$D_s = \\sqrt{r'\\,d}$",
+   "used": [
+    {
+     "label": "21-22 7(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=70"
+    }
+   ]
+  },
+  {
+   "topic": "inductance",
+   "subtopic": "Mutual inductance",
+   "title": "Symmetrical arrangement",
+   "eq": "$M = 4\\times10^{-7}\\ln\\dfrac{D_2}{D_1}~\\text{H/m}$",
+   "used": [
+    {
+     "label": "21-22 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=21"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "title": "Capacitance",
+   "eq": "$C = \\dfrac{q}{V}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=15"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "title": "Field of a line charge",
+   "eq": "$E = \\dfrac{q}{2\\pi\\varepsilon_0\\,x}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=15"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "title": "Potential difference",
+   "eq": "$V_{12} = \\dfrac{q}{2\\pi\\varepsilon_0}\\ln\\dfrac{D_2}{D_1}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=15"
+    },
+    {
+     "label": "21-22 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=56"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "title": "Balanced voltages",
+   "eq": "$V_{ab} + V_{ac} = 3V_{an}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=15"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "title": "**Capacitance to neutral**",
+   "eq": "$C_n = \\dfrac{2\\pi\\varepsilon_0}{\\ln(D_{eq}/r)} = \\dfrac{0.0556}{\\ln(D_{eq}/r)}~\\mu\\text{F/km}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=15"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "title": "Line charging current",
+   "eq": "$I_c = 2\\pi f\\,C_n\\,V_{ph}$",
+   "used": [
+    {
+     "label": "20-21 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=15"
+    },
+    {
+     "label": "21-22 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=52"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "title": "Field of a line charge",
+   "eq": "$g = \\dfrac{q}{2\\pi\\varepsilon_0\\,x}$",
+   "used": [
+    {
+     "label": "21-22 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=56"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Effect of earth",
+   "title": "Single-phase line",
+   "eq": "$C = \\dfrac{\\pi\\varepsilon_0}{\\ln(d/r)}~\\text{F/m}$",
+   "used": [
+    {
+     "label": "21-22 5(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=51"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Effect of earth",
+   "title": "Effect of the earth",
+   "eq": "$C = \\dfrac{\\pi\\varepsilon_0}{\\ln\\left(\\dfrac{d}{r}\\cdot\\dfrac{2h}{\\sqrt{4h^2 + d^2}}\\right)}$",
+   "used": [
+    {
+     "label": "21-22 5(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=51"
+    }
+   ]
+  },
+  {
+   "topic": "capacitance",
+   "subtopic": "Unsymmetrical spacing",
+   "title": "**Capacitance to neutral**",
+   "eq": "$C_n = \\dfrac{2\\pi\\varepsilon_0}{\\ln(D_{eq}/r)}~\\text{F/m}$",
+   "used": [
+    {
+     "label": "21-22 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=56"
+    }
+   ]
+  },
+  {
+   "topic": "corona",
+   "subtopic": "Corona effect",
+   "title": "Field near the conductor",
+   "eq": "$g = \\dfrac{V}{x\\,\\ln(d/r)}$",
+   "used": [
+    {
+     "label": "20-21 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=22"
+    },
+    {
+     "label": "21-22 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=13"
+    }
+   ]
+  },
+  {
+   "topic": "corona",
+   "subtopic": "Corona effect",
+   "title": "Strength of air",
+   "eq": "$g_0 = 30~\\text{kV/cm peak} = 21.2~\\text{kV/cm r.m.s.}$",
+   "used": [
+    {
+     "label": "20-21 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=22"
+    },
+    {
+     "label": "21-22 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=13"
+    }
+   ]
+  },
+  {
+   "topic": "corona",
+   "subtopic": "Critical disruptive voltage",
+   "title": "Surface field",
+   "eq": "$g_{max} = \\dfrac{V}{r\\,\\ln(d/r)}$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=40"
+    },
+    {
+     "label": "21-22 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=13"
+    }
+   ]
+  },
+  {
+   "topic": "corona",
+   "subtopic": "Critical disruptive voltage",
+   "title": "**Critical disruptive voltage**",
+   "eq": "$V_c = m_0\\,g_0\\,\\delta\\,r\\,\\ln\\dfrac{d}{r}~\\text{kV}$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=40"
+    },
+    {
+     "label": "21-22 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=13"
+    }
+   ]
+  },
+  {
+   "topic": "corona",
+   "subtopic": "Critical disruptive voltage",
+   "title": "Air density factor",
+   "eq": "$\\delta = \\dfrac{3.92\\,b}{273 + t}$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=40"
+    },
+    {
+     "label": "21-22 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=13"
+    }
+   ]
+  },
+  {
+   "topic": "corona",
+   "subtopic": "Critical disruptive voltage",
+   "title": "Visual critical voltage",
+   "eq": "$V_v = m_v\\,g_0\\,\\delta\\,r\\left(1 + \\dfrac{0.3}{\\sqrt{\\delta r}}\\right)\\ln\\dfrac{d}{r}$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=40"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "title": "**Capacitance ratio**",
+   "eq": "$K = \\dfrac{C_1}{C}$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=41"
+    },
+    {
+     "label": "21-22 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "title": "**Unit voltages**",
+   "eq": "$V_2 = (1 + K)V_1,\\; V_3 = (1 + 3K + K^2)V_1$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=41"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "title": "General unit",
+   "eq": "$V_{k+1} = V_k + K\\,(V_1 + V_2 + \\dots + V_k)$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=41"
+    },
+    {
+     "label": "21-22 8(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=75"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "title": "**String efficiency**",
+   "eq": "$\\eta = \\dfrac{V}{n\\,V_n}\\times100~\\%$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=41"
+    },
+    {
+     "label": "21-22 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=39"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "title": "Three-unit string",
+   "eq": "$\\eta = \\dfrac{3 + 4K + K^2}{3(1 + 3K + K^2)}$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=41"
+    },
+    {
+     "label": "21-22 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=39"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "title": "**Capacitance grading**",
+   "eq": "$C_2 = C_1(1 + K),\\; C_3 = C_1(1 + 3K)$",
+   "used": [
+    {
+     "label": "20-21 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=41"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "Failure",
+   "title": "Safety factor of an insulator",
+   "eq": "$\\text{SF} = \\dfrac{\\text{puncture strength}}{\\text{flash-over voltage}}$",
+   "used": [
+    {
+     "label": "20-21 5(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=47"
+    },
+    {
+     "label": "21-22 3(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=34"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "title": "**Unit voltages**",
+   "eq": "$V_2 = V_1(1 + K),\\; V_3 = V_2 + K(V_1 + V_2)$",
+   "used": [
+    {
+     "label": "21-22 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "title": "String voltage",
+   "eq": "$V = V_1 + V_2 + \\dots + V_n$",
+   "used": [
+    {
+     "label": "21-22 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "insulators",
+   "subtopic": "String efficiency",
+   "title": "$K$ from measurements",
+   "eq": "$K = \\dfrac{V_2}{V_1} - 1$",
+   "used": [
+    {
+     "label": "21-22 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=54"
+    }
+   ]
+  },
+  {
+   "topic": "mechanical",
+   "subtopic": "Sag",
+   "title": "**Working tension**",
+   "eq": "$T = \\dfrac{\\text{ultimate strength}}{\\text{safety factor}}$",
+   "used": [
+    {
+     "label": "20-21 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=51"
+    }
+   ]
+  },
+  {
+   "topic": "mechanical",
+   "subtopic": "Sag",
+   "title": "**Sag, level supports**",
+   "eq": "$S = \\dfrac{w\\,l^2}{8\\,T}$",
+   "used": [
+    {
+     "label": "20-21 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=51"
+    },
+    {
+     "label": "21-22 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=42"
+    }
+   ]
+  },
+  {
+   "topic": "mechanical",
+   "subtopic": "Sag",
+   "title": "Conductor curve",
+   "eq": "$y = \\dfrac{w\\,x^2}{2\\,T}$",
+   "used": [
+    {
+     "label": "20-21 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=51"
+    }
+   ]
+  },
+  {
+   "topic": "mechanical",
+   "subtopic": "Sag",
+   "title": "**Height of supports**",
+   "eq": "$h = \\text{ground clearance} + S$",
+   "used": [
+    {
+     "label": "20-21 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=51"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "Flux density in the dielectric",
+   "eq": "$D_x = \\dfrac{Q}{2\\pi x}$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=34"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "Stress from the charge",
+   "eq": "$g_x = \\dfrac{Q}{2\\pi\\varepsilon_0\\varepsilon_r\\,x}$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=34"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "Core-to-sheath voltage",
+   "eq": "$V = \\dfrac{Q}{2\\pi\\varepsilon_0\\varepsilon_r}\\ln\\dfrac{D}{d}$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=34"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "**Dielectric stress**",
+   "eq": "$g_x = \\dfrac{V}{x\\,\\ln(D/d)}$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=34"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "**Maximum and minimum stress**",
+   "eq": "$g_{max} = \\dfrac{2V}{d\\,\\ln(D/d)},\\; g_{min} = \\dfrac{2V}{D\\,\\ln(D/d)}$",
+   "used": [
+    {
+     "label": "20-21 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=27"
+    },
+    {
+     "label": "21-22 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "**Stress ratio**",
+   "eq": "$\\dfrac{g_{max}}{g_{min}} = \\dfrac{D}{d}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "Insulation thickness",
+   "eq": "$t = \\dfrac{D - d}{2}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "Operating voltage",
+   "eq": "$V = g_{max}\\,\\dfrac{d}{2}\\ln\\dfrac{D}{d}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "Cable capacitance",
+   "eq": "$C = \\dfrac{2\\pi\\varepsilon_0\\varepsilon_r}{\\ln(D/d)}~\\text{F/m}$",
+   "used": [
+    {
+     "label": "20-21 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=34"
+    },
+    {
+     "label": "21-22 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Capacitance",
+   "title": "**Belted cable tests**",
+   "eq": "$C_1 = 3C_s,\\; C_2 = C_s + 2C_c$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=36"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Capacitance",
+   "title": "**Capacitance per phase**",
+   "eq": "$C_N = C_s + 3C_c$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=36"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Capacitance",
+   "title": "**Cable charging current**",
+   "eq": "$I_c = 2\\pi f\\,C_N\\,V_{ph}$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=36"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "Stress in the dielectric",
+   "eq": "$g = \\dfrac{Q}{2\\pi\\varepsilon_0\\varepsilon_r\\,x} = \\dfrac{V}{x\\,\\ln(D/d)}$",
+   "used": [
+    {
+     "label": "21-22 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Dielectric stress",
+   "title": "Cable charging current",
+   "eq": "$I_c = 2\\pi f C V$",
+   "used": [
+    {
+     "label": "21-22 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Insulation resistance",
+   "title": "**Insulation resistance**",
+   "eq": "$R = \\dfrac{\\rho}{2\\pi l}\\ln\\dfrac{r_2}{r_1}$",
+   "used": [
+    {
+     "label": "21-22 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=43"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Economical size",
+   "title": "**Most economical size**",
+   "eq": "$d = \\dfrac{2V}{g_{max}},\\; D = e\\,d = 2.718\\,d$",
+   "used": [
+    {
+     "label": "21-22 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=60"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Grading",
+   "title": "Layer stresses",
+   "eq": "$g_{1max} = \\dfrac{Q}{\\pi\\varepsilon_0\\varepsilon_1 d},\\; g_{2max} = \\dfrac{Q}{\\pi\\varepsilon_0\\varepsilon_2 d_1}$",
+   "used": [
+    {
+     "label": "21-22 4(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=48"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Grading",
+   "title": "Two dielectrics, stresses",
+   "eq": "$\\varepsilon_1 d\\,g_{1max} = \\varepsilon_2 d_1\\,g_{2max}$",
+   "used": [
+    {
+     "label": "21-22 4(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=48"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Grading",
+   "title": "Two dielectrics, voltage",
+   "eq": "$V = \\dfrac{g_{1max}\\,d}{2}\\ln\\dfrac{d_1}{d} + \\dfrac{g_{2max}\\,d_1}{2}\\ln\\dfrac{D}{d_1}$",
+   "used": [
+    {
+     "label": "21-22 4(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=48"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Grading",
+   "title": "**Capacitance grading**",
+   "eq": "$V = \\dfrac{g_{1max}\\,d}{2}\\ln\\dfrac{d_1}{d} + \\dfrac{g_{2max}\\,d_1}{2}\\ln\\dfrac{d_2}{d_1} + \\dfrac{g_{3max}\\,d_2}{2}\\ln\\dfrac{D}{d_2}$",
+   "used": [
+    {
+     "label": "21-22 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=30"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Grading",
+   "title": "Equal maximum stress",
+   "eq": "$\\varepsilon_1 d = \\varepsilon_2 d_1 = \\varepsilon_3 d_2$",
+   "used": [
+    {
+     "label": "21-22 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=30"
+    }
+   ]
+  },
+  {
+   "topic": "cables",
+   "subtopic": "Grading",
+   "title": "Graded voltage",
+   "eq": "$V = \\dfrac{g_{max}}{2}\\left[d\\ln\\dfrac{d_1}{d} + d_1\\ln\\dfrac{d_2}{d_1} + d_2\\ln\\dfrac{D}{d_2}\\right]$",
+   "used": [
+    {
+     "label": "21-22 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=30"
+    }
+   ]
+  },
+  {
+   "topic": "faults",
+   "subtopic": "Loop tests",
+   "title": "**Varley loop balance**",
+   "eq": "$\\dfrac{P}{Q} = \\dfrac{R_{loop} - R_X}{R_X + S},\\; R_X = \\dfrac{Q\\,R_{loop} - P\\,S}{P + Q}$",
+   "used": [
+    {
+     "label": "20-21 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=48"
+    }
+   ]
+  },
+  {
+   "topic": "faults",
+   "subtopic": "Loop tests",
+   "title": "Equal ratio arms",
+   "eq": "$R_X = \\dfrac{R_{loop} - S}{2}$",
+   "used": [
+    {
+     "label": "20-21 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=48"
+    }
+   ]
+  },
+  {
+   "topic": "faults",
+   "subtopic": "Loop tests",
+   "title": "**Murray loop balance**",
+   "eq": "$\\dfrac{P}{Q} = \\dfrac{R_{loop} - R_X}{R_X},\\; R_X = \\dfrac{Q}{P + Q}\\,R_{loop}$",
+   "used": [
+    {
+     "label": "21-22 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=16"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Equal area criterion",
+   "title": "**Power-angle equation**",
+   "eq": "$P_e = \\dfrac{\\lvert E\\rvert\\lvert V\\rvert}{X}\\sin\\delta = P_{max}\\sin\\delta$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Equal area criterion",
+   "title": "Swing equation",
+   "eq": "$M\\dfrac{d^2\\delta}{dt^2} = P_m - P_e$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54"
+    },
+    {
+     "label": "21-22 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=64"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Equal area criterion",
+   "title": "**Equal area criterion**",
+   "eq": "$\\displaystyle\\int_{\\delta_0}^{\\delta_{max}}(P_m - P_e)\\,d\\delta = 0 \\;\\Leftrightarrow\\; A_1 = A_2$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Equal area criterion",
+   "title": "Critical clearing angle",
+   "eq": "$\\cos\\delta_{cr} = \\dfrac{P_m(\\delta_{max} - \\delta_0) + P_{3max}\\cos\\delta_{max} - P_{2max}\\cos\\delta_0}{P_{3max} - P_{2max}}$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Equal area criterion",
+   "title": "Limit of the swing",
+   "eq": "$\\delta_{max} = 180° - \\delta_1$",
+   "used": [
+    {
+     "label": "20-21 6(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=57"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Transient EMF",
+   "title": "Terminal voltage angle",
+   "eq": "$\\sin\\theta = \\dfrac{P\\,X}{\\lvert V_t\\rvert\\lvert V\\rvert}$",
+   "used": [
+    {
+     "label": "20-21 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=59"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Transient EMF",
+   "title": "Current",
+   "eq": "$I = \\dfrac{V_t - V}{jX}$",
+   "used": [
+    {
+     "label": "20-21 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=59"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Transient EMF",
+   "title": "**Transient emf**",
+   "eq": "$E' = V_t + jX'_d I$",
+   "used": [
+    {
+     "label": "20-21 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=59"
+    },
+    {
+     "label": "21-22 6(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=66"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Transient EMF",
+   "title": "**Maximum power**",
+   "eq": "$P_{max} = \\dfrac{\\lvert E'\\rvert\\lvert V\\rvert}{X}$",
+   "used": [
+    {
+     "label": "20-21 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=59"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Transient EMF",
+   "title": "Transfer reactance (Y to Δ)",
+   "eq": "$X_{ab} = \\dfrac{X_aX_b + X_bX_c + X_cX_a}{X_c}$",
+   "used": [
+    {
+     "label": "20-21 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=59"
+    },
+    {
+     "label": "21-22 6(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=66"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Transient EMF",
+   "title": "**Power-angle equation**",
+   "eq": "$P_e = \\dfrac{\\lvert E'\\rvert\\lvert V\\rvert}{X}\\sin\\delta = P_{max}\\sin\\delta$",
+   "used": [
+    {
+     "label": "21-22 6(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=66"
+    }
+   ]
+  },
+  {
+   "topic": "stability",
+   "subtopic": "Equal area criterion",
+   "title": "**Equal area criterion**",
+   "eq": "$A_1 = A_2$",
+   "used": [
+    {
+     "label": "21-22 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=64"
+    }
+   ]
+  },
+  {
+   "topic": "hvdc",
+   "subtopic": "FACTS",
+   "title": "**Power over a line**",
+   "eq": "$P = \\dfrac{V_1V_2}{X}\\sin\\delta$",
+   "used": [
+    {
+     "label": "20-21 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=32"
+    }
+   ]
+  },
+  {
+   "topic": "hvdc",
+   "subtopic": "HVDC",
+   "title": "Annual cost",
+   "eq": "$P_1 + P_2 a + \\dfrac{P_3}{a}$",
+   "used": [
+    {
+     "label": "21-22 6(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=62"
+    }
+   ]
+  },
+  {
+   "topic": "hvdc",
+   "subtopic": "HVDC",
+   "title": "**Kelvin's law**",
+   "eq": "$P_2 a = \\dfrac{P_3}{a}$",
+   "used": [
+    {
+     "label": "21-22 6(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2021-22-pack.pdf#page=62"
+    }
+   ]
+  }
+ ]
+}

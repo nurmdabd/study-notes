@@ -1,0 +1,781 @@
+{
+ "subject": "EEE443",
+ "title": "Power Plant Engineering",
+ "sessions": [
+  "2020-21"
+ ],
+ "topics": [
+  {
+   "id": "load",
+   "title": "Load curves and factors",
+   "book": "Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "econ",
+   "title": "Economics of generation",
+   "book": "Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "tariff",
+   "title": "Tariffs",
+   "book": "Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "sharing",
+   "title": "Economic load sharing",
+   "book": "Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "fuels",
+   "title": "Fuels and handling",
+   "book": "Nag",
+   "tier": "Must know"
+  },
+  {
+   "id": "steam",
+   "title": "Steam power plant",
+   "book": "Nag",
+   "tier": "Must know"
+  },
+  {
+   "id": "turbines",
+   "title": "Steam turbines",
+   "book": "Nag",
+   "tier": "Must know"
+  },
+  {
+   "id": "combined",
+   "title": "Combined cycle plants",
+   "book": "Nag",
+   "tier": "Must know"
+  },
+  {
+   "id": "hydro",
+   "title": "Hydro plants",
+   "book": "Nag; Mehta",
+   "tier": "Must know"
+  },
+  {
+   "id": "nuclear",
+   "title": "Nuclear plants",
+   "book": "Nag; Mehta",
+   "tier": "Must know"
+  }
+ ],
+ "questions": [
+  {
+   "id": "2020-21-1(a)",
+   "label": "20-21 1(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Improvements",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=10",
+   "text": "List the factors that contribute to improving the generating capacity of a thermal power station.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(b)",
+   "label": "20-21 1(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "fuels",
+   "subtopic": "Characteristics",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=12",
+   "text": "Briefly discuss the characteristics of fuels.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(c)",
+   "label": "20-21 1(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "combined",
+   "subtopic": "Operation",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=13",
+   "text": "What is meant by combined cycle power generation?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(d)",
+   "label": "20-21 1(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Base and peak load",
+   "type": "theory",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=14",
+   "text": "What are the requirements of a base load and peak load power plant? The annual peak load on a 30 MW power station is 25 MW. The power station supplies loads having a maximum demands of 10MW, 8.5 MW, 5 MW and 4.5 MW. The annual load factor is 45%. Find: (i) Average load, (ii) Energy supplied every year, (iii) Diversity factor, (iv) Demand/factor. *[sic: should be \"Demand factor\"]*",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(a)",
+   "label": "20-21 2(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Factors",
+   "type": "theory",
+   "marks": 3.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=17",
+   "text": "What is the importance of load factor and diversity factor?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(b)",
+   "label": "20-21 2(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Variable load",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=18",
+   "text": "Why is the load on a power station variable? What are the effects of variable load on the operation of the power station?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(c)",
+   "label": "20-21 2(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "sharing",
+   "subtopic": "Incremental rates",
+   "type": "derivation",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=19",
+   "text": "Show that for the economic load sharing, the incremental heat rates are equal.",
+   "repeat_of": "",
+   "outline": "Fix the total load; set the change of total heat input to zero; show the slopes are equal."
+  },
+  {
+   "id": "2020-21-2(d)",
+   "label": "20-21 2(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "sharing",
+   "subtopic": "Two units",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=21",
+   "text": "The incremental fuel costs for two generating units A and B of a power plant are given by the following equations: $\\dfrac{dF_A}{dP_A} = 0.06P_A + 11.4$, $\\quad \\dfrac{dF_B}{dP_B} = 0.07P_B + 10$, where P is in mega-watts and F is in takas per hour. (i) Find the economic loading of the two units when the total load to be supplied by the power station is 150 MW. (ii) Find the loss in fuel cost per hour if the load is equally shared by the two units.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(a)",
+   "label": "20-21 3(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Layout",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=24",
+   "text": "Draw the schematics of steam generating part of a coal fire power plant showing all basic components and direction of steam flow.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(b)",
+   "label": "20-21 3(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Boilers",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=25",
+   "text": "Differentiate between water tube boiler and fire tube boiler.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(c)",
+   "label": "20-21 3(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Superheaters and economisers",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=27",
+   "text": "A superheater and an economizer improve the performance of a boiler-How?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(d)",
+   "label": "20-21 3(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Boiler efficiency",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28",
+   "text": "The following data is supplied for a boiler plant: Boiler: Mass of coal supplied = 220 kg /hr. Calorific value of coal = 7200 kcal /kg. Mass of feed water = 200 kg/hr *[sic: should be 2000 kg/hr]*. Enthalpy of steam produced = 670 kcal/kg. Economizer: Inlet temperature of feed water = 18°C. Outlet temperature of water = 88°C. Atmospheric temperature = 19°C. Temperature of flue gas entering = 350°C. Mass of flue gases = 4150 kg/hr. Determine the following (i) Efficiency of boiler. (ii) Efficiency of economizer. (iii) Efficiency of whole boiler plant.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(a)",
+   "label": "20-21 4(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Factors",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31",
+   "text": "Define plant use factor and plant utility factor.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(b)",
+   "label": "20-21 4(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "nuclear",
+   "subtopic": "Reactors",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31",
+   "text": "Mention the types of reactors used in nuclear power plants.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(c)",
+   "label": "20-21 4(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Factors",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33",
+   "text": "A generating station has a maximum demand of 20 MW, a load factor of 60%, a plant capacity factor of 48% and a plant use factor of 80%. Find: (i) The daily energy produced (ii) The reserve capacity of the plant (iii) The maximum energy that could be produced daily if the plant was running all the time (iv) The maximum energy that could be produced daily if the plant was running fully loaded and operating as per schedule.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(d)",
+   "label": "20-21 4(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hydro",
+   "subtopic": "Turbines",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=35",
+   "text": "With diagram, write short notes on Kaplan and Francis turbine.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(a)",
+   "label": "20-21 5(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "tariff",
+   "subtopic": "Flat and meter rates",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=38",
+   "text": "Write short notes on the following type of tariffs: (i) Flat demand rate (ii) Straight line meter rate",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(b)",
+   "label": "20-21 5(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "econ",
+   "subtopic": "Cost per kWh",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39",
+   "text": "Estimate the generating cost per KWh delivered from a generating station from the following data: Plant capacity = 50 MW. Annual load factor = 40%. Capital cost = 1.2 crores. Annual cost of wages, taxation, etc. = Taka 4 lakhs. Cost of fuel, lubrication, maintenance, etc. = 1.0 paisa/kWh generated. Interest 5% per annum, depreciation 6% per annum of initial value.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(c)",
+   "label": "20-21 5(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hydro",
+   "subtopic": "Civil works",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=40",
+   "text": "Write short note on- (i) Spillways (ii) Surge tanks (iii) Draft tubes",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(d)",
+   "label": "20-21 5(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "type": "numerical",
+   "marks": 9.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=41",
+   "text": "An electric supply company having a maximum load of 50 MW generates $18\\times10^7$ units per annum and the supply consumers have an aggregate demand of 75 MW. The annual expenses including capital charges are: For fuel = Taka 90 lakhs. Fixed charges concerning generation = Taka 28 lakhs. Fixed charges concerning transmission and distribution = Taka 32 lakhs. Assuming 90% of the fuel cost is essential to running charges and the loss in transmission and distribution as 15% of KWh generated, deduce a two part tariff to find the actual cost of supply to the consumers.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(a)",
+   "label": "20-21 6(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "econ",
+   "subtopic": "Depreciation",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=44",
+   "text": "What are the methods of determining depreciation cost in power plants? Briefly explain one of the methods.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(b)",
+   "label": "20-21 6(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "fuels",
+   "subtopic": "Pulverisation",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=45",
+   "text": "Why is pulverization done in a coal fired power plant? Give description of any basic type of pulverizers.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(c)",
+   "label": "20-21 6(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "turbines",
+   "subtopic": "Impulse and reaction",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=46",
+   "text": "Write short notes on: (i) Impulse turbine (ii) Reaction turbines",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(d)",
+   "label": "20-21 6(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hydro",
+   "subtopic": "Merits",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=48",
+   "text": "Discuss the advantages and disadvantages of a Hydro-electric power plant.",
+   "repeat_of": "",
+   "outline": ""
+  }
+ ],
+ "formulas": [
+  {
+   "topic": "load",
+   "subtopic": "Base and peak load",
+   "title": "**Average load**",
+   "eq": "$P_{av} = \\dfrac{E}{t}$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Base and peak load",
+   "title": "**Load factor**",
+   "eq": "$\\text{LF} = \\dfrac{P_{av}}{P_{max}}$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Base and peak load",
+   "title": "**Diversity factor**",
+   "eq": "$\\text{DF} = \\dfrac{\\sum P_{max,i}}{P_{max}} \\geq 1$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Base and peak load",
+   "title": "**Demand factor**",
+   "eq": "$\\dfrac{P_{max}}{\\text{connected load}} \\leq 1$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "**Capacity factor**",
+   "eq": "$\\text{CF} = \\dfrac{P_{av}}{C} = \\dfrac{E}{C\\,t}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "**Plant use factor**",
+   "eq": "$\\text{UF} = \\dfrac{E}{C \\times t_{op}}$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "Utility (utilisation) factor",
+   "eq": "$\\dfrac{P_{max}}{C}$",
+   "used": [
+    {
+     "label": "20-21 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "Reserve capacity",
+   "eq": "$C - P_{max}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "Energy at full load as per schedule",
+   "eq": "$E_{sched} = C\\,t_{op} = \\dfrac{E}{\\text{UF}}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33"
+    }
+   ]
+  },
+  {
+   "topic": "econ",
+   "subtopic": "Cost per kWh",
+   "title": "Energy in a year",
+   "eq": "$E = C \\times \\text{LF} \\times 8760$",
+   "used": [
+    {
+     "label": "20-21 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39"
+    }
+   ]
+  },
+  {
+   "topic": "econ",
+   "subtopic": "Cost per kWh",
+   "title": "Annual fixed charges",
+   "eq": "$(i + d)\\,K + W$",
+   "used": [
+    {
+     "label": "20-21 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39"
+    }
+   ]
+  },
+  {
+   "topic": "econ",
+   "subtopic": "Cost per kWh",
+   "title": "**Cost per kWh**",
+   "eq": "$\\dfrac{\\text{annual fixed charges}}{E} + \\text{running cost per kWh}$",
+   "used": [
+    {
+     "label": "20-21 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39"
+    }
+   ]
+  },
+  {
+   "topic": "econ",
+   "subtopic": "Depreciation",
+   "title": "Straight line",
+   "eq": "$D = \\dfrac{P - S}{n}$ per year",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=44"
+    }
+   ]
+  },
+  {
+   "topic": "econ",
+   "subtopic": "Depreciation",
+   "title": "Diminishing value",
+   "eq": "$P(1 - r)^{n} = S \\;\\Rightarrow\\; r = 1 - \\left(\\dfrac{S}{P}\\right)^{1/n}$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=44"
+    }
+   ]
+  },
+  {
+   "topic": "econ",
+   "subtopic": "Depreciation",
+   "title": "**Sinking fund**",
+   "eq": "$q = (P - S)\\,\\dfrac{i}{(1 + i)^{n} - 1}$",
+   "used": [
+    {
+     "label": "20-21 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=44"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Flat and meter rates",
+   "title": "Flat demand rate",
+   "eq": "$\\text{bill} = a \\times \\text{kW}$",
+   "used": [
+    {
+     "label": "20-21 5(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=38"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Flat and meter rates",
+   "title": "Straight line meter rate",
+   "eq": "$\\text{bill} = b \\times \\text{kWh}$",
+   "used": [
+    {
+     "label": "20-21 5(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=38"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "title": "**Two-part tariff**",
+   "eq": "$\\text{bill} = A \\times \\text{kW} + B \\times \\text{kWh}$",
+   "used": [
+    {
+     "label": "20-21 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=41"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "title": "Demand charge",
+   "eq": "$A = \\dfrac{\\text{annual fixed charges}}{\\text{aggregate maximum demand of consumers}}$",
+   "used": [
+    {
+     "label": "20-21 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=41"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "title": "Energy charge",
+   "eq": "$B = \\dfrac{\\text{annual running charges}}{(1 - \\text{loss})\\,E_{gen}}$",
+   "used": [
+    {
+     "label": "20-21 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=41"
+    }
+   ]
+  },
+  {
+   "topic": "sharing",
+   "subtopic": "Incremental rates",
+   "title": "Heat rate",
+   "eq": "$\\dfrac{I}{P}$",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "sharing",
+   "subtopic": "Incremental rates",
+   "title": "Incremental heat rate",
+   "eq": "$\\dfrac{dI}{dP}$; in money $\\dfrac{dF}{dP}$ (Tk/MWh)",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "sharing",
+   "subtopic": "Incremental rates",
+   "title": "**Economic sharing**",
+   "eq": "$\\dfrac{dI_1}{dP_1} = \\dfrac{dI_2}{dP_2} = \\cdots = \\lambda$, $\\;\\sum P_i = P$",
+   "used": [
+    {
+     "label": "20-21 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "sharing",
+   "subtopic": "Two units",
+   "title": "Two linear units",
+   "eq": "$P_A = \\dfrac{a_B P + b_B - b_A}{a_A + a_B}$",
+   "used": [
+    {
+     "label": "20-21 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=21"
+    }
+   ]
+  },
+  {
+   "topic": "sharing",
+   "subtopic": "Two units",
+   "title": "**Cost of moving load**",
+   "eq": "$\\Delta F = \\displaystyle\\int_{P_1}^{P_2}\\frac{dF}{dP}\\,dP = \\tfrac{a}{2}(P_2^2 - P_1^2) + b(P_2 - P_1)$",
+   "used": [
+    {
+     "label": "20-21 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=21"
+    }
+   ]
+  },
+  {
+   "topic": "steam",
+   "subtopic": "Boiler efficiency",
+   "title": "Heat from the coal",
+   "eq": "$Q_{in} = m_f\\,C$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "steam",
+   "subtopic": "Boiler efficiency",
+   "title": "**Boiler efficiency**",
+   "eq": "$\\eta_{boiler} = \\dfrac{m_w(h - h_f)}{m_f\\,C}$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "steam",
+   "subtopic": "Boiler efficiency",
+   "title": "**Economiser efficiency**",
+   "eq": "$\\eta_{eco} = \\dfrac{m_w c_w (t_2 - t_1)}{m_g c_{pg}(t_g - t_a)}$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "steam",
+   "subtopic": "Boiler efficiency",
+   "title": "**Whole boiler plant**",
+   "eq": "$\\eta_{plant} = \\dfrac{m_w(h - c_w t_1)}{m_f\\,C}$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "steam",
+   "subtopic": "Boiler efficiency",
+   "title": "Gas temperature drop",
+   "eq": "$\\Delta t_g = \\dfrac{m_w c_w(t_2 - t_1)}{m_g c_{pg}}$",
+   "used": [
+    {
+     "label": "20-21 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "hydro",
+   "subtopic": "Turbines",
+   "title": "**Water power**",
+   "eq": "$P = \\rho g Q H$ (W); output $= \\eta\\,\\rho g Q H$",
+   "used": [
+    {
+     "label": "20-21 4(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=35"
+    }
+   ]
+  }
+ ]
+}
