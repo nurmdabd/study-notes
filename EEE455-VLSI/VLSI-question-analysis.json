@@ -2,81 +2,570 @@
  "subject": "EEE455",
  "title": "VLSI Design and Testing",
  "sessions": [
-  "2019-20",
-  "2020-21"
+  "2020-21",
+  "2019-20"
  ],
  "topics": [
   {
    "id": "mos",
    "title": "MOS transistor theory",
    "book": "Weste Ch. 2; Kang Ch. 3",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$C_{ox}$",
+     "meaning": "gate capacitance per area (F/m$^2$)"
+    },
+    {
+     "symbol": "$t_{ox}$",
+     "meaning": "oxide thickness (m)"
+    },
+    {
+     "symbol": "$\\varepsilon_{ox}$",
+     "meaning": "permittivity of SiO$_2$, $3.9\\varepsilon_0$ (F/m)"
+    },
+    {
+     "symbol": "$\\mu$",
+     "meaning": "mobility (m$^2$/V·s)"
+    },
+    {
+     "symbol": "$W$, $L$",
+     "meaning": "width, length (m)"
+    },
+    {
+     "symbol": "$\\eta$",
+     "meaning": "DIBL coefficient (about 0.1)"
+    },
+    {
+     "symbol": "$v_T = kT/q$",
+     "meaning": "25.9 mV at 300 K"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "slope factor (1.3–1.5)"
+    },
+    {
+     "symbol": "$C_0$",
+     "meaning": "full gate capacitance (F)"
+    },
+    {
+     "symbol": "$W$",
+     "meaning": "gate width (m)"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "gate length (m)"
+    },
+    {
+     "symbol": "$C_{gb}$",
+     "meaning": "gate–body capacitance (F)"
+    },
+    {
+     "symbol": "$C_{gs}$",
+     "meaning": "gate–source capacitance (F)"
+    },
+    {
+     "symbol": "$C_{gd}$",
+     "meaning": "gate–drain capacitance (F)"
+    }
+   ]
   },
   {
    "id": "inverter",
    "title": "CMOS inverter",
    "book": "Weste Ch. 2; Kang Ch. 5, 6",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$NM_L$",
+     "meaning": "low noise margin (V)"
+    },
+    {
+     "symbol": "$NM_H$",
+     "meaning": "high noise margin (V)"
+    },
+    {
+     "symbol": "$V_{IL}$",
+     "meaning": "lower unity-gain input (V)"
+    },
+    {
+     "symbol": "$V_{IH}$",
+     "meaning": "upper unity-gain input (V)"
+    },
+    {
+     "symbol": "$V_{OH}$",
+     "meaning": "output high voltage (V)"
+    },
+    {
+     "symbol": "$V_M$",
+     "meaning": "input where $V_{out} = V_{in}$ (V)"
+    },
+    {
+     "symbol": "$\\beta_n/\\beta_p$",
+     "meaning": "beta ratio"
+    },
+    {
+     "symbol": "$g_u$",
+     "meaning": "logical effort, rising output"
+    },
+    {
+     "symbol": "$g_d$",
+     "meaning": "logical effort, falling output"
+    }
+   ]
   },
   {
    "id": "fab",
    "title": "Fabrication",
    "book": "Weste Ch. 3; Plummer Ch. 4, 5, 7, 8, 10",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$r$",
+     "meaning": "etch rate of each layer (nm/min)"
+    },
+    {
+     "symbol": "$\\lambda$",
+     "meaning": "wavelength (m)"
+    },
+    {
+     "symbol": "$NA$",
+     "meaning": "numerical aperture"
+    },
+    {
+     "symbol": "$k_1$",
+     "meaning": "process factor"
+    }
+   ]
   },
   {
    "id": "delay",
    "title": "Delay and logical effort",
    "book": "Weste Ch. 4",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$R_i$",
+     "meaning": "resistance shared with the path to node $i$"
+    },
+    {
+     "symbol": "$h$",
+     "meaning": "number of NAND3 loads; electrical effort, $C_{out}/C_{in}$"
+    },
+    {
+     "symbol": "$g$",
+     "meaning": "logical effort"
+    },
+    {
+     "symbol": "$p$",
+     "meaning": "parasitic delay ($\\tau$)"
+    },
+    {
+     "symbol": "$d$",
+     "meaning": "delay of one gate ($\\tau$)"
+    },
+    {
+     "symbol": "$C_{off}$",
+     "meaning": "load off the path"
+    },
+    {
+     "symbol": "$F$",
+     "meaning": "path effort"
+    },
+    {
+     "symbol": "$G$",
+     "meaning": "path logical effort"
+    },
+    {
+     "symbol": "$B$",
+     "meaning": "path branching effort"
+    },
+    {
+     "symbol": "$H$",
+     "meaning": "path electrical effort"
+    },
+    {
+     "symbol": "$b_i$",
+     "meaning": "branching of stage $i$"
+    },
+    {
+     "symbol": "$N$",
+     "meaning": "number of stages"
+    },
+    {
+     "symbol": "$C_{in,i}$",
+     "meaning": "input capacitance of stage $i$"
+    },
+    {
+     "symbol": "$C_{out,i}$",
+     "meaning": "load of stage $i$"
+    },
+    {
+     "symbol": "$t_{D,i}$",
+     "meaning": "delay from the input to node $i$ (s)"
+    },
+    {
+     "symbol": "$C_k$",
+     "meaning": "capacitance at node $k$ (F)"
+    },
+    {
+     "symbol": "$R_{ik}$",
+     "meaning": "resistance shared by the paths to $i$ and $k$ (Ω)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "number of inputs"
+    },
+    {
+     "symbol": "$\\hat D$",
+     "meaning": "least path delay ($\\tau$)"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "sum of parasitic delays ($\\tau$)"
+    },
+    {
+     "symbol": "$\\hat f$",
+     "meaning": "best stage effort"
+    },
+    {
+     "symbol": "$W_n$",
+     "meaning": "nMOS width"
+    },
+    {
+     "symbol": "$W_p$",
+     "meaning": "pMOS width for equal rise and fall"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "transistors in series on the path"
+    },
+    {
+     "symbol": "$W_{unit}$",
+     "meaning": "width in the unit inverter"
+    },
+    {
+     "symbol": "$R_{unit}$",
+     "meaning": "resistance of the unit transistor (Ω)"
+    },
+    {
+     "symbol": "$W_j$",
+     "meaning": "width of transistor $j$ on the path"
+    }
+   ]
   },
   {
    "id": "power",
    "title": "Power",
    "book": "Weste Ch. 5",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$V_x$",
+     "meaning": "middle node of two OFF nMOS (V)"
+    },
+    {
+     "symbol": "$\\alpha$",
+     "meaning": "activity factor"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "switched capacitance (F)"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "clock frequency (Hz)"
+    },
+    {
+     "symbol": "$t_{pd}$",
+     "meaning": "propagation delay (s)"
+    },
+    {
+     "symbol": "$C_L$",
+     "meaning": "load capacitance (F)"
+    },
+    {
+     "symbol": "$I_{sat}$",
+     "meaning": "saturation current (A)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "energy taken from the supply (J)"
+    },
+    {
+     "symbol": "$E_C$",
+     "meaning": "energy in the charged load (J)"
+    },
+    {
+     "symbol": "$P_{dynamic}$",
+     "meaning": "switching power (W)"
+    },
+    {
+     "symbol": "$P_{static}$",
+     "meaning": "static power (W)"
+    },
+    {
+     "symbol": "$I_{static}$",
+     "meaning": "leakage or contention current (A)"
+    }
+   ]
   },
   {
    "id": "wires",
    "title": "Interconnect",
    "book": "Weste Ch. 6",
-   "tier": "Likely"
+   "tier": "Likely",
+   "symbols": [
+    {
+     "symbol": "$C_{adj}$",
+     "meaning": "coupling capacitance"
+    },
+    {
+     "symbol": "$C_{gnd}$",
+     "meaning": "capacitance to ground"
+    },
+    {
+     "symbol": "$\\tau$",
+     "meaning": "RC time constant of each wire"
+    },
+    {
+     "symbol": "$k_M$",
+     "meaning": "0 (same), 1 (quiet), 2 (opposite)"
+    },
+    {
+     "symbol": "$\\rho$",
+     "meaning": "resistivity ($\\Omega$·m)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "thickness"
+    },
+    {
+     "symbol": "$l$",
+     "meaning": "length"
+    },
+    {
+     "symbol": "$w$",
+     "meaning": "width"
+    }
+   ]
   },
   {
    "id": "scaling",
    "title": "Scaling",
    "book": "Weste Ch. 7",
-   "tier": "Likely"
+   "tier": "Likely",
+   "symbols": []
   },
   {
    "id": "logic",
    "title": "Combinational logic styles",
    "book": "Weste Ch. 9",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$k$",
+     "meaning": "device transconductance (A/V$^2$)"
+    },
+    {
+     "symbol": "$k'$",
+     "meaning": "process transconductance (A/V$^2$)"
+    },
+    {
+     "symbol": "$\\mu$",
+     "meaning": "carrier mobility (m$^2$/V·s)"
+    },
+    {
+     "symbol": "$I_D$",
+     "meaning": "drain current (A)"
+    },
+    {
+     "symbol": "$V_{GS}$",
+     "meaning": "gate–source voltage (V)"
+    },
+    {
+     "symbol": "$V_{DS}$",
+     "meaning": "drain–source voltage (V)"
+    },
+    {
+     "symbol": "$V_T$",
+     "meaning": "threshold voltage (V)"
+    },
+    {
+     "symbol": "$V_{T0}$",
+     "meaning": "threshold at $V_{SB} = 0$ (V)"
+    },
+    {
+     "symbol": "$\\gamma$",
+     "meaning": "body-effect coefficient (V$^{1/2}$)"
+    },
+    {
+     "symbol": "$\\phi_F$",
+     "meaning": "Fermi potential (V)"
+    },
+    {
+     "symbol": "$V_{SB}$",
+     "meaning": "source–body voltage (V)"
+    },
+    {
+     "symbol": "$V_{OL}$",
+     "meaning": "output low voltage (V)"
+    },
+    {
+     "symbol": "$V_{DD}$",
+     "meaning": "supply voltage (V)"
+    },
+    {
+     "symbol": "$k_n$",
+     "meaning": "driver gain factor (A/V$^2$)"
+    },
+    {
+     "symbol": "$k_p$",
+     "meaning": "load gain factor (A/V$^2$)"
+    },
+    {
+     "symbol": "$(W/L)_n$",
+     "meaning": "driver aspect ratio"
+    },
+    {
+     "symbol": "$(W/L)_p$",
+     "meaning": "load aspect ratio"
+    },
+    {
+     "symbol": "$K$",
+     "meaning": "key in"
+    },
+    {
+     "symbol": "$B$",
+     "meaning": "belt fastened"
+    },
+    {
+     "symbol": "$D$",
+     "meaning": "door closed"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "select input"
+    },
+    {
+     "symbol": "$D_0$, $D_1$",
+     "meaning": "data inputs"
+    }
+   ]
   },
   {
    "id": "seq",
    "title": "Sequential circuits and timing",
    "book": "Weste Ch. 10",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$t_{pcq}$",
+     "meaning": "clock-to-Q propagation"
+    },
+    {
+     "symbol": "$t_{pd}$",
+     "meaning": "longest logic delay"
+    },
+    {
+     "symbol": "$t_{ccq}$",
+     "meaning": "clock-to-Q contamination"
+    },
+    {
+     "symbol": "$t_{cd}$",
+     "meaning": "shortest logic delay"
+    },
+    {
+     "symbol": "$t_{data,max}$",
+     "meaning": "latest arrival at the capturing D (s)"
+    },
+    {
+     "symbol": "$t_{clk1,max}$",
+     "meaning": "latest launch clock (s)"
+    },
+    {
+     "symbol": "$t_{clk\\text{-}q,max}$",
+     "meaning": "largest clock-to-Q delay (s)"
+    },
+    {
+     "symbol": "$t_{logic,max}$",
+     "meaning": "largest logic and wire delay (s)"
+    },
+    {
+     "symbol": "$t_{setup}$",
+     "meaning": "setup time (s)"
+    },
+    {
+     "symbol": "$T$",
+     "meaning": "clock period (s)"
+    },
+    {
+     "symbol": "$t_{clk2,min}$",
+     "meaning": "earliest capture clock (s)"
+    },
+    {
+     "symbol": "$t_{data,min}$",
+     "meaning": "earliest arrival at the capturing D (s)"
+    },
+    {
+     "symbol": "$t_{clk2,max}$",
+     "meaning": "latest capture clock (s)"
+    },
+    {
+     "symbol": "$t_{hold}$",
+     "meaning": "hold time (s)"
+    },
+    {
+     "symbol": "$T_{min}$",
+     "meaning": "least period meeting setup (s)"
+    },
+    {
+     "symbol": "$S_1S_0$",
+     "meaning": "state bits"
+    },
+    {
+     "symbol": "$y$",
+     "meaning": "counter output"
+    }
+   ]
   },
   {
    "id": "datapath",
    "title": "Datapath",
    "book": "Weste Ch. 11",
-   "tier": "Likely"
+   "tier": "Likely",
+   "symbols": []
   },
   {
    "id": "memory",
    "title": "Memories and arrays",
    "book": "Weste Ch. 12",
-   "tier": "Must know"
+   "tier": "Must know",
+   "symbols": [
+    {
+     "symbol": "$C_{bit}$",
+     "meaning": "bit-line capacitance (F)"
+    },
+    {
+     "symbol": "$\\Delta V$",
+     "meaning": "swing needed (V)"
+    },
+    {
+     "symbol": "$I_{cell}$",
+     "meaning": "cell read current (A)"
+    },
+    {
+     "symbol": "$A$, $B$",
+     "meaning": "inputs"
+    }
+   ]
   },
   {
    "id": "hdl",
    "title": "Verilog and design flow",
    "book": "Weste Appendix A",
-   "tier": "Likely"
+   "tier": "Likely",
+   "symbols": []
   }
  ],
  "questions": [
@@ -105,6 +594,34 @@
    "marks": 6.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=14",
    "text": "What is RCA clean? What are the steps? What contaminants can be removed in this process?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(c)",
+   "label": "20-21 5(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "fab",
+   "subtopic": "Lithography",
+   "type": "theory",
+   "marks": 2.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=64",
+   "text": "Explain the following: (i) positive mask, (ii) negative mask, (iii) positive photoresist and (iv) negative photoresist.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(d)",
+   "label": "20-21 5(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "fab",
+   "subtopic": "Lithography",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=65",
+   "text": "Describe the process sequence for patterning SiO$_2$ as illustrated in the figure 5(d).",
    "repeat_of": "",
    "outline": ""
   },
@@ -207,6 +724,34 @@
    "outline": ""
   },
   {
+   "id": "2020-21-1(d)",
+   "label": "20-21 1(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "delay",
+   "subtopic": "Path delay",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22",
+   "text": "Estimate the minimum delay of the path from $A$ to $B$ in Figure 1(d) and choose transistor sizes to achieve this delay. The initial NAND2 gate may present a load of 8 $\\lambda$ of transistor width on the input and the output load is equivalent to 45 $\\lambda$ of transistor width.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(c)",
+   "label": "20-21 2(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "delay",
+   "subtopic": "Path delay",
+   "type": "design",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=32",
+   "text": "Design an 8-input AND gate using FO4 in different configurations. Determine which configuration provides the fastest performance.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2019-20-3(b)",
    "label": "19-20 3(b)",
    "session": "2019-20",
@@ -275,6 +820,34 @@
    "text": "Define glitch? How does it increase power consumption? How it can be reduced?",
    "repeat_of": "",
    "outline": ""
+  },
+  {
+   "id": "2020-21-2(d)",
+   "label": "20-21 2(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "power",
+   "subtopic": "Dynamic power",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=34",
+   "text": "Write short note on –i) Static power dissipation ii) Dynamic power dissipation.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(c)",
+   "label": "20-21 3(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "power",
+   "subtopic": "Dynamic power",
+   "type": "derivation",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44",
+   "text": "Show that the dynamic power dissipation of a CMOS inverter varies directly with square of the power supply voltage whereas the delay of the circuit varies inversely with the power supply voltage.",
+   "repeat_of": "",
+   "outline": "Add the energy per cycle for dynamic power; divide the capacitor charge by the saturation current for delay."
   },
   {
    "id": "2019-20-4(c)",
@@ -347,6 +920,20 @@
    "outline": ""
   },
   {
+   "id": "2020-21-3(a)",
+   "label": "20-21 3(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Static gates",
+   "type": "design",
+   "marks": 0.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=39",
+   "text": "You have to design a car alarm system in which the alarm will ring (Y= 1) if anyone of the following condition is satisfied. (i) The key is in (K= 1), The Seat belt is fastened (B=1) and the door is open (D=0) or (ii) The key is in, Door is closed and Seat belt is not fastened.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2019-20-5(c)",
    "label": "19-20 5(c)",
    "session": "2019-20",
@@ -375,6 +962,20 @@
    "outline": ""
   },
   {
+   "id": "2020-21-2(e)",
+   "label": "20-21 2(e)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Dynamic logic",
+   "type": "theory",
+   "marks": 3.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=35",
+   "text": "What is domino gate? Draw the circuit diagram of a domino OR gate.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2019-20-6(a)",
    "label": "19-20 6(a)",
    "session": "2019-20",
@@ -389,6 +990,20 @@
    "outline": ""
   },
   {
+   "id": "2020-21-1(c)",
+   "label": "20-21 1(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Stick diagrams",
+   "type": "diagram",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=19",
+   "text": "Draw the schematic and stick diagram of the circuit implementing the logic $Y = \\overline{(A + B + C) \\cdot D}$",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2019-20-6(b)",
    "label": "19-20 6(b)",
    "session": "2019-20",
@@ -399,6 +1014,20 @@
    "marks": 6.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58",
    "text": "Draw the stick diagram of the following Boolean function: $f = (A + B).(C + D)$ with their symbolic diagram and truth table.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(a)",
+   "label": "20-21 5(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "memory",
+   "subtopic": "SRAM",
+   "type": "diagram",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=58",
+   "text": "(i) Show the circuit diagram of a 2 x 2 SRAM array which uses 6-transistor memory cell as basic storage cell. Clearly show the row select, column select, pre-charge and sense signal in your circuit. (ii) Explain how the READ and WRITE operation are performed showing the second row and first column cell as an example. (iii) Explain how sense amplifier reduces the READ time of the cell.",
    "repeat_of": "",
    "outline": ""
   },
@@ -459,34 +1088,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-1(c)",
-   "label": "20-21 1(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Stick diagrams",
-   "type": "diagram",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=19",
-   "text": "Draw the schematic and stick diagram of the circuit implementing the logic $Y = \\overline{(A + B + C) \\cdot D}$",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-1(d)",
-   "label": "20-21 1(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "delay",
-   "subtopic": "Path delay",
-   "type": "numerical",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22",
-   "text": "Estimate the minimum delay of the path from $A$ to $B$ in Figure 1(d) and choose transistor sizes to achieve this delay. The initial NAND2 gate may present a load of 8 $\\lambda$ of transistor width on the input and the output load is equivalent to 45 $\\lambda$ of transistor width.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-1(e)",
    "label": "20-21 1(e)",
    "session": "2020-21",
@@ -529,62 +1130,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-2(c)",
-   "label": "20-21 2(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "delay",
-   "subtopic": "Path delay",
-   "type": "design",
-   "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=32",
-   "text": "Design an 8-input AND gate using FO4 in different configurations. Determine which configuration provides the fastest performance.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-2(d)",
-   "label": "20-21 2(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "power",
-   "subtopic": "Dynamic power",
-   "type": "theory",
-   "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=34",
-   "text": "Write short note on –i) Static power dissipation ii) Dynamic power dissipation.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-2(e)",
-   "label": "20-21 2(e)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Dynamic logic",
-   "type": "theory",
-   "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=35",
-   "text": "What is domino gate? Draw the circuit diagram of a domino OR gate.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-3(a)",
-   "label": "20-21 3(a)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Static gates",
-   "type": "design",
-   "marks": 0.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=39",
-   "text": "You have to design a car alarm system in which the alarm will ring (Y= 1) if anyone of the following condition is satisfied. (i) The key is in (K= 1), The Seat belt is fastened (B=1) and the door is open (D=0) or (ii) The key is in, Door is closed and Seat belt is not fastened.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-3(b)",
    "label": "20-21 3(b)",
    "session": "2020-21",
@@ -597,20 +1142,6 @@
    "text": "For the logic function $Y = \\overline{(A + BC) \\cdot D}$, choose transistor widths to achieve equal rise and fall resistance as a unit inverter. Assume, $\\mu_n = 3\\mu_p$",
    "repeat_of": "",
    "outline": ""
-  },
-  {
-   "id": "2020-21-3(c)",
-   "label": "20-21 3(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "power",
-   "subtopic": "Dynamic power",
-   "type": "derivation",
-   "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44",
-   "text": "Show that the dynamic power dissipation of a CMOS inverter varies directly with square of the power supply voltage whereas the delay of the circuit varies inversely with the power supply voltage.",
-   "repeat_of": "",
-   "outline": "Add the energy per cycle for dynamic power; divide the capacitor charge by the saturation current for delay."
   },
   {
    "id": "2020-21-3(d)",
@@ -655,6 +1186,20 @@
    "outline": ""
   },
   {
+   "id": "2020-21-6(f)",
+   "label": "20-21 6(f)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "seq",
+   "subtopic": "Flip-flops",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=75",
+   "text": "Fill in the truth table for the flip flop shown in Figure 6(f). Is this a positive edge triggered flip flop?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-4(c)",
    "label": "20-21 4(c)",
    "session": "2020-21",
@@ -683,16 +1228,16 @@
    "outline": ""
   },
   {
-   "id": "2020-21-5(a)",
-   "label": "20-21 5(a)",
+   "id": "2020-21-6(a)",
+   "label": "20-21 6(a)",
    "session": "2020-21",
    "term_test": false,
-   "topic": "memory",
-   "subtopic": "SRAM",
+   "topic": "logic",
+   "subtopic": "Pass transistors",
    "type": "diagram",
-   "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=58",
-   "text": "(i) Show the circuit diagram of a 2 x 2 SRAM array which uses 6-transistor memory cell as basic storage cell. Clearly show the row select, column select, pre-charge and sense signal in your circuit. (ii) Explain how the READ and WRITE operation are performed showing the second row and first column cell as an example. (iii) Explain how sense amplifier reduces the READ time of the cell.",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=68",
+   "text": "Design a 2-to-1 multiplexer using pass transistor logic. Mention its working procedure.",
    "repeat_of": "",
    "outline": ""
   },
@@ -711,48 +1256,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-5(c)",
-   "label": "20-21 5(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "fab",
-   "subtopic": "Lithography",
-   "type": "theory",
-   "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=64",
-   "text": "Explain the following: (i) positive mask, (ii) negative mask, (iii) positive photoresist and (iv) negative photoresist.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-5(d)",
-   "label": "20-21 5(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "fab",
-   "subtopic": "Lithography",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=65",
-   "text": "Describe the process sequence for patterning SiO$_2$ as illustrated in the figure 5(d).",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-6(a)",
-   "label": "20-21 6(a)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Pass transistors",
-   "type": "diagram",
-   "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=68",
-   "text": "Design a 2-to-1 multiplexer using pass transistor logic. Mention its working procedure.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-6(b)",
    "label": "20-21 6(b)",
    "session": "2020-21",
@@ -763,20 +1266,6 @@
    "marks": 5.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=70",
    "text": "Design a 7-segment display driver in Verilog.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-6(c)",
-   "label": "20-21 6(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "seq",
-   "subtopic": "FSM",
-   "type": "design",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=71",
-   "text": "You have to design a divide-by-3 counter using FSM. (i) Draw the state transition diagram of the finite state machine described. (ii) Derive the state transition table and equations for the next-state logic. (iii) Draw the complete FSM circuit.",
    "repeat_of": "",
    "outline": ""
   },
@@ -795,6 +1284,20 @@
    "outline": ""
   },
   {
+   "id": "2020-21-6(c)",
+   "label": "20-21 6(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "seq",
+   "subtopic": "FSM",
+   "type": "design",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=71",
+   "text": "You have to design a divide-by-3 counter using FSM. (i) Draw the state transition diagram of the finite state machine described. (ii) Derive the state transition table and equations for the next-state logic. (iii) Draw the complete FSM circuit.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
    "id": "2020-21-6(e)",
    "label": "20-21 6(e)",
    "session": "2020-21",
@@ -807,20 +1310,6 @@
    "text": "Sketch a dot diagram for a 2-input XOR using a PLA.",
    "repeat_of": "",
    "outline": ""
-  },
-  {
-   "id": "2020-21-6(f)",
-   "label": "20-21 6(f)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "seq",
-   "subtopic": "Flip-flops",
-   "type": "theory",
-   "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=75",
-   "text": "Fill in the truth table for the flip flop shown in Figure 6(f). Is this a positive edge triggered flip flop?",
-   "repeat_of": "",
-   "outline": ""
   }
  ],
  "formulas": [
@@ -831,12 +1320,12 @@
    "eq": "$C_{ox} = \\dfrac{\\varepsilon_{ox}}{t_{ox}}$",
    "used": [
     {
-     "label": "19-20 2(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22"
-    },
-    {
      "label": "20-21 1(a)",
      "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=13"
+    },
+    {
+     "label": "19-20 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22"
     }
    ]
   },
@@ -1003,12 +1492,12 @@
    "eq": "$NM_L = V_{IL} - V_{OL},\\; NM_H = V_{OH} - V_{IH}$",
    "used": [
     {
-     "label": "19-20 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31"
-    },
-    {
      "label": "20-21 2(b)",
      "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=30"
+    },
+    {
+     "label": "19-20 3(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31"
     }
    ]
   },
@@ -1223,12 +1712,12 @@
    "eq": "$d = gh + p$",
    "used": [
     {
-     "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
-    },
-    {
      "label": "20-21 1(d)",
      "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+    },
+    {
+     "label": "19-20 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
     }
    ]
   },
@@ -1263,12 +1752,12 @@
    "eq": "$F = GBH,\\; G = \\prod g_i,\\; B = \\prod b_i,\\; H = \\dfrac{C_{out}}{C_{in}}$",
    "used": [
     {
-     "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
-    },
-    {
      "label": "20-21 1(d)",
      "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+    },
+    {
+     "label": "19-20 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
     }
    ]
   },
@@ -1291,12 +1780,12 @@
    "eq": "$C_{in,i} = \\dfrac{g_i C_{out,i}}{\\hat f}$",
    "used": [
     {
-     "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
-    },
-    {
      "label": "20-21 1(d)",
      "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+    },
+    {
+     "label": "19-20 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
     }
    ]
   },
