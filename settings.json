@@ -20,30 +20,7 @@
   ],
   "hidden": {
     "subjects": [],
-    "items": [
-      "EEE475-question-analysis",
-      "EEE475-2020-21-question-paper",
-      "EEE475-2019-20-question-paper",
-      "EEE475-2018-19-pack",
-      "EEE475-2018-19-question-paper",
-      "EEE455-question-analysis",
-      "EEE455-2020-21-question-paper",
-      "EEE455-2019-20-question-paper",
-      "EEE421-question-analysis",
-      "EEE421-2020-21-question-paper",
-      "EEE459-question-analysis",
-      "EEE459-2020-21-question-paper",
-      "EEE443-question-analysis",
-      "EEE443-2020-21-question-paper",
-      "EEE337-question-analysis",
-      "EEE337-2021-22-question-paper",
-      "EEE337-2020-21-question-paper",
-      "EEE329-question-analysis",
-      "EEE329-2021-22-question-paper",
-      "EEE329-2020-21-pack",
-      "EEE329-2020-21-question-paper",
-      "EEE339-question-analysis"
-    ]
+    "items": []
   },
   "subject_order": [
     "EEE475",
