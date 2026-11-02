@@ -125,6 +125,11 @@ html { scroll-padding-top: 70px; }
 /* a wide card: two lines beside the buttons; a narrow card: the buttons go below. "Updated" stays on the first line;
    in a very narrow card it follows the price tags, on their line if it fits, else on a new line. */
 .subject { container-type: inline-size; }
+.pack .updated { font-size: 0.74rem; }
+/* the dot sits in the gap before "Updated"; if "Updated" wraps to its own line, the dot is clipped */
+.info-line:first-child { overflow: hidden; }
+.updated.wide { position: relative; }
+.updated.wide::before { content: "·"; position: absolute; left: -7px; }
 .updated.narrow { display: none; }
 @container (max-width: 640px) { .pack { flex-wrap: wrap; gap: 8px; } .pack .info { flex: 1 1 100%; } .actions-row { margin-left: auto; } }
 @container (max-width: 300px) { .updated.wide { display: none; } .updated.narrow { display: inline; } }
