@@ -3,7 +3,8 @@
  "title": "VLSI Design and Testing",
  "sessions": [
   "2020-21",
-  "2019-20"
+  "2019-20",
+  "2018-19"
  ],
  "topics": [
   {
@@ -12,6 +13,18 @@
    "book": "Weste Ch. 2; Kang Ch. 3",
    "tier": "Must know",
    "symbols": [
+    {
+     "symbol": "$\\phi_{GC}$",
+     "meaning": "work-function difference"
+    },
+    {
+     "symbol": "$Q_{ox}$",
+     "meaning": "oxide charge"
+    },
+    {
+     "symbol": "$A$, $B$",
+     "meaning": "technology constants"
+    },
     {
      "symbol": "$C_{ox}$",
      "meaning": "gate capacitance per area (F/m$^2$)"
@@ -77,6 +90,10 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$V_{TL}$",
+     "meaning": "load threshold, with body effect"
+    },
+    {
      "symbol": "$NM_L$",
      "meaning": "low noise margin (V)"
     },
@@ -117,12 +134,20 @@
   {
    "id": "fab",
    "title": "Fabrication",
-   "book": "Weste Ch. 3; Plummer Ch. 4, 5, 7, 8, 10",
+   "book": "Weste Ch. 3; Plummer Ch. 4, 5, 6, 7, 8, 9, 10",
    "tier": "Must know",
    "symbols": [
     {
-     "symbol": "$r$",
-     "meaning": "etch rate of each layer (nm/min)"
+     "symbol": "$C^*$",
+     "meaning": "oxidant solubility"
+    },
+    {
+     "symbol": "$D$",
+     "meaning": "diffusivity in SiO$_2$"
+    },
+    {
+     "symbol": "$k_S$",
+     "meaning": "interface rate constant"
     },
     {
      "symbol": "$\\lambda$",
@@ -135,6 +160,10 @@
     {
      "symbol": "$k_1$",
      "meaning": "process factor"
+    },
+    {
+     "symbol": "$r$",
+     "meaning": "etch rate of each layer (nm/min)"
     }
    ]
   },
@@ -144,14 +173,6 @@
    "book": "Weste Ch. 4",
    "tier": "Must know",
    "symbols": [
-    {
-     "symbol": "$R_i$",
-     "meaning": "resistance shared with the path to node $i$"
-    },
-    {
-     "symbol": "$h$",
-     "meaning": "number of NAND3 loads; electrical effort, $C_{out}/C_{in}$"
-    },
     {
      "symbol": "$g$",
      "meaning": "logical effort"
@@ -165,8 +186,16 @@
      "meaning": "delay of one gate ($\\tau$)"
     },
     {
+     "symbol": "$h$",
+     "meaning": "electrical effort, $C_{out}/C_{in}$; number of NAND3 loads"
+    },
+    {
      "symbol": "$C_{off}$",
      "meaning": "load off the path"
+    },
+    {
+     "symbol": "$R_i$",
+     "meaning": "resistance shared with the path to node $i$"
     },
     {
      "symbol": "$F$",
@@ -261,20 +290,24 @@
    "tier": "Must know",
    "symbols": [
     {
-     "symbol": "$V_x$",
-     "meaning": "middle node of two OFF nMOS (V)"
-    },
-    {
      "symbol": "$\\alpha$",
      "meaning": "activity factor"
     },
     {
-     "symbol": "$C$",
-     "meaning": "switched capacitance (F)"
-    },
-    {
      "symbol": "$f$",
      "meaning": "clock frequency (Hz)"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "probability the node is 1"
+    },
+    {
+     "symbol": "$V_x$",
+     "meaning": "middle node of two OFF nMOS (V)"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "switched capacitance (F)"
     },
     {
      "symbol": "$t_{pd}$",
@@ -314,7 +347,7 @@
    "id": "wires",
    "title": "Interconnect",
    "book": "Weste Ch. 6",
-   "tier": "Likely",
+   "tier": "Less often",
    "symbols": [
     {
      "symbol": "$C_{adj}$",
@@ -562,7 +595,7 @@
   },
   {
    "id": "hdl",
-   "title": "Verilog and design flow",
+   "title": "Verilog, VHDL and design flow",
    "book": "Weste Appendix A",
    "tier": "Likely",
    "symbols": []
@@ -584,88 +617,186 @@
    "outline": ""
   },
   {
-   "id": "2019-20-1(b)",
-   "label": "19-20 1(b)",
-   "session": "2019-20",
+   "id": "2018-19-1(a)",
+   "label": "18-19 1(a)",
+   "session": "2018-19",
    "term_test": false,
    "topic": "fab",
-   "subtopic": "Cleaning",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=14",
-   "text": "What is RCA clean? What are the steps? What contaminants can be removed in this process?",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-5(c)",
-   "label": "20-21 5(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "fab",
-   "subtopic": "Lithography",
-   "type": "theory",
-   "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=64",
-   "text": "Explain the following: (i) positive mask, (ii) negative mask, (iii) positive photoresist and (iv) negative photoresist.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-5(d)",
-   "label": "20-21 5(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "fab",
-   "subtopic": "Lithography",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=65",
-   "text": "Describe the process sequence for patterning SiO$_2$ as illustrated in the figure 5(d).",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2019-20-1(c)",
-   "label": "19-20 1(c)",
-   "session": "2019-20",
-   "term_test": false,
-   "topic": "fab",
-   "subtopic": "Lithography",
-   "type": "theory",
-   "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=16",
-   "text": "Define photolithography. briefly describe the major steps involved in photolithography.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2019-20-1(d)",
-   "label": "19-20 1(d)",
-   "session": "2019-20",
-   "term_test": false,
-   "topic": "mos",
-   "subtopic": "Leakage and DIBL",
+   "subtopic": "Etching",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=18",
-   "text": "Explain the following non-idealities of MOSFET- (i) Drain induced barrier lowering, (ii) subthreshold leakage. What are the effects of temperature on these non-idealities?",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=12",
+   "text": "What are the effects of O$_2$ and H$_2$ adding on etching?",
    "repeat_of": "",
    "outline": ""
   },
   {
-   "id": "2019-20-2(a)",
-   "label": "19-20 2(a)",
-   "session": "2019-20",
+   "id": "2018-19-1(c)",
+   "label": "18-19 1(c)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "fab",
+   "subtopic": "Etching",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=17",
+   "text": "Explain how does the plasma sustain. Also explain the chemistries involved in plasma etching.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-1(b)",
+   "label": "18-19 1(b)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "fab",
+   "subtopic": "Oxidation",
+   "type": "derivation",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=14",
+   "text": "Discuss the silicon oxidation model mentioning its limiting cases.",
+   "repeat_of": "",
+   "outline": "Write the three fluxes; set them equal; find the growth speed; integrate; take the two limits."
+  },
+  {
+   "id": "2018-19-7(b)",
+   "label": "18-19 TT1 7(b)",
+   "session": "2018-19",
+   "term_test": true,
+   "topic": "fab",
+   "subtopic": "Oxidation",
+   "type": "derivation",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=70",
+   "text": "Explain the silicon oxidation model mentioning its limiting cases.",
+   "repeat_of": "",
+   "outline": "Write the three fluxes; set them equal; find the growth speed; integrate; take the two limits."
+  },
+  {
+   "id": "2018-19-1(d)",
+   "label": "18-19 1(d)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "hdl",
+   "subtopic": "VHDL",
+   "type": "design",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=19",
+   "text": "Write the VHDL code to implement the following Boolean expression: $F = AB +$ $\\overline{A}BC + BC$.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-3(a)",
+   "label": "18-19 3(a)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "hdl",
+   "subtopic": "VHDL",
+   "type": "theory",
+   "marks": 2.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=34",
+   "text": "What is VHDL? Write down the advantages of VHDL.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-2(a)",
+   "label": "18-19 2(a)",
+   "session": "2018-19",
    "term_test": false,
    "topic": "mos",
-   "subtopic": "I-V equations",
+   "subtopic": "Threshold voltage",
+   "type": "derivation",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=22",
+   "text": "Find threshold voltage of MOSFET without body effect.",
+   "repeat_of": "",
+   "outline": "Name the four voltage components; find the depletion charge; add them up."
+  },
+  {
+   "id": "2018-19-8(a)",
+   "label": "18-19 TT2 8(a)",
+   "session": "2018-19",
+   "term_test": true,
+   "topic": "mos",
+   "subtopic": "Threshold voltage",
+   "type": "derivation",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=75",
+   "text": "Find the threshold voltage of MOSFET considering the body effect.",
+   "repeat_of": "",
+   "outline": "Find the depletion charge with VSB; subtract the zero-bias case; name gamma."
+  },
+  {
+   "id": "2019-20-4(a)",
+   "label": "19-20 4(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "scaling",
+   "subtopic": "Scaling rules",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=41",
+   "text": "What is scaling? Explain how different parameters of transistors are scaled?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-2(b)",
+   "label": "18-19 2(b)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "scaling",
+   "subtopic": "Scaling rules",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=25",
+   "text": "State Moore's law. Explain how different parameters of MOSFET is scaled.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-2(c)",
+   "label": "18-19 2(c)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "inverter",
+   "subtopic": "nMOS load inverters",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=27",
+   "text": "Explain operation of saturated load NMOS inverter. What are the disadvantages of this configuration?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-3(a)",
+   "label": "19-20 3(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "inverter",
+   "subtopic": "DC characteristics",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31",
+   "text": "Using I-V characteristics curve of MOSFET, find DC characteristics of CMOS inverter.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-2(d)",
+   "label": "18-19 2(d)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "inverter",
+   "subtopic": "DC characteristics",
    "type": "derivation",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22",
-   "text": "Find the equations and I-V characteristics curve of MOSFET current using long-channel model.",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=29",
+   "text": "Find DC characteristics of CMOS inverter using V-I characteristics curve.",
    "repeat_of": "",
-   "outline": "Write the channel charge and electron speed; integrate along the channel; set the pinch-off condition."
+   "outline": "Set the two currents equal; solve each region; find VM, VIL and VIH."
   },
   {
    "id": "2019-20-2(b)",
@@ -682,44 +813,16 @@
    "outline": ""
   },
   {
-   "id": "2019-20-2(c)",
-   "label": "19-20 2(c)",
-   "session": "2019-20",
+   "id": "2018-19-3(b)",
+   "label": "18-19 3(b)",
+   "session": "2018-19",
    "term_test": false,
-   "topic": "scaling",
-   "subtopic": "Moore's law",
-   "type": "theory",
+   "topic": "delay",
+   "subtopic": "Gate delay",
+   "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=27",
-   "text": "State Moore's law. Discuss the problems that arise due to MOSFET scaling.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2019-20-2(d)",
-   "label": "19-20 2(d)",
-   "session": "2019-20",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "CVSL",
-   "type": "theory",
-   "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=29",
-   "text": "Explain the principle of cascode voltage switch logic.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2019-20-3(a)",
-   "label": "19-20 3(a)",
-   "session": "2019-20",
-   "term_test": false,
-   "topic": "inverter",
-   "subtopic": "DC characteristics",
-   "type": "theory",
-   "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31",
-   "text": "Using I-V characteristics curve of MOSFET, find DC characteristics of CMOS inverter.",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=35",
+   "text": "Sketch a 3-input NOR gate with transistor widths chosen to achieve effective rise and fall resistances equal to a unit inverter. Compute the rising and falling propagation delays of the NOR gate driving h identical NOR gates using the Elmore delay model. Assume that every source or drain has fully contacted diffusion when making your estimate of capacitance.",
    "repeat_of": "",
    "outline": ""
   },
@@ -780,44 +883,142 @@
    "outline": ""
   },
   {
-   "id": "2019-20-3(d)",
-   "label": "19-20 3(d)",
-   "session": "2019-20",
+   "id": "2018-19-3(c)",
+   "label": "18-19 3(c)",
+   "session": "2018-19",
    "term_test": false,
    "topic": "delay",
-   "subtopic": "Input ordering",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=39",
-   "text": "Explain input ordering delay effect.",
+   "subtopic": "Path delay",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=37",
+   "text": "For the circuit in figure 3c find- (i) Logical effort, G (ii) Branching effort, B (iii) Electrical effort, E (iv) Path effort, F (v) Stage effort, f (vi) Parasitic delay, P (vii) Minimum path delay, D (viii) Size of the gate.",
    "repeat_of": "",
    "outline": ""
   },
   {
-   "id": "2019-20-4(a)",
-   "label": "19-20 4(a)",
+   "id": "2018-19-8(d)",
+   "label": "18-19 TT2 8(d)",
+   "session": "2018-19",
+   "term_test": true,
+   "topic": "delay",
+   "subtopic": "Path delay",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=81",
+   "text": "Find minimum number delay *[sic: should be \"minimum delay\"]* for the logic circuit below. Also find the gate size to achieve this delay.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-3(d)",
+   "label": "18-19 3(d)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "delay",
+   "subtopic": "Best number of stages",
+   "type": "derivation",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=40",
+   "text": "Find the number of stages for minimum delay.",
+   "repeat_of": "",
+   "outline": "Write D(N); differentiate; set to zero; solve for rho; use log F to base rho."
+  },
+  {
+   "id": "2018-19-8(e)",
+   "label": "18-19 TT2 8(e)",
+   "session": "2018-19",
+   "term_test": true,
+   "topic": "delay",
+   "subtopic": "Best number of stages",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=83",
+   "text": "Find the stage effort for the ideal number of stages.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-3(a)",
+   "label": "20-21 3(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Static gates",
+   "type": "design",
+   "marks": 0.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=39",
+   "text": "You have to design a car alarm system in which the alarm will ring (Y= 1) if anyone of the following condition is satisfied. (i) The key is in (K= 1), The Seat belt is fastened (B=1) and the door is open (D=0) or (ii) The key is in, Door is closed and Seat belt is not fastened.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-5(c)",
+   "label": "19-20 5(c)",
    "session": "2019-20",
    "term_test": false,
-   "topic": "scaling",
-   "subtopic": "Scaling rules",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=41",
-   "text": "What is scaling? Explain how different parameters of transistors are scaled?",
+   "topic": "logic",
+   "subtopic": "Static gates",
+   "type": "diagram",
+   "marks": 9.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51",
+   "text": "Design a CMOS logic circuit to compute $F = AB + CD$ using (i) only NAND gates, (ii) compound gate. Choose the transistor width to achieve unit path resistance. If each input can present a maximum of 20 $\\lambda$ of transistor width, output must drive a load equivalent to 100 $\\lambda$ of transistor width, calculate the minimum delay to compute F. Which one is faster? Comment on your answer.",
    "repeat_of": "",
    "outline": ""
   },
   {
-   "id": "2019-20-4(b)",
-   "label": "19-20 4(b)",
-   "session": "2019-20",
+   "id": "2018-19-4(a)",
+   "label": "18-19 4(a)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Static gates",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=43",
+   "text": "Explain why NMOS network is not used as pull-up network.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-8(c)",
+   "label": "18-19 TT2 8(c)",
+   "session": "2018-19",
+   "term_test": true,
+   "topic": "logic",
+   "subtopic": "Static gates",
+   "type": "design",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=79",
+   "text": "Implement the following expression using CMOS logic: $Y = AB + C(A + B)$.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-4(b)",
+   "label": "18-19 4(b)",
+   "session": "2018-19",
    "term_test": false,
    "topic": "power",
-   "subtopic": "Glitches",
+   "subtopic": "Sources of power",
    "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=42",
-   "text": "Define glitch? How does it increase power consumption? How it can be reduced?",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=45",
+   "text": "What are the sources of power dissipation in CMOS logic circuit?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-4(c)",
+   "label": "18-19 4(c)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "power",
+   "subtopic": "Activity factor",
+   "type": "numerical",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=46",
+   "text": "What is activity factor? Figure 4.1 shows a 4-input AND gate built using a tree and a chain of gates. Determine the activity factors at each node in the circuit assuming the input probabilities PA = PB = PC = PD = 0.5.",
    "repeat_of": "",
    "outline": ""
   },
@@ -860,6 +1061,398 @@
    "marks": 4.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=44",
    "text": "You are synthesizing a chip composed of random logic with an average activity factor of 0.1. You are using a standard cell process with an average switching capacitance of 450 $pF/mm^2$. Estimate the dynamic power consumption of your chip if it has an area of 70 $mm^2$ and runs at 450 $MHz$ at $V_{DD}$ = 0.9 V.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-4(d)",
+   "label": "18-19 4(d)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "power",
+   "subtopic": "Dynamic power",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=48",
+   "text": "A digital system-on-chip in a 1 V 65 nm process (with 50 nm drawn channel lengths and $\\lambda$ = 25 nm) has 1 billion transistors, of which 50 million are in logic gates and the remainder in memory arrays. The average logic transistor width is 12 $\\lambda$ and the average memory transistor width is 4 $\\lambda$. The memory arrays are divided into banks and only the necessary bank is activated so the memory activity factor is 0.02. The static CMOS logic gates have an average activity factor of 0.1. Assume each transistor contributes 1 fF/Rm *[sic: should be fF/µm]* of gate capacitance and 0.8 fF/µm of diffusion capacitance. Neglect wire capacitance for now (though it could account for a large fraction of total power). **Estimate the switching power when operating at 1 GHz.** If Subthreshold leakage for OFF devices is 100 nA/µm for low-threshold devices and 10 nA/µm for high-threshold devices. Gate leakage is 5 nA/µm. Junction leakage is negligible. Memories use low-leakage devices everywhere. Logic uses low-leakage devices in all but 5% of the paths that are most critical for performance. **Estimate the static power consumption.**",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-1(c)",
+   "label": "20-21 1(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Stick diagrams",
+   "type": "diagram",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=19",
+   "text": "Draw the schematic and stick diagram of the circuit implementing the logic $Y = \\overline{(A + B + C) \\cdot D}$",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-6(b)",
+   "label": "19-20 6(b)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Stick diagrams",
+   "type": "diagram",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58",
+   "text": "Draw the stick diagram of the following Boolean function: $f = (A + B).(C + D)$ with their symbolic diagram and truth table.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-5(a)",
+   "label": "18-19 5(a)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Stick diagrams",
+   "type": "diagram",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=51",
+   "text": "Draw the stick diagram of the following Boolean function: $f = \\overline{A.B.C}$ with their symbolic diagram and truth table.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-5(b)",
+   "label": "18-19 5(b)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "inverter",
+   "subtopic": "Advantages of CMOS",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=53",
+   "text": "Write down the advantages of CMOS.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-4(a)",
+   "label": "20-21 4(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "seq",
+   "subtopic": "Setup and hold",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=49",
+   "text": "In the following circuit of Figure 4(a), determine whether there is any set up or hold time violation.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-5(c)",
+   "label": "18-19 5(c)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "seq",
+   "subtopic": "Setup and hold",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=54",
+   "text": "Explain max-delay constraint and min-delay constraint in sequential circuits.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-5(d)",
+   "label": "18-19 5(d)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "seq",
+   "subtopic": "Resettable flip-flops",
+   "type": "diagram",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=56",
+   "text": "Sketch logic circuit of flip-flop with synchronous reset and explain its operation.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-2(e)",
+   "label": "20-21 2(e)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Dynamic logic",
+   "type": "theory",
+   "marks": 3.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=35",
+   "text": "What is domino gate? Draw the circuit diagram of a domino OR gate.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-6(a)",
+   "label": "19-20 6(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Dynamic logic",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56",
+   "text": "Explain the principle of dynamic logic circuit.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-6(a)",
+   "label": "18-19 6(a)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "Dynamic logic",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=59",
+   "text": "Explain the principle of dynamic inverter.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-6(b)",
+   "label": "18-19 6(b)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "datapath",
+   "subtopic": "Adders",
+   "type": "design",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=60",
+   "text": "Design and implement full adder logic circuit.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-6(e)",
+   "label": "20-21 6(e)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "memory",
+   "subtopic": "PLA",
+   "type": "diagram",
+   "marks": 3.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=74",
+   "text": "Sketch a dot diagram for a 2-input XOR using a PLA.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-6(c)",
+   "label": "18-19 6(c)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "memory",
+   "subtopic": "PLA",
+   "type": "diagram",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=62",
+   "text": "Define PLA and PAL. Sketch a 3-input and 2-output PLA implementing the following logic expressions- $s = a\\overline{b}\\,\\overline{c} + \\overline{a}b\\overline{c} + \\overline{a}\\,\\overline{b}c + abc$, $c = ab + bc + ac$",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-6(d)",
+   "label": "18-19 6(d)",
+   "session": "2018-19",
+   "term_test": false,
+   "topic": "memory",
+   "subtopic": "DRAM",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=65",
+   "text": "Explain how data is written and read in a DRAM sub-array.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(c)",
+   "label": "20-21 5(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "fab",
+   "subtopic": "Lithography",
+   "type": "theory",
+   "marks": 2.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=64",
+   "text": "Explain the following: (i) positive mask, (ii) negative mask, (iii) positive photoresist and (iv) negative photoresist.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2020-21-5(d)",
+   "label": "20-21 5(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "fab",
+   "subtopic": "Lithography",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=65",
+   "text": "Describe the process sequence for patterning SiO$_2$ as illustrated in the figure 5(d).",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-1(c)",
+   "label": "19-20 1(c)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "fab",
+   "subtopic": "Lithography",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=16",
+   "text": "Define photolithography. briefly describe the major steps involved in photolithography.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-7(a)",
+   "label": "18-19 TT1 7(a)",
+   "session": "2018-19",
+   "term_test": true,
+   "topic": "fab",
+   "subtopic": "Lithography",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=69",
+   "text": "Briefly describe steps of photo-lithography.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-7(c)",
+   "label": "18-19 TT1 7(c)",
+   "session": "2018-19",
+   "term_test": true,
+   "topic": "fab",
+   "subtopic": "Epitaxy",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=73",
+   "text": "Briefly explain vapor phase epitaxy.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-1(d)",
+   "label": "19-20 1(d)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "mos",
+   "subtopic": "Leakage and DIBL",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=18",
+   "text": "Explain the following non-idealities of MOSFET- (i) Drain induced barrier lowering, (ii) subthreshold leakage. What are the effects of temperature on these non-idealities?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2018-19-8(b)",
+   "label": "18-19 TT2 8(b)",
+   "session": "2018-19",
+   "term_test": true,
+   "topic": "mos",
+   "subtopic": "Leakage and DIBL",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=77",
+   "text": "Briefly explain the following terms: i) Drain induced barrier lowering, ii) Gate leakage.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-1(b)",
+   "label": "19-20 1(b)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "fab",
+   "subtopic": "Cleaning",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=14",
+   "text": "What is RCA clean? What are the steps? What contaminants can be removed in this process?",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-2(a)",
+   "label": "19-20 2(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "mos",
+   "subtopic": "I-V equations",
+   "type": "derivation",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22",
+   "text": "Find the equations and I-V characteristics curve of MOSFET current using long-channel model.",
+   "repeat_of": "",
+   "outline": "Write the channel charge and electron speed; integrate along the channel; set the pinch-off condition."
+  },
+  {
+   "id": "2019-20-2(c)",
+   "label": "19-20 2(c)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "scaling",
+   "subtopic": "Moore's law",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=27",
+   "text": "State Moore's law. Discuss the problems that arise due to MOSFET scaling.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-2(d)",
+   "label": "19-20 2(d)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "logic",
+   "subtopic": "CVSL",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=29",
+   "text": "Explain the principle of cascode voltage switch logic.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-3(d)",
+   "label": "19-20 3(d)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "delay",
+   "subtopic": "Input ordering",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=39",
+   "text": "Explain input ordering delay effect.",
+   "repeat_of": "",
+   "outline": ""
+  },
+  {
+   "id": "2019-20-4(b)",
+   "label": "19-20 4(b)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "power",
+   "subtopic": "Glitches",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=42",
+   "text": "Define glitch? How does it increase power consumption? How it can be reduced?",
    "repeat_of": "",
    "outline": ""
   },
@@ -920,34 +1513,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-3(a)",
-   "label": "20-21 3(a)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Static gates",
-   "type": "design",
-   "marks": 0.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=39",
-   "text": "You have to design a car alarm system in which the alarm will ring (Y= 1) if anyone of the following condition is satisfied. (i) The key is in (K= 1), The Seat belt is fastened (B=1) and the door is open (D=0) or (ii) The key is in, Door is closed and Seat belt is not fastened.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2019-20-5(c)",
-   "label": "19-20 5(c)",
-   "session": "2019-20",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Static gates",
-   "type": "diagram",
-   "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51",
-   "text": "Design a CMOS logic circuit to compute $F = AB + CD$ using (i) only NAND gates, (ii) compound gate. Choose the transistor width to achieve unit path resistance. If each input can present a maximum of 20 $\\lambda$ of transistor width, output must drive a load equivalent to 100 $\\lambda$ of transistor width, calculate the minimum delay to compute F. Which one is faster? Comment on your answer.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2019-20-5(d)",
    "label": "19-20 5(d)",
    "session": "2019-20",
@@ -958,62 +1523,6 @@
    "marks": 6.0,
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54",
    "text": "Define stack effect. Find subthreshold leakage current for two series OFF transistor.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-2(e)",
-   "label": "20-21 2(e)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Dynamic logic",
-   "type": "theory",
-   "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=35",
-   "text": "What is domino gate? Draw the circuit diagram of a domino OR gate.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2019-20-6(a)",
-   "label": "19-20 6(a)",
-   "session": "2019-20",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Dynamic logic",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56",
-   "text": "Explain the principle of dynamic logic circuit.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2020-21-1(c)",
-   "label": "20-21 1(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Stick diagrams",
-   "type": "diagram",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=19",
-   "text": "Draw the schematic and stick diagram of the circuit implementing the logic $Y = \\overline{(A + B + C) \\cdot D}$",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
-   "id": "2019-20-6(b)",
-   "label": "19-20 6(b)",
-   "session": "2019-20",
-   "term_test": false,
-   "topic": "logic",
-   "subtopic": "Stick diagrams",
-   "type": "diagram",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58",
-   "text": "Draw the stick diagram of the following Boolean function: $f = (A + B).(C + D)$ with their symbolic diagram and truth table.",
    "repeat_of": "",
    "outline": ""
   },
@@ -1158,20 +1667,6 @@
    "outline": ""
   },
   {
-   "id": "2020-21-4(a)",
-   "label": "20-21 4(a)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "seq",
-   "subtopic": "Setup and hold",
-   "type": "numerical",
-   "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=49",
-   "text": "In the following circuit of Figure 4(a), determine whether there is any set up or hold time violation.",
-   "repeat_of": "",
-   "outline": ""
-  },
-  {
    "id": "2020-21-4(b)",
    "label": "20-21 4(b)",
    "session": "2020-21",
@@ -1296,23 +1791,81 @@
    "text": "You have to design a divide-by-3 counter using FSM. (i) Draw the state transition diagram of the finite state machine described. (ii) Derive the state transition table and equations for the next-state logic. (iii) Draw the complete FSM circuit.",
    "repeat_of": "",
    "outline": ""
-  },
-  {
-   "id": "2020-21-6(e)",
-   "label": "20-21 6(e)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "memory",
-   "subtopic": "PLA",
-   "type": "diagram",
-   "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=74",
-   "text": "Sketch a dot diagram for a 2-input XOR using a PLA.",
-   "repeat_of": "",
-   "outline": ""
   }
  ],
  "formulas": [
+  {
+   "topic": "mos",
+   "subtopic": "Threshold voltage",
+   "title": "Fermi potential",
+   "eq": "$\\phi_F = \\dfrac{kT}{q}\\ln\\dfrac{n_i}{N_A}$",
+   "used": [
+    {
+     "label": "18-19 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=22"
+    }
+   ]
+  },
+  {
+   "topic": "mos",
+   "subtopic": "Threshold voltage",
+   "title": "Depletion charge",
+   "eq": "$Q_{B0} = -\\sqrt{2qN_A\\varepsilon_{Si}\\,\\lvert 2\\phi_F\\rvert}$",
+   "used": [
+    {
+     "label": "18-19 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=22"
+    }
+   ]
+  },
+  {
+   "topic": "mos",
+   "subtopic": "Threshold voltage",
+   "title": "**Threshold, no body effect**",
+   "eq": "$V_{T0} = \\phi_{GC} - 2\\phi_F - \\dfrac{Q_{B0}}{C_{ox}} - \\dfrac{Q_{ox}}{C_{ox}}$",
+   "used": [
+    {
+     "label": "18-19 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=22"
+    }
+   ]
+  },
+  {
+   "topic": "mos",
+   "subtopic": "Threshold voltage",
+   "title": "**Threshold with body effect**",
+   "eq": "$V_T = V_{T0} + \\gamma\\left(\\sqrt{\\lvert 2\\phi_F\\rvert + V_{SB}} - \\sqrt{\\lvert 2\\phi_F\\rvert}\\right)$",
+   "used": [
+    {
+     "label": "18-19 8(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=75"
+    }
+   ]
+  },
+  {
+   "topic": "mos",
+   "subtopic": "Leakage and DIBL",
+   "title": "DIBL",
+   "eq": "$V_t = V_{t0} - \\eta V_{ds}$",
+   "used": [
+    {
+     "label": "18-19 8(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=77"
+    }
+   ]
+  },
+  {
+   "topic": "mos",
+   "subtopic": "Leakage and DIBL",
+   "title": "Gate leakage",
+   "eq": "$I_{gate} = WA\\left(\\dfrac{V_{DD}}{t_{ox}}\\right)^2 e^{-Bt_{ox}/V_{DD}}$",
+   "used": [
+    {
+     "label": "18-19 8(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=77"
+    }
+   ]
+  },
   {
    "topic": "mos",
    "subtopic": "I-V equations",
@@ -1451,6 +2004,78 @@
   },
   {
    "topic": "inverter",
+   "subtopic": "nMOS load inverters",
+   "title": "Saturated load, high level",
+   "eq": "$V_{OH} = V_{DD} - V_{TL}$",
+   "used": [
+    {
+     "label": "18-19 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=27"
+    }
+   ]
+  },
+  {
+   "topic": "inverter",
+   "subtopic": "nMOS load inverters",
+   "title": "Saturated load, low level",
+   "eq": "$k_R\\left[2(V_{OH} - V_T)V_{OL} - V_{OL}^2\\right] = (V_{OH} - V_{OL})^2$",
+   "used": [
+    {
+     "label": "18-19 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=27"
+    }
+   ]
+  },
+  {
+   "topic": "inverter",
+   "subtopic": "DC characteristics",
+   "title": "CMOS, region B",
+   "eq": "$V_{out} = V_{in} + V_t + \\sqrt{(V_{DD} - 2V_{in})(V_{DD} - 2V_t)}$",
+   "used": [
+    {
+     "label": "18-19 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=29"
+    }
+   ]
+  },
+  {
+   "topic": "inverter",
+   "subtopic": "DC characteristics",
+   "title": "CMOS, region D",
+   "eq": "$V_{out} = V_{in} - V_t - \\sqrt{(2V_{in} - V_{DD})(V_{DD} - 2V_t)}$",
+   "used": [
+    {
+     "label": "18-19 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=29"
+    }
+   ]
+  },
+  {
+   "topic": "inverter",
+   "subtopic": "DC characteristics",
+   "title": "**Switching threshold**",
+   "eq": "$V_M = \\dfrac{V_{tn} + r(V_{DD} - \\lvert V_{tp}\\rvert)}{1 + r}$",
+   "used": [
+    {
+     "label": "18-19 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=29"
+    }
+   ]
+  },
+  {
+   "topic": "inverter",
+   "subtopic": "DC characteristics",
+   "title": "Noise-margin points",
+   "eq": "$V_{IL} = \\dfrac{3V_{DD} + 2V_t}{8}$, $V_{IH} = \\dfrac{5V_{DD} - 2V_t}{8}$",
+   "used": [
+    {
+     "label": "18-19 2(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=29"
+    }
+   ]
+  },
+  {
+   "topic": "inverter",
    "subtopic": "DC characteristics",
    "title": "Operating point",
    "eq": "$I_{Dn} = \\lvert I_{Dp}\\rvert$",
@@ -1558,18 +2183,146 @@
     {
      "label": "19-20 1(a)",
      "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+    },
+    {
+     "label": "18-19 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=12"
     }
    ]
   },
   {
    "topic": "fab",
    "subtopic": "Etching",
-   "title": "**Silicon etch**",
+   "title": "Silicon etch",
    "eq": "$\\text{Si} + 4\\text{F} \\rightarrow \\text{SiF}_4\\uparrow$",
    "used": [
     {
      "label": "19-20 1(a)",
      "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+    },
+    {
+     "label": "18-19 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=12"
+    }
+   ]
+  },
+  {
+   "topic": "fab",
+   "subtopic": "Etching",
+   "title": "**Adding O$_2$**",
+   "eq": "$\\text{O} + \\text{CF}_3 \\rightarrow \\text{COF}_2 + \\text{F}$",
+   "used": [
+    {
+     "label": "19-20 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+    },
+    {
+     "label": "18-19 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=12"
+    }
+   ]
+  },
+  {
+   "topic": "fab",
+   "subtopic": "Etching",
+   "title": "**Adding H$_2$**",
+   "eq": "$\\text{H} + \\text{F} \\rightarrow \\text{HF}$",
+   "used": [
+    {
+     "label": "19-20 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+    },
+    {
+     "label": "18-19 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=12"
+    }
+   ]
+  },
+  {
+   "topic": "fab",
+   "subtopic": "Etching",
+   "title": "Plasma ionisation",
+   "eq": "$e^- + A \\rightarrow A^+ + 2e^-$",
+   "used": [
+    {
+     "label": "18-19 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=17"
+    }
+   ]
+  },
+  {
+   "topic": "fab",
+   "subtopic": "Oxidation",
+   "title": "Deal-Grove fluxes",
+   "eq": "$F_1 = h(C^* - C_O)$, $F_2 = D\\dfrac{C_O - C_I}{x_O}$, $F_3 = k_S C_I$",
+   "used": [
+    {
+     "label": "18-19 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "fab",
+   "subtopic": "Oxidation",
+   "title": "**Oxide growth law**",
+   "eq": "$x_O^2 + Ax_O = B(t + \\tau)$",
+   "used": [
+    {
+     "label": "18-19 1(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "fab",
+   "subtopic": "Oxidation",
+   "title": "Thin-oxide limit",
+   "eq": "$x_O \\approx \\dfrac{B}{A}(t + \\tau)$",
+   "used": [
+    {
+     "label": "18-19 7(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=70"
+    }
+   ]
+  },
+  {
+   "topic": "fab",
+   "subtopic": "Oxidation",
+   "title": "Thick-oxide limit",
+   "eq": "$x_O \\approx \\sqrt{B(t + \\tau)}$",
+   "used": [
+    {
+     "label": "18-19 7(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=70"
+    }
+   ]
+  },
+  {
+   "topic": "fab",
+   "subtopic": "Lithography",
+   "title": "Lithography resolution",
+   "eq": "$W_{min} = k_1\\dfrac{\\lambda}{NA}$",
+   "used": [
+    {
+     "label": "19-20 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=16"
+    },
+    {
+     "label": "18-19 7(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=69"
+    }
+   ]
+  },
+  {
+   "topic": "fab",
+   "subtopic": "Epitaxy",
+   "title": "Epitaxy reactions",
+   "eq": "$\\text{SiH}_4 \\rightarrow \\text{Si} + 2\\text{H}_2$; $\\text{SiCl}_4 + 2\\text{H}_2 \\rightarrow \\text{Si} + 4\\text{HCl}$",
+   "used": [
+    {
+     "label": "18-19 7(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=73"
     }
    ]
   },
@@ -1590,30 +2343,6 @@
    "subtopic": "Etching",
    "title": "Oxide etch (wet)",
    "eq": "$\\text{SiO}_2 + 6\\text{HF} \\rightarrow \\text{H}_2\\text{SiF}_6 + 2\\text{H}_2\\text{O}$",
-   "used": [
-    {
-     "label": "19-20 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
-    }
-   ]
-  },
-  {
-   "topic": "fab",
-   "subtopic": "Etching",
-   "title": "**Adding O$_2$**",
-   "eq": "$\\text{O} + \\text{CF}_3 \\rightarrow \\text{COF}_2 + \\text{F}$",
-   "used": [
-    {
-     "label": "19-20 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
-    }
-   ]
-  },
-  {
-   "topic": "fab",
-   "subtopic": "Etching",
-   "title": "**Adding H$_2$**",
-   "eq": "$\\text{H} + \\text{F} \\rightarrow \\text{HF}$",
    "used": [
     {
      "label": "19-20 1(a)",
@@ -1646,14 +2375,122 @@
    ]
   },
   {
-   "topic": "fab",
-   "subtopic": "Lithography",
-   "title": "Lithography resolution",
-   "eq": "$W_{min} = k_1\\dfrac{\\lambda}{NA}$",
+   "topic": "delay",
+   "subtopic": "Gate delay",
+   "title": "**Elmore delay**",
+   "eq": "$t_{pd} = \\sum_i R_{i,\\text{to source}}\\,C_i$",
    "used": [
     {
-     "label": "19-20 1(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=16"
+     "label": "18-19 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "delay",
+   "subtopic": "Gate delay",
+   "title": "NOR3 driving $h$ NOR3",
+   "eq": "$t_{pdr} = (21 + 7h)RC$, $t_{pdf} = (9 + 7h)RC$",
+   "used": [
+    {
+     "label": "18-19 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "delay",
+   "subtopic": "Path delay",
+   "title": "Gate delay",
+   "eq": "$d = gh + p$",
+   "used": [
+    {
+     "label": "20-21 1(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+    },
+    {
+     "label": "19-20 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+    },
+    {
+     "label": "18-19 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "delay",
+   "subtopic": "Path delay",
+   "title": "Branching effort",
+   "eq": "$b = \\dfrac{C_{on} + C_{off}}{C_{on}}$",
+   "used": [
+    {
+     "label": "19-20 3(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+    },
+    {
+     "label": "18-19 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "delay",
+   "subtopic": "Path delay",
+   "title": "**Path effort**",
+   "eq": "$F = GBH$",
+   "used": [
+    {
+     "label": "18-19 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "delay",
+   "subtopic": "Path delay",
+   "title": "**Minimum delay**",
+   "eq": "$\\hat{f} = F^{1/N}$, $D = N\\hat{f} + P$",
+   "used": [
+    {
+     "label": "18-19 8(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=81"
+    }
+   ]
+  },
+  {
+   "topic": "delay",
+   "subtopic": "Path delay",
+   "title": "Sizing",
+   "eq": "$C_{in} = \\dfrac{g\\,C_{out}}{\\hat{f}}$",
+   "used": [
+    {
+     "label": "18-19 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "delay",
+   "subtopic": "Best number of stages",
+   "title": "**Best stage effort**",
+   "eq": "$p_{inv} + \\rho(1 - \\ln\\rho) = 0$",
+   "used": [
+    {
+     "label": "18-19 8(e)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=83"
+    }
+   ]
+  },
+  {
+   "topic": "delay",
+   "subtopic": "Best number of stages",
+   "title": "Best number of stages",
+   "eq": "$\\hat{N} = \\log_\\rho F$",
+   "used": [
+    {
+     "label": "18-19 3(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=40"
     }
    ]
   },
@@ -1708,36 +2545,8 @@
   {
    "topic": "delay",
    "subtopic": "Path delay",
-   "title": "**Gate delay**",
-   "eq": "$d = gh + p$",
-   "used": [
-    {
-     "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
-    },
-    {
-     "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
-    }
-   ]
-  },
-  {
-   "topic": "delay",
-   "subtopic": "Path delay",
    "title": "Logical efforts",
    "eq": "inv $g = 1$; NAND-$n$ $\\tfrac{n+2}{3}$; NOR-$n$ $\\tfrac{2n+1}{3}$; AOI22 2",
-   "used": [
-    {
-     "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
-    }
-   ]
-  },
-  {
-   "topic": "delay",
-   "subtopic": "Path delay",
-   "title": "Branching effort",
-   "eq": "$b = \\dfrac{C_{on} + C_{off}}{C_{on}}$",
    "used": [
     {
      "label": "19-20 3(b)",
@@ -1911,6 +2720,54 @@
   },
   {
    "topic": "power",
+   "subtopic": "Sources of power",
+   "title": "**Switching power**",
+   "eq": "$P = \\alpha CV_{DD}^2 f$",
+   "used": [
+    {
+     "label": "18-19 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Dynamic power",
+   "title": "Static power",
+   "eq": "$P_{static} = (I_{sub} + I_{gate} + I_{junct} + I_{contention})V_{DD}$",
+   "used": [
+    {
+     "label": "18-19 4(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=48"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Activity factor",
+   "title": "**Activity factor**",
+   "eq": "$\\alpha = P(1 - P)$",
+   "used": [
+    {
+     "label": "18-19 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=46"
+    }
+   ]
+  },
+  {
+   "topic": "power",
+   "subtopic": "Activity factor",
+   "title": "Output probabilities",
+   "eq": "NAND2: $1 - P_AP_B$; NOR2: $\\overline{P_A}\\,\\overline{P_B}$",
+   "used": [
+    {
+     "label": "18-19 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=46"
+    }
+   ]
+  },
+  {
+   "topic": "power",
    "subtopic": "Leakage",
    "title": "Stack node voltage",
    "eq": "$V_x = \\dfrac{\\eta V_{DD}}{1 + 2\\eta}$",
@@ -2074,6 +2931,42 @@
     {
      "label": "19-20 4(e)",
      "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=46"
+    }
+   ]
+  },
+  {
+   "topic": "scaling",
+   "subtopic": "Scaling rules",
+   "title": "Moore's law",
+   "eq": "count $\\times 2$ every 2 years",
+   "used": [
+    {
+     "label": "18-19 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=25"
+    }
+   ]
+  },
+  {
+   "topic": "scaling",
+   "subtopic": "Scaling rules",
+   "title": "**Constant-field scaling**",
+   "eq": "$L, W, t_{ox}, V: 1/S$; $N_A: S$",
+   "used": [
+    {
+     "label": "18-19 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=25"
+    }
+   ]
+  },
+  {
+   "topic": "scaling",
+   "subtopic": "Scaling rules",
+   "title": "Constant-voltage scaling",
+   "eq": "$L, W, t_{ox}: 1/S$; $V: 1$; $N_A: S^2$",
+   "used": [
+    {
+     "label": "18-19 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=25"
     }
    ]
   },
@@ -2259,6 +3152,42 @@
   },
   {
    "topic": "seq",
+   "subtopic": "Setup and hold",
+   "title": "**Max-delay**",
+   "eq": "$T_c \\geq t_{pcq} + t_{pd} + t_{setup}$",
+   "used": [
+    {
+     "label": "18-19 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=54"
+    }
+   ]
+  },
+  {
+   "topic": "seq",
+   "subtopic": "Setup and hold",
+   "title": "**Min-delay**",
+   "eq": "$t_{cd} \\geq t_{hold} - t_{ccq}$",
+   "used": [
+    {
+     "label": "18-19 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=54"
+    }
+   ]
+  },
+  {
+   "topic": "seq",
+   "subtopic": "Resettable flip-flops",
+   "title": "Synchronous reset",
+   "eq": "$Q_{next} = D\\cdot\\overline{reset}$",
+   "used": [
+    {
+     "label": "18-19 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=56"
+    }
+   ]
+  },
+  {
+   "topic": "seq",
    "subtopic": "Cycle time",
    "title": "**Max-delay (setup)**",
    "eq": "$T_c \\ge t_{pcq} + t_{pd} + t_{setup}$",
@@ -2362,6 +3291,42 @@
     {
      "label": "20-21 6(c)",
      "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=71"
+    }
+   ]
+  },
+  {
+   "topic": "datapath",
+   "subtopic": "Adders",
+   "title": "**Full adder**",
+   "eq": "$S = A \\oplus B \\oplus C_{in}$, $C_{out} = AB + C_{in}(A \\oplus B)$",
+   "used": [
+    {
+     "label": "18-19 6(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=60"
+    }
+   ]
+  },
+  {
+   "topic": "datapath",
+   "subtopic": "Adders",
+   "title": "Mirror adder sum",
+   "eq": "$S = ABC_{in} + (A + B + C_{in})\\overline{C_{out}}$",
+   "used": [
+    {
+     "label": "18-19 6(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=60"
+    }
+   ]
+  },
+  {
+   "topic": "memory",
+   "subtopic": "DRAM",
+   "title": "**DRAM read swing**",
+   "eq": "$\\Delta V = \\pm\\dfrac{V_{DD}}{2}\\,\\dfrac{C_{cell}}{C_{cell} + C_{bit}}$",
+   "used": [
+    {
+     "label": "18-19 6(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=65"
     }
    ]
   },

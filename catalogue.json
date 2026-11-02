@@ -357,6 +357,26 @@
       "printable": true
     },
     {
+      "id": "EEE455-2018-19-pack",
+      "subject": "EEE455",
+      "session": "2018-19",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 94,
+      "file": "EEE455-VLSI/VLSI-2018-19-pack.pdf",
+      "printable": true
+    },
+    {
+      "id": "EEE455-2018-19-question-paper",
+      "subject": "EEE455",
+      "session": "2018-19",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 3,
+      "file": "EEE455-VLSI/VLSI-2018-19-question-paper.pdf",
+      "printable": true
+    },
+    {
       "id": "EEE455-2019-20-pack",
       "subject": "EEE455",
       "session": "2019-20",
@@ -547,7 +567,7 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 22,
+      "pages": 28,
       "file": "EEE455-VLSI/VLSI-question-analysis.pdf",
       "page": "analysis.html?subject=EEE455",
       "printable": true
