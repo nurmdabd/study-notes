@@ -961,7 +961,7 @@
    "subtopic": "Static gates",
    "type": "diagram",
    "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=52",
    "text": "Design a CMOS logic circuit to compute $F = AB + CD$ using (i) only NAND gates, (ii) compound gate. Choose the transistor width to achieve unit path resistance. If each input can present a maximum of 20 $\\lambda$ of transistor width, output must drive a load equivalent to 100 $\\lambda$ of transistor width, calculate the minimum delay to compute F. Which one is faster? Comment on your answer.",
    "repeat_of": "",
    "outline": ""
@@ -1101,7 +1101,7 @@
    "subtopic": "Stick diagrams",
    "type": "diagram",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=59",
    "text": "Draw the stick diagram of the following Boolean function: $f = (A + B).(C + D)$ with their symbolic diagram and truth table.",
    "repeat_of": "",
    "outline": ""
@@ -1199,7 +1199,7 @@
    "subtopic": "Dynamic logic",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57",
    "text": "Explain the principle of dynamic logic circuit.",
    "repeat_of": "",
    "outline": ""
@@ -1549,7 +1549,7 @@
    "subtopic": "SRAM",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=60",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=61",
    "text": "Draw logic diagram of a SRAM cell and explain its different modes of operation.",
    "repeat_of": "",
    "outline": ""
@@ -1563,7 +1563,7 @@
    "subtopic": "ROM",
    "type": "diagram",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63",
    "text": "Design and implement a pseudo-nMOS ROM to store the data shown in Figure 6.1. Also draw the dot diagram representation.",
    "repeat_of": "",
    "outline": ""
@@ -3002,7 +3002,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=52"
     }
    ]
   },
@@ -3014,7 +3014,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=52"
     }
    ]
   },
@@ -3026,7 +3026,7 @@
    "used": [
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=59"
     }
    ]
   },
@@ -3038,7 +3038,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57"
     }
    ]
   },
@@ -3226,7 +3226,7 @@
    "topic": "seq",
    "subtopic": "Cycle time",
    "title": "Itanium 2 bypass",
-   "eq": "$T_c = 90 + 1010 + 62 = 1162$ ps",
+   "eq": "$T_c = 90 + 1000 + 62 = 1152$ ps",
    "used": [
     {
      "label": "19-20 5(b)",
@@ -3338,7 +3338,7 @@
    "used": [
     {
      "label": "19-20 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=60"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=61"
     }
    ]
   },
@@ -3350,7 +3350,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63"
     }
    ]
   },
