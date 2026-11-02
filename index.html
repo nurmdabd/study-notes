@@ -623,7 +623,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   function subjectLink(code) {
     const u = new URLSearchParams(location.search);
     u.delete('item');
-    if (code) u.set('subject', code + '-' + subjects[code].short); else u.delete('subject');
+    if (code) u.set('subject', code + '-' + subjects[code].short.replace(/\s+/g, '')); else u.delete('subject');
     const qs = u.toString();
     return location.pathname + (qs ? '?' + qs : '');
   }
