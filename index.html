@@ -190,8 +190,9 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   .brand .by { display: none; }
   .chips .lbl { min-width: 0; }
   .sort { max-width: 132px; }
-  .pack { padding: 8px 12px; gap: 8px; }
-  .pack .info { gap: 2px 8px; }
+  .pack { padding: 8px 12px; gap: 8px; flex-wrap: wrap; }
+  .actions-row { margin-left: auto; }
+  .pack .info { gap: 2px 8px; flex: 1 1 100%; }
   .btn.pdf span { display: none; }
   .btn.pdf { padding: 0 9px; }
   .btn.report-top span { display: none; }
@@ -564,9 +565,12 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
         const fileName = it.file.split('/').pop();
         row.innerHTML =
           '<div class="info"><span class="year">' + esc(it.session) + '</span>' +
-          '<span class="meta">' + esc(it.document) + ' · ' + it.pages + ' pages' + (inOrder ? ' · <b>' + inOrder + ' in order</b>' : '') + '</span>' + prices + '</div>' +
+          '<span class="meta">' + esc(it.document) + ' · ' + it.pages + ' pages' + (inOrder ? ' · <b>' + inOrder + ' in order</b>' : '') + '</span>' +
+          (it.updated ? '<span class="meta updated">Updated ' + esc(when(it.updated)) + '</span>' : '') + prices + '</div>' +
           '<div class="actions-row">' +
           (it.page ? '<a class="btn" href="' + encodeURI(it.page) + '">Explore</a>' : '') +
+          '<a class="btn open" href="' + encodeURI(it.file) + '" target="_blank" rel="noopener" ' +
+          'aria-label="Open ' + esc(lineName(it)) + ' in a new tab">Open</a>' +
           '<a class="btn pdf" href="' + encodeURI(it.file) + '" download="' + esc(fileName) + '" ' +
           'aria-label="Download ' + esc(lineName(it)) + ' (free PDF)">' +
           '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg><span>PDF</span></a>' +
@@ -578,6 +582,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
               'title="Report a mistake" aria-label="Report a mistake in ' + esc(lineName(it)) + '">' +
               '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg></a>'
             : '') + '</div>';
+        row.querySelector('.btn.open').addEventListener('click', () => track('open/' + it.id, 'Open ' + lineName(it)));
         row.querySelector('.btn.pdf').addEventListener('click', () => track('download/' + it.id, 'Download ' + lineName(it)));
         const flag = row.querySelector('.btn.report');
         if (flag) flag.addEventListener('click', () => track('report/' + it.id, 'Report a mistake: ' + lineName(it)));
@@ -754,6 +759,13 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
       .catch(err => show('err', esc(err.message || 'Could not send the order.') + ' You can send it on WhatsApp instead.'))
       .finally(() => { btn.textContent = 'Send order'; btn.disabled = !picked.size; });
   });
+
+  // an item's last update, always in Dhaka time, for example "2 Nov 2026, 2:11 pm"
+  function when(iso) {
+    const d = new Date(iso);
+    if (isNaN(d)) return '';
+    return d.toLocaleString('en-GB', { timeZone: 'Asia/Dhaka', day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true });
+  }
 
   // count an event (a PDF download, a "Report a mistake" click) in GoatCounter, when its script has loaded
   function track(path, title) {

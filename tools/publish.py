@@ -15,11 +15,16 @@ A subject's question analysis (<subject>/past-papers/analysis/) becomes <short>-
 <short>-question-analysis.json, and one item with the ID <code>-question-analysis, listed last for the subject; its
 "page" opens analysis.html. PDFs left over from an older name are removed. "pages" is the page count of the print copy, which is what gets printed.
 A subject folder not yet listed under "subjects" stops the script, so its title is added by hand first.
+Each item's "updated" is when its PDF last changed on the site: now if the bytes differ, otherwise the old value, or for
+an item without one the file's last commit here.
 """
+import filecmp
 import json
 import re
 import shutil
+import subprocess
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from pypdf import PdfReader
@@ -30,6 +35,19 @@ CAT = SITE / "catalogue.json"
 
 catalogue = json.loads(CAT.read_text(encoding="utf-8"))
 subjects = {s["folder"]: s for s in catalogue["subjects"]}
+old_updated = {it["file"]: it["updated"] for it in catalogue["items"] if it.get("updated")}
+NOW = datetime.now(timezone(timedelta(hours=6))).isoformat(timespec="minutes")
+
+
+def publish(share, dest):
+    """Copy a share PDF to dest unless it is unchanged; return when dest last changed."""
+    rel = dest.relative_to(SITE).as_posix()
+    if dest.exists() and filecmp.cmp(share, dest, shallow=False):
+        return old_updated.get(rel) or subprocess.run(["git", "log", "-1", "--format=%cI", "--", rel], cwd=SITE,
+                                                      capture_output=True, text=True).stdout.strip() or NOW
+    shutil.copy2(share, dest)
+    return NOW
+
 
 items = []
 published = set()
@@ -48,7 +66,7 @@ for share in sorted(SRC.glob("EEE*/past-papers/*/pdf/*-pack*_share.pdf"),
     pages = len(PdfReader(printed if printed.exists() else share).pages)
     dest = SITE / folder / f"{folder.split('-', 1)[1]}-{session}-pack{'-Bangla' if bangla else ''}.pdf"
     dest.parent.mkdir(exist_ok=True)
-    shutil.copy2(share, dest)
+    updated = publish(share, dest)
     published.add(dest)
     code = subjects[folder]["code"]
     items.append({
@@ -60,6 +78,7 @@ for share in sorted(SRC.glob("EEE*/past-papers/*/pdf/*-pack*_share.pdf"),
         "pages": pages,
         "file": f"{folder}/{dest.name}",
         "printable": True,
+        "updated": updated,
     })
 
 # each session's standalone question paper, right after that session's packs
@@ -71,7 +90,7 @@ for share in sorted(SRC.glob("EEE*/past-papers/*/pdf/*-question-paper_share.pdf"
     printed = share.with_name(f"{session}-question-paper_print.pdf")
     dest = SITE / folder / f"{folder.split('-', 1)[1]}-{session}-question-paper.pdf"
     dest.parent.mkdir(exist_ok=True)
-    shutil.copy2(share, dest)
+    updated = publish(share, dest)
     published.add(dest)
     code = subjects[folder]["code"]
     item = {
@@ -83,6 +102,7 @@ for share in sorted(SRC.glob("EEE*/past-papers/*/pdf/*-question-paper_share.pdf"
         "pages": len(PdfReader(printed if printed.exists() else share).pages),
         "file": f"{folder}/{dest.name}",
         "printable": True,
+        "updated": updated,
     }
     last = max((i for i, it in enumerate(items) if it["subject"] == code and it["session"] == session), default=len(items) - 1)
     items.insert(last + 1, item)
@@ -94,7 +114,7 @@ for share in sorted(SRC.glob("EEE*/past-papers/analysis/pdf/*-question-analysis_
         sys.exit(f"{folder} is not listed under 'subjects' in catalogue.json; add it first.")
     short, code = folder.split("-", 1)[1], subjects[folder]["code"]
     dest = SITE / folder / f"{short}-question-analysis.pdf"
-    shutil.copy2(share, dest)
+    updated = publish(share, dest)
     published.add(dest)
     shutil.copy2(share.parents[1] / f"{code}-question-analysis.json", SITE / folder / f"{short}-question-analysis.json")
     printed = share.with_name(f"{code}-question-analysis_print.pdf")
@@ -108,6 +128,7 @@ for share in sorted(SRC.glob("EEE*/past-papers/analysis/pdf/*-question-analysis_
         "file": f"{folder}/{dest.name}",
         "page": f"analysis.html?subject={code}",
         "printable": True,
+        "updated": updated,
     })
 
 for old in SITE.glob("EEE*/*.pdf"):
