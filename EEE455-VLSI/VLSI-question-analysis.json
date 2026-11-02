@@ -737,7 +737,7 @@
    "subtopic": "Scaling rules",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=41",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=42",
    "text": "What is scaling? Explain how different parameters of transistors are scaled?",
    "repeat_of": "",
    "outline": ""
@@ -779,7 +779,7 @@
    "subtopic": "DC characteristics",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=33",
    "text": "Using I-V characteristics curve of MOSFET, find DC characteristics of CMOS inverter.",
    "repeat_of": "",
    "outline": ""
@@ -863,7 +863,7 @@
    "subtopic": "Path delay",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35",
    "text": "Find minimum delay for path $A \\rightarrow B$ in the logic circuit of Figure 3.1. Also find the gate size to achieve this delay.",
    "repeat_of": "",
    "outline": ""
@@ -877,7 +877,7 @@
    "subtopic": "Path delay",
    "type": "design",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=38",
    "text": "Figure 3.2 shows a portion of a decoder circuit. The inverter at input drives 8 identical 4-input NAND gate with input capacitance y each. The output of the decoder (NAND gate) is connected to a 32-bit word of register and each register bit presents a load of 3-unit sized transistor. Find best number stages (how many inverters should be added between NAND and load?), stage effort, path delay, NAND gate size.",
    "repeat_of": "",
    "outline": ""
@@ -961,7 +961,7 @@
    "subtopic": "Static gates",
    "type": "diagram",
    "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=52",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53",
    "text": "Design a CMOS logic circuit to compute $F = AB + CD$ using (i) only NAND gates, (ii) compound gate. Choose the transistor width to achieve unit path resistance. If each input can present a maximum of 20 $\\lambda$ of transistor width, output must drive a load equivalent to 100 $\\lambda$ of transistor width, calculate the minimum delay to compute F. Which one is faster? Comment on your answer.",
    "repeat_of": "",
    "outline": ""
@@ -1059,7 +1059,7 @@
    "subtopic": "Dynamic power",
    "type": "numerical",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=44",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45",
    "text": "You are synthesizing a chip composed of random logic with an average activity factor of 0.1. You are using a standard cell process with an average switching capacitance of 450 $pF/mm^2$. Estimate the dynamic power consumption of your chip if it has an area of 70 $mm^2$ and runs at 450 $MHz$ at $V_{DD}$ = 0.9 V.",
    "repeat_of": "",
    "outline": ""
@@ -1101,7 +1101,7 @@
    "subtopic": "Stick diagrams",
    "type": "diagram",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=59",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=60",
    "text": "Draw the stick diagram of the following Boolean function: $f = (A + B).(C + D)$ with their symbolic diagram and truth table.",
    "repeat_of": "",
    "outline": ""
@@ -1199,7 +1199,7 @@
    "subtopic": "Dynamic logic",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58",
    "text": "Explain the principle of dynamic logic circuit.",
    "repeat_of": "",
    "outline": ""
@@ -1437,7 +1437,7 @@
    "subtopic": "Input ordering",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=39",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=40",
    "text": "Explain input ordering delay effect.",
    "repeat_of": "",
    "outline": ""
@@ -1451,7 +1451,7 @@
    "subtopic": "Glitches",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=42",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=43",
    "text": "Define glitch? How does it increase power consumption? How it can be reduced?",
    "repeat_of": "",
    "outline": ""
@@ -1465,7 +1465,7 @@
    "subtopic": "Crosstalk",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=46",
    "text": "Define crosstalk. Show how crosstalk induces noise in different cases. How can crosstalk be reduced?",
    "repeat_of": "",
    "outline": ""
@@ -1479,7 +1479,7 @@
    "subtopic": "Sheet resistance",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=46",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=47",
    "text": "Define sheet resistance. How does interconnect affect the performance of a system?",
    "repeat_of": "",
    "outline": ""
@@ -1493,7 +1493,7 @@
    "subtopic": "Hold time",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=49",
    "text": "What is min-delay constraint? Find min-delay for a system sequenced with flip-flop. If min-delay occurs, what is the solution?",
    "repeat_of": "",
    "outline": ""
@@ -1507,7 +1507,7 @@
    "subtopic": "Cycle time",
    "type": "numerical",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=50",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51",
    "text": "The Itanium 2 ALU self-bypass path is shown in Figure 5.1, and delays associated with each element are given in Table 5.1. Calculate the minimum cycle time $T_c$ at which ALU self-bypass path will operate correctly. The earliest input to the late bypass multiplexer is imm value coming from another flip-flop. Will this path experience any hold-time failures?",
    "repeat_of": "",
    "outline": ""
@@ -1521,7 +1521,7 @@
    "subtopic": "Leakage",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=55",
    "text": "Define stack effect. Find subthreshold leakage current for two series OFF transistor.",
    "repeat_of": "",
    "outline": ""
@@ -1549,7 +1549,7 @@
    "subtopic": "SRAM",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=61",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62",
    "text": "Draw logic diagram of a SRAM cell and explain its different modes of operation.",
    "repeat_of": "",
    "outline": ""
@@ -1563,7 +1563,7 @@
    "subtopic": "ROM",
    "type": "diagram",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=64",
    "text": "Design and implement a pseudo-nMOS ROM to store the data shown in Figure 6.1. Also draw the dot diagram representation.",
    "repeat_of": "",
    "outline": ""
@@ -2082,7 +2082,7 @@
    "used": [
     {
      "label": "19-20 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=33"
     }
    ]
   },
@@ -2094,7 +2094,7 @@
    "used": [
     {
      "label": "19-20 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=33"
     }
    ]
   },
@@ -2106,7 +2106,7 @@
    "used": [
     {
      "label": "19-20 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=33"
     }
    ]
   },
@@ -2122,7 +2122,7 @@
     },
     {
      "label": "19-20 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=33"
     }
    ]
   },
@@ -2410,7 +2410,7 @@
     },
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     },
     {
      "label": "18-19 3(c)",
@@ -2426,7 +2426,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     },
     {
      "label": "18-19 3(c)",
@@ -2550,7 +2550,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -2566,7 +2566,7 @@
     },
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -2578,7 +2578,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -2594,7 +2594,7 @@
     },
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -2606,7 +2606,7 @@
    "used": [
     {
      "label": "19-20 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=38"
     }
    ]
   },
@@ -2618,7 +2618,7 @@
    "used": [
     {
      "label": "19-20 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=39"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=40"
     }
    ]
   },
@@ -2774,7 +2774,7 @@
    "used": [
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=55"
     }
    ]
   },
@@ -2786,7 +2786,7 @@
    "used": [
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=55"
     }
    ]
   },
@@ -2798,7 +2798,7 @@
    "used": [
     {
      "label": "19-20 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45"
     }
    ]
   },
@@ -2810,7 +2810,7 @@
    "used": [
     {
      "label": "19-20 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45"
     }
    ]
   },
@@ -2894,7 +2894,7 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=46"
     }
    ]
   },
@@ -2906,7 +2906,7 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=46"
     }
    ]
   },
@@ -2918,7 +2918,7 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=46"
     }
    ]
   },
@@ -2930,7 +2930,7 @@
    "used": [
     {
      "label": "19-20 4(e)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=46"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=47"
     }
    ]
   },
@@ -2978,7 +2978,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=42"
     }
    ]
   },
@@ -2990,7 +2990,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=42"
     }
    ]
   },
@@ -3002,7 +3002,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=52"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53"
     }
    ]
   },
@@ -3014,7 +3014,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=52"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53"
     }
    ]
   },
@@ -3026,7 +3026,7 @@
    "used": [
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=59"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=60"
     }
    ]
   },
@@ -3038,7 +3038,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58"
     }
    ]
   },
@@ -3194,7 +3194,7 @@
    "used": [
     {
      "label": "19-20 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=50"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51"
     }
    ]
   },
@@ -3206,7 +3206,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=49"
     }
    ]
   },
@@ -3218,7 +3218,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=49"
     }
    ]
   },
@@ -3230,7 +3230,7 @@
    "used": [
     {
      "label": "19-20 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=50"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51"
     }
    ]
   },
@@ -3338,7 +3338,7 @@
    "used": [
     {
      "label": "19-20 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=61"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62"
     }
    ]
   },
@@ -3350,7 +3350,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=64"
     }
    ]
   },
