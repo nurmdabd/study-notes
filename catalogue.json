@@ -225,7 +225,8 @@
       "pages": 64,
       "file": "EEE329-COM/COM-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00"
+      "updated": "2026-10-31T16:42:57+06:00",
+      "source": "3b9643eda82d0423"
     },
     {
       "id": "EEE329-2020-21-question-paper",
@@ -236,7 +237,8 @@
       "pages": 3,
       "file": "EEE329-COM/COM-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00"
+      "updated": "2026-10-31T16:42:57+06:00",
+      "source": "a883761dd2c4f051"
     },
     {
       "id": "EEE329-2021-22-pack",
@@ -247,7 +249,8 @@
       "pages": 62,
       "file": "EEE329-COM/COM-2021-22-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00"
+      "updated": "2026-10-31T16:42:57+06:00",
+      "source": "9fa6c993c51b9b08"
     },
     {
       "id": "EEE329-2021-22-question-paper",
@@ -258,7 +261,8 @@
       "pages": 2,
       "file": "EEE329-COM/COM-2021-22-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00"
+      "updated": "2026-10-31T16:42:57+06:00",
+      "source": "e7a96a21d3cf68d2"
     },
     {
       "id": "EEE337-2020-21-pack",
@@ -269,7 +273,8 @@
       "pages": 76,
       "file": "EEE337-PSII/PSII-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00"
+      "updated": "2026-10-31T16:43:05+06:00",
+      "source": "1ec29403efefc9ca"
     },
     {
       "id": "EEE337-2020-21-question-paper",
@@ -280,7 +285,8 @@
       "pages": 2,
       "file": "EEE337-PSII/PSII-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00"
+      "updated": "2026-10-31T16:43:05+06:00",
+      "source": "a6875ec548655da2"
     },
     {
       "id": "EEE337-2021-22-pack",
@@ -291,7 +297,8 @@
       "pages": 96,
       "file": "EEE337-PSII/PSII-2021-22-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00"
+      "updated": "2026-10-31T16:43:05+06:00",
+      "source": "15720641ea58bf7e"
     },
     {
       "id": "EEE337-2021-22-question-paper",
@@ -302,7 +309,8 @@
       "pages": 4,
       "file": "EEE337-PSII/PSII-2021-22-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00"
+      "updated": "2026-10-31T16:43:05+06:00",
+      "source": "55f0596ec56dbcc1"
     },
     {
       "id": "EEE339-2020-21-pack",
@@ -313,7 +321,8 @@
       "pages": 84,
       "file": "EEE339-PE/PE-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:10+06:00"
+      "updated": "2026-10-31T16:43:10+06:00",
+      "source": "6ae50a8ec6d71f26"
     },
     {
       "id": "EEE339-2020-21-question-paper",
@@ -324,7 +333,8 @@
       "pages": 3,
       "file": "EEE339-PE/PE-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:10+06:00"
+      "updated": "2026-10-31T16:43:10+06:00",
+      "source": "6f79c983ed9585e0"
     },
     {
       "id": "EEE421-2020-21-pack",
@@ -335,7 +345,8 @@
       "pages": 120,
       "file": "EEE421-SSD/SSD-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:14+06:00"
+      "updated": "2026-10-31T16:43:14+06:00",
+      "source": "35a9ce992d3fc7ec"
     },
     {
       "id": "EEE421-2020-21-question-paper",
@@ -346,7 +357,8 @@
       "pages": 3,
       "file": "EEE421-SSD/SSD-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:14+06:00"
+      "updated": "2026-10-31T16:43:14+06:00",
+      "source": "b00cffe192a95a1d"
     },
     {
       "id": "EEE443-2020-21-pack",
@@ -357,7 +369,8 @@
       "pages": 60,
       "file": "EEE443-PPE/PPE-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:19+06:00"
+      "updated": "2026-10-31T16:43:19+06:00",
+      "source": "6427b626b5302866"
     },
     {
       "id": "EEE443-2020-21-question-paper",
@@ -368,7 +381,8 @@
       "pages": 2,
       "file": "EEE443-PPE/PPE-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:19+06:00"
+      "updated": "2026-10-31T16:43:19+06:00",
+      "source": "7ddf3175cec4e6bd"
     },
     {
       "id": "EEE455-2018-19-pack",
@@ -379,7 +393,8 @@
       "pages": 94,
       "file": "EEE455-VLSI/VLSI-2018-19-pack.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00"
+      "updated": "2026-11-02T14:11:09+06:00",
+      "source": "25726e91d00298a1"
     },
     {
       "id": "EEE455-2018-19-question-paper",
@@ -390,7 +405,8 @@
       "pages": 3,
       "file": "EEE455-VLSI/VLSI-2018-19-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00"
+      "updated": "2026-11-02T14:11:09+06:00",
+      "source": "97ceda785409d7e5"
     },
     {
       "id": "EEE455-2019-20-pack",
@@ -401,7 +417,8 @@
       "pages": 78,
       "file": "EEE455-VLSI/VLSI-2019-20-pack.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00"
+      "updated": "2026-11-02T14:11:09+06:00",
+      "source": "f7e76e66b20ae086"
     },
     {
       "id": "EEE455-2019-20-question-paper",
@@ -412,7 +429,8 @@
       "pages": 3,
       "file": "EEE455-VLSI/VLSI-2019-20-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00"
+      "updated": "2026-11-02T14:11:09+06:00",
+      "source": "1c8df4e45443094e"
     },
     {
       "id": "EEE455-2020-21-pack",
@@ -423,7 +441,8 @@
       "pages": 92,
       "file": "EEE455-VLSI/VLSI-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00"
+      "updated": "2026-11-02T14:11:09+06:00",
+      "source": "47323dd66da9f86a"
     },
     {
       "id": "EEE455-2020-21-question-paper",
@@ -434,7 +453,8 @@
       "pages": 4,
       "file": "EEE455-VLSI/VLSI-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00"
+      "updated": "2026-11-02T14:11:09+06:00",
+      "source": "27d544d74541437c"
     },
     {
       "id": "EEE459-2020-21-pack",
@@ -445,7 +465,8 @@
       "pages": 108,
       "file": "EEE459-Semi/Semi-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:28+06:00"
+      "updated": "2026-10-31T16:43:28+06:00",
+      "source": "00c4523226280e72"
     },
     {
       "id": "EEE459-2020-21-question-paper",
@@ -456,7 +477,8 @@
       "pages": 3,
       "file": "EEE459-Semi/Semi-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:28+06:00"
+      "updated": "2026-10-31T16:43:28+06:00",
+      "source": "2b22f21326807ac8"
     },
     {
       "id": "EEE475-2018-19-pack",
@@ -467,7 +489,8 @@
       "pages": 64,
       "file": "EEE475-RF/RF-2018-19-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00"
+      "updated": "2026-10-31T16:43:32+06:00",
+      "source": "2087e095b5b585b7"
     },
     {
       "id": "EEE475-2018-19-question-paper",
@@ -478,7 +501,8 @@
       "pages": 3,
       "file": "EEE475-RF/RF-2018-19-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00"
+      "updated": "2026-10-31T16:43:32+06:00",
+      "source": "b5e9ae3d89f31cf6"
     },
     {
       "id": "EEE475-2019-20-pack",
@@ -489,7 +513,8 @@
       "pages": 74,
       "file": "EEE475-RF/RF-2019-20-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00"
+      "updated": "2026-10-31T16:43:32+06:00",
+      "source": "d7a6009ad4d1eb32"
     },
     {
       "id": "EEE475-2019-20-question-paper",
@@ -500,7 +525,8 @@
       "pages": 2,
       "file": "EEE475-RF/RF-2019-20-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00"
+      "updated": "2026-10-31T16:43:32+06:00",
+      "source": "94db585c23fe2856"
     },
     {
       "id": "EEE475-2020-21-pack",
@@ -511,7 +537,8 @@
       "pages": 80,
       "file": "EEE475-RF/RF-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00"
+      "updated": "2026-10-31T16:43:32+06:00",
+      "source": "718c3aa3f1d9bac6"
     },
     {
       "id": "EEE475-2020-21-pack-bn",
@@ -522,7 +549,8 @@
       "pages": 80,
       "file": "EEE475-RF/RF-2020-21-pack-Bangla.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00"
+      "updated": "2026-10-31T16:43:32+06:00",
+      "source": "a6c9f6995bef4261"
     },
     {
       "id": "EEE475-2020-21-question-paper",
@@ -533,7 +561,8 @@
       "pages": 3,
       "file": "EEE475-RF/RF-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00"
+      "updated": "2026-10-31T16:43:32+06:00",
+      "source": "b5170997fa7cfe74"
     },
     {
       "id": "EEE329-question-analysis",
@@ -545,7 +574,8 @@
       "file": "EEE329-COM/COM-question-analysis.pdf",
       "page": "analysis.html?subject=EEE329",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00"
+      "updated": "2026-10-31T16:42:57+06:00",
+      "source": "506e95628463fdc5"
     },
     {
       "id": "EEE337-question-analysis",
@@ -557,7 +587,8 @@
       "file": "EEE337-PSII/PSII-question-analysis.pdf",
       "page": "analysis.html?subject=EEE337",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00"
+      "updated": "2026-10-31T16:43:05+06:00",
+      "source": "643856d98cec00bb"
     },
     {
       "id": "EEE339-question-analysis",
@@ -569,7 +600,8 @@
       "file": "EEE339-PE/PE-question-analysis.pdf",
       "page": "analysis.html?subject=EEE339",
       "printable": true,
-      "updated": "2026-10-31T16:43:10+06:00"
+      "updated": "2026-10-31T16:43:10+06:00",
+      "source": "9dd9450295c58282"
     },
     {
       "id": "EEE421-question-analysis",
@@ -581,7 +613,8 @@
       "file": "EEE421-SSD/SSD-question-analysis.pdf",
       "page": "analysis.html?subject=EEE421",
       "printable": true,
-      "updated": "2026-10-31T16:43:14+06:00"
+      "updated": "2026-10-31T16:43:14+06:00",
+      "source": "09813e84eb06d4d1"
     },
     {
       "id": "EEE443-question-analysis",
@@ -593,7 +626,8 @@
       "file": "EEE443-PPE/PPE-question-analysis.pdf",
       "page": "analysis.html?subject=EEE443",
       "printable": true,
-      "updated": "2026-10-31T16:43:19+06:00"
+      "updated": "2026-10-31T16:43:19+06:00",
+      "source": "9591ff0f10e48d9b"
     },
     {
       "id": "EEE455-question-analysis",
@@ -605,7 +639,8 @@
       "file": "EEE455-VLSI/VLSI-question-analysis.pdf",
       "page": "analysis.html?subject=EEE455",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00"
+      "updated": "2026-11-02T14:11:09+06:00",
+      "source": "4db8ca43ec249fe5"
     },
     {
       "id": "EEE459-question-analysis",
@@ -617,7 +652,8 @@
       "file": "EEE459-Semi/Semi-question-analysis.pdf",
       "page": "analysis.html?subject=EEE459",
       "printable": true,
-      "updated": "2026-10-31T16:43:28+06:00"
+      "updated": "2026-10-31T16:43:28+06:00",
+      "source": "18d59664cbfd6e6f"
     },
     {
       "id": "EEE475-question-analysis",
@@ -629,7 +665,8 @@
       "file": "EEE475-RF/RF-question-analysis.pdf",
       "page": "analysis.html?subject=EEE475",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00"
+      "updated": "2026-10-31T16:43:32+06:00",
+      "source": "73a5f9a35b17b72e"
     }
   ]
 }

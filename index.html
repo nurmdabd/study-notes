@@ -760,11 +760,11 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
       .finally(() => { btn.textContent = 'Send order'; btn.disabled = !picked.size; });
   });
 
-  // an item's last update, always in Dhaka time, for example "2 Nov 2026, 2:11 pm"
+  // an item's last update, the date in Dhaka, for example "2 Nov 2026"
   function when(iso) {
     const d = new Date(iso);
     if (isNaN(d)) return '';
-    return d.toLocaleString('en-GB', { timeZone: 'Asia/Dhaka', day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true });
+    return d.toLocaleDateString('en-GB', { timeZone: 'Asia/Dhaka', day: 'numeric', month: 'short', year: 'numeric' });
   }
 
   // count an event (a PDF download, a "Report a mistake" click) in GoatCounter, when its script has loaded
