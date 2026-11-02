@@ -61,7 +61,10 @@ input:focus, textarea:focus, select:focus, .btn:focus-visible { outline: 2px sol
 .sortbar .help { margin: 0; }
 .vis-packs { display: flex; flex-direction: column; gap: 6px; padding-left: 26px; }
 .vis-group { display: flex; flex-direction: column; gap: 2px; }
-.vis-group-name { font-size: 0.72rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+.vis-group-name { font-size: 0.72rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); margin-top: 2px;
+  padding-left: 6px; border-left: 3px solid #c9771b; }
+.vis-group-name.s1 { border-left-color: #1f6fb2; }
+.vis-group-name.s2 { border-left-color: #1f9d6b; }
 .vis-packs .check { margin: 4px 0 0; font-size: 0.88rem; }
 .vis-pack { display: flex; align-items: center; gap: 8px; padding: 2px 0; }
 .vis-pack .check { margin: 0; flex: 1; min-width: 0; }
@@ -259,8 +262,8 @@ input:focus, textarea:focus, select:focus, .btn:focus-visible { outline: 2px sol
   }
 
   // the sections of a subject's page, as on index.html
-  const SECTIONS = ['Exam packs', 'Question papers', 'Question analysis'];
-  const sectionOf = it => (/^exam pack/i.test(it.document) ? SECTIONS[0] : /^question paper/i.test(it.document) ? SECTIONS[1] : SECTIONS[2]);
+  const SECTIONS = ['Question analysis', 'Exam packs', 'Question papers'];
+  const sectionOf = it => (/^exam pack/i.test(it.document) ? 'Exam packs' : /^question paper/i.test(it.document) ? 'Question papers' : 'Question analysis');
   // papers: newest year first, unless an order was saved; papers not in it (added since) come first
   const newest = (a, b) => b.session.localeCompare(a.session);
   function sortPapers(list, code, itemOrder) {
@@ -307,7 +310,7 @@ input:focus, textarea:focus, select:focus, .btn:focus-visible { outline: 2px sol
         '<button class="btn small" type="button" data-up aria-label="Move ' + s.code + ' up">↑</button>' +
         '<button class="btn small" type="button" data-down aria-label="Move ' + s.code + ' down">↓</button></div><div class="vis-packs">' +
         SECTIONS.map(name => [name, sortPapers(packs, s.code, itemOrder).filter(it => sectionOf(it) === name)]).filter(g => g[1].length).map(([name, part]) =>
-        '<div class="vis-group"><span class="vis-group-name">' + name + '</span>' + part.map(it => '<span class="vis-pack" data-pack="' + it.id + '" data-session="' + it.session + '" data-rank="' + catalogue.items.indexOf(it) + '">' +
+        '<div class="vis-group"><span class="vis-group-name s' + SECTIONS.indexOf(name) + '">' + name + '</span>' + part.map(it => '<span class="vis-pack" data-pack="' + it.id + '" data-session="' + it.session + '" data-rank="' + catalogue.items.indexOf(it) + '">' +
           '<label class="check"><input type="checkbox" data-item="' + it.id + '"' +
           (h.items.includes(it.id) || (knownItems && !knownItems.includes(it.id)) ? '' : ' checked') + '> ' +
           it.session + ' ' + it.document.toLowerCase() + (knownItems && !knownItems.includes(it.id) ? '<span class="new-badge">New</span>' : '') + '</label>' +

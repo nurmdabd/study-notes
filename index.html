@@ -61,7 +61,7 @@ h1 { font-size: 1.45rem; line-height: 1.25; margin: 0 0 4px; letter-spacing: -0.
 .note b { font-weight: 600; }
 
 .layout { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 6px 0 96px; }
-@media (min-width: 940px) { .layout { grid-template-columns: minmax(0, 1fr) 420px; align-items: start; }
+@media (min-width: 1180px) { .layout { grid-template-columns: minmax(0, 1fr) 420px; align-items: start; }
   .panel { position: sticky; top: 70px; max-height: calc(100vh - 84px); overflow-y: auto; } }
 html { scroll-padding-top: 70px; }
 
@@ -103,20 +103,31 @@ html { scroll-padding-top: 70px; }
 .subject-head .codes .code { font-size: 0.74rem; }
 .code { font: 600 0.78rem/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--accent); letter-spacing: .02em; }
 .subject-head h3 { margin: 0; font-size: 0.93rem; font-weight: 600; line-height: 1.3; }
-.pack-section { margin: 0; padding: 7px 14px 5px; font-size: 0.74rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--muted);
-  border-top: 1px solid var(--line); }
+.pack-section { --strip: #c9771b; margin: 0; padding: 6px 14px 6px 11px; font-size: 0.74rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
+  color: var(--text); border-top: 1px solid var(--line); border-left: 3px solid var(--strip); background: color-mix(in srgb, var(--strip) 12%, var(--surface)); }
+.pack-section.s1 { --strip: #1f6fb2; }
+.pack-section.s2 { --strip: #1f9d6b; }
 .subject-head + .pack-section { border-top: 0; }
 .pack { display: flex; align-items: center; gap: 10px 14px; padding: 8px 14px; min-height: 50px; }
 .pack + .pack { border-top: 1px solid var(--line); }
 .pack.on { background: var(--accent-soft); }
-.pack .info { flex: 1; min-width: 0; display: flex; align-items: baseline; gap: 4px 10px; flex-wrap: wrap; }
-.pack .year { font-weight: 600; font-variant-numeric: tabular-nums; }
+.pack .info { flex: 1; min-width: 0; display: grid; gap: 4px; }
+.info-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 10px; min-height: 1.3em; }
+.pack .year { font-weight: 600; font-variant-numeric: tabular-nums; min-width: 3.7em; }
 .pack .meta { color: var(--muted); font-size: 0.83rem; }
-.prices { display: flex; gap: 6px; flex-wrap: wrap; }
+/* price tags: same width and place in every row, so each kind lines up down the card */
+.prices { display: grid; grid-auto-flow: column; grid-auto-columns: 5.9rem; gap: 6px; }
 .price { font-size: 0.8rem; color: var(--text); background: var(--subtle); border: 1px solid var(--line);
-  border-radius: 999px; padding: 1px 8px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  border-radius: 999px; padding: 1px 8px; font-variant-numeric: tabular-nums; white-space: nowrap;
+  display: flex; justify-content: space-between; gap: 4px; }
 .price i { font-style: normal; color: var(--muted); }
 .actions-row { display: flex; gap: 6px; align-items: center; }
+/* a wide card: two lines beside the buttons; a narrow card: the buttons go below. "Updated" stays on the first line;
+   in a very narrow card it follows the price tags, on their line if it fits, else on a new line. */
+.subject { container-type: inline-size; }
+.updated.narrow { display: none; }
+@container (max-width: 640px) { .pack { flex-wrap: wrap; gap: 8px; } .pack .info { flex: 1 1 100%; } .actions-row { margin-left: auto; } }
+@container (max-width: 300px) { .updated.wide { display: none; } .updated.narrow { display: inline; } }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 32px;
   padding: 0 11px; border-radius: 8px; border: 1px solid var(--line-strong); background: var(--surface);
@@ -201,14 +212,12 @@ input:focus, select:focus, textarea:focus, .btn:focus-visible, .stepper button:f
 .small { font-size: 0.84rem; color: var(--muted); }
 footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--muted); font-size: 0.8rem; }
 .jump { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 5; box-shadow: 0 6px 20px rgba(0,0,0,.2); }
-@media (min-width: 940px) { .jump { display: none !important; } }
+@media (min-width: 1180px) { .jump { display: none !important; } }
 @media (max-width: 520px) {
   .brand .by { display: none; }
   .chips .lbl { min-width: 0; }
   .sort { max-width: 132px; }
-  .pack { padding: 8px 12px; gap: 8px; flex-wrap: wrap; }
-  .actions-row { margin-left: auto; }
-  .pack .info { gap: 2px 8px; flex: 1 1 100%; }
+  .pack { padding: 8px 12px; }
   .btn.pdf span { display: none; }
   .btn.pdf { padding: 0 9px; }
   .btn.report-top span { display: none; }
@@ -536,8 +545,8 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
   }
 
-  const SECTIONS = ['Exam packs', 'Question papers', 'Question analysis'];
-  const sectionOf = it => (/^exam pack/i.test(it.document) ? SECTIONS[0] : /^question paper/i.test(it.document) ? SECTIONS[1] : SECTIONS[2]);
+  const SECTIONS = ['Question analysis', 'Exam packs', 'Question papers'];
+  const sectionOf = it => (/^exam pack/i.test(it.document) ? 'Exam packs' : /^question paper/i.test(it.document) ? 'Question papers' : 'Question analysis');
   // the list of one subject's PDFs, the same rows for every subject
   function subjectCard(s, list) {
     const open = S.accepting_orders !== false;
@@ -559,7 +568,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
       const part = list.filter(it => sectionOf(it) === name);
       if (!part.length) return;
       const head = document.createElement('h4');
-      head.className = 'pack-section';
+      head.className = 'pack-section s' + SECTIONS.indexOf(name);
       head.textContent = name;
       card.appendChild(head);
       part.forEach(it => {
@@ -567,17 +576,19 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
         const prices = showPrices() && it.printable
           ? '<div class="prices">' + S.print.map(p => {
               const v = priceOf(it, p.name);
-              return v == null ? '' : '<span class="price">' + (S.print.length > 1 ? '<i>' + esc(shortType(p.name)) + '</i> ' : '') + '৳' + v + '</span>';
+              return v == null ? '<span></span>' : '<span class="price">' + (S.print.length > 1 ? '<i>' + esc(shortType(p.name)) + '</i>' : '') + '<span>৳' + v + '</span></span>';
             }).join('') + '</div>'
           : '';
+        const updated = it.updated ? '<span class="meta updated">Updated ' + esc(when(it.updated)) + '</span>' : '';
         const row = document.createElement('div');
         row.className = 'pack' + (inOrder ? ' on' : '');
         row.dataset.pack = it.id;
         const fileName = it.file.split('/').pop();
         row.innerHTML =
-          '<div class="info"><span class="year">' + esc(it.session) + '</span>' +
+          '<div class="info"><div class="info-line"><span class="year">' + esc(it.session) + '</span>' +
           '<span class="meta">' + (/bangla/i.test(it.document) ? 'Bangla · ' : '') + it.pages + ' pages' + (inOrder ? ' · <b>' + inOrder + ' in order</b>' : '') + '</span>' +
-          (it.updated ? '<span class="meta updated">Updated ' + esc(when(it.updated)) + '</span>' : '') + prices + '</div>' +
+          updated.replace('updated', 'updated wide') + '</div>' +
+          '<div class="info-line">' + prices + updated.replace('updated', 'updated narrow') + '</div></div>' +
           '<div class="actions-row">' +
           (it.page ? '<a class="btn" href="' + encodeURI(it.page) + '">Explore</a>' : '') +
           '<a class="btn open" href="' + encodeURI(it.file) + '" target="_blank" rel="noopener" ' +
