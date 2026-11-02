@@ -81,6 +81,19 @@ html { scroll-padding-top: 70px; }
 .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .count-line { color: var(--muted); font-size: 0.82rem; margin: 0 0 8px; font-variant-numeric: tabular-nums; }
 
+/* the first page's subject cards */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.tile { display: flex; flex-direction: column; gap: 5px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--card-line);
+  border-radius: var(--radius); box-shadow: var(--shadow); color: var(--text); text-decoration: none; }
+.tile:hover { border-color: var(--accent-line); background: var(--subtle); }
+.tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.tile-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.tile-name { font-size: 0.95rem; font-weight: 600; line-height: 1.3; flex: 1; }
+.tile-order { align-self: flex-start; font-size: 0.78rem; font-weight: 600; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 1px 8px; }
+.back { display: inline-block; margin: 4px 0 10px; font-size: 0.88rem; font-weight: 500; color: var(--accent); text-decoration: none; }
+.back:hover { text-decoration: underline; }
+[hidden] { display: none !important; }
+
 /* subject list */
 .subject { background: var(--surface); border: 1px solid var(--card-line); border-radius: var(--radius);
   box-shadow: var(--shadow); margin-bottom: 10px; overflow: hidden; }
@@ -221,7 +234,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
 </header>
 
 <div class="wrap">
-  <section class="intro">
+  <section class="intro" id="intro">
     <h1>Exam packs</h1>
     <p class="lead">Each past paper fully solved, with its formula sheet. Download any pack free as a PDF, or order a printed copy.</p>
     <p class="note"><b>Printed copies:</b> <span id="price-note"></span></p>
@@ -229,7 +242,8 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
 
   <div class="layout">
     <main>
-      <div class="toolbar">
+      <a class="back" id="back" href="./" hidden>← All subjects</a>
+      <div class="toolbar" id="toolbar">
         <div class="search">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
           <input id="q" type="search" placeholder="Search subject or code" aria-label="Search subject or code">
@@ -324,7 +338,8 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   // the list's filters and order: from the link (?dept=EEE&sem=3-2&sort=name), else this browser's last
   // sort, else the admin's default (default_sort)
   const params = new URLSearchParams(location.search);
-  const view = { dept: params.get('dept') || '', sem: params.get('sem') || '', sort: params.get('sort') || store.get('sn-sort') || '' };
+  const view = { subject: params.get('subject') || '', dept: params.get('dept') || '', sem: params.get('sem') || '', sort: params.get('sort') || store.get('sn-sort') || '' };
+  const baseTitle = document.title;
   const SORTS = ['custom', 'name', 'code', 'semester'];
 
   fetch('catalogue.json', { cache: 'no-cache' })
@@ -362,6 +377,9 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     if (store.get('sn-same') === '1') { $('f-same').checked = true; $('mobile-wrap').hidden = true; }
     new URLSearchParams(location.search).getAll('item')
       .forEach(id => { if (items[id] && items[id].printable) picked.set(key(id, ''), 1); });
+    // an old ?item= link opens that pack's subject, so its row is on the page
+    const firstItem = [...picked.keys()][0];
+    if (firstItem && !view.subject) view.subject = items[split(firstItem)[0]].subject;
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(es => { $('jump').style.visibility = es[0].isIntersecting ? 'hidden' : ''; }).observe($('order'));
     }
@@ -513,13 +531,135 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
   }
 
+  // the list of one subject's PDFs, the same rows for every subject
+  function subjectCard(s, list) {
+    const open = S.accepting_orders !== false;
+    const card = document.createElement('section');
+    card.className = 'subject';
+    // both codes (old and new syllabus) and the semester; a title that differs in a syllabus is named
+    const old = offers(s).filter(o => o.syllabus !== 'new'), neu = offers(s).filter(o => o.syllabus === 'new');
+    const codeLine = (o, what) => '<span title="' + esc(what + ' syllabus' + (o.title ? ': ' + o.title : '')) + '">' +
+      (what === 'New' ? 'New code ' : '') + '<span class="code">' + esc(o.code) + '</span>' + (o.title ? ' · ' + esc(o.title) : '') + '</span>';
+    const sems = [...new Set(offers(s).map(o => o.dept + ' ' + o.semester))];
+    card.innerHTML = '<div class="subject-head">' +
+      '<span class="code">' + esc(old.length ? old[0].code : s.code) + '</span>' +
+      '<h3>' + esc(s.title) + ' <span class="small">(' + esc(s.short) + ')</span></h3>' +
+      (offers(s).length ? '<div class="codes">' + neu.map(o => codeLine(o, 'New')).join('') +
+        old.filter(o => o.title).map(o => '<span>Old title: ' + esc(o.title) + '</span>').join('') +
+        '<span>' + sems.map(esc).join(', ') + '</span></div>' : '') + '</div>';
+    list.forEach(it => {
+      const inOrder = copiesOf(it.id);
+      const prices = showPrices() && it.printable
+        ? '<div class="prices">' + S.print.map(p => {
+            const v = priceOf(it, p.name);
+            return v == null ? '' : '<span class="price">' + (S.print.length > 1 ? '<i>' + esc(shortType(p.name)) + '</i> ' : '') + '৳' + v + '</span>';
+          }).join('') + '</div>'
+        : '';
+      const row = document.createElement('div');
+      row.className = 'pack' + (inOrder ? ' on' : '');
+      row.dataset.pack = it.id;
+      const fileName = it.file.split('/').pop();
+      row.innerHTML =
+        '<div class="info"><span class="year">' + esc(it.session) + '</span>' +
+        '<span class="meta">' + esc(it.document) + ' · ' + it.pages + ' pages' + (inOrder ? ' · <b>' + inOrder + ' in order</b>' : '') + '</span>' +
+        (it.updated ? '<span class="meta updated">Updated ' + esc(when(it.updated)) + '</span>' : '') + prices + '</div>' +
+        '<div class="actions-row">' +
+        (it.page ? '<a class="btn" href="' + encodeURI(it.page) + '">Explore</a>' : '') +
+        '<a class="btn open" href="' + encodeURI(it.file) + '" target="_blank" rel="noopener" ' +
+        'aria-label="Open ' + esc(lineName(it)) + ' in a new tab">Open</a>' +
+        '<a class="btn pdf" href="' + encodeURI(it.file) + '" download="' + esc(fileName) + '" ' +
+        'aria-label="Download ' + esc(lineName(it)) + ' (free PDF)">' +
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg><span>PDF</span></a>' +
+        (it.printable && open
+          ? '<button class="btn add" type="button" data-add aria-label="Add ' + esc(lineName(it)) + ' to the print order">+ Print</button>'
+          : '') +
+        (site.report_form
+          ? '<a class="btn report" href="' + esc(site.report_form) + '" target="_blank" rel="noopener noreferrer" ' +
+            'title="Report a mistake" aria-label="Report a mistake in ' + esc(lineName(it)) + '">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg></a>'
+          : '') + '</div>';
+      row.querySelector('.btn.open').addEventListener('click', () => track('open/' + it.id, 'Open ' + lineName(it)));
+      row.querySelector('.btn.pdf').addEventListener('click', () => track('download/' + it.id, 'Download ' + lineName(it)));
+      const flag = row.querySelector('.btn.report');
+      if (flag) flag.addEventListener('click', () => track('report/' + it.id, 'Report a mistake: ' + lineName(it)));
+      const add = row.querySelector('[data-add]');
+      if (add) add.addEventListener('click', () => {
+        track('print/' + it.id, 'Add to print order: ' + lineName(it));
+        lastSent = null;
+        const k = key(it.id, defaultType());
+        picked.set(k, Math.min(20, (picked.get(k) || 0) + 1));
+        renderSubjects(); renderCart();
+      });
+      card.appendChild(row);
+    });
+    return card;
+  }
+
+  // a card on the first page: the subject, how much it has, and how much of it is in the order
+  function subjectTile(s, list) {
+    const a = document.createElement('a');
+    a.className = 'tile';
+    a.href = subjectLink(s.code);
+    const papers = new Set(list.filter(it => it.session !== 'All papers').map(it => it.session));
+    const latest = [...papers].sort().pop();
+    const inOrder = list.reduce((n, it) => n + copiesOf(it.id), 0);
+    const old = offers(s).filter(o => o.syllabus !== 'new');
+    const sems = [...new Set(offers(s).map(o => o.dept + ' ' + o.semester))];
+    a.innerHTML = '<span class="tile-top"><span class="code">' + esc(old.length ? old[0].code : s.code) + '</span>' +
+      (sems.length ? '<span class="small">' + sems.map(esc).join(', ') + '</span>' : '') + '</span>' +
+      '<b class="tile-name">' + esc(s.title) + '</b>' +
+      '<span class="small">' + papers.size + (papers.size === 1 ? ' paper' : ' papers') + (latest ? ' · latest ' + esc(latest) : '') + '</span>' +
+      (inOrder ? '<span class="tile-order">' + inOrder + ' in order</span>' : '');
+    a.addEventListener('click', e => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+      e.preventDefault();
+      history.pushState(null, '', a.href);
+      showSubject(s.code);
+    });
+    return a;
+  }
+  function subjectLink(code) {
+    const u = new URLSearchParams(location.search);
+    u.delete('item');
+    if (code) u.set('subject', code); else u.delete('subject');
+    const qs = u.toString();
+    return location.pathname + (qs ? '?' + qs : '');
+  }
+  function showSubject(code) {
+    view.subject = code;
+    if (code) track('subject/' + code, 'Open subject ' + code);
+    renderSubjects();
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('popstate', () => {
+    view.subject = new URLSearchParams(location.search).get('subject') || '';
+    if (S) { renderSubjects(); window.scrollTo(0, 0); }
+  });
+  $('back').addEventListener('click', e => {
+    e.preventDefault();
+    history.pushState(null, '', subjectLink(''));
+    showSubject('');
+  });
+
   function renderSubjects() {
     const box = $('subjects');
-    const open = S.accepting_orders !== false;
     const q = $('q').value.trim().toLowerCase();
     let nSub = 0, nPack = 0;
     box.innerHTML = '';
     const shown = cat.subjects.filter(s => cat.items.some(it => it.subject === s.code && !hidden(it)));
+    const one = shown.find(s => s.code === view.subject);
+    $('intro').hidden = $('toolbar').hidden = $('count').hidden = !!one;
+    $('back').hidden = !one;
+    document.title = one ? one.short + ' · Study Notes' : baseTitle;
+    if (one) {
+      $('filters').hidden = true;
+      $('back').href = subjectLink('');
+      box.appendChild(subjectCard(one, sortPapers(cat.items.filter(it => it.subject === one.code && !hidden(it)), one.code)));
+      return;
+    }
+    const grid = document.createElement('div');
+    grid.className = 'tiles';
+    box.appendChild(grid);
     renderFilters(shown);
     $('sort').value = sortBy();
     // suggested: the admin's order (subject_order) first, the rest in catalogue order
@@ -538,69 +678,11 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
       const words = [s.code, s.short, s.title].concat(offers(s).flatMap(o => [o.code, o.code.replace(/\s+/g, ''), o.title || '']));
       if (q && !words.join(' ').toLowerCase().includes(q)) return;
       nSub++; nPack += list.length;
-      const card = document.createElement('section');
-      card.className = 'subject';
-      // both codes (old and new syllabus) and the semester; a title that differs in a syllabus is named
-      const old = offers(s).filter(o => o.syllabus !== 'new'), neu = offers(s).filter(o => o.syllabus === 'new');
-      const codeLine = (o, what) => '<span title="' + esc(what + ' syllabus' + (o.title ? ': ' + o.title : '')) + '">' +
-        (what === 'New' ? 'New code ' : '') + '<span class="code">' + esc(o.code) + '</span>' + (o.title ? ' · ' + esc(o.title) : '') + '</span>';
-      const sems = [...new Set(offers(s).map(o => o.dept + ' ' + o.semester))];
-      card.innerHTML = '<div class="subject-head">' +
-        '<span class="code">' + esc(old.length ? old[0].code : s.code) + '</span>' +
-        '<h3>' + esc(s.title) + ' <span class="small">(' + esc(s.short) + ')</span></h3>' +
-        (offers(s).length ? '<div class="codes">' + neu.map(o => codeLine(o, 'New')).join('') +
-          old.filter(o => o.title).map(o => '<span>Old title: ' + esc(o.title) + '</span>').join('') +
-          '<span>' + sems.map(esc).join(', ') + '</span></div>' : '') + '</div>';
-      list.forEach(it => {
-        const inOrder = copiesOf(it.id);
-        const prices = showPrices() && it.printable
-          ? '<div class="prices">' + S.print.map(p => {
-              const v = priceOf(it, p.name);
-              return v == null ? '' : '<span class="price">' + (S.print.length > 1 ? '<i>' + esc(shortType(p.name)) + '</i> ' : '') + '৳' + v + '</span>';
-            }).join('') + '</div>'
-          : '';
-        const row = document.createElement('div');
-        row.className = 'pack' + (inOrder ? ' on' : '');
-        row.dataset.pack = it.id;
-        const fileName = it.file.split('/').pop();
-        row.innerHTML =
-          '<div class="info"><span class="year">' + esc(it.session) + '</span>' +
-          '<span class="meta">' + esc(it.document) + ' · ' + it.pages + ' pages' + (inOrder ? ' · <b>' + inOrder + ' in order</b>' : '') + '</span>' +
-          (it.updated ? '<span class="meta updated">Updated ' + esc(when(it.updated)) + '</span>' : '') + prices + '</div>' +
-          '<div class="actions-row">' +
-          (it.page ? '<a class="btn" href="' + encodeURI(it.page) + '">Explore</a>' : '') +
-          '<a class="btn open" href="' + encodeURI(it.file) + '" target="_blank" rel="noopener" ' +
-          'aria-label="Open ' + esc(lineName(it)) + ' in a new tab">Open</a>' +
-          '<a class="btn pdf" href="' + encodeURI(it.file) + '" download="' + esc(fileName) + '" ' +
-          'aria-label="Download ' + esc(lineName(it)) + ' (free PDF)">' +
-          '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg><span>PDF</span></a>' +
-          (it.printable && open
-            ? '<button class="btn add" type="button" data-add aria-label="Add ' + esc(lineName(it)) + ' to the print order">+ Print</button>'
-            : '') +
-          (site.report_form
-            ? '<a class="btn report" href="' + esc(site.report_form) + '" target="_blank" rel="noopener noreferrer" ' +
-              'title="Report a mistake" aria-label="Report a mistake in ' + esc(lineName(it)) + '">' +
-              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></svg></a>'
-            : '') + '</div>';
-        row.querySelector('.btn.open').addEventListener('click', () => track('open/' + it.id, 'Open ' + lineName(it)));
-        row.querySelector('.btn.pdf').addEventListener('click', () => track('download/' + it.id, 'Download ' + lineName(it)));
-        const flag = row.querySelector('.btn.report');
-        if (flag) flag.addEventListener('click', () => track('report/' + it.id, 'Report a mistake: ' + lineName(it)));
-        const add = row.querySelector('[data-add]');
-        if (add) add.addEventListener('click', () => {
-          track('print/' + it.id, 'Add to print order: ' + lineName(it));
-          lastSent = null;
-          const k = key(it.id, defaultType());
-          picked.set(k, Math.min(20, (picked.get(k) || 0) + 1));
-          renderSubjects(); renderCart();
-        });
-        card.appendChild(row);
-      });
-      box.appendChild(card);
+      grid.appendChild(subjectTile(s, list));
     });
     if (!nSub) box.innerHTML = '<p class="small">' + (q ? 'No subject matches “' + esc(q) + '”' + (view.dept || view.sem ? ' with these filters' : '') + '.'
       : view.dept || view.sem ? 'No subject for these filters. Choose All to see every subject.' : 'No packs to show right now.') + '</p>';
-    $('count').textContent = nPack + (nPack === 1 ? ' pack' : ' packs') + ' · ' + nSub + (nSub === 1 ? ' subject' : ' subjects');
+    $('count').textContent = nSub + (nSub === 1 ? ' subject' : ' subjects') + ' · ' + nPack + (nPack === 1 ? ' PDF' : ' PDFs');
   }
 
   let total = null; // the order's price, or null when prices are not shown
