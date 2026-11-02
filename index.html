@@ -338,7 +338,9 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   // the list's filters and order: from the link (?dept=EEE&sem=3-2&sort=name), else this browser's last
   // sort, else the admin's default (default_sort)
   const params = new URLSearchParams(location.search);
-  const view = { subject: params.get('subject') || '', dept: params.get('dept') || '', sem: params.get('sem') || '', sort: params.get('sort') || store.get('sn-sort') || '' };
+  // ?subject=EEE455-VLSI, code and short name; the code alone also works
+  const subjectOf = v => (v || '').split('-')[0];
+  const view = { subject: subjectOf(params.get('subject')), dept: params.get('dept') || '', sem: params.get('sem') || '', sort: params.get('sort') || store.get('sn-sort') || '' };
   const baseTitle = document.title;
   const SORTS = ['custom', 'name', 'code', 'semester'];
 
@@ -621,7 +623,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
   function subjectLink(code) {
     const u = new URLSearchParams(location.search);
     u.delete('item');
-    if (code) u.set('subject', code); else u.delete('subject');
+    if (code) u.set('subject', code + '-' + subjects[code].short); else u.delete('subject');
     const qs = u.toString();
     return location.pathname + (qs ? '?' + qs : '');
   }
@@ -632,7 +634,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     window.scrollTo(0, 0);
   }
   window.addEventListener('popstate', () => {
-    view.subject = new URLSearchParams(location.search).get('subject') || '';
+    view.subject = subjectOf(new URLSearchParams(location.search).get('subject'));
     if (S) { renderSubjects(); window.scrollTo(0, 0); }
   });
   $('back').addEventListener('click', e => {
