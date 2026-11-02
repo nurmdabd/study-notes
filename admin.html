@@ -59,10 +59,11 @@ input:focus, textarea:focus, select:focus, .btn:focus-visible { outline: 2px sol
 .new-badge { font-size: 0.72rem; font-weight: 700; color: #fff; background: #c2410c; border-radius: 999px; padding: 1px 8px; margin-left: 6px; vertical-align: 1px; }
 .sortbar { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
 .sortbar .help { margin: 0; }
-.vis-packs { display: flex; flex-wrap: wrap; gap: 4px 16px; padding-left: 26px; }
+.vis-packs { display: flex; flex-direction: column; gap: 2px; padding-left: 26px; }
 .vis-packs .check { margin: 4px 0 0; font-size: 0.88rem; }
-.vis-pack { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; padding: 2px 4px 2px 0; }
-.vis-pack .check { margin: 0; }
+.vis-pack { display: flex; align-items: center; gap: 8px; padding: 2px 0; }
+.vis-pack .check { margin: 0; flex: 1; min-width: 0; }
+.vis-pack .mv + .mv { margin-left: -4px; }
 .vis-pack .mv { min-height: 24px; padding: 0 6px; font-size: 0.78rem; }
 .opt .avail { display: flex; align-items: center; gap: 5px; font-size: 0.84rem; white-space: nowrap; }
 .opt .avail input { width: 18px; height: 18px; }
@@ -151,7 +152,7 @@ input:focus, textarea:focus, select:focus, .btn:focus-visible { outline: 2px sol
 
     <div class="card">
       <h2>Subjects: order and what is shown</h2>
-      <p class="help">Move a subject with ↑ ↓ and a paper with ← → to set the order on the page; papers are newest year first unless you move them. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted. A subject or paper added to the site since your last save is marked <b>New</b> and stays hidden until you tick it and save.</p>
+      <p class="help">Move a subject or a paper with ↑ ↓ to set the order on the page; papers are newest year first unless you move them. Untick to hide a subject (all its packs) or one pack; hidden packs cannot be ordered, and nothing is deleted. A subject or paper added to the site since your last save is marked <b>New</b> and stays hidden until you tick it and save.</p>
       <div class="sortbar"><span class="help">Sort:</span>
         <button class="btn small" type="button" data-sort="code">By code</button>
         <button class="btn small" type="button" data-sort="title">By title</button>
@@ -298,11 +299,11 @@ input:focus, textarea:focus, select:focus, .btn:focus-visible { outline: 2px sol
         '<button class="btn small" type="button" data-up aria-label="Move ' + s.code + ' up">↑</button>' +
         '<button class="btn small" type="button" data-down aria-label="Move ' + s.code + ' down">↓</button></div><div class="vis-packs">' +
         sortPapers(packs, s.code, itemOrder).map(it => '<span class="vis-pack" data-pack="' + it.id + '" data-session="' + it.session + '">' +
-          '<button class="btn small mv" type="button" data-left aria-label="Move ' + it.id + ' earlier">←</button>' +
           '<label class="check"><input type="checkbox" data-item="' + it.id + '"' +
           (h.items.includes(it.id) || (knownItems && !knownItems.includes(it.id)) ? '' : ' checked') + '> ' +
           it.session + ' ' + it.document.toLowerCase() + (knownItems && !knownItems.includes(it.id) ? '<span class="new-badge">New</span>' : '') + '</label>' +
-          '<button class="btn small mv" type="button" data-right aria-label="Move ' + it.id + ' later">→</button></span>').join('') + '</div>';
+          '<button class="btn small mv" type="button" data-left aria-label="Move ' + it.id + ' up">↑</button>' +
+          '<button class="btn small mv" type="button" data-right aria-label="Move ' + it.id + ' down">↓</button></span>').join('') + '</div>';
       const sub = div.querySelector('[data-subject]');
       const sync = () => div.querySelectorAll('[data-item]').forEach(x => { x.disabled = !sub.checked; });
       sub.addEventListener('change', sync); sync();
