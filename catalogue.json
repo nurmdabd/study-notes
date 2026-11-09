@@ -222,11 +222,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 64,
+      "pages": 70,
       "file": "EEE329-COM/COM-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00",
-      "source": "3b9643eda82d0423"
+      "updated": "2026-11-09T12:40+06:00",
+      "source": "3bc6990920043266"
     },
     {
       "id": "EEE329-2020-21-question-paper",
@@ -237,8 +237,8 @@
       "pages": 3,
       "file": "EEE329-COM/COM-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00",
-      "source": "a883761dd2c4f051"
+      "updated": "2026-11-09T12:40+06:00",
+      "source": "3eb0e62462b998b0"
     },
     {
       "id": "EEE329-2021-22-pack",
@@ -246,11 +246,11 @@
       "session": "2021-22",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 62,
+      "pages": 70,
       "file": "EEE329-COM/COM-2021-22-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00",
-      "source": "9fa6c993c51b9b08"
+      "updated": "2026-11-09T12:40+06:00",
+      "source": "3143a98de3d445c4"
     },
     {
       "id": "EEE329-2021-22-question-paper",
@@ -261,8 +261,8 @@
       "pages": 2,
       "file": "EEE329-COM/COM-2021-22-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00",
-      "source": "e7a96a21d3cf68d2"
+      "updated": "2026-11-09T12:40+06:00",
+      "source": "9dda573dac7f510f"
     },
     {
       "id": "EEE337-2020-21-pack",
@@ -574,8 +574,8 @@
       "file": "EEE329-COM/COM-question-analysis.pdf",
       "page": "analysis.html?subject=EEE329",
       "printable": true,
-      "updated": "2026-10-31T16:42:57+06:00",
-      "source": "506e95628463fdc5"
+      "updated": "2026-11-09T12:40+06:00",
+      "source": "134d74caabf41a86"
     },
     {
       "id": "EEE337-question-analysis",
