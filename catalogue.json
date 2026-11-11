@@ -438,11 +438,11 @@
       "session": "2018-19",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 94,
+      "pages": 100,
       "file": "EEE455-VLSI/VLSI-2018-19-pack.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00",
-      "source": "25726e91d00298a1"
+      "updated": "2026-11-11T22:50+06:00",
+      "source": "6225cf8a2eda3a13"
     },
     {
       "id": "EEE455-2018-19-question-paper",
@@ -453,8 +453,8 @@
       "pages": 3,
       "file": "EEE455-VLSI/VLSI-2018-19-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00",
-      "source": "97ceda785409d7e5"
+      "updated": "2026-11-11T22:50+06:00",
+      "source": "1f95bcdf67f6dcba"
     },
     {
       "id": "EEE455-2019-20-pack",
@@ -462,11 +462,11 @@
       "session": "2019-20",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 78,
+      "pages": 80,
       "file": "EEE455-VLSI/VLSI-2019-20-pack.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00",
-      "source": "f7e76e66b20ae086"
+      "updated": "2026-11-11T22:50+06:00",
+      "source": "b846c557133eb990"
     },
     {
       "id": "EEE455-2019-20-question-paper",
@@ -477,8 +477,8 @@
       "pages": 3,
       "file": "EEE455-VLSI/VLSI-2019-20-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00",
-      "source": "1c8df4e45443094e"
+      "updated": "2026-11-11T22:50+06:00",
+      "source": "b75b5544c2bfacfb"
     },
     {
       "id": "EEE455-2020-21-pack",
@@ -489,8 +489,8 @@
       "pages": 92,
       "file": "EEE455-VLSI/VLSI-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00",
-      "source": "47323dd66da9f86a"
+      "updated": "2026-11-11T22:50+06:00",
+      "source": "ac5c2aca3da96c2a"
     },
     {
       "id": "EEE455-2020-21-question-paper",
@@ -501,8 +501,8 @@
       "pages": 4,
       "file": "EEE455-VLSI/VLSI-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00",
-      "source": "27d544d74541437c"
+      "updated": "2026-11-11T22:50+06:00",
+      "source": "e18a21bdba243e59"
     },
     {
       "id": "EEE459-2020-21-pack",
@@ -683,12 +683,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 28,
+      "pages": 38,
       "file": "EEE455-VLSI/VLSI-question-analysis.pdf",
       "page": "analysis.html?subject=EEE455",
       "printable": true,
-      "updated": "2026-11-02T14:11:09+06:00",
-      "source": "4db8ca43ec249fe5"
+      "updated": "2026-11-11T22:50+06:00",
+      "source": "cd272ac7d5c4eac6"
     },
     {
       "id": "EEE459-question-analysis",
