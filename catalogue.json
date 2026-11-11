@@ -246,11 +246,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 86,
+      "pages": 88,
       "file": "EEE329-COM/COM-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-11T19:13+06:00",
-      "source": "48b08eabd6cc7769"
+      "updated": "2026-11-11T21:57+06:00",
+      "source": "1cd0c74ae1853cf4"
     },
     {
       "id": "EEE329-2020-21-question-paper",
@@ -261,8 +261,8 @@
       "pages": 3,
       "file": "EEE329-COM/COM-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-11T19:13+06:00",
-      "source": "e0d75b3fdb9e32db"
+      "updated": "2026-11-11T21:57+06:00",
+      "source": "93c35ffd7ca6dc5c"
     },
     {
       "id": "EEE329-2021-22-pack",
@@ -366,11 +366,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 84,
+      "pages": 88,
       "file": "EEE339-PE/PE-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:10+06:00",
-      "source": "6ae50a8ec6d71f26"
+      "updated": "2026-11-11T21:57+06:00",
+      "source": "90f8f1088404fa1e"
     },
     {
       "id": "EEE339-2020-21-question-paper",
@@ -381,8 +381,8 @@
       "pages": 3,
       "file": "EEE339-PE/PE-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:10+06:00",
-      "source": "6f79c983ed9585e0"
+      "updated": "2026-11-11T21:57+06:00",
+      "source": "b2cae093390979bb"
     },
     {
       "id": "EEE421-2020-21-pack",
@@ -622,8 +622,8 @@
       "file": "EEE329-COM/COM-question-analysis.pdf",
       "page": "analysis.html?subject=EEE329",
       "printable": true,
-      "updated": "2026-11-11T21:07+06:00",
-      "source": "3a7f5acc697bc607"
+      "updated": "2026-11-11T21:57+06:00",
+      "source": "3443171462441743"
     },
     {
       "id": "EEE337-question-analysis",
@@ -644,12 +644,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 16,
+      "pages": 20,
       "file": "EEE339-PE/PE-question-analysis.pdf",
       "page": "analysis.html?subject=EEE339",
       "printable": true,
-      "updated": "2026-10-31T16:43:10+06:00",
-      "source": "9dd9450295c58282"
+      "updated": "2026-11-11T21:57+06:00",
+      "source": "b0eb142e17d70d38"
     },
     {
       "id": "EEE421-question-analysis",
