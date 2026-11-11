@@ -183,6 +183,27 @@ function syncReportForm_(cat, st) {
   return 'updated';
 }
 
+/** The report form's wording (the user's choice, 2026-11-11): set by updateReportFormText. */
+const REPORT_TEXT = {
+  title: 'Found a mistake? — Study Notes',
+  description: 'কোনো ভুল বা অস্পষ্ট কিছু চোখে পড়লে অনুগ্রহ করে এখানে জানান। আপনার প্রতিটি মতামত সমাধানগুলোকে আরও ভালো করতে সাহায্য করে, তাই আন্তরিক ধন্যবাদ!\n\n' +
+    'Spotted a mistake or something unclear? Please let us know here. Thank you for helping make the solutions better!\n\n' +
+    'স্ক্রিনশট থাকলে অনুগ্রহ করে WhatsApp-এ পাঠিয়ে দিন এবং নিচের ঘরে লিখে দিন "screenshot sent"।\nWhatsApp: 01352679856',
+  screenshot: 'WhatsApp-এ স্ক্রিনশট পাঠিয়ে থাকলে লিখুন: screenshot sent',
+};
+
+/** Run once to give the report form its polite title, description and screenshot question (safe to run again). */
+function updateReportFormText() {
+  const id = PropertiesService.getScriptProperties().getProperty('REPORT_FORM_ID');
+  if (!id) throw new Error('Add the script property REPORT_FORM_ID first (see SETUP.md, step 5).');
+  const form = FormApp.openById(id);
+  form.setTitle(REPORT_TEXT.title);
+  form.setDescription(REPORT_TEXT.description);
+  const shot = form.getItems().find(i => /screenshot/i.test(i.getTitle()));
+  if (shot) shot.setTitle(REPORT_TEXT.screenshot);
+  Logger.log('Report form text updated' + (shot ? ', with the screenshot question.' : '; no screenshot question found.'));
+}
+
 /** Run any time to bring the report form's paper list up to date now (the hourly sync does the same). */
 function syncReportFormNow() {
   Logger.log('Report form: ' + syncReportForm_(fetchCatalogue_(), settings_()));

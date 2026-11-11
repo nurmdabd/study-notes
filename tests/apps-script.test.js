@@ -349,6 +349,11 @@ check('settings without a paper order get an empty one', (() => { const st = run
   check('an admin save updates the form', S4.report_form === 'updated' && !f.items.find(i => i.__t.title === 'Which paper?').__t.choices.some(x => x.startsWith('EEE475')), S4.report_form);
   run('syncNow()');
   check('the hourly sync keeps it (unchanged)', run('syncReportForm_(fetchCatalogue_(), settings_())') === 'unchanged');
+  f.addTextItem().setTitle('Screenshot sent on WhatsApp? (write: screenshot sent)');
+  run('updateReportFormText()');
+  check('polite title, description and screenshot question', f.header.title === 'Found a mistake? — Study Notes' &&
+    f.header.description.startsWith('কোনো ভুল') && f.items.some(i => i.__t.title === 'WhatsApp-এ স্ক্রিনশট পাঠিয়ে থাকলে লিখুন: screenshot sent'));
+  check('paper list untouched by the text update', f.items.find(i => i.__t.title === 'Which paper?').__t.choices.length > 3);
   delete props.REPORT_FORM_ID; delete ctx.__form;
 }
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;
