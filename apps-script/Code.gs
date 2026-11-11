@@ -97,6 +97,7 @@ function syncNow() {
     JSON.stringify({ department: cat.site.department.default, batch: cat.site.batch.default }));
   writeCatalogueSheet_(ss_(), cat);
   try { publishSettings_(); } catch (e) { Logger.log('settings.json not written: ' + e.message); }
+  try { syncReportForm_(cat, settings_()); } catch (e) { Logger.log('Report form not updated: ' + e.message); }
 }
 
 /**
@@ -120,6 +121,71 @@ function removeForm() {
   }
   ['FORM_ID', 'PB_PACKS', 'PB_PRINTING', 'SUBJECT_ITEMS', 'CHOICE_MAP'].forEach(k => props.deleteProperty(k));
   writeCatalogueSheet_(ss_(), fetchCatalogue_()); // without the form-link column
+}
+
+// ---------------------------------------------------------------- report form
+
+/**
+ * The "Report a mistake" Google Form: its "Which paper?" list is rebuilt from the website's catalogue,
+ * with only the papers the website shows, in the website's order (the admin page's subject and paper
+ * order), and "Other" last. It runs with the hourly sync and after every save on the admin page, and
+ * changes the form only when the list differs. Set it up once: Project Settings > Script properties >
+ * REPORT_FORM_ID = the long ID in the form's edit link (docs.google.com/forms/d/<ID>/edit), then run
+ * syncReportFormNow. The form must belong to (or be editable by) this Google account.
+ */
+const REPORT_QUESTION = /which paper/i;
+
+/** The list the form should show: "<code> <short> question analysis", then "<code> <short> <session>" newest first, "(Bangla)" after its paper. */
+function reportFormChoices_(cat, st) {
+  const shown = cat.items.filter(it => !isHidden_(st, it));
+  const order = (st.subject_order || []).filter(c => cat.subjects.some(s => s.code === c));
+  cat.subjects.forEach(s => { if (!order.includes(s.code)) order.push(s.code); });
+  const choices = [];
+  order.forEach(code => {
+    const subj = cat.subjects.find(s => s.code === code);
+    const mine = shown.filter(it => it.subject === code);
+    if (!mine.length) return;
+    const name = code + ' ' + subj.short;
+    const own = ((st.item_order || {})[code] || []);
+    const rank = it => {
+      const i = own.indexOf(it.id);
+      return i >= 0 ? i : own.length;
+    };
+    mine.sort((a, b) => rank(a) - rank(b) ||
+      (a.session === 'All papers' ? -1 : b.session === 'All papers' ? 1 : b.session.localeCompare(a.session)) ||
+      (/Bangla/.test(a.document) ? 1 : 0) - (/Bangla/.test(b.document) ? 1 : 0));
+    mine.forEach(it => {
+      const label = it.session === 'All papers' ? name + ' question analysis'
+        : name + ' ' + it.session + (/Bangla/.test(it.document) ? ' (Bangla)' : '');
+      if (!choices.includes(label)) choices.push(label);
+    });
+  });
+  choices.push('Other');
+  return choices;
+}
+
+/** Updates the form's "Which paper?" list. Returns 'updated', 'unchanged', 'no form' or a reason it could not. */
+function syncReportForm_(cat, st) {
+  const id = PropertiesService.getScriptProperties().getProperty('REPORT_FORM_ID');
+  if (!id) return 'no form';
+  const form = FormApp.openById(id);
+  const item = form.getItems().find(i => REPORT_QUESTION.test(i.getTitle()));
+  if (!item) return 'no "Which paper?" question';
+  const type = item.getType();
+  const q = type === FormApp.ItemType.LIST ? item.asListItem()
+    : type === FormApp.ItemType.MULTIPLE_CHOICE ? item.asMultipleChoiceItem()
+    : type === FormApp.ItemType.CHECKBOX ? item.asCheckboxItem() : null;
+  if (!q) return '"Which paper?" is not a list question';
+  const want = reportFormChoices_(cat, st);
+  const have = q.getChoices().map(c => c.getValue());
+  if (JSON.stringify(have) === JSON.stringify(want)) return 'unchanged';
+  q.setChoiceValues(want);
+  return 'updated';
+}
+
+/** Run any time to bring the report form's paper list up to date now (the hourly sync does the same). */
+function syncReportFormNow() {
+  Logger.log('Report form: ' + syncReportForm_(fetchCatalogue_(), settings_()));
 }
 
 /**
@@ -428,7 +494,9 @@ function admin_(data) {
     }
     let published;
     try { published = publishSettings_(); } catch (e) { published = 'error: ' + e.message; }
-    return json_({ ok: true, settings: settings_(), sheet: ss_().getUrl(), published: published });
+    let reportForm;
+    try { reportForm = syncReportForm_(fetchCatalogue_(), settings_()); } catch (e) { reportForm = 'error: ' + e.message; }
+    return json_({ ok: true, settings: settings_(), sheet: ss_().getUrl(), published: published, report_form: reportForm });
   }
   return json_({ ok: true, settings: settings_(), sheet: ss_().getUrl() });
 }

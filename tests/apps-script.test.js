@@ -49,6 +49,7 @@ function makeForm() {
       }
       if (k === 'setTitle') return v => { o.title = v; return typed; };
       if (k === 'setChoiceValues') return v => { o.choices = v.slice(); return typed; };
+      if (k === 'getChoices') return () => o.choices.map(v => ({ getValue: () => v }));
       if (k === 'setHelpText') return v => { o.help = v; return typed; };
       if (k === 'createResponse') return v => ({ item: o, v });
       return () => typed;
@@ -319,5 +320,35 @@ check('settings without a paper order get an empty one', (() => { const st = run
   run('syncNow()');
   check('the hourly sync does not write when nothing changed', gh.puts === 2);
   delete props.GITHUB_TOKEN;
+}
+// ---- the report form's "Which paper?" list follows the website
+{
+  ctx.UrlFetchApp.fetch = () => ({ getResponseCode: () => 200, getContentText: () => catalogue });
+  const f = makeForm();
+  f.addTextItem().setTitle('Question part');
+  f.addListItem().setTitle('Which paper?').setChoiceValues(['EEE475 RF 2020-21', 'Other']);
+  ctx.__form = f;
+  delete props.REPORT_FORM_ID;
+  check('no report form set: nothing done', run('syncReportForm_(fetchCatalogue_(), settings_())') === 'no form');
+  props.REPORT_FORM_ID = 'F';
+  const cat = JSON.parse(catalogue);
+  run(`(function(){ const st = settings_(); st.hidden = { subjects: [], items: ['EEE475-2019-20-pack', 'EEE475-2019-20-question-paper'] };
+    st.known_subjects = ${JSON.stringify(cat.subjects.map(s => s.code))}; st.known_items = ${JSON.stringify(cat.items.map(i => i.id))};
+    st.subject_order = ['EEE475', 'EEE329']; st.item_order = {}; writeSettings_(st); })()`);
+  check('the list is updated', run('syncReportForm_(fetchCatalogue_(), settings_())') === 'updated');
+  const list = f.items.find(i => i.__t.title === 'Which paper?').__t.choices;
+  check('RF first, analysis then newest paper first, Bangla after its paper', list.slice(0, 4).join('|') === 'EEE475 RF question analysis|EEE475 RF 2020-21|EEE475 RF 2020-21 (Bangla)|EEE475 RF 2018-19', list.slice(0, 5).join('|'));
+  check('a hidden paper is left out', !list.includes('EEE475 RF 2019-20'));
+  check('then COM, then the other subjects; Other last', list[list.findIndex(x => x.startsWith('EEE329'))].startsWith('EEE329 COM') &&
+    list.findIndex(x => x.startsWith('EEE329')) < list.findIndex(x => x.startsWith('EEE337')) && list[list.length - 1] === 'Other', list.join('|'));
+  check('each session once (question paper merged)', new Set(list).size === list.length);
+  check('unchanged list is not written again', run('syncReportForm_(fetchCatalogue_(), settings_())') === 'unchanged');
+  ctx.__cache = {};
+  const L4 = post({ action: 'adminLoad', key });
+  const S4 = post({ action: 'adminSave', key, settings: Object.assign({}, L4.settings, { hidden: { subjects: ['EEE475'], items: [] } }) });
+  check('an admin save updates the form', S4.report_form === 'updated' && !f.items.find(i => i.__t.title === 'Which paper?').__t.choices.some(x => x.startsWith('EEE475')), S4.report_form);
+  run('syncNow()');
+  check('the hourly sync keeps it (unchanged)', run('syncReportForm_(fetchCatalogue_(), settings_())') === 'unchanged');
+  delete props.REPORT_FORM_ID; delete ctx.__form;
 }
 console.log(fail ? fail + " FAILED" : "ALL PASS"); process.exitCode = fail ? 1 : 0;

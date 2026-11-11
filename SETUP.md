@@ -57,6 +57,16 @@ The order page needs your settings (order, hidden packs, prices). Asking the App
 
 After this, a save on the admin page reaches the page within about a minute (the time GitHub takes to republish the site). The token can only change this one repository; it is stored in the script's properties, never in the repo.
 
+## 5. Keep the report form's paper list up to date (once)
+
+The "Report a mistake" form's **Which paper?** list can follow the website by itself: the script rebuilds it from `catalogue.json` with only the papers the website shows, in the admin page's order (each subject's question analysis, then its papers newest first, a Bangla pack after its paper, "Other" last). It runs with the hourly sync and after every save on the admin page, and touches the form only when the list has changed. The other questions of the form are never changed.
+
+1. Open the form in edit mode (forms.google.com, the pencil view). Its address is `https://docs.google.com/forms/d/<ID>/edit`; copy the long `<ID>` (not the `/d/e/…/viewform` link that people fill in).
+2. In the Apps Script editor: ⚙ **Project Settings** → **Script properties** → **Add script property**: name `REPORT_FORM_ID`, value the ID → **Save script properties**. The form must belong to the same Google account as the script (or be shared with it as an editor).
+3. Back in the editor, run **syncReportFormNow**. Google asks once for permission to manage your forms. The Execution log then says `Report form: updated`, and the form's list shows every paper on the website.
+
+After this, a new paper appears in the form when you tick it on the admin page and save (the admin page says "The report form's paper list was updated too"); a paper you hide leaves the list. Reports already sent keep the paper name they were sent with.
+
 ## Updating the script
 
 When `apps-script/Code.gs` changes:
