@@ -65,6 +65,8 @@ The "Report a mistake" form's **Which paper?** list can follow the website by it
 2. In the Apps Script editor: ⚙ **Project Settings** → **Script properties** → **Add script property**: name `REPORT_FORM_ID`, value the ID → **Save script properties**. The form must belong to the same Google account as the script (or be shared with it as an editor).
 3. Back in the editor, run **syncReportFormNow**. Google asks once for permission to manage your forms. The Execution log then says `Report form: updated`, and the form's list shows every paper on the website.
 
+**The form's wording** (title, description and the screenshot question) is set once by **updateReportFormText** from `REPORT_TEXT` in `Code.gs`. It writes plain text only, so a link in the description (the WhatsApp number) is added by hand in the form editor afterwards; running updateReportFormText again removes it.
+
 After this, a new paper appears in the form when you tick it on the admin page and save (the admin page says "The report form's paper list was updated too"); a paper you hide leaves the list. Reports already sent keep the paper name they were sent with.
 
 ## Updating the script
