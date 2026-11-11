@@ -428,7 +428,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=10",
    "text": "Write short notes on the following communication channels: (i) Twisted pair cable (ii) Radio wave",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Twisted pair: two insulated wires twisted so interference cancels in their difference; UTP and STP, categories; telephone and LAN; bandwidth and distance limited. Radio waves: 3 kHz to 1 GHz, omnidirectional, ground, sky or line of sight, pass through walls; AM, FM and TV.",
+   "draws": [
+    "Diagram: twisted pair cancelling interference",
+    "Diagram: ground, sky and line-of-sight propagation"
+   ],
+   "compare": [
+    "Twisted pair vs radio waves: guided, noise cancelled by twisting vs unguided, omnidirectional, passes walls"
+   ]
   },
   {
    "id": "2022-23-7(c)",
@@ -442,7 +450,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=11",
    "text": "Explain switching modulators, specifically the ring modulator: circuit, working, and the case $m(t) = 0$ where the carrier is suppressed.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "A switching modulator multiplies $m(t)$ by a ±1 square wave at $f_c$; in the ring modulator a large carrier switches the two diode pairs; output $m(t)w(t)$, and a BPF keeps $(4/\\pi)m\\cos\\omega_ct$; with $m = 0$ the balanced currents cancel, so no carrier.",
+   "draws": [
+    "Circuit: ring modulator",
+    "Waveform: message, switching wave and output"
+   ]
   },
   {
    "id": "2022-23-7(e)",
@@ -456,7 +469,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=14",
    "text": "Explain the effect of local oscillator phase error and frequency error in coherent detection of DSB-SC/SSB.",
    "repeat_of": "",
-   "outline": "Multiply DSB-SC and SSB by a carrier with frequency and phase error; low-pass filter; read attenuation, beating, phase and frequency shift."
+   "outline": "Multiply DSB-SC and SSB by a carrier with frequency and phase error; low-pass filter; read attenuation, beating, phase and frequency shift.",
+   "compare": [
+    "Phase error vs frequency error: output scaled by $\\cos\\delta$, null at 90° vs output beats as $\\cos\\Delta\\omega t$"
+   ]
   },
   {
    "id": "2021-22-2(b)",
@@ -470,7 +486,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=21",
    "text": "Explain how phase and frequency error affect the coherent detection of AM.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "A local carrier with phase error $\\theta$ and frequency error $\\Delta\\omega$ gives $m\\cos(\\Delta\\omega t + \\theta)$: a phase error attenuates (null at 90°), a frequency error beats; so the carrier must be synchronized (pilot, Costas loop).",
+   "draws": [
+    "Waveform: detected output with phase and frequency errors"
+   ],
+   "compare": [
+    "Phase error vs frequency error: output scaled by $\\cos\\delta$, null at 90° vs output beats as $\\cos\\Delta\\omega t$"
+   ]
   },
   {
    "id": "2021-22-2(c)",
@@ -484,7 +507,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=23",
    "text": "With appropriate block diagram, briefly explain the working principle of Costas DSB-SC receiver.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "The I branch multiplies by $\\cos$, the Q branch by $\\sin$ from a VCO; the LPF outputs are $\\tfrac12m\\cos\\theta$ and $\\tfrac12m\\sin\\theta$; their product $\\tfrac18m^2\\sin2\\theta$, through a narrow LPF, steers the VCO to $\\theta = 0$; the I output is the message.",
+   "draws": [
+    "Block diagram: Costas receiver"
+   ]
   },
   {
    "id": "2021-22-8(a)",
@@ -498,7 +525,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=66",
    "text": "What is quadrature null effect? Utilizing proper block diagram, explain principle of Costas receiver and how it prevents quadrature null effect.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Quadrature null: the coherent output $\\tfrac12m\\cos\\theta$ vanishes at $\\theta = 90°$. Costas: I and Q branches; their product $\\tfrac18m^2\\sin2\\theta$ steers the VCO to $\\theta = 0$, so the carrier stays locked.",
+   "draws": [
+    "Block diagram: Costas receiver"
+   ]
   },
   {
    "id": "2020-21-5(d)",
@@ -512,7 +543,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=49",
    "text": "Consider a message signal m(t) with the spectrum shown in Fig. 1. The message bandwidth W = 1 kHz. This signal is applied to a product modulator, together with a carrier wave $A_c\\cos(2\\pi f_ct)$, producing the DSBSC modulated wave s(t). This modulated wave is next applied to a coherent detector. Assuming perfect synchronism between the carrier waves in the modulator and detector, determine the spectrum of the detector output when: (i) the carrier frequency $f_c = 1.25$ kHz and (ii) the carrier frequency $f_c = 0.75$ kHz.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "The product modulator shifts $M(f)$ to $\\pm f_c$; the coherent detector shifts it back and the LPF keeps $(A_c/2)M(f)$; if $f_c < W$ the shifted copies overlap near baseband and the output is distorted; so $f_c \\ge W$.",
+   "draws": [
+    "Spectrum: modulated and detected spectra for the two carrier frequencies"
+   ]
   },
   {
    "id": "2020-21-8(a)",
@@ -526,7 +561,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=68",
    "text": "Amplitude spectrum of a message signal shown in figure-1. Draw the spectrum of its DSB-WC and SSB-SC modulated signal.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "DSB-WC: carrier impulses at $\\pm\\omega_c$ plus both sidebands (the message spectrum shifted), bandwidth $2\\omega_m$. SSB-SC: only the upper (or lower) half, no carrier, bandwidth $\\omega_m$.",
+   "draws": [
+    "Spectrum: DSB-WC and SSB-SC of the given message"
+   ],
+   "drill": [
+    "DSB-WC and SSB-SC spectra: the triangular spectrum of Figure-1"
+   ]
   },
   {
    "id": "2020-21-8(b)",
@@ -540,7 +582,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=70",
    "text": "Explain how phase and frequency error affect the coherent detection of AM.",
    "repeat_of": "",
-   "outline": "Multiply by a carrier with frequency and phase error; low-pass filter; read the cos factor."
+   "outline": "Multiply by a carrier with frequency and phase error; low-pass filter; read the cos factor.",
+   "compare": [
+    "Phase error vs frequency error: output scaled by $\\cos\\delta$, null at 90° vs output beats as $\\cos\\Delta\\omega t$"
+   ]
   },
   {
    "id": "2019-20-1(b)",
@@ -554,7 +599,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=13",
    "text": "For carrier frequency 100 kHz, find the frequency, sketch the spectrum, indicate the upper sideband, lower sideband and their amplitudes of the following signals. (i) $m(t) = 1 + \\cos(377t)$ (ii) $m(t) = 2\\sin^2(100\\pi t)$ (iii) $m(t) = 3\\cos(1000t)\\cos(3000t)$",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Expand each message into tones ($\\sin^2 = (1 - \\cos)/2$, product to sum); a tone $a\\cos\\omega_mt$ gives lines of $a/2$ at $f_c \\pm f_m$; a dc part gives a line at $f_c$.",
+   "answer": "(i) 1 at 100 kHz, 0.5 at 99.94 and 100.06 kHz; (ii) 1 at 100 kHz, −0.5 at 99.9 and 100.1 kHz; (iii) 0.75 at 99.363, 99.682, 100.318, 100.637 kHz",
+   "draws": [
+    "Spectrum: DSB-SC lines for the three messages"
+   ]
   },
   {
    "id": "2019-20-2(c)",
@@ -568,7 +618,13 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=22",
    "text": "Explain the effect of phase and frequency error during coherent detection of DSB-SC.",
    "repeat_of": "",
-   "outline": "Multiply by a carrier with frequency and phase error; low-pass filter; read the cos factor."
+   "outline": "Multiply by a carrier with frequency and phase error; low-pass filter; read the cos factor.",
+   "draws": [
+    "Waveform: detected output with no error, a phase error and a frequency error"
+   ],
+   "compare": [
+    "Phase error vs frequency error: output scaled by $\\cos\\delta$, null at 90° vs output beats as $\\cos\\Delta\\omega t$"
+   ]
   },
   {
    "id": "2021-22-1(c)",
@@ -582,7 +638,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=15",
    "text": "We have a communication channel with a bandwidth of 5 MHz. A signal with an amplitude of 10 V is transmitted, and the receiver detects a signal with an amplitude of 2 V and noise with an amplitude of 5 mV. (i) Calculate the attenuation. (ii) Determine the maximum channel capacity. (iii) To achieve a data rate of 100 Mbit s$^{-1}$, find the required signal level.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Attenuation $20\\log(V_s/V_r)$; $\\text{SNR} = (V_r/V_n)^2$; Shannon $C = B\\log_2(1 + \\text{SNR})$; for 100 Mbps solve $\\text{SNR} = 2^{R/B} - 1$, then the voltage.",
+   "answer": "13.98 dB; 86.44 Mbps; 5.12 V received (25.6 V sent)"
   },
   {
    "id": "2020-21-3(d)",
@@ -596,7 +654,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=32",
    "text": "An analog signal having 4 kHz bandwidth is sampled at 1.25 times the Nyquist rate, and each sample is quantized into one of 256 equally likely level. Assuming the samples to be statistically independent: (i) What is the information rate of the source? (ii) Can the output of this source be transmitted without error over the AWGN channel with a bandwidth of 10 kHz and S/N ratio of 20 dB? (iii) Find S/N ratio required for error-free transmission of part ii. (iv) Find the bandwidth required for an AWGN channel for an error free transmission of output of this source if S/N ratio is 20 dB",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$f_s = 1.25 \\times 2B$; $n = \\log_2L$; $R = nf_s$; Shannon $C = B\\log_2(1 + S/N)$ and compare; solve for the $S/N$ or the $B$ that gives $C = R$.",
+   "answer": "80 kbit/s; no ($C = 66.6$ kbit/s); $S/N = 255$ (24.1 dB); 12.02 kHz"
   },
   {
    "id": "2020-21-5(b)",
@@ -610,7 +670,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=46",
    "text": "A voice grade telephone channel has a bandwidth of 3400 Hz. If the signal to noise ratio (SNR) on the channel is 30 dB, determine the capacity of the channel. If the above channel is to be used to transmit 4.8 kbps of data, determine the minimum SNR required on the channel.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "dB to ratio; $C = B\\log_2(1 + \\text{SNR})$; for 4.8 kbps, $\\text{SNR} = 2^{R/B} - 1$.",
+   "answer": "33.89 kbit/s; SNR 1.66 (2.2 dB)"
   },
   {
    "id": "2020-21-7(c)",
@@ -624,7 +686,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=64",
    "text": "We have a communication channel with a bandwidth of 5 MHz. A signal with an amplitude of 10V is transmitted, and the receiver detects a signal with an amplitude of 2V and noise with an amplitude of 5 mV.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Attenuation $20\\log(V_s/V_r)$; $\\text{SNR} = (V_r/V_n)^2$; Shannon $C = B\\log_2(1 + \\text{SNR})$; for 100 Mbps solve $\\text{SNR} = 2^{R/B} - 1$, then the voltage.",
+   "answer": "13.98 dB; 86.44 Mbps; 5.12 V received (25.6 V sent)"
   },
   {
    "id": "2019-20-1(c)",
@@ -638,7 +702,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=15",
    "text": "States Shannon's capacity theorem. A user wishes to transmit data over a channel having bandwidth B = 3000 Hz. If the SNR is 9.08 find the theoretical maximum bit rate of the channel. Also find the required SNR if the desired bitrate of the channel is doubled.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$C = B\\log_2(1 + \\text{SNR})$; for double the rate, $1 + \\text{SNR}' = (1 + \\text{SNR})^2$.",
+   "answer": "$C \\approx 10$ kbps; SNR $\\approx 100.6$ (20 dB)"
   },
   {
    "id": "2021-22-7(b)",
@@ -652,7 +718,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=61",
    "text": "Find the equivalent noise resistance for several amplifiers in cascade.",
    "repeat_of": "",
-   "outline": "Model each stage as a noiseless gain with a noise resistor; add output noise powers; divide by the total squared gain."
+   "outline": "Model each stage as a noiseless gain with a noise resistor; add output noise powers; divide by the total squared gain.",
+   "draws": [
+    "Block diagram: amplifiers in cascade and the single equivalent noise resistor"
+   ]
   },
   {
    "id": "2020-21-7(d)",
@@ -666,7 +735,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=65",
    "text": "Find the equivalent noise resistance for several amplifiers in cascade.",
    "repeat_of": "",
-   "outline": "Model each stage as a noiseless gain with a noise resistor; add output noise powers; divide by the total squared gain."
+   "outline": "Model each stage as a noiseless gain with a noise resistor; add output noise powers; divide by the total squared gain.",
+   "draws": [
+    "Block diagram: amplifiers in cascade and the single equivalent noise resistor"
+   ]
   },
   {
    "id": "2019-20-1(d)",
@@ -680,7 +752,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=16",
    "text": "Find the equivalent noise resistance for several amplifiers in cascade.",
    "repeat_of": "",
-   "outline": "Model each stage as a noiseless gain with a noise resistor; add output noise powers; divide by the total squared gain."
+   "outline": "Model each stage as a noiseless gain with a noise resistor; add output noise powers; divide by the total squared gain.",
+   "draws": [
+    "Block diagram: amplifiers in cascade and the single equivalent noise resistor"
+   ]
   },
   {
    "id": "2021-22-1(a)",
@@ -694,7 +769,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=12",
    "text": "Find the entropy $H(m)$ of a memoryless source.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Information of a message $\\log_2(1/P_i)$; average it over the probabilities.",
+   "answer": "$H = \\sum P_i\\log_2(1/P_i)$ bits/symbol; $0 \\le H \\le \\log_2n$"
   },
   {
    "id": "2021-22-7(a)",
@@ -708,7 +785,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=60",
    "text": "A message source generates one of the four messages randomly every microsecond. The probabilities of these messages are 0.4, 0.3, 0.2, and 0.1. Each emitted message is independent of the other messages in the sequence: (i) Find the source entropy. (ii) Find the rate of information generated by this source (in bits per second).",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$H = \\sum P_i\\log_2(1/P_i)$; $R = rH$ with $r = 10^6$ messages/s.",
+   "answer": "1.846 bits/message; 1.846 Mbit/s"
   },
   {
    "id": "2020-21-1(a)",
@@ -722,7 +801,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=12",
    "text": "Find the entropy of single bit binary memoryless source. Also draw the curve of entropy Vs. probability for that source.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$H(p) = -p\\log_2p - (1 - p)\\log_2(1 - p)$; check $p = 0$, 0.5 and 1; plot.",
+   "answer": "0 at $p = 0$ and 1; maximum 1 bit at $p = 0.5$",
+   "draws": [
+    "Graph: entropy against probability"
+   ]
   },
   {
    "id": "2020-21-7(a)",
@@ -736,7 +820,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=61",
    "text": "Find the entropy of single bit binary memoryless source. Also draw the curve of entropy vs probability for that source.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Write $H(p) = -p\\log_2p - (1 - p)\\log_2(1 - p)$; zero at $p = 0$ and 1, maximum 1 bit at $p = 0.5$; draw the symmetric arch.",
+   "draws": [
+    "Graph: entropy against probability"
+   ]
   },
   {
    "id": "2019-20-2(a)",
@@ -750,7 +838,7 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=19",
    "text": "Show that the average information per message is equal to the entropy of the information source.",
    "repeat_of": "",
-   "outline": "Count each message NP_i times in N messages; add their information; divide by N."
+   "outline": "Count each message $NP_i$ times in $N$ messages; add their information; divide by $N$."
   },
   {
    "id": "2021-22-3(c)",
@@ -764,7 +852,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=33",
    "text": "A 93.2 MHz carrier is frequency modulated by a 5 kHz sine wave. The resultant FM signal has a frequency deviation of 40 kHz. (i) Find the carrier swing of the FM signal. (ii) What are the highest and lowest frequencies attained by the frequency modulated signal? (iii) Calculate the modulation index for the wave.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Carrier swing $2\\Delta f$; highest and lowest $f_c \\pm \\Delta f$; $\\beta = \\Delta f/f_m$.",
+   "answer": "80 kHz; 93.16 to 93.24 MHz; $\\beta = 8$"
   },
   {
    "id": "2020-21-2(d)",
@@ -778,7 +868,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=26",
    "text": "In an FM system, when the audio frequency is 500 Hz and modulating voltage 2.5 V, the deviation produced is 5 kHz. If the modulating voltage is now increased to 7.5 V, calculate the new value of frequency deviation produced. If the AF voltage is raised to 10 V while the modulating frequency dropped to 250 Hz, what is the frequency deviation? Calculate the modulation index in each case.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$k_f = \\Delta f/V_m$; new $\\Delta f = k_fV_m$; $\\beta = \\Delta f/f_m$.",
+   "answer": "$\\Delta f = 5$, 15, 20 kHz; $\\beta = 10$, 30, 80"
   },
   {
    "id": "2019-20-2(b)",
@@ -792,7 +884,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=21",
    "text": "An angle modulated signal with carrier frequency 10 MHz is described by the equation $s(t) = 12\\cos(\\omega_c t + \\sin 3000\\pi t + 10\\sin 2000\\pi t)$ (i) Find the power of the modulated signal (ii) Find the frequency deviation $\\Delta f$ (iii) Find the $\\beta$ (iv) Find the bandwidth.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Power $A^2/2$; instantaneous frequency from the derivative of the angle, adding the peak terms; $\\beta = \\Delta f/f_m$ with the highest $f_m$; Carson.",
+   "answer": "$P = 72$ W, $\\Delta f = 11.5$ kHz, $\\beta \\approx 7.67$, $B_T \\approx 26$ kHz"
   },
   {
    "id": "2019-20-4(a)",
@@ -806,7 +900,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=33",
    "text": "In an FM system the frequency deviation is 5 kHz, when its audio modulating frequency is 400 Hz, and the audio modulating voltage is 2 V. Compute the modulation index. Also compute the frequency deviation and the modulation index if (i) if voltage is increased to 6V keeping modulation frequency unaltered, (ii) if voltage is increased to 8 V while the modulating frequency is reduced to 200 Hz.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$k_f = \\Delta f/V_m$; new $\\Delta f = k_fV_m$; $\\beta = \\Delta f/f_m$.",
+   "answer": "$\\beta = 12.5$; (i) 15 kHz, 37.5; (ii) 20 kHz, 100"
   },
   {
    "id": "2022-23-7(d)",
@@ -820,7 +916,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=13",
    "text": "Compare AM (DSB-WC), DSB-SC and SSB-SC in modulation, demodulation, power efficiency and bandwidth.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "AM: carrier and two sidebands, $2B$, envelope detector, at most 33 % efficient. DSB-SC: $2B$, coherent detector, 100 %. SSB-SC: $B$, coherent detector, 100 %, hardest to generate.",
+   "compare": [
+    "AM vs DSB-SC vs SSB-SC: $2B$, envelope detector, at most 33 % vs $2B$, coherent, 100 % vs $B$, coherent, hardest modulator"
+   ]
   },
   {
    "id": "2022-23-7(f)",
@@ -834,7 +934,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=15",
    "text": "Disadvantages of Weaver's method of SSB generation.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Weaver: two quadrature stages with LPFs between them; no sharp filter and no wideband shifter, but two pairs of balanced modulators, exact quadrature at both stages and matched LPFs; any imbalance leaves part of the unwanted sideband and a tone at the band centre; complex.",
+   "draws": [
+    "Block diagram: Weaver SSB modulator"
+   ],
+   "compare": [
+    "Weaver vs phase-shift SSB: two quadrature stages at fixed frequencies, no wideband shifter vs one wideband −90° shifter"
+   ]
   },
   {
    "id": "2021-22-8(b)",
@@ -862,7 +969,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=24",
    "text": "Describe the condition on message signal spectrum for SSB generation using selective filtering.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "A real filter needs a transition band; the gap between the USB and the LSB is $2f_L$; so the message must have no power near dc (speech has none below 300 Hz: a 600 Hz gap); otherwise use the phase-shift method or VSB.",
+   "draws": [
+    "Spectrum: speech spectrum and the SSB filter in the gap"
+   ],
+   "compare": [
+    "SSB by filtering vs SSB by phase shift: needs a gap at dc and a sharp filter vs needs a wideband −90° shifter"
+   ]
   },
   {
    "id": "2019-20-3(a)",
@@ -876,7 +990,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=26",
    "text": "Using proper block diagram explain phase shifting method of SSB generation.",
    "repeat_of": "",
-   "outline": "Two branches m cos and m_h sin; tone case with product identities; subtract or add to cancel a sideband."
+   "outline": "Two branches $m\\cos\\omega_ct$ and $m_h\\sin\\omega_ct$; tone case with product identities; subtract or add to cancel a sideband.",
+   "draws": [
+    "Block diagram: phase-shift SSB modulator"
+   ]
   },
   {
    "id": "2019-20-3(b)",
@@ -890,7 +1007,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=28",
    "text": "Explain the effect of variation of amplitude and frequency of message signal on the spectrum and bandwidth of FM.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Amplitude sets $\\Delta f = k_fA_m$: more significant lines, bandwidth rises nearly in proportion. Frequency sets the line spacing $f_m$ and lowers $\\beta$: fewer lines, bandwidth rises only a little (Carson).",
+   "draws": [
+    "Spectrum: FM lines for the reference, doubled amplitude and doubled frequency"
+   ],
+   "compare": [
+    "Message amplitude vs frequency in FM: sets $\\Delta f$ and the bandwidth vs sets the line spacing and $\\beta$ only"
+   ]
   },
   {
    "id": "2022-23-8(a)",
@@ -904,7 +1028,13 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=21",
    "text": "Design an Armstrong indirect FM modulator to generate an FM signal with carrier frequency 97.3MHz and $\\Delta f = 20.48kHz$. A NBFM generator of $f_{c1} = 20kHz$ and $\\Delta f = 5Hz$ is available. Only frequency doublers can be used as multipliers. Additionally, a local oscillator (LO) with adjustable frequency between 400 and 50-kHz *[sic: should be \"500 kHz\"]* is readily available for frequency mixing.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "Total multiplication $n_1n_2 = \\Delta f/\\Delta f_1$ (all doublers, so a power of 2); for each split find $f_{LO} = |n_1f_{c1} \\pm f_c/n_2|$ and keep the one inside the LO range; draw the chain with $f_c$ and $\\Delta f$ after every block. Here $4096 = 128 \\times 32$, LO 480.625 kHz (sum).",
+   "draws": [
+    "Block diagram: Armstrong modulator with $f_c$ and $\\Delta f$ at each stage"
+   ],
+   "compare": [
+    "Frequency multiplier vs mixer: multiplies both $f_c$ and $\\Delta f$ vs moves $f_c$, keeps $\\Delta f$"
+   ]
   },
   {
    "id": "2019-20-3(c)",
@@ -918,7 +1048,13 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=30",
    "text": "Design an Armstrong indirect FM modulator to generate an FM signal with carrier frequency 97.3 MHz and $\\Delta f = 10.24~kHz$. A NBFM generator of $f_{c1} = 20~kHz$ and $\\Delta f = 5~Hz$ is available. Only frequency doublers can be used as multipliers. Additionally, a local oscillator (LO) with adjustable frequency between 400 and 500 kHz is readily available for frequency mixing.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "Total multiplication $n_1n_2 = \\Delta f/\\Delta f_1$ (all doublers, so a power of 2); for each split find $f_{LO} = |n_1f_{c1} \\pm f_c/n_2|$ and keep the one inside the LO range; draw the chain with $f_c$ and $\\Delta f$ after every block. Here $2048 = 16 \\times 128$, LO 440.15625 kHz (sum).",
+   "draws": [
+    "Block diagram: Armstrong modulator with $f_c$ and $\\Delta f$ at each stage"
+   ],
+   "compare": [
+    "Frequency multiplier vs mixer: multiplies both $f_c$ and $\\Delta f$ vs moves $f_c$, keeps $\\Delta f$"
+   ]
   },
   {
    "id": "2019-20-4(b)",
@@ -932,7 +1068,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=34",
    "text": "Explain slope detection method of FM demodulation.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Limiter removes amplitude changes; a tuned circuit tuned above $f_c$ puts the carrier on its slope, so frequency changes become amplitude changes (a differentiator); an envelope detector follows; one slope is not linear, so the balanced version uses two tuned circuits.",
+   "draws": [
+    "Block diagram: slope detector",
+    "Graph: tuned-circuit response with the carrier on its slope"
+   ]
   },
   {
    "id": "2019-20-4(c)",
@@ -946,7 +1087,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=36",
    "text": "Define and explain uniform and non-uniform quantization.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Uniform: equal steps $\\Delta = 2m_p/L$, constant noise $\\Delta^2/12$, so weak signals get a poor SQNR. Non-uniform: small steps near zero, large at the peaks, nearly constant SQNR; done by companding (μ-law, A-law).",
+   "draws": [
+    "Graph: uniform and non-uniform quantizer characteristics"
+   ],
+   "compare": [
+    "Uniform vs non-uniform quantization: equal steps, SQNR falls for weak signals vs steps grow with amplitude, SQNR nearly constant"
+   ]
   },
   {
    "id": "2021-22-4(a)",
@@ -960,7 +1108,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=38",
    "text": "What is PCM? Explain PCM system.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Sampling ($f_s \\ge 2B$), quantizing ($L$ levels), encoding ($n = \\log_2L$ bits); a line code over the channel with regenerative repeaters; the receiver regenerates, decodes and low-pass filters; $R_b = nf_s$.",
+   "draws": [
+    "Block diagram: PCM transmitter, channel and receiver"
+   ]
   },
   {
    "id": "2021-22-4(c)",
@@ -974,7 +1126,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=42",
    "text": "Write short note on: Companding, Information rate, and Entropy of a source.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Companding: compress, quantize uniformly, expand (μ = 255, A = 87.6) for a nearly constant SQNR. Information rate $R = rH$. Entropy $H = \\sum P_i\\log_2(1/P_i)$, largest for equal probabilities.",
+   "draws": [
+    "Block diagram: compander chain"
+   ]
   },
   {
    "id": "2021-22-4(e)",
@@ -988,7 +1144,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=45",
    "text": "An audio signal is sampled at 8 kHz rate using a 32-level quantizer. Find- (i) Peak signal power to peak quantization noise power. (ii) System bandwidth.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$S/N_{peak} = L^2$; $n = \\log_2L$; $R = nf_s$; $B_T = R/2$.",
+   "answer": "1024 (30.1 dB); 40 kbit/s and 20 kHz"
   },
   {
    "id": "2021-22-9(a)",
@@ -1002,7 +1160,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=71",
    "text": "It is desired to set up a central station for simultaneous monitoring of the electrocardiograms (ECGs) of 10 hospital patients. The data from the 10 patients are brought to a processing center over wires and are sampled, quantized, binary-coded, and time-division-multiplexed. The multiplexed data are now transmitted to the monitoring station. The ECG signal bandwidth is 100 Hz. The maximum acceptable error in sample amplitudes is 0.25% of the peak signal amplitude. The sampling rate must be at least twice the Nyquist rate. Determine the minimum cable bandwidth needed to transmit these multiplexed data.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$f_s = 2B$ (with the margin given); levels $L$ from the error limit, $n = \\lceil\\log_2L\\rceil$; $R = 10nf_s$; $B_T = R/2$.",
+   "answer": "$f_s = 400$ Hz; $n = 9$; 36 kbit/s; 18 kHz",
+   "draws": [
+    "Block diagram: ECG sampling, quantizing, coding and multiplexing"
+   ]
   },
   {
    "id": "2020-21-3(c)",
@@ -1016,7 +1179,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=31",
    "text": "Explain the basic block diagram of PCM system.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Anti-aliasing LPF, sampler, quantizer, encoder; channel with regenerative repeaters; regenerator, decoder, reconstruction LPF; $R_b = nf_s$.",
+   "draws": [
+    "Block diagram: PCM system",
+    "Waveform: sampling, quantizing and encoding"
+   ]
   },
   {
    "id": "2019-20-4(d)",
@@ -1030,7 +1198,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=37",
    "text": "Five telemetry signals, each of bandwidth 2400 Hz, are to be transmitted simultaneously by binary PCM. The signals must be sampled at least 20% above the Nyquist rate. Framing and synchronizing requires an additional 0.5% extra bits. A PCM encoder is used to convert these signals before they are time-multiplexed into a single data stream. Determine the minimum possible data rate (bit per second) that must be transmitted, and the minimum bandwidth required to transmit the multiplexed signal.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$f_s = 1.2 \\times 2B$ per signal; times 5 signals and $n$ bits per sample; add 0.5 %; $B_T = R/2$.",
+   "answer": "$R \\approx 231.6$ kbps, $B_T \\approx 115.8$ kHz (8 bits assumed)"
   },
   {
    "id": "2021-22-5(a)",
@@ -1044,7 +1214,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=47",
    "text": "Explain the principle of sigma-delta modulator. Also explain how it is advantageous over DM.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Integrate the message, then delta-modulate (one integrator after the subtractor); the pulse density follows the amplitude; the receiver is only an LPF. Over DM: no frequency-dependent slope overload, no error build-up, dc passes, simpler receiver, noise shaping with oversampling.",
+   "draws": [
+    "Block diagram: DM and sigma-delta side by side"
+   ],
+   "compare": [
+    "DM vs sigma-delta: receiver accumulates, errors pile up, slope overload depends on frequency vs receiver is an LPF, no build-up"
+   ]
   },
   {
    "id": "2020-21-3(a)",
@@ -1058,7 +1235,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=28",
    "text": "Define slope overload distortion and granular noise in delta modulation and how it is removed in ADM?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Slope overload: the signal slope exceeds $\\sigma f_s$ and the staircase lags. Granular noise: the staircase hunts by $\\pm\\sigma$ on a flat signal. ADM raises the step on runs of equal bits and lowers it on alternating bits.",
+   "draws": [
+    "Waveform: DM and ADM staircases following the same signal"
+   ],
+   "compare": [
+    "Slope overload vs granular noise: step too small for a steep signal vs step too large for a flat one"
+   ]
   },
   {
    "id": "2020-21-3(b)",
@@ -1072,7 +1256,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=30",
    "text": "Draw the transmitter and receiver circuits block diagram of delta modulation.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Transmitter: subtractor, one-bit quantizer, accumulator in the feedback path. Receiver: accumulator, then LPF.",
+   "draws": [
+    "Block diagram: DM transmitter and receiver"
+   ]
   },
   {
    "id": "2019-20-4(e)",
@@ -1086,7 +1274,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=38",
    "text": "Show that the receiver of DM is essentially an accumulator.",
    "repeat_of": "",
-   "outline": "Write the DM update; unroll it; the estimate is the running sum of the steps."
+   "outline": "Write the DM update; unroll it; the estimate is the running sum of the steps.",
+   "draws": [
+    "Block diagram: DM transmitter and receiver"
+   ]
   },
   {
    "id": "2019-20-5(a)",
@@ -1100,7 +1291,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=40",
    "text": "Explain principle of sigma-delta modulator. Also explain how it is advantageous over DM.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Integrate the message, then delta-modulate (one integrator after the subtractor); the pulse density follows the amplitude; the receiver is only an LPF. Over DM: no frequency-dependent slope overload, no error build-up, dc passes, simpler receiver, noise shaping with oversampling.",
+   "draws": [
+    "Block diagram: DM and sigma-delta side by side"
+   ],
+   "compare": [
+    "DM vs sigma-delta: receiver accumulates, errors pile up, slope overload depends on frequency vs receiver is an LPF, no build-up"
+   ]
   },
   {
    "id": "2019-20-5(b)",
@@ -1114,7 +1312,17 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=41",
    "text": "Briefly explain the desired characteristics of a line coding scheme. Draw the line coded signal for the information bits '1010011100' for the following line coding scheme- i) Manchester, ii) AMI, iii) Di-code.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Desired: small bandwidth, no dc, timing content, power efficiency, error detection, transparency.",
+   "draws": [
+    "Waveform: Manchester, AMI and dicode for 1010011100"
+   ],
+   "compare": [
+    "Manchester vs AMI vs dicode: a transition in every bit vs marks alternate in sign vs pulses only at changes"
+   ],
+   "drill": [
+    "Line codes (Manchester, AMI, dicode): 1010011100"
+   ]
   },
   {
    "id": "2022-23-8(b)",
@@ -1128,7 +1336,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=23",
    "text": "Draw the block diagram of a Differential PSK (DPSK) modulator and demodulator and show how the I_k sequence [1010011100] changes in different parts of the block.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$q_k = I_k \\oplus q_{k-1}$ through a one-bit delay, polar coder, carrier multiplier; the receiver multiplies by the one-bit-delayed signal, low-pass filters and reads the sign.",
+   "draws": [
+    "Block diagram: DPSK modulator and demodulator",
+    "Waveform: data, encoded bits, DPSK signal and receiver output"
+   ],
+   "drill": [
+    "DPSK encoder and receiver table: 1010011100"
+   ]
   },
   {
    "id": "2021-22-5(c)",
@@ -1142,7 +1358,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=50",
    "text": "Tabulate the values of signal at each stage of DPSK encoder and receiver for message signal '1010010110'.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$q_k = I_k \\oplus q_{k-1}$ from a reference bit; map 1 to phase 0 and 0 to $\\pi$; at the receiver the sign of $a_ka_{k-1}$ gives the bit (+ is 0, − is 1).",
+   "answer": "$q_k$ = 1100011011 (reference 0); output 1010010110",
+   "draws": [
+    "Table: DPSK values at each stage"
+   ],
+   "drill": [
+    "DPSK encoder and receiver table: 1010010110"
+   ]
   },
   {
    "id": "2020-21-6(d)",
@@ -1156,7 +1380,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=58",
    "text": "Tabulate the values of signal at each stage of DPSK encoder and receiver for message signal '1010011100'",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$q_k = I_k \\oplus q_{k-1}$ from a reference bit; map 1 to phase 0 and 0 to $\\pi$; at the receiver the sign of $a_ka_{k-1}$ gives the bit (+ is 0, − is 1).",
+   "answer": "$q_k$ = 1100010111 (reference 0); output 1010011100",
+   "draws": [
+    "Table: DPSK values at each stage"
+   ],
+   "drill": [
+    "DPSK encoder and receiver table: 1010011100"
+   ]
   },
   {
    "id": "2019-20-5(c)",
@@ -1170,7 +1402,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=43",
    "text": "Explain DPSK principle with necessary block diagram.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$q_k = I_k \\oplus q_{k-1}$, then PSK: a 1 flips the phase; the receiver multiplies by the signal delayed by $T_b$, low-pass filters and reads the sign; no local carrier; about 1 dB worse than PSK; errors come in pairs.",
+   "draws": [
+    "Block diagram: DPSK transmitter and receiver"
+   ],
+   "compare": [
+    "PSK vs DPSK: absolute phase, needs a coherent carrier vs phase change, no local carrier"
+   ]
   },
   {
    "id": "2021-22-4(d)",
@@ -1184,7 +1423,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=43",
    "text": "Name three mechanisms for the modulation of digital data into an analog signal. Show the differences among them.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "ASK (amplitude), FSK (frequency), PSK (phase); bandwidth: ASK and PSK about $2R_b$, FSK more; in noise: PSK best, ASK worst; ASK simplest to build.",
+   "draws": [
+    "Waveform: ASK, FSK and PSK for the same bits"
+   ],
+   "compare": [
+    "ASK vs FSK vs PSK: amplitude, worst in noise vs frequency, most bandwidth vs phase, best in noise"
+   ]
   },
   {
    "id": "2021-22-5(d)",
@@ -1198,7 +1444,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=51",
    "text": "Briefly describe coherent and non-coherent detection of BASK and BFSK.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "BASK: coherent = multiply by the carrier, integrate, threshold; non-coherent = BPF, envelope detector, threshold. BFSK: coherent = two correlators and compare; non-coherent = two BPFs with envelope detectors and compare. Coherent is better in noise but needs carrier sync.",
+   "draws": [
+    "Block diagram: coherent and non-coherent BASK detectors",
+    "Block diagram: coherent and non-coherent BFSK detectors"
+   ],
+   "compare": [
+    "Coherent vs non-coherent detection: needs a synchronized carrier, better in noise vs envelope only, simpler, worse in noise"
+   ]
   },
   {
    "id": "2019-20-5(d)",
@@ -1212,7 +1466,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=45",
    "text": "Describe coherent detection of BFSK.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Two correlators with $\\cos\\omega_1t$ and $\\cos\\omega_2t$, integrated over $T_b$; the matching branch gives $AT_b/2$, the other about 0; a comparator decides; both carriers must be in sync.",
+   "draws": [
+    "Block diagram: coherent BFSK detector"
+   ]
   },
   {
    "id": "2019-20-6(a)",
@@ -1226,7 +1484,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=48",
    "text": "With proper block diagram, describe modulation of QPSK. Also explain how it offers advantages over BPSK?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Serial to parallel; odd bits on $\\cos\\omega_ct$, even bits on $\\sin\\omega_ct$, each lasting $2T_b$; the sum has four phases. Over BPSK: half the bandwidth for the same bit rate, the same bit error rate.",
+   "draws": [
+    "Block diagram: QPSK modulator",
+    "Constellation: the four QPSK points"
+   ],
+   "compare": [
+    "BPSK vs QPSK: one bit per symbol vs two bits per symbol, half the bandwidth, same error rate"
+   ]
   },
   {
    "id": "2022-23-8(c)",
@@ -1240,7 +1506,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=25",
    "text": "Two channels, one with a bit rate of 190 kbps and another with a bit rate of 180 kbps, are to be multiplexed using pulse stuffing TDM with no synchronization bits. Answer the following questions: (a) What is the size of a frame in bits? (b) What is the frame rate? (c) What is the duration of a frame? (d) What is the data rate?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Stuff the slower channel up to the faster rate; one bit per channel per frame; frame rate = 190 000/s; frame duration its inverse; link rate = frame bits × frame rate.",
+   "answer": "2 bits; 190 000 frames/s; 5.26 μs; 380 kbps (10 kbps stuffed)",
+   "draws": [
+    "Frame: pulse stuffing of the two channels"
+   ]
   },
   {
    "id": "2021-22-6(a)",
@@ -1254,7 +1525,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=54",
    "text": "Write short notes on: Multilevel multiplexing and Multiple slot allocation.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Multilevel: merge slow inputs first into one faster stream, then multiplex it with the fast ones. Multiple slot: a fast input gets several slots per frame in proportion to its rate. Both need rates that are integer multiples.",
+   "draws": [
+    "Diagram: multilevel multiplexing",
+    "Frame: multiple-slot TDM"
+   ],
+   "compare": [
+    "Multilevel multiplexing vs multiple-slot allocation: slow inputs merged first into a faster stream vs a fast input gets several slots per frame"
+   ]
   },
   {
    "id": "2021-22-6(b)",
@@ -1268,7 +1547,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=55",
    "text": "It is desired to set up a central station for simultaneous monitoring of the electrocardiograms (ECGs) of 10 hospital patients. The data from the 10 patients are brought to a processing center over wires and are sampled, quantized, binary-coded, and time-division-multiplexed. The multiplexed data are now transmitted to the monitoring station. The ECG signal bandwidth is 100 Hz. The maximum acceptable error in sample amplitudes is 0.25 % of the peak signal amplitude. The sampling rate must be at least twice the Nyquist rate. Determine the minimum cable bandwidth needed to transmit these multiplexed data.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$f_s = 2B$ (with the margin given); levels $L$ from the error limit, $n = \\lceil\\log_2L\\rceil$; $R = 10nf_s$; $B_T = R/2$.",
+   "answer": "$f_s = 400$ Hz; $n = 9$; 36 kbit/s; 18 kHz",
+   "draws": [
+    "Block diagram: ECG sampling, quantizing, coding and multiplexing"
+   ]
   },
   {
    "id": "2021-22-9(b)",
@@ -1282,7 +1566,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=72",
    "text": "Write short notes in multilevel multiplexing and multiple slot allocation.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Multilevel: merge slow inputs first into one faster stream, then multiplex it with the fast ones. Multiple slot: a fast input gets several slots per frame in proportion to its rate. Both need rates that are integer multiples.",
+   "draws": [
+    "Diagram: multilevel multiplexing",
+    "Frame: multiple-slot allocation"
+   ],
+   "compare": [
+    "Multilevel multiplexing vs multiple-slot allocation: slow inputs merged first into a faster stream vs a fast input gets several slots per frame"
+   ]
   },
   {
    "id": "2021-22-9(c)",
@@ -1296,7 +1588,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=73",
    "text": "We have four sources, each creating 250 characters (8 bits per character) per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame, find (a) the data rate of each source, (b) the duration of each character in each source, (c) the frame rate, (d) the duration of each frame, (e) the number of bits in each frame, and (f) the data rate of the link.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Source rate = 250 × 8; character duration 1/250 s; one character per source per frame, so 250 frames/s; frame bits $4 \\times 8 + 1$; link rate = frame bits × frame rate.",
+   "answer": "2 kbps; 4 ms; 250 frames/s; 4 ms; 33 bits; 8250 bps",
+   "draws": [
+    "Frame: four characters and a sync bit"
+   ]
   },
   {
    "id": "2020-21-5(c)",
@@ -1310,7 +1607,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47",
    "text": "It is desired to set up a central station for simultaneous monitoring of the electrocardiograms (ECGs) of 10 hospital patients. The data from the 10 patents *[sic: should be \"patients\"]* are brought to a processing center over wires and are sampled, quantized, binary-coded, and time-division-multiplexed. The multiplexed data are now transmitted to the monitoring station. The ECG signal bandwidth is 100 Hz. The maximum acceptable error in sample amplitude is 0.25% of the peak signal amplitude. The sampling rate must be at least twice the Nyquist rate. Determine the minimum cable bandwidth needed to transmit these multiplexed data.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$f_s = 2B$ (with the margin given); levels $L$ from the error limit, $n = \\lceil\\log_2L\\rceil$; $R = 10nf_s$; $B_T = R/2$.",
+   "answer": "$f_s = 400$ Hz; $n = 9$; 36 kbit/s; 18 kHz",
+   "draws": [
+    "Block diagram: ECG sampling, quantizing, coding and multiplexing"
+   ]
   },
   {
    "id": "2019-20-6(b)",
@@ -1324,7 +1626,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=49",
    "text": "A multiplexer combines four 100-kbps channels using a time slot of 2 bits. Show the output for the following inputs- '110010', '001010', '101101', '000111'. What is the frame rate? What is the frame duration? What is the bit rate? What is the bit duration?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Take 2 bits from each channel in turn; frame rate = channel rate / 2; frame duration its inverse; link rate = 4 × 100 kbps; bit duration its inverse.",
+   "answer": "frames 11001000, 00101101, 10100111; 50 000 frames/s; 20 μs; 400 kbps; 2.5 μs",
+   "draws": [
+    "Frame: TDM output of the four channels"
+   ],
+   "drill": [
+    "TDM output with 2-bit slots: 110010, 001010, 101101, 000111"
+   ]
   },
   {
    "id": "2019-20-6(d)",
@@ -1338,7 +1648,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=52",
    "text": "Write short notes on following terms- (i) Pulse stuffing (ii) Multi-slot multiplexing",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Pulse stuffing: dummy bits pad slower inputs up to the fastest when the rates are not integer multiples; the receiver drops them. Multiple slot: an input at a multiple of the base rate gets that many slots per frame.",
+   "draws": [
+    "Frame: pulse stuffing",
+    "Frame: multiple-slot allocation"
+   ],
+   "compare": [
+    "Pulse stuffing vs multiple-slot allocation: rates not multiples, pad with dummy bits vs rates multiples of a base, give extra slots"
+   ]
   },
   {
    "id": "2020-21-2(b)",
@@ -1352,7 +1670,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23",
    "text": "Five channels, each with 100 kHz bandwidth, are to be frequency division multiplexing together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channel to prevent interference?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Add the channel bandwidths and the $N - 1$ guard bands between them.",
+   "answer": "540 kHz",
+   "draws": [
+    "Spectrum: five channels and four guard bands"
+   ]
   },
   {
    "id": "2019-20-6(c)",
@@ -1366,7 +1689,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=51",
    "text": "Briefly explain frequency division multiplexing techniques.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Each signal modulates its own carrier; the bands sit side by side with guard bands on one link; the receiver separates them with BPFs and demodulates; hierarchy: group, supergroup, master group; radio, TV and telephone.",
+   "draws": [
+    "Block diagram: FDM multiplexer and demultiplexer",
+    "Spectrum: channels side by side with guard bands"
+   ]
   },
   {
    "id": "2020-21-1(b)",
@@ -1380,7 +1708,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=14",
    "text": "Briefly explain the three major bands of the electromagnetic (EM) spectrum-radio waves, microwaves and infra-red waves-in terms of their bandwidth, propagation mode and applications.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Radio: 3 kHz to 1 GHz, ground, sky or line of sight, omnidirectional, broadcasting. Microwaves: 1 to 300 GHz, line of sight, directional, satellite and cellular. Infrared: 300 GHz to 400 THz, short range, blocked by walls, remote controls.",
+   "draws": [
+    "Diagram: the three bands on a frequency scale"
+   ],
+   "compare": [
+    "Radio waves vs microwaves vs infrared: omnidirectional, pass walls vs directional, line of sight vs short range, blocked by walls"
+   ]
   },
   {
    "id": "2020-21-1(c)",
@@ -1394,7 +1729,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=16",
    "text": "Write short note on- (i) Thermal Noise (ii) Transit Time Noise",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Thermal: random electron motion from heat, $P_n = kTB$, white, in every resistor. Transit time: at very high frequency the carrier crossing time is comparable with the signal period, so the noise rises with frequency.",
+   "draws": [
+    "Graph: transistor noise against frequency"
+   ],
+   "compare": [
+    "Thermal vs transit-time noise: at all frequencies, from heat vs only at very high frequency, rises with frequency"
+   ]
   },
   {
    "id": "2021-22-2(a)",
@@ -1408,7 +1750,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=20",
    "text": "The antenna current of an AM transmitter is 8 A when only the carrier is sent. But it increases to 8.93 A when the carrier is modulated by a single sine wave. Find the percentage modulation. Determine the antenna current when the percentage of modulation changes to 0.8",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$I_t = I_c\\sqrt{1 + \\mu^2/2}$; solve for $\\mu$; then put $\\mu = 0.8$.",
+   "answer": "$\\mu \\approx 70$ %; 9.19 A at $\\mu = 0.8$"
   },
   {
    "id": "2021-22-3(d)",
@@ -1422,7 +1766,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=34",
    "text": "For the AM signal with $m(t)$ in Fig. 1 given below, sketch $\\Phi_AM(t)$ for $\\mu = 0.5, \\mu = 1$, and $\\mu = 1.5$.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$A = m_p/\\mu$; draw the envelope $A + m(t)$ and its mirror; $\\mu > 1$ overmodulates and the envelope detector fails.",
+   "draws": [
+    "Waveform: AM for $\\mu = 0.5$, 1 and 1.5"
+   ],
+   "drill": [
+    "AM waveform for $\\mu = 0.5$, 1, 1.5: the sawtooth $m(t)$ of Fig. 1"
+   ]
   },
   {
    "id": "2021-22-7(c)",
@@ -1436,7 +1787,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=63",
    "text": "The antenna current of an AM transmitter is 8 A when only the carrier is sent. But it increases to 8.93 A when the carrier is modulated by a single sine wave. Find the percentage modulation. Determine the antenna current when the percentage of modulation changes to 0.8.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$I_t = I_c\\sqrt{1 + \\mu^2/2}$; solve for $\\mu$; then put $\\mu = 0.8$.",
+   "answer": "$\\mu \\approx 70$ %; 9.19 A at $\\mu = 0.8$"
   },
   {
    "id": "2020-21-1(d)",
@@ -1450,7 +1803,13 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=18",
    "text": "A carrier wave of frequency 10 MHz and peak value of 10 V is amplitude modulated by a 5 kHz sine wave of amplitude 6 V. Determine the modulation index, side frequencies and amplitude of side frequencies.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$\\mu = V_m/V_c$; side frequencies $f_c \\pm f_m$; each side amplitude $\\mu V_c/2$.",
+   "answer": "$\\mu = 0.6$; 10.005 and 9.995 MHz; 3 V each",
+   "draws": [
+    "Waveform: the AM wave",
+    "Spectrum: carrier and the two side lines"
+   ]
   },
   {
    "id": "2020-21-8(c)",
@@ -1464,7 +1823,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=71",
    "text": "The antenna current of an AM transmitter is 8 Amps, when only the carrier is sent, but it increases to 8.93A, when the carrier is modulated by a single sine wave. Find percentage modulation. Determine the antenna current when the percentage modulation changes to 0.8",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$I_t = I_c\\sqrt{1 + \\mu^2/2}$; solve for $\\mu$; then put $\\mu = 0.8$.",
+   "answer": "$\\mu \\approx 70$ %; 9.19 A at $\\mu = 0.8$"
   },
   {
    "id": "2022-23-7(b)",
@@ -1478,7 +1839,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=10",
    "text": "An audio frequency signal $10\\sin 2\\pi500t$ is used to amplitude modulate a carrier of $50\\sin 2\\pi10^5t$. Calculate: (i) Modulation index (ii) Sideband frequencies (iii) Amplitude of each sideband frequency (iv) Bandwidth required (v) Total power delivered to the load of 600 Ω (vi) Transmission efficiency",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$\\mu = V_m/V_c$; $f_c \\pm f_m$; side amplitude $\\mu V_c/2$; $B = 2f_m$; $P_t = (V_c^2/2R)(1 + \\mu^2/2)$; $\\eta = \\mu^2/(2 + \\mu^2)$.",
+   "answer": "$\\mu = 0.2$; 100.5 and 99.5 kHz; 5 V each; 1 kHz; 2.125 W; 1.96 %"
   },
   {
    "id": "2020-21-1(e)",
@@ -1492,7 +1855,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=19",
    "text": "An audio frequency signal $10\\sin(2\\pi500t)$ is used to amplitude modulated a carrier of $50\\sin(2\\pi105t)$ *[sic: should be $2\\pi10^5t$]*. Calculate: (i) Modulation index (ii) Side-band frequencies (iii) Total power delivered to the load of 600 $\\Omega$",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$\\mu = V_m/V_c$; side bands $f_c \\pm f_m$; $P_t = (V_c^2/2R)(1 + \\mu^2/2)$.",
+   "answer": "$\\mu = 0.2$; 100.5 and 99.5 kHz; 2.125 W"
   },
   {
    "id": "2021-22-6(c)",
@@ -1506,7 +1871,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=56",
    "text": "Compare between FDMA and CDMA.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "FDMA: each user its own band, guard bands, simple, hard capacity limit. CDMA: same band and time, separated by codes, soft capacity, needs power control, resists jamming and multipath.",
+   "compare": [
+    "FDMA vs CDMA: own band with guard bands, hard capacity vs shared band separated by codes, soft capacity"
+   ]
   },
   {
    "id": "2021-22-6(e)",
@@ -1520,7 +1889,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=58",
    "text": "Differentiate between multiplexing and multiple access technologies.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Multiplexing: several signals combined at one point onto one link (FDM, TDM, WDM), under one owner. Multiple access: separate users share one medium (FDMA, TDMA, CDMA) and need access rules.",
+   "draws": [
+    "Diagram: multiplexing and multiple access"
+   ],
+   "compare": [
+    "Multiplexing vs multiple access: signals combined at one point onto one link vs separate users share one medium"
+   ]
   },
   {
    "id": "2020-21-2(a)",
@@ -1534,7 +1910,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=22",
    "text": "Differentiate between multiplexing and multiple access technologies.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Multiplexing: several signals combined at one point onto one link (FDM, TDM, WDM), under one owner. Multiple access: separate users share one medium (FDMA, TDMA, CDMA) and need access rules.",
+   "draws": [
+    "Diagram: multiplexing and multiple access"
+   ],
+   "compare": [
+    "Multiplexing vs multiple access: signals combined at one point onto one link vs separate users share one medium"
+   ]
   },
   {
    "id": "2020-21-5(a)",
@@ -1548,7 +1931,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=45",
    "text": "Write down the comparison between TDMA and CDMA.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "TDMA: users take turns in time slots on one frequency, need exact timing, hard capacity limit. CDMA: users share the band at the same time, separated by codes, need power control, soft capacity, resist jamming.",
+   "draws": [
+    "Diagram: TDMA and CDMA in time and frequency"
+   ],
+   "compare": [
+    "TDMA vs CDMA: separate time slots, hard capacity vs separate codes, soft capacity, power control"
+   ]
   },
   {
    "id": "2020-21-2(c)",
@@ -1562,7 +1952,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=24",
    "text": "With proper block diagram explain the relation between frequency modulation and phase modulation.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$\\omega_i = d\\theta/dt$; FM of $m$ is PM of $\\int m\\,dt$, and PM of $m$ is FM of $\\dot m$; an integrator before a phase modulator gives FM, a differentiator before a frequency modulator gives PM.",
+   "draws": [
+    "Block diagram: FM from a phase modulator and PM from a frequency modulator",
+    "Waveform: FM and PM for a triangular message"
+   ],
+   "compare": [
+    "FM vs PM: frequency follows $m(t)$ vs phase follows $m(t)$"
+   ]
   },
   {
    "id": "2020-21-4(a)",
@@ -1576,7 +1974,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35",
    "text": "With appropriate block diagram, describe the operation of superheterodyne receiver.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "RF amplifier, mixer with $f_{LO} = f_s + f_{IF}$, fixed IF amplifier (455 kHz), detector, audio amplifier, AGC; the image is at $f_s + 2f_{IF}$; the fixed IF gives good selectivity and sensitivity.",
+   "draws": [
+    "Block diagram: superheterodyne receiver",
+    "Spectrum: the signal and its image frequency"
+   ]
   },
   {
    "id": "2022-23-7(g)",
@@ -1590,7 +1993,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=16",
    "text": "What is VSB (vestigial sideband)? Why is it used?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "VSB: one full sideband plus a vestige of the other; the filter has complementary symmetry about $f_c$, so the detected output is flat; used when the message has power near dc (video) and SSB filtering is impossible, with less bandwidth than DSB.",
+   "draws": [
+    "Spectrum: VSB filter near the carrier"
+   ],
+   "compare": [
+    "SSB vs VSB vs DSB: bandwidth $B$, needs a gap at dc vs a little over $B$, keeps dc vs $2B$"
+   ]
   },
   {
    "id": "2022-23-7(h)",
@@ -1604,7 +2014,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=18",
    "text": "Why is VSB-WC chosen for TV broadcasting?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Video has power down to dc, so SSB is not possible; DSB wastes bandwidth; VSB saves about 40 %; with a carrier (WC) a cheap envelope detector works in every TV set."
   },
   {
    "id": "2021-22-2(d)",
@@ -1618,7 +2029,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=24",
    "text": "Find the condition of sideband shaping filter for VSB modulation.",
    "repeat_of": "",
-   "outline": "Write the VSB spectrum; shift by the carrier; keep the baseband terms; require a constant bracket."
+   "outline": "Write the VSB spectrum; shift by the carrier; keep the baseband terms; require a constant bracket.",
+   "draws": [
+    "Block diagram: VSB transmitter and receiver",
+    "Spectrum: VSB filter with complementary symmetry"
+   ]
   },
   {
    "id": "2021-22-8(c)",
@@ -1632,7 +2047,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=68",
    "text": "Using a message signal consists of two sinusoidal frequency components, describe the principle of VSB modulation and demodulation.",
    "repeat_of": "",
-   "outline": "Write the four DSB lines; apply the filter gains 1, a, 1-a, 0; demodulate; the partial sidebands add to the full tone."
+   "outline": "Write the four DSB lines; apply the filter gains 1, a, 1-a, 0; demodulate; the partial sidebands add to the full tone.",
+   "draws": [
+    "Spectrum: two-tone DSB-SC lines, the VSB filter and the detected lines"
+   ]
   },
   {
    "id": "2020-21-4(b)",
@@ -1646,7 +2064,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=36",
    "text": "Explain how the message signal is reconstructed from VSB signal.",
    "repeat_of": "",
-   "outline": "Shape DSB-SC with a filter; multiply by the carrier; filter; require the sum of the shifted responses to be constant."
+   "outline": "Shape DSB-SC with a filter; multiply by the carrier; filter; require the sum of the shifted responses to be constant.",
+   "draws": [
+    "Block diagram: VSB transmitter and receiver",
+    "Spectrum: VSB filter and the two shifted copies"
+   ]
   },
   {
    "id": "2021-22-4(b)",
@@ -1660,7 +2082,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=39",
    "text": "\"A proper valued LPF filter can be used to reconstruct the sampled signal\"-justify the statement with the proper mathematical explanations.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Sampled spectrum $\\bar G(f) = (1/T_s)\\sum G(f - nf_s)$; with $f_s \\ge 2B$ the copies do not overlap; an LPF of gain $T_s$ and cutoff between $B$ and $f_s - B$ keeps $G(f)$; in time this is the sinc interpolation formula.",
+   "draws": [
+    "Spectrum: sampled spectrum and the reconstruction LPF",
+    "Waveform: sinc reconstruction"
+   ]
   },
   {
    "id": "2020-21-4(c)",
@@ -1674,7 +2101,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=40",
    "text": "State and prove Nyquist sampling theorem. Also find the interpolation formula for the reconstruction of analog signals from its uniform samples.",
    "repeat_of": "",
-   "outline": "Multiply by an impulse train; write its Fourier series; read off the repeated spectrum; filter with an ideal LPF."
+   "outline": "Multiply by an impulse train; write its Fourier series; read off the repeated spectrum; filter with an ideal LPF.",
+   "draws": [
+    "Spectrum: sampled signal for three sampling rates",
+    "Waveform: reconstruction by sinc pulses"
+   ]
   },
   {
    "id": "2020-21-4(d)",
@@ -1688,7 +2119,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=43",
    "text": "State Carson's rule and its limitations.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$B_T \\approx 2(\\Delta f + f_m) = 2f_m(\\beta + 1)$, holding about 98 % of the power. Limits: only approximate; underestimates for $2 < \\beta < 10$; a general message needs its highest $f_m$; weak lines are ignored.",
+   "draws": [
+    "Spectrum: FM lines for $\\beta = 5$"
+   ]
   },
   {
    "id": "2020-21-8(e)",
@@ -1702,7 +2137,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=74",
    "text": "Consider an FM signal obtained from a modulating signal frequency of 2000 Hz and maximum Amplitude of 5 volts. The frequency sensitivity of modulator is 2 kHz/V. Find the bandwidth of the FM using Carson's rule.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$\\Delta f = k_fA_m$; $\\beta = \\Delta f/f_m$; $B_T = 2(\\Delta f + f_m)$.",
+   "answer": "$\\Delta f = 10$ kHz, $\\beta = 5$, 24 kHz"
   },
   {
    "id": "2020-21-6(a)",
@@ -1716,7 +2153,13 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=53",
    "text": "Briefly describe FSK generation with the necessary block diagram. Include its spectrum and discuss the bandwidth requirements, along with the advantages and disadvantages of FSK.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Bits select $f_c \\pm \\Delta f$: two switched oscillators or a VCO; the spectrum is two ASK lobes, $B \\approx 2\\Delta f + 2R_b$. Advantages: constant envelope, simple, noise immune. Disadvantages: wide bandwidth, worse than PSK.",
+   "draws": [
+    "Waveform: FSK for 10110",
+    "Block diagram: two ways to generate FSK",
+    "Spectrum: FSK"
+   ]
   },
   {
    "id": "2021-22-5(b)",
@@ -1730,7 +2173,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=48",
    "text": "With proper block diagram explain the principle of coherent detection of QAM. Mention its advantages and drawbacks.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$\\varphi = m_1\\cos\\omega_ct + m_2\\sin\\omega_ct$; multiply by $2\\cos\\omega_ct$ and $2\\sin\\omega_ct$, low-pass filter to get $m_1$ and $m_2$. Advantage: two signals in one band. Drawbacks: needs an exact carrier; a phase error gives crosstalk $m_1\\cos\\theta - m_2\\sin\\theta$; needs linear amplifiers.",
+   "draws": [
+    "Block diagram: QAM modulator and coherent demodulator"
+   ]
   },
   {
    "id": "2020-21-6(b)",
@@ -1744,7 +2191,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=55",
    "text": "With proper block diagram explain the principle of coherent detection of QAM. Mention its advantages and drawbacks.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$\\varphi = m_1\\cos\\omega_ct + m_2\\sin\\omega_ct$; multiply by $2\\cos\\omega_ct$ and $2\\sin\\omega_ct$, low-pass filter to get $m_1$ and $m_2$. Advantage: two signals in one band. Drawbacks: needs an exact carrier; a phase error gives crosstalk $m_1\\cos\\theta - m_2\\sin\\theta$; needs linear amplifiers.",
+   "draws": [
+    "Block diagram: QAM modulator and coherent demodulator"
+   ]
   },
   {
    "id": "2020-21-6(c)",
@@ -1758,7 +2209,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=57",
    "text": "Explain the principle of frequency hopping spread spectrum technique.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "A PN code drives a frequency synthesizer, so the carrier hops among $2^k$ frequencies; the receiver hops in step; $B_{SS} \\approx MB$; slow and fast hopping; resists jamming and eavesdropping.",
+   "draws": [
+    "Block diagram: FHSS transmitter and receiver",
+    "Graph: hopping pattern of eight frequencies"
+   ]
   },
   {
    "id": "2021-22-1(d)",
@@ -1772,7 +2228,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=17",
    "text": "Explain the conditions required for distortionless transmission.",
    "repeat_of": "",
-   "outline": "Write the output as a delayed scaled input; Fourier transform it; read magnitude and phase conditions."
+   "outline": "Write the output as a delayed scaled input; Fourier transform it; read magnitude and phase conditions.",
+   "draws": [
+    "Graph: flat magnitude and linear phase of a distortionless channel"
+   ]
   },
   {
    "id": "2020-21-7(b)",
@@ -1786,7 +2245,13 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=62",
    "text": "Explain distortion as a transmission impairment in communication systems. What are the conditions required for distortionless transmission?",
    "repeat_of": "",
-   "outline": "Write the output as a delayed scaled input; Fourier transform it; read magnitude and phase conditions."
+   "outline": "Write the output as a delayed scaled input; Fourier transform it; read magnitude and phase conditions.",
+   "draws": [
+    "Graph: flat magnitude and linear phase of a distortionless channel"
+   ],
+   "compare": [
+    "Amplitude vs phase vs nonlinear distortion: gain varies with frequency vs delay varies with frequency vs new frequencies appear"
+   ]
   },
   {
    "id": "2020-21-8(d)",
@@ -1800,7 +2265,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=72",
    "text": "Explain principle of preemphasis and deemphasis",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "FM output noise rises as $f^2$ while the high audio frequencies are weak; boost them before modulation (pre-emphasis, 75 μs) and cut them equally after demodulation (de-emphasis), $H_pH_d = 1$; about 13 dB better SNR.",
+   "draws": [
+    "Circuit: pre-emphasis and de-emphasis networks",
+    "Graph: their frequency responses"
+   ]
   },
   {
    "id": "2021-22-1(b)",
@@ -1814,7 +2284,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=13",
    "text": "Discuss the different modes of propagation of EM wave.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Ground wave below 2 MHz follows the Earth (AM); sky wave 2 to 30 MHz is bent back by the ionosphere (long range); line of sight above 30 MHz, range $\\approx 4.12(\\sqrt{h_t} + \\sqrt{h_r})$ km (FM, TV, mobile, satellite).",
+   "draws": [
+    "Diagram: ground, sky and line-of-sight propagation"
+   ]
   },
   {
    "id": "2022-23-7(i)",
@@ -1842,7 +2316,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=19",
    "text": "Draw the NBFM block diagram.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Integrator, balanced modulator fed with the carrier shifted by −90°, and a summer adding the carrier.",
+   "draws": [
+    "Block diagram: NBFM generator"
+   ]
   },
   {
    "id": "2021-22-3(a)",
@@ -1856,7 +2334,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=30",
    "text": "Explain NBFM generation process with necessary block diagrams and equations.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$\\varphi_{NBFM} \\approx A\\cos\\omega_ct - Ak_fa(t)\\sin\\omega_ct$ with $a = \\int m\\,dt$: integrator, balanced modulator fed with the carrier shifted by −90°, subtract from the carrier; valid for $\\beta \\ll 1$.",
+   "draws": [
+    "Block diagram: NBFM generator"
+   ],
+   "compare": [
+    "NBFM vs AM: sideband term in quadrature with the carrier vs in phase with it; same bandwidth $2B$"
+   ]
   },
   {
    "id": "2021-22-3(b)",
@@ -1870,7 +2355,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=32",
    "text": "Write a short note on the linear diode detection (envelope detector) method with proper diagrams and leveling.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Diode and a parallel RC: C charges to each carrier peak and discharges slowly through R, so the output follows $A + m(t)$; needs $1/\\omega_c \\ll RC < 1/(2\\pi B)$ and $\\mu \\le 1$; too large an RC clips diagonally, too small leaves ripple; a series C removes the dc (levelling).",
+   "draws": [
+    "Circuit: envelope detector",
+    "Waveform: AM input and detector output"
+   ]
   },
   {
    "id": "2021-22-7(d)",
@@ -1884,7 +2374,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=63",
    "text": "Explain the principle of envelope detector and hence find the RC requirement of envelope detector.",
    "repeat_of": "",
-   "outline": "Compare the capacitor discharge slope with the envelope slope; find the worst instant; get the RC bound."
+   "outline": "Compare the capacitor discharge slope with the envelope slope; find the worst instant; get the RC bound.",
+   "draws": [
+    "Circuit: envelope detector",
+    "Waveform: detector output, with ripple and diagonal clipping"
+   ]
   },
   {
    "id": "2021-22-6(d)",
@@ -1898,7 +2392,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=57",
    "text": "Discuss the design procedures of a communication system.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Requirements; channel study; Shannon limit; source coding; channel coding; modulation; multiplexing and multiple access; link budget; trade bandwidth, power and error rate."
   },
   {
    "id": "2022-23-7(a)",
@@ -1912,7 +2407,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2022-23-pack.pdf#page=9",
    "text": "Advantages and disadvantages of FM over AM.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "FM advantages: better noise immunity, constant envelope (efficient amplifiers), capture effect, higher fidelity. Disadvantages: much wider bandwidth, line-of-sight range, complex equipment, threshold effect.",
+   "compare": [
+    "FM vs AM: noise immune, constant envelope, wide band vs narrow band, simple, longer range, noisy"
+   ]
   }
  ],
  "formulas": [

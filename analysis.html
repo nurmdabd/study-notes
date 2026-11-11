@@ -67,6 +67,9 @@ input[type=search] { flex: 1 1 220px; }
 .q .tags { color: var(--muted); font-size: .78rem; }
 .q.done .text { color: var(--muted); }
 .q .outline { color: var(--muted); font-size: .84rem; margin-top: 2px; }
+.q .outline b { color: var(--text, inherit); font-weight: 600; }
+.q details.ans { border-top: 0; }
+.q details.ans summary { padding: 2px 0; font-size: .82rem; }
 .q .text { overflow-wrap: anywhere; }
 .katex-display, .text .katex { overflow-x: auto; overflow-y: hidden; }
 details { border-top: 1px solid var(--line); }
@@ -152,7 +155,18 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
   function shown(q) {
     return (!state.topic || q.topic === state.topic) && (state.paper === 'all' || q.session === state.paper) &&
       (state.type === 'all' || q.type === state.type) && inBand(q.marks, state.marks) && (!state.todo || !done.has(q.id)) &&
-      (!state.q || (q.text + ' ' + q.subtopic + ' ' + q.outline + ' ' + q.label).toLowerCase().includes(state.q));
+      (!state.q || words(q).includes(state.q));
+  }
+  function extra(q) {          // the study fields of the tags: points, outline or recipe, method, answer (hidden), drawings, comparisons, drills
+    const line = (label, v) => v ? '<div class="outline"><b>' + label + ':</b> ' + tex(v) + '</div>' : '';
+    const list = v => (v || []).join('; ');
+    return line('Points', q.points) + line(q.type === 'design' ? 'Recipe' : 'Outline', q.outline) + line('Method', q.method) +
+      (q.answer ? '<details class="ans"><summary>Show answer</summary><div class="outline">' + tex(q.answer) + '</div></details>' : '') +
+      line('Draw', list(q.draws)) + line('Compare', list(q.compare)) + line('Drill', list(q.drill));
+  }
+  function words(q) {
+    return [q.text, q.subtopic, q.outline, q.label, q.points, q.method, q.answer, list(q.draws), list(q.compare), list(q.drill)].join(' ').toLowerCase();
+    function list(v) { return (v || []).join(' '); }
   }
   function counter() {
     const total = D.questions.reduce((a, q) => a + q.marks, 0);
@@ -177,7 +191,7 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
             '<div><div class="lab">' + name + '</div><div class="tags">' + fmt(q.marks) + ' marks · ' + esc(q.type) +
             (q.repeat_of ? '<br>repeats ' + esc(q.repeat_of) : '') + '</div></div>' +
             '<div class="text">' + tex(q.text || '(See the paper.)') +
-            (q.outline ? '<div class="outline">Outline: ' + tex(q.outline) + '</div>' : '') + '</div></div>';
+            extra(q) + '</div></div>';
         });
       });
       const fs = D.formulas.filter(f => f.topic === t.id);
