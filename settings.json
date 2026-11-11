@@ -32,17 +32,7 @@
     "EEE329",
     "EEE339"
   ],
-  "item_order": {
-    "EEE455": [
-      "EEE455-question-analysis",
-      "EEE455-2020-21-pack",
-      "EEE455-2019-20-pack",
-      "EEE455-2018-19-pack",
-      "EEE455-2020-21-question-paper",
-      "EEE455-2019-20-question-paper",
-      "EEE455-2018-19-question-paper"
-    ]
-  },
+  "item_order": {},
   "default_sort": "custom",
   "known_subjects": [
     "EEE475",
@@ -58,10 +48,10 @@
     "EEE475-question-analysis",
     "EEE475-2020-21-pack",
     "EEE475-2020-21-pack-bn",
-    "EEE475-2020-21-question-paper",
     "EEE475-2019-20-pack",
-    "EEE475-2019-20-question-paper",
     "EEE475-2018-19-pack",
+    "EEE475-2020-21-question-paper",
+    "EEE475-2019-20-question-paper",
     "EEE475-2018-19-question-paper",
     "EEE455-question-analysis",
     "EEE455-2020-21-pack",
@@ -81,14 +71,18 @@
     "EEE443-2020-21-question-paper",
     "EEE337-question-analysis",
     "EEE337-2021-22-pack",
-    "EEE337-2021-22-question-paper",
     "EEE337-2020-21-pack",
+    "EEE337-2021-22-question-paper",
     "EEE337-2020-21-question-paper",
     "EEE329-question-analysis",
+    "EEE329-2022-23-pack",
     "EEE329-2021-22-pack",
-    "EEE329-2021-22-question-paper",
     "EEE329-2020-21-pack",
+    "EEE329-2019-20-pack",
+    "EEE329-2022-23-question-paper",
+    "EEE329-2021-22-question-paper",
     "EEE329-2020-21-question-paper",
+    "EEE329-2019-20-question-paper",
     "EEE339-question-analysis",
     "EEE339-2020-21-pack",
     "EEE339-2020-21-question-paper"
