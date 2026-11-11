@@ -187,12 +187,16 @@ function syncReportForm_(cat, st) {
 const REPORT_TEXT = {
   title: 'Found a mistake? — Study Notes',
   description: 'কোনো ভুল বা অস্পষ্ট কিছু চোখে পড়লে অনুগ্রহ করে এখানে জানান। আপনার প্রতিটি মতামত সমাধানগুলোকে আরও ভালো করতে সাহায্য করে।\n\n' +
-    'স্ক্রিনশট থাকলে অনুগ্রহ করে WhatsApp-এ পাঠিয়ে দিন এবং নিচের ঘরে লিখে দিন "screenshot sent"।\nWhatsApp: 01352679856\n\n' +
+    'স্ক্রিনশট থাকলে অনুগ্রহ করে WhatsApp-এ পাঠিয়ে দিন এবং নিচের ঘরে লিখে দিন "screenshot sent"। WhatsApp: 01352679856\n\n' +
     'সাহায্য করার জন্য আন্তরিক ধন্যবাদ!',
   screenshot: 'WhatsApp-এ স্ক্রিনশট পাঠিয়ে থাকলে লিখুন: screenshot sent',
 };
 
-/** Run once to give the report form its polite title, description and screenshot question (safe to run again). */
+/**
+ * Run once to give the report form its polite title, description and screenshot question. Apps Script can set
+ * only plain text, so the WhatsApp number's link is added by hand in the form editor afterwards; running this
+ * again removes that link.
+ */
 function updateReportFormText() {
   const id = PropertiesService.getScriptProperties().getProperty('REPORT_FORM_ID');
   if (!id) throw new Error('Add the script property REPORT_FORM_ID first (see SETUP.md, step 5).');
