@@ -318,11 +318,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 76,
+      "pages": 78,
       "file": "EEE337-PSII/PSII-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00",
-      "source": "1ec29403efefc9ca"
+      "updated": "2026-11-11T22:30+06:00",
+      "source": "d98d30298a5b227c"
     },
     {
       "id": "EEE337-2020-21-question-paper",
@@ -333,8 +333,8 @@
       "pages": 2,
       "file": "EEE337-PSII/PSII-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00",
-      "source": "a6875ec548655da2"
+      "updated": "2026-11-11T22:30+06:00",
+      "source": "b12ee3923309f2d3"
     },
     {
       "id": "EEE337-2021-22-pack",
@@ -342,11 +342,11 @@
       "session": "2021-22",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 96,
+      "pages": 98,
       "file": "EEE337-PSII/PSII-2021-22-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00",
-      "source": "15720641ea58bf7e"
+      "updated": "2026-11-11T22:30+06:00",
+      "source": "d4e3f041e17f9977"
     },
     {
       "id": "EEE337-2021-22-question-paper",
@@ -357,8 +357,8 @@
       "pages": 4,
       "file": "EEE337-PSII/PSII-2021-22-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00",
-      "source": "55f0596ec56dbcc1"
+      "updated": "2026-11-11T22:30+06:00",
+      "source": "4e93a50915455084"
     },
     {
       "id": "EEE339-2020-21-pack",
@@ -631,12 +631,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 22,
+      "pages": 28,
       "file": "EEE337-PSII/PSII-question-analysis.pdf",
       "page": "analysis.html?subject=EEE337",
       "printable": true,
-      "updated": "2026-10-31T16:43:05+06:00",
-      "source": "643856d98cec00bb"
+      "updated": "2026-11-11T22:30+06:00",
+      "source": "814ec46430ae3582"
     },
     {
       "id": "EEE339-question-analysis",
