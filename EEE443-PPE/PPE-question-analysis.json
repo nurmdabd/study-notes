@@ -235,7 +235,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=10",
    "text": "List the factors that contribute to improving the generating capacity of a thermal power station.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Higher steam pressure and temperature, reheating, lower condenser pressure, regenerative feed heating, economiser and air preheater, good combustion, larger units, a high load factor with good maintenance, combined cycle working.",
+   "draws": [
+    "Diagram: steam loop of a thermal station (Rankine cycle)"
+   ]
   },
   {
    "id": "2020-21-1(b)",
@@ -249,7 +253,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=12",
    "text": "Briefly discuss the characteristics of fuels.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Calorific value, moisture, volatile matter, fixed carbon, ash, sulphur, ignition temperature, ease of handling and storage, cost and availability."
   },
   {
    "id": "2020-21-1(c)",
@@ -263,7 +268,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=13",
    "text": "What is meant by combined cycle power generation?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "A gas turbine burns the fuel; its hot exhaust raises steam in a heat-recovery boiler that drives a steam turbine; one fuel drives two generators at about 55 to 60 % efficiency.",
+   "draws": [
+    "Block diagram: combined cycle plant"
+   ],
+   "compare": [
+    "Combined cycle vs simple steam plant: gas turbine exhaust reused, 55 to 60 % efficient vs one cycle, about 35 to 40 %"
+   ]
   },
   {
    "id": "2020-21-1(d)",
@@ -277,7 +289,16 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=14",
    "text": "What are the requirements of a base load and peak load power plant? The annual peak load on a 30 MW power station is 25 MW. The power station supplies loads having a maximum demands of 10MW, 8.5 MW, 5 MW and 4.5 MW. The annual load factor is 45%. Find: (i) Average load, (ii) Energy supplied every year, (iii) Diversity factor, (iv) Demand/factor. *[sic: should be \"Demand factor\"]*",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Base load plant: low running cost, steady, reliable, efficient. Peak load plant: quick starting, low capital cost.",
+   "method": "Average load = load factor × peak load; energy = average × 8760 h; diversity factor = sum of maximum demands / peak load; demand factor = peak load / connected capacity.",
+   "answer": "11.25 MW; 98 550 MWh/year; diversity factor 1.12; demand factor 0.833",
+   "draws": [
+    "Graph: daily load curve split into base, intermediate and peak load"
+   ],
+   "compare": [
+    "Base load vs peak load plant: low running cost, runs all the time vs quick starting, low capital cost, runs a few hours"
+   ]
   },
   {
    "id": "2020-21-2(a)",
@@ -291,7 +312,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=17",
    "text": "What is the importance of load factor and diversity factor?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "A high load factor spreads the fixed cost of a plant built for the maximum demand over more kWh; a high diversity factor lets a smaller plant serve the same consumers; both lower the cost per kWh.",
+   "draws": [
+    "Graph: load factor, average against maximum demand",
+    "Graph: three consumers peaking at different times"
+   ],
+   "compare": [
+    "Load factor vs diversity factor: average load / maximum demand, at most 1 vs sum of individual maxima / system maximum, at least 1"
+   ]
   },
   {
    "id": "2020-21-4(a)",
@@ -305,7 +334,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31",
    "text": "Define plant use factor and plant utility factor.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Plant use factor = energy generated / (plant capacity × hours in operation). Plant utility (utilisation) factor = maximum demand / rated plant capacity.",
+   "compare": [
+    "Plant use factor vs plant utilisation factor: energy over capacity × operating hours vs maximum demand over rated capacity"
+   ]
   },
   {
    "id": "2020-21-4(c)",
@@ -319,7 +352,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33",
    "text": "A generating station has a maximum demand of 20 MW, a load factor of 60%, a plant capacity factor of 48% and a plant use factor of 80%. Find: (i) The daily energy produced (ii) The reserve capacity of the plant (iii) The maximum energy that could be produced daily if the plant was running all the time (iv) The maximum energy that could be produced daily if the plant was running fully loaded and operating as per schedule.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Energy = maximum demand × load factor × 24 h; plant capacity = average load / capacity factor; reserve = capacity − maximum demand; hours in use from the use factor.",
+   "answer": "288 MWh/day; reserve 5 MW; 600 MWh/day at full load all day; 360 MWh/day in the 14.4 h scheduled",
+   "draws": [
+    "Diagram: maximum demand, average load and capacity linked by the factors"
+   ]
   },
   {
    "id": "2020-21-2(b)",
@@ -333,7 +371,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=18",
    "text": "Why is the load on a power station variable? What are the effects of variable load on the operation of the power station?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Consumers switch loads at will, by time of day, season and weather. Effects: extra (often idle) capacity, higher cost per kWh, varying efficiency, complex operation, stresses on the plant."
   },
   {
    "id": "2020-21-2(c)",
@@ -347,7 +386,10 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=19",
    "text": "Show that for the economic load sharing, the incremental heat rates are equal.",
    "repeat_of": "",
-   "outline": "Fix the total load; set the change of total heat input to zero; show the slopes are equal."
+   "outline": "Total input $I = I_1 + I_2$ with $P_1 + P_2$ fixed, so $dP_2 = -dP_1$; minimum: $dI = 0$; gives $dI_1/dP_1 = dI_2/dP_2$; second derivative positive; any pair of $n$ units, so all equal $\\lambda$.",
+   "draws": [
+    "Graph: incremental cost curves meeting at the economic loading"
+   ]
   },
   {
    "id": "2020-21-2(d)",
@@ -361,7 +403,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=21",
    "text": "The incremental fuel costs for two generating units A and B of a power plant are given by the following equations: $\\dfrac{dF_A}{dP_A} = 0.06P_A + 11.4$, $\\quad \\dfrac{dF_B}{dP_B} = 0.07P_B + 10$, where P is in mega-watts and F is in takas per hour. (i) Find the economic loading of the two units when the total load to be supplied by the power station is 150 MW. (ii) Find the loss in fuel cost per hour if the load is equally shared by the two units.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Set the incremental costs equal, with $P_A + P_B$ = the load; solve the two linear equations; the loss of equal sharing is $\\int$ (incremental cost) $dP$ over the shifted load for each unit.",
+   "answer": "$P_A = 70$ MW, $P_B = 80$ MW at 15.6 Tk/MWh; equal sharing loses Tk 1.625 per hour",
+   "draws": [
+    "Graph: incremental costs of A and B"
+   ]
   },
   {
    "id": "2020-21-3(a)",
@@ -375,7 +422,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=24",
    "text": "Draw the schematics of steam generating part of a coal fire power plant showing all basic components and direction of steam flow.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Coal store, crusher, pulveriser and burners; feed water through the economiser to the drum, water walls, drum, superheater, turbine; flue gas past superheater, economiser, air preheater, dust collector, ID fan, chimney; ash removed below.",
+   "draws": [
+    "Diagram: steam generating part of a coal-fired plant with steam, water and gas flows"
+   ]
   },
   {
    "id": "2020-21-3(b)",
@@ -389,7 +440,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=25",
    "text": "Differentiate between water tube boiler and fire tube boiler.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Water-tube: water inside the tubes, gas outside; high pressure, large output, quick steaming, safer; power stations. Fire-tube: gas inside the tubes in a water shell; low pressure, small output, slow steaming, cheaper.",
+   "draws": [
+    "Diagram: fire-tube and water-tube boilers"
+   ],
+   "compare": [
+    "Water-tube vs fire-tube boiler: water in the tubes, high pressure, large output vs gas in the tubes, low pressure, small output"
+   ]
   },
   {
    "id": "2020-21-3(c)",
@@ -403,7 +461,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=27",
    "text": "A superheater and an economizer improve the performance of a boiler-How?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Superheater: dries the steam and raises its temperature, so each kg does more work and the turbine blades are protected from droplets. Economiser: recovers flue-gas heat into the feed water, raising boiler efficiency, saving coal and reducing thermal stress.",
+   "draws": [
+    "Graph: flue gas temperature through the heat exchangers"
+   ],
+   "compare": [
+    "Superheater vs economiser: heats the steam above saturation vs preheats the feed water with flue gas"
+   ]
   },
   {
    "id": "2020-21-3(d)",
@@ -417,7 +482,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28",
    "text": "The following data is supplied for a boiler plant: Boiler: Mass of coal supplied = 220 kg /hr. Calorific value of coal = 7200 kcal /kg. Mass of feed water = 200 kg/hr *[sic: should be 2000 kg/hr]*. Enthalpy of steam produced = 670 kcal/kg. Economizer: Inlet temperature of feed water = 18°C. Outlet temperature of water = 88°C. Atmospheric temperature = 19°C. Temperature of flue gas entering = 350°C. Mass of flue gases = 4150 kg/hr. Determine the following (i) Efficiency of boiler. (ii) Efficiency of economizer. (iii) Efficiency of whole boiler plant.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Boiler efficiency = $m_w(h_s - h_{fw})/(m_cC)$; economiser efficiency = heat to water / heat given by the gas; whole plant with the economiser = heat to steam from the inlet water / heat of the coal.",
+   "answer": "73.48 %; economiser 42.47 %; whole plant 82.32 % (with 2000 kg/h)",
+   "draws": [
+    "Diagram: where the heat of the coal goes"
+   ]
   },
   {
    "id": "2020-21-4(b)",
@@ -431,7 +501,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31",
    "text": "Mention the types of reactors used in nuclear power plants.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Thermal and fast reactors; in practice PWR, BWR, PHWR (CANDU), gas-cooled (Magnox, AGR, HTGR) and the fast breeder (LMFBR), told apart by fuel, moderator and coolant.",
+   "draws": [
+    "Diagram: pressurised water reactor with its two loops"
+   ],
+   "compare": [
+    "PWR vs BWR: water kept liquid at high pressure, separate steam generator vs water boils in the core, steam straight to the turbine"
+   ]
   },
   {
    "id": "2020-21-4(d)",
@@ -445,7 +522,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=35",
    "text": "With diagram, write short notes on Kaplan and Francis turbine.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Francis: mixed flow (radial in, axial out) reaction turbine, fixed blades, medium heads. Kaplan: axial-flow propeller reaction turbine with adjustable blades, low heads and large flows, efficient over a wide load range.",
+   "draws": [
+    "Diagram: Francis turbine from above and Kaplan turbine in section"
+   ],
+   "compare": [
+    "Francis vs Kaplan turbine: mixed flow, fixed blades, medium head vs axial flow, adjustable blades, low head, large flow"
+   ]
   },
   {
    "id": "2020-21-5(a)",
@@ -459,7 +543,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=38",
    "text": "Write short notes on the following type of tariffs: (i) Flat demand rate (ii) Straight line meter rate",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Flat demand rate: bill = Tk per kW of connected load, independent of the energy; no meter; street lighting; invites waste. Straight line meter rate: bill = Tk per kWh × kWh; simple and fair to use, but ignores the maximum demand and the fixed cost.",
+   "draws": [
+    "Graph: monthly bill against energy for the two tariffs"
+   ],
+   "compare": [
+    "Flat demand rate vs straight line meter rate: charged on connected load, no meter vs charged per kWh, ignores maximum demand"
+   ]
   },
   {
    "id": "2020-21-5(b)",
@@ -473,7 +564,9 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39",
    "text": "Estimate the generating cost per KWh delivered from a generating station from the following data: Plant capacity = 50 MW. Annual load factor = 40%. Capital cost = 1.2 crores. Annual cost of wages, taxation, etc. = Taka 4 lakhs. Cost of fuel, lubrication, maintenance, etc. = 1.0 paisa/kWh generated. Interest 5% per annum, depreciation 6% per annum of initial value.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Energy = capacity × load factor × 8760 h; fixed charges = interest and depreciation on the capital + wages and taxes; fixed cost per kWh = fixed charges / energy; add the running cost per kWh.",
+   "answer": "about 1.98 paisa/kWh (0.98 fixed + 1.0 running)"
   },
   {
    "id": "2020-21-5(c)",
@@ -487,7 +580,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=40",
    "text": "Write short note on- (i) Spillways (ii) Surge tanks (iii) Draft tubes",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Spillway: passes surplus flood water safely past the dam. Surge tank: on the penstock, absorbs water hammer on load drops and supplies water on load rises. Draft tube: widening outlet below a reaction turbine, regains exit energy and lets the turbine sit above the tail race.",
+   "draws": [
+    "Diagram: hydro plant with spillway, surge tank and draft tube"
+   ]
   },
   {
    "id": "2020-21-5(d)",
@@ -501,7 +598,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=41",
    "text": "An electric supply company having a maximum load of 50 MW generates $18\\times10^7$ units per annum and the supply consumers have an aggregate demand of 75 MW. The annual expenses including capital charges are: For fuel = Taka 90 lakhs. Fixed charges concerning generation = Taka 28 lakhs. Fixed charges concerning transmission and distribution = Taka 32 lakhs. Assuming 90% of the fuel cost is essential to running charges and the loss in transmission and distribution as 15% of KWh generated, deduce a two part tariff to find the actual cost of supply to the consumers.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Split the costs into running (per kWh) and fixed (per kW); kWh sold after losses; running cost / kWh sold; fixed cost / aggregate demand gives Tk per kW.",
+   "answer": "Tk 92 per kW per year + 5.29 paisa per kWh",
+   "draws": [
+    "Diagram: annual cost split into running and fixed charges"
+   ]
   },
   {
    "id": "2020-21-6(a)",
@@ -515,7 +617,14 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=44",
    "text": "What are the methods of determining depreciation cost in power plants? Briefly explain one of the methods.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Straight line: $(P - S)/n$ each year. Diminishing value: a fixed percentage of the remaining value. Sinking fund: a fixed deposit $q = (P - S)\\,i/[(1 + i)^n - 1]$ at compound interest grows to $P - S$ (derived from the geometric series of the deposits).",
+   "draws": [
+    "Graph: book value over the life by the three methods"
+   ],
+   "compare": [
+    "Straight line vs diminishing value vs sinking fund: equal charges vs large early charges vs equal deposits that earn interest"
+   ]
   },
   {
    "id": "2020-21-6(b)",
@@ -526,10 +635,14 @@
    "subtopic": "Pulverisation",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=45",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=46",
    "text": "Why is pulverization done in a coal fired power plant? Give description of any basic type of pulverizers.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Pulverised coal burns completely, quickly and controllably, suits any coal and very large boilers, raises efficiency. Ball mill: steel balls in a slowly rotating drum crush the coal; hot air carries the fines through a classifier to the burners.",
+   "draws": [
+    "Diagram: ball mill"
+   ]
   },
   {
    "id": "2020-21-6(c)",
@@ -540,10 +653,17 @@
    "subtopic": "Impulse and reaction",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=46",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=47",
    "text": "Write short notes on: (i) Impulse turbine (ii) Reaction turbines",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Impulse: the whole pressure drop is in the nozzles; the jet pushes symmetrical blades at constant pressure. Reaction: pressure falls in both fixed and moving blades; the moving blades are driven by the reaction of the accelerating steam.",
+   "draws": [
+    "Graph: pressure and velocity through impulse and reaction stages"
+   ],
+   "compare": [
+    "Impulse vs reaction turbine: pressure drop only in the nozzles vs in both fixed and moving blades"
+   ]
   },
   {
    "id": "2020-21-6(d)",
@@ -557,7 +677,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=48",
    "text": "Discuss the advantages and disadvantages of a Hydro-electric power plant.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Advantages: no fuel cost, clean, quick start for peak load, reliable, long life, efficient, multipurpose (irrigation, flood control). Disadvantages: high capital cost, long construction, depends on rainfall, remote sites with long lines, environmental, social and dam-safety risks.",
+   "compare": [
+    "Hydro vs thermal plant: no fuel cost, high capital cost, depends on rain vs fuel cost, lower capital cost, near the load"
+   ]
   }
  ],
  "formulas": [
