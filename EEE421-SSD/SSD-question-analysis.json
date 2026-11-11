@@ -190,7 +190,13 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=11",
    "text": "Sketch the position of Fermi level in Si at 300 K as a function of doping concentration.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$E_F - E_{Fi} = kT\\ln(N_d/n_i)$ in n-type, $E_{Fi} - E_F = kT\\ln(N_a/n_i)$ in p-type; on a log doping axis both are straight lines of 0.06 eV per decade (0.23, 0.35, 0.47, 0.53 eV at $10^{14}$ to $10^{19}$ cm$^{-3}$); $E_F$ moves towards $E_c$ with donors and $E_v$ with acceptors, reaching the band edge at degeneracy.",
+   "draws": [
+    "Graph: Fermi-Dirac function at three temperatures",
+    "Diagram: band diagrams of intrinsic, n-type and p-type Si",
+    "Graph: Fermi level against doping at 300 K"
+   ]
   },
   {
    "id": "2020-21-1(b)",
@@ -204,7 +210,15 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=15",
    "text": "How do you define a minority carrier? Why does it diffuse? What is Poisson's equation and why is it important in PN junction?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Minority carrier: the less numerous carrier ($p_{n0} = n_i^2/N_d$). It diffuses because random thermal motion in a concentration gradient gives a net flow from high to low; injected minority carriers recombine as they spread, so their current is diffusion current. Poisson: $d^2\\phi/dx^2 = -\\rho/\\epsilon_s$ links the space charge to the field and potential, giving $E_{max}$, $V_{bi}$ and $W$ of a junction.",
+   "draws": [
+    "Diagram: diffusion of carriers down a concentration gradient",
+    "Graph: charge density, field and potential of a PN junction"
+   ],
+   "compare": [
+    "Minority vs majority carriers: fewer, set by $n_i^2/N$, move by diffusion vs more, set by the doping, carry drift current"
+   ]
   },
   {
    "id": "2020-21-1(c)",
@@ -218,7 +232,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=19",
    "text": "Determine the number of quantum states(cm$^{-3}$) in silicon between $E_c$ and $E_c$+$kT$ at $T = 300$ K.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Integrate the density of states $g_c(E) = 4\\pi(2m_n^*)^{3/2}\\sqrt{E - E_c}/h^3$ from $E_c$ to $E_c + kT$: $N = \\frac{4\\pi(2m_n^*)^{3/2}}{h^3}\\cdot\\frac23(kT)^{3/2}$.",
+   "answer": "$N = 2.13\\times10^{19}$ cm$^{-3}$",
+   "draws": [
+    "Graph: density of states with the shaded strip"
+   ]
   },
   {
    "id": "2020-21-1(d)",
@@ -232,7 +251,13 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=22",
    "text": "A Si sample is doped with $N_d = 1\\times10^{15}$ cm$^{-3}$ of As atoms. Calculate the electron and hole concentrations and the position of Fermi level position (w.r.t. $E_c/E_v$) at 300 K, assuming full ionization. Justify the assumption by calculating the probability of doner *[sic: should be donor]* states being occupied by electrons and therefore not ionized (assume, $E_C - E_D = 50$ meV). Repeat the above calculations for $T = 30$ K and comment on the values and assumptions. [$N_c = 2.8\\times10^{19}$ cm$^{-3}$, for Si].",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$n_0 = N_d$, $p_0 = n_i^2/n_0$; $E_c - E_F = kT\\ln(N_c/n_0)$, $E_F - E_v = E_g - (E_c - E_F)$; fraction on donors $1/[1 + (N_c/2N_d)e^{-(E_c - E_d)/kT}]$.",
+   "answer": "$n_0 = 10^{15}$, $p_0 = 2.25\\times10^5$ cm$^{-3}$; $E_c - E_F = 0.2652$ eV, $E_F - E_v = 0.8548$ eV; 99.95 % ionized",
+   "draws": [
+    "Diagram: band diagram of the As-doped sample",
+    "Graph: ionized fraction and Fermi level against temperature"
+   ]
   },
   {
    "id": "2020-21-6(b)",
@@ -241,12 +266,19 @@
    "term_test": false,
    "topic": "equilibrium",
    "subtopic": "Ionization",
-   "type": "numerical",
+   "type": "derivation",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=97",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=99",
    "text": "Briefly explain the terms complete ionization and freeze out. Can we achieve complete ionization in room temperature? Prove your answer.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "Donor occupation with the factor $\\tfrac12$; non-degenerate: $n_d \\approx 2N_de^{-(E_d - E_F)/kT}$; $n_0 = N_ce^{-(E_c - E_F)/kT}$; the ratio cancels $E_F$; fraction $1/[1 + (N_c/2N_d)e^{-(E_c - E_d)/kT}]$; 0.4 % for P in Si at $10^{16}$ cm$^{-3}$, 300 K.",
+   "draws": [
+    "Diagram: donor states at 0 K, low temperature and 300 K",
+    "Graph: $n_0/N_d$ against temperature"
+   ],
+   "compare": [
+    "Complete ionization vs freeze-out: every donor gives its electron, $n_0 = N_d$ vs electrons fall back to donors at low $T$, $n_0 < N_d$"
+   ]
   },
   {
    "id": "2020-21-2(a)",
@@ -260,7 +292,12 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=28",
    "text": "Draw energy band diagram of a compensated semiconductor.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Both donors and acceptors in one region; donor electrons fall into the acceptor states, so donors are ionized (+) and acceptors filled (−). For $N_d > N_a$: n-type, $n_0 \\approx N_d - N_a$, $E_F$ above $E_{Fi}$; for $N_a > N_d$: p-type; for $N_a = N_d$: behaves intrinsic.",
+   "draws": [
+    "Diagram: band diagrams of a compensated semiconductor for three cases",
+    "Graph: Fermi level against acceptor concentration"
+   ]
   },
   {
    "id": "2020-21-2(b)",
@@ -274,7 +311,13 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=31",
    "text": "Derive the Einstein relation relating the mobility and diffusion constant. Also, discuss the significance of the Einstein relation.",
    "repeat_of": "",
-   "outline": "Set the current of a graded sample to zero; differentiate n; relate E_c to the field."
+   "outline": "Graded n-type sample in equilibrium: $J_n = 0$; $n = N_ce^{-(E_c - E_F)/kT}$ with $E_F$ flat; chain rule gives $dn/dx = -(n/kT)dE_c/dx$; $dE_c/dx = eE_x$; substitute: $D_n/\\mu_n = kT/e$; repeat for holes.",
+   "draws": [
+    "Diagram: graded doping profile and its equilibrium band diagram with the induced field"
+   ],
+   "compare": [
+    "Drift vs diffusion current: driven by a field, $en\\mu E$ vs driven by a gradient, $eD\\,dn/dx$; linked by $D/\\mu = kT/e$"
+   ]
   },
   {
    "id": "2020-21-2(c)",
@@ -285,10 +328,14 @@
    "subtopic": "Depletion width",
    "type": "derivation",
    "marks": 0.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=34",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=35",
    "text": "Using the expression for $V_{bi}$, find the width of the depletion region.\\",
    "repeat_of": "",
-   "outline": "Integrate Poisson's equation for the field and potential; use charge balance; add the edges."
+   "outline": "Charge density $-eN_a$, $+eN_d$; integrate Poisson once with $E = 0$ at both edges; continuity gives $N_ax_p = N_dx_n$; integrate again for the potential; $V_{bi} = \\phi(x_n)$; substitute $x_p = N_dx_n/N_a$; solve for $x_n$, $x_p$; add for $W$.",
+   "draws": [
+    "Diagram: PN junction with its space charge region",
+    "Graph: charge density, field and potential across an abrupt junction"
+   ]
   },
   {
    "id": "2020-21-6(d)",
@@ -299,10 +346,15 @@
    "subtopic": "Depletion width",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=104",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=107",
    "text": "A silicon PN junction at $T = 300$ K with zero applied bias has doping concentration of $N_d = 5\\times10^{16}$ cm$^{-3}$ and $N_a = 5\\times10^{15}$ cm$^{-3}$. Determine built-in potential, space charge width and electric field at metallurgical region ($\\epsilon_t = 11.7$ *[sic: should be $\\epsilon_r = 11.7$]*)",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$V_{bi} = V_t\\ln(N_aN_d/n_i^2)$; $W = \\{(2\\epsilon_sV_{bi}/e)[(N_a + N_d)/(N_aN_d)]\\}^{1/2}$; $x_n = WN_a/(N_a + N_d)$; $E_{max} = -eN_dx_n/\\epsilon_s$.",
+   "answer": "$V_{bi} = 0.718$ V; $W = 0.452$ μm; $E_{max} = -3.18\\times10^4$ V/cm",
+   "draws": [
+    "Graph: charge density, field and potential across the junction"
+   ]
   },
   {
    "id": "2020-21-2(d)",
@@ -313,10 +365,15 @@
    "subtopic": "Fermi probability",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=38",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=40",
    "text": "Answer the following questions on Fermi level: (i) At what energy level above Fermi level (in unit of $kT$) the probability of finding an electron is 10% ? (ii) Find the electron concentration($n_0$) for Si at room temperature if Fermi level is 0.5 eV below the conduction band. (at room temperature, $N_c = 2.8\\times10^{19}$ cm$^{-3}$).",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "(i) Set $f_F = 1/[1 + e^{(E - E_F)/kT}] = 0.1$ and solve: $E - E_F = kT\\ln 9$. (ii) $n_0 = N_c\\exp[-(E_c - E_F)/kT]$.",
+   "answer": "(i) $2.2\\,kT$ (0.0569 eV); (ii) $1.16\\times10^{11}$ cm$^{-3}$",
+   "draws": [
+    "Graph: Fermi-Dirac function with the 10 % point"
+   ]
   },
   {
    "id": "2020-21-3(a)",
@@ -327,10 +384,13 @@
    "subtopic": "Carrier concentrations",
    "type": "derivation",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=43",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=44",
    "text": "Starting from charge neutrality condition $n_0 + N_a^- = p_0 + N_d^+$, derive the expressions for $n_0$ and $p_0$ in terms of $N_a$, $N_d$, and $n_i$.",
    "repeat_of": "",
-   "outline": "Substitute the mass action law; solve the quadratic; keep the positive root."
+   "outline": "Neutrality $n_0 + N_a = p_0 + N_d$ (complete ionization); put $p_0 = n_i^2/n_0$; multiply by $n_0$: quadratic; quadratic formula; keep the positive root; for $p_0$ put $n_0 = n_i^2/p_0$ instead.",
+   "draws": [
+    "Diagram: charge balance in a compensated semiconductor"
+   ]
   },
   {
    "id": "2020-21-3(b)",
@@ -341,10 +401,15 @@
    "subtopic": "Band diagram",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=46",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=48",
    "text": "Sketch Energy-band diagram of a PN junction in thermal equilibrium and show P region, N region, $E_C$, $E_V$, $E_F$, $E_{Fi}$, $e\\phi_{Fn}$, $e\\phi_{Fp}$ and $eV_{bi}$.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "$E_F$ flat through the device; on the P side $E_F$ is $e\\phi_{Fp} = kT\\ln(N_a/n_i)$ below $E_{Fi}$, on the N side $e|\\phi_{Fn}| = kT\\ln(N_d/n_i)$ above it; the bands are higher on the P side by $eV_{bi}$ and bend only inside the space charge region; $V_{bi} = |\\phi_{Fp}| + |\\phi_{Fn}|$.",
+   "draws": [
+    "Diagram: p and n band diagrams before contact",
+    "Diagram: equilibrium band diagram of a PN junction with all labels"
+   ]
   },
   {
    "id": "2020-21-3(c)",
@@ -355,10 +420,18 @@
    "subtopic": "Mobility",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=49",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=51",
    "text": "Define drift mobility. Explain the mechanism of carrier scattering in semiconductor materials and significance of $\\tau$.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Drift mobility $\\mu = |v_d|/E = e\\tau/m^*$. Scattering by lattice vibrations ($\\mu_L \\propto T^{-3/2}$) and ionized impurities ($\\mu_I \\propto T^{3/2}/N_I$), combined by $1/\\mu = 1/\\mu_L + 1/\\mu_I$. The mean free time $\\tau$ (about $10^{-13}$ s) sets the mobility and so the conductivity.",
+   "draws": [
+    "Diagram: electron path with and without a field",
+    "Diagram: lattice and ionized impurity scattering"
+   ],
+   "compare": [
+    "Lattice vs ionized impurity scattering: grows with temperature, $\\mu_L \\propto T^{-3/2}$ vs weakens with temperature, $\\mu_I \\propto T^{3/2}/N_I$"
+   ]
   },
   {
    "id": "2020-21-4(a)",
@@ -369,10 +442,14 @@
    "subtopic": "Mobility",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=59",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=61",
    "text": "Explain the effects of temperature on carrier mobility inside a semiconductor.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Lattice scattering grows with $T$, so $\\mu_L \\propto T^{-3/2}$ falls; impurity scattering weakens as carriers get faster, so $\\mu_I \\propto T^{3/2}/N_I$ rises; by Matthiessen's rule impurity scattering dominates at low $T$ (mobility rises), lattice at high $T$ (mobility falls); heavier doping lowers the curve.",
+   "draws": [
+    "Graph: mobility against temperature, log-log"
+   ]
   },
   {
    "id": "2020-21-3(d)",
@@ -383,10 +460,16 @@
    "subtopic": "Steady state",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=53",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=54",
    "text": "For the following questions: (i) Solve the ambipolar transport equation for a semiconductor with $N_a = 5\\times10^{16}$ cm$^{-3}$ for $x > 0$ at steady state with zero electric field where excess charges are created only at $x = 0$. ($\\delta n_0 = 5\\times10^{15}$ cm$^{-3}$). (ii) Find the distance where the excess charge will drop to $10\\times10^{13}$ cm$^{-3}$. (Assume $\\tau_{n0} = 7\\times10^{-7}$ s, $\\tau_{p0} = 5\\times10^{-7}$ s, $D_n = 30$ cm$^2$ s$^{-1}$, $D_p = 25$ cm$^2$ s$^{-1}$) (iii) Plot n and p as function of x in log scale.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "Low injection in p-type: ambipolar equation becomes $D_n\\,\\delta n'' - \\delta n/\\tau_{n0} = 0$; solution decaying for $x > 0$: $\\delta n = \\delta n_0e^{-x/L_n}$, $L_n = \\sqrt{D_n\\tau_{n0}}$; solve $\\delta n(x) = 10^{14}$ for $x$.",
+   "answer": "$\\delta n = 5\\times10^{15}e^{-x/L_n}$, $L_n = 45.8$ μm; $10^{14}$ cm$^{-3}$ at 179.3 μm",
+   "draws": [
+    "Graph: excess electrons decaying into the bar",
+    "Graph: total electron and hole concentrations on a log scale"
+   ]
   },
   {
    "id": "2020-21-4(b)",
@@ -397,10 +480,19 @@
    "subtopic": "Band diagrams",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=62",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=64",
    "text": "Draw the energy band diagram of a Metal-Oxide-Semiconductor structure for the three modes of operation of MOSFET and thus explain how the channel is formed.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "MOS on p-type Si. Accumulation ($V_G < 0$): bands bend up, holes gather at the surface. Depletion ($0 < V_G < V_T$): bands bend down, acceptor ions uncovered over $x_d$. Inversion ($V_G > V_T$): $E_{Fi}$ at the surface falls below $E_F$, electrons form an n-type channel, $\\phi_s = 2\\phi_{fp}$ at threshold.",
+   "draws": [
+    "Diagram: MOS capacitor and n-channel MOSFET cross sections",
+    "Diagram: charges in accumulation, depletion and inversion",
+    "Diagram: band diagrams in the three modes"
+   ],
+   "compare": [
+    "Accumulation vs depletion vs inversion: majority carriers gather vs carriers pushed away, ions uncovered vs minority carriers form a channel"
+   ]
   },
   {
    "id": "2020-21-4(c)",
@@ -411,10 +503,15 @@
    "subtopic": "Operating modes",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=67",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=69",
    "text": "Show the four operating modes of a bipolar transistor as a function of $V_{BE}$ and $V_{CB}$. Draw the minority carrier distribution of the four modes of a NPN transistor with proper labelling of all the quantities.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Forward active ($V_{BE} > 0$, $V_{CB} > 0$), saturation (both junctions forward), cutoff (both reverse), inverse active; a forward junction raises the minority edge value by $e^{V/V_t}$, a reverse one takes it to 0; draw the base, emitter and collector minority profiles for each mode with the edge values.",
+   "draws": [
+    "Diagram: NPN structure and the four modes on the $V_{BE}$–$V_{CB}$ plane",
+    "Graph: minority carrier distributions in the four modes"
+   ]
   },
   {
    "id": "2020-21-4(d)",
@@ -425,10 +522,16 @@
    "subtopic": "Biased junction",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=71",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=73",
    "text": "Consider a PN junction at room temperature with $n_i = 1.5\\times10^{10}$ cm$^{-3}$, assume doping in N side is $1\\times10^{6}$ cm$^{-3}$ *[sic: should be $1\\times10^{16}$ cm$^{-3}$]*. What will be the minority carrier hole concentrations at the edge in N side if forward bias and reverse bias of 0.7 V is applied? Do the same for majority carrier electron concentration in N side.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$p_{n0} = n_i^2/N_d$; law of the junction $p_n(x_n) = p_{n0}e^{eV_a/kT}$ with $V_a = +0.7$ and $-0.7$ V; $n_n = N_d + \\delta p$ (neutrality); check low injection.",
+   "answer": "$p_{n0} = 2.25\\times10^4$; forward: $p_n = 1.23\\times10^{16}$, $n_n = 2.23\\times10^{16}$ cm$^{-3}$ (low injection violated); reverse: $p_n \\approx 0$, $n_n \\approx 10^{16}$ cm$^{-3}$",
+   "draws": [
+    "Diagram: band diagrams under forward and reverse bias",
+    "Graph: hole and electron concentrations on the n side"
+   ]
   },
   {
    "id": "2020-21-5(a)",
@@ -439,10 +542,15 @@
    "subtopic": "Carrier pulse",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=77",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=79",
    "text": "Write the ambipolar equation for $g' = 0$ for n type semiconductor with constant electric field $E_0$. At time $t = 0$, a number of electron-hole pair is generated at $x = 0$. Sketch excess electron concentration as a function of distance at different time.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "For n-type at low injection the ambipolar equation uses $D_p$, $\\mu_p$, $\\tau_{p0}$: $D_p\\,\\partial^2\\delta p/\\partial x^2 - \\mu_pE_0\\,\\partial\\delta p/\\partial x - \\delta p/\\tau_{p0} = \\partial\\delta p/\\partial t$. A pulse at $x = 0$ becomes a Gaussian that spreads, shrinks by recombination and drifts in the direction of $E_0$ at $\\mu_pE_0$.",
+   "draws": [
+    "Diagram: excess electrons and holes held together by their field",
+    "Graph: excess carrier pulse at three times, with and without a field"
+   ]
   },
   {
    "id": "2020-21-5(b)",
@@ -453,10 +561,15 @@
    "subtopic": "Minority distribution",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=81",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=83",
    "text": "For NPN transistor, plot minority carrier concentration in base, emitter, and collector as a function of space. What are the minority carrier concentrations at the boundaries of base, emitter, and collector?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Forward active: base electrons fall almost linearly from $n_{B0}e^{V_{BE}/V_t}$ at the emitter edge to about 0 at the collector edge; emitter holes fall from $p_{E0}e^{V_{BE}/V_t}$ to $p_{E0}$; collector holes rise from about 0 to $p_{C0}$.",
+   "draws": [
+    "Diagram: NPN in forward-active mode with depletion layers",
+    "Graph: minority carrier concentrations in emitter, base and collector"
+   ]
   },
   {
    "id": "2020-21-5(c)",
@@ -467,10 +580,16 @@
    "subtopic": "Operation",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=83",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=85",
    "text": "Explain the working principle of Tunnel diode. Draw its characteristics curve.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Both sides degenerately doped, so $E_F$ lies inside the bands and the depletion layer is only 5 to 17 nm thick; electrons tunnel where filled states face empty ones; the current rises to a peak $I_p$, falls to a valley $I_v$ (negative resistance), then rises as normal diode current; reverse bias tunnels freely.",
+   "draws": [
+    "Diagram: electron wave at a thick and a thin barrier",
+    "Diagram: tunnel diode band diagrams at several biases",
+    "Graph: tunnel diode I-V curve"
+   ]
   },
   {
    "id": "2020-21-5(d)",
@@ -479,12 +598,18 @@
    "term_test": false,
    "topic": "transport",
    "subtopic": "Hall effect",
-   "type": "theory",
+   "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=87",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=89",
    "text": "Current is flowing through an extrinsic semiconductor placed in a magnetic field as shown in Fig. 1. (i) What is the Hall voltage? (ii) What is type of carrier? (iii) What is the carrier concentration? (iv) What is the mobility?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "method": "$V_H = V_y$ from the figure; its sign gives the carrier type; $n = -I_xB_z/(edV_H)$ with $d$ the thickness along $z$; $\\mu_n = I_xL/(enV_xWd)$.",
+   "answer": "$V_H = -6.25$ mV; n-type (electrons); $n = 1.0\\times10^{16}$ cm$^{-3}$; $\\mu_n = 833$ cm$^2$/V s",
+   "draws": [
+    "Diagram: Hall bar with the force balance",
+    "Diagram: carriers piling up in p-type and n-type bars"
+   ]
   },
   {
    "id": "2020-21-6(a)",
@@ -495,10 +620,18 @@
    "subtopic": "Double gate",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=93",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=95",
    "text": "Draw the schematic of a double-gate MOS structure. What are the benefits of such structure over single-gate MOS?",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "A thin (undoped) silicon body between two thin gate oxides with a gate on each side, n$^+$ source and drain (FinFET is its practical form). Benefits: better gate control of the channel, much smaller short-channel effects (DIBL, $V_T$ roll-off), near-ideal subthreshold swing, low leakage, more drive current, no doping fluctuation.",
+   "draws": [
+    "Diagram: single-gate, planar double-gate and FinFET schematics",
+    "Graph: subthreshold current of single and double gate"
+   ],
+   "compare": [
+    "Single-gate vs double-gate MOSFET: gate controls one surface, short-channel effects vs gate on both sides, better control, near-ideal swing"
+   ]
   },
   {
    "id": "2020-21-6(c)",
@@ -509,10 +642,15 @@
    "subtopic": "Inversion",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=100",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=103",
    "text": "Explain production of inverse layer at oxide and semiconductor layer with proper sketches of energy band diagram.",
    "repeat_of": "",
-   "outline": ""
+   "outline": "",
+   "points": "Positive gate voltage on a p-type body repels holes and bends the bands down by $e\\phi_s$: depletion for $\\phi_s < \\phi_{fp}$, intrinsic surface at $\\phi_s = \\phi_{fp}$, n-type inversion layer once $E_{Fi}$ falls below $E_F$; threshold at $\\phi_s = 2\\phi_{fp}$ ($n_s = N_a$), depletion width at its maximum $x_{dT}$.",
+   "draws": [
+    "Diagram: band diagrams of a p-type MOS structure from depletion to inversion",
+    "Diagram: charge distribution at threshold inversion"
+   ]
   }
  ],
  "formulas": [
@@ -524,7 +662,7 @@
    "used": [
     {
      "label": "20-21 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=38"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=40"
     }
    ]
   },
@@ -644,7 +782,7 @@
    "used": [
     {
      "label": "20-21 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=43"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=44"
     }
    ]
   },
@@ -656,7 +794,7 @@
    "used": [
     {
      "label": "20-21 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=43"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=44"
     }
    ]
   },
@@ -668,7 +806,7 @@
    "used": [
     {
      "label": "20-21 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=43"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=44"
     }
    ]
   },
@@ -696,7 +834,7 @@
     },
     {
      "label": "20-21 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=97"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=99"
     }
    ]
   },
@@ -720,7 +858,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=51"
     }
    ]
   },
@@ -732,7 +870,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=51"
     }
    ]
   },
@@ -744,7 +882,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=51"
     }
    ]
   },
@@ -756,7 +894,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=59"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=61"
     }
    ]
   },
@@ -780,7 +918,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=87"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=89"
     }
    ]
   },
@@ -792,7 +930,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=87"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=89"
     }
    ]
   },
@@ -804,7 +942,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=87"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=89"
     }
    ]
   },
@@ -840,7 +978,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=53"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=54"
     }
    ]
   },
@@ -852,7 +990,7 @@
    "used": [
     {
      "label": "20-21 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=77"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=79"
     }
    ]
   },
@@ -864,7 +1002,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=53"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=54"
     }
    ]
   },
@@ -876,7 +1014,7 @@
    "used": [
     {
      "label": "20-21 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=77"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=79"
     }
    ]
   },
@@ -888,7 +1026,7 @@
    "used": [
     {
      "label": "20-21 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=46"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=48"
     }
    ]
   },
@@ -900,11 +1038,11 @@
    "used": [
     {
      "label": "20-21 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=46"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=48"
     },
     {
      "label": "20-21 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=104"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=107"
     }
    ]
   },
@@ -916,7 +1054,7 @@
    "used": [
     {
      "label": "20-21 2(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=35"
     }
    ]
   },
@@ -928,7 +1066,7 @@
    "used": [
     {
      "label": "20-21 2(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=35"
     }
    ]
   },
@@ -940,7 +1078,7 @@
    "used": [
     {
      "label": "20-21 2(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=35"
     }
    ]
   },
@@ -952,7 +1090,7 @@
    "used": [
     {
      "label": "20-21 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=104"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=107"
     }
    ]
   },
@@ -964,7 +1102,7 @@
    "used": [
     {
      "label": "20-21 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=71"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=73"
     }
    ]
   },
@@ -976,7 +1114,7 @@
    "used": [
     {
      "label": "20-21 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=71"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=73"
     }
    ]
   },
@@ -988,7 +1126,7 @@
    "used": [
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=62"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=64"
     }
    ]
   },
@@ -1000,7 +1138,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=100"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=103"
     }
    ]
   },
@@ -1012,7 +1150,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=100"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=103"
     }
    ]
   },
@@ -1024,7 +1162,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=69"
     }
    ]
   },
@@ -1036,7 +1174,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=81"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=83"
     }
    ]
   },
@@ -1048,7 +1186,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=81"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=83"
     }
    ]
   },
@@ -1060,7 +1198,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2020-21-pack.pdf#page=69"
     }
    ]
   }
