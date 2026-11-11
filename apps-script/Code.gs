@@ -186,9 +186,9 @@ function syncReportForm_(cat, st) {
 /** The report form's wording (the user's choice, 2026-11-11): set by updateReportFormText. */
 const REPORT_TEXT = {
   title: 'Found a mistake? — Study Notes',
-  description: 'কোনো ভুল বা অস্পষ্ট কিছু চোখে পড়লে অনুগ্রহ করে এখানে জানান। আপনার প্রতিটি মতামত সমাধানগুলোকে আরও ভালো করতে সাহায্য করে, তাই আন্তরিক ধন্যবাদ!\n\n' +
-    'Spotted a mistake or something unclear? Please let us know here. Thank you for helping make the solutions better!\n\n' +
-    'স্ক্রিনশট থাকলে অনুগ্রহ করে WhatsApp-এ পাঠিয়ে দিন এবং নিচের ঘরে লিখে দিন "screenshot sent"।\nWhatsApp: 01352679856',
+  description: 'কোনো ভুল বা অস্পষ্ট কিছু চোখে পড়লে অনুগ্রহ করে এখানে জানান। আপনার প্রতিটি মতামত সমাধানগুলোকে আরও ভালো করতে সাহায্য করে।\n\n' +
+    'স্ক্রিনশট থাকলে অনুগ্রহ করে WhatsApp-এ পাঠিয়ে দিন এবং নিচের ঘরে লিখে দিন "screenshot sent"।\nWhatsApp: 01352679856\n\n' +
+    'সাহায্য করার জন্য আন্তরিক ধন্যবাদ!',
   screenshot: 'WhatsApp-এ স্ক্রিনশট পাঠিয়ে থাকলে লিখুন: screenshot sent',
 };
 
