@@ -537,8 +537,8 @@
       "pages": 64,
       "file": "EEE475-RF/RF-2018-19-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00",
-      "source": "2087e095b5b585b7"
+      "updated": "2026-11-11T23:26+06:00",
+      "source": "442b50b07a291e14"
     },
     {
       "id": "EEE475-2018-19-question-paper",
@@ -549,8 +549,8 @@
       "pages": 3,
       "file": "EEE475-RF/RF-2018-19-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00",
-      "source": "b5e9ae3d89f31cf6"
+      "updated": "2026-11-11T23:26+06:00",
+      "source": "94ba4429602660e8"
     },
     {
       "id": "EEE475-2019-20-pack",
@@ -561,8 +561,8 @@
       "pages": 74,
       "file": "EEE475-RF/RF-2019-20-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00",
-      "source": "d7a6009ad4d1eb32"
+      "updated": "2026-11-11T23:26+06:00",
+      "source": "dfdbe76aaeb8ac40"
     },
     {
       "id": "EEE475-2019-20-question-paper",
@@ -573,8 +573,8 @@
       "pages": 2,
       "file": "EEE475-RF/RF-2019-20-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00",
-      "source": "94db585c23fe2856"
+      "updated": "2026-11-11T23:26+06:00",
+      "source": "c99c05f561014255"
     },
     {
       "id": "EEE475-2020-21-pack",
@@ -585,8 +585,8 @@
       "pages": 80,
       "file": "EEE475-RF/RF-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00",
-      "source": "718c3aa3f1d9bac6"
+      "updated": "2026-11-11T23:26+06:00",
+      "source": "fe3d077eacdb3154"
     },
     {
       "id": "EEE475-2020-21-pack-bn",
@@ -597,8 +597,8 @@
       "pages": 80,
       "file": "EEE475-RF/RF-2020-21-pack-Bangla.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00",
-      "source": "a6c9f6995bef4261"
+      "updated": "2026-11-11T23:26+06:00",
+      "source": "f76f2f0bf226e072"
     },
     {
       "id": "EEE475-2020-21-question-paper",
@@ -609,8 +609,8 @@
       "pages": 3,
       "file": "EEE475-RF/RF-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00",
-      "source": "b5170997fa7cfe74"
+      "updated": "2026-11-11T23:26+06:00",
+      "source": "d8dcd7326c84d36c"
     },
     {
       "id": "EEE329-question-analysis",
@@ -709,12 +709,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 26,
+      "pages": 34,
       "file": "EEE475-RF/RF-question-analysis.pdf",
       "page": "analysis.html?subject=EEE475",
       "printable": true,
-      "updated": "2026-10-31T16:43:32+06:00",
-      "source": "73a5f9a35b17b72e"
+      "updated": "2026-11-11T23:26+06:00",
+      "source": "ca475ca160ab9a49"
     }
   ]
 }
