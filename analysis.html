@@ -102,6 +102,7 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
   <section class="filters" id="filters" hidden aria-label="Filters">
     <div class="frow"><input type="search" id="q" placeholder="Search the questions" aria-label="Search the questions">
       <select id="topic" aria-label="Topic"></select>
+      <select id="group" aria-label="List" hidden></select>
       <label class="check"><input type="checkbox" id="todo"> Not done only</label></div>
     <div class="frow" id="papers"><span class="name">Paper</span></div>
     <div class="frow" id="types"><span class="name">Type</span></div>
@@ -125,7 +126,7 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
     read() { try { return new Set(JSON.parse(localStorage.getItem(this.key) || '[]')); } catch (e) { return new Set(); } },
     write(set) { try { localStorage.setItem(this.key, JSON.stringify([...set])); } catch (e) { /* private window */ } }
   };
-  const state = { q: '', topic: '', todo: false, paper: 'all', type: 'all', marks: 'all', rep: 'all' };
+  const state = { q: '', topic: '', todo: false, paper: 'all', type: 'all', marks: 'all', rep: 'all', group: '' };
   const bands = { all: 'All', small: 'Up to 5', mid: '6 to 9', big: '10 and more' };
   const inBand = (m, b) => b === 'all' || (b === 'small' && m <= 5) || (b === 'mid' && m > 5 && m < 10) || (b === 'big' && m >= 10);
   let D = null, done = store.read();
@@ -155,7 +156,8 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
   }
   function shown(q) {
     return (!state.topic || q.topic === state.topic) && (state.paper === 'all' || q.session === state.paper) &&
-      (state.type === 'all' || q.type === state.type) && inBand(q.marks, state.marks) && (state.rep === 'all' || (q.times || 1) > 1) && (!state.todo || !done.has(q.id)) &&
+      (state.type === 'all' || q.type === state.type) && inBand(q.marks, state.marks) && (state.rep === 'all' || (q.times || 1) > 1) &&
+      (!state.group || (q.list || []).some(v => v.split(' / ')[0] === state.group)) && (!state.todo || !done.has(q.id)) &&
       (!state.q || words(q).includes(state.q));
   }
   function extra(q) {          // the study fields of the tags: points, outline or recipe, method, answer (hidden), drawings, comparisons, drills
@@ -163,10 +165,11 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
     const list = v => (v || []).join('; ');
     return line('Points', q.points) + line(q.type === 'design' ? 'Recipe' : 'Outline', q.outline) + line('Method', q.method) +
       (q.answer ? '<details class="ans"><summary>Show answer</summary><div class="outline">' + tex(q.answer) + '</div></details>' : '') +
-      line('Draw', list(q.draws)) + line('Compare', list(q.compare)) + line('Drill', list(q.drill));
+      line('Draw', list(q.draws)) + line('Compare', list(q.compare)) + line('Drill', list(q.drill)) +
+      (D.list ? line(D.list.title.replace(/ list$/, ''), list(q.list)) : '');
   }
   function words(q) {
-    return [q.text, q.subtopic, q.outline, q.label, q.points, q.method, q.answer, list(q.draws), list(q.compare), list(q.drill)].join(' ').toLowerCase();
+    return [q.text, q.subtopic, q.outline, q.label, q.points, q.method, q.answer, list(q.draws), list(q.compare), list(q.drill), list(q.list)].join(' ').toLowerCase();
     function list(v) { return (v || []).join(' '); }
   }
   function counter() {
@@ -227,6 +230,14 @@ button.link { background: none; border: 0; color: var(--accent); font: inherit; 
     }
     $('topic').innerHTML = '<option value="">All topics</option>' + D.topics.map(t => '<option value="' + esc(t.id) + '">' + esc(t.title) + '</option>').join('');
     $('topic').addEventListener('change', e => { state.topic = e.target.value; draw(); });
+    if (D.list) {
+      const g = $('group');
+      g.innerHTML = '<option value="">' + esc(D.list.title) + ': all</option>' + D.list.groups
+        .filter(x => D.questions.some(q => (q.list || []).some(v => v.split(' / ')[0] === x)))
+        .map(x => '<option value="' + esc(x) + '">' + esc(x) + '</option>').join('');
+      g.hidden = false;
+      g.addEventListener('change', e => { state.group = e.target.value; draw(); });
+    }
     $('q').addEventListener('input', e => { state.q = e.target.value.trim().toLowerCase(); draw(); });
     $('todo').addEventListener('change', e => { state.todo = e.target.checked; draw(); });
     $('list').addEventListener('change', e => {

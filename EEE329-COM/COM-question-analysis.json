@@ -7,6 +7,25 @@
   "2020-21",
   "2019-20"
  ],
+ "list": {
+  "title": "Modulation list",
+  "groups": [
+   "AM",
+   "DSB-SC",
+   "SSB",
+   "VSB",
+   "FM and PM",
+   "Sampling",
+   "PCM",
+   "Delta modulation",
+   "Line coding",
+   "ASK",
+   "FSK",
+   "PSK",
+   "DPSK",
+   "QAM"
+  ]
+ },
  "topics": [
   {
    "id": "signals",
@@ -459,6 +478,9 @@
    "draws": [
     "Circuit: ring modulator",
     "Waveform: message, switching wave and output"
+   ],
+   "list": [
+    "DSB-SC / Generation: switching (ring) modulator"
    ]
   },
   {
@@ -478,6 +500,10 @@
    "outline": "Multiply DSB-SC and SSB by a carrier with frequency and phase error; low-pass filter; read attenuation, beating, phase and frequency shift.",
    "compare": [
     "Phase error vs frequency error: output scaled by $\\cos\\delta$, null at 90° vs output beats as $\\cos\\Delta\\omega t$"
+   ],
+   "list": [
+    "DSB-SC / Detection: coherent detection with phase and frequency error",
+    "SSB / Detection: coherent detection with phase and frequency error"
    ]
   },
   {
@@ -505,6 +531,9 @@
    ],
    "compare": [
     "Phase error vs frequency error: output scaled by $\\cos\\delta$, null at 90° vs output beats as $\\cos\\Delta\\omega t$"
+   ],
+   "list": [
+    "DSB-SC / Detection: coherent detection with phase and frequency error"
    ]
   },
   {
@@ -525,6 +554,9 @@
    "points": "The I branch multiplies by $\\cos$, the Q branch by $\\sin$ from a VCO; the LPF outputs are $\\tfrac12m\\cos\\theta$ and $\\tfrac12m\\sin\\theta$; their product $\\tfrac18m^2\\sin2\\theta$, through a narrow LPF, steers the VCO to $\\theta = 0$; the I output is the message.",
    "draws": [
     "Block diagram: Costas receiver"
+   ],
+   "list": [
+    "DSB-SC / Detection: Costas receiver"
    ]
   },
   {
@@ -545,6 +577,9 @@
    "points": "Quadrature null: the coherent output $\\tfrac12m\\cos\\theta$ vanishes at $\\theta = 90°$. Costas: I and Q branches; their product $\\tfrac18m^2\\sin2\\theta$ steers the VCO to $\\theta = 0$, so the carrier stays locked.",
    "draws": [
     "Block diagram: Costas receiver"
+   ],
+   "list": [
+    "DSB-SC / Detection: Costas receiver"
    ]
   },
   {
@@ -565,6 +600,9 @@
    "points": "The product modulator shifts $M(f)$ to $\\pm f_c$; the coherent detector shifts it back and the LPF keeps $(A_c/2)M(f)$; if $f_c < W$ the shifted copies overlap near baseband and the output is distorted; so $f_c \\ge W$.",
    "draws": [
     "Spectrum: modulated and detected spectra for the two carrier frequencies"
+   ],
+   "list": [
+    "DSB-SC / Detection: coherent detection and the lowest carrier"
    ]
   },
   {
@@ -588,6 +626,10 @@
    ],
    "drill": [
     "DSB-WC and SSB-SC spectra: the triangular spectrum of Figure-1"
+   ],
+   "list": [
+    "AM / Spectrum and bandwidth: spectrum of a given message",
+    "SSB / Spectrum and bandwidth: spectrum of a given message"
    ]
   },
   {
@@ -611,6 +653,9 @@
    "outline": "Multiply by a carrier with frequency and phase error; low-pass filter; read the cos factor.",
    "compare": [
     "Phase error vs frequency error: output scaled by $\\cos\\delta$, null at 90° vs output beats as $\\cos\\Delta\\omega t$"
+   ],
+   "list": [
+    "DSB-SC / Detection: coherent detection with phase and frequency error"
    ]
   },
   {
@@ -632,6 +677,10 @@
    "answer": "(i) 1 at 100 kHz, 0.5 at 99.94 and 100.06 kHz; (ii) 1 at 100 kHz, −0.5 at 99.9 and 100.1 kHz; (iii) 0.75 at 99.363, 99.682, 100.318, 100.637 kHz",
    "draws": [
     "Spectrum: DSB-SC lines for the three messages"
+   ],
+   "list": [
+    "AM / Spectrum and bandwidth: line spectrum of tone messages",
+    "DSB-SC / Spectrum and bandwidth: line spectrum of tone messages"
    ]
   },
   {
@@ -658,6 +707,9 @@
    ],
    "compare": [
     "Phase error vs frequency error: output scaled by $\\cos\\delta$, null at 90° vs output beats as $\\cos\\Delta\\omega t$"
+   ],
+   "list": [
+    "DSB-SC / Detection: coherent detection with phase and frequency error"
    ]
   },
   {
@@ -940,7 +992,10 @@
    "asked_in": [],
    "outline": "",
    "method": "Carrier swing $2\\Delta f$; highest and lowest $f_c \\pm \\Delta f$; $\\beta = \\Delta f/f_m$.",
-   "answer": "80 kHz; 93.16 to 93.24 MHz; $\\beta = 8$"
+   "answer": "80 kHz; 93.16 to 93.24 MHz; $\\beta = 8$",
+   "list": [
+    "FM and PM / Index and power: deviation, carrier swing and modulation index"
+   ]
   },
   {
    "id": "2020-21-2(d)",
@@ -958,7 +1013,10 @@
    "asked_in": [],
    "outline": "",
    "method": "$k_f = \\Delta f/V_m$; new $\\Delta f = k_fV_m$; $\\beta = \\Delta f/f_m$.",
-   "answer": "$\\Delta f = 5$, 15, 20 kHz; $\\beta = 10$, 30, 80"
+   "answer": "$\\Delta f = 5$, 15, 20 kHz; $\\beta = 10$, 30, 80",
+   "list": [
+    "FM and PM / Index and power: deviation, carrier swing and modulation index"
+   ]
   },
   {
    "id": "2019-20-2(b)",
@@ -976,7 +1034,10 @@
    "asked_in": [],
    "outline": "",
    "method": "Power $A^2/2$; instantaneous frequency from the derivative of the angle, adding the peak terms; $\\beta = \\Delta f/f_m$ with the highest $f_m$; Carson.",
-   "answer": "$P = 72$ W, $\\Delta f = 11.5$ kHz, $\\beta \\approx 7.67$, $B_T \\approx 26$ kHz"
+   "answer": "$P = 72$ W, $\\Delta f = 11.5$ kHz, $\\beta \\approx 7.67$, $B_T \\approx 26$ kHz",
+   "list": [
+    "FM and PM / Index and power: power, deviation and modulation index"
+   ]
   },
   {
    "id": "2019-20-4(a)",
@@ -994,7 +1055,10 @@
    "asked_in": [],
    "outline": "",
    "method": "$k_f = \\Delta f/V_m$; new $\\Delta f = k_fV_m$; $\\beta = \\Delta f/f_m$.",
-   "answer": "$\\beta = 12.5$; (i) 15 kHz, 37.5; (ii) 20 kHz, 100"
+   "answer": "$\\beta = 12.5$; (i) 15 kHz, 37.5; (ii) 20 kHz, 100",
+   "list": [
+    "FM and PM / Index and power: deviation, carrier swing and modulation index"
+   ]
   },
   {
    "id": "2022-23-7(d)",
@@ -1014,6 +1078,11 @@
    "points": "AM: carrier and two sidebands, $2B$, envelope detector, at most 33 % efficient. DSB-SC: $2B$, coherent detector, 100 %. SSB-SC: $B$, coherent detector, 100 %, hardest to generate.",
    "compare": [
     "AM vs DSB-SC vs SSB-SC: $2B$, envelope detector, at most 33 % vs $2B$, coherent, 100 % vs $B$, coherent, hardest modulator"
+   ],
+   "list": [
+    "AM / Comparison: AM vs DSB-SC vs SSB-SC",
+    "DSB-SC / Comparison: AM vs DSB-SC vs SSB-SC",
+    "SSB / Comparison: AM vs DSB-SC vs SSB-SC"
    ]
   },
   {
@@ -1037,6 +1106,9 @@
    ],
    "compare": [
     "Weaver vs phase-shift SSB: two quadrature stages at fixed frequencies, no wideband shifter vs one wideband −90° shifter"
+   ],
+   "list": [
+    "SSB / Generation: Weaver's method"
    ]
   },
   {
@@ -1053,7 +1125,10 @@
    "repeat_of": "",
    "times": 1,
    "asked_in": [],
-   "outline": "Add a large carrier to SSB; write the envelope; expand the square root for a large carrier."
+   "outline": "Add a large carrier to SSB; write the envelope; expand the square root for a large carrier.",
+   "list": [
+    "SSB / Detection: envelope detection with a strong carrier"
+   ]
   },
   {
    "id": "2019-20-2(d)",
@@ -1076,6 +1151,9 @@
    ],
    "compare": [
     "SSB by filtering vs SSB by phase shift: needs a gap at dc and a sharp filter vs needs a wideband −90° shifter"
+   ],
+   "list": [
+    "SSB / Generation: selective filtering"
    ]
   },
   {
@@ -1095,6 +1173,9 @@
    "outline": "Two branches $m\\cos\\omega_ct$ and $m_h\\sin\\omega_ct$; tone case with product identities; subtract or add to cancel a sideband.",
    "draws": [
     "Block diagram: phase-shift SSB modulator"
+   ],
+   "list": [
+    "SSB / Generation: phase-shift method"
    ]
   },
   {
@@ -1118,6 +1199,9 @@
    ],
    "compare": [
     "Message amplitude vs frequency in FM: sets $\\Delta f$ and the bandwidth vs sets the line spacing and $\\beta$ only"
+   ],
+   "list": [
+    "FM and PM / Spectrum and bandwidth: effect of message amplitude and frequency"
    ]
   },
   {
@@ -1143,6 +1227,9 @@
    ],
    "compare": [
     "Frequency multiplier vs mixer: multiplies both $f_c$ and $\\Delta f$ vs moves $f_c$, keeps $\\Delta f$"
+   ],
+   "list": [
+    "FM and PM / Generation: Armstrong indirect modulator (design)"
    ]
   },
   {
@@ -1168,6 +1255,9 @@
    ],
    "compare": [
     "Frequency multiplier vs mixer: multiplies both $f_c$ and $\\Delta f$ vs moves $f_c$, keeps $\\Delta f$"
+   ],
+   "list": [
+    "FM and PM / Generation: Armstrong indirect modulator (design)"
    ]
   },
   {
@@ -1189,6 +1279,9 @@
    "draws": [
     "Block diagram: slope detector",
     "Graph: tuned-circuit response with the carrier on its slope"
+   ],
+   "list": [
+    "FM and PM / Detection: slope detector"
    ]
   },
   {
@@ -1212,6 +1305,9 @@
    ],
    "compare": [
     "Uniform vs non-uniform quantization: equal steps, SQNR falls for weak signals vs steps grow with amplitude, SQNR nearly constant"
+   ],
+   "list": [
+    "PCM / Generation: uniform and non-uniform quantization"
    ]
   },
   {
@@ -1232,6 +1328,9 @@
    "points": "Sampling ($f_s \\ge 2B$), quantizing ($L$ levels), encoding ($n = \\log_2L$ bits); a line code over the channel with regenerative repeaters; the receiver regenerates, decodes and low-pass filters; $R_b = nf_s$.",
    "draws": [
     "Block diagram: PCM transmitter, channel and receiver"
+   ],
+   "list": [
+    "PCM / System: PCM transmitter and receiver"
    ]
   },
   {
@@ -1252,6 +1351,9 @@
    "points": "Companding: compress, quantize uniformly, expand (μ = 255, A = 87.6) for a nearly constant SQNR. Information rate $R = rH$. Entropy $H = \\sum P_i\\log_2(1/P_i)$, largest for equal probabilities.",
    "draws": [
     "Block diagram: compander chain"
+   ],
+   "list": [
+    "PCM / Generation: companding"
    ]
   },
   {
@@ -1270,7 +1372,11 @@
    "asked_in": [],
    "outline": "",
    "method": "$S/N_{peak} = L^2$; $n = \\log_2L$; $R = nf_s$; $B_T = R/2$.",
-   "answer": "1024 (30.1 dB); 40 kbit/s and 20 kHz"
+   "answer": "1024 (30.1 dB); 40 kbit/s and 20 kHz",
+   "list": [
+    "PCM / Noise and performance: signal-to-quantization-noise ratio",
+    "PCM / Spectrum and bandwidth: bit rate and transmission bandwidth"
+   ]
   },
   {
    "id": "2021-22-9(a)",
@@ -1295,6 +1401,9 @@
    "answer": "$f_s = 400$ Hz; $n = 9$; 36 kbit/s; 18 kHz",
    "draws": [
     "Block diagram: ECG sampling, quantizing, coding and multiplexing"
+   ],
+   "list": [
+    "PCM / Spectrum and bandwidth: bit rate and transmission bandwidth"
    ]
   },
   {
@@ -1316,6 +1425,9 @@
    "draws": [
     "Block diagram: PCM system",
     "Waveform: sampling, quantizing and encoding"
+   ],
+   "list": [
+    "PCM / System: PCM transmitter and receiver"
    ]
   },
   {
@@ -1334,7 +1446,10 @@
    "asked_in": [],
    "outline": "",
    "method": "$f_s = 1.2 \\times 2B$ per signal; times 5 signals and $n$ bits per sample; add 0.5 %; $B_T = R/2$.",
-   "answer": "$R \\approx 231.6$ kbps, $B_T \\approx 115.8$ kHz (8 bits assumed)"
+   "answer": "$R \\approx 231.6$ kbps, $B_T \\approx 115.8$ kHz (8 bits assumed)",
+   "list": [
+    "PCM / Spectrum and bandwidth: bit rate and transmission bandwidth"
+   ]
   },
   {
    "id": "2021-22-5(a)",
@@ -1360,6 +1475,9 @@
    ],
    "compare": [
     "DM vs sigma-delta: receiver accumulates, errors pile up, slope overload depends on frequency vs receiver is an LPF, no build-up"
+   ],
+   "list": [
+    "Delta modulation / Generation: sigma-delta modulator"
    ]
   },
   {
@@ -1383,6 +1501,9 @@
    ],
    "compare": [
     "Slope overload vs granular noise: step too small for a steep signal vs step too large for a flat one"
+   ],
+   "list": [
+    "Delta modulation / Noise and performance: slope overload, granular noise and adaptive DM"
    ]
   },
   {
@@ -1403,6 +1524,9 @@
    "points": "Transmitter: subtractor, one-bit quantizer, accumulator in the feedback path. Receiver: accumulator, then LPF.",
    "draws": [
     "Block diagram: DM transmitter and receiver"
+   ],
+   "list": [
+    "Delta modulation / System: DM transmitter and receiver"
    ]
   },
   {
@@ -1422,6 +1546,9 @@
    "outline": "Write the DM update; unroll it; the estimate is the running sum of the steps.",
    "draws": [
     "Block diagram: DM transmitter and receiver"
+   ],
+   "list": [
+    "Delta modulation / Detection: receiver as an accumulator"
    ]
   },
   {
@@ -1448,6 +1575,9 @@
    ],
    "compare": [
     "DM vs sigma-delta: receiver accumulates, errors pile up, slope overload depends on frequency vs receiver is an LPF, no build-up"
+   ],
+   "list": [
+    "Delta modulation / Generation: sigma-delta modulator"
    ]
   },
   {
@@ -1474,6 +1604,9 @@
    ],
    "drill": [
     "Line codes (Manchester, AMI, dicode): 1010011100"
+   ],
+   "list": [
+    "Line coding / Waveform: Manchester, AMI and dicode"
    ]
   },
   {
@@ -1502,6 +1635,9 @@
    ],
    "drill": [
     "DPSK encoder and receiver table: 1010011100"
+   ],
+   "list": [
+    "DPSK / System: encoder and receiver, bit table"
    ]
   },
   {
@@ -1530,6 +1666,9 @@
    ],
    "drill": [
     "DPSK encoder and receiver table: 1010010110"
+   ],
+   "list": [
+    "DPSK / System: encoder and receiver, bit table"
    ]
   },
   {
@@ -1558,6 +1697,9 @@
    ],
    "drill": [
     "DPSK encoder and receiver table: 1010011100"
+   ],
+   "list": [
+    "DPSK / System: encoder and receiver, bit table"
    ]
   },
   {
@@ -1581,6 +1723,9 @@
    ],
    "compare": [
     "PSK vs DPSK: absolute phase, needs a coherent carrier vs phase change, no local carrier"
+   ],
+   "list": [
+    "DPSK / System: principle and block diagram"
    ]
   },
   {
@@ -1604,6 +1749,11 @@
    ],
    "compare": [
     "ASK vs FSK vs PSK: amplitude, worst in noise vs frequency, most bandwidth vs phase, best in noise"
+   ],
+   "list": [
+    "ASK / Comparison: ASK vs FSK vs PSK",
+    "FSK / Comparison: ASK vs FSK vs PSK",
+    "PSK / Comparison: ASK vs FSK vs PSK"
    ]
   },
   {
@@ -1628,6 +1778,10 @@
    ],
    "compare": [
     "Coherent vs non-coherent detection: needs a synchronized carrier, better in noise vs envelope only, simpler, worse in noise"
+   ],
+   "list": [
+    "ASK / Detection: coherent and non-coherent detection",
+    "FSK / Detection: coherent and non-coherent detection"
    ]
   },
   {
@@ -1648,6 +1802,9 @@
    "points": "Two correlators with $\\cos\\omega_1t$ and $\\cos\\omega_2t$, integrated over $T_b$; the matching branch gives $AT_b/2$, the other about 0; a comparator decides; both carriers must be in sync.",
    "draws": [
     "Block diagram: coherent BFSK detector"
+   ],
+   "list": [
+    "FSK / Detection: coherent detection"
    ]
   },
   {
@@ -1672,6 +1829,10 @@
    ],
    "compare": [
     "BPSK vs QPSK: one bit per symbol vs two bits per symbol, half the bandwidth, same error rate"
+   ],
+   "list": [
+    "PSK / Generation: QPSK modulator",
+    "PSK / Comparison: QPSK vs BPSK"
    ]
   },
   {
@@ -1745,6 +1906,9 @@
    "answer": "$f_s = 400$ Hz; $n = 9$; 36 kbit/s; 18 kHz",
    "draws": [
     "Block diagram: ECG sampling, quantizing, coding and multiplexing"
+   ],
+   "list": [
+    "PCM / Spectrum and bandwidth: bit rate and transmission bandwidth"
    ]
   },
   {
@@ -1818,6 +1982,9 @@
    "answer": "$f_s = 400$ Hz; $n = 9$; 36 kbit/s; 18 kHz",
    "draws": [
     "Block diagram: ECG sampling, quantizing, coding and multiplexing"
+   ],
+   "list": [
+    "PCM / Spectrum and bandwidth: bit rate and transmission bandwidth"
    ]
   },
   {
@@ -1976,7 +2143,10 @@
    ],
    "outline": "",
    "method": "$I_t = I_c\\sqrt{1 + \\mu^2/2}$; solve for $\\mu$; then put $\\mu = 0.8$.",
-   "answer": "$\\mu \\approx 70$ %; 9.19 A at $\\mu = 0.8$"
+   "answer": "$\\mu \\approx 70$ %; 9.19 A at $\\mu = 0.8$",
+   "list": [
+    "AM / Index and power: antenna current and modulation index"
+   ]
   },
   {
    "id": "2021-22-3(d)",
@@ -1999,6 +2169,9 @@
    ],
    "drill": [
     "AM waveform for $\\mu = 0.5$, 1, 1.5: the sawtooth $m(t)$ of Fig. 1"
+   ],
+   "list": [
+    "AM / Waveform: AM wave for μ below, at and above 1"
    ]
   },
   {
@@ -2021,7 +2194,10 @@
    ],
    "outline": "",
    "method": "$I_t = I_c\\sqrt{1 + \\mu^2/2}$; solve for $\\mu$; then put $\\mu = 0.8$.",
-   "answer": "$\\mu \\approx 70$ %; 9.19 A at $\\mu = 0.8$"
+   "answer": "$\\mu \\approx 70$ %; 9.19 A at $\\mu = 0.8$",
+   "list": [
+    "AM / Index and power: antenna current and modulation index"
+   ]
   },
   {
    "id": "2020-21-1(d)",
@@ -2043,6 +2219,9 @@
    "draws": [
     "Waveform: the AM wave",
     "Spectrum: carrier and the two side lines"
+   ],
+   "list": [
+    "AM / Index and power: modulation index, side frequencies and their amplitudes"
    ]
   },
   {
@@ -2065,7 +2244,10 @@
    ],
    "outline": "",
    "method": "$I_t = I_c\\sqrt{1 + \\mu^2/2}$; solve for $\\mu$; then put $\\mu = 0.8$.",
-   "answer": "$\\mu \\approx 70$ %; 9.19 A at $\\mu = 0.8$"
+   "answer": "$\\mu \\approx 70$ %; 9.19 A at $\\mu = 0.8$",
+   "list": [
+    "AM / Index and power: antenna current and modulation index"
+   ]
   },
   {
    "id": "2022-23-7(b)",
@@ -2086,7 +2268,10 @@
    ],
    "outline": "",
    "method": "$\\mu = V_m/V_c$; $f_c \\pm f_m$; side amplitude $\\mu V_c/2$; $B = 2f_m$; $P_t = (V_c^2/2R)(1 + \\mu^2/2)$; $\\eta = \\mu^2/(2 + \\mu^2)$.",
-   "answer": "$\\mu = 0.2$; 100.5 and 99.5 kHz; 5 V each; 1 kHz; 2.125 W; 1.96 %"
+   "answer": "$\\mu = 0.2$; 100.5 and 99.5 kHz; 5 V each; 1 kHz; 2.125 W; 1.96 %",
+   "list": [
+    "AM / Index and power: modulation index, sidebands, power and bandwidth"
+   ]
   },
   {
    "id": "2020-21-1(e)",
@@ -2107,7 +2292,10 @@
    ],
    "outline": "",
    "method": "$\\mu = V_m/V_c$; side bands $f_c \\pm f_m$; $P_t = (V_c^2/2R)(1 + \\mu^2/2)$.",
-   "answer": "$\\mu = 0.2$; 100.5 and 99.5 kHz; 2.125 W"
+   "answer": "$\\mu = 0.2$; 100.5 and 99.5 kHz; 2.125 W",
+   "list": [
+    "AM / Index and power: modulation index, sidebands, power and bandwidth"
+   ]
   },
   {
    "id": "2021-22-6(c)",
@@ -2226,6 +2414,9 @@
    ],
    "compare": [
     "FM vs PM: frequency follows $m(t)$ vs phase follows $m(t)$"
+   ],
+   "list": [
+    "FM and PM / Principle: relation between FM and PM"
    ]
   },
   {
@@ -2247,6 +2438,9 @@
    "draws": [
     "Block diagram: superheterodyne receiver",
     "Spectrum: the signal and its image frequency"
+   ],
+   "list": [
+    "AM / Detection: superheterodyne receiver"
    ]
   },
   {
@@ -2270,6 +2464,9 @@
    ],
    "compare": [
     "SSB vs VSB vs DSB: bandwidth $B$, needs a gap at dc vs a little over $B$, keeps dc vs $2B$"
+   ],
+   "list": [
+    "VSB / Principle: what VSB is and why it is used"
    ]
   },
   {
@@ -2287,7 +2484,10 @@
    "times": 1,
    "asked_in": [],
    "outline": "",
-   "points": "Video has power down to dc, so SSB is not possible; DSB wastes bandwidth; VSB saves about 40 %; with a carrier (WC) a cheap envelope detector works in every TV set."
+   "points": "Video has power down to dc, so SSB is not possible; DSB wastes bandwidth; VSB saves about 40 %; with a carrier (WC) a cheap envelope detector works in every TV set.",
+   "list": [
+    "VSB / Principle: VSB with carrier for TV broadcasting"
+   ]
   },
   {
    "id": "2021-22-2(d)",
@@ -2307,6 +2507,9 @@
    "draws": [
     "Block diagram: VSB transmitter and receiver",
     "Spectrum: VSB filter with complementary symmetry"
+   ],
+   "list": [
+    "VSB / Generation: sideband-shaping filter condition"
    ]
   },
   {
@@ -2326,6 +2529,10 @@
    "outline": "Write the four DSB lines; apply the filter gains 1, a, 1-a, 0; demodulate; the partial sidebands add to the full tone.",
    "draws": [
     "Spectrum: two-tone DSB-SC lines, the VSB filter and the detected lines"
+   ],
+   "list": [
+    "VSB / Generation: two-tone VSB modulator",
+    "VSB / Detection: two-tone VSB demodulation"
    ]
   },
   {
@@ -2346,6 +2553,9 @@
    "draws": [
     "Block diagram: VSB transmitter and receiver",
     "Spectrum: VSB filter and the two shifted copies"
+   ],
+   "list": [
+    "VSB / Detection: recovering the message from VSB"
    ]
   },
   {
@@ -2367,6 +2577,9 @@
    "draws": [
     "Spectrum: sampled spectrum and the reconstruction LPF",
     "Waveform: sinc reconstruction"
+   ],
+   "list": [
+    "Sampling / Principle: reconstruction with a low-pass filter"
    ]
   },
   {
@@ -2387,6 +2600,9 @@
    "draws": [
     "Spectrum: sampled signal for three sampling rates",
     "Waveform: reconstruction by sinc pulses"
+   ],
+   "list": [
+    "Sampling / Principle: Nyquist sampling theorem and interpolation formula"
    ]
   },
   {
@@ -2407,6 +2623,9 @@
    "points": "$B_T \\approx 2(\\Delta f + f_m) = 2f_m(\\beta + 1)$, holding about 98 % of the power. Limits: only approximate; underestimates for $2 < \\beta < 10$; a general message needs its highest $f_m$; weak lines are ignored.",
    "draws": [
     "Spectrum: FM lines for $\\beta = 5$"
+   ],
+   "list": [
+    "FM and PM / Spectrum and bandwidth: Carson's rule"
    ]
   },
   {
@@ -2425,7 +2644,10 @@
    "asked_in": [],
    "outline": "",
    "method": "$\\Delta f = k_fA_m$; $\\beta = \\Delta f/f_m$; $B_T = 2(\\Delta f + f_m)$.",
-   "answer": "$\\Delta f = 10$ kHz, $\\beta = 5$, 24 kHz"
+   "answer": "$\\Delta f = 10$ kHz, $\\beta = 5$, 24 kHz",
+   "list": [
+    "FM and PM / Spectrum and bandwidth: Carson's rule"
+   ]
   },
   {
    "id": "2020-21-6(a)",
@@ -2447,6 +2669,10 @@
     "Waveform: FSK for 10110",
     "Block diagram: two ways to generate FSK",
     "Spectrum: FSK"
+   ],
+   "list": [
+    "FSK / Generation: FSK modulator",
+    "FSK / Spectrum and bandwidth: FSK spectrum and bandwidth"
    ]
   },
   {
@@ -2470,6 +2696,9 @@
    "points": "$\\varphi = m_1\\cos\\omega_ct + m_2\\sin\\omega_ct$; multiply by $2\\cos\\omega_ct$ and $2\\sin\\omega_ct$, low-pass filter to get $m_1$ and $m_2$. Advantage: two signals in one band. Drawbacks: needs an exact carrier; a phase error gives crosstalk $m_1\\cos\\theta - m_2\\sin\\theta$; needs linear amplifiers.",
    "draws": [
     "Block diagram: QAM modulator and coherent demodulator"
+   ],
+   "list": [
+    "QAM / Detection: coherent detection"
    ]
   },
   {
@@ -2493,6 +2722,9 @@
    "points": "$\\varphi = m_1\\cos\\omega_ct + m_2\\sin\\omega_ct$; multiply by $2\\cos\\omega_ct$ and $2\\sin\\omega_ct$, low-pass filter to get $m_1$ and $m_2$. Advantage: two signals in one band. Drawbacks: needs an exact carrier; a phase error gives crosstalk $m_1\\cos\\theta - m_2\\sin\\theta$; needs linear amplifiers.",
    "draws": [
     "Block diagram: QAM modulator and coherent demodulator"
+   ],
+   "list": [
+    "QAM / Detection: coherent detection"
    ]
   },
   {
@@ -2582,6 +2814,9 @@
    "draws": [
     "Circuit: pre-emphasis and de-emphasis networks",
     "Graph: their frequency responses"
+   ],
+   "list": [
+    "FM and PM / Noise and performance: pre-emphasis and de-emphasis"
    ]
   },
   {
@@ -2618,7 +2853,10 @@
    "repeat_of": "",
    "times": 1,
    "asked_in": [],
-   "outline": "Expand cos of the FM angle; use small-angle approximations; get carrier minus quadrature sideband term."
+   "outline": "Expand cos of the FM angle; use small-angle approximations; get carrier minus quadrature sideband term.",
+   "list": [
+    "FM and PM / Principle: narrowband FM expression"
+   ]
   },
   {
    "id": "2022-23-7(j)",
@@ -2638,6 +2876,9 @@
    "points": "Integrator, balanced modulator fed with the carrier shifted by −90°, and a summer adding the carrier.",
    "draws": [
     "Block diagram: NBFM generator"
+   ],
+   "list": [
+    "FM and PM / Generation: NBFM generator"
    ]
   },
   {
@@ -2661,6 +2902,9 @@
    ],
    "compare": [
     "NBFM vs AM: sideband term in quadrature with the carrier vs in phase with it; same bandwidth $2B$"
+   ],
+   "list": [
+    "FM and PM / Generation: NBFM generator"
    ]
   },
   {
@@ -2682,6 +2926,9 @@
    "draws": [
     "Circuit: envelope detector",
     "Waveform: AM input and detector output"
+   ],
+   "list": [
+    "AM / Detection: envelope detector"
    ]
   },
   {
@@ -2702,6 +2949,9 @@
    "draws": [
     "Circuit: envelope detector",
     "Waveform: detector output, with ripple and diagonal clipping"
+   ],
+   "list": [
+    "AM / Detection: envelope detector"
    ]
   },
   {
@@ -2739,6 +2989,9 @@
    "points": "FM advantages: better noise immunity, constant envelope (efficient amplifiers), capture effect, higher fidelity. Disadvantages: much wider bandwidth, line-of-sight range, complex equipment, threshold effect.",
    "compare": [
     "FM vs AM: noise immune, constant envelope, wide band vs narrow band, simple, longer range, noisy"
+   ],
+   "list": [
+    "FM and PM / Comparison: FM vs AM, advantages and disadvantages"
    ]
   }
  ],
