@@ -286,7 +286,7 @@
     "18-19 1(a)"
    ],
    "outline": "",
-   "points": "Freeze-out at low $T$ (donors not ionized, $n_0 < N_d$), extrinsic plateau ($n_0 = N_d$, about 150 to 450 K for $10^{15}$ cm$^{-3}$), intrinsic region at high $T$ where $n_i \\propto T^{3/2}e^{-E_g/2kT}$ overtakes $N_d$ and $n_0 \\to n_i$.",
+   "points": "Freeze-out at low $T$ (donors not ionized, $n_0 < N_d$), extrinsic plateau ($n_0 = N_d$, about 100 to 500 K for $10^{15}$ cm$^{-3}$), intrinsic region at high $T$ where $n_i \\propto T^{3/2}e^{-E_g/2kT}$ overtakes $N_d$ and $n_0 \\to n_i$.",
    "draws": [
     "Graph: electron concentration against temperature with the three regions"
    ]
@@ -549,7 +549,7 @@
    "subtopic": "Carrier concentrations",
    "type": "derivation",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=87",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=88",
    "text": "Starting from charge neutrality condition, derive expressions for $n_0$ and $p_0$ in terms of $N_a$, $N_d$, and $n_i$.",
    "repeat_of": "2019-20 2(a)",
    "times": 6,
@@ -575,7 +575,7 @@
    "subtopic": "Carrier concentrations",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=93",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=94",
    "text": "A special semiconductor material is to be \"designed\". The semiconductor is to be n-type and doped with $1\\times10^{15}cm^{-3}$ donor atoms. Assume complete ionization and assume $N_a = 0$. The effective density of states functions are given by $N_c = N_v = 1.5\\times10^{19}cm^{-3}$ and are independent of temperature. A particular semiconductor device fabricated with this material requires the electron concentration to be no greater than $1.01\\times10^{15}cm^{-3}$ at $T = 400~K$. What is the minimum value of the bandgap energy?",
    "repeat_of": "",
    "times": 1,
@@ -787,7 +787,7 @@
    "subtopic": "Fermi probability",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=95",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=96",
    "text": "(i) Calculate the probability of an electron to be occupied at the lowest energy state of the conduction band of silicon when the Fermi energy is $0.3~eV$ below the conduction band at room temperature. (ii) Calculate the thermal electron concentration $n_0$. (iii) What is the thermal hole concentration $p_0$? (Room temperature $N_c$ is $2.8\\times10^{19}~cm^{-3}$, $n_i$ is $1.5\\times10^{10}~cm^{-3}$)",
    "repeat_of": "",
    "times": 1,
@@ -1055,7 +1055,7 @@
    "subtopic": "Threshold voltage",
    "type": "numerical",
    "marks": 12.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=76",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=77",
    "text": "The body of a nanoscale N-channel MOSFET is doped at $N_A = 5^{18}$ *[sic: should be $5\\times10^{18}$]* cm$^{-3}$. (i) Determine the maximum inversion-layer charge per unit area ($Q_I$) that can be reached so that the electric field in the oxide remains below $E_{ox} = 0.6$ V/nm. Neglect any interface-trap and gate-oxide charge. (ii) If the channel length and the channel width are $L = 50$ nm and $W = 500$ nm, respectively, determine how many electrons are creating this inversion layer. (iii) Calculate the threshold voltage of a MOSFET having gate-oxide thickness $t_{ox} = 1$ nm and flat-band voltage $V_{FB} = 1.0$ V. (iv) What gate voltage is needed to form the maximum inversion-layer charge?",
    "repeat_of": "",
    "times": 1,
@@ -1440,7 +1440,7 @@
    "subtopic": "Steady state",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=98",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=99",
    "text": "Consider a p-type semiconductor that is homogeneous and infinite in extent. Assume a zero applied electric field. For a one-dimensional crystal, assume that excess carriers are being generated at $x = 0$ only. The excess carriers being generated at $x = 0$ will begin diffusing in both the $-x$ and $+x$ directions. Calculate the steady-state excess carrier concentration as a function of $x$.",
    "repeat_of": "2019-20 5(a)",
    "times": 2,
@@ -1520,7 +1520,7 @@
    "subtopic": "Emitter efficiency",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=83",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=84",
    "text": "Does the doping level in the base of a BJT affect the emitter efficiency $\\gamma_E$? If so, why?",
    "repeat_of": "",
    "times": 1,
@@ -1827,7 +1827,7 @@
    "subtopic": "Fermi level",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=90",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=91",
    "text": "With proper equation and graph, explain variation of Fermi energy level in extrinsic semiconductor.",
    "repeat_of": "",
    "times": 1,
@@ -2228,7 +2228,7 @@
    "subtopic": "Ambipolar transport",
    "type": "derivation",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=101",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=102",
    "text": "Define ambipolar transport. Find ambipolar transport equation. Hence show that diffuse and drift behavior of excess majority carrier is determined by excess minority carrier.",
    "repeat_of": "2019-20 4(b)",
    "times": 2,
@@ -2314,7 +2314,7 @@
    "subtopic": "Operating modes",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=79",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=80",
    "text": "Determine the mode of operation of an NPN BJT with $\\beta \\approx 450$, if it is known that: (i) $V_{BE} = 0.7V$, $V_{CE} = 5.2V$ (ii) $V_{BE} = 0.7V$, $V_{CE} = 0.2V$ (iii) $V_{BE} = 0.8V$, $V_{BC} = 0.3V$ (iv) $V_{BE} = -0.8V$, $V_{BC} = 0.7V$ (v) $I_C = 455mA$, $I_B = 1mA$ (vi) $I_C = 455mA$, $I_E = 502mA$",
    "repeat_of": "",
    "times": 1,
@@ -2335,7 +2335,7 @@
    "subtopic": "MOSFET advantages",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=82",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=83",
    "text": "Mention some advantages of using MOSFET.",
    "repeat_of": "",
    "times": 1,
@@ -2352,7 +2352,7 @@
    "subtopic": "Generation and recombination",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=104",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=105",
    "text": "Briefly describe different types of generation and recombination processes. Use appropriate diagram if necessary.",
    "repeat_of": "",
    "times": 1,
@@ -2799,7 +2799,7 @@
     },
     {
      "label": "19-20 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=95"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=96"
     },
     {
      "label": "18-19 1(c)",
@@ -2871,7 +2871,7 @@
     },
     {
      "label": "19-20 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=95"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=96"
     }
    ]
   },
@@ -2883,7 +2883,7 @@
    "used": [
     {
      "label": "19-20 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=95"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=96"
     }
    ]
   },
@@ -3203,7 +3203,7 @@
     },
     {
      "label": "19-20 7(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=87"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=88"
     }
    ]
   },
@@ -3215,7 +3215,7 @@
    "used": [
     {
      "label": "19-20 7(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=93"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=94"
     }
    ]
   },
@@ -3227,7 +3227,7 @@
    "used": [
     {
      "label": "19-20 7(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=90"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=91"
     }
    ]
   },
@@ -3239,7 +3239,7 @@
    "used": [
     {
      "label": "19-20 7(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=90"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=91"
     }
    ]
   },
@@ -3279,7 +3279,7 @@
     },
     {
      "label": "19-20 7(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=87"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=88"
     }
    ]
   },
@@ -3307,7 +3307,7 @@
     },
     {
      "label": "19-20 7(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=87"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=88"
     }
    ]
   },
@@ -3335,7 +3335,7 @@
     },
     {
      "label": "19-20 7(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=87"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=88"
     }
    ]
   },
@@ -3943,7 +3943,7 @@
     },
     {
      "label": "19-20 8(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=101"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=102"
     }
    ]
   },
@@ -3959,7 +3959,7 @@
     },
     {
      "label": "19-20 8(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=101"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=102"
     }
    ]
   },
@@ -3975,7 +3975,7 @@
     },
     {
      "label": "19-20 8(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=101"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=102"
     }
    ]
   },
@@ -4003,7 +4003,7 @@
     },
     {
      "label": "19-20 8(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=98"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=99"
     },
     {
      "label": "19-20 4(d)",
@@ -4043,7 +4043,7 @@
    "used": [
     {
      "label": "19-20 8(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=104"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=105"
     }
    ]
   },
@@ -4055,7 +4055,7 @@
    "used": [
     {
      "label": "19-20 8(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=104"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=105"
     }
    ]
   },
@@ -4503,7 +4503,7 @@
     },
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=76"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=77"
     },
     {
      "label": "18-19 3(a)",
@@ -4559,7 +4559,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=76"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=77"
     }
    ]
   },
@@ -4571,7 +4571,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=76"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=77"
     }
    ]
   },
@@ -4583,7 +4583,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=76"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=77"
     }
    ]
   },
@@ -4595,7 +4595,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=76"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=77"
     }
    ]
   },
@@ -4691,7 +4691,7 @@
    "used": [
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=79"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=80"
     }
    ]
   },
@@ -4703,7 +4703,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=83"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=84"
     }
    ]
   },
