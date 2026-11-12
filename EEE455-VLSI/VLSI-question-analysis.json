@@ -614,6 +614,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11",
    "text": "Briefly discuss the chemistries involved in in *[sic: should be \"involved in\"]* etching. Also explain the effect of adding $H_2$ and $O_2$ on etching rate.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Etching removes unprotected material. Wet: SiO$_2$ + 6HF $\\rightarrow$ H$_2$SiF$_6$ + 2H$_2$O, isotropic and selective. Dry: plasma radicals (CF$_4$ gives F) form volatile SiF$_4$; ions make it anisotropic. O$_2$ in CF$_4$ removes CF$_x$, freeing F: the Si rate rises to a peak near 12 % O$_2$, then falls (dilution, surface oxidation). H$_2$ ties F up as HF and leaves polymer on Si: the Si rate falls, SiO$_2$ selectivity rises.",
    "draws": [
@@ -637,6 +639,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=12",
    "text": "What are the effects of O$_2$ and H$_2$ adding on etching?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "O$_2$ in CF$_4$ removes CF$_x$, freeing F: the Si rate rises to a peak near 12 % O$_2$, then falls (dilution, surface oxidation). H$_2$ ties F up as HF and leaves polymer on Si: the Si rate falls, SiO$_2$ selectivity rises.",
    "draws": [
@@ -656,6 +660,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=18",
    "text": "Explain how does the plasma sustain. Also explain the chemistries involved in plasma etching.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "RF-accelerated electrons ionise atoms ($e + A \\rightarrow A^+ + 2e$); ions hit the electrodes and free secondary electrons; the plasma lasts while ionisation balances loss. Etch chemistry: radicals (F, Cl) form volatile products (SiF$_4$, AlCl$_3$, CO$_2$) that are pumped away; ion bombardment makes it directional.",
    "draws": [
@@ -674,6 +680,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=14",
    "text": "Discuss the silicon oxidation model mentioning its limiting cases.",
    "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "18-19 1(b)",
+    "18-19 TT1 7(b)"
+   ],
    "outline": "Three fluxes $h(C^* - C_O)$, $D(C_O - C_I)/x_O$, $k_SC_I$; equal in steady state; eliminate $C_O$, $C_I$; $dx_O/dt = F/N_1$; separate and integrate; $x_O^2 + Ax_O = B(t + \\tau)$; linear for thin, parabolic for thick oxide.",
    "draws": [
     "Graph: oxidant concentration from gas through oxide to silicon",
@@ -689,9 +700,14 @@
    "subtopic": "Oxidation",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=73",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=72",
    "text": "Explain the silicon oxidation model mentioning its limiting cases.",
    "repeat_of": "2018-19 1(b)",
+   "times": 2,
+   "asked_in": [
+    "18-19 1(b)",
+    "18-19 TT1 7(b)"
+   ],
    "outline": "Three fluxes $h(C^* - C_O)$, $D(C_O - C_I)/x_O$, $k_SC_I$; equal in steady state; eliminate $C_O$, $C_I$; $dx_O/dt = F/N_1$; separate and integrate; $x_O^2 + Ax_O = B(t + \\tau)$; linear for thin, parabolic for thick oxide.",
    "draws": [
     "Graph: oxidant concentration from gas through oxide to silicon",
@@ -710,6 +726,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=20",
    "text": "Write the VHDL code to implement the following Boolean expression: $F = AB +$ $\\overline{A}BC + BC$.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Simplify: $F = AB + \\overline{A}BC + BC = B(A + C)$; entity with inputs A, B, C and output F; architecture with one concurrent assignment `F <= B and (A or C);`.",
    "draws": [
     "Diagram: the expression and its simplified gate form"
@@ -727,6 +745,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=37",
    "text": "What is VHDL? Write down the advantages of VHDL.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "VHDL: IEEE-standard language that describes digital hardware for simulation and synthesis. Advantages: portable, several levels of description (behavioural to structural), verification before fabrication, faster design through synthesis, reusable.",
    "compare": [
@@ -745,6 +765,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=23",
    "text": "Find threshold voltage of MOSFET without body effect.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Inversion: surface potential moves by $-2\\phi_F$; depletion depth and charge $Q_{B0} = -\\sqrt{2qN_A\\varepsilon_{Si}|2\\phi_F|}$; add work-function difference, $-2\\phi_F$, $-Q_{B0}/C_{ox}$ and $-Q_{ox}/C_{ox}$.",
    "draws": [
     "Diagram: accumulation, depletion and inversion under the gate",
@@ -763,6 +785,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=79",
    "text": "Find the threshold voltage of MOSFET considering the body effect.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "With $V_{SB}$ the surface must move by $-2\\phi_F + V_{SB}$; depletion charge $-\\sqrt{2qN_A\\varepsilon_{Si}|{-2\\phi_F} + V_{SB}|}$; threshold as the sum of four terms; subtract $V_{T0}$; $V_T = V_{T0} + \\gamma(\\sqrt{|{-2\\phi_F} + V_{SB}|} - \\sqrt{|2\\phi_F|})$.",
    "draws": [
     "Graph: threshold voltage against source-to-body voltage"
@@ -780,6 +804,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=44",
    "text": "What is scaling? Explain how different parameters of transistors are scaled?",
    "repeat_of": "2018-19 2(b)",
+   "times": 2,
+   "asked_in": [
+    "19-20 4(a)",
+    "18-19 2(b)"
+   ],
    "outline": "",
    "points": "Scaling shrinks all dimensions by $1/S$ per generation. Constant field: $L$, $W$, $t_{ox}$, $x_j$, $V_{DD}$, $V_t$ by $1/S$, doping by $S$; current and capacitance $1/S$, delay $1/S$, power per gate $1/S^2$, density $S^2$, power density constant. Constant voltage: delay $1/S^2$, power density $S^3$.",
    "draws": [
@@ -798,9 +827,14 @@
    "subtopic": "Scaling rules",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=26",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=27",
    "text": "State Moore's law. Explain how different parameters of MOSFET is scaled.",
    "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "19-20 4(a)",
+    "18-19 2(b)"
+   ],
    "outline": "",
    "points": "Moore's law: transistors per chip double about every two years. Constant-field scaling by $1/S$: lengths, $t_{ox}$, $V_{DD}$, $V_t$ by $1/S$, doping by $S$; current and capacitance $1/S$, delay $1/S$, power per gate $1/S^2$, density $S^2$, power density constant. Constant-voltage scaling: delay $1/S^2$ but power density rises as $S^3$.",
    "draws": [
@@ -823,6 +857,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=29",
    "text": "Explain operation of saturated load NMOS inverter. What are the disadvantages of this configuration?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Load nMOS with gate tied to drain, always saturated. $V_{OH} = V_{DD} - V_{TL}$ (a threshold drop); $V_{OL}$ set by the driver/load ratio $k_R$ (0.27 V for 5 V, 1 V, $k_R = 9$). Faults: reduced $V_{OH}$, ratioed $V_{OL}$, static power when low, slow rise, small gain.",
    "draws": [
@@ -845,6 +881,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34",
    "text": "Using I-V characteristics curve of MOSFET, find DC characteristics of CMOS inverter.",
    "repeat_of": "2018-19 2(d)",
+   "times": 2,
+   "asked_in": [
+    "19-20 3(a)",
+    "18-19 2(d)"
+   ],
    "outline": "Equal nMOS and pMOS currents with the right region for each; B: quadratic, smaller root; D: quadratic, smaller root; C: both saturated gives $V_M$; slope $-1$ in B and D gives $V_{IL}$, $V_{IH}$.",
    "draws": [
     "Graph: nMOS and pMOS currents against $V_{out}$",
@@ -863,6 +904,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=31",
    "text": "Find DC characteristics of CMOS inverter using V-I characteristics curve.",
    "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "19-20 3(a)",
+    "18-19 2(d)"
+   ],
    "outline": "Equal nMOS and pMOS currents with the right region for each; B: quadratic, smaller root; D: quadratic, smaller root; C: both saturated gives $V_M$; slope $-1$ in B and D gives $V_{IL}$, $V_{IH}$.",
    "draws": [
     "Graph: nMOS and pMOS currents against $V_{out}$ for several inputs",
@@ -881,6 +927,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=25",
    "text": "Find propagation and contamination delay (for both rising and falling) of 3-input NAND gate while it is driving 4 identical NAND gates. Consider that the gate has equal pull-up and pull-down resistance.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Unit NAND3 (nMOS 3, pMOS 2); output and internal node capacitances; Elmore delay for the worst (propagation) and best (contamination) cases, rising and falling.",
    "answer": "$t_{pdr} = 29RC$, $t_{pdf} = 32RC$, $t_{cdr} = 9.67RC$, $t_{cdf} = 29RC$",
@@ -900,6 +948,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=38",
    "text": "Sketch a 3-input NOR gate with transistor widths chosen to achieve effective rise and fall resistances equal to a unit inverter. Compute the rising and falling propagation delays of the NOR gate driving h identical NOR gates using the Elmore delay model. Assume that every source or drain has fully contacted diffusion when making your estimate of capacitance.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Size the NOR3 for unit resistance (pMOS series 6, nMOS 1); node capacitances: output $(9 + 7h)C$, internal $12C$; Elmore delay from the worst-case RC ladders, rising and falling.",
    "answer": "$t_{pdr} = (21 + 7h)RC$, $t_{pdf} = (9 + 7h)RC$",
@@ -916,9 +966,11 @@
    "subtopic": "Path delay",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=23",
    "text": "Estimate the minimum delay of the path from $A$ to $B$ in Figure 1(d) and choose transistor sizes to achieve this delay. The initial NAND2 gate may present a load of 8 $\\lambda$ of transistor width on the input and the output load is equivalent to 45 $\\lambda$ of transistor width.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Logical effort $G = \\prod g$, branching $B = \\prod b$, electrical $H = C_{out}/C_{in}$; $F = GBH$; $\\hat f = F^{1/N}$; $\\hat D = N\\hat f + P$; size backwards from the load: $C_{in} = gC_{out}/\\hat f$.",
    "answer": "$F = 125$, $\\hat f = 5$, $P = 7$, $\\hat D = 22\\tau$; $x = 10\\lambda$, $y = 15\\lambda$",
@@ -935,9 +987,11 @@
    "subtopic": "Path delay",
    "type": "design",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=32",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=33",
    "text": "Design an 8-input AND gate using FO4 in different configurations. Determine which configuration provides the fastest performance.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "$H = 4$; list configurations (NAND8 + INV, NAND4 + NOR2, NAND2 + NOR4, four-stage trees); for each $G$, $P$, $F = GH$, $D = NF^{1/N} + P$; pick the smallest.",
    "draws": [
     "Circuit: five configurations with their delays"
@@ -955,6 +1009,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37",
    "text": "Find minimum delay for path $A \\rightarrow B$ in the logic circuit of Figure 3.1. Also find the gate size to achieve this delay.",
    "repeat_of": "2018-19 8(d)",
+   "times": 2,
+   "asked_in": [
+    "19-20 3(b)",
+    "18-19 TT2 8(d)"
+   ],
    "outline": "",
    "method": "Logical effort $G = \\prod g$, branching $B = \\prod b$, electrical $H = C_{out}/C_{in}$; $F = GBH$; $\\hat f = F^{1/N}$; $\\hat D = N\\hat f + P$; size backwards from the load: $C_{in} = gC_{out}/\\hat f$.",
    "answer": "$F = 116.7$, $\\hat f = 3.29$, $\\hat D = 20.1\\tau$; $x = 2.82$, $y = 1.85$, $z = 14.6$",
@@ -974,6 +1033,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=40",
    "text": "Figure 3.2 shows a portion of a decoder circuit. The inverter at input drives 8 identical 4-input NAND gate with input capacitance y each. The output of the decoder (NAND gate) is connected to a 32-bit word of register and each register bit presents a load of 3-unit sized transistor. Find best number stages (how many inverters should be added between NAND and load?), stage effort, path delay, NAND gate size.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "$G$, $B = 8$, $H = 9.6$, $F = 153.6$; $\\hat N = \\log_4F = 3.63$; polarity needs an odd number of added inverters, so 3 stages (add 1 inverter); $\\hat f = F^{1/3}$; $\\hat D = 3\\hat f + P$; size backwards.",
    "draws": [
     "Circuit: decoder path with the added inverter"
@@ -991,6 +1052,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=40",
    "text": "For the circuit in figure 3c find- (i) Logical effort, G (ii) Branching effort, B (iii) Electrical effort, E (iv) Path effort, F (v) Stage effort, f (vi) Parasitic delay, P (vii) Minimum path delay, D (viii) Size of the gate.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Logical effort $G = \\prod g$, branching $B = \\prod b$, electrical $H = C_{out}/C_{in}$; $F = GBH$; $\\hat f = F^{1/N}$; $\\hat D = N\\hat f + P$; size backwards from the load: $C_{in} = gC_{out}/\\hat f$.",
    "answer": "$G = 2.96$, $B = 34.63$, $H = 2.6$, $F = 266.8$, $f = 4.04$, $P = 8$, $D = 24.2\\tau$; $x = 4.46$, $y = 8.84$, $z = 16.1$",
@@ -1010,6 +1073,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=85",
    "text": "Find minimum number delay *[sic: should be \"minimum delay\"]* for the logic circuit below. Also find the gate size to achieve this delay.",
    "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "19-20 3(b)",
+    "18-19 TT2 8(d)"
+   ],
    "outline": "",
    "method": "Logical effort $G = \\prod g$, branching $B = \\prod b$, electrical $H = C_{out}/C_{in}$; $F = GBH$; $\\hat f = F^{1/N}$; $\\hat D = N\\hat f + P$; size backwards from the load: $C_{in} = gC_{out}/\\hat f$.",
    "answer": "$G = 25/9$, $B = 91/16$, $H = 8$, $F = 126.4$, $f = 3.35$, $P = 7$, $D = 20.4\\tau$; $x = 2.87$, $y = 1.78$, $z = 14.3$",
@@ -1029,6 +1097,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=43",
    "text": "Find the number of stages for minimum delay.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Equal stage efforts: $D = NF^{1/N} + P$; added inverters add $p_{inv}$ each; differentiate $NF^{1/N}$; $p_{inv} + \\rho(1 - \\ln\\rho) = 0$; $\\rho = 3.59$; $\\hat N = \\log_\\rho F \\approx \\log_4F$.",
    "draws": [
     "Graph: path delay against the number of stages"
@@ -1043,9 +1113,11 @@
    "subtopic": "Best number of stages",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=87",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=88",
    "text": "Find the stage effort for the ideal number of stages.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "$p_{inv} + \\rho(1 - \\ln\\rho) = 0$ gives $\\rho \\approx 3.59$; $\\hat N = \\ln F/\\ln\\rho$; round to a whole number; $f = F^{1/N}$.",
    "answer": "$\\hat N = 3.79$, so $N = 4$ with $f = 3.35$",
@@ -1065,6 +1137,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=39",
    "text": "You have to design a car alarm system in which the alarm will ring (Y= 1) if anyone of the following condition is satisfied. (i) The key is in (K= 1), The Seat belt is fastened (B=1) and the door is open (D=0) or (ii) The key is in, Door is closed and Seat belt is not fastened.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Truth table: $Y = KB\\overline{D} + K\\overline{B}D = K(B \\oplus D)$; nMOS network $K(B\\overline{D} + \\overline{B}D)$ under $\\overline{Y}$ plus an inverter; implement in static CMOS, nMOS with depletion load, pseudo-nMOS and dynamic (domino) styles.",
    "draws": [
     "Circuit: static CMOS implementation",
@@ -1081,9 +1155,11 @@
    "subtopic": "Static gates",
    "type": "diagram",
    "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=55",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56",
    "text": "Design a CMOS logic circuit to compute $F = AB + CD$ using (i) only NAND gates, (ii) compound gate. Choose the transistor width to achieve unit path resistance. If each input can present a maximum of 20 $\\lambda$ of transistor width, output must drive a load equivalent to 100 $\\lambda$ of transistor width, calculate the minimum delay to compute F. Which one is faster? Comment on your answer.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "$H = C_{out}/C_{in}$; NAND–NAND: $G = (4/3)^2$, $P = 4$; AOI22 + inverter: $G = 2$, $P = 5$; $\\hat D = 2F^{1/2} + P$ for each; size the gates.",
    "answer": "NAND–NAND 9.96τ (faster); AOI22 + inverter 11.3τ",
@@ -1104,6 +1180,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=46",
    "text": "Explain why NMOS network is not used as pull-up network.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "An nMOS pull-up has its source at the output: $V_{GS} = V_{DD} - V_{out}$, so it turns off at $V_{out} = V_{DD} - V_t$: a degraded 1, worse with body effect, slow, and it leaves static current in the next gate. A pMOS passes a strong 1.",
    "draws": [
@@ -1125,6 +1203,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=83",
    "text": "Implement the following expression using CMOS logic: $Y = AB + C(A + B)$.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Build $\\overline{Y}$: nMOS (A–B series) in parallel with [C in series with (A parallel B)]; pMOS is the dual; add an inverter for $Y$ (12 transistors).",
    "draws": [
     "Circuit: CMOS compound gate with widths and the output inverter"
@@ -1142,6 +1222,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=48",
    "text": "What are the sources of power dissipation in CMOS logic circuit?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Dynamic: switching power $\\alpha CV_{DD}^2f$ and short-circuit current while both transistors conduct. Static: subthreshold, gate and junction leakage, and contention current in ratioed circuits.",
    "draws": [
@@ -1163,6 +1245,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=49",
    "text": "What is activity factor? Figure 4.1 shows a 4-input AND gate built using a tree and a chain of gates. Determine the activity factors at each node in the circuit assuming the input probabilities PA = PB = PC = PD = 0.5.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "$P(\\text{output} = 1)$ for each gate from the input probabilities; activity $\\alpha = P(1 - P)$ (random independent data).",
    "answer": "Tree: $n_1, n_2$: 3/16, Y: 15/256. Chain: $n_3, n_4$: 3/16; $n_5, n_6$: 7/64; $n_7$, Z: 15/256",
@@ -1179,9 +1263,11 @@
    "subtopic": "Dynamic power",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=34",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=35",
    "text": "Write short note on –i) Static power dissipation ii) Dynamic power dissipation.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Static: $P = I_{static}V_{DD}$ from subthreshold, gate and junction leakage and from contention in ratioed logic. Dynamic: $P = \\alpha C_LV_{DD}^2f$ from charging the load, plus short-circuit current while switching.",
    "draws": [
@@ -1203,6 +1289,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44",
    "text": "Show that the dynamic power dissipation of a CMOS inverter varies directly with square of the power supply voltage whereas the delay of the circuit varies inversely with the power supply voltage.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Supply gives $Q = C_LV_{DD}$ at $V_{DD}$: $C_LV_{DD}^2$ per cycle; half stored, half lost, then the stored half lost on discharge; $P = \\alpha C_LV_{DD}^2f$; saturated nMOS current; $t_{pd} = C_L(V_{DD}/2)/I_{sat} \\approx C_L/(\\beta V_{DD})$.",
    "draws": [
     "Graph: dynamic power and delay against $V_{DD}$"
@@ -1220,6 +1308,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=47",
    "text": "You are synthesizing a chip composed of random logic with an average activity factor of 0.1. You are using a standard cell process with an average switching capacitance of 450 $pF/mm^2$. Estimate the dynamic power consumption of your chip if it has an area of 70 $mm^2$ and runs at 450 $MHz$ at $V_{DD}$ = 0.9 V.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "$C$ = capacitance per mm$^2$ × area; $P = \\alpha CV_{DD}^2f$.",
    "answer": "about 1.15 W"
@@ -1236,6 +1326,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=51",
    "text": "A digital system-on-chip in a 1 V 65 nm process (with 50 nm drawn channel lengths and $\\lambda$ = 25 nm) has 1 billion transistors, of which 50 million are in logic gates and the remainder in memory arrays. The average logic transistor width is 12 $\\lambda$ and the average memory transistor width is 4 $\\lambda$. The memory arrays are divided into banks and only the necessary bank is activated so the memory activity factor is 0.02. The static CMOS logic gates have an average activity factor of 0.1. Assume each transistor contributes 1 fF/Rm *[sic: should be fF/µm]* of gate capacitance and 0.8 fF/µm of diffusion capacitance. Neglect wire capacitance for now (though it could account for a large fraction of total power). **Estimate the switching power when operating at 1 GHz.** If Subthreshold leakage for OFF devices is 100 nA/µm for low-threshold devices and 10 nA/µm for high-threshold devices. Gate leakage is 5 nA/µm. Junction leakage is negligible. Memories use low-leakage devices everywhere. Logic uses low-leakage devices in all but 5% of the paths that are most critical for performance. **Estimate the static power consumption.**",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "$C$ = transistor width × capacitance per µm for logic and memory; $P_{sw} = \\alpha CV_{DD}^2f$ for each; static: subthreshold and gate leakage per µm × total width × $V_{DD}$.",
    "answer": "switching 6.1 W; static 859 mW (14 %)"
@@ -1252,6 +1344,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=19",
    "text": "Draw the schematic and stick diagram of the circuit implementing the logic $Y = \\overline{(A + B + C) \\cdot D}$",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "nMOS: A, B, C in parallel, in series with D; pMOS: A–B–C in series, in parallel with D. Stick diagram with the common Euler path A, B, C, D.",
    "draws": [
@@ -1268,9 +1362,14 @@
    "subtopic": "Stick diagrams",
    "type": "diagram",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63",
    "text": "Draw the stick diagram of the following Boolean function: $f = (A + B).(C + D)$ with their symbolic diagram and truth table.",
    "repeat_of": "2018-19 5(a)",
+   "times": 2,
+   "asked_in": [
+    "19-20 6(b)",
+    "18-19 5(a)"
+   ],
    "outline": "",
    "points": "$\\overline{f}$ from an OAI22 (nMOS: (A ∥ B) in series with (C ∥ D); pMOS: (A–B) ∥ (C–D)), then an inverter gives $f$. Euler order A, B, D, C on both strips; $f = 1$ in 9 of 16 rows.",
    "draws": [
@@ -1290,6 +1389,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=54",
    "text": "Draw the stick diagram of the following Boolean function: $f = \\overline{A.B.C}$ with their symbolic diagram and truth table.",
    "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "19-20 6(b)",
+    "18-19 5(a)"
+   ],
    "outline": "",
    "points": "$f = \\overline{ABC}$ is a NAND3: three parallel pMOS (width 2), three series nMOS (width 3); $f = 0$ only for $A = B = C = 1$. Stick diagram with gate order A, B, C on one Euler path.",
    "draws": [
@@ -1309,6 +1413,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=56",
    "text": "Write down the advantages of CMOS.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Low static power, full swing, ratioless, large noise margins, high input impedance and fan-out, high density, wide supply range."
   },
@@ -1321,9 +1427,11 @@
    "subtopic": "Setup and hold",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=49",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51",
    "text": "In the following circuit of Figure 4(a), determine whether there is any set up or hold time violation.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Clock arrival window at each flip-flop; data arrival window at FF2; hold: earliest data ≥ latest clock + hold; setup: latest data + setup ≤ $T$ + earliest clock.",
    "answer": "no hold violation (slack +1 ns); no setup violation if $T \\ge 21$ ns",
@@ -1344,6 +1452,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=57",
    "text": "Explain max-delay constraint and min-delay constraint in sequential circuits.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Max-delay (setup): $T_c \\ge t_{pcq} + t_{pd} + t_{setup}$; a failure is fixed by a slower clock. Min-delay (hold): $t_{cd} \\ge t_{hold} - t_{ccq}$; independent of the clock, a failure needs a redesign (add delay).",
    "draws": [
@@ -1365,6 +1475,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=59",
    "text": "Sketch logic circuit of flip-flop with synchronous reset and explain its operation.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "An AND gate on D with $\\overline{reset}$ before a master-slave flip-flop: $Q_{next} = D\\cdot\\overline{reset}$ at the rising edge, so reset acts only at a clock edge.",
    "draws": [
@@ -1384,9 +1496,11 @@
    "subtopic": "Dynamic logic",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=35",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=36",
    "text": "What is domino gate? Draw the circuit diagram of a domino OR gate.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "A domino gate is a dynamic gate (precharge pMOS, nMOS network, clocked foot) followed by a static inverter: non-inverting and safe to cascade. Domino OR: A and B nMOS in parallel under the precharged node X; the inverter gives $Y = A + B$.",
    "draws": [
@@ -1403,9 +1517,14 @@
    "subtopic": "Dynamic logic",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=60",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62",
    "text": "Explain the principle of dynamic logic circuit.",
    "repeat_of": "2018-19 6(a)",
+   "times": 2,
+   "asked_in": [
+    "19-20 6(a)",
+    "18-19 6(a)"
+   ],
    "outline": "",
    "points": "One clocked pMOS precharges the output to $V_{DD}$ while $\\phi = 0$ (foot off); when $\\phi = 1$ the nMOS network evaluates and discharges the output if it conducts, else the output stays high on its capacitance. Fewer transistors ($N + 2$), lower input capacitance, faster; needs monotonic inputs, charge sharing and leakage keepers.",
    "draws": [
@@ -1427,6 +1546,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=62",
    "text": "Explain the principle of dynamic inverter.",
    "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "19-20 6(a)",
+    "18-19 6(a)"
+   ],
    "outline": "",
    "points": "Precharge ($\\phi = 0$): clocked pMOS charges Y to $V_{DD}$, foot off. Evaluate ($\\phi = 1$): if A = 1, Y discharges; if A = 0, Y stays high on its capacitance; $Y = \\overline{A}$. Inputs must be monotonic; leakage needs a keeper.",
    "draws": [
@@ -1449,6 +1573,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=63",
    "text": "Design and implement full adder logic circuit.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "$S = A \\oplus B \\oplus C_{in}$, $C_{out} = AB + C_{in}(A \\oplus B)$; build from two half adders and an OR, or the 28-transistor mirror adder with $S = ABC_{in} + (A + B + C_{in})\\overline{C_{out}}$.",
    "draws": [
     "Circuit: full adder from XOR, AND and OR gates",
@@ -1464,9 +1590,11 @@
    "subtopic": "PLA",
    "type": "diagram",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=74",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=75",
    "text": "Sketch a dot diagram for a 2-input XOR using a PLA.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "AND plane: $P_1 = A\\overline{B}$, $P_2 = \\overline{A}B$; OR plane: $Y = P_1 + P_2$.",
    "draws": [
@@ -1485,6 +1613,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=65",
    "text": "Define PLA and PAL. Sketch a 3-input and 2-output PLA implementing the following logic expressions- $s = a\\overline{b}\\,\\overline{c} + \\overline{a}b\\overline{c} + \\overline{a}\\,\\overline{b}c + abc$, $c = ab + bc + ac$",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "PLA: programmable AND and OR planes. PAL: programmable AND plane, fixed OR. For s and c: 3 inputs (6 lines), 7 product lines, 2 outputs: four products to $s$, three to $c$.",
    "draws": [
@@ -1506,6 +1636,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=68",
    "text": "Explain how data is written and read in a DRAM sub-array.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Write: the driver forces the bitline, the wordline rises, the cell capacitor takes the level. Read: bitlines precharged to $V_{DD}/2$, wordline high, charge sharing gives $\\Delta V = \\pm(V_{DD}/2)C_{cell}/(C_{cell} + C_{bit})$, the sense amplifier compares with the reference bitline and restores the full level (destructive read).",
    "draws": [
@@ -1525,9 +1657,11 @@
    "subtopic": "Lithography",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=64",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=65",
    "text": "Explain the following: (i) positive mask, (ii) negative mask, (iii) positive photoresist and (iv) negative photoresist.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Positive mask: opaque pattern, clear field. Negative mask: clear pattern, opaque field. Positive resist: exposed part dissolves (same image as the mask). Negative resist: exposed part hardens and stays (reverse image).",
    "draws": [
@@ -1546,9 +1680,11 @@
    "subtopic": "Lithography",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=65",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=66",
    "text": "Describe the process sequence for patterning SiO$_2$ as illustrated in the figure 5(d).",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Clean, thermal oxidation, spin resist and soft bake, align and UV exposure, develop and hard bake, etch the exposed SiO$_2$ (HF or plasma), strip the resist, leaving the SiO$_2$ pattern.",
    "draws": [
@@ -1567,6 +1703,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=16",
    "text": "Define photolithography. briefly describe the major steps involved in photolithography.",
    "repeat_of": "2018-19 7(a)",
+   "times": 2,
+   "asked_in": [
+    "19-20 1(c)",
+    "18-19 TT1 7(a)"
+   ],
    "outline": "",
    "points": "Photolithography transfers a mask pattern into photoresist with light. Clean, dehydration bake and HMDS prime; spin coat; soft bake; align and expose; post-exposure bake; develop; hard bake; inspect; then etch or implant and strip.",
    "draws": [
@@ -1582,9 +1723,14 @@
    "subtopic": "Lithography",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=72",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=71",
    "text": "Briefly describe steps of photo-lithography.",
    "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "19-20 1(c)",
+    "18-19 TT1 7(a)"
+   ],
    "outline": "",
    "points": "Clean, dehydration bake and HMDS prime; spin coat; soft bake; align and expose; post-exposure bake; develop; hard bake; inspect; then etch or implant and strip.",
    "draws": [
@@ -1600,9 +1746,11 @@
    "subtopic": "Epitaxy",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=77",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=76",
    "text": "Briefly explain vapor phase epitaxy.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "CVD growth of a single-crystal layer that continues the substrate: SiH$_4 \\rightarrow$ Si + 2H$_2$ or SiCl$_4$ + 2H$_2 \\rightarrow$ Si + 4HCl at 1000 to 1250 °C on a clean surface; dopants (AsH$_3$, PH$_3$, B$_2$H$_6$) added to the gas; growth limited by surface reaction or mass transport.",
    "draws": [
@@ -1618,9 +1766,11 @@
    "subtopic": "Leakage and DIBL",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=18",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=19",
    "text": "Explain the following non-idealities of MOSFET- (i) Drain induced barrier lowering, (ii) subthreshold leakage. What are the effects of temperature on these non-idealities?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "DIBL: in a short channel the drain field lowers the source barrier, $V_t = V_{t0} - \\eta V_{ds}$, so off current rises with $V_{ds}$. Subthreshold leakage: below $V_t$ the current falls only exponentially, $I \\propto e^{(V_{gs} - V_t)/(nv_T)}$, about 60 to 100 mV per decade. Higher temperature raises both: $V_t$ falls and $v_T$ rises.",
    "draws": [
@@ -1640,6 +1790,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=82",
    "text": "Briefly explain the following terms: i) Drain induced barrier lowering, ii) Gate leakage.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "DIBL: in a short channel the drain field lowers the source barrier, $V_t = V_{t0} - \\eta V_{ds}$, so off current rises with $V_{ds}$. Gate leakage: electrons tunnel through a thin oxide (below about 15 to 20 Å); high-k dielectrics cut it.",
    "draws": [
@@ -1659,6 +1811,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=14",
    "text": "What is RCA clean? What are the steps? What contaminants can be removed in this process?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "RCA clean: SC-1 (NH$_4$OH:H$_2$O$_2$:H$_2$O 1:1:5, 75 to 80 °C) removes organics, particles and some metals; HF dip removes the oxide; SC-2 (HCl:H$_2$O$_2$:H$_2$O 1:1:6) removes alkali ions and metals; each followed by a DI-water rinse.",
    "draws": [
@@ -1677,6 +1831,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22",
    "text": "Find the equations and I-V characteristics curve of MOSFET current using long-channel model.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Channel charge $C_{ox}W(V_{GS} - V_t - V)$; speed $\\mu_n\\,dV/dx$; $I = Qv$; integrate source to drain for the linear law; put $V_{DS} = V_{GS} - V_t$ for saturation; no channel below $V_t$.",
    "draws": [
     "Diagram: nMOS in cutoff, linear and saturation",
@@ -1695,6 +1851,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=28",
    "text": "State Moore's law. Discuss the problems that arise due to MOSFET scaling.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Moore's law: transistor count doubles about every two years. Scaling problems: short-channel effects (DIBL, $V_t$ roll-off, punch-through), subthreshold and gate leakage, velocity saturation, interconnect RC delay, power density (end of Dennard scaling), variability, lithography limits.",
    "draws": [
@@ -1710,9 +1868,11 @@
    "subtopic": "CVSL",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=29",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=30",
    "text": "Explain the principle of cascode voltage switch logic.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Dual-rail logic: complementary nMOS networks for $f$ and $\\overline{f}$ under two cross-coupled pMOS; the conducting network pulls one output low, which turns on the pMOS of the other output; full swing, no static current, both polarities, but more transistors and contention while switching.",
    "draws": [
@@ -1731,6 +1891,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=42",
    "text": "Explain input ordering delay effect.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "The delay depends on which series input switches last: the outer input (next to the output) is faster because the inner node is already discharged ($p = 2$ against $7/3$ for a NAND2); put the latest-arriving signal on the outer input.",
    "draws": [
@@ -1746,9 +1908,11 @@
    "subtopic": "Glitches",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=46",
    "text": "Define glitch? How does it increase power consumption? How it can be reduced?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "A glitch is a spurious transition caused by unequal input arrival times. It charges and discharges node capacitance needlessly ($CV_{DD}^2$ each, a higher $\\alpha$) and propagates. Reduce by balancing paths, shallower logic or pipelining, restructuring, and gating.",
    "draws": [
@@ -1767,6 +1931,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48",
    "text": "Define crosstalk. Show how crosstalk induces noise in different cases. How can crosstalk be reduced?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Crosstalk: coupling through $C_{adj}$ from an aggressor to a victim. Floating victim: $\\Delta V = \\frac{C_{adj}}{C_{gnd} + C_{adj}}\\Delta V_{agg}$; driven victim: smaller by $1/(1 + k)$ and decays; both switching: effective $C = C_{gnd} + k_MC_{adj}$ ($k_M$ 0 to 2). Reduce by spacing, shielding, buffering, careful routing.",
    "draws": [
@@ -1782,9 +1948,11 @@
    "subtopic": "Sheet resistance",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=49",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=50",
    "text": "Define sheet resistance. How does interconnect affect the performance of a system?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "$R_\\square = \\rho/t$ (Ω per square), $R = R_\\square l/w$. Interconnect adds RC delay (growing as length squared), dynamic power, crosstalk and IR-drop noise, electromigration and area.",
    "draws": [
@@ -1800,9 +1968,11 @@
    "subtopic": "Hold time",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53",
    "text": "What is min-delay constraint? Find min-delay for a system sequenced with flip-flop. If min-delay occurs, what is the solution?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Min-delay (hold): the shortest path must not let new data reach the next element within its hold time, $t_{cd} \\ge t_{hold} - t_{ccq}$ (plus skew); independent of the clock period. Fix: pad short paths with buffers, use flip-flops with small hold time.",
    "draws": [
@@ -1818,9 +1988,11 @@
    "subtopic": "Cycle time",
    "type": "numerical",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54",
    "text": "The Itanium 2 ALU self-bypass path is shown in Figure 5.1, and delays associated with each element are given in Table 5.1. Calculate the minimum cycle time $T_c$ at which ALU self-bypass path will operate correctly. The earliest input to the late bypass multiplexer is imm value coming from another flip-flop. Will this path experience any hold-time failures?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Add the delays along the self-bypass loop; $T_c = t_{pcq} + t_{pd} + t_{setup}$; hold check: $t_{ccq} + t_{cd} \\ge t_{hold}$.",
    "answer": "$T_c = 1152$ ps (about 0.87 GHz); no hold failure",
@@ -1837,9 +2009,11 @@
    "subtopic": "Leakage",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58",
    "text": "Define stack effect. Find subthreshold leakage current for two series OFF transistor.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Subthreshold law $I = I'_{off}10^{(V_{GS} + \\eta V_{DS})/S}$; bottom: $V_{GS} = 0$, $V_{DS} = V_x$; top: $V_{GS} = -V_x$, $V_{DS} = V_{DD} - V_x$; equal currents give $V_x$; divide by the single-transistor leakage.",
    "draws": [
     "Circuit: one OFF transistor and two in series"
@@ -1854,9 +2028,11 @@
    "subtopic": "SRAM",
    "type": "diagram",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=58",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=59",
    "text": "(i) Show the circuit diagram of a 2 x 2 SRAM array which uses 6-transistor memory cell as basic storage cell. Clearly show the row select, column select, pre-charge and sense signal in your circuit. (ii) Explain how the READ and WRITE operation are performed showing the second row and first column cell as an example. (iii) Explain how sense amplifier reduces the READ time of the cell.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "2 × 2 array of 6T cells; word lines from the row decoder; column-select pass transistors; precharge pMOS on every bitline; sense amplifier and write driver. Read: precharge, WL high, the 0 side discharges a bitline, sense. Write: drive the bitlines, WL high, the cell flips.",
    "draws": [
@@ -1875,9 +2051,11 @@
    "subtopic": "SRAM",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=64",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=65",
    "text": "Draw logic diagram of a SRAM cell and explain its different modes of operation.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "6T SRAM: cross-coupled inverters with two access nMOS on WL to bit and $\\overline{bit}$. Hold: WL = 0, the latch keeps the data. Read: bitlines precharged, WL = 1, the 0 side discharges its bitline, the sense amplifier reads (pull-down stronger than access). Write: bitlines driven, access stronger than pull-up.",
    "draws": [
@@ -1897,9 +2075,11 @@
    "subtopic": "ROM",
    "type": "diagram",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=66",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=67",
    "text": "Design and implement a pseudo-nMOS ROM to store the data shown in Figure 6.1. Also draw the dot diagram representation.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "2:4 decoder drives 4 word lines; 6 bit lines with grounded-gate pMOS pull-ups and output inverters; an nMOS at each stored 1 (12 transistors); the dot diagram marks the same places.",
    "draws": [
@@ -1919,6 +2099,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=13",
    "text": "Explain the C-V characteristics of intrinsic MOS gate capacitance in different regions.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "The gate–oxide–body is a capacitor $C_0 = C_{ox}WL$. On p-type: $C_{ox}$ in accumulation ($V_g < 0$); falls in depletion as the depletion layer adds in series; back to $C_{ox}$ in inversion at low frequency. Across regions the gate capacitance splits into gate–source and gate–drain parts (cutoff, linear, saturation $\\tfrac23C_0$ to source).",
    "draws": [
@@ -1938,6 +2120,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=16",
    "text": "A pseudo NMOS inverter is designed such that the output voltage becomes 0.25 V when the input voltage is 5 V. The following data are given: $\\mu_n C_{ox}$ = 120 $\\mu$A/V$^2$, $\\mu_p C_{ox}$ = 50 $\\mu$A/V$^2$, $V_{ton}$ = 1V, $V_{top}$ = -1 V, $V_{DD}$ = 5 V, $\\gamma$ = 0.5. Assume that the body of the NMOS transistor is connected with the ground and the body of the PMOS transistor is connected with $V_{DD}$. (i) Draw the circuit diagram of the inverter. (ii) Calculate the inverter ratio i.e., the ratio of driver transistor (W/L) to the load transistor (W/L). (iii) What will be the output voltage if the input voltage is held at 0.25 V? Explain your answer.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Body tied to source, so $V_{SB} = 0$; nMOS linear, pMOS saturated at $V_{in} = 5$ V, $V_{out} = 0.25$ V; equate the currents to get $k_n/k_p$ and the width ratio.",
    "answer": "$k_n/k_p = 8.26$; $(W/L)_n/(W/L)_p = 3.44$",
@@ -1958,6 +2142,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=26",
    "text": "Differentiate between the diffusion process and the ion implantation process in semiconductor fabrication.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Diffusion: dopant enters by heat, peak at the surface, more lateral spread, less precise. Ion implantation: accelerated ions, peak below the surface, precise dose and depth, low temperature, needs annealing.",
    "draws": [
@@ -1976,9 +2162,11 @@
    "subtopic": "Elmore delay",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=28",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=29",
    "text": "For the RC circuit shown in Figure 2(a), compute the Elmore delays from input node to node 7 and from input node to node 5 of this circuit in terms of R and C component values.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Elmore delay to a node: sum over every resistor on the path from the input of R times all the capacitance downstream of it.",
    "answer": "$t_{D7} = R_1(C_1 + \\dots + C_8) + R_6(C_6 + C_7 + C_8) + R_7(C_7 + C_8)$; $t_{D5}$ similarly along its path",
@@ -1995,9 +2183,11 @@
    "subtopic": "Beta ratio",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=30",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=31",
    "text": "Briefly explain what happens to the transfer characteristics and noise margins when beta ratio is increased in a CMOS inverter pair.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Raising $\\beta_n/\\beta_p$ strengthens the nMOS: the VTC moves left, $V_M$ falls ($V_M = \\frac{V_{DD} - |V_{tp}| + V_{tn}\\sqrt r}{1 + \\sqrt r}$), $NM_L$ falls and $NM_H$ rises; they are equal at $\\beta_n/\\beta_p = 1$.",
    "draws": [
@@ -2016,6 +2206,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=42",
    "text": "For the logic function $Y = \\overline{(A + BC) \\cdot D}$, choose transistor widths to achieve equal rise and fall resistance as a unit inverter. Assume, $\\mu_n = 3\\mu_p$",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Unit inverter n 1, p 3 ($\\mu_n = 3\\mu_p$); series transistors need double width, parallel ones unit width; find the worst path in each network and size each device.",
    "answer": "nMOS: A = 3/2, B = C = D = 3; pMOS: D = 3, A = B = C = 6",
@@ -2035,6 +2227,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=47",
    "text": "Explain the inverter width sizing for favoring the rising edge, falling edge, or achieving an unskewed inverter.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Unskewed: p 2, n 1, $g_u = g_d = 1$. HI-skew (fast rise): p 2, n 1/2, $g_u = 5/6$, $g_d = 5/3$. LO-skew (fast fall): p 1, n 1, $g_u = 4/3$, $g_d = 2/3$.",
    "draws": [
@@ -2050,9 +2244,11 @@
    "subtopic": "Flip-flops",
    "type": "diagram",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=53",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=54",
    "text": "Show the circuit diagram of an asynchronous resettable Flip-Flop and explain its operation utilizing a timing diagram.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Master–slave transmission-gate flip-flop with a NAND ($\\overline{R}$) in the master loop and a NOR ($R$) in the slave loop; $R = 1$ forces the state to 0 at once, independent of the clock.",
    "draws": [
@@ -2072,9 +2268,11 @@
    "subtopic": "Flip-flops",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=75",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=76",
    "text": "Fill in the truth table for the flip flop shown in Figure 6(f). Is this a positive edge triggered flip flop?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Rows ($X$, $Y$, $\\overline{Q}$, $Q$) = (1, 0, 0, 1), (1, 0, 1, 0), (0, 1, 1, 0), (0, 1, 0, 1); master transparent at $\\phi = 0$, slave at $\\phi = 1$: yes, positive edge triggered.",
    "draws": [
@@ -2090,9 +2288,11 @@
    "subtopic": "Design flow",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=56",
    "text": "Suppose you have written Verilog code to operate a microprocessor. What will be the upcoming steps till its fabrication? Briefly explain your answer.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "RTL verification, logic synthesis (netlist, scan), floorplan, placement and clock tree, routing, sign-off (STA, DRC, LVS, power), GDSII tape-out, masks, wafer fabrication, test, dicing, packaging.",
    "draws": [
@@ -2108,9 +2308,11 @@
    "subtopic": "Pass transistors",
    "type": "diagram",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=55",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=57",
    "text": "Implement a 2-input AND gate using both transmission gates and pass-transistor logic.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Transmission gates: pass A when B = 1, pass 0 when B = 0 (full swing). Pass transistors: nMOS(B) passes A, nMOS($\\overline{B}$) pulls Y to 0; a weak 1 of $V_{DD} - V_t$ needs restoring.",
    "draws": [
@@ -2129,9 +2331,11 @@
    "subtopic": "Pass transistors",
    "type": "diagram",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=68",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=70",
    "text": "Design a 2-to-1 multiplexer using pass transistor logic. Mention its working procedure.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "nMOS with gate $\\overline{S}$ passes $D_0$, nMOS with gate $S$ passes $D_1$, outputs joined: $Y = \\overline{S}D_0 + SD_1$; exactly one switch conducts; transmission gates give full swing.",
    "draws": [
@@ -2147,9 +2351,11 @@
    "subtopic": "Bus architectures",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=62",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=63",
    "text": "A 4-bit datapath consists of register, ALU and a shifter. Show two possible bus architectures of the system such that an addition operation of two operands stored in the register and storing the result back in the register can be computed in at most two clock cycles.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Two buses: cycle 1 reads both operands and adds (result latched), cycle 2 writes back: 2 cycles. Three buses: read A and B and write the result on bus C in 1 cycle.",
    "draws": [
@@ -2165,9 +2371,11 @@
    "subtopic": "Verilog",
    "type": "design",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=70",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=71",
    "text": "Design a 7-segment display driver in Verilog.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Segment names a to g; `always @(*) case (data)` mapping 0 to 9 to the 7-bit patterns (0: 1111110, …, 9: 1111011); default blank.",
    "draws": [
     "Diagram: segment names and the pattern of each digit"
@@ -2182,9 +2390,11 @@
    "subtopic": "Verilog",
    "type": "design",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=73",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=74",
    "text": "Write a Verilog code for the FSM described in Question 6(c).",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "State register `always @(posedge clk, posedge reset)`; next-state `case` (S0 → S1 → S2 → S0); `assign y = (state == S0)`."
   },
   {
@@ -2196,9 +2406,11 @@
    "subtopic": "FSM",
    "type": "design",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=71",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=72",
    "text": "You have to design a divide-by-3 counter using FSM. (i) Draw the state transition diagram of the finite state machine described. (ii) Derive the state transition table and equations for the next-state logic. (iii) Draw the complete FSM circuit.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "States S0 (y = 1), S1, S2 in a ring; encode 00, 01, 10 (11 don't care); state table; next-state $S_1' = S_0$, $S_0' = \\overline{S_1 + S_0}$; $y = \\overline{S_1}\\,\\overline{S_0}$; two D flip-flops and one NOR2.",
    "draws": [
     "Diagram: state transition diagram",
@@ -2339,7 +2551,7 @@
    "used": [
     {
      "label": "19-20 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=18"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=19"
     }
    ]
   },
@@ -2351,7 +2563,7 @@
    "used": [
     {
      "label": "19-20 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=18"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=19"
     }
    ]
   },
@@ -2363,7 +2575,7 @@
    "used": [
     {
      "label": "19-20 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=18"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=19"
     }
    ]
   },
@@ -2531,7 +2743,7 @@
    "used": [
     {
      "label": "20-21 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=30"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=31"
     },
     {
      "label": "19-20 3(a)",
@@ -2547,7 +2759,7 @@
    "used": [
     {
      "label": "20-21 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=30"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=31"
     }
    ]
   },
@@ -2559,7 +2771,7 @@
    "used": [
     {
      "label": "20-21 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=30"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=31"
     }
    ]
   },
@@ -2695,7 +2907,7 @@
    "used": [
     {
      "label": "18-19 7(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=73"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=72"
     }
    ]
   },
@@ -2707,7 +2919,7 @@
    "used": [
     {
      "label": "18-19 7(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=73"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=72"
     }
    ]
   },
@@ -2723,7 +2935,7 @@
     },
     {
      "label": "18-19 7(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=72"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=71"
     }
    ]
   },
@@ -2735,7 +2947,7 @@
    "used": [
     {
      "label": "18-19 7(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=77"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=76"
     }
    ]
   },
@@ -2819,7 +3031,7 @@
    "used": [
     {
      "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=23"
     },
     {
      "label": "19-20 3(b)",
@@ -2891,7 +3103,7 @@
    "used": [
     {
      "label": "18-19 8(e)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=87"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=88"
     }
    ]
   },
@@ -2975,7 +3187,7 @@
    "used": [
     {
      "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=23"
     },
     {
      "label": "19-20 3(b)",
@@ -3003,7 +3215,7 @@
    "used": [
     {
      "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=23"
     },
     {
      "label": "19-20 3(b)",
@@ -3043,7 +3255,7 @@
    "used": [
     {
      "label": "20-21 2(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=29"
     }
    ]
   },
@@ -3055,7 +3267,7 @@
    "used": [
     {
      "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=23"
     }
    ]
   },
@@ -3067,7 +3279,7 @@
    "used": [
     {
      "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=23"
     }
    ]
   },
@@ -3079,7 +3291,7 @@
    "used": [
     {
      "label": "20-21 2(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=32"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=33"
     }
    ]
   },
@@ -3091,7 +3303,7 @@
    "used": [
     {
      "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=23"
     }
    ]
   },
@@ -3187,7 +3399,7 @@
    "used": [
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58"
     }
    ]
   },
@@ -3199,7 +3411,7 @@
    "used": [
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58"
     }
    ]
   },
@@ -3283,7 +3495,7 @@
    "used": [
     {
      "label": "20-21 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=35"
     }
    ]
   },
@@ -3295,7 +3507,7 @@
    "used": [
     {
      "label": "20-21 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=35"
     }
    ]
   },
@@ -3343,7 +3555,7 @@
    "used": [
     {
      "label": "19-20 4(e)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=50"
     }
    ]
   },
@@ -3355,7 +3567,7 @@
    "used": [
     {
      "label": "18-19 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=26"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=27"
     }
    ]
   },
@@ -3367,7 +3579,7 @@
    "used": [
     {
      "label": "18-19 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=26"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=27"
     }
    ]
   },
@@ -3379,7 +3591,7 @@
    "used": [
     {
      "label": "18-19 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=26"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=27"
     }
    ]
   },
@@ -3415,7 +3627,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=55"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56"
     }
    ]
   },
@@ -3427,7 +3639,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=55"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56"
     }
    ]
   },
@@ -3439,7 +3651,7 @@
    "used": [
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63"
     }
    ]
   },
@@ -3451,7 +3663,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=60"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62"
     }
    ]
   },
@@ -3463,7 +3675,7 @@
    "used": [
     {
      "label": "19-20 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=29"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=30"
     }
    ]
   },
@@ -3559,7 +3771,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=68"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=70"
     }
    ]
   },
@@ -3607,7 +3819,7 @@
    "used": [
     {
      "label": "19-20 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54"
     }
    ]
   },
@@ -3619,7 +3831,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53"
     }
    ]
   },
@@ -3631,7 +3843,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53"
     }
    ]
   },
@@ -3643,7 +3855,7 @@
    "used": [
     {
      "label": "19-20 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54"
     }
    ]
   },
@@ -3655,7 +3867,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51"
     }
    ]
   },
@@ -3667,7 +3879,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51"
     }
    ]
   },
@@ -3679,7 +3891,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51"
     }
    ]
   },
@@ -3691,7 +3903,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51"
     }
    ]
   },
@@ -3703,7 +3915,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=71"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=72"
     }
    ]
   },
@@ -3751,7 +3963,7 @@
    "used": [
     {
      "label": "19-20 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=64"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=65"
     }
    ]
   },
@@ -3763,7 +3975,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=66"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=67"
     }
    ]
   },
@@ -3775,7 +3987,7 @@
    "used": [
     {
      "label": "20-21 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=59"
     }
    ]
   },
@@ -3787,7 +3999,7 @@
    "used": [
     {
      "label": "20-21 6(e)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=74"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=75"
     }
    ]
   }

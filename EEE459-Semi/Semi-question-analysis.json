@@ -295,6 +295,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=11",
    "text": "Between Si and GaAs, which has higher electron mobility and why?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "GaAs: $\\mu_n = 8500$ against 1350 cm$^2$/V s for Si. $\\mu = e\\tau/m^*$: GaAs has one sharply curved direct $\\Gamma$ valley with $m^* = 0.067\\,m_0$; Si has six flat X valleys (conductivity mass $0.26\\,m_0$) and intervalley scattering among them; GaAs also has weaker phonon scattering in the $\\Gamma$ valley.",
    "draws": [
@@ -317,6 +319,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=15",
    "text": "Discuss Velocity saturation and Gunn effect .",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Velocity saturation: hot carriers lose their extra energy to optical phonons, so $v_d$ levels off near $10^7$ cm/s (Si above about $3\\times10^4$ V/cm). Gunn effect: in n-GaAs above about 3.2 kV/cm electrons transfer from the light $\\Gamma$ valley to the heavy L valley, $v_d$ falls (negative differential mobility), and high-field domains form and travel, giving microwave current pulses.",
    "draws": [
@@ -340,6 +344,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=19",
    "text": "Prove that along the [100] and [111] direction in k-space, for Si, the variation of electron energy with respect to wave number is higher for light holes than for heavy holes.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Parabolic band $E = E_v - \\hbar^2k^2/2m^*$; slope $\\hbar^2k/m^*$; ratio of slopes at the same $k$ is $m_{hh}/m_{lh}$; Luttinger masses along [100] ($\\gamma_2$) and [111] ($\\gamma_3$); ratios 1.45 and 5.30, both above 1.",
    "draws": [
     "Graph: E-k of the Si heavy- and light-hole bands along [111] and [100]"
@@ -357,6 +363,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=23",
    "text": "For a $GaAs - Al_xGa_{1-x}As$ heterojunction, determine the following: (i) Energy-Band diagram: Case-1: Before contact, Case-2: After contact (ii) Show that the built-in potential (using hole concentration) $\\displaystyle eV_{bi} = -\\Delta E_v + kT\\ln\\left(\\frac{P_P\\,N_{VN}}{P_N\\,N_{VP}}\\right)$. Given, GaAs is doped P type, $Al_xGa_{1-x}As$ is doped $N^+$ type. Assume: $x = 0.25$ & $\\Delta E_c = \\frac{1}{2}\\Delta E_g$ $P_p$ = hole concentration in P type region, $P_N$ = hole concentration in N type region, $N_{VN}$ and $N_{VP}$ are density of states of electron and hole respectively.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "$E_g$ of AlGaAs from $x$, $\\Delta E_c = \\Delta E_v = 0.156$ eV; band diagrams before (common vacuum level) and after contact (flat $E_F$, spike and step); hole concentration on each side; solve for $E_F$; $eV_{bi} = E_{FN} - E_{FP}$; put $E_{vN} - E_{vP} = -\\Delta E_v$.",
    "draws": [
     "Diagram: the three heterojunction band alignments",
@@ -379,6 +387,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=29",
    "text": "Which semiconductors are most extensively used in near infra-red region? Explain the reasons behind it.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Near-IR (0.75 to 2 µm) uses III-V compounds: GaAs/AlGaAs (0.8 to 0.9 µm), InGaAsP and InGaAs on InP (1.3 and 1.55 µm, the fibre windows), Ge or InGaAs detectors. Reasons: band gaps 0.6 to 1.65 eV give $\\lambda = 1.24/E_g$ in the near-IR; direct gaps give efficient emission; alloys tune the gap while lattice-matched to InP or GaAs.",
    "draws": [
@@ -397,6 +407,8 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=32",
    "text": "Why is lattice matching of semiconductor important for hetero-structured devices? Discuss the effect of strain and critical thickness in epitaxial growth.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Matching ($f = (a_L - a_S)/a_S \\approx 0$) avoids misfit and threading dislocations, which are non-radiative recombination and scattering centres. A thin mismatched layer grows strained (pseudomorphic, tetragonal distortion) up to a critical thickness $h_c$ (Matthews–Blakeslee), beyond which dislocations relax it; strain also shifts band edges and can be used on purpose.",
    "draws": [
@@ -416,9 +428,11 @@
    "subtopic": "Isoelectronic traps",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=35",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=36",
    "text": "Discuss the effect of isoelectric trap in the ternary compound semiconductor $GaAs_{1-x}P_x$.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "GaAs$_{1-x}$P$_x$ is direct for $x < 0.45$ and indirect above. Nitrogen on a P site is isoelectronic and forms a trap just below $E_c$; the electron is localised in space, so spread in $k$, and can recombine with a hole without a phonon; this makes indirect GaAsP:N (red-orange, yellow, green) LEDs efficient.",
    "draws": [
@@ -434,9 +448,11 @@
    "subtopic": "Quaternary alloys",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=37",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=38",
    "text": "Fig. 1 shows the Bandgap Vs. lattice constant for different binary compounds. Assume that a quaternary compound $In_xGa_{1-x}As_ySb_{1-y}$ is grown on InP substrate. Find the composition if the bandgap is 1 eV and lattice parameter is 5.93 Å.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Read the corner binaries from Fig. 1; Vegard's law (bilinear interpolation) for $a(x, y)$ and $E_g(x, y)$ of In$_x$Ga$_{1-x}$As$_y$Sb$_{1-y}$; set $a = 5.93$ Å and $E_g = 1$ eV; solve the two equations.",
    "answer": "$x \\approx 0.24$, $y \\approx 0.60$ (straight-line interpolation; with the bowing printed in Fig. 1 no alloy has both values)",
@@ -453,9 +469,11 @@
    "subtopic": "Schottky junction",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=42",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=43",
    "text": "Draw the ideal energy band diagram of a metal semiconductor junction under: (i) Reverse bias condition (ii) Forward bias condition",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Ideal metal/n-type contact: the barrier from the metal stays $e\\phi_{B0} = e(\\phi_m - \\chi)$. Reverse bias raises the barrier seen from the semiconductor to $e(V_{bi} + V_R)$, widens the depletion layer, tiny current. Forward bias lowers it to $e(V_{bi} - V_a)$, narrows the layer, electrons flow into the metal.",
    "draws": [
@@ -474,9 +492,11 @@
    "subtopic": "Schottky junction",
    "type": "numerical",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=50",
    "text": "Consider a contact between tungsten and n-type silicon doped to $N_d = 1\\times10^{16}~\\text{cm}^{-3}$ at $T = 300~\\text{K}$. Determine the (i) theoretical barrier height (ii) built-in potential barrier (iii) maximum electric field in the metal-semiconductor diode for zero applied bias, and (iv) the junction capacitance. Given that, the metal work function for tungsten (W) is 4.55 V and the electron affinity for silicon is 4.01 V. Assume $N_c = 2.8\\times10^{19}~\\text{cm}^{-3}$.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "$\\phi_{B0} = \\phi_m - \\chi$; $\\phi_n = V_t\\ln(N_c/N_d)$; $V_{bi} = \\phi_{B0} - \\phi_n$; $x_n = [2\\epsilon_sV_{bi}/(eN_d)]^{1/2}$; $|E_{max}| = eN_dx_n/\\epsilon_s$; $C' = \\epsilon_s/x_n$.",
    "answer": "$\\phi_{B0} = 0.54$ V; $V_{bi} = 0.334$ V; $|E_{max}| = 3.22\\times10^4$ V/cm; $C' = 4.98\\times10^{-8}$ F/cm$^2$",
@@ -494,9 +514,11 @@
    "subtopic": "Density of states",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=46",
    "text": "Explain how the density of states changes qualitatively as the dimensionality reduces from $3D \\rightarrow 2D \\rightarrow 1D$. Sketch $D(E)$ vs $E$ for each case.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "$D(E)$ counts states per unit energy. 3D: $D \\propto \\sqrt{E - E_c}$. 2D quantum well: constant $m^*/\\pi\\hbar^2$ per subband, a staircase touching the 3D curve. 1D wire: $D \\propto 1/\\sqrt{E - E_n}$ spikes at each subband edge. 0D dot: delta functions. Confinement squeezes states into sharper features.",
    "draws": [
@@ -516,9 +538,11 @@
    "subtopic": "Barrier lowering",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=53",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=54",
    "text": "Consider a gallium arsenide metal-semiconductor contact in which the electric field in the semiconductor is assumed to be $E = 6.8\\times10^{4}~\\text{V cm}^{-1}$. Calculate the Schottky barrier lowering (due to image force induced lowering) and the position of the maximum barrier height.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "Image-force lowering $\\Delta\\phi = \\sqrt{eE/(4\\pi\\epsilon_s)}$; position $x_m = \\sqrt{e/(16\\pi\\epsilon_sE)}$ with $\\epsilon_s$ of GaAs.",
    "answer": "$\\Delta\\phi = 27.3$ mV at $x_m = 2.01$ nm",
@@ -535,9 +559,11 @@
    "subtopic": "Barrier lowering",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=63",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=64",
    "text": "Discuss the following non-ideal effects on barrier height of a metal-semiconductor heterojunction: (i) Image-force-induced lowering (ii) Interface states",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "(i) The image charge of an electron lowers the barrier by $\\Delta\\phi = \\sqrt{eE/4\\pi\\epsilon_s}$ at $x_m = \\sqrt{e/16\\pi\\epsilon_sE}$; $E$ grows with reverse bias, so the reverse current rises with $V_R$. (ii) Interface states with a neutral level $e\\phi_0$ pin the surface Fermi level, so the barrier depends only weakly on the metal work function (Bardeen limit).",
    "draws": [
@@ -558,9 +584,11 @@
    "subtopic": "Fields and potentials",
    "type": "derivation",
    "marks": 12.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=58",
    "text": "A narrow bandgap N-type and a wide bandgap P-type material are used to form a heterojunction. If they are straddling type, then draw the energy band diagram of the heterojunction before contact and after contact at thermal equilibrium. With necessary assumption, derive expression for electric field and electrostatic potential in both regions.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "$\\rho = +eN_{d1}$, $-eN_{a2}$; Poisson in each material with its own $\\epsilon$; fields zero at the edges; $\\epsilon_1E_1(0) = \\epsilon_2E_2(0)$ gives $N_{d1}x_n = N_{a2}x_p$; integrate again with $\\phi$ continuous; $V_{bi} = V_{bi1} + V_{bi2}$; solve for $x_n$, $x_p$.",
    "draws": [
     "Diagram: narrow-gap N and wide-gap P before contact",
@@ -577,9 +605,11 @@
    "subtopic": "Graded junction",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=67",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=68",
    "text": "Describe how a linearly graded junction is formed.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "Diffuse acceptors into a uniformly doped n-type wafer (or grade the doping during epitaxy); near the depth where $N_a = N_d$ the net doping is $a(x - x_j)$: linear. Then $\\rho = eax$, the field is parabolic, $W = [12\\epsilon_s(V_{bi} + V_R)/(ea)]^{1/3}$ and $C' \\propto (V_{bi} + V_R)^{-1/3}$.",
    "draws": [
@@ -600,9 +630,11 @@
    "subtopic": "Channel profiles",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=71",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=72",
    "text": "Draw the channel space charge region profiles of a single gate n-channel JFET for the following operating regions: (where $V_p$, $V_g$, and $V_d$ are pinch-off, gate, and drain voltage respectively) (i) $V_g > V_p$ and $V_d < V_{d,sat}$ (ii) $V_g > V_p$ and $V_d = V_{d,sat}$ (iii) $V_g > V_p$ and $V_d > V_{d,sat}$",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "The gate–channel reverse bias grows from source to drain, so the depletion layer is a wedge, thickest at the drain. (i) $V_d < V_{d,sat}$: channel open throughout, linear region. (ii) $V_d = V_{d,sat}$: the depletion just touches the bottom at the drain (pinch-off). (iii) $V_d > V_{d,sat}$: the pinched-off part grows towards the source, current saturates.",
    "draws": [
@@ -619,9 +651,11 @@
    "subtopic": "Pinch-off",
    "type": "derivation",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=74",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=75",
    "text": "Derive the formula of internal pinch-off voltage in an n-channel JFET.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Poisson with $\\rho = +eN_d$ in the depletion layer; $E = 0$ at $y = h$; potential $eN_dh^2/2\\epsilon_s$; equals $V_{bi} - V_{gs}$; gives $h$; pinch-off at $h = a$; $V_{p0} = ea^2N_d/2\\epsilon_s$, $V_p = V_{bi} - V_{p0}$.",
    "draws": [
     "Diagram: channel geometry of single- and two-gate JFETs",
@@ -637,9 +671,11 @@
    "subtopic": "Pinch-off",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=78",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=79",
    "text": "Consider a GaAs n-channel pn JFET at $T = 300~\\text{K}$ with $N_a = 1\\times10^{18}~\\text{cm}^{-3}$, $N_d = 3\\times10^{15}~\\text{cm}^{-3}$, $\\epsilon_s = 13.1$, and $a = 0.70~\\mu\\text{m}$. Determine the forward-bias gate voltage required to open a channel region that is $0.10~\\mu\\text{m}$ thick with zero drain voltage.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "$V_{bi} = V_t\\ln(N_aN_d/n_i^2)$; $V_{p0} = ea^2N_d/2\\epsilon_s$; $V_p = V_{bi} - V_{p0}$; for an open channel $a - h = 0.10$ µm, $h = 0.60$ µm, $V_{bi} - V_{gs} = eN_dh^2/2\\epsilon_s$, solve for $V_{gs}$.",
    "answer": "$V_{bi} = 1.250$ V; $V_{p0} = 1.016$ V; $V_p = +0.235$ V; $V_{gs} \\approx +0.50$ V (forward)",
@@ -656,9 +692,11 @@
    "subtopic": "Ohmic contacts",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=80",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=81",
    "text": "Sketch the ideal energy band diagram of a metal semiconductor junction in which $\\Phi_m < \\Phi_s$. Explain why this is an ohmic contact.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "With $\\phi_m < \\phi_s$ on n-type, electrons flow from the metal into the semiconductor and form an accumulation layer; the bands bend down by $e(\\phi_s - \\phi_m)$; electrons meet no barrier either way, so the I-V is linear with low resistance: an ohmic contact.",
    "draws": [
@@ -678,9 +716,11 @@
    "subtopic": "Ebers-Moll",
    "type": "derivation",
    "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85",
    "text": "Draw the equivalent circuit for basic Ebers-Moll model as used in BJT. Also derive the expression of $V_{CE}(sat)$ from this model.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "Two diodes $I_F$, $I_R$ with sources $\\alpha_FI_F$, $\\alpha_RI_R$; KCL gives $I_C$, $I_E$, $I_B$; saturation: drop the $-1$ terms, $V_{BE}$ and $V_{BC}$ as logarithms; solve for $I_F$, $I_R$ from $I_C$, $I_B$; $V_{CE} = V_{BE} - V_{BC}$; reciprocity $I_{CS}/I_{ES} = \\alpha_F/\\alpha_R$.",
    "draws": [
     "Diagram: npn regions and currents",
@@ -697,9 +737,11 @@
    "subtopic": "High-level injection",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=89",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=90",
    "text": "Explain high level injection and current crowding effects in a BJT with necessary figures. How can the problem of current crowding be solved?",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "points": "High-level injection: injected electrons in the base approach $N_B$, extra holes come in for neutrality, effective base doping rises, injection efficiency falls, $I_C \\propto e^{V_{BE}/2V_t}$, $\\beta$ falls at high current. Current crowding: the lateral base current's $IR$ drop makes $V_{BE}$ largest at the emitter edges, so current crowds there (hot spots). Cure: narrow interdigitated emitter fingers, more base contacts, ballast resistors.",
    "draws": [
@@ -720,9 +762,11 @@
    "subtopic": "Transconductance",
    "type": "numerical",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=93",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=94",
    "text": "Consider a silicon n-channel JFET at $T = 300~\\text{K}$ with the following parameters: $N_a = 1\\times10^{18}~\\text{cm}^{-3}$, $N_d = 1\\times10^{16}~\\text{cm}^{-3}$, $a = 0.75~\\mu\\text{m}$, $L = 10~\\mu\\text{m}$, $W = 30~\\mu\\text{m}$, and $\\mu_n = 1000~\\text{cm}^2/(\\text{V s})$ (i) Calculate the maximum current in an n-channel JFET. (ii) Determine the maximum transconductance of an n-channel depletion mode JFET biased in the saturation region. $I_{P1} = 0.522~\\text{mA}$, $V_{bi} = 0.814~\\text{V}$, and $V_{po} = 4.35~\\text{V}$.",
    "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
    "outline": "",
    "method": "$I_{P1} = \\mu_n(eN_d)^2Wa^3/(6\\epsilon_sL)$; $V_{bi}$ and $V_{p0}$; $I_D(sat)$ at $V_{GS} = 0$ from the JFET saturation equation; $g_{ms} = (3I_{P1}/V_{p0})(1 - \\sqrt{(V_{bi} - V_{GS})/V_{p0}})$ at $V_{GS} = 0$.",
    "answer": "$I_{P1} = 0.522$ mA ($I_{D1}(sat) = 0.3135$ mA at $V_{GS} = 0$); $g_{ms}(max) = 0.204$ mS",
@@ -776,7 +820,7 @@
    "used": [
     {
      "label": "20-21 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -788,7 +832,7 @@
    "used": [
     {
      "label": "20-21 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -800,7 +844,7 @@
    "used": [
     {
      "label": "20-21 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -872,7 +916,7 @@
    "used": [
     {
      "label": "20-21 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=38"
     }
    ]
   },
@@ -884,7 +928,7 @@
    "used": [
     {
      "label": "20-21 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=38"
     }
    ]
   },
@@ -920,7 +964,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=68"
     }
    ]
   },
@@ -932,7 +976,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=68"
     }
    ]
   },
@@ -944,7 +988,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=68"
     }
    ]
   },
@@ -956,7 +1000,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -968,7 +1012,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -980,7 +1024,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -992,7 +1036,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -1004,7 +1048,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -1016,7 +1060,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=53"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=54"
     }
    ]
   },
@@ -1028,7 +1072,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=53"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=54"
     }
    ]
   },
@@ -1040,7 +1084,7 @@
    "used": [
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=63"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=64"
     }
    ]
   },
@@ -1052,7 +1096,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=80"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=81"
     }
    ]
   },
@@ -1112,7 +1156,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=58"
     }
    ]
   },
@@ -1124,7 +1168,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=58"
     }
    ]
   },
@@ -1136,7 +1180,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=58"
     }
    ]
   },
@@ -1148,7 +1192,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=58"
     }
    ]
   },
@@ -1160,7 +1204,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=58"
     }
    ]
   },
@@ -1172,7 +1216,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85"
     }
    ]
   },
@@ -1184,7 +1228,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85"
     }
    ]
   },
@@ -1196,7 +1240,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85"
     }
    ]
   },
@@ -1208,7 +1252,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=84"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85"
     }
    ]
   },
@@ -1220,7 +1264,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=78"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=79"
     }
    ]
   },
@@ -1232,7 +1276,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=74"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=75"
     }
    ]
   },
@@ -1244,7 +1288,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=74"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=75"
     }
    ]
   },
@@ -1256,7 +1300,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=74"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=75"
     }
    ]
   },
@@ -1268,7 +1312,7 @@
    "used": [
     {
      "label": "20-21 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=71"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=72"
     }
    ]
   },
@@ -1280,7 +1324,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=93"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=94"
     }
    ]
   },
@@ -1292,7 +1336,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=93"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=94"
     }
    ]
   },
@@ -1304,7 +1348,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=93"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=94"
     }
    ]
   }

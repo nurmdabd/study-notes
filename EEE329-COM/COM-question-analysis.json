@@ -568,7 +568,7 @@
    "subtopic": "DSB-SC",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=66",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=68",
    "text": "What is quadrature null effect? Utilizing proper block diagram, explain principle of Costas receiver and how it prevents quadrature null effect.",
    "repeat_of": "",
    "times": 1,
@@ -591,7 +591,7 @@
    "subtopic": "DSB-SC",
    "type": "theory",
    "marks": 0.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=50",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=49",
    "text": "Consider a message signal m(t) with the spectrum shown in Fig. 1. The message bandwidth W = 1 kHz. This signal is applied to a product modulator, together with a carrier wave $A_c\\cos(2\\pi f_ct)$, producing the DSBSC modulated wave s(t). This modulated wave is next applied to a coherent detector. Assuming perfect synchronism between the carrier waves in the modulator and detector, determine the spectrum of the detector output when: (i) the carrier frequency $f_c = 1.25$ kHz and (ii) the carrier frequency $f_c = 0.75$ kHz.",
    "repeat_of": "",
    "times": 1,
@@ -614,7 +614,7 @@
    "subtopic": "DSB-SC",
    "type": "diagram",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=69",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=68",
    "text": "Amplitude spectrum of a message signal shown in figure-1. Draw the spectrum of its DSB-WC and SSB-SC modulated signal.",
    "repeat_of": "",
    "times": 1,
@@ -641,7 +641,7 @@
    "subtopic": "DSB-SC",
    "type": "derivation",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=71",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=70",
    "text": "Explain how phase and frequency error affect the coherent detection of AM.",
    "repeat_of": "2019-20 2(c)",
    "times": 3,
@@ -742,7 +742,7 @@
    "subtopic": "Channel capacity",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=32",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=31",
    "text": "An analog signal having 4 kHz bandwidth is sampled at 1.25 times the Nyquist rate, and each sample is quantized into one of 256 equally likely level. Assuming the samples to be statistically independent: (i) What is the information rate of the source? (ii) Can the output of this source be transmitted without error over the AWGN channel with a bandwidth of 10 kHz and S/N ratio of 20 dB? (iii) Find S/N ratio required for error-free transmission of part ii. (iv) Find the bandwidth required for an AWGN channel for an error free transmission of output of this source if S/N ratio is 20 dB",
    "repeat_of": "",
    "times": 1,
@@ -760,7 +760,7 @@
    "subtopic": "Channel capacity",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=46",
    "text": "A voice grade telephone channel has a bandwidth of 3400 Hz. If the signal to noise ratio (SNR) on the channel is 30 dB, determine the capacity of the channel. If the above channel is to be used to transmit 4.8 kbps of data, determine the minimum SNR required on the channel.",
    "repeat_of": "",
    "times": 1,
@@ -778,7 +778,7 @@
    "subtopic": "Channel capacity",
    "type": "numerical",
    "marks": 0.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=65",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=64",
    "text": "We have a communication channel with a bandwidth of 5 MHz. A signal with an amplitude of 10V is transmitted, and the receiver detects a signal with an amplitude of 2V and noise with an amplitude of 5 mV.",
    "repeat_of": "",
    "times": 2,
@@ -817,7 +817,7 @@
    "subtopic": "Cascaded noise",
    "type": "derivation",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=61",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=62",
    "text": "Find the equivalent noise resistance for several amplifiers in cascade.",
    "repeat_of": "2019-20 1(d)",
    "times": 3,
@@ -840,7 +840,7 @@
    "subtopic": "Cascaded noise",
    "type": "derivation",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=66",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=65",
    "text": "Find the equivalent noise resistance for several amplifiers in cascade.",
    "repeat_of": "2019-20 1(d)",
    "times": 3,
@@ -904,7 +904,7 @@
    "subtopic": "Entropy",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=60",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=61",
    "text": "A message source generates one of the four messages randomly every microsecond. The probabilities of these messages are 0.4, 0.3, 0.2, and 0.1. Each emitted message is independent of the other messages in the sequence: (i) Find the source entropy. (ii) Find the rate of information generated by this source (in bits per second).",
    "repeat_of": "",
    "times": 1,
@@ -946,7 +946,7 @@
    "subtopic": "Entropy",
    "type": "diagram",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=62",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=61",
    "text": "Find the entropy of single bit binary memoryless source. Also draw the curve of entropy vs probability for that source.",
    "repeat_of": "2020-21 1(a)",
    "times": 2,
@@ -1006,7 +1006,7 @@
    "subtopic": "Deviation and index",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=26",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=25",
    "text": "In an FM system, when the audio frequency is 500 Hz and modulating voltage 2.5 V, the deviation produced is 5 kHz. If the modulating voltage is now increased to 7.5 V, calculate the new value of frequency deviation produced. If the AF voltage is raised to 10 V while the modulating frequency dropped to 250 Hz, what is the frequency deviation? Calculate the modulation index in each case.",
    "repeat_of": "",
    "times": 1,
@@ -1120,7 +1120,7 @@
    "subtopic": "SSB",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=67",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=69",
    "text": "Explain how SSB can be detected using envelope detection method.",
    "repeat_of": "",
    "times": 1,
@@ -1387,7 +1387,7 @@
    "subtopic": "PCM",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=71",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=74",
    "text": "It is desired to set up a central station for simultaneous monitoring of the electrocardiograms (ECGs) of 10 hospital patients. The data from the 10 patients are brought to a processing center over wires and are sampled, quantized, binary-coded, and time-division-multiplexed. The multiplexed data are now transmitted to the monitoring station. The ECG signal bandwidth is 100 Hz. The maximum acceptable error in sample amplitudes is 0.25% of the peak signal amplitude. The sampling rate must be at least twice the Nyquist rate. Determine the minimum cable bandwidth needed to transmit these multiplexed data.",
    "repeat_of": "2020-21 5(c)",
    "times": 3,
@@ -1415,7 +1415,7 @@
    "subtopic": "PCM",
    "type": "diagram",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=31",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=30",
    "text": "Explain the basic block diagram of PCM system.",
    "repeat_of": "",
    "times": 1,
@@ -1489,7 +1489,7 @@
    "subtopic": "Delta modulation",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=28",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=27",
    "text": "Define slope overload distortion and granular noise in delta modulation and how it is removed in ADM?",
    "repeat_of": "",
    "times": 1,
@@ -1515,7 +1515,7 @@
    "subtopic": "Delta modulation",
    "type": "diagram",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=30",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=29",
    "text": "Draw the transmitter and receiver circuits block diagram of delta modulation.",
    "repeat_of": "",
    "times": 1,
@@ -1680,7 +1680,7 @@
    "subtopic": "DPSK",
    "type": "numerical",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=59",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=58",
    "text": "Tabulate the values of signal at each stage of DPSK encoder and receiver for message signal '1010011100'",
    "repeat_of": "",
    "times": 3,
@@ -1765,7 +1765,7 @@
    "subtopic": "ASK, FSK and PSK",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=51",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=52",
    "text": "Briefly describe coherent and non-coherent detection of BASK and BFSK.",
    "repeat_of": "",
    "times": 1,
@@ -1793,7 +1793,7 @@
    "subtopic": "ASK, FSK and PSK",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=45",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=44",
    "text": "Describe coherent detection of BFSK.",
    "repeat_of": "",
    "times": 1,
@@ -1816,7 +1816,7 @@
    "subtopic": "QPSK",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=48",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=47",
    "text": "With proper block diagram, describe modulation of QPSK. Also explain how it offers advantages over BPSK?",
    "repeat_of": "",
    "times": 1,
@@ -1865,7 +1865,7 @@
    "subtopic": "TDM",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=55",
    "text": "Write short notes on: Multilevel multiplexing and Multiple slot allocation.",
    "repeat_of": "",
    "times": 2,
@@ -1892,7 +1892,7 @@
    "subtopic": "TDM",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=55",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=56",
    "text": "It is desired to set up a central station for simultaneous monitoring of the electrocardiograms (ECGs) of 10 hospital patients. The data from the 10 patients are brought to a processing center over wires and are sampled, quantized, binary-coded, and time-division-multiplexed. The multiplexed data are now transmitted to the monitoring station. The ECG signal bandwidth is 100 Hz. The maximum acceptable error in sample amplitudes is 0.25 % of the peak signal amplitude. The sampling rate must be at least twice the Nyquist rate. Determine the minimum cable bandwidth needed to transmit these multiplexed data.",
    "repeat_of": "2020-21 5(c)",
    "times": 3,
@@ -1920,7 +1920,7 @@
    "subtopic": "TDM",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=72",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=75",
    "text": "Write short notes in multilevel multiplexing and multiple slot allocation.",
    "repeat_of": "2021-22 6(a)",
    "times": 2,
@@ -1947,7 +1947,7 @@
    "subtopic": "TDM",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=73",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=76",
    "text": "We have four sources, each creating 250 characters (8 bits per character) per second. If the interleaved unit is a character and 1 synchronizing bit is added to each frame, find (a) the data rate of each source, (b) the duration of each character in each source, (c) the frame rate, (d) the duration of each frame, (e) the number of bits in each frame, and (f) the data rate of the link.",
    "repeat_of": "",
    "times": 1,
@@ -1968,7 +1968,7 @@
    "subtopic": "TDM",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=48",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47",
    "text": "It is desired to set up a central station for simultaneous monitoring of the electrocardiograms (ECGs) of 10 hospital patients. The data from the 10 patents *[sic: should be \"patients\"]* are brought to a processing center over wires and are sampled, quantized, binary-coded, and time-division-multiplexed. The multiplexed data are now transmitted to the monitoring station. The ECG signal bandwidth is 100 Hz. The maximum acceptable error in sample amplitude is 0.25% of the peak signal amplitude. The sampling rate must be at least twice the Nyquist rate. Determine the minimum cable bandwidth needed to transmit these multiplexed data.",
    "repeat_of": "",
    "times": 3,
@@ -1996,7 +1996,7 @@
    "subtopic": "TDM",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=49",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=48",
    "text": "A multiplexer combines four 100-kbps channels using a time slot of 2 bits. Show the output for the following inputs- '110010', '001010', '101101', '000111'. What is the frame rate? What is the frame duration? What is the bit rate? What is the bit duration?",
    "repeat_of": "",
    "times": 1,
@@ -2020,7 +2020,7 @@
    "subtopic": "TDM",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=52",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=51",
    "text": "Write short notes on following terms- (i) Pulse stuffing (ii) Multi-slot multiplexing",
    "repeat_of": "",
    "times": 1,
@@ -2044,7 +2044,7 @@
    "subtopic": "FDM",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=22",
    "text": "Five channels, each with 100 kHz bandwidth, are to be frequency division multiplexing together. What is the minimum bandwidth of the link if there is a need for a guard band of 10 kHz between the channel to prevent interference?",
    "repeat_of": "",
    "times": 1,
@@ -2065,7 +2065,7 @@
    "subtopic": "FDM",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=51",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=50",
    "text": "Briefly explain frequency division multiplexing techniques.",
    "repeat_of": "",
    "times": 1,
@@ -2183,7 +2183,7 @@
    "subtopic": "AM modulation index",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=63",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=64",
    "text": "The antenna current of an AM transmitter is 8 A when only the carrier is sent. But it increases to 8.93 A when the carrier is modulated by a single sine wave. Find the percentage modulation. Determine the antenna current when the percentage of modulation changes to 0.8.",
    "repeat_of": "2020-21 8(c)",
    "times": 3,
@@ -2208,7 +2208,7 @@
    "subtopic": "AM modulation index",
    "type": "numerical",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=18",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=17",
    "text": "A carrier wave of frequency 10 MHz and peak value of 10 V is amplitude modulated by a 5 kHz sine wave of amplitude 6 V. Determine the modulation index, side frequencies and amplitude of side frequencies.",
    "repeat_of": "",
    "times": 1,
@@ -2233,7 +2233,7 @@
    "subtopic": "AM modulation index",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=72",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=71",
    "text": "The antenna current of an AM transmitter is 8 Amps, when only the carrier is sent, but it increases to 8.93A, when the carrier is modulated by a single sine wave. Find percentage modulation. Determine the antenna current when the percentage modulation changes to 0.8",
    "repeat_of": "",
    "times": 3,
@@ -2306,7 +2306,7 @@
    "subtopic": "Multiple access",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=56",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=57",
    "text": "Compare between FDMA and CDMA.",
    "repeat_of": "",
    "times": 1,
@@ -2326,7 +2326,7 @@
    "subtopic": "Multiple access",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=58",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=59",
    "text": "Differentiate between multiplexing and multiple access technologies.",
    "repeat_of": "2020-21 2(a)",
    "times": 2,
@@ -2352,7 +2352,7 @@
    "subtopic": "Multiple access",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=22",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=21",
    "text": "Differentiate between multiplexing and multiple access technologies.",
    "repeat_of": "",
    "times": 2,
@@ -2378,7 +2378,7 @@
    "subtopic": "Multiple access",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=46",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=45",
    "text": "Write down the comparison between TDMA and CDMA.",
    "repeat_of": "",
    "times": 1,
@@ -2401,7 +2401,7 @@
    "subtopic": "FM and PM",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=24",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23",
    "text": "With proper block diagram explain the relation between frequency modulation and phase modulation.",
    "repeat_of": "",
    "times": 1,
@@ -2428,7 +2428,7 @@
    "subtopic": "Superheterodyne",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=34",
    "text": "With appropriate block diagram, describe the operation of superheterodyne receiver.",
    "repeat_of": "",
    "times": 1,
@@ -2521,7 +2521,7 @@
    "subtopic": "VSB",
    "type": "derivation",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=68",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=71",
    "text": "Using a message signal consists of two sinusoidal frequency components, describe the principle of VSB modulation and demodulation.",
    "repeat_of": "",
    "times": 1,
@@ -2544,7 +2544,7 @@
    "subtopic": "VSB",
    "type": "derivation",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=36",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35",
    "text": "Explain how the message signal is reconstructed from VSB signal.",
    "repeat_of": "",
    "times": 1,
@@ -2614,7 +2614,7 @@
    "subtopic": "Carson's rule",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=44",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=43",
    "text": "State Carson's rule and its limitations.",
    "repeat_of": "",
    "times": 1,
@@ -2637,7 +2637,7 @@
    "subtopic": "Carson's rule",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=75",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=74",
    "text": "Consider an FM signal obtained from a modulating signal frequency of 2000 Hz and maximum Amplitude of 5 volts. The frequency sensitivity of modulator is 2 kHz/V. Find the bandwidth of the FM using Carson's rule.",
    "repeat_of": "",
    "times": 1,
@@ -2658,7 +2658,7 @@
    "subtopic": "FSK",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=53",
    "text": "Briefly describe FSK generation with the necessary block diagram. Include its spectrum and discuss the bandwidth requirements, along with the advantages and disadvantages of FSK.",
    "repeat_of": "",
    "times": 1,
@@ -2684,7 +2684,7 @@
    "subtopic": "QAM",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=48",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=49",
    "text": "With proper block diagram explain the principle of coherent detection of QAM. Mention its advantages and drawbacks.",
    "repeat_of": "2020-21 6(b)",
    "times": 2,
@@ -2710,7 +2710,7 @@
    "subtopic": "QAM",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=56",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=55",
    "text": "With proper block diagram explain the principle of coherent detection of QAM. Mention its advantages and drawbacks.",
    "repeat_of": "",
    "times": 2,
@@ -2736,7 +2736,7 @@
    "subtopic": "Spread spectrum",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=58",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=57",
    "text": "Explain the principle of frequency hopping spread spectrum technique.",
    "repeat_of": "",
    "times": 1,
@@ -2779,7 +2779,7 @@
    "subtopic": "Distortionless transmission",
    "type": "derivation",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=63",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=62",
    "text": "Explain distortion as a transmission impairment in communication systems. What are the conditions required for distortionless transmission?",
    "repeat_of": "",
    "times": 2,
@@ -2804,7 +2804,7 @@
    "subtopic": "Pre-emphasis",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=73",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=72",
    "text": "Explain principle of preemphasis and deemphasis",
    "repeat_of": "",
    "times": 1,
@@ -2828,7 +2828,7 @@
    "subtopic": "Propagation modes",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=13",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=14",
    "text": "Discuss the different modes of propagation of EM wave.",
    "repeat_of": "",
    "times": 1,
@@ -2940,7 +2940,7 @@
    "subtopic": "Envelope detector",
    "type": "derivation",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=63",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=65",
    "text": "Explain the principle of envelope detector and hence find the RC requirement of envelope detector.",
    "repeat_of": "",
    "times": 1,
@@ -2963,7 +2963,7 @@
    "subtopic": "Link design",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=57",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=58",
    "text": "Discuss the design procedures of a communication system.",
    "repeat_of": "",
    "times": 1,
@@ -3008,7 +3008,7 @@
     },
     {
      "label": "20-21 7(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=63"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=62"
     }
    ]
   },
@@ -3044,7 +3044,7 @@
    "used": [
     {
      "label": "21-22 1(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=13"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=14"
     }
    ]
   },
@@ -3108,11 +3108,11 @@
    "used": [
     {
      "label": "21-22 7(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=61"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=62"
     },
     {
      "label": "20-21 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=66"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=65"
     },
     {
      "label": "19-20 1(d)",
@@ -3128,7 +3128,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=32"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=31"
     }
    ]
   },
@@ -3140,7 +3140,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=32"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=31"
     }
    ]
   },
@@ -3152,7 +3152,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=32"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=31"
     }
    ]
   },
@@ -3164,7 +3164,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -3176,7 +3176,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -3188,7 +3188,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=32"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=31"
     }
    ]
   },
@@ -3200,7 +3200,7 @@
    "used": [
     {
      "label": "20-21 7(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=65"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=64"
     }
    ]
   },
@@ -3212,7 +3212,7 @@
    "used": [
     {
      "label": "20-21 7(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=65"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=64"
     }
    ]
   },
@@ -3224,7 +3224,7 @@
    "used": [
     {
      "label": "20-21 7(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=65"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=64"
     }
    ]
   },
@@ -3392,7 +3392,7 @@
    "used": [
     {
      "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=18"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -3404,7 +3404,7 @@
    "used": [
     {
      "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=18"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -3416,7 +3416,7 @@
    "used": [
     {
      "label": "20-21 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=18"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -3464,7 +3464,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=50"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=49"
     }
    ]
   },
@@ -3476,7 +3476,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=50"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=49"
     }
    ]
   },
@@ -3488,7 +3488,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=50"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=49"
     }
    ]
   },
@@ -3504,7 +3504,7 @@
     },
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=36"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35"
     }
    ]
   },
@@ -3516,7 +3516,7 @@
    "used": [
     {
      "label": "20-21 8(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=69"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=68"
     }
    ]
   },
@@ -3528,7 +3528,7 @@
    "used": [
     {
      "label": "20-21 8(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=71"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=70"
     }
    ]
   },
@@ -3540,7 +3540,7 @@
    "used": [
     {
      "label": "20-21 8(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=72"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=71"
     }
    ]
   },
@@ -3628,7 +3628,7 @@
     },
     {
      "label": "21-22 8(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=66"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=68"
     }
    ]
   },
@@ -3664,7 +3664,7 @@
    "used": [
     {
      "label": "21-22 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=63"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=65"
     }
    ]
   },
@@ -3676,7 +3676,7 @@
    "used": [
     {
      "label": "21-22 8(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=69"
     }
    ]
   },
@@ -3688,7 +3688,7 @@
    "used": [
     {
      "label": "21-22 8(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=68"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=71"
     }
    ]
   },
@@ -3844,7 +3844,7 @@
    "used": [
     {
      "label": "20-21 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=26"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=25"
     },
     {
      "label": "19-20 4(a)",
@@ -3956,7 +3956,7 @@
    "used": [
     {
      "label": "20-21 2(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=24"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23"
     }
    ]
   },
@@ -3968,7 +3968,7 @@
    "used": [
     {
      "label": "20-21 2(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=24"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23"
     }
    ]
   },
@@ -3980,7 +3980,7 @@
    "used": [
     {
      "label": "20-21 2(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=24"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23"
     }
    ]
   },
@@ -3996,7 +3996,7 @@
     },
     {
      "label": "20-21 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=26"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=25"
     }
    ]
   },
@@ -4008,7 +4008,7 @@
    "used": [
     {
      "label": "20-21 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -4020,7 +4020,7 @@
    "used": [
     {
      "label": "20-21 8(e)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=75"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=74"
     }
    ]
   },
@@ -4032,7 +4032,7 @@
    "used": [
     {
      "label": "20-21 8(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=73"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=72"
     }
    ]
   },
@@ -4152,7 +4152,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=34"
     }
    ]
   },
@@ -4164,7 +4164,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=34"
     }
    ]
   },
@@ -4336,7 +4336,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=30"
     }
    ]
   },
@@ -4352,7 +4352,7 @@
     },
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=30"
     }
    ]
   },
@@ -4364,7 +4364,7 @@
    "used": [
     {
      "label": "20-21 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=27"
     }
    ]
   },
@@ -4376,7 +4376,7 @@
    "used": [
     {
      "label": "20-21 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=27"
     }
    ]
   },
@@ -4528,7 +4528,7 @@
     },
     {
      "label": "20-21 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=59"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=58"
     },
     {
      "label": "19-20 5(c)",
@@ -4560,7 +4560,7 @@
    "used": [
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=44"
     }
    ]
   },
@@ -4572,7 +4572,7 @@
    "used": [
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=44"
     }
    ]
   },
@@ -4584,7 +4584,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=47"
     }
    ]
   },
@@ -4596,7 +4596,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=47"
     }
    ]
   },
@@ -4608,7 +4608,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=53"
     }
    ]
   },
@@ -4620,7 +4620,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=53"
     }
    ]
   },
@@ -4636,7 +4636,7 @@
     },
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=53"
     }
    ]
   },
@@ -4648,7 +4648,7 @@
    "used": [
     {
      "label": "20-21 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=55"
     }
    ]
   },
@@ -4660,7 +4660,7 @@
    "used": [
     {
      "label": "20-21 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=55"
     }
    ]
   },
@@ -4676,7 +4676,7 @@
     },
     {
      "label": "20-21 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=59"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=58"
     }
    ]
   },
@@ -4700,7 +4700,7 @@
    "used": [
     {
      "label": "21-22 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=49"
     }
    ]
   },
@@ -4712,7 +4712,7 @@
    "used": [
     {
      "label": "21-22 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=49"
     }
    ]
   },
@@ -4724,7 +4724,7 @@
    "used": [
     {
      "label": "21-22 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=52"
     }
    ]
   },
@@ -4736,7 +4736,7 @@
    "used": [
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=48"
     }
    ]
   },
@@ -4748,7 +4748,7 @@
    "used": [
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=48"
     }
    ]
   },
@@ -4760,7 +4760,7 @@
    "used": [
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=48"
     }
    ]
   },
@@ -4772,7 +4772,7 @@
    "used": [
     {
      "label": "19-20 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=50"
     }
    ]
   },
@@ -4784,7 +4784,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=52"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=51"
     }
    ]
   },
@@ -4796,7 +4796,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=52"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2019-20-pack.pdf#page=51"
     }
    ]
   },
@@ -4808,7 +4808,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47"
     }
    ]
   },
@@ -4820,7 +4820,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47"
     }
    ]
   },
@@ -4832,7 +4832,7 @@
    "used": [
     {
      "label": "20-21 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=23"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=22"
     }
    ]
   },
@@ -4844,11 +4844,11 @@
    "used": [
     {
      "label": "21-22 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=55"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=56"
     },
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47"
     }
    ]
   },
@@ -4860,7 +4860,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=47"
     }
    ]
   },
@@ -4872,7 +4872,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=57"
     }
    ]
   },
@@ -4884,7 +4884,7 @@
    "used": [
     {
      "label": "21-22 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=55"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=56"
     }
    ]
   },
@@ -4896,7 +4896,7 @@
    "used": [
     {
      "label": "21-22 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=55"
     }
    ]
   },
@@ -4908,7 +4908,7 @@
    "used": [
     {
      "label": "21-22 9(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=73"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=76"
     }
    ]
   },
@@ -5068,7 +5068,7 @@
    "used": [
     {
      "label": "21-22 7(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=60"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=61"
     }
    ]
   }
