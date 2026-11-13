@@ -16,7 +16,7 @@
    "symbols": [
     {
      "symbol": "$a$",
-     "meaning": "lattice constant in cm"
+     "meaning": "lattice constant (cm)"
     }
    ]
   },
@@ -27,28 +27,136 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$\\psi(x)$",
+     "meaning": "electron wave function in the crystal"
+    },
+    {
+     "symbol": "$u(x)$",
+     "meaning": "periodic function, with the period of the lattice"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "wave number (m$^{-1}$); Boltzmann constant ($8.62\\times10^{-5}$ eV/K)"
+    },
+    {
+     "symbol": "$x$",
+     "meaning": "position (m)"
+    },
+    {
+     "symbol": "$P'$",
+     "meaning": "strength of the potential barriers (dimensionless)"
+    },
+    {
+     "symbol": "$a$",
+     "meaning": "width of the well (m)"
+    },
+    {
+     "symbol": "$m$",
+     "meaning": "mass of the electron (kg)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "electron energy (J); energy of the state (eV)"
+    },
+    {
+     "symbol": "$\\hbar$",
+     "meaning": "reduced Planck constant, $h/2\\pi$ (J s)"
+    },
+    {
+     "symbol": "$m_n^*$",
+     "meaning": "electron effective mass (kg); density-of-states effective mass of electrons"
+    },
+    {
+     "symbol": "$f_F(E)$",
+     "meaning": "probability that a state at energy $E$ is occupied"
+    },
+    {
+     "symbol": "$E_F$",
+     "meaning": "Fermi energy (eV); Fermi level (eV)"
+    },
+    {
+     "symbol": "$kT$",
+     "meaning": "thermal energy (0.0259 eV at 300 K)"
+    },
+    {
+     "symbol": "$E_c$",
+     "meaning": "conduction-band edge (eV)"
+    },
+    {
      "symbol": "$f_F$",
      "meaning": "probability that a state at energy $E$ holds an electron"
     },
     {
-     "symbol": "$E_F$",
-     "meaning": "Fermi level"
+     "symbol": "$g_c(E)$",
+     "meaning": "density of states in the conduction band (cm$^{-3}$eV$^{-1}$)"
+    },
+    {
+     "symbol": "$g_v(E)$",
+     "meaning": "density of states in the valence band (cm$^{-3}$eV$^{-1}$)"
+    },
+    {
+     "symbol": "$m_p^*$",
+     "meaning": "hole effective mass (kg)"
+    },
+    {
+     "symbol": "$h$",
+     "meaning": "Planck's constant ($6.625\\times10^{-34}$ J s)"
+    },
+    {
+     "symbol": "$E_v$",
+     "meaning": "valence-band edge (eV)"
+    },
+    {
+     "symbol": "$T$",
+     "meaning": "absolute temperature (K)"
+    },
+    {
+     "symbol": "$n_0$",
+     "meaning": "thermal-equilibrium electron concentration (cm$^{-3}$)"
     },
     {
      "symbol": "$N_c$",
-     "meaning": "effective density of states in the conduction band"
+     "meaning": "effective density of states in the conduction band ($2.8\\times10^{19}$ cm$^{-3}$ for Si)"
+    },
+    {
+     "symbol": "$p_0$",
+     "meaning": "thermal-equilibrium hole concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$N_v$",
+     "meaning": "effective density of states in the valence band (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$n_i$",
+     "meaning": "intrinsic carrier concentration ($1.5\\times10^{10}$ cm$^{-3}$ for Si at 300 K)"
+    },
+    {
+     "symbol": "$E_g$",
+     "meaning": "band gap energy (eV), 1.12 eV for Si"
     },
     {
      "symbol": "$g_c$",
-     "meaning": "states per unit energy per unit volume"
+     "meaning": "states per unit energy per unit volume in the conduction band (cm$^{-3}$eV$^{-1}$)"
+    },
+    {
+     "symbol": "$m_0$",
+     "meaning": "free-electron mass (kg)"
+    },
+    {
+     "symbol": "$N$",
+     "meaning": "number of states per unit volume in that energy range (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$W_i$",
+     "meaning": "number of ways to place the electrons in level $i$"
     },
     {
      "symbol": "$g_i$",
-     "meaning": "states"
+     "meaning": "number of states in level $i$"
     },
     {
      "symbol": "$N_i$",
-     "meaning": "electrons in level $i$"
+     "meaning": "number of electrons in level $i$"
     }
    ]
   },
@@ -59,44 +167,200 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$n_0$",
+     "meaning": "thermal-equilibrium electron concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$N_c$",
+     "meaning": "effective density of states in the conduction band, $2\\left(\\dfrac{2\\pi m_n^*kT}{h^2}\\right)^{3/2}$ (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$p_0$",
+     "meaning": "thermal-equilibrium hole concentration (cm$^{-3}$)"
+    },
+    {
      "symbol": "$N_v$",
-     "meaning": "effective density of states in the valence band"
+     "meaning": "effective density of states in the valence band, $2\\left(\\dfrac{2\\pi m_p^*kT}{h^2}\\right)^{3/2}$ (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$E_v$",
+     "meaning": "valence-band edge (eV)"
+    },
+    {
+     "symbol": "$n_i$",
+     "meaning": "intrinsic carrier concentration ($1.5\\times10^{10}$ cm$^{-3}$ for Si at 300 K)"
+    },
+    {
+     "symbol": "$E_g$",
+     "meaning": "band gap energy (eV), 1.12 eV for Si"
+    },
+    {
+     "symbol": "$N_a$",
+     "meaning": "acceptor concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$N_d$",
+     "meaning": "donor concentration (cm$^{-3}$)"
     },
     {
      "symbol": "$n_d$",
-     "meaning": "electrons still in donor states"
+     "meaning": "electrons still bound to donor atoms (cm$^{-3}$); electrons still in donor states (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$E_d$",
+     "meaning": "donor energy level (eV)"
+    },
+    {
+     "symbol": "$E_{Fi}$",
+     "meaning": "intrinsic Fermi level, near midgap (eV)"
+    },
+    {
+     "symbol": "$f_F(E)$",
+     "meaning": "probability that a state at energy $E$ is occupied"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "energy of the state (eV)"
+    },
+    {
+     "symbol": "$E_F$",
+     "meaning": "Fermi energy (eV); Fermi level (eV)"
+    },
+    {
+     "symbol": "$kT$",
+     "meaning": "thermal energy (0.0259 eV at 300 K)"
+    },
+    {
+     "symbol": "$E_c$",
+     "meaning": "conduction-band edge (eV)"
     },
     {
      "symbol": "$f_F$",
      "meaning": "probability that a state at energy $E$ holds an electron"
     },
     {
-     "symbol": "$E_F$",
-     "meaning": "Fermi level"
+     "symbol": "$g_c(E)$",
+     "meaning": "density of states in the conduction band (cm$^{-3}$eV$^{-1}$)"
     },
     {
-     "symbol": "$N_c$",
-     "meaning": "effective density of states in the conduction band"
+     "symbol": "$m_n^*$",
+     "meaning": "electron effective mass (kg)"
     },
     {
-     "symbol": "$n_i$",
-     "meaning": "intrinsic carrier concentration"
+     "symbol": "$h$",
+     "meaning": "Planck's constant ($6.625\\times10^{-34}$ J s)"
     },
     {
-     "symbol": "$N_a^-$, $N_d^+$",
-     "meaning": "ionized acceptors and donors (cm$^{-3}$)"
+     "symbol": "$g_v(E)$",
+     "meaning": "density of states in the valence band: the same with $m_p^*$ and $\\sqrt{E_v - E}$"
     },
     {
-     "symbol": "$E_{Fi}$",
-     "meaning": "intrinsic Fermi level (near midgap)"
+     "symbol": "$m_p^*$",
+     "meaning": "hole effective mass (kg)"
     },
     {
-     "symbol": "$E_d$",
-     "meaning": "donor level"
+     "symbol": "$n(E)$",
+     "meaning": "electrons per unit energy in the conduction band (cm$^{-3}$eV$^{-1}$)"
+    },
+    {
+     "symbol": "$p(E)$",
+     "meaning": "holes per unit energy in the valence band (cm$^{-3}$eV$^{-1}$)"
+    },
+    {
+     "symbol": "$n_i(300)$",
+     "meaning": "intrinsic concentration at 300 K (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$N_a^-$",
+     "meaning": "ionized acceptor concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$N_d^+$",
+     "meaning": "ionized donor concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$\\eta$",
+     "meaning": "energy above the band edge in units of $kT$, $(E - E_c)/kT$"
+    },
+    {
+     "symbol": "$T$",
+     "meaning": "absolute temperature (K)"
+    },
+    {
+     "symbol": "$N_c(300)$",
+     "meaning": "effective density of states at 300 K (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$f_d$",
+     "meaning": "probability that a donor state holds an electron"
+    },
+    {
+     "symbol": "$p_a$",
+     "meaning": "holes still in acceptor states (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$E_a$",
+     "meaning": "acceptor energy level (eV)"
+    },
+    {
+     "symbol": "$g$",
+     "meaning": "degeneracy factor of the acceptor level (4)"
+    },
+    {
+     "symbol": "$n_i(T)$",
+     "meaning": "intrinsic concentration at temperature $T$ (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$r_n$",
+     "meaning": "radius of the $n$-th orbit (Å)"
+    },
+    {
+     "symbol": "$a_0$",
+     "meaning": "Bohr radius (0.53 Å)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "orbit number (1 for the ground state)"
+    },
+    {
+     "symbol": "$\\epsilon_r$",
+     "meaning": "relative permittivity (11.7 for Si)"
+    },
+    {
+     "symbol": "$m_0$",
+     "meaning": "free-electron mass (kg)"
     },
     {
      "symbol": "$m^*$",
-     "meaning": "conductivity effective mass"
+     "meaning": "conductivity effective mass (kg)"
+    },
+    {
+     "symbol": "$e$",
+     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
+    },
+    {
+     "symbol": "$\\hbar$",
+     "meaning": "reduced Planck constant, $h/2\\pi$ (J s)"
+    },
+    {
+     "symbol": "$\\epsilon$",
+     "meaning": "permittivity of the semiconductor, $\\epsilon_r\\epsilon_0$ (F/m)"
+    },
+    {
+     "symbol": "$E_{ion}$",
+     "meaning": "donor ionization energy (eV)"
+    },
+    {
+     "symbol": "$N_{Si}$",
+     "meaning": "silicon atoms added to the GaAs (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$x_{Ga}$",
+     "meaning": "fraction of Si on Ga sites (donors)"
+    },
+    {
+     "symbol": "$x_{As}$",
+     "meaning": "fraction of Si on As sites (acceptors)"
     }
    ]
   },
@@ -107,40 +371,160 @@
    "tier": "Likely",
    "symbols": [
     {
-     "symbol": "$d$",
-     "meaning": "thickness along $B_z$"
+     "symbol": "$\\sigma$",
+     "meaning": "conductivity ($\\Omega$-cm)$^{-1}$"
     },
     {
-     "symbol": "$m$",
-     "meaning": "effective mass of the carrier"
+     "symbol": "$\\rho$",
+     "meaning": "resistivity, $1/\\sigma$ (Ω cm)"
     },
     {
-     "symbol": "$\\tau$",
-     "meaning": "mean time between collisions (s)"
+     "symbol": "$e$",
+     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
     },
     {
-     "symbol": "$\\mu_L$, $\\mu_I$",
-     "meaning": "lattice- and impurity-limited mobility"
+     "symbol": "$\\mu_n$",
+     "meaning": "electron mobility (cm$^2$/V s)"
+    },
+    {
+     "symbol": "$\\mu_p$",
+     "meaning": "hole mobility (cm$^2$/V s)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "electron concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$p$",
+     "meaning": "hole concentration (cm$^{-3}$)"
     },
     {
      "symbol": "$N_I$",
-     "meaning": "ionized impurity concentration"
+     "meaning": "total ionized impurity concentration, $N_d^+ + N_a^-$ (cm$^{-3}$)"
     },
     {
-     "symbol": "$\\mu$",
-     "meaning": "mobility (cm$^2$/V s)"
+     "symbol": "$J_{n,dif}$",
+     "meaning": "electron diffusion current density (A/cm$^2$)"
+    },
+    {
+     "symbol": "$J_{p,dif}$",
+     "meaning": "hole diffusion current density (A/cm$^2$)"
+    },
+    {
+     "symbol": "$D_n$",
+     "meaning": "electron diffusion coefficient (cm$^2$/s)"
+    },
+    {
+     "symbol": "$D_p$",
+     "meaning": "hole diffusion coefficient (cm$^2$/s)"
+    },
+    {
+     "symbol": "$F$",
+     "meaning": "particle flux (cm$^{-2}$s$^{-1}$)"
+    },
+    {
+     "symbol": "$v_{th}$",
+     "meaning": "thermal velocity (cm/s)"
+    },
+    {
+     "symbol": "$l$",
+     "meaning": "mean free path (cm)"
+    },
+    {
+     "symbol": "$J$",
+     "meaning": "total current density (A/cm$^2$)"
     },
     {
      "symbol": "$E$",
      "meaning": "electric field (V/cm)"
     },
     {
-     "symbol": "$m^*$",
-     "meaning": "conductivity effective mass"
+     "symbol": "$kT/e$",
+     "meaning": "thermal voltage (0.0259 V at 300 K)"
+    },
+    {
+     "symbol": "$V_H$",
+     "meaning": "Hall voltage (V)"
+    },
+    {
+     "symbol": "$I_x$",
+     "meaning": "current along $x$ (A)"
+    },
+    {
+     "symbol": "$B_z$",
+     "meaning": "magnetic flux density along $z$ (T)"
+    },
+    {
+     "symbol": "$d$",
+     "meaning": "sample thickness, along $B_z$ (cm)"
     },
     {
      "symbol": "$L$",
-     "meaning": "length along $x$, $W$ = width along $y$"
+     "meaning": "sample length (cm); length along $x$ (cm)"
+    },
+    {
+     "symbol": "$V_x$",
+     "meaning": "applied voltage along $x$ (V)"
+    },
+    {
+     "symbol": "$W$",
+     "meaning": "sample width, across the Hall field (cm); width along $y$ (cm)"
+    },
+    {
+     "symbol": "$f(v)$",
+     "meaning": "fraction of carriers per unit speed"
+    },
+    {
+     "symbol": "$v$",
+     "meaning": "carrier speed (m/s)"
+    },
+    {
+     "symbol": "$m$",
+     "meaning": "effective mass of the carrier (kg)"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "Boltzmann constant ($1.38\\times10^{-23}$ J/K)"
+    },
+    {
+     "symbol": "$T$",
+     "meaning": "absolute temperature (K)"
+    },
+    {
+     "symbol": "$\\bar v$",
+     "meaning": "mean thermal speed (m/s)"
+    },
+    {
+     "symbol": "$m^*$",
+     "meaning": "effective mass, in units of $m_0$ = free-electron mass; conductivity effective mass (kg)"
+    },
+    {
+     "symbol": "$v_{rms}$",
+     "meaning": "root-mean-square thermal speed (m/s)"
+    },
+    {
+     "symbol": "$\\mu$",
+     "meaning": "mobility (cm$^2$/V s)"
+    },
+    {
+     "symbol": "$\\tau$",
+     "meaning": "mean time between collisions (s)"
+    },
+    {
+     "symbol": "$v_d$",
+     "meaning": "drift velocity (cm/s)"
+    },
+    {
+     "symbol": "$\\mu_L$",
+     "meaning": "mobility limited by lattice (phonon) scattering"
+    },
+    {
+     "symbol": "$\\mu_I$",
+     "meaning": "mobility limited by ionized-impurity scattering"
+    },
+    {
+     "symbol": "$E_H$",
+     "meaning": "Hall field (V/cm)"
     }
    ]
   },
@@ -151,44 +535,172 @@
    "tier": "Likely",
    "symbols": [
     {
-     "symbol": "$F_p^+$",
-     "meaning": "hole flux"
+     "symbol": "$L_p$",
+     "meaning": "hole diffusion length (cm)"
     },
     {
      "symbol": "$\\tau_{p0}$",
-     "meaning": "minority carrier lifetime"
+     "meaning": "minority-carrier (hole) lifetime (s); minority-hole lifetime (s)"
     },
     {
-     "symbol": "$N_t$",
-     "meaning": "trap density"
+     "symbol": "$\\delta p(x)$",
+     "meaning": "excess hole concentration at $x$ (cm$^{-3}$)"
     },
     {
-     "symbol": "$n_0$, $p_0$",
-     "meaning": "equilibrium values"
-    },
-    {
-     "symbol": "$\\delta n$, $\\delta p$",
-     "meaning": "excess"
-    },
-    {
-     "symbol": "$D_n$, $D_p$",
-     "meaning": "diffusion coefficients (cm$^2$/s)"
-    },
-    {
-     "symbol": "$\\phi$",
-     "meaning": "potential (V)"
+     "symbol": "$\\delta p_0$",
+     "meaning": "excess hole concentration at $x = 0$ (cm$^{-3}$)"
     },
     {
      "symbol": "$\\rho$",
-     "meaning": "charge density (C/cm$^3$)"
+     "meaning": "net charge density (C/cm$^3$)"
+    },
+    {
+     "symbol": "$\\tau_d$",
+     "meaning": "dielectric relaxation time constant (s)"
+    },
+    {
+     "symbol": "$\\epsilon$",
+     "meaning": "permittivity of the semiconductor (F/cm)"
+    },
+    {
+     "symbol": "$D_n$",
+     "meaning": "electron diffusion coefficient (cm$^2$/s)"
+    },
+    {
+     "symbol": "$D_p$",
+     "meaning": "hole diffusion coefficient (cm$^2$/s)"
+    },
+    {
+     "symbol": "$kT/e$",
+     "meaning": "thermal voltage (0.0259 V at 300 K)"
+    },
+    {
+     "symbol": "$F_p^+$",
+     "meaning": "hole flux (cm$^{-2}$s$^{-1}$)"
+    },
+    {
+     "symbol": "$g_p$",
+     "meaning": "hole generation rate (cm$^{-3}$s$^{-1}$)"
+    },
+    {
+     "symbol": "$\\tau_{pt}$",
+     "meaning": "hole lifetime, thermal-equilibrium and excess together (s)"
+    },
+    {
+     "symbol": "$\\delta n$",
+     "meaning": "excess electron concentration, equal to $\\delta p$ (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$D'$",
+     "meaning": "ambipolar diffusion coefficient (cm$^2$/s)"
+    },
+    {
+     "symbol": "$\\mu'$",
+     "meaning": "ambipolar mobility (cm$^2$/V s)"
+    },
+    {
+     "symbol": "$g$",
+     "meaning": "generation rate (cm$^{-3}$s$^{-1}$)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "recombination rate (cm$^{-3}$s$^{-1}$)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
+     "symbol": "$\\delta p$",
+     "meaning": "excess hole concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$g'$",
+     "meaning": "excess-carrier generation rate (cm$^{-3}$s$^{-1}$)"
+    },
+    {
+     "symbol": "$x$",
+     "meaning": "distance from the source (cm); distance from the injection plane (cm)"
     },
     {
      "symbol": "$L_n$",
-     "meaning": "minority-electron diffusion length"
+     "meaning": "minority-electron diffusion length (cm)"
+    },
+    {
+     "symbol": "$\\tau_{n0}$",
+     "meaning": "minority-carrier (electron) lifetime (s); minority-electron lifetime (s)"
+    },
+    {
+     "symbol": "$E_0$",
+     "meaning": "applied electric field (V/cm)"
+    },
+    {
+     "symbol": "$E_{Fn}$",
+     "meaning": "quasi-Fermi level for electrons (eV)"
+    },
+    {
+     "symbol": "$E_{Fp}$",
+     "meaning": "quasi-Fermi level for holes (eV)"
+    },
+    {
+     "symbol": "$\\alpha_r$",
+     "meaning": "band-to-band recombination constant (cm$^3$/s)"
+    },
+    {
+     "symbol": "$R'$",
+     "meaning": "recombination rate of the excess carriers (cm$^{-3}$s$^{-1}$); excess-carrier recombination rate (cm$^{-3}$s$^{-1}$)"
+    },
+    {
+     "symbol": "$C_n$",
+     "meaning": "electron capture constant (cm$^3$/s)"
+    },
+    {
+     "symbol": "$C_p$",
+     "meaning": "hole capture constant (cm$^3$/s)"
+    },
+    {
+     "symbol": "$N_t$",
+     "meaning": "trap density (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$n'$",
+     "meaning": "electron concentration if $E_F$ were at the trap level $E_t$ (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$p'$",
+     "meaning": "hole concentration if $E_F$ were at $E_t$ (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "total electron concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$p$",
+     "meaning": "total hole concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$J_n$",
+     "meaning": "electron diffusion current density (A/cm$^2$)"
+    },
+    {
+     "symbol": "$J_p$",
+     "meaning": "hole diffusion current density (A/cm$^2$)"
+    },
+    {
+     "symbol": "$\\phi$",
+     "meaning": "electric potential (V)"
+    },
+    {
+     "symbol": "$\\rho(x)$",
+     "meaning": "charge density (C/cm$^3$)"
+    },
+    {
+     "symbol": "$\\epsilon_s$",
+     "meaning": "permittivity of the semiconductor, $11.7\\epsilon_0$ for Si (F/cm)"
     },
     {
      "symbol": "$N_0$",
-     "meaning": "pairs created per unit area at $x = 0$, $t = 0$"
+     "meaning": "pairs created per unit area at $x = 0$, $t = 0$ (cm$^{-2}$)"
     }
    ]
   },
@@ -199,8 +711,124 @@
    "tier": "Likely",
    "symbols": [
     {
-     "symbol": "$x_n$, $x_p$",
-     "meaning": "depletion widths on the n and p sides"
+     "symbol": "$V_{bi}$",
+     "meaning": "built-in potential barrier (V)"
+    },
+    {
+     "symbol": "$x_n$",
+     "meaning": "space-charge width on the n side (cm); depletion width on the n side (cm)"
+    },
+    {
+     "symbol": "$x_p$",
+     "meaning": "space-charge width on the p side (cm); depletion width on the p side (cm)"
+    },
+    {
+     "symbol": "$\\epsilon_s$",
+     "meaning": "permittivity of the semiconductor, $11.7\\epsilon_0$ for Si (F/cm)"
+    },
+    {
+     "symbol": "$W$",
+     "meaning": "total width of the space-charge (depletion) region (cm); total depletion width (cm)"
+    },
+    {
+     "symbol": "$V_R$",
+     "meaning": "reverse-bias voltage (V)"
+    },
+    {
+     "symbol": "$C'$",
+     "meaning": "junction capacitance per unit area (F/cm$^2$)"
+    },
+    {
+     "symbol": "$p_{n0}$",
+     "meaning": "thermal-equilibrium hole (minority) concentration in the n region, $n_i^2/N_d$ (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$n_{p0}$",
+     "meaning": "thermal-equilibrium electron (minority) concentration in the p region (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$L_n$",
+     "meaning": "electron diffusion length (cm)"
+    },
+    {
+     "symbol": "$V_a$",
+     "meaning": "applied forward voltage (V)"
+    },
+    {
+     "symbol": "$L_p$",
+     "meaning": "hole diffusion length, $\\sqrt{D_p\\tau_{p0}}$ (cm)"
+    },
+    {
+     "symbol": "$t_s$",
+     "meaning": "storage time (s)"
+    },
+    {
+     "symbol": "$I_F$",
+     "meaning": "forward current before switching (A)"
+    },
+    {
+     "symbol": "$I_R$",
+     "meaning": "reverse current while the stored charge is removed (A)"
+    },
+    {
+     "symbol": "$Q_p$",
+     "meaning": "stored minority-carrier charge (C)"
+    },
+    {
+     "symbol": "$n_i(300)$",
+     "meaning": "intrinsic concentration at 300 K (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$D_n$",
+     "meaning": "electron diffusion coefficient (cm$^2$/s)"
+    },
+    {
+     "symbol": "$D_p$",
+     "meaning": "hole diffusion coefficient (cm$^2$/s)"
+    },
+    {
+     "symbol": "$n_{n0}$",
+     "meaning": "thermal-equilibrium electron (majority) concentration in the n region (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$E_{max}$",
+     "meaning": "peak electric field, at the metallurgical junction (V/cm)"
+    },
+    {
+     "symbol": "$p_n(x_n)$",
+     "meaning": "hole concentration at the n-side edge of the depletion region (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$n_p(-x_p)$",
+     "meaning": "electron concentration at the p-side edge of the depletion region (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$J_p(x)$",
+     "meaning": "hole (minority) diffusion current density in the n region (A/cm$^2$)"
+    },
+    {
+     "symbol": "$J_n(x)$",
+     "meaning": "electron current density (A/cm$^2$)"
+    },
+    {
+     "symbol": "$\\phi_{Fp}$",
+     "meaning": "Fermi potential of the p side, $(E_{Fi} - E_F)/e$ (V)"
+    },
+    {
+     "symbol": "$\\phi_{Fn}$",
+     "meaning": "Fermi potential of the n side, $\\lvert\\phi_{Fn}\\rvert = (E_F - E_{Fi})/e$ (V)"
+    },
+    {
+     "symbol": "$V_t$",
+     "meaning": "thermal voltage, $kT/e$ (V)"
+    },
+    {
+     "symbol": "$n_n$",
+     "meaning": "electron (majority) concentration at the n-side edge (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$\\delta p_n$",
+     "meaning": "excess holes injected there (cm$^{-3}$)"
     }
    ]
   },
@@ -218,16 +846,48 @@
    "tier": "Likely",
    "symbols": [
     {
+     "symbol": "$\\phi_{B0}$",
+     "meaning": "ideal Schottky barrier height (V)"
+    },
+    {
      "symbol": "$\\phi_m$",
-     "meaning": "metal work function"
+     "meaning": "metal work function (V)"
     },
     {
      "symbol": "$\\chi$",
-     "meaning": "electron affinity (4.01 V for Si), $e\\phi_n = E_c - E_F$"
+     "meaning": "electron affinity (V), 4.01 V for Si"
+    },
+    {
+     "symbol": "$\\phi_n$",
+     "meaning": "depth of the Fermi level below $E_c$, $(E_c - E_F)/e$ (V)"
     },
     {
      "symbol": "$A^*$",
-     "meaning": "effective Richardson constant"
+     "meaning": "effective Richardson constant (A/cm$^2$K$^2$)"
+    },
+    {
+     "symbol": "$V_{bi}$",
+     "meaning": "built-in potential barrier (V)"
+    },
+    {
+     "symbol": "$J$",
+     "meaning": "current density (A/cm$^2$)"
+    },
+    {
+     "symbol": "$J_{sT}$",
+     "meaning": "reverse saturation current density (A/cm$^2$)"
+    },
+    {
+     "symbol": "$e$",
+     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
+    },
+    {
+     "symbol": "$V_a$",
+     "meaning": "applied forward voltage (V)"
+    },
+    {
+     "symbol": "$\\phi_{Bn}$",
+     "meaning": "Schottky barrier height (V)"
     }
    ]
   },
@@ -238,8 +898,92 @@
    "tier": "Likely",
    "symbols": [
     {
+     "symbol": "$\\phi_{fp}$",
+     "meaning": "Fermi potential of the p-type substrate, $(E_{Fi} - E_F)/e$ (V)"
+    },
+    {
+     "symbol": "$V_t$",
+     "meaning": "thermal voltage, $kT/e$ (0.0259 V at 300 K)"
+    },
+    {
      "symbol": "$\\phi_s$",
-     "meaning": "surface potential (band bending)"
+     "meaning": "surface potential, the band bending (V)"
+    },
+    {
+     "symbol": "$V_{TN}$",
+     "meaning": "threshold voltage of the n-channel MOSFET (V)"
+    },
+    {
+     "symbol": "$Q'_{SD}(\\max)$",
+     "meaning": "maximum space-charge (depletion) charge per unit area (C/cm$^2$)"
+    },
+    {
+     "symbol": "$Q'_{ss}$",
+     "meaning": "fixed oxide charge per unit area (C/cm$^2$)"
+    },
+    {
+     "symbol": "$C_{ox}$",
+     "meaning": "oxide capacitance per unit area, $\\epsilon_{ox}/t_{ox}$ (F/cm$^2$)"
+    },
+    {
+     "symbol": "$\\phi_{ms}$",
+     "meaning": "metal-semiconductor work function difference (V)"
+    },
+    {
+     "symbol": "$x_{dT}$",
+     "meaning": "maximum space-charge width under the gate (cm)"
+    },
+    {
+     "symbol": "$\\Delta V_T$",
+     "meaning": "shift of the threshold voltage (V)"
+    },
+    {
+     "symbol": "$\\gamma$",
+     "meaning": "body-effect coefficient (V$^{1/2}$)"
+    },
+    {
+     "symbol": "$V_{SB}$",
+     "meaning": "source-to-body reverse bias (V)"
+    },
+    {
+     "symbol": "$C'_{SD}$",
+     "meaning": "space-charge capacitance per unit area (F/cm$^2$)"
+    },
+    {
+     "symbol": "$C'_{min}$",
+     "meaning": "minimum capacitance per unit area (F/cm$^2$)"
+    },
+    {
+     "symbol": "$\\epsilon_{ox}$",
+     "meaning": "oxide permittivity, $3.9\\epsilon_0$ (F/cm)"
+    },
+    {
+     "symbol": "$t_{ox}$",
+     "meaning": "oxide thickness (cm)"
+    },
+    {
+     "symbol": "$Q'_{SD}(max)$",
+     "meaning": "maximum space-charge (depletion) charge per unit area (C/cm$^2$)"
+    },
+    {
+     "symbol": "$E_{ox}$",
+     "meaning": "electric field in the oxide (V/cm)"
+    },
+    {
+     "symbol": "$Q'_I$",
+     "meaning": "inversion charge per unit area (C/cm$^2$)"
+    },
+    {
+     "symbol": "$V_T$",
+     "meaning": "threshold voltage (V)"
+    },
+    {
+     "symbol": "$V_{FB}$",
+     "meaning": "flat-band voltage (V)"
+    },
+    {
+     "symbol": "$V_G$",
+     "meaning": "gate voltage (V)"
     }
    ]
   },
@@ -250,12 +994,160 @@
    "tier": "Likely",
    "symbols": [
     {
-     "symbol": "$N_E$, $N_B$, $N_C$",
-     "meaning": "emitter, base, collector doping"
+     "symbol": "$i_C$",
+     "meaning": "collector current (A)"
+    },
+    {
+     "symbol": "$I_S$",
+     "meaning": "saturation current (A)"
+    },
+    {
+     "symbol": "$v_{BE}$",
+     "meaning": "base-emitter voltage (V)"
+    },
+    {
+     "symbol": "$A_v$",
+     "meaning": "voltage gain"
+    },
+    {
+     "symbol": "$g_m$",
+     "meaning": "transconductance, $I_C/V_t$ (A/V)"
+    },
+    {
+     "symbol": "$R_C$",
+     "meaning": "collector load resistance ($\\Omega$)"
+    },
+    {
+     "symbol": "$I_C$",
+     "meaning": "dc collector current (A)"
+    },
+    {
+     "symbol": "$I_B$",
+     "meaning": "base current (A)"
+    },
+    {
+     "symbol": "$I_{pE}$",
+     "meaning": "hole current injected from the base into the emitter (A)"
+    },
+    {
+     "symbol": "$I_{RB}$",
+     "meaning": "recombination current in the base (A)"
+    },
+    {
+     "symbol": "$I_R$",
+     "meaning": "recombination current in the B-E space-charge region (A)"
+    },
+    {
+     "symbol": "$I_{CBO}$",
+     "meaning": "B-C reverse-bias current (A)"
+    },
+    {
+     "symbol": "$V_{CE}$",
+     "meaning": "collector-emitter voltage (V)"
+    },
+    {
+     "symbol": "$V_A$",
+     "meaning": "Early voltage (V)"
+    },
+    {
+     "symbol": "$J_C$",
+     "meaning": "collector current density (A/cm$^2$)"
+    },
+    {
+     "symbol": "$D_B$",
+     "meaning": "minority-carrier diffusion coefficient in the base (cm$^2$/s)"
+    },
+    {
+     "symbol": "$n_{B0}$",
+     "meaning": "thermal-equilibrium minority-carrier concentration in the base (cm$^{-3}$); equilibrium electron concentration in the base (cm$^{-3}$)"
     },
     {
      "symbol": "$x_B$",
-     "meaning": "neutral base width"
+     "meaning": "neutral base width (cm)"
+    },
+    {
+     "symbol": "$V_{BE}$",
+     "meaning": "base-emitter voltage (V)"
+    },
+    {
+     "symbol": "$\\gamma$",
+     "meaning": "emitter injection efficiency"
+    },
+    {
+     "symbol": "$N_B$",
+     "meaning": "base doping (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$N_E$",
+     "meaning": "emitter doping (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$D_E$",
+     "meaning": "minority-carrier diffusion coefficient in the emitter (cm$^2$/s)"
+    },
+    {
+     "symbol": "$x_E$",
+     "meaning": "neutral emitter width (cm)"
+    },
+    {
+     "symbol": "$\\Delta V$",
+     "meaning": "drop of $V_{BE}$ from the emitter edge to its centre (V)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "lateral base resistance under half the emitter ($\\Omega$)"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "emitter stripe width (cm)"
+    },
+    {
+     "symbol": "$V_{BC}$",
+     "meaning": "base-collector voltage (V)"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "common-emitter current gain"
+    },
+    {
+     "symbol": "$J_{nE}$",
+     "meaning": "electron current density injected from the emitter into the base (A/cm$^2$)"
+    },
+    {
+     "symbol": "$J_{pE}$",
+     "meaning": "hole current density injected from the base into the emitter (A/cm$^2$)"
+    },
+    {
+     "symbol": "$p_{E0}$",
+     "meaning": "equilibrium hole concentration in the emitter (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$p_{C0}$",
+     "meaning": "equilibrium hole concentration in the collector (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$N_C$",
+     "meaning": "collector doping (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$n_B(0)$",
+     "meaning": "electron concentration at the emitter edge of the base (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$n_B(x_B)$",
+     "meaning": "electron concentration at the collector edge of the base (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$p_E(0)$",
+     "meaning": "hole concentration at the edge of the emitter (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$p_C(0)$",
+     "meaning": "hole concentration at the edge of the collector (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$V_{CB}$",
+     "meaning": "collector-base voltage (V)"
     }
    ]
   },
@@ -264,7 +1156,32 @@
    "title": "JFET",
    "book": "Neamen Ch. 13",
    "tier": "Less often",
-   "symbols": []
+   "symbols": [
+    {
+     "symbol": "$V_{p0}$",
+     "meaning": "internal pinch-off voltage (V)"
+    },
+    {
+     "symbol": "$V_p$",
+     "meaning": "pinch-off voltage, gate to source (V)"
+    },
+    {
+     "symbol": "$a$",
+     "meaning": "metallurgical channel thickness (cm)"
+    },
+    {
+     "symbol": "$f_T$",
+     "meaning": "cutoff frequency (Hz)"
+    },
+    {
+     "symbol": "$C_G$",
+     "meaning": "gate capacitance, $C_{gs} + C_{gd}$ (F)"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "channel length (cm)"
+    }
+   ]
   }
  ],
  "questions": [

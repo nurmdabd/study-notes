@@ -390,11 +390,11 @@
       "session": "2018-19",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 108,
+      "pages": 114,
       "file": "EEE421-SSD/SSD-2018-19-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "46408fe3348973ff"
+      "updated": "2026-11-13T11:43+06:00",
+      "source": "f232d05a59a3bd9a"
     },
     {
       "id": "EEE421-2018-19-question-paper",
@@ -414,11 +414,11 @@
       "session": "2019-20",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 120,
+      "pages": 128,
       "file": "EEE421-SSD/SSD-2019-20-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "3d3d65bfc2bbf3cd"
+      "updated": "2026-11-13T11:43+06:00",
+      "source": "8dec09368b289f90"
     },
     {
       "id": "EEE421-2019-20-question-paper",
@@ -438,11 +438,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 158,
+      "pages": 162,
       "file": "EEE421-SSD/SSD-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "60165105ffe8d90b"
+      "updated": "2026-11-13T11:43+06:00",
+      "source": "b8206f892a805d24"
     },
     {
       "id": "EEE421-2020-21-question-paper",
@@ -462,11 +462,11 @@
       "session": "2021-22",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 34,
+      "pages": 38,
       "file": "EEE421-SSD/SSD-2021-22-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "84a2e8960a108c99"
+      "updated": "2026-11-13T11:43+06:00",
+      "source": "1e6d35df6281da3c"
     },
     {
       "id": "EEE421-2021-22-question-paper",
@@ -801,12 +801,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 42,
+      "pages": 44,
       "file": "EEE421-SSD/SSD-question-analysis.pdf",
       "page": "analysis.html?subject=EEE421",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "d1d9c5704e055a50"
+      "updated": "2026-11-13T11:43+06:00",
+      "source": "a5fd58b874a826be"
     },
     {
       "id": "EEE443-question-analysis",
