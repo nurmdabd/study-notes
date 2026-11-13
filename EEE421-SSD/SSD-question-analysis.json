@@ -56,7 +56,7 @@
     },
     {
      "symbol": "$E$",
-     "meaning": "electron energy (J); energy of the state (eV)"
+     "meaning": "electron energy (eV); energy of the state (eV)"
     },
     {
      "symbol": "$\\hbar$",
@@ -175,6 +175,14 @@
      "meaning": "effective density of states in the conduction band, $2\\left(\\dfrac{2\\pi m_n^*kT}{h^2}\\right)^{3/2}$ (cm$^{-3}$)"
     },
     {
+     "symbol": "$f_F(E)$",
+     "meaning": "probability that a state at energy $E$ is occupied"
+    },
+    {
+     "symbol": "$E_F$",
+     "meaning": "Fermi energy (eV); Fermi level (eV)"
+    },
+    {
      "symbol": "$p_0$",
      "meaning": "thermal-equilibrium hole concentration (cm$^{-3}$)"
     },
@@ -211,28 +219,20 @@
      "meaning": "donor energy level (eV)"
     },
     {
-     "symbol": "$E_{Fi}$",
-     "meaning": "intrinsic Fermi level, near midgap (eV)"
-    },
-    {
-     "symbol": "$f_F(E)$",
-     "meaning": "probability that a state at energy $E$ is occupied"
-    },
-    {
-     "symbol": "$E$",
-     "meaning": "energy of the state (eV)"
-    },
-    {
-     "symbol": "$E_F$",
-     "meaning": "Fermi energy (eV); Fermi level (eV)"
-    },
-    {
      "symbol": "$kT$",
      "meaning": "thermal energy (0.0259 eV at 300 K)"
     },
     {
      "symbol": "$E_c$",
      "meaning": "conduction-band edge (eV)"
+    },
+    {
+     "symbol": "$E_{Fi}$",
+     "meaning": "intrinsic Fermi level, near midgap (eV)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "energy of the state (eV); energy of the bound electron in orbit $n$ (J)"
     },
     {
      "symbol": "$f_F$",
@@ -271,6 +271,14 @@
      "meaning": "intrinsic concentration at 300 K (cm$^{-3}$)"
     },
     {
+     "symbol": "$k$",
+     "meaning": "Boltzmann constant ($8.62\\times10^{-5}$ eV/K)"
+    },
+    {
+     "symbol": "$T$",
+     "meaning": "absolute temperature (K)"
+    },
+    {
      "symbol": "$N_a^-$",
      "meaning": "ionized acceptor concentration (cm$^{-3}$)"
     },
@@ -281,10 +289,6 @@
     {
      "symbol": "$\\eta$",
      "meaning": "energy above the band edge in units of $kT$, $(E - E_c)/kT$"
-    },
-    {
-     "symbol": "$T$",
-     "meaning": "absolute temperature (K)"
     },
     {
      "symbol": "$N_c(300)$",
@@ -392,11 +396,11 @@
     },
     {
      "symbol": "$n$",
-     "meaning": "electron concentration (cm$^{-3}$)"
+     "meaning": "total electron concentration (cm$^{-3}$)"
     },
     {
      "symbol": "$p$",
-     "meaning": "hole concentration (cm$^{-3}$)"
+     "meaning": "total hole concentration (cm$^{-3}$)"
     },
     {
      "symbol": "$N_I$",
@@ -551,6 +555,10 @@
      "meaning": "excess hole concentration at $x = 0$ (cm$^{-3}$)"
     },
     {
+     "symbol": "$D_p$",
+     "meaning": "hole diffusion coefficient (cm$^2$/s)"
+    },
+    {
      "symbol": "$\\rho$",
      "meaning": "net charge density (C/cm$^3$)"
     },
@@ -563,12 +571,16 @@
      "meaning": "permittivity of the semiconductor (F/cm)"
     },
     {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
      "symbol": "$D_n$",
      "meaning": "electron diffusion coefficient (cm$^2$/s)"
     },
     {
-     "symbol": "$D_p$",
-     "meaning": "hole diffusion coefficient (cm$^2$/s)"
+     "symbol": "$J$",
+     "meaning": "current density (A/cm$^2$)"
     },
     {
      "symbol": "$kT/e$",
@@ -587,8 +599,16 @@
      "meaning": "hole lifetime, thermal-equilibrium and excess together (s)"
     },
     {
+     "symbol": "$p$",
+     "meaning": "total hole concentration (cm$^{-3}$)"
+    },
+    {
      "symbol": "$\\delta n$",
      "meaning": "excess electron concentration, equal to $\\delta p$ (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "electric field (V/cm)"
     },
     {
      "symbol": "$D'$",
@@ -607,8 +627,16 @@
      "meaning": "recombination rate (cm$^{-3}$s$^{-1}$)"
     },
     {
-     "symbol": "$t$",
-     "meaning": "time (s)"
+     "symbol": "$\\mu_n$",
+     "meaning": "electron mobility (cm$^2$/V s)"
+    },
+    {
+     "symbol": "$\\mu_p$",
+     "meaning": "hole mobility (cm$^2$/V s)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "total electron concentration (cm$^{-3}$)"
     },
     {
      "symbol": "$\\delta p$",
@@ -643,6 +671,26 @@
      "meaning": "quasi-Fermi level for holes (eV)"
     },
     {
+     "symbol": "$kT$",
+     "meaning": "thermal energy (0.0259 eV at 300 K)"
+    },
+    {
+     "symbol": "$n_0$",
+     "meaning": "thermal-equilibrium electron concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$p_0$",
+     "meaning": "thermal-equilibrium hole concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$n_i$",
+     "meaning": "intrinsic carrier concentration ($1.5\\times10^{10}$ cm$^{-3}$ for Si at 300 K)"
+    },
+    {
+     "symbol": "$E_{Fi}$",
+     "meaning": "intrinsic Fermi level (eV)"
+    },
+    {
      "symbol": "$\\alpha_r$",
      "meaning": "band-to-band recombination constant (cm$^3$/s)"
     },
@@ -669,14 +717,6 @@
     {
      "symbol": "$p'$",
      "meaning": "hole concentration if $E_F$ were at $E_t$ (cm$^{-3}$)"
-    },
-    {
-     "symbol": "$n$",
-     "meaning": "total electron concentration (cm$^{-3}$)"
-    },
-    {
-     "symbol": "$p$",
-     "meaning": "total hole concentration (cm$^{-3}$)"
     },
     {
      "symbol": "$J_n$",
@@ -713,6 +753,26 @@
     {
      "symbol": "$V_{bi}$",
      "meaning": "built-in potential barrier (V)"
+    },
+    {
+     "symbol": "$kT$",
+     "meaning": "thermal energy (0.0259 eV at 300 K)"
+    },
+    {
+     "symbol": "$n_i$",
+     "meaning": "intrinsic carrier concentration ($1.5\\times10^{10}$ cm$^{-3}$ for Si at 300 K)"
+    },
+    {
+     "symbol": "$N_a$",
+     "meaning": "acceptor concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$N_d$",
+     "meaning": "donor concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$e$",
+     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
     },
     {
      "symbol": "$x_n$",
@@ -755,6 +815,18 @@
      "meaning": "applied forward voltage (V)"
     },
     {
+     "symbol": "$D_n$",
+     "meaning": "electron diffusion coefficient (cm$^2$/s)"
+    },
+    {
+     "symbol": "$D_p$",
+     "meaning": "hole diffusion coefficient (cm$^2$/s)"
+    },
+    {
+     "symbol": "$J$",
+     "meaning": "total current density (A/cm$^2$)"
+    },
+    {
      "symbol": "$L_p$",
      "meaning": "hole diffusion length, $\\sqrt{D_p\\tau_{p0}}$ (cm)"
     },
@@ -775,16 +847,20 @@
      "meaning": "stored minority-carrier charge (C)"
     },
     {
+     "symbol": "$\\tau_{p0}$",
+     "meaning": "minority-carrier (hole) lifetime (s)"
+    },
+    {
      "symbol": "$n_i(300)$",
      "meaning": "intrinsic concentration at 300 K (cm$^{-3}$)"
     },
     {
-     "symbol": "$D_n$",
-     "meaning": "electron diffusion coefficient (cm$^2$/s)"
+     "symbol": "$k$",
+     "meaning": "Boltzmann constant ($8.62\\times10^{-5}$ eV/K)"
     },
     {
-     "symbol": "$D_p$",
-     "meaning": "hole diffusion coefficient (cm$^2$/s)"
+     "symbol": "$T$",
+     "meaning": "absolute temperature (K)"
     },
     {
      "symbol": "$n_{n0}$",
@@ -862,28 +938,44 @@
      "meaning": "depth of the Fermi level below $E_c$, $(E_c - E_F)/e$ (V)"
     },
     {
-     "symbol": "$A^*$",
-     "meaning": "effective Richardson constant (A/cm$^2$K$^2$)"
+     "symbol": "$kT$",
+     "meaning": "thermal energy (0.0259 eV at 300 K)"
     },
     {
-     "symbol": "$V_{bi}$",
-     "meaning": "built-in potential barrier (V)"
+     "symbol": "$N_c$",
+     "meaning": "effective density of states in the conduction band (cm$^{-3}$)"
     },
     {
-     "symbol": "$J$",
-     "meaning": "current density (A/cm$^2$)"
-    },
-    {
-     "symbol": "$J_{sT}$",
-     "meaning": "reverse saturation current density (A/cm$^2$)"
+     "symbol": "$N_d$",
+     "meaning": "donor concentration (cm$^{-3}$)"
     },
     {
      "symbol": "$e$",
      "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
     },
     {
+     "symbol": "$V_{bi}$",
+     "meaning": "built-in potential barrier (V)"
+    },
+    {
+     "symbol": "$A^*$",
+     "meaning": "effective Richardson constant (A/cm$^2$K$^2$)"
+    },
+    {
+     "symbol": "$T$",
+     "meaning": "absolute temperature (K)"
+    },
+    {
+     "symbol": "$J$",
+     "meaning": "total current density (A/cm$^2$)"
+    },
+    {
      "symbol": "$V_a$",
      "meaning": "applied forward voltage (V)"
+    },
+    {
+     "symbol": "$J_{sT}$",
+     "meaning": "reverse saturation current density (A/cm$^2$)"
     },
     {
      "symbol": "$\\phi_{Bn}$",
@@ -910,6 +1002,14 @@
      "meaning": "surface potential, the band bending (V)"
     },
     {
+     "symbol": "$n_i$",
+     "meaning": "intrinsic carrier concentration ($1.5\\times10^{10}$ cm$^{-3}$ for Si at 300 K)"
+    },
+    {
+     "symbol": "$N_a$",
+     "meaning": "acceptor concentration (cm$^{-3}$)"
+    },
+    {
      "symbol": "$V_{TN}$",
      "meaning": "threshold voltage of the n-channel MOSFET (V)"
     },
@@ -934,6 +1034,10 @@
      "meaning": "maximum space-charge width under the gate (cm)"
     },
     {
+     "symbol": "$\\epsilon_s$",
+     "meaning": "permittivity of the semiconductor, $11.7\\epsilon_0$ for Si (F/cm)"
+    },
+    {
      "symbol": "$\\Delta V_T$",
      "meaning": "shift of the threshold voltage (V)"
     },
@@ -944,6 +1048,10 @@
     {
      "symbol": "$V_{SB}$",
      "meaning": "source-to-body reverse bias (V)"
+    },
+    {
+     "symbol": "$e$",
+     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
     },
     {
      "symbol": "$C'_{SD}$",
@@ -960,6 +1068,10 @@
     {
      "symbol": "$t_{ox}$",
      "meaning": "oxide thickness (cm)"
+    },
+    {
+     "symbol": "$C'$",
+     "meaning": "MOS capacitance per unit area (F/cm$^2$)"
     },
     {
      "symbol": "$Q'_{SD}(max)$",
@@ -1022,6 +1134,10 @@
      "meaning": "dc collector current (A)"
     },
     {
+     "symbol": "$V_t$",
+     "meaning": "thermal voltage, $kT/e$ (V)"
+    },
+    {
      "symbol": "$I_B$",
      "meaning": "base current (A)"
     },
@@ -1068,6 +1184,10 @@
     {
      "symbol": "$V_{BE}$",
      "meaning": "base-emitter voltage (V)"
+    },
+    {
+     "symbol": "$kT$",
+     "meaning": "thermal energy (0.0259 eV at 300 K)"
     },
     {
      "symbol": "$\\gamma$",
@@ -1130,6 +1250,10 @@
      "meaning": "collector doping (cm$^{-3}$)"
     },
     {
+     "symbol": "$n_i$",
+     "meaning": "intrinsic carrier concentration (cm$^{-3}$)"
+    },
+    {
      "symbol": "$n_B(0)$",
      "meaning": "electron concentration at the emitter edge of the base (cm$^{-3}$)"
     },
@@ -1170,6 +1294,18 @@
      "meaning": "metallurgical channel thickness (cm)"
     },
     {
+     "symbol": "$N_d$",
+     "meaning": "donor concentration (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$V_{bi}$",
+     "meaning": "built-in potential barrier (V)"
+    },
+    {
+     "symbol": "$\\epsilon_s$",
+     "meaning": "permittivity of the semiconductor, $11.7\\epsilon_0$ for Si (F/cm)"
+    },
+    {
      "symbol": "$f_T$",
      "meaning": "cutoff frequency (Hz)"
     },
@@ -1180,6 +1316,18 @@
     {
      "symbol": "$L$",
      "meaning": "channel length (cm)"
+    },
+    {
+     "symbol": "$e$",
+     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
+    },
+    {
+     "symbol": "$\\mu_n$",
+     "meaning": "electron mobility (cm$^2$/V s)"
+    },
+    {
+     "symbol": "$g_m$",
+     "meaning": "transconductance (A/V)"
     }
    ]
   }
@@ -4164,7 +4312,7 @@
    "topic": "equilibrium",
    "subtopic": "Temperature dependence",
    "title": "$n_i$ at another temperature",
-   "eq": "$n_i(T) = n_i(300)\\left(\\dfrac{T}{300}\\right)^{3/2}\\exp\\left[-\\dfrac{E_g}{2k}\\left(\\dfrac{1}{T} - \\dfrac{1}{300}\\right)\\right]$",
+   "eq": "$n_i(T) = n_i(300)\\left(\\dfrac{T}{300}\\right)^{3/2}$ $\\times\\exp\\left[-\\dfrac{E_g}{2k}\\left(\\dfrac{1}{T} - \\dfrac{1}{300}\\right)\\right]$",
    "used": [
     {
      "label": "19-20 2(c)",
@@ -5184,7 +5332,7 @@
    "topic": "pn",
    "subtopic": "Depletion width",
    "title": "$n_i$ at another temperature",
-   "eq": "$n_i(T) = n_i(300)\\left(\\dfrac{T}{300}\\right)^{3/2}\\exp\\left[-\\dfrac{E_g}{2k}\\left(\\dfrac{1}{T} - \\dfrac{1}{300}\\right)\\right]$",
+   "eq": "$n_i(T) = n_i(300)\\left(\\dfrac{T}{300}\\right)^{3/2}$ $\\times\\exp\\left[-\\dfrac{E_g}{2k}\\left(\\dfrac{1}{T} - \\dfrac{1}{300}\\right)\\right]$",
    "used": [
     {
      "label": "19-20 4(c)",

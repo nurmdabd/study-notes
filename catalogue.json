@@ -393,8 +393,8 @@
       "pages": 114,
       "file": "EEE421-SSD/SSD-2018-19-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:43+06:00",
-      "source": "f232d05a59a3bd9a"
+      "updated": "2026-11-13T12:26+06:00",
+      "source": "85463c0493c9c88b"
     },
     {
       "id": "EEE421-2018-19-question-paper",
@@ -414,11 +414,11 @@
       "session": "2019-20",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 128,
+      "pages": 126,
       "file": "EEE421-SSD/SSD-2019-20-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:43+06:00",
-      "source": "8dec09368b289f90"
+      "updated": "2026-11-13T12:26+06:00",
+      "source": "bfc818af2a4b36d9"
     },
     {
       "id": "EEE421-2019-20-question-paper",
@@ -438,11 +438,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 162,
+      "pages": 164,
       "file": "EEE421-SSD/SSD-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:43+06:00",
-      "source": "b8206f892a805d24"
+      "updated": "2026-11-13T12:26+06:00",
+      "source": "b06363a26f7b12c9"
     },
     {
       "id": "EEE421-2020-21-question-paper",
@@ -465,8 +465,8 @@
       "pages": 38,
       "file": "EEE421-SSD/SSD-2021-22-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:43+06:00",
-      "source": "1e6d35df6281da3c"
+      "updated": "2026-11-13T12:26+06:00",
+      "source": "d622a5483fcea345"
     },
     {
       "id": "EEE421-2021-22-question-paper",
@@ -801,12 +801,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 44,
+      "pages": 46,
       "file": "EEE421-SSD/SSD-question-analysis.pdf",
       "page": "analysis.html?subject=EEE421",
       "printable": true,
-      "updated": "2026-11-13T11:43+06:00",
-      "source": "a5fd58b874a826be"
+      "updated": "2026-11-13T12:26+06:00",
+      "source": "ec832403ef1b1ed3"
     },
     {
       "id": "EEE443-question-analysis",
