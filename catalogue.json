@@ -582,11 +582,11 @@
       "session": "2017-18",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 74,
+      "pages": 80,
       "file": "EEE459-Semi/Semi-2017-18-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:34+06:00",
-      "source": "db2cde50ff2e4a80"
+      "updated": "2026-11-13T22:18+06:00",
+      "source": "2fdc74511a33f039"
     },
     {
       "id": "EEE459-2017-18-question-paper",
@@ -597,8 +597,8 @@
       "pages": 3,
       "file": "EEE459-Semi/Semi-2017-18-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:34+06:00",
-      "source": "246d1d25c8785d86"
+      "updated": "2026-11-13T22:18+06:00",
+      "source": "34b7e6839f0603da"
     },
     {
       "id": "EEE459-2018-19-pack",
@@ -606,11 +606,11 @@
       "session": "2018-19",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 92,
+      "pages": 96,
       "file": "EEE459-Semi/Semi-2018-19-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:34+06:00",
-      "source": "b7b7f735c5b86695"
+      "updated": "2026-11-13T22:18+06:00",
+      "source": "3747eef6a4dcea82"
     },
     {
       "id": "EEE459-2018-19-question-paper",
@@ -621,8 +621,8 @@
       "pages": 3,
       "file": "EEE459-Semi/Semi-2018-19-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:34+06:00",
-      "source": "020846027fc26d90"
+      "updated": "2026-11-13T22:18+06:00",
+      "source": "e3eed68305cb986e"
     },
     {
       "id": "EEE459-2020-21-pack",
@@ -630,11 +630,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 124,
+      "pages": 126,
       "file": "EEE459-Semi/Semi-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:34+06:00",
-      "source": "7f82518a719a7972"
+      "updated": "2026-11-13T22:18+06:00",
+      "source": "1989fdc11a12dbc2"
     },
     {
       "id": "EEE459-2020-21-question-paper",
@@ -645,8 +645,8 @@
       "pages": 3,
       "file": "EEE459-Semi/Semi-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:34+06:00",
-      "source": "d927e9877c169b48"
+      "updated": "2026-11-13T22:18+06:00",
+      "source": "4afcfeeb60332fd0"
     },
     {
       "id": "EEE459-2021-22-pack",
@@ -654,11 +654,11 @@
       "session": "2021-22",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 26,
+      "pages": 28,
       "file": "EEE459-Semi/Semi-2021-22-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:34+06:00",
-      "source": "6f97bd2eff31ffd7"
+      "updated": "2026-11-13T22:18+06:00",
+      "source": "a3b7cbaa338e627d"
     },
     {
       "id": "EEE459-2021-22-question-paper",
@@ -669,8 +669,8 @@
       "pages": 1,
       "file": "EEE459-Semi/Semi-2021-22-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T11:34+06:00",
-      "source": "46325a666f5ae5c1"
+      "updated": "2026-11-13T22:18+06:00",
+      "source": "c4a317bf421d3bca"
     },
     {
       "id": "EEE475-2018-19-pack",
@@ -840,12 +840,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 36,
+      "pages": 40,
       "file": "EEE459-Semi/Semi-question-analysis.pdf",
       "page": "analysis.html?subject=EEE459",
       "printable": true,
-      "updated": "2026-11-13T11:34+06:00",
-      "source": "ebeef83a810a0e52"
+      "updated": "2026-11-13T22:18+06:00",
+      "source": "01fb660107cc78c2"
     },
     {
       "id": "EEE475-question-analysis",
