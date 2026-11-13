@@ -15,6 +15,10 @@
    "tier": "Less often",
    "symbols": [
     {
+     "symbol": "$n$",
+     "meaning": "atoms per unit cell"
+    },
+    {
      "symbol": "$a$",
      "meaning": "lattice constant (cm)"
     }
@@ -26,6 +30,10 @@
    "book": "Neamen Ch. 3",
    "tier": "Must know",
    "symbols": [
+    {
+     "symbol": "$j$",
+     "meaning": "imaginary unit, $\\sqrt{-1}$"
+    },
     {
      "symbol": "$\\psi(x)$",
      "meaning": "electron wave function in the crystal"
@@ -267,6 +275,10 @@
      "meaning": "holes per unit energy in the valence band (cm$^{-3}$eV$^{-1}$)"
     },
     {
+     "symbol": "$g_c$, $g_v$",
+     "meaning": "densities of states in the conduction and valence bands (cm$^{-3}$eV$^{-1}$)"
+    },
+    {
      "symbol": "$n_i(300)$",
      "meaning": "intrinsic concentration at 300 K (cm$^{-3}$)"
     },
@@ -405,6 +417,10 @@
     {
      "symbol": "$N_I$",
      "meaning": "total ionized impurity concentration, $N_d^+ + N_a^-$ (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$x$",
+     "meaning": "position (cm)"
     },
     {
      "symbol": "$J_{n,dif}$",
@@ -575,6 +591,10 @@
      "meaning": "time (s)"
     },
     {
+     "symbol": "$x$",
+     "meaning": "position (cm); distance from the source (cm); distance from the injection plane (cm)"
+    },
+    {
      "symbol": "$D_n$",
      "meaning": "electron diffusion coefficient (cm$^2$/s)"
     },
@@ -645,10 +665,6 @@
     {
      "symbol": "$g'$",
      "meaning": "excess-carrier generation rate (cm$^{-3}$s$^{-1}$)"
-    },
-    {
-     "symbol": "$x$",
-     "meaning": "distance from the source (cm); distance from the injection plane (cm)"
     },
     {
      "symbol": "$L_n$",
@@ -812,7 +828,7 @@
     },
     {
      "symbol": "$V_a$",
-     "meaning": "applied forward voltage (V)"
+     "meaning": "applied forward voltage (V); forward bias voltage (V)"
     },
     {
      "symbol": "$D_n$",
@@ -861,6 +877,10 @@
     {
      "symbol": "$T$",
      "meaning": "absolute temperature (K)"
+    },
+    {
+     "symbol": "$x$",
+     "meaning": "position (cm)"
     },
     {
      "symbol": "$n_{n0}$",
@@ -1010,6 +1030,10 @@
      "meaning": "acceptor concentration (cm$^{-3}$)"
     },
     {
+     "symbol": "$e$",
+     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
+    },
+    {
      "symbol": "$V_{TN}$",
      "meaning": "threshold voltage of the n-channel MOSFET (V)"
     },
@@ -1048,10 +1072,6 @@
     {
      "symbol": "$V_{SB}$",
      "meaning": "source-to-body reverse bias (V)"
-    },
-    {
-     "symbol": "$e$",
-     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
     },
     {
      "symbol": "$C'_{SD}$",
@@ -1282,6 +1302,10 @@
    "tier": "Less often",
    "symbols": [
     {
+     "symbol": "$e$",
+     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
+    },
+    {
      "symbol": "$V_{p0}$",
      "meaning": "internal pinch-off voltage (V)"
     },
@@ -1316,10 +1340,6 @@
     {
      "symbol": "$L$",
      "meaning": "channel length (cm)"
-    },
-    {
-     "symbol": "$e$",
-     "meaning": "magnitude of the electron charge ($1.6\\times10^{-19}$ C)"
     },
     {
      "symbol": "$\\mu_n$",
