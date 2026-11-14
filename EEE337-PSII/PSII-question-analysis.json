@@ -13,8 +13,16 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$L$",
+     "meaning": "loop inductance of the line (H/m)"
+    },
+    {
      "symbol": "$\\psi$",
      "meaning": "flux linkage (Wb-T/m)"
+    },
+    {
+     "symbol": "$N$",
+     "meaning": "number of turns"
     },
     {
      "symbol": "$\\phi$",
@@ -29,16 +37,76 @@
      "meaning": "self-induced voltage (V)"
     },
     {
+     "symbol": "$i$",
+     "meaning": "instantaneous current (A)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
+     "symbol": "$\\psi_{int}$",
+     "meaning": "flux linkage inside the conductor (Wb-T/m)"
+    },
+    {
+     "symbol": "$\\mu_0$",
+     "meaning": "permeability of free space ($4\\pi\\times10^{-7}$ H/m)"
+    },
+    {
+     "symbol": "$\\psi_{12}$",
+     "meaning": "flux linkage between two points outside the conductor (Wb-T/m)"
+    },
+    {
      "symbol": "$D_1$, $D_2$",
-     "meaning": "distances of two points from the conductor (m); near and far distances (m)"
+     "meaning": "distances of the two points from the conductor (m); near and far distances (m)"
+    },
+    {
+     "symbol": "$D_s$",
+     "meaning": "geometric mean radius, GMR (m); GMR of the bundle (m)"
+    },
+    {
+     "symbol": "$r$",
+     "meaning": "conductor radius (m)"
+    },
+    {
+     "symbol": "$\\psi_a$",
+     "meaning": "flux linkage of conductor a (Wb-T/m)"
+    },
+    {
+     "symbol": "$I_a$, $I_b$, $I_c$",
+     "meaning": "currents of the three conductors (A)"
+    },
+    {
+     "symbol": "$D_{ab}$, $D_{ac}$",
+     "meaning": "distances from a to b and to c (m)"
+    },
+    {
+     "symbol": "$D_{eq}$",
+     "meaning": "equivalent spacing (m)"
+    },
+    {
+     "symbol": "$D_{bc}$, $D_{ca}$",
+     "meaning": "the other two spacings (m)"
+    },
+    {
+     "symbol": "$D_s^b$",
+     "meaning": "GMR of the bundle (m)"
     },
     {
      "symbol": "$d$",
      "meaning": "spacing of the sub-conductors (m)"
     },
     {
+     "symbol": "$X_L$",
+     "meaning": "inductive reactance ($\\Omega$/m)"
+    },
+    {
      "symbol": "$f$",
      "meaning": "frequency (Hz)"
+    },
+    {
+     "symbol": "$L_X$",
+     "meaning": "inductance of conductor X (H/m)"
     },
     {
      "symbol": "$D_m$",
@@ -49,16 +117,44 @@
      "meaning": "self GMD of X (m)"
     },
     {
+     "symbol": "$D_{aa'}$, $D_{ab'}$, $D_{am}$, $D_{na'}$, $D_{nm}$",
+     "meaning": "distances from a strand of X to a strand of Y (m)"
+    },
+    {
      "symbol": "$n$, $m$",
      "meaning": "strands in X and Y"
     },
     {
-     "symbol": "$D_{P_iT_j}$",
-     "meaning": "distance from power wire $i$ to telephone wire $j$ (m)"
+     "symbol": "$D_{ab}$, $D_{an}$, $D_{na}$, $D_{nn}$",
+     "meaning": "distances between strands of X (m)"
+    },
+    {
+     "symbol": "$L_a$, $L_b$, $L_n$",
+     "meaning": "inductances of the strands (H/m)"
+    },
+    {
+     "symbol": "$D_{sY}$",
+     "meaning": "self GMD of Y (m)"
+    },
+    {
+     "symbol": "$M$",
+     "meaning": "mutual inductance (H/m)"
+    },
+    {
+     "symbol": "$D_{P_1T_1}$, $D_{P_1T_2}$, $D_{P_2T_1}$, $D_{P_2T_2}$",
+     "meaning": "distance from power wire $i$ to telephone wire $j$, $D_{P_iT_j}$ (m)"
     },
     {
      "symbol": "$E$",
      "meaning": "voltage in the telephone line (V per m)"
+    },
+    {
+     "symbol": "$\\delta$",
+     "meaning": "skin depth (m)"
+    },
+    {
+     "symbol": "$\\mu$",
+     "meaning": "permeability (H/m)"
     },
     {
      "symbol": "$\\sigma$",
@@ -85,20 +181,72 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$C$",
+     "meaning": "capacitance between the two wires (F/m)"
+    },
+    {
      "symbol": "$q$",
      "meaning": "charge (C/m)"
+    },
+    {
+     "symbol": "$V$",
+     "meaning": "voltage (V)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "electric field (V/m)"
+    },
+    {
+     "symbol": "$\\varepsilon_0$",
+     "meaning": "permittivity of free space ($8.854\\times10^{-12}$ F/m)"
     },
     {
      "symbol": "$x$",
      "meaning": "distance from the conductor (m)"
     },
     {
+     "symbol": "$V_{12}$",
+     "meaning": "voltage between the two points (V)"
+    },
+    {
+     "symbol": "$D_1$, $D_2$",
+     "meaning": "distances of the two points from the conductor (m)"
+    },
+    {
+     "symbol": "$V_{ab}$, $V_{ac}$",
+     "meaning": "line voltages (V)"
+    },
+    {
      "symbol": "$V_{an}$",
-     "meaning": "phase voltage"
+     "meaning": "phase voltage (V)"
+    },
+    {
+     "symbol": "$C_n$",
+     "meaning": "capacitance to neutral per phase (F/m)"
+    },
+    {
+     "symbol": "$D_{eq}$",
+     "meaning": "equivalent spacing (m)"
+    },
+    {
+     "symbol": "$r$",
+     "meaning": "outside radius of the conductor (m)"
+    },
+    {
+     "symbol": "$I_c$",
+     "meaning": "charging current (A)"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "frequency (Hz)"
     },
     {
      "symbol": "$V_{ph}$",
      "meaning": "phase voltage (V)"
+    },
+    {
+     "symbol": "$g$",
+     "meaning": "electric field (V/m)"
     },
     {
      "symbol": "$d$",
@@ -117,24 +265,44 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$g$",
+     "meaning": "potential gradient (kV/cm)"
+    },
+    {
      "symbol": "$V$",
      "meaning": "phase-to-neutral voltage (kV)"
+    },
+    {
+     "symbol": "$x$",
+     "meaning": "distance from the conductor centre (cm)"
     },
     {
      "symbol": "$d$",
      "meaning": "spacing (cm)"
     },
     {
+     "symbol": "$r$",
+     "meaning": "conductor radius (cm)"
+    },
+    {
      "symbol": "$g_0$",
-     "meaning": "breakdown strength of air"
+     "meaning": "dielectric strength of air; breakdown strength of air"
+    },
+    {
+     "symbol": "$g_{max}$",
+     "meaning": "largest gradient, at the conductor surface (kV/cm)"
+    },
+    {
+     "symbol": "$V_c$",
+     "meaning": "critical disruptive voltage (kV)"
     },
     {
      "symbol": "$m_0$",
      "meaning": "irregularity factor (1 smooth, 0.80--0.87 stranded)"
     },
     {
-     "symbol": "$r$",
-     "meaning": "conductor radius (cm)"
+     "symbol": "$\\delta$",
+     "meaning": "air density factor"
     },
     {
      "symbol": "$b$",
@@ -143,6 +311,10 @@
     {
      "symbol": "$t$",
      "meaning": "temperature (°C)"
+    },
+    {
+     "symbol": "$V_v$",
+     "meaning": "visual critical voltage (kV)"
     },
     {
      "symbol": "$m_v$",
@@ -157,6 +329,10 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$K$",
+     "meaning": "ratio of shunt to self capacitance"
+    },
+    {
      "symbol": "$C_1$",
      "meaning": "shunt capacitance to the tower (F); shunt capacitance to earth (F)"
     },
@@ -165,8 +341,16 @@
      "meaning": "self capacitance of a unit (F)"
     },
     {
-     "symbol": "$V_1$",
-     "meaning": "voltage of the top (cross-arm) unit (V)"
+     "symbol": "$V_1$, $V_2$, $V_3$",
+     "meaning": "voltages across units 1, 2, 3 from the tower (V); voltages across units 1, 2, 3 from the cross-arm (V)"
+    },
+    {
+     "symbol": "$V_k$, $V_{k+1}$",
+     "meaning": "voltages across units $k$ and $k + 1$ (V)"
+    },
+    {
+     "symbol": "$\\eta$",
+     "meaning": "string efficiency"
     },
     {
      "symbol": "$V$",
@@ -179,6 +363,10 @@
     {
      "symbol": "$V_n$",
      "meaning": "voltage of the unit nearest the line (V)"
+    },
+    {
+     "symbol": "$C_1$, $C_2$, $C_3$",
+     "meaning": "capacitances of units 1, 2, 3 for equal voltages (F)"
     }
    ]
   },
@@ -189,6 +377,14 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$T$",
+     "meaning": "working tension (kg-wt or N)"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "sag (m)"
+    },
+    {
      "symbol": "$w$",
      "meaning": "weight per metre (N/m)"
     },
@@ -197,16 +393,16 @@
      "meaning": "span (m)"
     },
     {
-     "symbol": "$T$",
-     "meaning": "tension (same force unit as $w$)"
-    },
-    {
-     "symbol": "$S$",
-     "meaning": "sag (m)"
+     "symbol": "$y$",
+     "meaning": "height above the lowest point (m)"
     },
     {
      "symbol": "$x$",
      "meaning": "distance from the lowest point (m)"
+    },
+    {
+     "symbol": "$h$",
+     "meaning": "height of the supports (m)"
     }
    ]
   },
@@ -217,36 +413,88 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$D_x$",
+     "meaning": "electric flux density at $x$ (C/m$^2$)"
+    },
+    {
      "symbol": "$Q$",
      "meaning": "charge on the core (C/m)"
     },
     {
      "symbol": "$x$",
-     "meaning": "distance from the centre (m)"
+     "meaning": "distance from the centre (cm)"
+    },
+    {
+     "symbol": "$g_x$",
+     "meaning": "dielectric stress at $x$ (V/m)"
+    },
+    {
+     "symbol": "$\\varepsilon_0$",
+     "meaning": "permittivity of free space ($8.854\\times10^{-12}$ F/m)"
     },
     {
      "symbol": "$\\varepsilon_r$",
      "meaning": "relative permittivity"
     },
     {
+     "symbol": "$V$",
+     "meaning": "core-to-sheath voltage (kV)"
+    },
+    {
      "symbol": "$d$",
-     "meaning": "core diameter"
+     "meaning": "core diameter (cm)"
     },
     {
      "symbol": "$D$",
-     "meaning": "inside diameter of the sheath"
+     "meaning": "inside diameter of the sheath (cm)"
+    },
+    {
+     "symbol": "$g_{max}$, $g_{min}$",
+     "meaning": "stress at the core and at the sheath (kV/cm)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "insulation thickness (m)"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "capacitance (F/m)"
+    },
+    {
+     "symbol": "$C_1$, $C_2$",
+     "meaning": "capacitances measured in tests 1 and 2 (F)"
     },
     {
      "symbol": "$C_s$",
-     "meaning": "core to sheath"
+     "meaning": "core to sheath (F)"
     },
     {
      "symbol": "$C_c$",
-     "meaning": "core to core"
+     "meaning": "core to core (F)"
     },
     {
-     "symbol": "$V$",
-     "meaning": "peak core-to-sheath voltage (kV)"
+     "symbol": "$C_N$",
+     "meaning": "capacitance per phase to neutral (F)"
+    },
+    {
+     "symbol": "$I_c$",
+     "meaning": "charging current (A)"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "frequency (Hz)"
+    },
+    {
+     "symbol": "$V_{ph}$",
+     "meaning": "phase voltage, $V_L/\\sqrt3$ (V)"
+    },
+    {
+     "symbol": "$g$",
+     "meaning": "dielectric stress at $x$ (kV/cm)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "insulation resistance ($\\Omega$)"
     },
     {
      "symbol": "$\\rho$",
@@ -258,23 +506,35 @@
     },
     {
      "symbol": "$r_1$, $r_2$",
-     "meaning": "core and sheath radii"
+     "meaning": "core and sheath radii (cm)"
     },
     {
-     "symbol": "$d_1$",
-     "meaning": "outer diameter of layer 1 (cm)"
+     "symbol": "$e$",
+     "meaning": "2.718, the base of natural logarithms"
+    },
+    {
+     "symbol": "$g_{1max}$, $g_{2max}$",
+     "meaning": "largest stresses in layers 1 and 2 (kV/cm)"
     },
     {
      "symbol": "$\\varepsilon_1$, $\\varepsilon_2$",
      "meaning": "relative permittivities of the inner and outer layers"
     },
     {
+     "symbol": "$d_1$",
+     "meaning": "outer diameter of layer 1 (cm)"
+    },
+    {
+     "symbol": "$g_{3max}$",
+     "meaning": "largest stress in layer 3 (kV/cm)"
+    },
+    {
      "symbol": "$d_2$",
      "meaning": "outer diameter of layer 2 (cm)"
     },
     {
-     "symbol": "$g_{max}$",
-     "meaning": "common maximum stress (kV/cm)"
+     "symbol": "$\\varepsilon_3$",
+     "meaning": "relative permittivity of layer 3"
     }
    ]
   },
@@ -285,20 +545,20 @@
    "tier": "Must know",
    "symbols": [
     {
-     "symbol": "$S$",
-     "meaning": "variable resistance in series with the faulty conductor (Ω)"
-    },
-    {
-     "symbol": "$R_{loop}$",
-     "meaning": "faulty + healthy conductor (Ω); faulty + sound core (Ω)"
-    },
-    {
      "symbol": "$P$, $Q$",
-     "meaning": "ratio arms (Ω)"
+     "meaning": "ratio arms ($\\Omega$)"
     },
     {
      "symbol": "$R_X$",
-     "meaning": "resistance up to the fault (Ω)"
+     "meaning": "resistance of the faulty conductor up to the fault ($\\Omega$)"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "variable resistance in series with the faulty conductor ($\\Omega$)"
+    },
+    {
+     "symbol": "$R_{loop}$",
+     "meaning": "faulty + healthy conductor ($\\Omega$); faulty + sound core (Ω)"
     }
    ]
   },
@@ -309,16 +569,44 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$P_e$",
+     "meaning": "electrical power output (pu)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "internal emf of the machine (pu)"
+    },
+    {
+     "symbol": "$V$",
+     "meaning": "infinite-bus voltage (pu)"
+    },
+    {
      "symbol": "$\\delta$",
      "meaning": "power angle (E ahead of V); rotor angle"
+    },
+    {
+     "symbol": "$P_{max}$",
+     "meaning": "peak of the curve, at $\\delta = 90°$ (pu)"
     },
     {
      "symbol": "$M$",
      "meaning": "inertia constant"
     },
     {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
      "symbol": "$P_m$",
      "meaning": "mechanical input (pu)"
+    },
+    {
+     "symbol": "$\\delta_0$",
+     "meaning": "angle before the fault"
+    },
+    {
+     "symbol": "$\\delta_{max}$",
+     "meaning": "largest angle of the swing"
     },
     {
      "symbol": "$A_1$",
@@ -329,16 +617,28 @@
      "meaning": "decelerating area"
     },
     {
+     "symbol": "$\\delta_{cr}$",
+     "meaning": "critical clearing angle"
+    },
+    {
+     "symbol": "$P_{2max}$, $P_{3max}$",
+     "meaning": "peaks of the power curve during and after the fault (pu)"
+    },
+    {
      "symbol": "$\\delta_1$",
      "meaning": "new operating angle"
     },
     {
-     "symbol": "$X$",
-     "meaning": "reactance from $V_t$ to the bus (pu); transfer reactance (pu)"
+     "symbol": "$\\theta$",
+     "meaning": "angle of $V_t$ ahead of $V$"
     },
     {
-     "symbol": "$X'_d$",
-     "meaning": "transient reactance (pu)"
+     "symbol": "$P$",
+     "meaning": "power delivered (pu)"
+    },
+    {
+     "symbol": "$X$",
+     "meaning": "reactance from $V_t$ to the bus (pu); transfer reactance (pu)"
     },
     {
      "symbol": "$V_t$",
@@ -349,16 +649,24 @@
      "meaning": "current (pu)"
     },
     {
+     "symbol": "$E'$",
+     "meaning": "transient internal emf (pu)"
+    },
+    {
+     "symbol": "$X'_d$",
+     "meaning": "transient reactance (pu)"
+    },
+    {
+     "symbol": "$X_{ab}$",
+     "meaning": "transfer reactance between nodes a and b (pu)"
+    },
+    {
+     "symbol": "$X_a$, $X_b$",
+     "meaning": "branches of the Y to nodes a and b (pu)"
+    },
+    {
      "symbol": "$X_c$",
      "meaning": "branch to the faulted node (pu)"
-    },
-    {
-     "symbol": "$E'$",
-     "meaning": "transient emf (pu)"
-    },
-    {
-     "symbol": "$V$",
-     "meaning": "infinite-bus voltage (pu)"
     },
     {
      "symbol": "$A_1$, $A_2$",
@@ -372,6 +680,26 @@
    "book": "Hingorani and Gyugyi; Rashid Ch. 12",
    "tier": "Must know",
    "symbols": [
+    {
+     "symbol": "$P$",
+     "meaning": "power sent over the line (W)"
+    },
+    {
+     "symbol": "$V_1$, $V_2$",
+     "meaning": "voltages at the two ends (V)"
+    },
+    {
+     "symbol": "$X$",
+     "meaning": "line reactance ($\\Omega$)"
+    },
+    {
+     "symbol": "$\\delta$",
+     "meaning": "angle between $V_1$ and $V_2$"
+    },
+    {
+     "symbol": "$P_1$",
+     "meaning": "fixed part of the annual cost"
+    },
     {
      "symbol": "$a$",
      "meaning": "conductor area"
@@ -816,7 +1144,7 @@
    "subtopic": "Dielectric stress",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=47",
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=46",
    "text": "The maximum and minimum stresses in the dielectric of a single core cable are 40 kV/cm (r.m.s.) and 10 kV/cm (r.m.s.) respectively. If the conductor diameter is 2 cm, find : (i) thickness of insulation (ii) operating voltage",
    "repeat_of": "",
    "times": 1,
@@ -1031,7 +1359,7 @@
    "subtopic": "String efficiency",
    "type": "theory",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44",
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=43",
    "text": "What is String Efficiency? Discuss the methods of improving String Efficiency.",
    "repeat_of": "",
    "times": 1,
@@ -1076,7 +1404,7 @@
    "subtopic": "Failure",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=50",
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=49",
    "text": "What are the causes of insulation failure?",
    "repeat_of": "",
    "times": 1,
@@ -1147,7 +1475,7 @@
    "subtopic": "Loop tests",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=51",
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=50",
    "text": "Varley loop test is performed to locate an earth fault on a 20 km long cable. The resistance per km of the single conductor is 20 ohm. The loop is completed with a similar healthy conductor. At balance, the variable resistance connected to the faulty conductor is 200 ohm. The fixed resistors have equal values. Calculate the distance of the fault from the test end.",
    "repeat_of": "",
    "times": 1,
@@ -1191,7 +1519,7 @@
    "subtopic": "Sag",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=53",
    "text": "A 132 KV transmission line has the following data: Weight of the conductor= 680 kg/km, Length of span= 260 m, Ultimate strength= 3100 kg, Safety Factor= 2. Calculate the height above ground at which the conductor should be supported. Ground clearance required is 10 meters.",
    "repeat_of": "",
    "times": 1,
@@ -1236,7 +1564,7 @@
    "subtopic": "Equal area criterion",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=58",
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=57",
    "text": "Define Power Angle. Briefly explain Equal Area Criterion.",
    "repeat_of": "",
    "times": 1,
@@ -1257,7 +1585,7 @@
    "subtopic": "Equal area criterion",
    "type": "theory",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=60",
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=59",
    "text": "Explain what happens for sudden increase in mechanical input to generator using Pe-δ diagram.",
    "repeat_of": "",
    "times": 2,
@@ -1306,7 +1634,7 @@
    "subtopic": "Transient EMF",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=62",
+   "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=61",
    "text": "The generator of Fig. 2 is delivering 1.0 pu power to the infinite bus (|V|=1.0 pu), with the generator terminal voltage (|Vt|=1.0 pu). Calculate the generator emf behind transient reactance. Find the maximum power that can be transferred under the following conditions: (a) System healthy (b) One line shorted (3 phase) in the middle.",
    "repeat_of": "",
    "times": 2,
@@ -2092,7 +2420,7 @@
     },
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -2104,7 +2432,7 @@
    "used": [
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -2120,7 +2448,7 @@
     },
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -2136,7 +2464,7 @@
     },
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -2152,7 +2480,7 @@
     },
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -2164,7 +2492,7 @@
    "used": [
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -2180,7 +2508,7 @@
     },
     {
      "label": "20-21 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=50"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=49"
     }
    ]
   },
@@ -2228,7 +2556,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=53"
     }
    ]
   },
@@ -2244,7 +2572,7 @@
     },
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=53"
     }
    ]
   },
@@ -2256,7 +2584,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=53"
     }
    ]
   },
@@ -2268,7 +2596,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=53"
     }
    ]
   },
@@ -2344,7 +2672,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -2356,7 +2684,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -2368,7 +2696,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -2552,7 +2880,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -2564,7 +2892,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -2588,7 +2916,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=57"
     }
    ]
   },
@@ -2604,7 +2932,7 @@
     },
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=57"
     }
    ]
   },
@@ -2616,7 +2944,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=57"
     }
    ]
   },
@@ -2628,7 +2956,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=57"
     }
    ]
   },
@@ -2640,7 +2968,7 @@
    "used": [
     {
      "label": "20-21 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=60"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=59"
     }
    ]
   },
@@ -2652,7 +2980,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=62"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=61"
     }
    ]
   },
@@ -2664,7 +2992,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=62"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=61"
     }
    ]
   },
@@ -2680,7 +3008,7 @@
     },
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=62"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=61"
     }
    ]
   },
@@ -2692,7 +3020,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=62"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=61"
     }
    ]
   },
@@ -2708,7 +3036,7 @@
     },
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=62"
+     "link": "https://nurmdabd.github.io/study-notes/EEE337-PSII/PSII-2020-21-pack.pdf#page=61"
     }
    ]
   },

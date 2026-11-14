@@ -12,6 +12,10 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$P_{av}$",
+     "meaning": "average load (kW)"
+    },
+    {
      "symbol": "$E$",
      "meaning": "energy in the period (kWh)"
     },
@@ -21,7 +25,7 @@
     },
     {
      "symbol": "$P_{max}$",
-     "meaning": "maximum demand on the station"
+     "meaning": "maximum demand on the station (kW)"
     },
     {
      "symbol": "$P_{max,i}$",
@@ -34,6 +38,10 @@
     {
      "symbol": "$t_{op}$",
      "meaning": "hours the plant was in operation"
+    },
+    {
+     "symbol": "$E_{sched}$",
+     "meaning": "energy at full load in the hours the plant ran (kWh)"
     }
    ]
   },
@@ -43,6 +51,14 @@
    "book": "Mehta Ch. 4",
    "tier": "Must know",
    "symbols": [
+    {
+     "symbol": "$E$",
+     "meaning": "energy generated in a year (kWh)"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "plant capacity (kW)"
+    },
     {
      "symbol": "$K$",
      "meaning": "capital cost"
@@ -56,12 +72,16 @@
      "meaning": "wages, taxes"
     },
     {
+     "symbol": "$D$",
+     "meaning": "depreciation per year (Tk)"
+    },
+    {
      "symbol": "$P$",
-     "meaning": "initial cost"
+     "meaning": "initial cost (Tk)"
     },
     {
      "symbol": "$S$",
-     "meaning": "salvage value"
+     "meaning": "salvage value (Tk)"
     },
     {
      "symbol": "$n$",
@@ -94,6 +114,18 @@
     {
      "symbol": "$b$",
      "meaning": "Tk per kWh"
+    },
+    {
+     "symbol": "$A$",
+     "meaning": "demand charge (Tk per kW per year)"
+    },
+    {
+     "symbol": "$B$",
+     "meaning": "energy charge (Tk per kWh)"
+    },
+    {
+     "symbol": "$E_{gen}$",
+     "meaning": "energy generated (kWh)"
     }
    ]
   },
@@ -109,15 +141,47 @@
     },
     {
      "symbol": "$P$",
-     "meaning": "output (MW)"
+     "meaning": "output (MW); total load, fixed (MW)"
     },
     {
      "symbol": "$F$",
      "meaning": "fuel cost (Tk/h)"
     },
     {
+     "symbol": "$I_1$, $I_2$",
+     "meaning": "heat inputs of units 1 and 2 (kcal/h)"
+    },
+    {
+     "symbol": "$P_1$, $P_2$",
+     "meaning": "outputs of units 1 and 2 (MW); load before and after the move (MW)"
+    },
+    {
      "symbol": "$\\lambda$",
      "meaning": "common incremental rate"
+    },
+    {
+     "symbol": "$P_i$",
+     "meaning": "output of unit $i$ (MW)"
+    },
+    {
+     "symbol": "$P_A$",
+     "meaning": "load on unit A (MW)"
+    },
+    {
+     "symbol": "$a_A$, $b_A$",
+     "meaning": "slope and intercept of unit A's incremental cost"
+    },
+    {
+     "symbol": "$a_B$, $b_B$",
+     "meaning": "the same for unit B"
+    },
+    {
+     "symbol": "$\\Delta F$",
+     "meaning": "change of fuel cost (Tk/h)"
+    },
+    {
+     "symbol": "$a$, $b$",
+     "meaning": "slope and intercept of the incremental-cost line"
     }
    ]
   },
@@ -135,6 +199,10 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$Q_{in}$",
+     "meaning": "heat from the coal (kcal/h)"
+    },
+    {
      "symbol": "$m_f$",
      "meaning": "coal burnt (kg/h)"
     },
@@ -143,32 +211,52 @@
      "meaning": "calorific value (kcal/kg)"
     },
     {
+     "symbol": "$\\eta_{boiler}$",
+     "meaning": "boiler efficiency"
+    },
+    {
      "symbol": "$m_w$",
      "meaning": "steam (water) per hour (kg/h)"
     },
     {
      "symbol": "$h$",
-     "meaning": "enthalpy of the steam"
+     "meaning": "enthalpy of the steam (kcal/kg)"
     },
     {
      "symbol": "$h_f$",
      "meaning": "enthalpy of the water entering the boiler (kcal/kg)"
     },
     {
+     "symbol": "$\\eta_{eco}$",
+     "meaning": "economiser efficiency"
+    },
+    {
+     "symbol": "$c_w$",
+     "meaning": "specific heat of water (kcal/kg °C)"
+    },
+    {
      "symbol": "$t_1$, $t_2$",
-     "meaning": "water in and out"
+     "meaning": "water temperature in and out (°C)"
     },
     {
      "symbol": "$m_g$, $c_{pg}$",
-     "meaning": "flue-gas mass and specific heat"
+     "meaning": "flue-gas mass (kg/h) and specific heat (kcal/kg °C)"
     },
     {
      "symbol": "$t_g$",
-     "meaning": "gas entering"
+     "meaning": "temperature of the gas entering (°C)"
     },
     {
      "symbol": "$t_a$",
-     "meaning": "atmosphere"
+     "meaning": "atmospheric temperature (°C)"
+    },
+    {
+     "symbol": "$\\eta_{plant}$",
+     "meaning": "efficiency of boiler and economiser together"
+    },
+    {
+     "symbol": "$\\Delta t_g$",
+     "meaning": "fall of the gas temperature (°C)"
     }
    ]
   },
@@ -193,12 +281,16 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$P$",
+     "meaning": "power of the water (W)"
+    },
+    {
      "symbol": "$\\rho$",
-     "meaning": "1000 kg/m$^3$"
+     "meaning": "density of water (1000 kg/m$^3$)"
     },
     {
      "symbol": "$g$",
-     "meaning": "9.81 m/s$^2$"
+     "meaning": "gravitational acceleration (9.81 m/s$^2$)"
     },
     {
      "symbol": "$Q$",

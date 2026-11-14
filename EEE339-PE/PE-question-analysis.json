@@ -12,20 +12,44 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$I_{rms}$",
+     "meaning": "rms of the whole wave (A)"
+    },
+    {
      "symbol": "$I_n$",
      "meaning": "rms value of harmonic $n$ (A)"
+    },
+    {
+     "symbol": "$DF$",
+     "meaning": "distortion factor"
     },
     {
      "symbol": "$I_1$",
      "meaning": "rms fundamental (A)"
     },
     {
-     "symbol": "$I_{rms}$",
-     "meaning": "rms of the whole wave (A)"
+     "symbol": "$THD$",
+     "meaning": "total harmonic distortion"
+    },
+    {
+     "symbol": "$pf$",
+     "meaning": "power factor"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "average power (W)"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "apparent power, $V_{rms}I_{rms}$ (VA)"
     },
     {
      "symbol": "$\\theta_1$",
      "meaning": "angle of the fundamental current"
+    },
+    {
+     "symbol": "$CF$",
+     "meaning": "crest factor"
     },
     {
      "symbol": "$I_{peak}$",
@@ -44,6 +68,10 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$t_{rr}$",
+     "meaning": "reverse recovery time (s)"
+    },
+    {
      "symbol": "$t_a$",
      "meaning": "time to the reverse peak (s)"
     },
@@ -52,20 +80,32 @@
      "meaning": "fall time after the peak (s)"
     },
     {
+     "symbol": "$I_{RR}$",
+     "meaning": "peak reverse current (A)"
+    },
+    {
      "symbol": "$di/dt$",
      "meaning": "rate of fall of current (A/s)"
     },
     {
-     "symbol": "$\\alpha$",
-     "meaning": "common-base gain"
+     "symbol": "$Q_{RR}$",
+     "meaning": "stored charge removed during recovery (C)"
     },
     {
-     "symbol": "$I_{CBO}$",
-     "meaning": "leakage current (A)"
+     "symbol": "$I_A$",
+     "meaning": "anode current (A)"
+    },
+    {
+     "symbol": "$\\alpha_1$, $\\alpha_2$",
+     "meaning": "common-base gains of the two transistors"
     },
     {
      "symbol": "$I_G$",
      "meaning": "gate current (A)"
+    },
+    {
+     "symbol": "$I_{CBO1}$, $I_{CBO2}$",
+     "meaning": "leakage currents of the two transistors (A)"
     }
    ]
   },
@@ -76,24 +116,92 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$Z$",
+     "meaning": "load impedance ($\\Omega$)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "load resistance ($\\Omega$)"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "load inductance (H)"
+    },
+    {
+     "symbol": "$\\omega$",
+     "meaning": "angular frequency of the source (rad/s)"
+    },
+    {
+     "symbol": "$\\theta$",
+     "meaning": "load angle (rad)"
+    },
+    {
+     "symbol": "$i$",
+     "meaning": "load current (A)"
+    },
+    {
      "symbol": "$V_m$",
      "meaning": "peak source voltage (V); peak line-to-line voltage (V)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
+     "symbol": "$A$",
+     "meaning": "constant set by $i(\\alpha) = 0$ (A)"
     },
     {
      "symbol": "$\\alpha$",
      "meaning": "delay angle (rad)"
     },
     {
+     "symbol": "$I_o$",
+     "meaning": "average load current, $V_o/R$ (A)"
+    },
+    {
      "symbol": "$\\beta$",
      "meaning": "extinction angle, $i(\\beta) = 0$"
     },
     {
-     "symbol": "$R$",
-     "meaning": "load resistance (Ω)"
+     "symbol": "$I_{rms}$",
+     "meaning": "rms load current (A)"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "load power (W)"
+    },
+    {
+     "symbol": "$V_o$",
+     "meaning": "average output voltage (V)"
+    },
+    {
+     "symbol": "$V_{rms}$",
+     "meaning": "rms output voltage (V)"
+    },
+    {
+     "symbol": "$V_n$",
+     "meaning": "peak voltage of harmonic $n$ (V)"
     },
     {
      "symbol": "$n$",
      "meaning": "harmonic order (6, 12, 18, …)"
+    },
+    {
+     "symbol": "$I_n$",
+     "meaning": "peak current of harmonic $n$ (A)"
+    },
+    {
+     "symbol": "$I_{D,rms}$",
+     "meaning": "rms diode current (A)"
+    },
+    {
+     "symbol": "$i_a$",
+     "meaning": "line current of phase a (A)"
+    },
+    {
+     "symbol": "$i_{D1}$, $i_{D4}$",
+     "meaning": "currents of the two diodes on phase a (A)"
     }
    ]
   },
@@ -115,24 +223,80 @@
      "meaning": "duty ratio"
     },
     {
+     "symbol": "$\\Delta i_L$",
+     "meaning": "peak-to-peak inductor ripple current (A)"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "inductance (H)"
+    },
+    {
      "symbol": "$f$",
      "meaning": "switching frequency (Hz)"
+    },
+    {
+     "symbol": "$I_D$",
+     "meaning": "average diode current (A)"
     },
     {
      "symbol": "$I_L$",
      "meaning": "average inductor current (A)"
     },
     {
+     "symbol": "$I_S$",
+     "meaning": "average switch current (A)"
+    },
+    {
+     "symbol": "$I_{max,min}$",
+     "meaning": "largest and smallest inductor current (A)"
+    },
+    {
+     "symbol": "$\\Delta V_o$",
+     "meaning": "peak-to-peak output ripple (V)"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "output capacitance (F)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "load resistance ($\\Omega$)"
+    },
+    {
+     "symbol": "$I_f$",
+     "meaning": "field current (A)"
+    },
+    {
      "symbol": "$\\delta$",
      "meaning": "chopper duty ratio"
     },
     {
-     "symbol": "$R_f$",
-     "meaning": "field resistance (Ω)"
+     "symbol": "$V_s$",
+     "meaning": "supply voltage (V)"
     },
     {
-     "symbol": "$E_b = K_vI_f\\omega$",
-     "meaning": "back voltage (V)"
+     "symbol": "$R_f$",
+     "meaning": "field resistance ($\\Omega$)"
+    },
+    {
+     "symbol": "$V_a$",
+     "meaning": "armature voltage (V)"
+    },
+    {
+     "symbol": "$I_a$",
+     "meaning": "armature current (A)"
+    },
+    {
+     "symbol": "$R_a$",
+     "meaning": "armature resistance ($\\Omega$)"
+    },
+    {
+     "symbol": "$E_b$",
+     "meaning": "back voltage, $K_vI_f\\omega$ (V)"
+    },
+    {
+     "symbol": "$\\omega$",
+     "meaning": "speed (rad/s)"
     },
     {
      "symbol": "$K_v$",
@@ -147,8 +311,20 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$V_o$",
+     "meaning": "output voltage (V)"
+    },
+    {
      "symbol": "$V_{ref}$",
-     "meaning": "reference (V)"
+     "meaning": "reference voltage (V)"
+    },
+    {
+     "symbol": "$R_1$, $R_2$",
+     "meaning": "divider resistors ($\\Omega$)"
+    },
+    {
+     "symbol": "$P_{loss}$",
+     "meaning": "power lost in the regulator (W)"
     },
     {
      "symbol": "$V_s$",
@@ -157,6 +333,10 @@
     {
      "symbol": "$I_L$",
      "meaning": "load current (A)"
+    },
+    {
+     "symbol": "$\\eta$",
+     "meaning": "efficiency"
     }
    ]
   },
@@ -167,8 +347,28 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$V_n$",
+     "meaning": "peak voltage of harmonic $n$ (V)"
+    },
+    {
      "symbol": "$V_{dc}$",
      "meaning": "dc source (V)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "harmonic order, odd"
+    },
+    {
+     "symbol": "$THD$",
+     "meaning": "total harmonic distortion"
+    },
+    {
+     "symbol": "$v_o$",
+     "meaning": "output voltage (V)"
+    },
+    {
+     "symbol": "$v_1$, $v_2$, $v_3$",
+     "meaning": "outputs of the three cells (V)"
     },
     {
      "symbol": "$k$",
@@ -179,12 +379,64 @@
      "meaning": "amplitude ratio"
     },
     {
+     "symbol": "$V_{sine}$",
+     "meaning": "peak of the reference sine (V)"
+    },
+    {
+     "symbol": "$V_{tri}$",
+     "meaning": "peak of the carrier triangle (V)"
+    },
+    {
      "symbol": "$m_f$",
      "meaning": "frequency ratio"
     },
     {
+     "symbol": "$f_{carrier}$",
+     "meaning": "carrier frequency (Hz)"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "output (fundamental) frequency (Hz)"
+    },
+    {
+     "symbol": "$V_1$",
+     "meaning": "peak fundamental output voltage (V)"
+    },
+    {
+     "symbol": "$I_n$",
+     "meaning": "peak current of harmonic $n$ (A)"
+    },
+    {
+     "symbol": "$\\omega$",
+     "meaning": "fundamental angular frequency (rad/s)"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "load inductance (H)"
+    },
+    {
      "symbol": "$\\omega_0$",
      "meaning": "tuned frequency (rad/s)"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "filter capacitance (F)"
+    },
+    {
+     "symbol": "$X_n$",
+     "meaning": "filter reactance at harmonic $n$ ($\\Omega$)"
+    },
+    {
+     "symbol": "$V_{o,n}$",
+     "meaning": "load voltage at harmonic $n$ (V)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "load resistance ($\\Omega$)"
+    },
+    {
+     "symbol": "$V_{C,max}$",
+     "meaning": "peak capacitor voltage (V)"
     },
     {
      "symbol": "$I_1$",

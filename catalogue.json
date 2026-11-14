@@ -222,11 +222,11 @@
       "session": "2019-20",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 62,
+      "pages": 66,
       "file": "EEE329-COM/COM-2019-20-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "9ee1dd53f463e7b7"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "d5bf628eaa165eaa"
     },
     {
       "id": "EEE329-2019-20-question-paper",
@@ -237,8 +237,8 @@
       "pages": 2,
       "file": "EEE329-COM/COM-2019-20-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "f3c4c9d81553e0ba"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "588896c433ed9a62"
     },
     {
       "id": "EEE329-2020-21-pack",
@@ -246,11 +246,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 86,
+      "pages": 90,
       "file": "EEE329-COM/COM-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "0e8975e68f03bcfe"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "6e9e49ab90eb4177"
     },
     {
       "id": "EEE329-2020-21-question-paper",
@@ -261,8 +261,8 @@
       "pages": 3,
       "file": "EEE329-COM/COM-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "ab4dd1e086ea4370"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "488eba8232216d7b"
     },
     {
       "id": "EEE329-2021-22-pack",
@@ -270,11 +270,11 @@
       "session": "2021-22",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 90,
+      "pages": 92,
       "file": "EEE329-COM/COM-2021-22-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "de7008734f9052a4"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "4599402fa1377af8"
     },
     {
       "id": "EEE329-2021-22-question-paper",
@@ -285,8 +285,8 @@
       "pages": 3,
       "file": "EEE329-COM/COM-2021-22-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "de304ef785e48aa3"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "3108590f6d9bca5e"
     },
     {
       "id": "EEE329-2022-23-pack",
@@ -294,11 +294,11 @@
       "session": "2022-23",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 34,
+      "pages": 36,
       "file": "EEE329-COM/COM-2022-23-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "de74a3e857d86406"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "1ccd87649759d787"
     },
     {
       "id": "EEE329-2022-23-question-paper",
@@ -309,8 +309,8 @@
       "pages": 2,
       "file": "EEE329-COM/COM-2022-23-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "cc623e1173e37bde"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "d9c72cdc3ed3c6e7"
     },
     {
       "id": "EEE337-2020-21-pack",
@@ -318,11 +318,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 80,
+      "pages": 82,
       "file": "EEE337-PSII/PSII-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "e98fd87ac610d423"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "75af2bcb17dd4690"
     },
     {
       "id": "EEE337-2020-21-question-paper",
@@ -333,8 +333,8 @@
       "pages": 2,
       "file": "EEE337-PSII/PSII-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "d64d08c716809155"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "b0cab8706379c7db"
     },
     {
       "id": "EEE337-2021-22-pack",
@@ -342,11 +342,11 @@
       "session": "2021-22",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 100,
+      "pages": 102,
       "file": "EEE337-PSII/PSII-2021-22-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "d0a302106fb5355c"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "6647f974c985384a"
     },
     {
       "id": "EEE337-2021-22-question-paper",
@@ -357,8 +357,8 @@
       "pages": 4,
       "file": "EEE337-PSII/PSII-2021-22-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "b08823151d4e348a"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "dcbf50553372a127"
     },
     {
       "id": "EEE339-2020-21-pack",
@@ -366,11 +366,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 88,
+      "pages": 90,
       "file": "EEE339-PE/PE-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "e75b9acc3bf08802"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "ec24d37bdeb7036f"
     },
     {
       "id": "EEE339-2020-21-question-paper",
@@ -381,8 +381,8 @@
       "pages": 3,
       "file": "EEE339-PE/PE-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "c76ba230dce41c94"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "baf6f2cc85de055e"
     },
     {
       "id": "EEE421-2018-19-pack",
@@ -486,11 +486,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 60,
+      "pages": 62,
       "file": "EEE443-PPE/PPE-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "879883056e96ca96"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "a2cedf7999d1fd62"
     },
     {
       "id": "EEE443-2020-21-question-paper",
@@ -501,8 +501,8 @@
       "pages": 2,
       "file": "EEE443-PPE/PPE-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "0391ba21d9f401a7"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "9f28a40610d35ca7"
     },
     {
       "id": "EEE455-2018-19-pack",
@@ -510,11 +510,11 @@
       "session": "2018-19",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 100,
+      "pages": 104,
       "file": "EEE455-VLSI/VLSI-2018-19-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "4297cc446a91b6be"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "479a078ed83baee0"
     },
     {
       "id": "EEE455-2018-19-question-paper",
@@ -525,8 +525,8 @@
       "pages": 3,
       "file": "EEE455-VLSI/VLSI-2018-19-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "b8522fb246a43bc9"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "79ed7fafc664193e"
     },
     {
       "id": "EEE455-2019-20-pack",
@@ -534,11 +534,11 @@
       "session": "2019-20",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 82,
+      "pages": 84,
       "file": "EEE455-VLSI/VLSI-2019-20-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "eb16c934c7eeacba"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "5d2ebdf2138191f2"
     },
     {
       "id": "EEE455-2019-20-question-paper",
@@ -546,11 +546,11 @@
       "session": "2019-20",
       "document": "Question paper",
       "detail": "The paper alone, without solutions",
-      "pages": 3,
+      "pages": 4,
       "file": "EEE455-VLSI/VLSI-2019-20-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "83408e06f25703cf"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "86eebcedb9be918b"
     },
     {
       "id": "EEE455-2020-21-pack",
@@ -561,8 +561,8 @@
       "pages": 92,
       "file": "EEE455-VLSI/VLSI-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "8edf0c9c90e1c9d2"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "0c5e90925dd0c330"
     },
     {
       "id": "EEE455-2020-21-question-paper",
@@ -573,8 +573,8 @@
       "pages": 4,
       "file": "EEE455-VLSI/VLSI-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "b78e6e57d97bfadb"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "bb3608ae37ac4824"
     },
     {
       "id": "EEE459-2017-18-pack",
@@ -678,11 +678,11 @@
       "session": "2018-19",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 66,
+      "pages": 70,
       "file": "EEE475-RF/RF-2018-19-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "a33dfd1e641b4b3f"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "5ae190b82641f92e"
     },
     {
       "id": "EEE475-2018-19-question-paper",
@@ -693,8 +693,8 @@
       "pages": 3,
       "file": "EEE475-RF/RF-2018-19-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "4459ea4333f1d613"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "46001df1b7172c1e"
     },
     {
       "id": "EEE475-2019-20-pack",
@@ -702,11 +702,11 @@
       "session": "2019-20",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 76,
+      "pages": 80,
       "file": "EEE475-RF/RF-2019-20-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "7052da718d2fe6bc"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "7fa0a1e7934a0957"
     },
     {
       "id": "EEE475-2019-20-question-paper",
@@ -717,8 +717,8 @@
       "pages": 2,
       "file": "EEE475-RF/RF-2019-20-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "5e07930845cba146"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "f2063631e83bd797"
     },
     {
       "id": "EEE475-2020-21-pack",
@@ -726,11 +726,11 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 80,
+      "pages": 82,
       "file": "EEE475-RF/RF-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "c197eab3917987d9"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "81f2c73230816157"
     },
     {
       "id": "EEE475-2020-21-pack-bn",
@@ -738,11 +738,11 @@
       "session": "2020-21",
       "document": "Exam pack (Bangla)",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 80,
+      "pages": 82,
       "file": "EEE475-RF/RF-2020-21-pack-Bangla.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "10981f608caf22f6"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "03598eb5e9f564fb"
     },
     {
       "id": "EEE475-2020-21-question-paper",
@@ -753,8 +753,8 @@
       "pages": 3,
       "file": "EEE475-RF/RF-2020-21-question-paper.pdf",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "07f18c999d26f7fc"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "16f2065c8c0dec60"
     },
     {
       "id": "EEE329-question-analysis",
@@ -762,12 +762,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 40,
+      "pages": 42,
       "file": "EEE329-COM/COM-question-analysis.pdf",
       "page": "analysis.html?subject=EEE329",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "b939707df5dcc4c8"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "dae662a4fc2537b9"
     },
     {
       "id": "EEE337-question-analysis",
@@ -779,8 +779,8 @@
       "file": "EEE337-PSII/PSII-question-analysis.pdf",
       "page": "analysis.html?subject=EEE337",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "c5f788861f6b3697"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "c93dcd800fbb5728"
     },
     {
       "id": "EEE339-question-analysis",
@@ -792,8 +792,8 @@
       "file": "EEE339-PE/PE-question-analysis.pdf",
       "page": "analysis.html?subject=EEE339",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "14b0c726209dbdd5"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "2caf2bddb50182f4"
     },
     {
       "id": "EEE421-question-analysis",
@@ -818,8 +818,8 @@
       "file": "EEE443-PPE/PPE-question-analysis.pdf",
       "page": "analysis.html?subject=EEE443",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "ffb9416383e20872"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "d7fd07ff67ea0281"
     },
     {
       "id": "EEE455-question-analysis",
@@ -831,8 +831,8 @@
       "file": "EEE455-VLSI/VLSI-question-analysis.pdf",
       "page": "analysis.html?subject=EEE455",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "2ccb6f5cd5f2234c"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "465aee2b473fd9e1"
     },
     {
       "id": "EEE459-question-analysis",
@@ -853,12 +853,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 34,
+      "pages": 36,
       "file": "EEE475-RF/RF-question-analysis.pdf",
       "page": "analysis.html?subject=EEE475",
       "printable": true,
-      "updated": "2026-11-13T02:53+06:00",
-      "source": "09c7e94add791cfd"
+      "updated": "2026-11-14T09:36+06:00",
+      "source": "72446d97092d87b2"
     }
   ]
 }

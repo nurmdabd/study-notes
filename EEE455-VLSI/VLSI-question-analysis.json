@@ -14,28 +14,108 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$\\phi_F$",
+     "meaning": "Fermi potential of the substrate (V)"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "Boltzmann constant (J/K)"
+    },
+    {
+     "symbol": "$T$",
+     "meaning": "temperature (K)"
+    },
+    {
+     "symbol": "$q$",
+     "meaning": "electron charge (C)"
+    },
+    {
+     "symbol": "$n_i$",
+     "meaning": "intrinsic carrier concentration (m$^{-3}$)"
+    },
+    {
+     "symbol": "$N_A$",
+     "meaning": "substrate acceptor concentration (m$^{-3}$)"
+    },
+    {
+     "symbol": "$Q_{B0}$",
+     "meaning": "depletion charge per area at $V_{SB} = 0$ (C/m$^2$)"
+    },
+    {
+     "symbol": "$\\varepsilon_{Si}$",
+     "meaning": "permittivity of silicon (F/m)"
+    },
+    {
+     "symbol": "$V_{T0}$",
+     "meaning": "threshold voltage at $V_{SB} = 0$ (V)"
+    },
+    {
      "symbol": "$\\phi_{GC}$",
-     "meaning": "work-function difference"
+     "meaning": "work-function difference (V)"
     },
     {
      "symbol": "$Q_{ox}$",
-     "meaning": "oxide charge"
+     "meaning": "oxide charge per area (C/m$^2$)"
+    },
+    {
+     "symbol": "$V_T$",
+     "meaning": "threshold voltage (V)"
+    },
+    {
+     "symbol": "$\\gamma$",
+     "meaning": "body-effect coefficient, $\\sqrt{2qN_A\\varepsilon_{Si}}/C_{ox}$ (V$^{1/2}$)"
+    },
+    {
+     "symbol": "$V_{SB}$",
+     "meaning": "source-to-body voltage (V)"
+    },
+    {
+     "symbol": "$V_t$",
+     "meaning": "threshold voltage (V)"
+    },
+    {
+     "symbol": "$V_{t0}$",
+     "meaning": "threshold at $V_{ds} = 0$ (V)"
+    },
+    {
+     "symbol": "$\\eta$",
+     "meaning": "DIBL coefficient (about 0.1)"
+    },
+    {
+     "symbol": "$V_{ds}$",
+     "meaning": "drain-to-source voltage (V)"
+    },
+    {
+     "symbol": "$I_{gate}$",
+     "meaning": "gate leakage current (A)"
+    },
+    {
+     "symbol": "$W$",
+     "meaning": "transistor width (m); gate width (m)"
     },
     {
      "symbol": "$A$, $B$",
      "meaning": "technology constants"
     },
     {
-     "symbol": "$C_{ox}$",
-     "meaning": "gate capacitance per area (F/m$^2$)"
+     "symbol": "$V_{DD}$",
+     "meaning": "supply voltage (V)"
     },
     {
      "symbol": "$t_{ox}$",
      "meaning": "oxide thickness (m)"
     },
     {
+     "symbol": "$C_{ox}$",
+     "meaning": "gate capacitance per area (F/m$^2$)"
+    },
+    {
      "symbol": "$\\varepsilon_{ox}$",
-     "meaning": "permittivity of SiO$_2$, $3.9\\varepsilon_0$ (F/m)"
+     "meaning": "permittivity of the oxide (F/m); permittivity of SiO$_2$, $3.9\\varepsilon_0$ (F/m)"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "gain factor (A/V$^2$)"
     },
     {
      "symbol": "$\\mu$",
@@ -46,24 +126,36 @@
      "meaning": "width, length (m)"
     },
     {
-     "symbol": "$\\eta$",
-     "meaning": "DIBL coefficient (about 0.1)"
+     "symbol": "$I_{DS}$",
+     "meaning": "drain current (A)"
     },
     {
-     "symbol": "$v_T = kT/q$",
-     "meaning": "25.9 mV at 300 K"
+     "symbol": "$V_{GS}$",
+     "meaning": "gate-to-source voltage (V)"
+    },
+    {
+     "symbol": "$V_{DS}$",
+     "meaning": "drain-to-source voltage (V)"
+    },
+    {
+     "symbol": "$I_{ds0}$",
+     "meaning": "current at threshold (A)"
     },
     {
      "symbol": "$n$",
      "meaning": "slope factor (1.3–1.5)"
     },
     {
-     "symbol": "$C_0$",
-     "meaning": "full gate capacitance (F)"
+     "symbol": "$v_T$",
+     "meaning": "thermal voltage, $kT/q$ (25.9 mV at 300 K)"
     },
     {
-     "symbol": "$W$",
-     "meaning": "gate width (m)"
+     "symbol": "$S$",
+     "meaning": "subthreshold slope (mV/decade)"
+    },
+    {
+     "symbol": "$C_0$",
+     "meaning": "full gate capacitance (F)"
     },
     {
      "symbol": "$L$",
@@ -90,8 +182,64 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$V_{OH}$",
+     "meaning": "output high voltage (V)"
+    },
+    {
+     "symbol": "$V_{DD}$",
+     "meaning": "supply voltage (V)"
+    },
+    {
      "symbol": "$V_{TL}$",
-     "meaning": "load threshold, with body effect"
+     "meaning": "load threshold, with body effect (V)"
+    },
+    {
+     "symbol": "$V_{OL}$",
+     "meaning": "output low voltage (V)"
+    },
+    {
+     "symbol": "$V_T$",
+     "meaning": "driver threshold (V); threshold of either transistor (V)"
+    },
+    {
+     "symbol": "$V_{out}$, $V_{in}$",
+     "meaning": "output and input voltages (V)"
+    },
+    {
+     "symbol": "$V_t$",
+     "meaning": "threshold of either transistor (V)"
+    },
+    {
+     "symbol": "$V_M$",
+     "meaning": "switching threshold (V); input where $V_{out} = V_{in}$ (V)"
+    },
+    {
+     "symbol": "$V_{tn}$, $V_{tp}$",
+     "meaning": "nMOS and pMOS thresholds (V)"
+    },
+    {
+     "symbol": "$\\beta_p$, $\\beta_n$",
+     "meaning": "gain factors of the pMOS and nMOS (A/V$^2$)"
+    },
+    {
+     "symbol": "$V_{IL}$, $V_{IH}$",
+     "meaning": "input low and high limits (V)"
+    },
+    {
+     "symbol": "$I_{Dn}$, $I_{Dp}$",
+     "meaning": "nMOS and pMOS drain currents (A)"
+    },
+    {
+     "symbol": "$V_{in}$",
+     "meaning": "input voltage (V)"
+    },
+    {
+     "symbol": "$NM_L$, $NM_H$",
+     "meaning": "low and high noise margins (V)"
+    },
+    {
+     "symbol": "$V_{OL}$, $V_{OH}$",
+     "meaning": "output low and high levels, 0 and $V_{DD}$ (V)"
     },
     {
      "symbol": "$NM_L$",
@@ -108,14 +256,6 @@
     {
      "symbol": "$V_{IH}$",
      "meaning": "upper unity-gain input (V)"
-    },
-    {
-     "symbol": "$V_{OH}$",
-     "meaning": "output high voltage (V)"
-    },
-    {
-     "symbol": "$V_M$",
-     "meaning": "input where $V_{out} = V_{in}$ (V)"
     },
     {
      "symbol": "$\\beta_n/\\beta_p$",
@@ -138,16 +278,64 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$e^-$",
+     "meaning": "electron"
+    },
+    {
+     "symbol": "$A$",
+     "meaning": "gas atom or molecule"
+    },
+    {
+     "symbol": "$A^+$",
+     "meaning": "its positive ion"
+    },
+    {
+     "symbol": "$F_1$, $F_2$, $F_3$",
+     "meaning": "oxidant fluxes: gas to surface, through the oxide, reacting at the interface (cm$^{-2}$s$^{-1}$)"
+    },
+    {
+     "symbol": "$h$",
+     "meaning": "gas-phase mass-transfer coefficient (cm/s)"
+    },
+    {
      "symbol": "$C^*$",
-     "meaning": "oxidant solubility"
+     "meaning": "oxidant solubility (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$C_O$, $C_I$",
+     "meaning": "oxidant concentrations at the oxide surface and at the interface (cm$^{-3}$)"
     },
     {
      "symbol": "$D$",
-     "meaning": "diffusivity in SiO$_2$"
+     "meaning": "diffusivity in SiO$_2$ (cm$^2$/s)"
+    },
+    {
+     "symbol": "$x_O$",
+     "meaning": "oxide thickness (cm)"
     },
     {
      "symbol": "$k_S$",
-     "meaning": "interface rate constant"
+     "meaning": "interface rate constant (cm/s)"
+    },
+    {
+     "symbol": "$N_1$",
+     "meaning": "oxidant molecules per unit volume of oxide (cm$^{-3}$)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "oxidation time (s)"
+    },
+    {
+     "symbol": "$x_i$",
+     "meaning": "starting oxide thickness (cm)"
+    },
+    {
+     "symbol": "$W_{min}$",
+     "meaning": "smallest printable feature (m)"
+    },
+    {
+     "symbol": "$k_1$",
+     "meaning": "process factor"
     },
     {
      "symbol": "$\\lambda$",
@@ -158,12 +346,12 @@
      "meaning": "numerical aperture"
     },
     {
-     "symbol": "$k_1$",
-     "meaning": "process factor"
+     "symbol": "$S$",
+     "meaning": "selectivity"
     },
     {
-     "symbol": "$r$",
-     "meaning": "etch rate of each layer (nm/min)"
+     "symbol": "$r_{film}$, $r_{under}$",
+     "meaning": "etch rates of the film and of the layer under it (nm/min)"
     }
    ]
   },
@@ -174,28 +362,60 @@
    "tier": "Must know",
    "symbols": [
     {
-     "symbol": "$g$",
-     "meaning": "logical effort"
+     "symbol": "$t_{pd}$",
+     "meaning": "propagation delay (s)"
     },
     {
-     "symbol": "$p$",
-     "meaning": "parasitic delay ($\\tau$)"
+     "symbol": "$R_{i,\\text{to source}}$",
+     "meaning": "resistance from node $i$ back to the source ($\\Omega$)"
     },
     {
-     "symbol": "$d$",
-     "meaning": "delay of one gate ($\\tau$)"
+     "symbol": "$C_i$",
+     "meaning": "capacitance at node $i$ (F)"
+    },
+    {
+     "symbol": "$t_{pdr}$, $t_{pdf}$",
+     "meaning": "rising and falling delays (s)"
     },
     {
      "symbol": "$h$",
-     "meaning": "electrical effort, $C_{out}/C_{in}$; number of NAND3 loads"
+     "meaning": "fanout; electrical effort, $C_{out}/C_{in}$; number of NAND3 loads"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "unit transistor resistance ($\\Omega$)"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "unit gate capacitance (F)"
+    },
+    {
+     "symbol": "$d$",
+     "meaning": "delay in units of $\\tau$; delay of one gate ($\\tau$)"
+    },
+    {
+     "symbol": "$g$",
+     "meaning": "logical effort: inverter 1, NAND2 4/3, NAND3 5/3, NOR2 5/3"
+    },
+    {
+     "symbol": "$p$",
+     "meaning": "parasitic delay: inverter 1, $n$-input gate $n$"
+    },
+    {
+     "symbol": "$b$",
+     "meaning": "branching effort"
+    },
+    {
+     "symbol": "$C_{on}$, $C_{off}$",
+     "meaning": "capacitance on and off the path (F)"
+    },
+    {
+     "symbol": "$C_{on}$",
+     "meaning": "load on the path (F)"
     },
     {
      "symbol": "$C_{off}$",
-     "meaning": "load off the path"
-    },
-    {
-     "symbol": "$R_i$",
-     "meaning": "resistance shared with the path to node $i$"
+     "meaning": "load off the path (F)"
     },
     {
      "symbol": "$F$",
@@ -203,31 +423,107 @@
     },
     {
      "symbol": "$G$",
-     "meaning": "path logical effort"
+     "meaning": "path logical effort, $\\prod g_i$"
     },
     {
      "symbol": "$B$",
-     "meaning": "path branching effort"
+     "meaning": "path branching effort, $\\prod b_i$"
     },
     {
      "symbol": "$H$",
-     "meaning": "path electrical effort"
+     "meaning": "path electrical effort, $C_{out}/C_{in}$"
     },
     {
-     "symbol": "$b_i$",
-     "meaning": "branching of stage $i$"
+     "symbol": "$\\hat{f}$",
+     "meaning": "best stage effort"
     },
     {
      "symbol": "$N$",
      "meaning": "number of stages"
     },
     {
+     "symbol": "$D$",
+     "meaning": "path delay"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "path parasitic delay, $\\sum p_i$; sum of parasitic delays ($\\tau$)"
+    },
+    {
+     "symbol": "$C_{in}$",
+     "meaning": "input capacitance of a stage (F)"
+    },
+    {
+     "symbol": "$C_{out}$",
+     "meaning": "its load (F)"
+    },
+    {
+     "symbol": "$p_{inv}$",
+     "meaning": "parasitic delay of an inverter"
+    },
+    {
+     "symbol": "$\\rho$",
+     "meaning": "best stage effort"
+    },
+    {
+     "symbol": "$\\hat{N}$",
+     "meaning": "best number of stages"
+    },
+    {
+     "symbol": "$R_i$",
+     "meaning": "resistance shared with the path to node $i$ ($\\Omega$)"
+    },
+    {
+     "symbol": "$t_{pdr}$",
+     "meaning": "rising delay (s)"
+    },
+    {
+     "symbol": "$t_{pdf}$",
+     "meaning": "falling delay (s)"
+    },
+    {
+     "symbol": "$t_{cdr}$, $t_{cdf}$",
+     "meaning": "rising and falling contamination delays (s)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "number of inputs"
+    },
+    {
+     "symbol": "$g_i$, $b_i$",
+     "meaning": "logical and branching efforts of stage $i$"
+    },
+    {
+     "symbol": "$C_{out}$, $C_{in}$",
+     "meaning": "load of the path and input capacitance of its first stage (F)"
+    },
+    {
+     "symbol": "$g_i$",
+     "meaning": "logical effort of stage $i$"
+    },
+    {
+     "symbol": "$b_i$",
+     "meaning": "branching of stage $i$"
+    },
+    {
+     "symbol": "$\\hat f$",
+     "meaning": "best stage effort"
+    },
+    {
+     "symbol": "$\\hat D$",
+     "meaning": "least path delay ($\\tau$)"
+    },
+    {
      "symbol": "$C_{in,i}$",
-     "meaning": "input capacitance of stage $i$"
+     "meaning": "input capacitance of stage $i$ (F)"
     },
     {
      "symbol": "$C_{out,i}$",
-     "meaning": "load of stage $i$"
+     "meaning": "load of stage $i$ (F)"
+    },
+    {
+     "symbol": "$\\hat N$",
+     "meaning": "best number of stages"
     },
     {
      "symbol": "$t_{D,i}$",
@@ -242,20 +538,20 @@
      "meaning": "resistance shared by the paths to $i$ and $k$ (Ω)"
     },
     {
-     "symbol": "$n$",
-     "meaning": "number of inputs"
+     "symbol": "$g_{NAND\\text{-}n}$, $g_{NOR\\text{-}n}$",
+     "meaning": "logical efforts of $n$-input NAND and NOR gates"
     },
     {
-     "symbol": "$\\hat D$",
-     "meaning": "least path delay ($\\tau$)"
+     "symbol": "$d_{FO4}$",
+     "meaning": "delay of an inverter driving four copies of itself"
     },
     {
-     "symbol": "$P$",
-     "meaning": "sum of parasitic delays ($\\tau$)"
+     "symbol": "$\\tau$",
+     "meaning": "delay unit of the process (s)"
     },
     {
-     "symbol": "$\\hat f$",
-     "meaning": "best stage effort"
+     "symbol": "$\\mu_n$, $\\mu_p$",
+     "meaning": "electron and hole mobilities (m$^2$/V·s)"
     },
     {
      "symbol": "$W_n$",
@@ -264,6 +560,10 @@
     {
      "symbol": "$W_p$",
      "meaning": "pMOS width for equal rise and fall"
+    },
+    {
+     "symbol": "$W$",
+     "meaning": "width of each transistor in the stack"
     },
     {
      "symbol": "$k$",
@@ -290,24 +590,60 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$P$",
+     "meaning": "switching power (W); probability the node is 1"
+    },
+    {
      "symbol": "$\\alpha$",
      "meaning": "activity factor"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "switched capacitance (F)"
+    },
+    {
+     "symbol": "$V_{DD}$",
+     "meaning": "supply voltage (V)"
     },
     {
      "symbol": "$f$",
      "meaning": "clock frequency (Hz)"
     },
     {
-     "symbol": "$P$",
-     "meaning": "probability the node is 1"
+     "symbol": "$P_{static}$",
+     "meaning": "static power (W)"
+    },
+    {
+     "symbol": "$I_{sub}$, $I_{gate}$, $I_{junct}$, $I_{contention}$",
+     "meaning": "subthreshold, gate, junction and contention currents (A)"
+    },
+    {
+     "symbol": "$P_A$, $P_B$",
+     "meaning": "probabilities that inputs A and B are 1"
     },
     {
      "symbol": "$V_x$",
      "meaning": "middle node of two OFF nMOS (V)"
     },
     {
-     "symbol": "$C$",
-     "meaning": "switched capacitance (F)"
+     "symbol": "$I_{single}$, $I_{stack}$",
+     "meaning": "leakage of one OFF transistor and of two in series (A)"
+    },
+    {
+     "symbol": "$P_{dyn}$",
+     "meaning": "dynamic power (W)"
+    },
+    {
+     "symbol": "$A$",
+     "meaning": "chip area (mm$^2$)"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "gain factor (A/V$^2$)"
+    },
+    {
+     "symbol": "$V_T$",
+     "meaning": "threshold voltage (V)"
     },
     {
      "symbol": "$t_{pd}$",
@@ -334,10 +670,6 @@
      "meaning": "switching power (W)"
     },
     {
-     "symbol": "$P_{static}$",
-     "meaning": "static power (W)"
-    },
-    {
      "symbol": "$I_{static}$",
      "meaning": "leakage or contention current (A)"
     }
@@ -350,20 +682,36 @@
    "tier": "Less often",
    "symbols": [
     {
+     "symbol": "$\\Delta V_v$",
+     "meaning": "noise on the victim (V)"
+    },
+    {
+     "symbol": "$\\Delta V_a$",
+     "meaning": "swing of the aggressor (V)"
+    },
+    {
      "symbol": "$C_{adj}$",
-     "meaning": "coupling capacitance"
+     "meaning": "coupling capacitance (F)"
     },
     {
      "symbol": "$C_{gnd}$",
-     "meaning": "capacitance to ground"
+     "meaning": "capacitance to ground (F)"
     },
     {
-     "symbol": "$\\tau$",
-     "meaning": "RC time constant of each wire"
+     "symbol": "$\\tau_a$, $\\tau_v$",
+     "meaning": "RC time constants of the aggressor and victim drivers (s)"
+    },
+    {
+     "symbol": "$C_{eff}$",
+     "meaning": "effective capacitance (F)"
     },
     {
      "symbol": "$k_M$",
      "meaning": "0 (same), 1 (quiet), 2 (opposite)"
+    },
+    {
+     "symbol": "$R_\\square$",
+     "meaning": "sheet resistance ($\\Omega$/square)"
     },
     {
      "symbol": "$\\rho$",
@@ -371,15 +719,19 @@
     },
     {
      "symbol": "$t$",
-     "meaning": "thickness"
+     "meaning": "thickness (m)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "wire resistance ($\\Omega$)"
     },
     {
      "symbol": "$l$",
-     "meaning": "length"
+     "meaning": "length (m)"
     },
     {
      "symbol": "$w$",
-     "meaning": "width"
+     "meaning": "width (m)"
     }
    ]
   },
@@ -388,7 +740,36 @@
    "title": "Scaling",
    "book": "Weste Ch. 7",
    "tier": "Likely",
-   "symbols": []
+   "symbols": [
+    {
+     "symbol": "$L$, $W$",
+     "meaning": "channel length and width"
+    },
+    {
+     "symbol": "$t_{ox}$",
+     "meaning": "oxide thickness"
+    },
+    {
+     "symbol": "$V$",
+     "meaning": "supply voltage"
+    },
+    {
+     "symbol": "$N_A$",
+     "meaning": "substrate doping"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "scaling factor (> 1)"
+    },
+    {
+     "symbol": "$V_{DD}$",
+     "meaning": "supply voltage"
+    },
+    {
+     "symbol": "$V_t$",
+     "meaning": "threshold voltage"
+    }
+   ]
   },
   {
    "id": "logic",
@@ -396,6 +777,14 @@
    "book": "Weste Ch. 9",
    "tier": "Must know",
    "symbols": [
+    {
+     "symbol": "$A$, $B$, $C$, $D$",
+     "meaning": "inputs"
+    },
+    {
+     "symbol": "$Y$",
+     "meaning": "alarm output; multiplexer output"
+    },
     {
      "symbol": "$k$",
      "meaning": "device transconductance (A/V$^2$)"
@@ -441,6 +830,10 @@
      "meaning": "source–body voltage (V)"
     },
     {
+     "symbol": "$V_{Tn}$, $V_{Tp}$",
+     "meaning": "nMOS and pMOS thresholds (V)"
+    },
+    {
      "symbol": "$V_{OL}$",
      "meaning": "output low voltage (V)"
     },
@@ -455,6 +848,14 @@
     {
      "symbol": "$k_p$",
      "meaning": "load gain factor (A/V$^2$)"
+    },
+    {
+     "symbol": "$\\mu_n$, $\\mu_p$",
+     "meaning": "electron and hole mobilities (m$^2$/V·s)"
+    },
+    {
+     "symbol": "$C_{ox}$",
+     "meaning": "gate capacitance per area (F/m$^2$)"
     },
     {
      "symbol": "$(W/L)_n$",
@@ -493,20 +894,48 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$T_c$",
+     "meaning": "clock period (s)"
+    },
+    {
      "symbol": "$t_{pcq}$",
-     "meaning": "clock-to-Q propagation"
+     "meaning": "clock-to-Q delay of the flip-flop (s); clock-to-Q propagation (s)"
     },
     {
      "symbol": "$t_{pd}$",
-     "meaning": "longest logic delay"
+     "meaning": "logic propagation delay (s); longest logic delay (s)"
     },
     {
-     "symbol": "$t_{ccq}$",
-     "meaning": "clock-to-Q contamination"
+     "symbol": "$t_{setup}$",
+     "meaning": "setup time (s)"
     },
     {
      "symbol": "$t_{cd}$",
-     "meaning": "shortest logic delay"
+     "meaning": "logic contamination delay (s); shortest logic delay (s)"
+    },
+    {
+     "symbol": "$t_{hold}$",
+     "meaning": "hold time (s)"
+    },
+    {
+     "symbol": "$t_{ccq}$",
+     "meaning": "clock-to-Q contamination delay (s)"
+    },
+    {
+     "symbol": "$Q_{next}$",
+     "meaning": "state after the clock edge"
+    },
+    {
+     "symbol": "$D$",
+     "meaning": "data input"
+    },
+    {
+     "symbol": "$reset$",
+     "meaning": "reset input"
+    },
+    {
+     "symbol": "$t_{skew}$",
+     "meaning": "clock skew (s)"
     },
     {
      "symbol": "$t_{data,max}$",
@@ -525,10 +954,6 @@
      "meaning": "largest logic and wire delay (s)"
     },
     {
-     "symbol": "$t_{setup}$",
-     "meaning": "setup time (s)"
-    },
-    {
      "symbol": "$T$",
      "meaning": "clock period (s)"
     },
@@ -545,12 +970,16 @@
      "meaning": "latest capture clock (s)"
     },
     {
-     "symbol": "$t_{hold}$",
-     "meaning": "hold time (s)"
+     "symbol": "$f_{max}$",
+     "meaning": "highest clock frequency (Hz)"
     },
     {
      "symbol": "$T_{min}$",
      "meaning": "least period meeting setup (s)"
+    },
+    {
+     "symbol": "$S_1'$, $S_0'$",
+     "meaning": "next-state bits"
     },
     {
      "symbol": "$S_1S_0$",
@@ -567,7 +996,20 @@
    "title": "Datapath",
    "book": "Weste Ch. 11",
    "tier": "Likely",
-   "symbols": []
+   "symbols": [
+    {
+     "symbol": "$S$",
+     "meaning": "sum"
+    },
+    {
+     "symbol": "$A$, $B$",
+     "meaning": "input bits"
+    },
+    {
+     "symbol": "$C_{in}$, $C_{out}$",
+     "meaning": "carry in and out"
+    }
+   ]
   },
   {
    "id": "memory",
@@ -576,12 +1018,24 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$\\Delta V$",
+     "meaning": "change of the bit-line voltage (V); swing needed (V)"
+    },
+    {
+     "symbol": "$V_{DD}$",
+     "meaning": "supply voltage (V)"
+    },
+    {
+     "symbol": "$C_{cell}$",
+     "meaning": "cell capacitance (F)"
+    },
+    {
      "symbol": "$C_{bit}$",
      "meaning": "bit-line capacitance (F)"
     },
     {
-     "symbol": "$\\Delta V$",
-     "meaning": "swing needed (V)"
+     "symbol": "$t$",
+     "meaning": "read time (s)"
     },
     {
      "symbol": "$I_{cell}$",
@@ -611,7 +1065,7 @@
    "subtopic": "Etching",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=12",
    "text": "Briefly discuss the chemistries involved in in *[sic: should be \"involved in\"]* etching. Also explain the effect of adding $H_2$ and $O_2$ on etching rate.",
    "repeat_of": "",
    "times": 1,
@@ -801,7 +1255,7 @@
    "subtopic": "Scaling rules",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=44",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45",
    "text": "What is scaling? Explain how different parameters of transistors are scaled?",
    "repeat_of": "2018-19 2(b)",
    "times": 2,
@@ -878,7 +1332,7 @@
    "subtopic": "DC characteristics",
    "type": "derivation",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35",
    "text": "Using I-V characteristics curve of MOSFET, find DC characteristics of CMOS inverter.",
    "repeat_of": "2018-19 2(d)",
    "times": 2,
@@ -924,7 +1378,7 @@
    "subtopic": "Gate delay",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=25",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=26",
    "text": "Find propagation and contamination delay (for both rising and falling) of 3-input NAND gate while it is driving 4 identical NAND gates. Consider that the gate has equal pull-up and pull-down resistance.",
    "repeat_of": "",
    "times": 1,
@@ -1006,7 +1460,7 @@
    "subtopic": "Path delay",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=38",
    "text": "Find minimum delay for path $A \\rightarrow B$ in the logic circuit of Figure 3.1. Also find the gate size to achieve this delay.",
    "repeat_of": "2018-19 8(d)",
    "times": 2,
@@ -1030,7 +1484,7 @@
    "subtopic": "Path delay",
    "type": "design",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=40",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=41",
    "text": "Figure 3.2 shows a portion of a decoder circuit. The inverter at input drives 8 identical 4-input NAND gate with input capacitance y each. The output of the decoder (NAND gate) is connected to a 32-bit word of register and each register bit presents a load of 3-unit sized transistor. Find best number stages (how many inverters should be added between NAND and load?), stage effort, path delay, NAND gate size.",
    "repeat_of": "",
    "times": 1,
@@ -1113,7 +1567,7 @@
    "subtopic": "Best number of stages",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=88",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=87",
    "text": "Find the stage effort for the ideal number of stages.",
    "repeat_of": "",
    "times": 1,
@@ -1155,7 +1609,7 @@
    "subtopic": "Static gates",
    "type": "diagram",
    "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57",
    "text": "Design a CMOS logic circuit to compute $F = AB + CD$ using (i) only NAND gates, (ii) compound gate. Choose the transistor width to achieve unit path resistance. If each input can present a maximum of 20 $\\lambda$ of transistor width, output must drive a load equivalent to 100 $\\lambda$ of transistor width, calculate the minimum delay to compute F. Which one is faster? Comment on your answer.",
    "repeat_of": "",
    "times": 1,
@@ -1305,7 +1759,7 @@
    "subtopic": "Dynamic power",
    "type": "numerical",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=47",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48",
    "text": "You are synthesizing a chip composed of random logic with an average activity factor of 0.1. You are using a standard cell process with an average switching capacitance of 450 $pF/mm^2$. Estimate the dynamic power consumption of your chip if it has an area of 70 $mm^2$ and runs at 450 $MHz$ at $V_{DD}$ = 0.9 V.",
    "repeat_of": "",
    "times": 1,
@@ -1362,7 +1816,7 @@
    "subtopic": "Stick diagrams",
    "type": "diagram",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=64",
    "text": "Draw the stick diagram of the following Boolean function: $f = (A + B).(C + D)$ with their symbolic diagram and truth table.",
    "repeat_of": "2018-19 5(a)",
    "times": 2,
@@ -1449,7 +1903,7 @@
    "subtopic": "Setup and hold",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=57",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=58",
    "text": "Explain max-delay constraint and min-delay constraint in sequential circuits.",
    "repeat_of": "",
    "times": 1,
@@ -1517,7 +1971,7 @@
    "subtopic": "Dynamic logic",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63",
    "text": "Explain the principle of dynamic logic circuit.",
    "repeat_of": "2018-19 6(a)",
    "times": 2,
@@ -1700,7 +2154,7 @@
    "subtopic": "Lithography",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=16",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=17",
    "text": "Define photolithography. briefly describe the major steps involved in photolithography.",
    "repeat_of": "2018-19 7(a)",
    "times": 2,
@@ -1766,7 +2220,7 @@
    "subtopic": "Leakage and DIBL",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=19",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=20",
    "text": "Explain the following non-idealities of MOSFET- (i) Drain induced barrier lowering, (ii) subthreshold leakage. What are the effects of temperature on these non-idealities?",
    "repeat_of": "",
    "times": 1,
@@ -1808,7 +2262,7 @@
    "subtopic": "Cleaning",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=14",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=15",
    "text": "What is RCA clean? What are the steps? What contaminants can be removed in this process?",
    "repeat_of": "",
    "times": 1,
@@ -1828,7 +2282,7 @@
    "subtopic": "I-V equations",
    "type": "derivation",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=23",
    "text": "Find the equations and I-V characteristics curve of MOSFET current using long-channel model.",
    "repeat_of": "",
    "times": 1,
@@ -1848,7 +2302,7 @@
    "subtopic": "Moore's law",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=28",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=29",
    "text": "State Moore's law. Discuss the problems that arise due to MOSFET scaling.",
    "repeat_of": "",
    "times": 1,
@@ -1868,7 +2322,7 @@
    "subtopic": "CVSL",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=30",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31",
    "text": "Explain the principle of cascode voltage switch logic.",
    "repeat_of": "",
    "times": 1,
@@ -1888,7 +2342,7 @@
    "subtopic": "Input ordering",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=42",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=43",
    "text": "Explain input ordering delay effect.",
    "repeat_of": "",
    "times": 1,
@@ -1908,7 +2362,7 @@
    "subtopic": "Glitches",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=46",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=47",
    "text": "Define glitch? How does it increase power consumption? How it can be reduced?",
    "repeat_of": "",
    "times": 1,
@@ -1928,7 +2382,7 @@
    "subtopic": "Crosstalk",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=49",
    "text": "Define crosstalk. Show how crosstalk induces noise in different cases. How can crosstalk be reduced?",
    "repeat_of": "",
    "times": 1,
@@ -1948,7 +2402,7 @@
    "subtopic": "Sheet resistance",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=50",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51",
    "text": "Define sheet resistance. How does interconnect affect the performance of a system?",
    "repeat_of": "",
    "times": 1,
@@ -1968,7 +2422,7 @@
    "subtopic": "Hold time",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54",
    "text": "What is min-delay constraint? Find min-delay for a system sequenced with flip-flop. If min-delay occurs, what is the solution?",
    "repeat_of": "",
    "times": 1,
@@ -1988,7 +2442,7 @@
    "subtopic": "Cycle time",
    "type": "numerical",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=55",
    "text": "The Itanium 2 ALU self-bypass path is shown in Figure 5.1, and delays associated with each element are given in Table 5.1. Calculate the minimum cycle time $T_c$ at which ALU self-bypass path will operate correctly. The earliest input to the late bypass multiplexer is imm value coming from another flip-flop. Will this path experience any hold-time failures?",
    "repeat_of": "",
    "times": 1,
@@ -2009,7 +2463,7 @@
    "subtopic": "Leakage",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=59",
    "text": "Define stack effect. Find subthreshold leakage current for two series OFF transistor.",
    "repeat_of": "",
    "times": 1,
@@ -2051,7 +2505,7 @@
    "subtopic": "SRAM",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=65",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=66",
    "text": "Draw logic diagram of a SRAM cell and explain its different modes of operation.",
    "repeat_of": "",
    "times": 1,
@@ -2075,7 +2529,7 @@
    "subtopic": "ROM",
    "type": "diagram",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=67",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=68",
    "text": "Design and implement a pseudo-nMOS ROM to store the data shown in Figure 6.1. Also draw the dot diagram representation.",
    "repeat_of": "",
    "times": 1,
@@ -2503,7 +2957,7 @@
     },
     {
      "label": "19-20 2(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=23"
     }
    ]
   },
@@ -2515,7 +2969,7 @@
    "used": [
     {
      "label": "19-20 2(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=23"
     }
    ]
   },
@@ -2527,7 +2981,7 @@
    "used": [
     {
      "label": "19-20 2(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=23"
     }
    ]
   },
@@ -2539,7 +2993,7 @@
    "used": [
     {
      "label": "19-20 2(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=22"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=23"
     }
    ]
   },
@@ -2551,7 +3005,7 @@
    "used": [
     {
      "label": "19-20 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=19"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=20"
     }
    ]
   },
@@ -2563,7 +3017,7 @@
    "used": [
     {
      "label": "19-20 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=19"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=20"
     }
    ]
   },
@@ -2575,7 +3029,7 @@
    "used": [
     {
      "label": "19-20 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=19"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=20"
     }
    ]
   },
@@ -2707,7 +3161,7 @@
    "used": [
     {
      "label": "19-20 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -2719,7 +3173,7 @@
    "used": [
     {
      "label": "19-20 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -2731,7 +3185,7 @@
    "used": [
     {
      "label": "19-20 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -2747,7 +3201,7 @@
     },
     {
      "label": "19-20 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -2807,7 +3261,7 @@
    "used": [
     {
      "label": "19-20 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=12"
     },
     {
      "label": "18-19 1(a)",
@@ -2823,7 +3277,7 @@
    "used": [
     {
      "label": "19-20 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=12"
     },
     {
      "label": "18-19 1(a)",
@@ -2839,7 +3293,7 @@
    "used": [
     {
      "label": "19-20 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=12"
     },
     {
      "label": "18-19 1(a)",
@@ -2855,7 +3309,7 @@
    "used": [
     {
      "label": "19-20 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=12"
     },
     {
      "label": "18-19 1(a)",
@@ -2931,7 +3385,7 @@
    "used": [
     {
      "label": "19-20 1(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=16"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=17"
     },
     {
      "label": "18-19 7(a)",
@@ -2959,7 +3413,7 @@
    "used": [
     {
      "label": "19-20 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=12"
     }
    ]
   },
@@ -2971,7 +3425,7 @@
    "used": [
     {
      "label": "19-20 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=12"
     }
    ]
   },
@@ -2983,7 +3437,7 @@
    "used": [
     {
      "label": "19-20 1(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=11"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=12"
     }
    ]
   },
@@ -2995,7 +3449,7 @@
    "used": [
     {
      "label": "19-20 1(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=14"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=15"
     }
    ]
   },
@@ -3035,7 +3489,7 @@
     },
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=38"
     },
     {
      "label": "18-19 3(c)",
@@ -3051,7 +3505,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=38"
     },
     {
      "label": "18-19 3(c)",
@@ -3103,7 +3557,7 @@
    "used": [
     {
      "label": "18-19 8(e)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=88"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=87"
     }
    ]
   },
@@ -3127,7 +3581,7 @@
    "used": [
     {
      "label": "19-20 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=25"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=26"
     }
    ]
   },
@@ -3139,7 +3593,7 @@
    "used": [
     {
      "label": "19-20 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=25"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=26"
     }
    ]
   },
@@ -3151,7 +3605,7 @@
    "used": [
     {
      "label": "19-20 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=25"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=26"
     }
    ]
   },
@@ -3163,7 +3617,7 @@
    "used": [
     {
      "label": "19-20 2(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=25"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=26"
     }
    ]
   },
@@ -3175,7 +3629,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=38"
     }
    ]
   },
@@ -3191,7 +3645,7 @@
     },
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=38"
     }
    ]
   },
@@ -3203,7 +3657,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=38"
     }
    ]
   },
@@ -3219,7 +3673,7 @@
     },
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=38"
     }
    ]
   },
@@ -3231,7 +3685,7 @@
    "used": [
     {
      "label": "19-20 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=40"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=41"
     }
    ]
   },
@@ -3243,7 +3697,7 @@
    "used": [
     {
      "label": "19-20 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=42"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=43"
     }
    ]
   },
@@ -3399,7 +3853,7 @@
    "used": [
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=59"
     }
    ]
   },
@@ -3411,7 +3865,7 @@
    "used": [
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=59"
     }
    ]
   },
@@ -3423,7 +3877,7 @@
    "used": [
     {
      "label": "19-20 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48"
     }
    ]
   },
@@ -3435,7 +3889,7 @@
    "used": [
     {
      "label": "19-20 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48"
     }
    ]
   },
@@ -3519,7 +3973,7 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=49"
     }
    ]
   },
@@ -3531,7 +3985,7 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=49"
     }
    ]
   },
@@ -3543,7 +3997,7 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=48"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=49"
     }
    ]
   },
@@ -3555,7 +4009,7 @@
    "used": [
     {
      "label": "19-20 4(e)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=50"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=51"
     }
    ]
   },
@@ -3603,7 +4057,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45"
     }
    ]
   },
@@ -3615,7 +4069,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=45"
     }
    ]
   },
@@ -3627,7 +4081,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57"
     }
    ]
   },
@@ -3639,7 +4093,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=57"
     }
    ]
   },
@@ -3651,7 +4105,7 @@
    "used": [
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=64"
     }
    ]
   },
@@ -3663,7 +4117,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=62"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=63"
     }
    ]
   },
@@ -3675,7 +4129,7 @@
    "used": [
     {
      "label": "19-20 2(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=30"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=31"
     }
    ]
   },
@@ -3783,7 +4237,7 @@
    "used": [
     {
      "label": "18-19 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=58"
     }
    ]
   },
@@ -3795,7 +4249,7 @@
    "used": [
     {
      "label": "18-19 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=57"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2018-19-pack.pdf#page=58"
     }
    ]
   },
@@ -3819,7 +4273,7 @@
    "used": [
     {
      "label": "19-20 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=55"
     }
    ]
   },
@@ -3831,7 +4285,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54"
     }
    ]
   },
@@ -3843,7 +4297,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=53"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54"
     }
    ]
   },
@@ -3855,7 +4309,7 @@
    "used": [
     {
      "label": "19-20 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=55"
     }
    ]
   },
@@ -3963,7 +4417,7 @@
    "used": [
     {
      "label": "19-20 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=65"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=66"
     }
    ]
   },
@@ -3975,7 +4429,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=68"
     }
    ]
   },

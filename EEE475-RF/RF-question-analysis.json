@@ -14,12 +14,28 @@
    "tier": "Less often",
    "symbols": [
     {
+     "symbol": "$u$",
+     "meaning": "wave speed (m/s)"
+    },
+    {
+     "symbol": "$c$",
+     "meaning": "speed of light (m/s)"
+    },
+    {
      "symbol": "$\\mu_r$, $\\epsilon_r$",
      "meaning": "relative permeability and permittivity"
     },
     {
+     "symbol": "$\\eta_0$",
+     "meaning": "intrinsic impedance of free space (377 Ω)"
+    },
+    {
      "symbol": "$\\eta$",
      "meaning": "ratio of $E$ to $H$ (Ω)"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "phase constant (rad/m)"
     },
     {
      "symbol": "$\\lambda$",
@@ -39,43 +55,67 @@
     },
     {
      "symbol": "$Z_L$",
-     "meaning": "load impedance (Ω)"
+     "meaning": "load impedance ($\\Omega$)"
     },
     {
      "symbol": "$Z_0$",
-     "meaning": "line impedance (Ω); characteristic impedance (Ω)"
+     "meaning": "characteristic impedance of the line ($\\Omega$)"
     },
     {
      "symbol": "$\\Gamma$",
-     "meaning": "reflection coefficient at the load"
+     "meaning": "reflection coefficient at the load; reflection coefficient at $z$ or $d$"
     },
     {
      "symbol": "$S$",
-     "meaning": "SWR, $1 \\le S < \\infty$"
+     "meaning": "standing wave ratio, $V_{max}/V_{min}$; SWR, $1 \\le S < \\infty$"
+    },
+    {
+     "symbol": "$V$",
+     "meaning": "voltage on the line (V)"
+    },
+    {
+     "symbol": "$d_{max}$",
+     "meaning": "distance of the first voltage maximum from the load (m)"
     },
     {
      "symbol": "$\\theta$",
      "meaning": "angle of $\\Gamma_L$ (rad)"
     },
     {
-     "symbol": "$d_{max}$",
-     "meaning": "distance from the load"
+     "symbol": "$\\lambda$",
+     "meaning": "wavelength on the line (m)"
     },
     {
-     "symbol": "$l$",
-     "meaning": "line length (m); distance from the load (m)"
+     "symbol": "$Z_{in}$",
+     "meaning": "input impedance ($\\Omega$)"
     },
     {
      "symbol": "$\\beta$",
      "meaning": "phase constant (rad/m)"
     },
     {
+     "symbol": "$l$",
+     "meaning": "line length (m); distance from the load (m)"
+    },
+    {
+     "symbol": "$V$, $I$",
+     "meaning": "voltage and current on the line (V, A)"
+    },
+    {
      "symbol": "$V_0^+$",
      "meaning": "incident amplitude (V)"
     },
     {
-     "symbol": "$Z_{oc}$, $Z_{sc}$",
-     "meaning": "measured input impedances (Ω)"
+     "symbol": "$z$",
+     "meaning": "position, the load at $z = 0$ (m); position along the line (m)"
+    },
+    {
+     "symbol": "$Z_{sc}$, $Z_{oc}$",
+     "meaning": "input impedances with the end shorted and open ($\\Omega$)"
+    },
+    {
+     "symbol": "$\\omega$",
+     "meaning": "angular frequency (rad/s)"
     },
     {
      "symbol": "$R$, $L$, $G$, $C$",
@@ -98,6 +138,10 @@
      "meaning": "shunt capacitance (F/m)"
     },
     {
+     "symbol": "$\\gamma$",
+     "meaning": "propagation constant (m$^{-1}$)"
+    },
+    {
      "symbol": "$V_0^+$, $V_0^-$",
      "meaning": "incident and reflected amplitudes (V); forward and backward amplitudes (V)"
     },
@@ -114,8 +158,16 @@
      "meaning": "fraction of power reflected"
     },
     {
+     "symbol": "$\\theta_\\Gamma$",
+     "meaning": "angle of $\\Gamma_L$ (rad)"
+    },
+    {
      "symbol": "$d_{min}$",
      "meaning": "distance of the first voltage minimum (m)"
+    },
+    {
+     "symbol": "$Z_{min}$, $Z_{max}$",
+     "meaning": "impedance at the voltage minimum and maximum (Ω)"
     },
     {
      "symbol": "$\\alpha_c$, $\\alpha_d$",
@@ -134,20 +186,36 @@
    "tier": "Must know",
    "symbols": [
     {
-     "symbol": "$l$",
-     "meaning": "line length (m)"
+     "symbol": "$Z_{in}$",
+     "meaning": "input impedance ($\\Omega$)"
     },
     {
      "symbol": "$\\beta$",
      "meaning": "phase constant (rad/m)"
     },
     {
-     "symbol": "$r$, $x$",
-     "meaning": "normalized resistance and reactance"
+     "symbol": "$l$",
+     "meaning": "line length (m)"
+    },
+    {
+     "symbol": "$z$",
+     "meaning": "normalized impedance"
+    },
+    {
+     "symbol": "$\\Gamma$",
+     "meaning": "reflection coefficient"
     },
     {
      "symbol": "$u$, $v$",
      "meaning": "real and imaginary parts of $\\Gamma$"
+    },
+    {
+     "symbol": "$r$, $x$",
+     "meaning": "normalized resistance and reactance"
+    },
+    {
+     "symbol": "$Z$",
+     "meaning": "impedance (Ω)"
     }
    ]
   },
@@ -158,16 +226,76 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$E_z$",
+     "meaning": "axial electric field (V/m)"
+    },
+    {
+     "symbol": "$E_0$",
+     "meaning": "its amplitude (V/m)"
+    },
+    {
+     "symbol": "$m$, $n$",
+     "meaning": "mode indices"
+    },
+    {
+     "symbol": "$x$, $y$, $z$",
+     "meaning": "coordinates (m)"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "phase constant (rad/m)"
+    },
+    {
      "symbol": "$a$, $b$",
      "meaning": "guide width and height (m)"
+    },
+    {
+     "symbol": "$k_c$",
+     "meaning": "cutoff wave number (rad/m)"
     },
     {
      "symbol": "$k = \\omega\\sqrt{\\mu\\epsilon}$",
      "meaning": "wave number (rad/m)"
     },
     {
-     "symbol": "$m$, $n$",
-     "meaning": "mode indices"
+     "symbol": "$f_c$",
+     "meaning": "cutoff frequency (Hz)"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "frequency (Hz)"
+    },
+    {
+     "symbol": "$f_{c,mn}$",
+     "meaning": "cutoff frequency of mode $mn$ (Hz)"
+    },
+    {
+     "symbol": "$u'$",
+     "meaning": "wave speed in the filling (m/s)"
+    },
+    {
+     "symbol": "$Z_{TM}$",
+     "meaning": "TM wave impedance (Ω)"
+    },
+    {
+     "symbol": "$E_x$, $H_y$",
+     "meaning": "transverse fields (V/m, A/m)"
+    },
+    {
+     "symbol": "$Z_{TE}$",
+     "meaning": "TE wave impedance (Ω)"
+    },
+    {
+     "symbol": "$p$",
+     "meaning": "root of the Bessel function for the mode"
+    },
+    {
+     "symbol": "$c$",
+     "meaning": "speed of light (m/s)"
+    },
+    {
+     "symbol": "$\\epsilon_r$",
+     "meaning": "relative permittivity"
     },
     {
      "symbol": "$a$",
@@ -182,12 +310,56 @@
    "tier": "Less often",
    "symbols": [
     {
+     "symbol": "$Z_{in}$",
+     "meaning": "input impedance (Ω)"
+    },
+    {
      "symbol": "$l$",
      "meaning": "line length (m), lossless"
     },
     {
+     "symbol": "$\\Gamma_{in}$",
+     "meaning": "reflection coefficient at the input"
+    },
+    {
+     "symbol": "$V_n^+$, $V_n^-$",
+     "meaning": "incident and outgoing voltages at port $n$ (V)"
+    },
+    {
+     "symbol": "$Z_0$",
+     "meaning": "reference impedance (Ω)"
+    },
+    {
      "symbol": "$a_n$, $b_n$",
      "meaning": "incident and outgoing waves at port $n$ ($\\sqrt{\\text{W}}$)"
+    },
+    {
+     "symbol": "$a$, $b$",
+     "meaning": "vectors of incident and outgoing waves"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "scattering matrix"
+    },
+    {
+     "symbol": "$S_{ij}$",
+     "meaning": "S-parameter from port $j$ to port $i$"
+    },
+    {
+     "symbol": "$a_j$, $b_i$",
+     "meaning": "waves at ports $j$ and $i$"
+    },
+    {
+     "symbol": "$S_{21}$, $S_{32}$, $S_{13}$",
+     "meaning": "transmissions 1→2, 2→3, 3→1"
+    },
+    {
+     "symbol": "$\\Gamma_L$",
+     "meaning": "load reflection coefficient"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "phase constant (rad/m)"
     },
     {
      "symbol": "$b_s$",
@@ -210,20 +382,48 @@
      "meaning": "impedance of the $\\lambda/4$ section (Ω)"
     },
     {
+     "symbol": "$Z_0$",
+     "meaning": "line impedance ($\\Omega$)"
+    },
+    {
      "symbol": "$R_L$",
-     "meaning": "real load (Ω); resistive load (Ω)"
+     "meaning": "real load ($\\Omega$); resistive load (Ω)"
+    },
+    {
+     "symbol": "$Z_{in}$",
+     "meaning": "input impedance (Ω)"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "phase constant (rad/m)"
     },
     {
      "symbol": "$d$",
      "meaning": "distance from the load (m)"
     },
     {
+     "symbol": "$X_L$",
+     "meaning": "load reactance ($\\Omega$)"
+    },
+    {
      "symbol": "$R_L$, $X_L$",
      "meaning": "load resistance and reactance (Ω)"
     },
     {
+     "symbol": "$l$",
+     "meaning": "stub length (m)"
+    },
+    {
+     "symbol": "$\\lambda$",
+     "meaning": "wavelength (m)"
+    },
+    {
      "symbol": "$B$",
      "meaning": "susceptance to cancel (S); line susceptance at the stub (S)"
+    },
+    {
+     "symbol": "$y_{stub}$",
+     "meaning": "normalized stub admittance"
     },
     {
      "symbol": "$l_s$",
@@ -238,12 +438,28 @@
    "tier": "Likely",
    "symbols": [
     {
+     "symbol": "$f_{mnp}$",
+     "meaning": "resonant frequency of mode $mnp$ (Hz)"
+    },
+    {
+     "symbol": "$\\mu_r$",
+     "meaning": "relative permeability"
+    },
+    {
+     "symbol": "$p$",
+     "meaning": "mode index along the length; third mode index"
+    },
+    {
      "symbol": "$d$",
      "meaning": "cavity length (m)"
     },
     {
-     "symbol": "$p$",
-     "meaning": "third mode index"
+     "symbol": "$f_{r,mnp}$",
+     "meaning": "resonant frequency of mode $mnp$ (Hz)"
+    },
+    {
+     "symbol": "$Q$",
+     "meaning": "quality factor"
     }
    ]
   },
@@ -254,16 +470,60 @@
    "tier": "Likely",
    "symbols": [
     {
+     "symbol": "$Z$",
+     "meaning": "impedance of the resistor ($\\Omega$)"
+    },
+    {
+     "symbol": "$\\omega$",
+     "meaning": "angular frequency (rad/s)"
+    },
+    {
      "symbol": "$L$",
-     "meaning": "each lead's inductance (H)"
+     "meaning": "each lead's inductance (H); shunt inductance (H)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "resistance ($\\Omega$)"
     },
     {
      "symbol": "$C_a$",
      "meaning": "end capacitance (F)"
     },
     {
+     "symbol": "$f_c$",
+     "meaning": "corner where $C_a$ starts to short $R$ (Hz); corner frequency (Hz)"
+    },
+    {
+     "symbol": "$f_0$",
+     "meaning": "series resonance of the leads with $C_a$ (Hz)"
+    },
+    {
+     "symbol": "$V_1$, $I_1$",
+     "meaning": "voltage and current at port 1"
+    },
+    {
+     "symbol": "$V_2$, $I_2$",
+     "meaning": "voltage and current at port 2"
+    },
+    {
+     "symbol": "$A$, $B$, $C$, $D$",
+     "meaning": "ABCD parameters"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "series capacitance (F)"
+    },
+    {
+     "symbol": "$X_L$, $X_C$",
+     "meaning": "inductive and capacitive reactance (Ω)"
+    },
+    {
      "symbol": "$f$",
      "meaning": "frequency (Hz)"
+    },
+    {
+     "symbol": "$f_r$",
+     "meaning": "self-resonant frequency (Hz)"
     },
     {
      "symbol": "$L_s$",
@@ -274,8 +534,20 @@
      "meaning": "winding capacitance (F)"
     },
     {
+     "symbol": "$H$",
+     "meaning": "voltage gain"
+    },
+    {
      "symbol": "$V_1$, $V_2$",
      "meaning": "input and output voltages"
+    },
+    {
+     "symbol": "$S_{21}$",
+     "meaning": "forward transmission"
+    },
+    {
+     "symbol": "$Z_0$",
+     "meaning": "reference impedance (Ω)"
     }
    ]
   },
@@ -286,8 +558,36 @@
    "tier": "Likely",
    "symbols": [
     {
-     "symbol": "$S_{ij}$",
-     "meaning": "S-parameters"
+     "symbol": "$\\Gamma_{in}$",
+     "meaning": "reflection at the input"
+    },
+    {
+     "symbol": "$S_{11}$, $S_{12}$, $S_{21}$, $S_{22}$",
+     "meaning": "S-parameters of the transistor"
+    },
+    {
+     "symbol": "$\\Gamma_L$",
+     "meaning": "load reflection coefficient"
+    },
+    {
+     "symbol": "$C_L$, $R_L$",
+     "meaning": "centre and radius of the output stability circle"
+    },
+    {
+     "symbol": "$S_{11}^*$, $S_{22}^*$",
+     "meaning": "complex conjugates of $S_{11}$, $S_{22}$"
+    },
+    {
+     "symbol": "$C_S$, $R_S$",
+     "meaning": "centre and radius of the input stability circle"
+    },
+    {
+     "symbol": "$R_{in}$, $X_{in}$",
+     "meaning": "input resistance and reactance of the device ($\\Omega$)"
+    },
+    {
+     "symbol": "$R_L$, $X_L$",
+     "meaning": "load resistance and reactance ($\\Omega$)"
     },
     {
      "symbol": "$A$",
@@ -295,7 +595,31 @@
     },
     {
      "symbol": "$\\beta$",
-     "meaning": "feedback"
+     "meaning": "feedback fraction"
+    },
+    {
+     "symbol": "$G_{TU}$",
+     "meaning": "unilateral transducer gain"
+    },
+    {
+     "symbol": "$G_S$, $G_0$, $G_L$",
+     "meaning": "source, device and load gain factors"
+    },
+    {
+     "symbol": "$S_{11}$",
+     "meaning": "input reflection of the device"
+    },
+    {
+     "symbol": "$G_{Smax}$",
+     "meaning": "largest source gain"
+    },
+    {
+     "symbol": "$g_s$",
+     "meaning": "normalized source gain"
+    },
+    {
+     "symbol": "$S_{11}^*$",
+     "meaning": "complex conjugate of $S_{11}$"
     },
     {
      "symbol": "$d_{gs}$",
@@ -321,12 +645,36 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$D$",
+     "meaning": "directivity"
+    },
+    {
      "symbol": "$A_e$",
      "meaning": "effective aperture (m²)"
     },
     {
+     "symbol": "$\\lambda$",
+     "meaning": "wavelength (m)"
+    },
+    {
+     "symbol": "$P_r$, $P_t$",
+     "meaning": "received and transmitted power (W)"
+    },
+    {
      "symbol": "$A_{et}$, $A_{er}$",
-     "meaning": "apertures (m²)"
+     "meaning": "effective apertures (m²)"
+    },
+    {
+     "symbol": "$r$",
+     "meaning": "safe distance (m)"
+    },
+    {
+     "symbol": "$G_t$, $G_r$",
+     "meaning": "gains of the transmitting and receiving antennas"
+    },
+    {
+     "symbol": "$N$",
+     "meaning": "noise power (W)"
     },
     {
      "symbol": "$k$",
@@ -341,28 +689,52 @@
      "meaning": "bandwidth (Hz)"
     },
     {
-     "symbol": "$\\sigma$",
-     "meaning": "radar cross-section (m²)"
+     "symbol": "$S$",
+     "meaning": "received signal power (W)"
     },
     {
-     "symbol": "$P_{min}$",
-     "meaning": "minimum detectable signal (W)"
-    },
-    {
-     "symbol": "$P_t$",
-     "meaning": "transmitted power (W); transmitter power (W)"
+     "symbol": "$R_{max}$",
+     "meaning": "largest range (m)"
     },
     {
      "symbol": "$G$",
      "meaning": "antenna gain"
     },
     {
+     "symbol": "$\\sigma$",
+     "meaning": "radar cross-section (m²)"
+    },
+    {
+     "symbol": "$P_{min}$",
+     "meaning": "smallest detectable power (W); minimum detectable signal (W)"
+    },
+    {
+     "symbol": "$S_t$",
+     "meaning": "power density at the target (W/m²)"
+    },
+    {
+     "symbol": "$P_t$",
+     "meaning": "transmitted power (W); transmitter power (W); total power (W)"
+    },
+    {
      "symbol": "$R$",
      "meaning": "range (m)"
     },
     {
+     "symbol": "$P_r$",
+     "meaning": "received power (W)"
+    },
+    {
+     "symbol": "$c$",
+     "meaning": "speed of light (m/s)"
+    },
+    {
      "symbol": "$t$",
-     "meaning": "echo delay (s)"
+     "meaning": "echo delay (s); time (s)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "electric field in the tissue (V/m)"
     },
     {
      "symbol": "$\\sigma_t$",
@@ -389,6 +761,22 @@
      "meaning": "signal and local-oscillator frequencies (rad/s)"
     },
     {
+     "symbol": "$f_{IF}$, $f_{RF}$, $f_{LO}$",
+     "meaning": "intermediate, signal and local-oscillator frequencies (Hz)"
+    },
+    {
+     "symbol": "$f_{image}$",
+     "meaning": "image frequency (Hz)"
+    },
+    {
+     "symbol": "$s$",
+     "meaning": "AM signal (V)"
+    },
+    {
+     "symbol": "$\\omega_m$, $\\omega_c$",
+     "meaning": "message and carrier frequencies (rad/s)"
+    },
+    {
      "symbol": "$A_c$",
      "meaning": "carrier amplitude"
     },
@@ -409,36 +797,100 @@
    "tier": "Must know",
    "symbols": [
     {
-     "symbol": "$A_e$",
-     "meaning": "effective aperture (m²)"
+     "symbol": "$D$",
+     "meaning": "directivity; largest dimension of the antenna (m); largest antenna size (m)"
     },
     {
-     "symbol": "$U$",
-     "meaning": "radiation intensity (W/sr)"
+     "symbol": "$A_e$",
+     "meaning": "effective aperture (m²); effective area (m²)"
+    },
+    {
+     "symbol": "$\\lambda$",
+     "meaning": "wavelength (m)"
     },
     {
      "symbol": "$P_{rad}$",
      "meaning": "total radiated power (W)"
     },
     {
-     "symbol": "$D$",
-     "meaning": "largest dimension (m); largest antenna size (m)"
+     "symbol": "$U$",
+     "meaning": "radiation intensity (W/sr)"
+    },
+    {
+     "symbol": "$\\Omega$",
+     "meaning": "solid angle (sr)"
+    },
+    {
+     "symbol": "$\\Omega_A$",
+     "meaning": "beam area (sr)"
+    },
+    {
+     "symbol": "$U_m$",
+     "meaning": "largest radiation intensity (W/sr)"
+    },
+    {
+     "symbol": "$U_{max}$, $U_{av}$",
+     "meaning": "largest and average radiation intensity (W/sr)"
+    },
+    {
+     "symbol": "$r_1$, $r_2$",
+     "meaning": "inner and outer limits of the radiating near field (m)"
+    },
+    {
+     "symbol": "$E_\\phi$",
+     "meaning": "electric field (V/m)"
+    },
+    {
+     "symbol": "$\\eta$",
+     "meaning": "wave impedance of free space ($377~\\Omega$); intrinsic impedance (Ω)"
+    },
+    {
+     "symbol": "$I$",
+     "meaning": "loop current (A); current along the antenna (A); dipole current (A)"
     },
     {
      "symbol": "$S$",
      "meaning": "loop area (m²); power density (W/m²)"
     },
     {
+     "symbol": "$r$",
+     "meaning": "distance from the focus to the dish (m)"
+    },
+    {
+     "symbol": "$\\theta$",
+     "meaning": "angle from the loop axis; angle from the array axis"
+    },
+    {
+     "symbol": "$H_r$",
+     "meaning": "radial magnetic field (A/m)"
+    },
+    {
      "symbol": "$f$",
      "meaning": "focal length (m)"
+    },
+    {
+     "symbol": "$S(\\theta)$",
+     "meaning": "power density at the aperture (W/m²)"
+    },
+    {
+     "symbol": "$E(\\theta)$",
+     "meaning": "field at the aperture (V/m)"
     },
     {
      "symbol": "$A_p$",
      "meaning": "mouth area (m²); physical aperture (m²)"
     },
     {
-     "symbol": "$2\\gamma$",
-     "meaning": "angle on the Poincaré sphere"
+     "symbol": "$F$",
+     "meaning": "polarization match factor"
+    },
+    {
+     "symbol": "$\\gamma$",
+     "meaning": "half the angle between the two polarizations on the Poincaré sphere"
+    },
+    {
+     "symbol": "$\\psi$",
+     "meaning": "phase difference between neighbouring elements (rad)"
     },
     {
      "symbol": "$d$",
@@ -449,20 +901,44 @@
      "meaning": "progressive feed phase (rad)"
     },
     {
+     "symbol": "$AF_n$",
+     "meaning": "normalized array factor"
+    },
+    {
      "symbol": "$N$",
      "meaning": "number of elements"
+    },
+    {
+     "symbol": "$\\theta_m$",
+     "meaning": "direction of the main beam"
+    },
+    {
+     "symbol": "$\\theta_k$",
+     "meaning": "direction of null $k$"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "null number, not a multiple of $N$; Boltzmann's constant; radiation efficiency"
+    },
+    {
+     "symbol": "$T_B$",
+     "meaning": "brightness temperature (K)"
     },
     {
      "symbol": "$e$",
      "meaning": "emissivity"
     },
     {
-     "symbol": "$T_A$",
-     "meaning": "antenna temperature (K)"
+     "symbol": "$T_{phys}$",
+     "meaning": "physical temperature (K)"
     },
     {
-     "symbol": "$k$",
-     "meaning": "Boltzmann's constant; radiation efficiency"
+     "symbol": "$P$",
+     "meaning": "noise power received (W)"
+    },
+    {
+     "symbol": "$T_A$",
+     "meaning": "antenna temperature (K)"
     },
     {
      "symbol": "$B$",
@@ -473,8 +949,28 @@
      "meaning": "half-power beamwidths (deg)"
     },
     {
+     "symbol": "$G$",
+     "meaning": "antenna gain"
+    },
+    {
+     "symbol": "$\\theta$, $\\phi$",
+     "meaning": "spherical angles"
+    },
+    {
      "symbol": "$P_n$",
      "meaning": "normalized power pattern"
+    },
+    {
+     "symbol": "$h_e$",
+     "meaning": "effective height (m)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "incident field (V/m)"
+    },
+    {
+     "symbol": "$z$",
+     "meaning": "position along the antenna (m)"
     },
     {
      "symbol": "$V_{oc}$",
@@ -482,23 +978,27 @@
     },
     {
      "symbol": "$I_0$",
-     "meaning": "terminal current (A)"
+     "meaning": "terminal current (A); current amplitude (A)"
     },
     {
-     "symbol": "$E$",
-     "meaning": "incident field (V/m)"
+     "symbol": "$I$, $z$",
+     "meaning": "current along the antenna (A) and position (m)"
+    },
+    {
+     "symbol": "$Z_0$",
+     "meaning": "impedance of free space ($377~\\Omega$)"
     },
     {
      "symbol": "$R_r$",
      "meaning": "radiation resistance (Ω)"
     },
     {
-     "symbol": "$P_r$",
-     "meaning": "received power (W)"
+     "symbol": "$\\varepsilon_{ap}$",
+     "meaning": "aperture efficiency"
     },
     {
-     "symbol": "$\\lambda$",
-     "meaning": "wavelength (m)"
+     "symbol": "$P_r$",
+     "meaning": "received power (W)"
     },
     {
      "symbol": "$a$",
@@ -509,8 +1009,12 @@
      "meaning": "element of solid angle (sr)"
     },
     {
-     "symbol": "$T_{phys}$",
-     "meaning": "physical temperature (K)"
+     "symbol": "$\\Gamma$",
+     "meaning": "reflection coefficient of the surface"
+    },
+    {
+     "symbol": "$\\Delta T_{min}$",
+     "meaning": "smallest detectable temperature change (K)"
     },
     {
      "symbol": "$T_{sys}$",
@@ -521,12 +1025,48 @@
      "meaning": "integration time (s)"
     },
     {
+     "symbol": "$A_r$, $A_\\theta$",
+     "meaning": "components of the vector potential (Wb/m)"
+    },
+    {
+     "symbol": "$\\mu_0$",
+     "meaning": "permeability of free space (H/m)"
+    },
+    {
+     "symbol": "$dl$",
+     "meaning": "dipole length (m)"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "phase constant (rad/m)"
+    },
+    {
      "symbol": "$r$, $\\theta$",
      "meaning": "spherical coordinates (m, rad)"
     },
     {
+     "symbol": "$\\hat{a}_\\phi$",
+     "meaning": "unit vector along $\\phi$"
+    },
+    {
      "symbol": "$\\mathbf{H}$",
      "meaning": "magnetic field (A/m)"
+    },
+    {
+     "symbol": "$\\mathbf{E}$",
+     "meaning": "electric field (V/m)"
+    },
+    {
+     "symbol": "$\\omega$",
+     "meaning": "angular frequency (rad/s)"
+    },
+    {
+     "symbol": "$\\epsilon$",
+     "meaning": "permittivity (F/m)"
+    },
+    {
+     "symbol": "$E_r$, $E_\\theta$",
+     "meaning": "radial and polar components of $\\mathbf{E}$ (V/m)"
     },
     {
      "symbol": "$\\mathbf{P}_{avg}$",
@@ -537,16 +1077,44 @@
      "meaning": "radiation resistance (Ω)"
     },
     {
+     "symbol": "$P_{received}$",
+     "meaning": "received power (W)"
+    },
+    {
      "symbol": "$P_{inc}$",
      "meaning": "incident power density (W/m²)"
     },
     {
-     "symbol": "$G$",
-     "meaning": "antenna gain"
+     "symbol": "$t_r$",
+     "meaning": "retarded time (s)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
+     "symbol": "$c$",
+     "meaning": "speed of light (m/s)"
     },
     {
      "symbol": "$R$",
      "meaning": "distance from source point to field point (m)"
+    },
+    {
+     "symbol": "$V$",
+     "meaning": "scalar potential (V)"
+    },
+    {
+     "symbol": "$\\epsilon_0$",
+     "meaning": "permittivity of free space (F/m)"
+    },
+    {
+     "symbol": "$\\tau'$",
+     "meaning": "source volume (m³)"
+    },
+    {
+     "symbol": "$\\mathbf{A}$",
+     "meaning": "vector potential (Wb/m)"
     },
     {
      "symbol": "$\\rho$",
@@ -555,6 +1123,10 @@
     {
      "symbol": "$\\mathbf{J}$",
      "meaning": "current density (A/m²)"
+    },
+    {
+     "symbol": "$\\mathbf{B}$",
+     "meaning": "magnetic flux density (T)"
     }
    ]
   }
@@ -1094,7 +1666,7 @@
    "subtopic": "Single-stub matching",
    "type": "design",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=41",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=40",
    "text": "A 50 $\\Omega$ transmission line is connected to a load impedance of $35 - j47.5~\\Omega$. Find the position and length of a short-circuited stub required to match the line.",
    "repeat_of": "2018-19 3(d)",
    "times": 3,
@@ -1254,7 +1826,7 @@
    "subtopic": "Quarter-wave transformer",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=38",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=37",
    "text": "Show how quarter wavelength line is used for matching.",
    "repeat_of": "2018-19 4(d)",
    "times": 3,
@@ -1677,7 +2249,7 @@
    "subtopic": "Reflection coefficient",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34",
    "text": "Write short notes on the following topic (i) Reflection coefficient",
    "repeat_of": "",
    "times": 1,
@@ -1694,7 +2266,7 @@
    "subtopic": "Standing wave ratio",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34",
    "text": "Write short notes on the following topic (ii) Standing wave ratio",
    "repeat_of": "",
    "times": 1,
@@ -1714,7 +2286,7 @@
    "subtopic": "RF hazards",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34",
    "text": "Write short notes on the following topic (iii) RF radiation hazards and safety standard",
    "repeat_of": "",
    "times": 1,
@@ -1734,7 +2306,7 @@
    "subtopic": "Cavity resonators",
    "type": "numerical",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=65",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=64",
    "text": "A rectangular cavity resonator has dimensions of $a = 5$ cm, $b = 2$ cm, and $d = 15$ cm. Compute the resonant frequency of the dominant mode for a dielectric-field cavity of $\\epsilon_r = 2.56$.",
    "repeat_of": "",
    "times": 1,
@@ -1755,7 +2327,7 @@
    "subtopic": "Cavity resonators",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34",
    "text": "Write short notes on the following topic (iv) Microwave cavity resonators",
    "repeat_of": "",
    "times": 1,
@@ -2180,7 +2752,7 @@
    "subtopic": "Effective height and area",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=67",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=66",
    "text": "What do you mean by effective height and effective area of an antenna?",
    "repeat_of": "2019-20 1(a)",
    "times": 2,
@@ -2267,7 +2839,7 @@
     },
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
     },
     {
      "label": "18-19 3(c)",
@@ -2443,7 +3015,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
     }
    ]
   },
@@ -2455,7 +3027,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
     }
    ]
   },
@@ -2831,7 +3403,7 @@
     },
     {
      "label": "19-20 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=38"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=37"
     },
     {
      "label": "18-19 4(d)",
@@ -2847,7 +3419,7 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=40"
     },
     {
      "label": "18-19 3(d)",
@@ -2871,7 +3443,7 @@
     },
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=40"
     },
     {
      "label": "18-19 3(d)",
@@ -2887,7 +3459,7 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=40"
     }
    ]
   },
@@ -2899,11 +3471,11 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=65"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=64"
     },
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
     }
    ]
   },
@@ -2915,7 +3487,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
     }
    ]
   },
@@ -3283,7 +3855,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
     }
    ]
   },
@@ -3295,7 +3867,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
     }
    ]
   },
@@ -3675,7 +4247,7 @@
    "used": [
     {
      "label": "20-21 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=66"
     },
     {
      "label": "19-20 1(a)",
@@ -3919,7 +4491,7 @@
    "used": [
     {
      "label": "20-21 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=66"
     }
    ]
   },
@@ -3931,7 +4503,7 @@
    "used": [
     {
      "label": "20-21 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2020-21-pack.pdf#page=66"
     }
    ]
   },

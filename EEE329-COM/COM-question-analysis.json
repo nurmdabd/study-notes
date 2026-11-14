@@ -34,12 +34,40 @@
    "tier": "Likely",
    "symbols": [
     {
+     "symbol": "$H(f)$",
+     "meaning": "channel transfer function"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "frequency (Hz)"
+    },
+    {
      "symbol": "$k$",
-     "meaning": "constant gain"
+     "meaning": "constant gain (here, not Boltzmann's constant)"
+    },
+    {
+     "symbol": "$j$",
+     "meaning": "imaginary unit, $\\sqrt{-1}$"
     },
     {
      "symbol": "$t_d$",
-     "meaning": "constant delay (s)"
+     "meaning": "time delay (s); constant delay (s)"
+    },
+    {
+     "symbol": "$y(t)$",
+     "meaning": "channel output"
+    },
+    {
+     "symbol": "$x(t)$",
+     "meaning": "channel input"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
+     "symbol": "$t_g$",
+     "meaning": "group delay (s)"
     },
     {
      "symbol": "$\\theta_h$",
@@ -59,23 +87,47 @@
    "symbols": [
     {
      "symbol": "$C$",
-     "meaning": "largest error-free rate (bit/s)"
+     "meaning": "channel capacity, the largest error-free rate (bit/s)"
     },
     {
      "symbol": "$B$",
      "meaning": "channel bandwidth (Hz)"
     },
     {
+     "symbol": "$S$",
+     "meaning": "signal power (W)"
+    },
+    {
+     "symbol": "$N$",
+     "meaning": "noise power (W) (here, not a count)"
+    },
+    {
+     "symbol": "$\\overline{v_n^2}$",
+     "meaning": "mean-square noise voltage (V²)"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "Boltzmann's constant, $1.38\\times10^{-23}$ J/K"
+    },
+    {
      "symbol": "$T$",
      "meaning": "temperature (K)"
     },
     {
-     "symbol": "$R_i$",
-     "meaning": "noise resistance at stage $i$'s input"
+     "symbol": "$R$",
+     "meaning": "resistance (Ω) (here, not a rate); information rate (bit/s)"
     },
     {
-     "symbol": "$A_i$",
-     "meaning": "voltage gain of stage $i$"
+     "symbol": "$R_{eq}$",
+     "meaning": "equivalent noise resistance at the first input ($\\Omega$)"
+    },
+    {
+     "symbol": "$R_1$, $R_2$, $R_3$",
+     "meaning": "noise resistances at the inputs of stages 1, 2, 3 ($\\Omega$)"
+    },
+    {
+     "symbol": "$A_1$, $A_2$",
+     "meaning": "voltage gains of stages 1, 2"
     },
     {
      "symbol": "$L$",
@@ -91,15 +143,27 @@
     },
     {
      "symbol": "$V_t$, $V_r$",
-     "meaning": "sent and received amplitude (V)"
+     "meaning": "sent and received amplitudes (V); sent and received amplitude (V)"
     },
     {
-     "symbol": "$R$",
-     "meaning": "wanted data rate (bit/s); resistance ($\\Omega$)"
+     "symbol": "$V_s$",
+     "meaning": "signal amplitude (V)"
+    },
+    {
+     "symbol": "$V_n$",
+     "meaning": "noise amplitude (V); r.m.s. noise voltage (V)"
+    },
+    {
+     "symbol": "$P_n$",
+     "meaning": "thermal noise power (W)"
     },
     {
      "symbol": "$P_t$, $P_r$",
      "meaning": "sent and received power (W)"
+    },
+    {
+     "symbol": "$S$, $N$",
+     "meaning": "signal and noise power (W)"
     },
     {
      "symbol": "$V_s$, $V_n$",
@@ -114,96 +178,208 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$A$, $B$",
+     "meaning": "any two angles (rad)"
+    },
+    {
+     "symbol": "$a$",
+     "meaning": "message amplitude (V); filter gain at $f_c + f_1$"
+    },
+    {
+     "symbol": "$\\omega_m$",
+     "meaning": "highest message angular frequency (rad/s)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
+     "symbol": "$\\omega_c$",
+     "meaning": "carrier angular frequency (rad/s)"
+    },
+    {
+     "symbol": "$x$",
+     "meaning": "any angle (rad)"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "frequency measured from the carrier (Hz)"
+    },
+    {
+     "symbol": "$\\omega$",
+     "meaning": "angular frequency (rad/s)"
+    },
+    {
+     "symbol": "$e_o(t)$",
+     "meaning": "detector output (V)"
+    },
+    {
+     "symbol": "$m(t)$",
+     "meaning": "message signal (V)"
+    },
+    {
      "symbol": "$\\Delta\\omega$",
-     "meaning": "local-carrier frequency error (rad/s)"
+     "meaning": "LO frequency error (rad/s); local-carrier frequency error (rad/s)"
     },
     {
      "symbol": "$\\delta$",
-     "meaning": "phase error"
+     "meaning": "LO phase error (rad) (here, not an impulse)"
     },
     {
      "symbol": "$f_L$",
-     "meaning": "lowest message frequency"
+     "meaning": "lowest message frequency (Hz)"
     },
     {
-     "symbol": "$m_h$",
-     "meaning": "Hilbert transform"
+     "symbol": "$\\varphi_{SSB}(t)$",
+     "meaning": "SSB signal (V)"
+    },
+    {
+     "symbol": "$m_h(t)$",
+     "meaning": "Hilbert transform of $m(t)$"
+    },
+    {
+     "symbol": "$H(f)$",
+     "meaning": "transfer function of the Hilbert transformer"
+    },
+    {
+     "symbol": "$j$",
+     "meaning": "imaginary unit, $\\sqrt{-1}$"
+    },
+    {
+     "symbol": "$s(t)$",
+     "meaning": "AM wave (V)"
     },
     {
      "symbol": "$E_c$, $E_m$",
-     "meaning": "peak carrier and message (V)"
+     "meaning": "peak carrier and message amplitudes (V)"
     },
     {
-     "symbol": "$R$",
-     "meaning": "load ($\\Omega$)"
+     "symbol": "$\\mu$",
+     "meaning": "AM modulation index"
     },
     {
-     "symbol": "$P_t$",
-     "meaning": "total power"
+     "symbol": "$f_c$",
+     "meaning": "carrier frequency (Hz)"
+    },
+    {
+     "symbol": "$f_m$",
+     "meaning": "message (tone) frequency (Hz)"
     },
     {
      "symbol": "$P_c$",
      "meaning": "carrier power (W)"
     },
     {
+     "symbol": "$R$",
+     "meaning": "load resistance (Ω)"
+    },
+    {
+     "symbol": "$P_t$",
+     "meaning": "total transmitted power (W)"
+    },
+    {
+     "symbol": "$S(f)$",
+     "meaning": "DSB-SC spectrum"
+    },
+    {
+     "symbol": "$A_c$",
+     "meaning": "carrier amplitude (V)"
+    },
+    {
      "symbol": "$M(f)$",
      "meaning": "message spectrum"
     },
     {
-     "symbol": "$W$",
-     "meaning": "message bandwidth"
+     "symbol": "$V(f)$",
+     "meaning": "spectrum of the product"
     },
     {
-     "symbol": "$H_i$",
-     "meaning": "transmit filter"
+     "symbol": "$W$",
+     "meaning": "message bandwidth (Hz)"
     },
     {
      "symbol": "$H_o(f)$",
-     "meaning": "receiver LPF, for $\\lvert f\\rvert \\le B$"
+     "meaning": "receiver filter; receiver LPF, for $\\lvert f\\rvert \\le B$"
     },
     {
-     "symbol": "$\\Delta\\omega$, $\\delta$",
-     "meaning": "frequency and phase error"
+     "symbol": "$H_i(f)$",
+     "meaning": "transmit filter; VSB shaping filter; transfer function of the VSB filter"
+    },
+    {
+     "symbol": "$B$",
+     "meaning": "message bandwidth (Hz)"
     },
     {
      "symbol": "$A$",
-     "meaning": "carrier amplitude"
+     "meaning": "carrier amplitude (V)"
     },
     {
-     "symbol": "$\\omega_c$",
-     "meaning": "carrier frequency (rad/s)"
+     "symbol": "$\\delta(\\cdot)$",
+     "meaning": "impulse"
+    },
+    {
+     "symbol": "$X(\\omega)$",
+     "meaning": "message spectrum"
+    },
+    {
+     "symbol": "$e_o$",
+     "meaning": "detector output (V); demodulator output (V)"
     },
     {
      "symbol": "$I_t$",
-     "meaning": "rms current with modulation (A)"
+     "meaning": "antenna current with modulation (A); rms current with modulation (A)"
     },
     {
      "symbol": "$I_c$",
-     "meaning": "rms current of the carrier alone (A)"
+     "meaning": "antenna current of the carrier alone (A); rms current of the carrier alone (A)"
+    },
+    {
+     "symbol": "$\\varphi_{AM}(t)$",
+     "meaning": "AM wave (V)"
+    },
+    {
+     "symbol": "$m_p$",
+     "meaning": "message peak value (V)"
+    },
+    {
+     "symbol": "$R$, $C$",
+     "meaning": "load resistance (Ω) and capacitance (F)"
     },
     {
      "symbol": "$RC$",
-     "meaning": "load time constant (s)"
+     "meaning": "time constant (s)"
     },
     {
      "symbol": "$\\theta$",
      "meaning": "phase error (rad)"
     },
     {
-     "symbol": "$H_i(f)$",
-     "meaning": "VSB shaping filter"
+     "symbol": "$\\Phi_{VSB}(f)$",
+     "meaning": "VSB spectrum"
     },
     {
-     "symbol": "$a$",
-     "meaning": "filter gain at $f_c + f_1$"
+     "symbol": "$\\omega_1$, $\\omega_2$",
+     "meaning": "angular frequencies of the two tones (rad/s)"
     },
     {
-     "symbol": "$E_m$, $E_c$",
-     "meaning": "message and carrier peaks"
+     "symbol": "$E_m$",
+     "meaning": "message peak amplitude (V)"
+    },
+    {
+     "symbol": "$E_c$",
+     "meaning": "carrier peak amplitude (V)"
+    },
+    {
+     "symbol": "$\\eta$",
+     "meaning": "power efficiency (sideband power / total power)"
+    },
+    {
+     "symbol": "$w(t)$",
+     "meaning": "switching square wave, $\\pm1$"
     },
     {
      "symbol": "$f_v$",
-     "meaning": "vestige width"
+     "meaning": "vestige width (Hz)"
     }
    ]
   },
@@ -214,32 +390,172 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$\\omega_i$",
+     "meaning": "instantaneous angular frequency (rad/s)"
+    },
+    {
      "symbol": "$\\theta(t)$",
-     "meaning": "carrier angle"
+     "meaning": "carrier angle (rad)"
     },
     {
-     "symbol": "$k_f$",
-     "meaning": "Hz per volt; frequency sensitivity (rad/s per volt); Hz/V"
+     "symbol": "$t$",
+     "meaning": "time (s)"
     },
     {
-     "symbol": "$B$",
-     "meaning": "highest message frequency"
+     "symbol": "$f_i$",
+     "meaning": "instantaneous frequency (Hz)"
     },
     {
-     "symbol": "$k_p$",
-     "meaning": "phase sensitivity"
+     "symbol": "$f_c$",
+     "meaning": "carrier frequency (Hz)"
     },
     {
-     "symbol": "$f_m$",
-     "meaning": "modulating frequency (Hz)"
+     "symbol": "$\\phi(t)$",
+     "meaning": "phase deviation (rad)"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "power of the modulated signal (W, 1 Ω load)"
+    },
+    {
+     "symbol": "$A$",
+     "meaning": "carrier amplitude (V)"
     },
     {
      "symbol": "$\\Delta f$",
      "meaning": "peak frequency deviation (Hz)"
     },
     {
+     "symbol": "$k_f$",
+     "meaning": "frequency sensitivity (rad/s per volt)"
+    },
+    {
+     "symbol": "$V_m$",
+     "meaning": "message peak amplitude (V)"
+    },
+    {
+     "symbol": "$\\beta$",
+     "meaning": "FM modulation index"
+    },
+    {
+     "symbol": "$f_m$",
+     "meaning": "tone frequency (Hz); message (tone) frequency (Hz); modulating frequency (Hz)"
+    },
+    {
+     "symbol": "$B$",
+     "meaning": "highest message frequency (Hz); message bandwidth (Hz)"
+    },
+    {
      "symbol": "$B_T$",
-     "meaning": "FM bandwidth (Hz)"
+     "meaning": "FM transmission bandwidth (Hz); FM bandwidth (Hz)"
+    },
+    {
+     "symbol": "$J_n(\\beta)$",
+     "meaning": "Bessel function of the first kind, order $n$"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "sideband order; multiplication factor (here, not a sideband order)"
+    },
+    {
+     "symbol": "$\\omega_c$",
+     "meaning": "carrier angular frequency (rad/s)"
+    },
+    {
+     "symbol": "$\\omega_m$",
+     "meaning": "tone angular frequency (rad/s)"
+    },
+    {
+     "symbol": "$f_{LO}$",
+     "meaning": "local-oscillator frequency (Hz)"
+    },
+    {
+     "symbol": "$n_1$, $n_2$",
+     "meaning": "multiplication factors before and after the mixer"
+    },
+    {
+     "symbol": "$\\Delta f_1$",
+     "meaning": "deviation of the NBFM generator (Hz)"
+    },
+    {
+     "symbol": "$f_{c1}$",
+     "meaning": "carrier of the NBFM generator (Hz)"
+    },
+    {
+     "symbol": "$\\varphi_{FM}$",
+     "meaning": "FM signal (V)"
+    },
+    {
+     "symbol": "$\\dot\\varphi_{FM}$",
+     "meaning": "its time derivative"
+    },
+    {
+     "symbol": "$m(t)$",
+     "meaning": "message signal (V)"
+    },
+    {
+     "symbol": "$\\varphi_{PM}$",
+     "meaning": "PM signal (V)"
+    },
+    {
+     "symbol": "$k_p$",
+     "meaning": "phase sensitivity (rad/V)"
+    },
+    {
+     "symbol": "$\\alpha$",
+     "meaning": "integration variable (s)"
+    },
+    {
+     "symbol": "$A_m$",
+     "meaning": "message peak amplitude (V)"
+    },
+    {
+     "symbol": "$H_d(f)$",
+     "meaning": "de-emphasis filter"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "frequency (Hz)"
+    },
+    {
+     "symbol": "$j$",
+     "meaning": "imaginary unit, $\\sqrt{-1}$"
+    },
+    {
+     "symbol": "$f_1$",
+     "meaning": "corner frequency (Hz)"
+    },
+    {
+     "symbol": "$R$, $C$",
+     "meaning": "resistance ($\\Omega$) and capacitance (F) of the filter"
+    },
+    {
+     "symbol": "$\\varphi_{FM}(t)$",
+     "meaning": "FM wave (V)"
+    },
+    {
+     "symbol": "$a(t)$",
+     "meaning": "integral of the message (V s)"
+    },
+    {
+     "symbol": "$m(\\tau)$",
+     "meaning": "message signal (V)"
+    },
+    {
+     "symbol": "$\\tau$",
+     "meaning": "integration variable (s)"
+    },
+    {
+     "symbol": "$\\varphi_{NBFM}(t)$",
+     "meaning": "narrowband FM wave (V)"
+    },
+    {
+     "symbol": "$f_{max,min}$",
+     "meaning": "highest and lowest instantaneous frequency (Hz)"
+    },
+    {
+     "symbol": "$\\varphi_{NBFM}$",
+     "meaning": "narrowband FM signal"
     }
    ]
   },
@@ -248,7 +564,24 @@
    "title": "Receivers",
    "book": "Lathi Ch. 4",
    "tier": "Less often",
-   "symbols": []
+   "symbols": [
+    {
+     "symbol": "$f_{LO}$",
+     "meaning": "local-oscillator frequency (Hz)"
+    },
+    {
+     "symbol": "$f_s$",
+     "meaning": "signal (station) frequency (Hz)"
+    },
+    {
+     "symbol": "$f_{IF}$",
+     "meaning": "intermediate frequency, 455 kHz for AM"
+    },
+    {
+     "symbol": "$f_{si}$",
+     "meaning": "image frequency (Hz)"
+    }
+   ]
   },
   {
    "id": "pulse",
@@ -257,60 +590,144 @@
    "tier": "Likely",
    "symbols": [
     {
+     "symbol": "$\\Delta$",
+     "meaning": "quantization step size (V)"
+    },
+    {
+     "symbol": "$m_p$",
+     "meaning": "message peak value (V)"
+    },
+    {
      "symbol": "$L$",
-     "meaning": "number of levels"
+     "meaning": "number of levels, $2^n$"
+    },
+    {
+     "symbol": "$S_o$, $N_o$",
+     "meaning": "output signal and quantization-noise powers (W)"
+    },
+    {
+     "symbol": "$\\overline{m^2}$",
+     "meaning": "mean-square value of the message (V²); message power"
+    },
+    {
+     "symbol": "$y$",
+     "meaning": "compressor output (normalized)"
     },
     {
      "symbol": "$\\mu$",
-     "meaning": "compression constant (255), not the AM index"
+     "meaning": "compression parameter, 255 here; compression constant (255), not the AM index"
     },
     {
-     "symbol": "$x$",
-     "meaning": "fraction above Nyquist"
-    },
-    {
-     "symbol": "$e$",
-     "meaning": "framing fraction"
-    },
-    {
-     "symbol": "$n$",
-     "meaning": "bits per sample; bits per code word"
-    },
-    {
-     "symbol": "$B$",
-     "meaning": "highest message frequency (Hz)"
+     "symbol": "$m$",
+     "meaning": "message sample (V)"
     },
     {
      "symbol": "$f_s$",
      "meaning": "sampling rate (samples/s)"
     },
     {
-     "symbol": "$R_b$",
-     "meaning": "bit rate (bit/s)"
+     "symbol": "$x$",
+     "meaning": "fraction above the Nyquist rate"
+    },
+    {
+     "symbol": "$B$",
+     "meaning": "message bandwidth (Hz); highest message frequency (Hz)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "PCM bit rate (bps); information rate (bits/s)"
+    },
+    {
+     "symbol": "$e$",
+     "meaning": "framing overhead fraction"
+    },
+    {
+     "symbol": "$N_{sig}$",
+     "meaning": "number of signals multiplexed"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "bits per sample (here, not an index); summation index; bits per code word (here, not an index)"
+    },
+    {
+     "symbol": "$B_T$",
+     "meaning": "minimum transmission bandwidth (Hz)"
+    },
+    {
+     "symbol": "$\\hat m_q[k]$",
+     "meaning": "receiver's staircase estimate at sample $k$"
+    },
+    {
+     "symbol": "$d_q[k]$",
+     "meaning": "quantized difference, $\\pm\\sigma$"
     },
     {
      "symbol": "$\\sigma$",
-     "meaning": "step size"
+     "meaning": "DM step size (V)"
+    },
+    {
+     "symbol": "$i$",
+     "meaning": "summation index"
+    },
+    {
+     "symbol": "$G(f)$",
+     "meaning": "spectrum of the message"
+    },
+    {
+     "symbol": "$\\bar G(f)$",
+     "meaning": "spectrum of the sampled signal"
+    },
+    {
+     "symbol": "$f$",
+     "meaning": "frequency (Hz)"
+    },
+    {
+     "symbol": "$T_s$",
+     "meaning": "sampling interval, $1/f_s$ (s)"
+    },
+    {
+     "symbol": "$g(t)$",
+     "meaning": "message signal"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
+     "symbol": "$k$",
+     "meaning": "sample number"
+    },
+    {
+     "symbol": "$R_b$",
+     "meaning": "PCM bit rate (bit/s)"
+    },
+    {
+     "symbol": "$m(t)$",
+     "meaning": "message signal (V)"
     },
     {
      "symbol": "$r$",
      "meaning": "symbol rate (symbols/s)"
     },
     {
-     "symbol": "$G(f)$",
-     "meaning": "message spectrum"
-    },
-    {
      "symbol": "$T_s = 1/f_s$",
      "meaning": "sampling interval (s)"
+    },
+    {
+     "symbol": "$H(f)$",
+     "meaning": "filter transfer function"
     },
     {
      "symbol": "$f_0$",
      "meaning": "filter cutoff (Hz)"
     },
     {
-     "symbol": "$\\overline{m^2}$",
-     "meaning": "message power"
+     "symbol": "$N_q$",
+     "meaning": "average quantization-noise power (V²)"
+    },
+    {
+     "symbol": "$S_{peak}$, $N_{peak}$",
+     "meaning": "peak signal and peak noise power"
     }
    ]
   },
@@ -321,40 +738,128 @@
    "tier": "Must know",
    "symbols": [
     {
-     "symbol": "$I_k$",
-     "meaning": "data bit"
+     "symbol": "$V$",
+     "meaning": "pulse amplitude (V)"
     },
     {
      "symbol": "$q_k$",
-     "meaning": "encoded bit"
+     "meaning": "encoded bit $k$"
     },
     {
-     "symbol": "$R_b$",
-     "meaning": "bit rate"
+     "symbol": "$q_{k-1}$",
+     "meaning": "previous encoded bit"
     },
     {
-     "symbol": "$S$",
-     "meaning": "baud rate; signal (baud) rate"
-    },
-    {
-     "symbol": "$\\Delta f$",
-     "meaning": "half the spacing of $f_1$ and $f_2$ (Hz)"
-    },
-    {
-     "symbol": "$m_1$, $m_2$",
-     "meaning": "the two messages"
+     "symbol": "$I_k$",
+     "meaning": "data bit $k$"
     },
     {
      "symbol": "$a_k$",
-     "meaning": "polar symbol ($\\pm1$)"
+     "meaning": "sign ($\\pm1$) of the received pulse $k$; polar symbol ($\\pm1$)"
     },
     {
-     "symbol": "$y_k$",
-     "meaning": "LPF output"
+     "symbol": "$a_{k-1}$",
+     "meaning": "sign of the previous pulse; previous polar symbol"
+    },
+    {
+     "symbol": "$A$",
+     "meaning": "carrier amplitude (V)"
+    },
+    {
+     "symbol": "$T_b$",
+     "meaning": "bit duration (s)"
+    },
+    {
+     "symbol": "$\\omega_1$",
+     "meaning": "angular frequency sent for a 1 (rad/s)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time (s)"
+    },
+    {
+     "symbol": "$P_b$",
+     "meaning": "bit error probability"
+    },
+    {
+     "symbol": "$Q(x)$",
+     "meaning": "Gaussian tail probability"
+    },
+    {
+     "symbol": "$E_b$",
+     "meaning": "energy per bit (J)"
+    },
+    {
+     "symbol": "$N_0$",
+     "meaning": "noise power spectral density (W/Hz)"
+    },
+    {
+     "symbol": "$\\varphi$",
+     "meaning": "QPSK signal (V)"
+    },
+    {
+     "symbol": "$a_I$, $a_Q$",
+     "meaning": "in-phase and quadrature bits, $\\pm1$"
+    },
+    {
+     "symbol": "$\\omega_c$",
+     "meaning": "carrier angular frequency (rad/s)"
+    },
+    {
+     "symbol": "$T_s$",
+     "meaning": "symbol duration, $2T_b$ (s)"
+    },
+    {
+     "symbol": "$f_{1,0}$",
+     "meaning": "FSK frequencies: $f_1$ for bit 1, $f_0$ for bit 0 (Hz)"
+    },
+    {
+     "symbol": "$f_c$",
+     "meaning": "carrier frequency (Hz)"
+    },
+    {
+     "symbol": "$\\Delta f$",
+     "meaning": "frequency deviation (Hz); half the spacing of $f_1$ and $f_2$ (Hz)"
+    },
+    {
+     "symbol": "$B_{FSK}$",
+     "meaning": "FSK bandwidth (Hz)"
+    },
+    {
+     "symbol": "$R_b$",
+     "meaning": "bit rate (bit/s)"
+    },
+    {
+     "symbol": "$B$",
+     "meaning": "FSK bandwidth (Hz); transmission bandwidth (Hz)"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "baud rate (baud); signal (baud) rate"
     },
     {
      "symbol": "$d$",
-     "meaning": "filter factor, $0 \\le d \\le 1$; data (1 or 0)"
+     "meaning": "modulation factor, $0 \\le d \\le 1$; filter factor, $0 \\le d \\le 1$; data (1 or 0) (here, not the filter factor)"
+    },
+    {
+     "symbol": "$\\varphi_{QAM}$",
+     "meaning": "QAM signal (V)"
+    },
+    {
+     "symbol": "$m_1$, $m_2$",
+     "meaning": "the two messages (V)"
+    },
+    {
+     "symbol": "$\\theta$",
+     "meaning": "phase error of the local carrier (rad)"
+    },
+    {
+     "symbol": "$y_k$",
+     "meaning": "receiver output for bit $k$; LPF output"
+    },
+    {
+     "symbol": "$\\varphi_{QAM}(t)$",
+     "meaning": "QAM signal (V)"
     }
    ]
   },
@@ -365,28 +870,100 @@
    "tier": "Must know",
    "symbols": [
     {
-     "symbol": "$B_g$",
-     "meaning": "guard band"
+     "symbol": "$T_f$",
+     "meaning": "frame duration (s)"
     },
     {
-     "symbol": "$m_p$",
-     "meaning": "peak signal"
+     "symbol": "$T_b$",
+     "meaning": "bit duration (s)"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "link bit rate (bps); output bit rate (bps)"
+    },
+    {
+     "symbol": "$B_{total}$",
+     "meaning": "total FDM bandwidth (Hz)"
     },
     {
      "symbol": "$N$",
      "meaning": "number of channels"
     },
     {
+     "symbol": "$B_{ch}$",
+     "meaning": "bandwidth of one channel (Hz)"
+    },
+    {
+     "symbol": "$B_g$",
+     "meaning": "guard band (Hz)"
+    },
+    {
+     "symbol": "$R_i$",
+     "meaning": "rate of input $i$ (bps); input rates"
+    },
+    {
+     "symbol": "$R_{base}$",
+     "meaning": "base (slowest) rate (bps)"
+    },
+    {
+     "symbol": "$\\Delta$",
+     "meaning": "quantization step (V)"
+    },
+    {
+     "symbol": "$m_p$",
+     "meaning": "peak signal (V); message peak value (V)"
+    },
+    {
+     "symbol": "$e_{max}$",
+     "meaning": "largest quantization error (V)"
+    },
+    {
+     "symbol": "$B_{link}$",
+     "meaning": "link bandwidth (Hz)"
+    },
+    {
+     "symbol": "$R_b$",
+     "meaning": "TDM bit rate (bit/s)"
+    },
+    {
+     "symbol": "$f_s$",
+     "meaning": "sampling rate per channel (samples/s)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "bits per sample"
+    },
+    {
+     "symbol": "$B_T$",
+     "meaning": "minimum transmission bandwidth (Hz)"
+    },
+    {
+     "symbol": "$M$",
+     "meaning": "number of hop channels"
+    },
+    {
      "symbol": "$k$",
      "meaning": "PN pattern bits"
+    },
+    {
+     "symbol": "$B_{SS}$",
+     "meaning": "spread bandwidth (Hz)"
+    },
+    {
+     "symbol": "$B$",
+     "meaning": "bandwidth of one channel (Hz) (here, not the FSK bandwidth)"
+    },
+    {
+     "symbol": "$L$",
+     "meaning": "number of levels"
     },
     {
      "symbol": "$\\epsilon$",
      "meaning": "allowed error as a fraction of $m_p$"
     },
     {
-     "symbol": "$R_i$",
-     "meaning": "input rates"
+     "symbol": "$R_{link}$",
+     "meaning": "link rate (bit/s)"
     }
    ]
   },
@@ -397,16 +974,40 @@
    "tier": "Likely",
    "symbols": [
     {
+     "symbol": "$I_i$",
+     "meaning": "information in message $m_i$ (bits)"
+    },
+    {
      "symbol": "$P_i$",
      "meaning": "probability of message $m_i$; probability of symbol $m_i$"
+    },
+    {
+     "symbol": "$H(m)$",
+     "meaning": "entropy, the average information per message (bits/message); entropy, the average information per symbol (bits/symbol)"
+    },
+    {
+     "symbol": "$n$",
+     "meaning": "number of different messages; number of symbols"
+    },
+    {
+     "symbol": "$N_i$",
+     "meaning": "number of times message $m_i$ occurs"
     },
     {
      "symbol": "$N$",
      "meaning": "number of messages sent"
     },
     {
+     "symbol": "$R$",
+     "meaning": "information rate (bits/s)"
+    },
+    {
      "symbol": "$r$",
-     "meaning": "messages per second"
+     "meaning": "messages sent per second"
+    },
+    {
+     "symbol": "$I$",
+     "meaning": "information in the symbol (bits)"
     },
     {
      "symbol": "$P$",
@@ -414,15 +1015,15 @@
     },
     {
      "symbol": "$H$",
-     "meaning": "average information per symbol"
+     "meaning": "entropy, the average information per symbol (bits/symbol)"
     },
     {
      "symbol": "$p$",
-     "meaning": "probability of one symbol; probability of one of two symbols"
+     "meaning": "probability of one of the two symbols"
     },
     {
-     "symbol": "$n$",
-     "meaning": "number of symbols"
+     "symbol": "$I(m_i)$",
+     "meaning": "information in symbol $m_i$ (bits)"
     }
    ]
   },
@@ -2544,7 +3145,7 @@
    "subtopic": "VSB",
    "type": "derivation",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=36",
    "text": "Explain how the message signal is reconstructed from VSB signal.",
    "repeat_of": "",
    "times": 1,
@@ -2828,7 +3429,7 @@
    "subtopic": "Propagation modes",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=14",
+   "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=13",
    "text": "Discuss the different modes of propagation of EM wave.",
    "repeat_of": "",
    "times": 1,
@@ -3044,7 +3645,7 @@
    "used": [
     {
      "label": "21-22 1(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=14"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2021-22-pack.pdf#page=13"
     }
    ]
   },
@@ -3504,7 +4105,7 @@
     },
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE329-COM/COM-2020-21-pack.pdf#page=36"
     }
    ]
   },
