@@ -2823,7 +2823,7 @@
    "subtopic": "Depletion width",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=73",
+   "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=72",
    "text": "An abrupt silicon pn junction has dopant concentrations of $N_a = 2\\times10^{16}$ cm$^{-3}$ and $N_d = 2\\times10^{15}$ cm$^{-3}$ at $T = 300$ K. Calculate: (i) $V_{bi}$ (ii) $W$ at $V_R = 0$ and $V_R = 8$ V and (iii) the maximum electric field in the space charge region at $V_R = 0$ and $V_R = 8$ V",
    "repeat_of": "",
    "times": 1,
@@ -5244,7 +5244,7 @@
     },
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=73"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=72"
     },
     {
      "label": "18-19 2(d)",
@@ -5296,7 +5296,7 @@
     },
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=73"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=72"
     },
     {
      "label": "18-19 2(d)",
@@ -5404,7 +5404,7 @@
     },
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=73"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=72"
     }
    ]
   },
@@ -5420,7 +5420,7 @@
     },
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=73"
+     "link": "https://nurmdabd.github.io/study-notes/EEE421-SSD/SSD-2019-20-pack.pdf#page=72"
     }
    ]
   },
