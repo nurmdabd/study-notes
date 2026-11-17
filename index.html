@@ -105,8 +105,10 @@ html { scroll-padding-top: 70px; }
 .subject-head h3 { margin: 0; font-size: 0.93rem; font-weight: 600; line-height: 1.3; }
 .pack-section { --strip: #c9771b; margin: 0; padding: 6px 14px 6px 11px; font-size: 0.74rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
   color: var(--text); border-top: 1px solid var(--line); border-left: 3px solid var(--strip); background: color-mix(in srgb, var(--strip) 12%, var(--surface)); }
-.pack-section.s1 { --strip: #1f6fb2; }
-.pack-section.s2 { --strip: #1f9d6b; }
+.pack-section.s1 { --strip: #7a4fc4; }
+.pack-section.s2 { --strip: #1f6fb2; }
+.pack-section.s3 { --strip: #2a8fa3; }
+.pack-section.s4 { --strip: #1f9d6b; }
 .subject-head + .pack-section { border-top: 0; }
 .pack { display: flex; align-items: center; gap: 10px 14px; padding: 8px 14px; min-height: 50px; }
 .pack + .pack { border-top: 1px solid var(--line); }
@@ -550,8 +552,9 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
     history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
   }
 
-  const SECTIONS = ['Question analysis', 'Exam packs', 'Question papers'];
-  const sectionOf = it => (/^exam pack/i.test(it.document) ? 'Exam packs' : /^question paper/i.test(it.document) ? 'Question papers' : 'Question analysis');
+  const SECTIONS = ['Question analysis', 'Formula summary', 'Exam packs', 'Answers packs', 'Question papers'];
+  const sectionOf = it => (/^exam pack/i.test(it.document) ? 'Exam packs' : /^answers pack/i.test(it.document) ? 'Answers packs'
+    : /^question paper/i.test(it.document) ? 'Question papers' : /^formula/i.test(it.document) ? 'Formula summary' : 'Question analysis');
   // the list of one subject's PDFs, the same rows for every subject
   function subjectCard(s, list) {
     const open = S.accepting_orders !== false;

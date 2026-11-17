@@ -13,7 +13,11 @@ its own item with the ID <code>-<session>-question-paper ("Question paper"), lis
 stays hidden on the site until it is ticked on the admin page.
 A subject's question analysis (<subject>/past-papers/analysis/) becomes <short>-question-analysis.pdf, its data
 <short>-question-analysis.json, and one item with the ID <code>-question-analysis, listed last for the subject; its
-"page" opens analysis.html. PDFs left over from an older name are removed. "pages" is the page count of the print copy, which is what gets printed.
+"page" opens analysis.html. A session's answers pack (<session>-answers-pack_share.pdf: the question paper, each
+sub-part's Answer and Final Concise Answer, the formula sheet) becomes <short>-<session>-answers-pack.pdf, item ID
+<code>-<session>-answers-pack ("Answers pack"), right after that session's packs. A subject's formula summary
+(analysis/pdf/<code>-formulas_share.pdf, the analysis built with --formulas-only) becomes <short>-formulas.pdf, item ID
+<code>-formulas ("Formula summary"), after the question analysis. PDFs left over from an older name are removed. "pages" is the page count of the print copy, which is what gets printed.
 A subject folder not yet listed under "subjects" stops the script, so its title is added by hand first.
 Each item's "updated" is when its PDF last changed: now if the share copy's hash differs from the "source" stored in the
 item, otherwise the old value, or for an item without one the file's last commit here.
@@ -125,6 +129,36 @@ for share in sorted(SRC.glob("EEE*/past-papers/*/pdf/*-question-paper_share.pdf"
     last = max((i for i, it in enumerate(items) if it["subject"] == code and it["session"] == session), default=len(items) - 1)
     items.insert(last + 1, item)
 
+# each session's answers pack, right after that session's packs (before its question paper)
+for share in sorted(SRC.glob("EEE*/past-papers/*/pdf/*-answers-pack_share.pdf")):
+    folder = share.parts[-5]
+    m = re.match(r"(\d{4}-\d{2})-answers-pack_share\.pdf$", share.name)
+    if not m:
+        continue
+    session = m.group(1)
+    if folder not in subjects:
+        sys.exit(f"{folder} is not listed under 'subjects' in catalogue.json; add it first.")
+    short, code = folder.split("-", 1)[1], subjects[folder]["code"]
+    printed = share.with_name(f"{session}-answers-pack_print.pdf")
+    dest = SITE / folder / f"{short}-{session}-answers-pack.pdf"
+    dest.parent.mkdir(exist_ok=True)
+    updated, source = publish(share, dest, f"{short} {session} Answers Pack")
+    published.add(dest)
+    item = {
+        "id": f"{code}-{session}-answers-pack",
+        "subject": code,
+        "session": session,
+        "document": "Answers pack",
+        "detail": "Question paper + the answers alone (no Theory) + formula sheet",
+        "pages": len(PdfReader(printed if printed.exists() else share).pages),
+        "file": f"{folder}/{dest.name}",
+        "printable": True,
+        "updated": updated,
+        "source": source,
+    }
+    packs = [i for i, it in enumerate(items) if it["subject"] == code and it["session"] == session and it["document"].startswith("Exam pack")]
+    items.insert(packs[-1] + 1 if packs else len(items), item)
+
 # each subject's question analysis: its share copy, and the data of the interactive page
 for share in sorted(SRC.glob("EEE*/past-papers/analysis/pdf/*-question-analysis_share.pdf")):
     folder = share.parts[-5]
@@ -149,6 +183,31 @@ for share in sorted(SRC.glob("EEE*/past-papers/analysis/pdf/*-question-analysis_
         "updated": updated,
         "source": source,
     })
+
+# each subject's formula summary (the question analysis's formula tables alone), after its question analysis
+for share in sorted(SRC.glob("EEE*/past-papers/analysis/pdf/*-formulas_share.pdf")):
+    folder = share.parts[-5]
+    if folder not in subjects:
+        sys.exit(f"{folder} is not listed under 'subjects' in catalogue.json; add it first.")
+    short, code = folder.split("-", 1)[1], subjects[folder]["code"]
+    dest = SITE / folder / f"{short}-formulas.pdf"
+    updated, source = publish(share, dest, f"{short} Formula Summary")
+    published.add(dest)
+    printed = share.with_name(f"{code}-formulas_print.pdf")
+    item = {
+        "id": f"{code}-formulas",
+        "subject": code,
+        "session": "All papers",
+        "document": "Formula summary",
+        "detail": "Every formula across the papers, by topic, with its symbols",
+        "pages": len(PdfReader(printed if printed.exists() else share).pages),
+        "file": f"{folder}/{dest.name}",
+        "printable": True,
+        "updated": updated,
+        "source": source,
+    }
+    after = [i for i, it in enumerate(items) if it["id"] == f"{code}-question-analysis"]
+    items.insert(after[0] + 1 if after else len(items), item)
 
 for old in SITE.glob("EEE*/*.pdf"):
     if old not in published:

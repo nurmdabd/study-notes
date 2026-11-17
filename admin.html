@@ -63,8 +63,10 @@ input:focus, textarea:focus, select:focus, .btn:focus-visible { outline: 2px sol
 .vis-group { display: flex; flex-direction: column; gap: 2px; }
 .vis-group-name { font-size: 0.72rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--muted); margin-top: 2px;
   padding-left: 6px; border-left: 3px solid #c9771b; }
-.vis-group-name.s1 { border-left-color: #1f6fb2; }
-.vis-group-name.s2 { border-left-color: #1f9d6b; }
+.vis-group-name.s1 { border-left-color: #7a4fc4; }
+.vis-group-name.s2 { border-left-color: #1f6fb2; }
+.vis-group-name.s3 { border-left-color: #2a8fa3; }
+.vis-group-name.s4 { border-left-color: #1f9d6b; }
 .vis-packs .check { margin: 4px 0 0; font-size: 0.88rem; }
 .vis-pack { display: flex; align-items: center; gap: 8px; padding: 2px 0; }
 .vis-pack .check { margin: 0; flex: 1; min-width: 0; }
@@ -265,8 +267,9 @@ input:focus, textarea:focus, select:focus, .btn:focus-visible { outline: 2px sol
   }
 
   // the sections of a subject's page, as on index.html
-  const SECTIONS = ['Question analysis', 'Exam packs', 'Question papers'];
-  const sectionOf = it => (/^exam pack/i.test(it.document) ? 'Exam packs' : /^question paper/i.test(it.document) ? 'Question papers' : 'Question analysis');
+  const SECTIONS = ['Question analysis', 'Formula summary', 'Exam packs', 'Answers packs', 'Question papers'];
+  const sectionOf = it => (/^exam pack/i.test(it.document) ? 'Exam packs' : /^answers pack/i.test(it.document) ? 'Answers packs'
+    : /^question paper/i.test(it.document) ? 'Question papers' : /^formula/i.test(it.document) ? 'Formula summary' : 'Question analysis');
   // papers: newest year first, unless an order was saved; papers not in it (added since) come first
   const newest = (a, b) => b.session.localeCompare(a.session);
   function sortPapers(list, code, itemOrder) {

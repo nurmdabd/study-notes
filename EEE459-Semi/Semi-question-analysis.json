@@ -1521,7 +1521,7 @@
    "subtopic": "Band diagrams",
    "type": "derivation",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=106",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=109",
    "text": "For a GaAs-$Al_xGa_{(1-x)}As$ heterojunction, determine the following: (a) Energy-Band Diagram: (i) before contact (ii) After contact (b) Show that the built-in potential (using hole concentration) $\\displaystyle eV_{bi} = -\\Delta E_v + kT\\ln\\left(\\frac{P_p\\,N_{VN}}{P_N\\,N_{VP}}\\right)$. Given, GaAs is doped p type, $Al_xGa_{(1-x)}As$ is doped N+ type. Assume: x=0.25 & $\\Delta E_c = \\frac{1}{2}\\Delta E_g$. $P_p$ = Hole concentration in P type region, $P_N$ = hole concentration in N type region, $N_{VN}$ and $N_{VP}$ are density of states of electron and hole, respectively. $\\displaystyle Hole~concentration, P = N_V\\exp\\left(\\frac{-(E_F - E_V)}{kT}\\right)$",
    "repeat_of": "2020-21 1(d)",
    "times": 2,
@@ -1856,7 +1856,7 @@
    "subtopic": "Ohmic contacts",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=82",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=83",
    "text": "Sketch the ideal energy band diagram of a metal semiconductor junction in which $\\Phi_m < \\Phi_s$. Explain why this is an ohmic contact.",
    "repeat_of": "",
    "times": 1,
@@ -1969,7 +1969,7 @@
    "subtopic": "Ebers-Moll",
    "type": "derivation",
    "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=88",
    "text": "Draw the equivalent circuit for basic Ebers-Moll model as used in BJT. Also derive the expression of $V_{CE}(sat)$ from this model.",
    "repeat_of": "",
    "times": 1,
@@ -2269,7 +2269,7 @@
    "subtopic": "Channel profiles",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=72",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=73",
    "text": "Draw the channel space charge region profiles of a single gate n-channel JFET for the following operating regions: (where $V_p$, $V_g$, and $V_d$ are pinch-off, gate, and drain voltage respectively) (i) $V_g > V_p$ and $V_d < V_{d,sat}$ (ii) $V_g > V_p$ and $V_d = V_{d,sat}$ (iii) $V_g > V_p$ and $V_d > V_{d,sat}$",
    "repeat_of": "2017-18 6(a)",
    "times": 2,
@@ -2315,7 +2315,7 @@
    "subtopic": "Pinch-off",
    "type": "derivation",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=75",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=77",
    "text": "Derive the formula of internal pinch-off voltage in an n-channel JFET.",
    "repeat_of": "2017-18 6(b)",
    "times": 2,
@@ -2338,7 +2338,7 @@
    "subtopic": "Pinch-off",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=79",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=81",
    "text": "Consider a GaAs n-channel pn JFET at $T = 300~\\text{K}$ with $N_a = 1\\times10^{18}~\\text{cm}^{-3}$, $N_d = 3\\times10^{15}~\\text{cm}^{-3}$, $\\epsilon_s = 13.1$, and $a = 0.70~\\mu\\text{m}$. Determine the forward-bias gate voltage required to open a channel region that is $0.10~\\mu\\text{m}$ thick with zero drain voltage.",
    "repeat_of": "",
    "times": 1,
@@ -2417,7 +2417,7 @@
    "subtopic": "Transconductance",
    "type": "numerical",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=94",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=98",
    "text": "Consider a silicon n-channel JFET at $T = 300~\\text{K}$ with the following parameters: $N_a = 1\\times10^{18}~\\text{cm}^{-3}$, $N_d = 1\\times10^{16}~\\text{cm}^{-3}$, $a = 0.75~\\mu\\text{m}$, $L = 10~\\mu\\text{m}$, $W = 30~\\mu\\text{m}$, and $\\mu_n = 1000~\\text{cm}^2/(\\text{V s})$ (i) Calculate the maximum current in an n-channel JFET. (ii) Determine the maximum transconductance of an n-channel depletion mode JFET biased in the saturation region. $I_{P1} = 0.522~\\text{mA}$, $V_{bi} = 0.814~\\text{V}$, and $V_{po} = 4.35~\\text{V}$.",
    "repeat_of": "",
    "times": 1,
@@ -2486,7 +2486,7 @@
    "subtopic": "Mobility",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=99",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=102",
    "text": "Why is the electron mobility of Si less than GaAs?",
    "repeat_of": "2020-21 1(a)",
    "times": 3,
@@ -2897,7 +2897,7 @@
    "subtopic": "Gunn effect",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=101",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=104",
    "text": "What is Gunn effect?",
    "repeat_of": "2020-21 1(b)",
    "times": 2,
@@ -2943,7 +2943,7 @@
    "subtopic": "Hole bands",
    "type": "derivation",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=103",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=106",
    "text": "Prove that along the [100] and [111] direction in k-space, for Si, the variation of electron energy with respect to wave number is higher for light holes than that of heavy holes.",
    "repeat_of": "2020-21 1(c)",
    "times": 2,
@@ -3080,7 +3080,7 @@
    "subtopic": "Barrier lowering",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=64",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=65",
    "text": "Discuss the following non-ideal effects on barrier height of a metal-semiconductor heterojunction: (i) Image-force-induced lowering (ii) Interface states",
    "repeat_of": "",
    "times": 1,
@@ -3130,7 +3130,7 @@
    "subtopic": "High-level injection",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=90",
+   "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=93",
    "text": "Explain high level injection and current crowding effects in a BJT with necessary figures. How can the problem of current crowding be solved?",
    "repeat_of": "",
    "times": 1,
@@ -3244,7 +3244,7 @@
     },
     {
      "label": "20-21 7(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=103"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=106"
     }
    ]
   },
@@ -3260,7 +3260,7 @@
     },
     {
      "label": "20-21 7(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=103"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=106"
     }
    ]
   },
@@ -3276,7 +3276,7 @@
     },
     {
      "label": "20-21 7(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=103"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=106"
     }
    ]
   },
@@ -3484,7 +3484,7 @@
     },
     {
      "label": "20-21 7(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=99"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=102"
     }
    ]
   },
@@ -3500,7 +3500,7 @@
     },
     {
      "label": "20-21 7(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=101"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=104"
     }
    ]
   },
@@ -3528,7 +3528,7 @@
     },
     {
      "label": "20-21 7(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=101"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=104"
     }
    ]
   },
@@ -4076,7 +4076,7 @@
    "used": [
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=64"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=65"
     }
    ]
   },
@@ -4088,7 +4088,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=82"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=83"
     }
    ]
   },
@@ -4380,7 +4380,7 @@
     },
     {
      "label": "20-21 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=106"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=109"
     }
    ]
   },
@@ -4396,7 +4396,7 @@
     },
     {
      "label": "20-21 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=106"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=109"
     }
    ]
   },
@@ -4412,7 +4412,7 @@
     },
     {
      "label": "20-21 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=106"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=109"
     }
    ]
   },
@@ -4428,7 +4428,7 @@
     },
     {
      "label": "20-21 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=106"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=109"
     }
    ]
   },
@@ -4608,7 +4608,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=88"
     },
     {
      "label": "17-18 4(a)",
@@ -4836,7 +4836,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=88"
     }
    ]
   },
@@ -4848,7 +4848,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=88"
     }
    ]
   },
@@ -4860,7 +4860,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=85"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=88"
     }
    ]
   },
@@ -4988,7 +4988,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=75"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=77"
     },
     {
      "label": "18-19 6(d)",
@@ -5020,7 +5020,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=79"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=81"
     }
    ]
   },
@@ -5032,7 +5032,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=75"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=77"
     }
    ]
   },
@@ -5044,7 +5044,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=75"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=77"
     }
    ]
   },
@@ -5056,7 +5056,7 @@
    "used": [
     {
      "label": "20-21 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=72"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=73"
     }
    ]
   },
@@ -5068,7 +5068,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=94"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=98"
     }
    ]
   },
@@ -5080,7 +5080,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=94"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=98"
     }
    ]
   },
@@ -5092,7 +5092,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=94"
+     "link": "https://nurmdabd.github.io/study-notes/EEE459-Semi/Semi-2020-21-pack.pdf#page=98"
     }
    ]
   }

@@ -155,7 +155,7 @@ function reportFormChoices_(cat, st) {
       (a.session === 'All papers' ? -1 : b.session === 'All papers' ? 1 : b.session.localeCompare(a.session)) ||
       (/Bangla/.test(a.document) ? 1 : 0) - (/Bangla/.test(b.document) ? 1 : 0));
     mine.forEach(it => {
-      const label = it.session === 'All papers' ? name + ' question analysis'
+      const label = it.session === 'All papers' ? name + ' ' + it.document.toLowerCase()
         : name + ' ' + it.session + (/Bangla/.test(it.document) ? ' (Bangla)' : '');
       if (!choices.includes(label)) choices.push(label);
     });

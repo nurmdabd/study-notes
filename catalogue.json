@@ -589,6 +589,18 @@
       "source": "38ab2618cb2b530a"
     },
     {
+      "id": "EEE459-2017-18-answers-pack",
+      "subject": "EEE459",
+      "session": "2017-18",
+      "document": "Answers pack",
+      "detail": "Question paper + the answers alone (no Theory) + formula sheet",
+      "pages": 62,
+      "file": "EEE459-Semi/Semi-2017-18-answers-pack.pdf",
+      "printable": true,
+      "updated": "2026-11-17T12:50+06:00",
+      "source": "69c28fd9597c4dbd"
+    },
+    {
       "id": "EEE459-2017-18-question-paper",
       "subject": "EEE459",
       "session": "2017-18",
@@ -613,6 +625,18 @@
       "source": "3e0d4a99e761eaba"
     },
     {
+      "id": "EEE459-2018-19-answers-pack",
+      "subject": "EEE459",
+      "session": "2018-19",
+      "document": "Answers pack",
+      "detail": "Question paper + the answers alone (no Theory) + formula sheet",
+      "pages": 68,
+      "file": "EEE459-Semi/Semi-2018-19-answers-pack.pdf",
+      "printable": true,
+      "updated": "2026-11-17T12:50+06:00",
+      "source": "85d850ea786d053d"
+    },
+    {
       "id": "EEE459-2018-19-question-paper",
       "subject": "EEE459",
       "session": "2018-19",
@@ -630,11 +654,23 @@
       "session": "2020-21",
       "document": "Exam pack",
       "detail": "Past-paper solution + formula sheet",
-      "pages": 124,
+      "pages": 128,
       "file": "EEE459-Semi/Semi-2020-21-pack.pdf",
       "printable": true,
-      "updated": "2026-11-15T15:06+06:00",
-      "source": "9cb544c76ede5885"
+      "updated": "2026-11-17T12:50+06:00",
+      "source": "257957ea4d1e1743"
+    },
+    {
+      "id": "EEE459-2020-21-answers-pack",
+      "subject": "EEE459",
+      "session": "2020-21",
+      "document": "Answers pack",
+      "detail": "Question paper + the answers alone (no Theory) + formula sheet",
+      "pages": 66,
+      "file": "EEE459-Semi/Semi-2020-21-answers-pack.pdf",
+      "printable": true,
+      "updated": "2026-11-17T12:50+06:00",
+      "source": "8d135fb1a143ecef"
     },
     {
       "id": "EEE459-2020-21-question-paper",
@@ -659,6 +695,18 @@
       "printable": true,
       "updated": "2026-11-15T15:06+06:00",
       "source": "1f7053a274760505"
+    },
+    {
+      "id": "EEE459-2021-22-answers-pack",
+      "subject": "EEE459",
+      "session": "2021-22",
+      "document": "Answers pack",
+      "detail": "Question paper + the answers alone (no Theory) + formula sheet",
+      "pages": 22,
+      "file": "EEE459-Semi/Semi-2021-22-answers-pack.pdf",
+      "printable": true,
+      "updated": "2026-11-17T12:50+06:00",
+      "source": "e413fb82dd13da22"
     },
     {
       "id": "EEE459-2021-22-question-paper",
@@ -844,8 +892,20 @@
       "file": "EEE459-Semi/Semi-question-analysis.pdf",
       "page": "analysis.html?subject=EEE459",
       "printable": true,
-      "updated": "2026-11-15T15:06+06:00",
-      "source": "e8a8721b3d3220f6"
+      "updated": "2026-11-17T12:50+06:00",
+      "source": "1c82c090351f7d6c"
+    },
+    {
+      "id": "EEE459-formulas",
+      "subject": "EEE459",
+      "session": "All papers",
+      "document": "Formula summary",
+      "detail": "Every formula across the papers, by topic, with its symbols",
+      "pages": 18,
+      "file": "EEE459-Semi/Semi-formulas.pdf",
+      "printable": true,
+      "updated": "2026-11-17T12:50+06:00",
+      "source": "fa2f7c92631ca473"
     },
     {
       "id": "EEE475-question-analysis",
