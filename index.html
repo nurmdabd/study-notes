@@ -103,13 +103,18 @@ html { scroll-padding-top: 70px; }
 .subject-head .codes .code { font-size: 0.74rem; }
 .code { font: 600 0.78rem/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--accent); letter-spacing: .02em; }
 .subject-head h3 { margin: 0; font-size: 0.93rem; font-weight: 600; line-height: 1.3; }
-.pack-section { --strip: #c9771b; margin: 0; padding: 6px 14px 6px 11px; font-size: 0.74rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
-  color: var(--text); border-top: 1px solid var(--line); border-left: 3px solid var(--strip); background: color-mix(in srgb, var(--strip) 12%, var(--surface)); }
-.pack-section.s1 { --strip: #7a4fc4; }
-.pack-section.s2 { --strip: #1f6fb2; }
-.pack-section.s3 { --strip: #2a8fa3; }
-.pack-section.s4 { --strip: #1f9d6b; }
-.subject-head + .pack-section { border-top: 0; }
+/* a subject's sections: one rounded box per kind of PDF, its colour strip down the whole left side */
+.pack-groups { display: grid; gap: 8px; padding: 8px; }
+.pack-group { --strip: #c9771b; border: 1px solid color-mix(in srgb, var(--strip) 28%, var(--line)); border-left: 4px solid var(--strip);
+  border-radius: 8px; overflow: hidden; background: var(--surface); }
+.pack-group.s1 { --strip: #7a4fc4; }
+.pack-group.s2 { --strip: #1f6fb2; }
+.pack-group.s3 { --strip: #2a8fa3; }
+.pack-group.s4 { --strip: #1f9d6b; }
+.pack-section { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin: 0; padding: 6px 12px 6px 10px;
+  font-size: 0.74rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--text);
+  background: color-mix(in srgb, var(--strip) 12%, var(--surface)); border-bottom: 1px solid color-mix(in srgb, var(--strip) 20%, var(--line)); }
+.pack-section .count { font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--muted); }
 .pack { display: flex; align-items: center; gap: 10px 14px; padding: 8px 14px; min-height: 50px; }
 .pack + .pack { border-top: 1px solid var(--line); }
 .pack.on { background: var(--accent-soft); }
@@ -572,13 +577,19 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
         old.filter(o => o.title).map(o => '<span>Old title: ' + esc(o.title) + '</span>').join('') +
         '<span>' + sems.map(esc).join(', ') + '</span></div>' : '') + '</div>';
     // the rows, one section per kind of PDF; the admin's paper order holds inside a section
+    const groups = document.createElement('div');
+    groups.className = 'pack-groups';
+    card.appendChild(groups);
     SECTIONS.forEach(name => {
       const part = list.filter(it => sectionOf(it) === name);
       if (!part.length) return;
+      const group = document.createElement('div');
+      group.className = 'pack-group s' + SECTIONS.indexOf(name);
       const head = document.createElement('h4');
-      head.className = 'pack-section s' + SECTIONS.indexOf(name);
-      head.textContent = name;
-      card.appendChild(head);
+      head.className = 'pack-section';
+      head.innerHTML = esc(name) + '<span class="count">' + part.length + (part.length === 1 ? ' PDF' : ' PDFs') + '</span>';
+      group.appendChild(head);
+      groups.appendChild(group);
       part.forEach(it => {
         const inOrder = copiesOf(it.id);
         const prices = showPrices() && it.printable
@@ -624,7 +635,7 @@ footer { border-top: 1px solid var(--line); padding: 14px 0 28px; color: var(--m
           picked.set(k, Math.min(20, (picked.get(k) || 0) + 1));
           renderSubjects(); renderCart();
         });
-        card.appendChild(row);
+        group.appendChild(row);
       });
     });
     return card;
