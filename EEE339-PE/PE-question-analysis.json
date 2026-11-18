@@ -2,6 +2,7 @@
  "subject": "EEE339",
  "title": "Power Electronics",
  "sessions": [
+  "2021-22",
   "2020-21"
  ],
  "topics": [
@@ -9,7 +10,7 @@
    "id": "power",
    "title": "Power computations",
    "book": "Hart Ch. 2",
-   "tier": "Must know",
+   "tier": "Likely",
    "symbols": [
     {
      "symbol": "$I_{rms}$",
@@ -106,6 +107,42 @@
     {
      "symbol": "$I_{CBO1}$, $I_{CBO2}$",
      "meaning": "leakage currents of the two transistors (A)"
+    },
+    {
+     "symbol": "$i$",
+     "meaning": "anode current (A)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time after firing (s)"
+    },
+    {
+     "symbol": "$V_m$",
+     "meaning": "peak supply voltage (V)"
+    },
+    {
+     "symbol": "$\\alpha$",
+     "meaning": "delay angle"
+    },
+    {
+     "symbol": "$R$, $L$",
+     "meaning": "load resistance (Ω) and inductance (H)"
+    },
+    {
+     "symbol": "$t_G$",
+     "meaning": "minimum gate pulse width (s)"
+    },
+    {
+     "symbol": "$t_1$",
+     "meaning": "time for the current to reach $I_H$ (s)"
+    },
+    {
+     "symbol": "$t_d$",
+     "meaning": "delay time (s)"
+    },
+    {
+     "symbol": "$I_H$",
+     "meaning": "holding current (A)"
     }
    ]
   },
@@ -129,7 +166,7 @@
     },
     {
      "symbol": "$\\omega$",
-     "meaning": "angular frequency of the source (rad/s)"
+     "meaning": "angular frequency of the source (rad/s); supply angular frequency (rad/s)"
     },
     {
      "symbol": "$\\theta$",
@@ -137,11 +174,11 @@
     },
     {
      "symbol": "$i$",
-     "meaning": "load current (A)"
+     "meaning": "load current (A); circuit current (A)"
     },
     {
      "symbol": "$V_m$",
-     "meaning": "peak source voltage (V); peak line-to-line voltage (V)"
+     "meaning": "peak source voltage (V); peak line-to-line voltage (V); peak phase voltage (V)"
     },
     {
      "symbol": "$t$",
@@ -149,7 +186,7 @@
     },
     {
      "symbol": "$A$",
-     "meaning": "constant set by $i(\\alpha) = 0$ (A)"
+     "meaning": "constant set by $i(\\alpha) = 0$ (A); constant from $i(\\alpha) = 0$ (A)"
     },
     {
      "symbol": "$\\alpha$",
@@ -202,6 +239,86 @@
     {
      "symbol": "$i_{D1}$, $i_{D4}$",
      "meaning": "currents of the two diodes on phase a (A)"
+    },
+    {
+     "symbol": "$I_a$",
+     "meaning": "ripple-free load current (A)"
+    },
+    {
+     "symbol": "$I_{s1}$",
+     "meaning": "rms fundamental input current (A)"
+    },
+    {
+     "symbol": "$I_s$",
+     "meaning": "rms input current (A)"
+    },
+    {
+     "symbol": "$\\text{HF}$",
+     "meaning": "harmonic factor"
+    },
+    {
+     "symbol": "$\\text{PF}$",
+     "meaning": "input power factor"
+    },
+    {
+     "symbol": "$\\phi_1$",
+     "meaning": "angle of the fundamental current"
+    },
+    {
+     "symbol": "$V_{dc}$",
+     "meaning": "average output voltage (V); dc source in the load (V)"
+    },
+    {
+     "symbol": "$I_A$, $I_R$",
+     "meaning": "average and rms thyristor currents (A)"
+    },
+    {
+     "symbol": "$I_{dc}$, $I_{rms}$",
+     "meaning": "average and rms load currents (A)"
+    },
+    {
+     "symbol": "$\\eta$",
+     "meaning": "rectification efficiency"
+    },
+    {
+     "symbol": "$\\text{TUF}$",
+     "meaning": "transformer utilization factor"
+    },
+    {
+     "symbol": "$V_s$",
+     "meaning": "rms phase voltage (V)"
+    },
+    {
+     "symbol": "$I_s = I_{rms}\\sqrt{4/6}$",
+     "meaning": "rms line current (A)"
+    },
+    {
+     "symbol": "$P_R$",
+     "meaning": "power in the resistor (W)"
+    },
+    {
+     "symbol": "$P_{dc}$",
+     "meaning": "power into the dc source (W)"
+    },
+    {
+     "symbol": "$V_n$, $I_n$",
+     "meaning": "peak harmonic voltage (V) and current (A)"
+    },
+    {
+     "symbol": "$j$",
+     "meaning": "imaginary unit"
+    },
+    {
+     "symbol": "$\\Delta i$",
+     "meaning": "peak-to-peak ripple (A)"
+    },
+    {
+     "symbol": "$I_2$",
+     "meaning": "peak second-harmonic current (A)"
+    },
+    {
+     "symbol": "$I_{D,avg}$, $I_{D,rms}$",
+     "meaning": "average and rms diode currents (A)"
     }
    ]
   },
@@ -210,7 +327,36 @@
    "title": "AC control and cycloconverters",
    "book": "Hart Ch. 5; Rashid Ch. 11",
    "tier": "Must know",
-   "symbols": []
+   "symbols": [
+    {
+     "symbol": "$V_o$",
+     "meaning": "rms output voltage (V)"
+    },
+    {
+     "symbol": "$V_s$",
+     "meaning": "rms input voltage (V)"
+    },
+    {
+     "symbol": "$\\alpha$",
+     "meaning": "delay angle"
+    },
+    {
+     "symbol": "$v_{an,o}$",
+     "meaning": "output phase voltage (V)"
+    },
+    {
+     "symbol": "$v_{an}$",
+     "meaning": "supply phase voltage (V)"
+    },
+    {
+     "symbol": "$v_{ab}$",
+     "meaning": "line voltage (V)"
+    },
+    {
+     "symbol": "$a$, $b$",
+     "meaning": "supply lines conducting"
+    }
+   ]
   },
   {
    "id": "dcdc",
@@ -263,16 +409,20 @@
      "meaning": "load resistance ($\\Omega$)"
     },
     {
+     "symbol": "$V_o$",
+     "meaning": "output voltage (V)"
+    },
+    {
+     "symbol": "$V_s$",
+     "meaning": "input voltage (V); supply voltage (V); dc input (V)"
+    },
+    {
      "symbol": "$I_f$",
      "meaning": "field current (A)"
     },
     {
      "symbol": "$\\delta$",
      "meaning": "chopper duty ratio"
-    },
-    {
-     "symbol": "$V_s$",
-     "meaning": "supply voltage (V)"
     },
     {
      "symbol": "$R_f$",
@@ -301,6 +451,26 @@
     {
      "symbol": "$K_v$",
      "meaning": "motor constant"
+    },
+    {
+     "symbol": "$\\omega_0$",
+     "meaning": "resonant frequency (rad/s)"
+    },
+    {
+     "symbol": "$L_r$, $C_r$",
+     "meaning": "resonant L (H) and C (F)"
+    },
+    {
+     "symbol": "$R_L$",
+     "meaning": "load (Ω)"
+    },
+    {
+     "symbol": "$Q$",
+     "meaning": "quality factor"
+    },
+    {
+     "symbol": "$\\omega_s$",
+     "meaning": "switching frequency (rad/s)"
     }
    ]
   },
@@ -372,7 +542,7 @@
     },
     {
      "symbol": "$k$",
-     "meaning": "number of cells"
+     "meaning": "number of H-bridge cells (2 for five levels)"
     },
     {
      "symbol": "$m_a$",
@@ -550,6 +720,73 @@
    ]
   },
   {
+   "id": "2021-22-1(a)",
+   "label": "21-22 1(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "type": "derivation",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=11",
+   "text": "With a two-transistor model explain the characteristics of a Silicon Controlled Rectifier (SCR).",
+   "repeat_of": "2020-21 2(a)",
+   "times": 2,
+   "asked_in": [
+    "21-22 1(a)",
+    "20-21 2(a)"
+   ],
+   "outline": "Split p-n-p-n into $Q_1$ (p-n-p) and $Q_2$ (n-p-n); $I_{C1} = \\alpha_1I_A + I_{CBO1}$, $I_{C2} = \\alpha_2I_K + I_{CBO2}$; $I_A = I_{C1} + I_{C2}$, $I_K = I_A + I_G$; solve: $I_A = (\\alpha_2I_G + I_{CBO1} + I_{CBO2})/[1 - (\\alpha_1 + \\alpha_2)]$; blocking when $\\alpha_1 + \\alpha_2 \\ll 1$, latching when it reaches 1, holding current, reverse blocking.",
+   "draws": [
+    "Diagram: two-transistor model of the SCR",
+    "Graph: SCR static V-I characteristic"
+   ]
+  },
+  {
+   "id": "2021-22-1(b)",
+   "label": "21-22 1(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=14",
+   "text": "Explain how natural commutation and forced commutation occur, giving one static power semiconductor device example for each.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Commutation = turning a thyristor off. Natural (line): the ac supply reverses and the current falls to zero by itself (SCR in a controlled rectifier). Forced: a capacitor-inductor circuit forces the current to zero and reverse-biases the SCR in a dc circuit (fast SCR in a chopper or inverter).",
+   "draws": [
+    "Diagram: natural and forced commutation"
+   ],
+   "compare": [
+    "Natural vs forced commutation: ac supply reverses the current vs external circuit forces it to zero in dc"
+   ]
+  },
+  {
+   "id": "2021-22-1(c)",
+   "label": "21-22 1(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "type": "numerical",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=15",
+   "text": "The holding current of the thyristors in the single-phase full converter is $I_H = 500~mA$ and the delay time is $t_d = 1.5~\\mu s$. The converter is supplied from a 120 $V$, 60 $Hz$ supply and has a load of $L = 10~mH$ and $R = 10~\\Omega$. The converter is operated with a delay angle of $\\alpha = 30°$. Determine the minimum value of gate pulse width, $t_g$.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Voltage at firing $V_m\\sin\\alpha$; R-L step $i = (V/R)(1 - e^{-tR/L})$; solve $i(t_1) = I_H$; $t_G = t_1 + t_d$.",
+   "answer": "$t_1 = 60.7$ μs; $t_G \\approx 62.2$ μs",
+   "draws": [
+    "Graph: anode current rising to the holding current"
+   ]
+  },
+  {
    "id": "2020-21-2(a)",
    "label": "20-21 2(a)",
    "session": "2020-21",
@@ -561,8 +798,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19",
    "text": "Draw the two transistors model of a thyristor and explain the turn-on condition of a thyristor with equations from this model.",
    "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
+   "times": 2,
+   "asked_in": [
+    "21-22 1(a)",
+    "20-21 2(a)"
+   ],
    "outline": "Split p-n-p-n into $Q_1$ and $Q_2$; $I_C = \\alpha I_E + I_{CBO}$ for each; $I_A = I_{C1} + I_{C2}$ and $I_K = I_A + I_G$; solve for $I_A$; it grows without limit as $\\alpha_1 + \\alpha_2 \\to 1$.",
    "draws": [
     "Diagram: thyristor layers split into two transistors",
@@ -593,6 +833,27 @@
    ]
   },
   {
+   "id": "2021-22-4(b)",
+   "label": "21-22 4(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=35",
+   "text": "For the circuit of Fig. 2, $R = 2~\\Omega$, $L = 20~mH$, and $V_{dc} = 100~V$. The AC source is 120 $V$ $rms$ at 60 $Hz$. Determine (i) an expression for the current in the circuit, (ii) the power absorbed by the resistor, (iii) the power absorbed by the DC source, and (iv) the power supplied by the AC source and the power factor of the circuit.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "$\\alpha = \\sin^{-1}(V_{dc}/V_m)$; $i = (V_m/Z)\\sin(\\omega t - \\theta) - V_{dc}/R + Ae^{-\\omega t/\\omega\\tau}$ with $i(\\alpha) = 0$; $\\beta$ from $i(\\beta) = 0$; $I_{rms}$, $I_o$ by integration; $P_R = I_{rms}^2R$, $P_{dc} = I_oV_{dc}$; pf $= P_{ac}/(V_sI_{rms})$.",
+   "answer": "$i = 21.8\\sin(\\omega t - 1.31) - 50 + 75.3e^{-\\omega t/3.77}$ A, 36.1° to 193°; $P_R$ = 31.7 W; $P_{dc}$ = 225 W; $P_{ac}$ = 257 W; pf = 0.54",
+   "draws": [
+    "Waveform: supply voltage and current of the R-L-E half-wave rectifier"
+   ]
+  },
+  {
    "id": "2020-21-2(b)",
    "label": "20-21 2(b)",
    "session": "2020-21",
@@ -611,6 +872,48 @@
    "answer": "$\\beta = 216.9°$; $I_o = 2.04$ A; $P = 213$ W; $pf = 0.544$",
    "draws": [
     "Waveform: source, output voltage and current of the half-wave controlled rectifier"
+   ]
+  },
+  {
+   "id": "2021-22-2(a)",
+   "label": "21-22 2(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "type": "derivation",
+   "marks": 12.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=19",
+   "text": "A single-phase bridge rectifier that supplies a very high inductive load such as a DC motor. The turns ratio of the transformer are unity. The load is such that the motor draws a ripple-free armature current of $I_a$. Determine (i) the HF of input current and (ii) the input PF of the rectifier.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "Input current is a ±$I_a$ square wave; $I_s = I_a$; Fourier: $b_n = 4I_a/(n\\pi)$ for odd $n$; $I_{s1} = 4I_a/(\\pi\\sqrt2)$; HF $= \\sqrt{(I_s/I_{s1})^2 - 1}$; fundamental in phase, DF = 1; PF $= I_{s1}/I_s$.",
+   "method": "HF from the rms of the square wave and of its fundamental; PF = DF × distortion factor.",
+   "answer": "HF = 48.34 %; PF = 0.90",
+   "draws": [
+    "Waveform: square-wave input current with its fundamental"
+   ]
+  },
+  {
+   "id": "2021-22-4(c)",
+   "label": "21-22 4(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "type": "numerical",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=37",
+   "text": "The circuit of Fig. 3 has an AC source with $V_m = 100~V$ at 60 $Hz$ and a series $RL$ load with $R = 10~\\Omega$ and $L = 10~mH$. (i) Determine the average current in the load, (ii) Estimate the peak-to-peak variation in load current based on the first AC term in the Fourier series, (iii) Determine the power absorbed by the load and the power factor of the circuit and (iv) Determine the average and $rms$ currents in the diodes.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "$V_o = 2V_m/\\pi$, $I_o = V_o/R$; $V_2 = 4V_m/(3\\pi)$, $Z_2 = |R + j2\\omega L|$, $\\Delta i \\approx 2I_2$; $I_{rms}$ from the terms; $P = I_{rms}^2R$; pf; diode $I_o/2$ and $I_{rms}/\\sqrt2$.",
+   "answer": "$I_o$ = 6.37 A; Δi ≈ 6.78 A; P = 464 W, pf = 0.96; diode 3.18 A avg, 4.82 A rms",
+   "draws": [
+    "Waveform: rectified output voltage and load current"
    ]
   },
   {
@@ -654,6 +957,47 @@
    "draws": [
     "Circuit: diode bridge with RL load",
     "Waveform: output voltage and current, diode and source currents, aligned"
+   ]
+  },
+  {
+   "id": "2021-22-2(b)",
+   "label": "21-22 2(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "type": "derivation",
+   "marks": 13.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=21",
+   "text": "For a three-phase full-bridge controlled rectifier derive an expression for the DC output voltage as a function of the firing angle $\\alpha$ by explaining its operation. (Draw the waveforms of gate pulses, input phase currents and output voltage.)",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "Phase voltages; $v_{ab} = \\sqrt3V_m\\sin(\\omega t + 30°)$; $T_1$ fires at $30° + \\alpha$, pairs change every 60°, each conducts 120°; average one segment $\\frac3\\pi\\int_{\\pi/6+\\alpha}^{\\pi/2+\\alpha}$; difference of cosines; $V_{dc} = (3\\sqrt3V_m/\\pi)\\cos\\alpha$.",
+   "draws": [
+    "Diagram: three-phase full converter",
+    "Waveform: gate pulses, output voltage and phase currents of the three-phase full converter"
+   ]
+  },
+  {
+   "id": "2021-22-3(c)",
+   "label": "21-22 3(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "type": "numerical",
+   "marks": 12.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=28",
+   "text": "A three-phase full-wave converter in Fig. 1 is operated from a three-phase Y-connected 208 $V$, 60 $Hz$ supply and the load resistance is $R = 10~\\Omega$. If it is required to obtain an average output voltage of 50% of the maximum possible output voltage, calculate (i) the delay angle $\\alpha$, (ii) the rms and average output currents, (iii) the average and rms thyristor currents, (iv) the rectification efficiency, (v) the TUF, and (vi) the input PF.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "$V_m = \\sqrt2(208/\\sqrt3)$; $V_{dm} = 3\\sqrt3V_m/\\pi$; $\\cos\\alpha = 0.5$; $V_{rms}$ from Rashid Eq. 10.17; $I = V/R$; thyristor $I_{dc}/3$ and $I_{rms}\\sqrt{2/6}$; line current $I_{rms}\\sqrt{4/6}$; η, TUF, PF.",
+   "answer": "α = 60°; $I_{dc}$ = 14.05 A, $I_{rms}$ = 15.93 A; thyristor 4.68 A avg, 9.20 A rms; η = 77.7 %; TUF = 0.421; PF = 0.542",
+   "draws": [
+    "Waveform: output voltage of the full converter at α = 60°"
    ]
   },
   {
@@ -875,6 +1219,55 @@
    ]
   },
   {
+   "id": "2021-22-5(a)",
+   "label": "21-22 5(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "dcdc",
+   "subtopic": "SEPIC and Cuk",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=41",
+   "text": "What makes the SEPIC converter superior over buck-boost converter? Explain.",
+   "repeat_of": "2020-21 4(d)",
+   "times": 2,
+   "asked_in": [
+    "21-22 5(a)",
+    "20-21 4(d)"
+   ],
+   "outline": "",
+   "points": "SEPIC: non-inverted output $V_sD/(1 - D)$, continuous input current through $L_1$, ground-referenced switch, coupling capacitor gives dc isolation and short-circuit protection; the buck-boost inverts, draws pulsed input current, needs a floating switch.",
+   "draws": [
+    "Diagram: SEPIC converter"
+   ],
+   "compare": [
+    "SEPIC vs buck-boost: positive output, smooth input current, grounded switch vs inverted output, pulsed input, floating switch"
+   ]
+  },
+  {
+   "id": "2021-22-6(b)",
+   "label": "21-22 6(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "dcdc",
+   "subtopic": "SEPIC and Cuk",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=51",
+   "text": "What is the advantage of Cuk regulator over Buck-Boost regulator?",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Ćuk: inductors at input and output give continuous input and output currents, low ripple, small filters, low EMI; capacitive energy transfer; grounded switch; coupled inductors can give near-zero ripple. The buck-boost has pulsed input and output currents.",
+   "draws": [
+    "Diagram: Ćuk converter"
+   ],
+   "compare": [
+    "Ćuk vs buck-boost: continuous input and output currents vs pulsed input and output currents"
+   ]
+  },
+  {
    "id": "2020-21-4(d)",
    "label": "20-21 4(d)",
    "session": "2020-21",
@@ -886,8 +1279,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=44",
    "text": "Differentiate between SEPIC converter and $\\acute{\\mathrm{C}}$uk converter.",
    "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
+   "times": 2,
+   "asked_in": [
+    "21-22 5(a)",
+    "20-21 4(d)"
+   ],
    "outline": "",
    "points": "Both have two inductors and a coupling capacitor and give an output above or below the input. SEPIC: positive output, pulsating output current, $V_{C1} = V_s$. Ćuk: inverted output, continuous input and output currents, energy moved through $C_1$, $V_{C1} = V_s + |V_o|$.",
    "draws": [
@@ -895,6 +1291,29 @@
    ],
    "compare": [
     "SEPIC vs Ćuk converter: positive output, pulsating output current vs inverted output, continuous output current"
+   ]
+  },
+  {
+   "id": "2021-22-6(d)",
+   "label": "21-22 6(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "apps",
+   "subtopic": "Solar PV",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=55",
+   "text": "Draw the schematic diagram of stand-alone solar PV system, describe the function of main components used in it.",
+   "repeat_of": "2020-21 5(a)",
+   "times": 2,
+   "asked_in": [
+    "21-22 6(d)",
+    "20-21 5(a)"
+   ],
+   "outline": "",
+   "points": "PV array → dc-dc converter with MPPT (charge controller) → battery bank → dc loads, and inverter → ac loads. Array makes dc; MPPT extracts maximum power and controls charging; battery stores energy for night; inverter supplies 50 Hz ac; protection devices.",
+   "draws": [
+    "Block diagram: stand-alone solar PV system"
    ]
   },
   {
@@ -909,13 +1328,38 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=46",
    "text": "Briefly explain the types of switch mode DC-DC converters used in a stand-alone solar PV system.",
    "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
+   "times": 2,
+   "asked_in": [
+    "21-22 6(d)",
+    "20-21 5(a)"
+   ],
    "outline": "",
    "points": "The dc-dc converter sits between the array and the battery and sets the array voltage for maximum power point tracking. Buck: array voltage above the battery. Boost: below it. Buck-boost, SEPIC or Ćuk: either way. Each adjusts its duty ratio.",
    "draws": [
     "Block diagram: stand-alone PV system",
     "Graph: panel current and power against voltage"
+   ]
+  },
+  {
+   "id": "2021-22-5(c)",
+   "label": "21-22 5(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "inverters",
+   "subtopic": "Multilevel",
+   "type": "design",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=44",
+   "text": "Design a multilevel inverter circuit for a five level operation and explain the operation of the circuit.",
+   "repeat_of": "2020-21 5(b)",
+   "times": 2,
+   "asked_in": [
+    "21-22 5(c)",
+    "20-21 5(b)"
+   ],
+   "outline": "Levels $2k + 1 = 5$ gives $k = 2$ cascaded H-bridges with separate dc sources; each cell gives $+V_{dc}$, 0, $-V_{dc}$; switching table for 0, ±$V_{dc}$, ±$2V_{dc}$; staircase output; switching angles chosen to cut harmonics.",
+   "draws": [
+    "Diagram: five-level cascaded H-bridge inverter and staircase output"
    ]
   },
   {
@@ -930,8 +1374,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=47",
    "text": "Draw the circuit of a three-level cascade multi source inverter. Why pattern swapping is important in multi-source inverter circuit?",
    "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
+   "times": 2,
+   "asked_in": [
+    "21-22 5(c)",
+    "20-21 5(b)"
+   ],
    "outline": "",
    "points": "Three H-bridges, each with its own dc source, outputs in series, giving levels $0, \\pm V, \\pm2V, \\pm3V$; each cell switched at its own angle. Pattern swapping rotates the wide and narrow pulses among the cells each half cycle, so every source delivers the same average power and discharges equally.",
    "draws": [
@@ -1006,6 +1453,30 @@
    ]
   },
   {
+   "id": "2021-22-4(a)",
+   "label": "21-22 4(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "acvc",
+   "subtopic": "Cycloconverters",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=33",
+   "text": "Explain the working principle of a single-phase cycloconverter.",
+   "repeat_of": "2020-21 6(b)",
+   "times": 2,
+   "asked_in": [
+    "21-22 4(a)",
+    "20-21 6(b)"
+   ],
+   "outline": "",
+   "points": "Two phase-controlled converters P and N in antiparallel; P supplies the positive half and N the negative half of the low-frequency output; delay angle varied cycle by cycle so the output follows a slower sine; $f_o = f_s/k$; the converters never conduct together.",
+   "draws": [
+    "Block diagram: single-phase cycloconverter",
+    "Waveform: cycloconverter input and output"
+   ]
+  },
+  {
    "id": "2020-21-6(b)",
    "label": "20-21 6(b)",
    "session": "2020-21",
@@ -1017,8 +1488,11 @@
    "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=58",
    "text": "What is cyclo-converter? Mention its applications.",
    "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
+   "times": 2,
+   "asked_in": [
+    "21-22 4(a)",
+    "20-21 6(b)"
+   ],
    "outline": "",
    "points": "A direct ac-to-ac frequency changer with no dc link: two phase-controlled converters (P and N) in anti-parallel, each delay angle varied so the output follows a low-frequency sine. Uses: large low-speed motor drives (mills, kilns), ship propulsion, VSCF aircraft power, traction.",
    "draws": [
@@ -1045,6 +1519,26 @@
    "draws": [
     "Diagram: TRIAC layers and symbol",
     "Diagram: power BJT vertical structure"
+   ]
+  },
+  {
+   "id": "2021-22-1(d)",
+   "label": "21-22 1(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "Comparison",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=17",
+   "text": "Explain why BJT, SCR cannot be operated in parallel, whereas MOSFET's can operate in parallel.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "BJT and SCR on-state drops fall as they heat (negative temperature coefficient): a hotter device hogs current and runs away. MOSFET $R_{DS(on)}$ rises with temperature (positive coefficient): current shifts to cooler devices, so they share; high input impedance eases driving.",
+   "compare": [
+    "BJT or SCR vs MOSFET in parallel: negative temperature coefficient, current hogging vs positive coefficient, automatic sharing"
    ]
   },
   {
@@ -1110,6 +1604,130 @@
    "draws": [
     "Circuit: field chopper control of a separately excited motor",
     "Graph: speed against field current"
+   ]
+  },
+  {
+   "id": "2021-22-3(a)",
+   "label": "21-22 3(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "supplies",
+   "subtopic": "Switching regulators",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=25",
+   "text": "Distinguish between DC-DC converters and switching-mode regulators.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "A dc-dc converter changes a dc voltage level by switching, output set by the duty ratio (open loop). A switching-mode regulator is a dc-dc converter plus an output filter and a feedback PWM loop that holds the output constant against input and load changes.",
+   "compare": [
+    "DC-DC converter vs switching-mode regulator: open loop, output varies vs closed loop, regulated output"
+   ]
+  },
+  {
+   "id": "2021-22-3(b)",
+   "label": "21-22 3(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "devices",
+   "subtopic": "Secondary breakdown",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=27",
+   "text": "What is secondary breakdown? Explain why secondary breakdown occur in BJT and Thyristors but not in MOSFETs.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Secondary breakdown: current crowds into a hot spot, local thermal runaway destroys the device at high voltage and current within its average rating. In BJTs and thyristors (bipolar, negative temperature coefficient, current crowding at turn-off); not in MOSFETs ($R_{DS(on)}$ rises with temperature, majority carriers, no crowding).",
+   "draws": [
+    "Graph: safe operating area of a BJT and a MOSFET"
+   ]
+  },
+  {
+   "id": "2021-22-5(b)",
+   "label": "21-22 5(b)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "dcdc",
+   "subtopic": "Buck-boost",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=42",
+   "text": "The buck-boost circuit has these parameters: $V_s = 24~V$, $D = 0.4$, $R = 5~\\Omega$, $L = 20~\\mu H$, $C = 80~\\mu F$, $f = 100~kHz$. Determine the output voltage and average inductor current.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "$V_o = -V_sD/(1 - D)$; $I_L = V_sD/[R(1 - D)^2]$; check continuous: $\\Delta i_L = V_sD/(Lf)$, $I_{min} > 0$.",
+   "answer": "$V_o$ = −16 V; $I_L$ = 5.33 A",
+   "draws": [
+    "Diagram: buck-boost converter and inductor current"
+   ]
+  },
+  {
+   "id": "2021-22-5(d)",
+   "label": "21-22 5(d)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "acvc",
+   "subtopic": "AC voltage controllers",
+   "type": "derivation",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=46",
+   "text": "Describe the operation of a single-phase voltage controller of Fig. 4 with input voltage, output voltage, input current, output current for $\\alpha = 90°$. Also, deduce an expression for output $rms$ voltage. And find its value when input voltage is 120 $V$ ($rms$).",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "$v_o = v_s$ from α to π and π + α to 2π; $V_o^2 = \\frac{2}{2\\pi}\\int_\\alpha^\\pi 2V_s^2\\sin^2\\omega t$; $\\sin^2 = \\frac12(1 - \\cos2x)$; $V_o = V_s[(\\pi - \\alpha + \\frac12\\sin2\\alpha)/\\pi]^{1/2}$; at 90°, 120 V gives 84.85 V.",
+   "method": "Put α = 90° and $V_s$ = 120 V in the rms formula.",
+   "answer": "$V_o$ = 84.85 V",
+   "draws": [
+    "Waveform: supply, gate pulses, output voltage and current at α = 90°"
+   ]
+  },
+  {
+   "id": "2021-22-6(a)",
+   "label": "21-22 6(a)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "acvc",
+   "subtopic": "AC voltage controllers",
+   "type": "diagram",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=49",
+   "text": "For a three-phase bidirectional AC voltage controller, draw the circuit diagram. Also draw the waveforms for input phase voltages, Thyristor gate pulses, and output phase voltage (for $\\alpha = 60°$).",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Antiparallel pairs $T_1/T_4$, $T_3/T_6$, $T_5/T_2$ in the three lines, Y load without neutral, fired every 60°; at α = 60° two thyristors conduct at a time, so $v_{an,o}$ is pieces of $v_{ab}/2$ and $v_{ac}/2$.",
+   "draws": [
+    "Diagram: three-phase bidirectional ac voltage controller with Y load",
+    "Waveform: phase voltages, gate pulses and output phase voltage at α = 60°"
+   ]
+  },
+  {
+   "id": "2021-22-6(c)",
+   "label": "21-22 6(c)",
+   "session": "2021-22",
+   "term_test": false,
+   "topic": "dcdc",
+   "subtopic": "Resonant",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=52",
+   "text": "A parallel resonant DC-DC converter has $V_S = 100~V$, $L_r = 8~\\mu H$, $C_r = 0.32~\\mu F$, $R_L = 10~\\Omega$ and $f_s = 120~kHz$. Determine the output voltage of the converter. Assume the output filter components $L_o$ and $C_o$ produce a ripple-free output current and voltage.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "$\\omega_0 = 1/\\sqrt{L_rC_r}$, $Q = R_L/(\\omega_0L_r)$; $X_L = \\omega_sL_r$, $X_C = 1/(\\omega_sC_r)$, $R_e = (\\pi^2/8)R_L$; $V_o = 4V_s/(\\pi^2\\sqrt{(1 - X_L/X_C)^2 + (X_L/R_e)^2})$.",
+   "answer": "$V_o$ ≈ 60.7 V",
+   "draws": [
+    "Diagram: parallel resonant dc-dc converter"
    ]
   }
  ],
@@ -1265,6 +1883,10 @@
    "eq": "$I_A = \\dfrac{\\alpha_2I_G + I_{CBO1} + I_{CBO2}}{1 - (\\alpha_1 + \\alpha_2)}$",
    "used": [
     {
+     "label": "21-22 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=11"
+    },
+    {
      "label": "20-21 2(a)",
      "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19"
     }
@@ -1279,6 +1901,30 @@
     {
      "label": "20-21 2(a)",
      "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "title": "Current after firing",
+   "eq": "$i(t) = \\dfrac{V_m\\sin\\alpha}{R}\\left(1 - e^{-tR/L}\\right)$",
+   "used": [
+    {
+     "label": "21-22 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=15"
+    }
+   ]
+  },
+  {
+   "topic": "devices",
+   "subtopic": "Thyristors",
+   "title": "**Gate pulse width**",
+   "eq": "$t_G = t_1 + t_d$, $\\;t_1 = -\\dfrac{L}{R}\\ln\\!\\left(1 - \\dfrac{I_HR}{V_m\\sin\\alpha}\\right)$",
+   "used": [
+    {
+     "label": "21-22 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=15"
     }
    ]
   },
@@ -1499,6 +2145,198 @@
    ]
   },
   {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "Square-wave input current",
+   "eq": "$I_{s1} = \\dfrac{4I_a}{\\pi\\sqrt2} = 0.9003\\,I_a$, $\\;I_s = I_a$",
+   "used": [
+    {
+     "label": "21-22 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "**Harmonic factor**",
+   "eq": "$\\text{HF} = \\sqrt{(I_s/I_{s1})^2 - 1}$",
+   "used": [
+    {
+     "label": "21-22 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "**Input power factor**",
+   "eq": "$\\text{PF} = \\dfrac{I_{s1}}{I_s}\\cos\\phi_1$",
+   "used": [
+    {
+     "label": "21-22 2(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=19"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "**Three-phase full converter**",
+   "eq": "$V_{dc} = \\dfrac{3\\sqrt3V_m}{\\pi}\\cos\\alpha$",
+   "used": [
+    {
+     "label": "21-22 2(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=21"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "RMS output (continuous)",
+   "eq": "$V_{rms} = \\sqrt3V_m\\left[\\tfrac12 + \\tfrac{3\\sqrt3}{4\\pi}\\cos2\\alpha\\right]^{1/2}$",
+   "used": [
+    {
+     "label": "21-22 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "Thyristor currents",
+   "eq": "$I_A = \\dfrac{I_{dc}}{3}$, $\\;I_R = I_{rms}\\sqrt{\\tfrac26}$",
+   "used": [
+    {
+     "label": "21-22 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Three-phase",
+   "title": "Efficiency, TUF, PF",
+   "eq": "$\\eta = \\dfrac{V_{dc}I_{dc}}{V_{rms}I_{rms}}$, $\\;\\text{TUF} = \\dfrac{V_{dc}I_{dc}}{3V_sI_s}$, $\\;\\text{PF} = \\dfrac{I_{rms}^2R}{3V_sI_s}$",
+   "used": [
+    {
+     "label": "21-22 3(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=28"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "Turn-on angle with dc source",
+   "eq": "$\\alpha = \\sin^{-1}\\dfrac{V_{dc}}{V_m}$",
+   "used": [
+    {
+     "label": "21-22 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "**Current, R-L-E load**",
+   "eq": "$i = \\dfrac{V_m}{Z}\\sin(\\omega t - \\theta) - \\dfrac{V_{dc}}{R} + Ae^{-\\omega t/\\omega\\tau}$",
+   "used": [
+    {
+     "label": "21-22 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Half-wave",
+   "title": "Powers",
+   "eq": "$P_R = I_{rms}^2R$, $\\;P_{dc} = I_oV_{dc}$, $\\;\\text{pf} = \\dfrac{P_R + P_{dc}}{V_sI_{rms}}$",
+   "used": [
+    {
+     "label": "21-22 4(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "Bridge, dc term",
+   "eq": "$V_o = \\dfrac{2V_m}{\\pi}$, $\\;I_o = \\dfrac{V_o}{R}$",
+   "used": [
+    {
+     "label": "21-22 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "**Bridge harmonics**",
+   "eq": "$V_n = \\dfrac{2V_m}{\\pi}\\left(\\dfrac{1}{n - 1} - \\dfrac{1}{n + 1}\\right)$, $\\;I_n = \\dfrac{V_n}{|R + jn\\omega L|}$",
+   "used": [
+    {
+     "label": "21-22 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "Ripple, rms",
+   "eq": "$\\Delta i \\approx 2I_2$, $\\;I_{rms} = \\sqrt{I_o^2 + \\sum (I_n/\\sqrt2)^2}$",
+   "used": [
+    {
+     "label": "21-22 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "rectifiers",
+   "subtopic": "Full-wave",
+   "title": "Diode currents",
+   "eq": "$I_{D,avg} = \\dfrac{I_o}{2}$, $\\;I_{D,rms} = \\dfrac{I_{rms}}{\\sqrt2}$",
+   "used": [
+    {
+     "label": "21-22 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=37"
+    }
+   ]
+  },
+  {
+   "topic": "acvc",
+   "subtopic": "AC voltage controllers",
+   "title": "**Single-phase ac controller**",
+   "eq": "$V_o = V_s\\left[\\dfrac1\\pi\\left(\\pi - \\alpha + \\dfrac{\\sin2\\alpha}{2}\\right)\\right]^{1/2}$",
+   "used": [
+    {
+     "label": "21-22 5(d)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=46"
+    }
+   ]
+  },
+  {
+   "topic": "acvc",
+   "subtopic": "AC voltage controllers",
+   "title": "Three-phase controller output",
+   "eq": "$v_{an,o} = v_{an}$ (3 on), $\\tfrac12v_{ab}$ ($a$, $b$ on), 0 ($a$ off)",
+   "used": [
+    {
+     "label": "21-22 6(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=49"
+    }
+   ]
+  },
+  {
    "topic": "dcdc",
    "subtopic": "Buck",
    "title": "**Buck output**",
@@ -1637,6 +2475,10 @@
    "eq": "$V_o = -V_s\\dfrac{D}{1 - D}$",
    "used": [
     {
+     "label": "21-22 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=42"
+    },
+    {
      "label": "20-21 4(d)",
      "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=44"
     }
@@ -1675,6 +2517,54 @@
     {
      "label": "20-21 8(c)",
      "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=76"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Buck-boost",
+   "title": "**Inductor current**",
+   "eq": "$I_L = \\dfrac{V_sD}{R(1 - D)^2}$, $\\;\\Delta i_L = \\dfrac{V_sD}{Lf}$",
+   "used": [
+    {
+     "label": "21-22 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=42"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "SEPIC and Cuk",
+   "title": "SEPIC, Ćuk output",
+   "eq": "$V_o = \\pm V_s\\dfrac{D}{1 - D}$",
+   "used": [
+    {
+     "label": "21-22 5(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=41"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Resonant",
+   "title": "Resonant frequency, Q",
+   "eq": "$\\omega_0 = \\dfrac{1}{\\sqrt{L_rC_r}}$, $\\;Q = \\dfrac{R_L}{\\omega_0L_r}$",
+   "used": [
+    {
+     "label": "21-22 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=52"
+    }
+   ]
+  },
+  {
+   "topic": "dcdc",
+   "subtopic": "Resonant",
+   "title": "**Parallel resonant output**",
+   "eq": "$V_o = \\dfrac{4V_s}{\\pi^2\\sqrt{(1 - X_L/X_C)^2 + (X_L/R_e)^2}}$",
+   "used": [
+    {
+     "label": "21-22 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=52"
     }
    ]
   },
@@ -1819,6 +2709,18 @@
     {
      "label": "20-21 6(a)",
      "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=55"
+    }
+   ]
+  },
+  {
+   "topic": "inverters",
+   "subtopic": "Multilevel",
+   "title": "Cascaded H-bridge levels",
+   "eq": "levels $= 2k + 1$",
+   "used": [
+    {
+     "label": "21-22 5(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2021-22-pack.pdf#page=44"
     }
    ]
   }
