@@ -481,6 +481,30 @@
       "source": "fc811ceb357845be"
     },
     {
+      "id": "EEE443-2018-19-pack",
+      "subject": "EEE443",
+      "session": "2018-19",
+      "document": "Exam pack",
+      "detail": "Past-paper solution + formula sheet",
+      "pages": 72,
+      "file": "EEE443-PPE/PPE-2018-19-pack.pdf",
+      "printable": true,
+      "updated": "2026-11-19T03:19+06:00",
+      "source": "947fb479d9158424"
+    },
+    {
+      "id": "EEE443-2018-19-question-paper",
+      "subject": "EEE443",
+      "session": "2018-19",
+      "document": "Question paper",
+      "detail": "The paper alone, without solutions",
+      "pages": 3,
+      "file": "EEE443-PPE/PPE-2018-19-question-paper.pdf",
+      "printable": true,
+      "updated": "2026-11-19T03:19+06:00",
+      "source": "2792ba26c690c553"
+    },
+    {
       "id": "EEE443-2019-20-pack",
       "subject": "EEE443",
       "session": "2019-20",
@@ -886,12 +910,12 @@
       "session": "All papers",
       "document": "Question analysis",
       "detail": "Topics, marks and formulas across the papers",
-      "pages": 24,
+      "pages": 30,
       "file": "EEE443-PPE/PPE-question-analysis.pdf",
       "page": "analysis.html?subject=EEE443",
       "printable": true,
-      "updated": "2026-11-19T02:56+06:00",
-      "source": "a041571a7839f777"
+      "updated": "2026-11-19T03:19+06:00",
+      "source": "5a99e8eed80b7857"
     },
     {
       "id": "EEE455-question-analysis",
