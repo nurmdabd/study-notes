@@ -35,8 +35,8 @@
      "meaning": "conduction-band edge (J)"
     },
     {
-     "symbol": "$E_i$",
-     "meaning": "energy read from the E–k diagram at point $i$ (J); discrete levels of the dot (J)"
+     "symbol": "$E_i$, $E_{i+1}$, $E_{i-1}$",
+     "meaning": "energies read from the E–k diagram at points $i$, $i+1$, $i-1$ (J)"
     },
     {
      "symbol": "$\\Delta k$",
@@ -59,8 +59,8 @@
      "meaning": "nearest-neighbour (bond) distance (Å); number of free directions"
     },
     {
-     "symbol": "$m_{hh}$, $m_{lh}$",
-     "meaning": "heavy- and light-hole masses (kg)"
+     "symbol": "$m_{hh,lh}$",
+     "meaning": "heavy-hole mass (upper sign) and light-hole mass (lower sign) (kg)"
     },
     {
      "symbol": "$m_0$",
@@ -129,6 +129,10 @@
     {
      "symbol": "$D_{0D}$",
      "meaning": "states per unit energy of one dot (J$^{-1}$)"
+    },
+    {
+     "symbol": "$E_i$",
+     "meaning": "discrete levels of the dot (J)"
     },
     {
      "symbol": "$\\delta$",
@@ -240,7 +244,7 @@
     },
     {
      "symbol": "$x$",
-     "meaning": "P fraction in GaAs$_{1-x}$P$_x$; mole fraction of AC in $A_xB_{1-x}C$"
+     "meaning": "P fraction in GaAs$_{1-x}$P$_x$; mole fraction of AC in the alloy; mole fraction of AC in A$_x$B$_{1-x}$C (A, B: group III, C: group V)"
     },
     {
      "symbol": "$a$",
@@ -3660,7 +3664,7 @@
    "topic": "alloys",
    "subtopic": "Quaternary alloys",
    "title": "**Vegard's law, ternary**",
-   "eq": "$a(A_xB_{1-x}C) = x\\,a_{AC} + (1 - x)\\,a_{BC}$",
+   "eq": "$a(\\text{A}_x\\text{B}_{1-x}\\text{C}) = x\\,a_{AC} + (1 - x)\\,a_{BC}$",
    "used": [
     {
      "label": "20-21 2(d)",

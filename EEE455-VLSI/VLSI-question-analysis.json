@@ -1588,7 +1588,7 @@
    "subtopic": "Static gates",
    "type": "design",
    "marks": 0.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=39",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=40",
    "text": "You have to design a car alarm system in which the alarm will ring (Y= 1) if anyone of the following condition is satisfied. (i) The key is in (K= 1), The Seat belt is fastened (B=1) and the door is open (D=0) or (ii) The key is in, Door is closed and Seat belt is not fastened.",
    "repeat_of": "",
    "times": 1,
@@ -1740,7 +1740,7 @@
    "subtopic": "Dynamic power",
    "type": "derivation",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=46",
    "text": "Show that the dynamic power dissipation of a CMOS inverter varies directly with square of the power supply voltage whereas the delay of the circuit varies inversely with the power supply voltage.",
    "repeat_of": "",
    "times": 1,
@@ -1795,7 +1795,7 @@
    "subtopic": "Stick diagrams",
    "type": "diagram",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=19",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=20",
    "text": "Draw the schematic and stick diagram of the circuit implementing the logic $Y = \\overline{(A + B + C) \\cdot D}$",
    "repeat_of": "",
    "times": 1,
@@ -1881,7 +1881,7 @@
    "subtopic": "Setup and hold",
    "type": "numerical",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=52",
    "text": "In the following circuit of Figure 4(a), determine whether there is any set up or hold time violation.",
    "repeat_of": "",
    "times": 1,
@@ -2044,7 +2044,7 @@
    "subtopic": "PLA",
    "type": "diagram",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=75",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=77",
    "text": "Sketch a dot diagram for a 2-input XOR using a PLA.",
    "repeat_of": "",
    "times": 1,
@@ -2111,7 +2111,7 @@
    "subtopic": "Lithography",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=65",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=67",
    "text": "Explain the following: (i) positive mask, (ii) negative mask, (iii) positive photoresist and (iv) negative photoresist.",
    "repeat_of": "",
    "times": 1,
@@ -2134,7 +2134,7 @@
    "subtopic": "Lithography",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=66",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=68",
    "text": "Describe the process sequence for patterning SiO$_2$ as illustrated in the figure 5(d).",
    "repeat_of": "",
    "times": 1,
@@ -2482,7 +2482,7 @@
    "subtopic": "SRAM",
    "type": "diagram",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=59",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=61",
    "text": "(i) Show the circuit diagram of a 2 x 2 SRAM array which uses 6-transistor memory cell as basic storage cell. Clearly show the row select, column select, pre-charge and sense signal in your circuit. (ii) Explain how the READ and WRITE operation are performed showing the second row and first column cell as an example. (iii) Explain how sense amplifier reduces the READ time of the cell.",
    "repeat_of": "",
    "times": 1,
@@ -2529,7 +2529,7 @@
    "subtopic": "ROM",
    "type": "diagram",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=68",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=69",
    "text": "Design and implement a pseudo-nMOS ROM to store the data shown in Figure 6.1. Also draw the dot diagram representation.",
    "repeat_of": "",
    "times": 1,
@@ -2571,7 +2571,7 @@
    "subtopic": "Pseudo-nMOS",
    "type": "numerical",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=16",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=17",
    "text": "A pseudo NMOS inverter is designed such that the output voltage becomes 0.25 V when the input voltage is 5 V. The following data are given: $\\mu_n C_{ox}$ = 120 $\\mu$A/V$^2$, $\\mu_p C_{ox}$ = 50 $\\mu$A/V$^2$, $V_{ton}$ = 1V, $V_{top}$ = -1 V, $V_{DD}$ = 5 V, $\\gamma$ = 0.5. Assume that the body of the NMOS transistor is connected with the ground and the body of the PMOS transistor is connected with $V_{DD}$. (i) Draw the circuit diagram of the inverter. (ii) Calculate the inverter ratio i.e., the ratio of driver transistor (W/L) to the load transistor (W/L). (iii) What will be the output voltage if the input voltage is held at 0.25 V? Explain your answer.",
    "repeat_of": "",
    "times": 1,
@@ -2657,7 +2657,7 @@
    "subtopic": "Sizing",
    "type": "numerical",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=42",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44",
    "text": "For the logic function $Y = \\overline{(A + BC) \\cdot D}$, choose transistor widths to achieve equal rise and fall resistance as a unit inverter. Assume, $\\mu_n = 3\\mu_p$",
    "repeat_of": "",
    "times": 1,
@@ -2678,7 +2678,7 @@
    "subtopic": "Skew",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=47",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=48",
    "text": "Explain the inverter width sizing for favoring the rising edge, falling edge, or achieving an unskewed inverter.",
    "repeat_of": "",
    "times": 1,
@@ -2698,7 +2698,7 @@
    "subtopic": "Flip-flops",
    "type": "diagram",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=55",
    "text": "Show the circuit diagram of an asynchronous resettable Flip-Flop and explain its operation utilizing a timing diagram.",
    "repeat_of": "",
    "times": 1,
@@ -2722,7 +2722,7 @@
    "subtopic": "Flip-flops",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=76",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=78",
    "text": "Fill in the truth table for the flip flop shown in Figure 6(f). Is this a positive edge triggered flip flop?",
    "repeat_of": "",
    "times": 1,
@@ -2742,7 +2742,7 @@
    "subtopic": "Design flow",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=56",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=57",
    "text": "Suppose you have written Verilog code to operate a microprocessor. What will be the upcoming steps till its fabrication? Briefly explain your answer.",
    "repeat_of": "",
    "times": 1,
@@ -2762,7 +2762,7 @@
    "subtopic": "Pass transistors",
    "type": "diagram",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=57",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=58",
    "text": "Implement a 2-input AND gate using both transmission gates and pass-transistor logic.",
    "repeat_of": "",
    "times": 1,
@@ -2785,7 +2785,7 @@
    "subtopic": "Pass transistors",
    "type": "diagram",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=70",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=72",
    "text": "Design a 2-to-1 multiplexer using pass transistor logic. Mention its working procedure.",
    "repeat_of": "",
    "times": 1,
@@ -2805,7 +2805,7 @@
    "subtopic": "Bus architectures",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=63",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=65",
    "text": "A 4-bit datapath consists of register, ALU and a shifter. Show two possible bus architectures of the system such that an addition operation of two operands stored in the register and storing the result back in the register can be computed in at most two clock cycles.",
    "repeat_of": "",
    "times": 1,
@@ -2825,7 +2825,7 @@
    "subtopic": "Verilog",
    "type": "design",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=71",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=73",
    "text": "Design a 7-segment display driver in Verilog.",
    "repeat_of": "",
    "times": 1,
@@ -2844,7 +2844,7 @@
    "subtopic": "Verilog",
    "type": "design",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=74",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=76",
    "text": "Write a Verilog code for the FSM described in Question 6(c).",
    "repeat_of": "",
    "times": 1,
@@ -2860,7 +2860,7 @@
    "subtopic": "FSM",
    "type": "design",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=72",
+   "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=74",
    "text": "You have to design a divide-by-3 counter using FSM. (i) Draw the state transition diagram of the finite state machine described. (ii) Derive the state transition table and equations for the next-state logic. (iii) Draw the complete FSM circuit.",
    "repeat_of": "",
    "times": 1,
@@ -3237,7 +3237,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=48"
     }
    ]
   },
@@ -3249,7 +3249,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=48"
     }
    ]
   },
@@ -3769,7 +3769,7 @@
    "used": [
     {
      "label": "20-21 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=42"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44"
     }
    ]
   },
@@ -3781,7 +3781,7 @@
    "used": [
     {
      "label": "20-21 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=42"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44"
     }
    ]
   },
@@ -3793,7 +3793,7 @@
    "used": [
     {
      "label": "20-21 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=42"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44"
     }
    ]
   },
@@ -3901,7 +3901,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -3913,7 +3913,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -3925,7 +3925,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -3937,7 +3937,7 @@
    "used": [
     {
      "label": "20-21 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -4141,7 +4141,7 @@
    "used": [
     {
      "label": "20-21 1(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=16"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -4153,7 +4153,7 @@
    "used": [
     {
      "label": "20-21 1(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=16"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -4165,7 +4165,7 @@
    "used": [
     {
      "label": "20-21 1(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=16"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -4177,7 +4177,7 @@
    "used": [
     {
      "label": "20-21 1(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=16"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -4189,7 +4189,7 @@
    "used": [
     {
      "label": "20-21 1(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=16"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -4201,7 +4201,7 @@
    "used": [
     {
      "label": "20-21 1(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=16"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=17"
     }
    ]
   },
@@ -4213,7 +4213,7 @@
    "used": [
     {
      "label": "20-21 3(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=39"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=40"
     }
    ]
   },
@@ -4225,7 +4225,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=70"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=72"
     }
    ]
   },
@@ -4321,7 +4321,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=52"
     }
    ]
   },
@@ -4333,7 +4333,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=52"
     }
    ]
   },
@@ -4345,7 +4345,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=52"
     }
    ]
   },
@@ -4357,7 +4357,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=52"
     }
    ]
   },
@@ -4369,7 +4369,7 @@
    "used": [
     {
      "label": "20-21 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=72"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=74"
     }
    ]
   },
@@ -4429,7 +4429,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=68"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2019-20-pack.pdf#page=69"
     }
    ]
   },
@@ -4441,7 +4441,7 @@
    "used": [
     {
      "label": "20-21 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=59"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=61"
     }
    ]
   },
@@ -4453,7 +4453,7 @@
    "used": [
     {
      "label": "20-21 6(e)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=75"
+     "link": "https://nurmdabd.github.io/study-notes/EEE455-VLSI/VLSI-2020-21-pack.pdf#page=77"
     }
    ]
   }

@@ -537,7 +537,7 @@
    "subtopic": "Diodes",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=62",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=64",
    "text": "Explain the reverse recovery time of diode with diagram.",
    "repeat_of": "",
    "times": 1,
@@ -578,7 +578,7 @@
    "subtopic": "Thyristors",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=64",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=66",
    "text": "Draw the I-V curve of thyristor. Define Holding current and Latching current for thyristor",
    "repeat_of": "",
    "times": 1,
@@ -622,7 +622,7 @@
    "subtopic": "Full-wave",
    "type": "numerical",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=23",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=24",
    "text": "A full-wave controlled bridge rectifier has an ac input of 120 V rms at 60 Hz and a 20 $\\Omega$ load resistor. The delay angle is 40°. Determine the average current of the load, the power absorbed by the load, the apparent power of the sourced *[sic: should be source]* and the input pf.",
    "repeat_of": "",
    "times": 1,
@@ -644,7 +644,7 @@
    "subtopic": "Full-wave",
    "type": "diagram",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=66",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=68",
    "text": "With proper alignment, show the waveshape of output voltage, output current, diode currents and source current for a full wave bridge rectifier with sinusoidal source and R-L load.",
    "repeat_of": "",
    "times": 1,
@@ -686,7 +686,7 @@
    "subtopic": "Three-phase",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=32",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=33",
    "text": "A three phase controlled rectifier has an input voltage of 480 V rms at 60 Hz. The load of the rectifier is resistor of 10 $\\Omega$ in series with 50 mH inductance. (i) Determine the delay angle required to produce an average current of 50A in the load (ii) Determine the amplitude of the harmonics n=6 and n=12. For harmonics calculation, Fig. 3(d) can be utilized.",
    "repeat_of": "",
    "times": 1,
@@ -708,7 +708,7 @@
    "subtopic": "Three-phase",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=75",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=77",
    "text": "A three phase rectifier is supplied by 480 V rms line to line 60 Hz source. The RL load is 100 $\\Omega$ resistor in series with 15 mH inductor. Determine the rms load current and rms diode currents.",
    "repeat_of": "",
    "times": 1,
@@ -752,7 +752,7 @@
    "subtopic": "HVDC",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=31",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=32",
    "text": "Write down the advantages of DC power transmission.",
    "repeat_of": "",
    "times": 1,
@@ -776,7 +776,7 @@
    "subtopic": "Linear regulator",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=36",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=37",
    "text": "Draw a typical circuit of a linear dc voltage regulator. What is the drawback of it? How can it be overcome?",
    "repeat_of": "",
    "times": 1,
@@ -799,7 +799,7 @@
    "subtopic": "Buck",
    "type": "derivation",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=39",
    "text": "Draw the circuit diagram and the waveform of inductor current, diode current and capacitor current for a typical buck converter. Also derive the relation between inductor current and diode current from the waveforms.",
    "repeat_of": "",
    "times": 1,
@@ -820,7 +820,7 @@
    "subtopic": "Buck",
    "type": "numerical",
    "marks": 7.5,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=72",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=74",
    "text": "A buck converter has parameters, Vs=50 V, D=0.4, R=20 $\\Omega$, L=400 $\\mu$H and C=100 $\\mu$F. The switching frequency is 20 kHz. a) Determine the output voltage, b) Determine the average, minimum and maximum inductor current c) The output ripple voltage.",
    "repeat_of": "",
    "times": 1,
@@ -841,7 +841,7 @@
    "subtopic": "Boost",
    "type": "design",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=41",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=42",
    "text": "A boost converter has an input of [unclear: 5 V] and an output of 25 W at 15 V. The minimum inductor current must be no less than 50% of the average. The ripple output must be less than 1 percent. The switching frequency is [unclear: 300 kHz]. (i) Determine the duty ratio. (ii) Minimum inductor value (iii) Minimum capacitor value",
    "repeat_of": "",
    "times": 1,
@@ -861,7 +861,7 @@
    "subtopic": "Boost",
    "type": "diagram",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=70",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=72",
    "text": "Draw the circuit diagram, equivalent circuit for switch on and off condition and the waveforms of the inductor current, diode current and load voltage for a typical boost converter.",
    "repeat_of": "",
    "times": 1,
@@ -883,7 +883,7 @@
    "subtopic": "SEPIC and Cuk",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=43",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=44",
    "text": "Differentiate between SEPIC converter and $\\acute{\\mathrm{C}}$uk converter.",
    "repeat_of": "",
    "times": 1,
@@ -906,7 +906,7 @@
    "subtopic": "Solar PV",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=45",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=46",
    "text": "Briefly explain the types of switch mode DC-DC converters used in a stand-alone solar PV system.",
    "repeat_of": "",
    "times": 1,
@@ -927,7 +927,7 @@
    "subtopic": "Multilevel",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=46",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=47",
    "text": "Draw the circuit of a three-level cascade multi source inverter. Why pattern swapping is important in multi-source inverter circuit?",
    "repeat_of": "",
    "times": 1,
@@ -949,7 +949,7 @@
    "subtopic": "PWM",
    "type": "design",
    "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=49",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=50",
    "text": "Design a bipolar PWM inverter that will produce a 75-V rms 60-Hz output from a 150 V dc source. The load is a series RL combination with R=12$\\Omega$ and L=60 mH. Select the switching frequency such that the current THD is less than 10%. Assume the impedance at the carrier frequency is entirely inductive.",
    "repeat_of": "",
    "times": 1,
@@ -970,7 +970,7 @@
    "subtopic": "Square-wave",
    "type": "numerical",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=52",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=53",
    "text": "Determine the voltage THD of a square wave inverter.",
    "repeat_of": "",
    "times": 1,
@@ -991,7 +991,7 @@
    "subtopic": "Filters",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=55",
    "text": "A 10 Ohm resistive load requires a 1000-Hz, 50-V rms sinusoidal voltage. The THD of the load voltage must be no more than 5 percent. An adjustable dc source is available. (i) Design an inverter for this application. (ii) What is maximum voltage across the capacitor?",
    "repeat_of": "",
    "times": 1,
@@ -1014,7 +1014,7 @@
    "subtopic": "Cycloconverters",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=57",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=58",
    "text": "What is cyclo-converter? Mention its applications.",
    "repeat_of": "",
    "times": 1,
@@ -1035,7 +1035,7 @@
    "subtopic": "TRIAC and BJT",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=58",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=60",
    "text": "Explain the structure of TRIAC with diagram. Mention the constructional feature of a Power BJT.",
    "repeat_of": "",
    "times": 1,
@@ -1056,7 +1056,7 @@
    "subtopic": "Comparison",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=60",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=62",
    "text": "Compare the following device in terms of power capacity and switching speed: BJT, MOSFET, GTO, IGBT, MCT",
    "repeat_of": "",
    "times": 1,
@@ -1079,7 +1079,7 @@
    "subtopic": "Nonlinear loads",
    "type": "numerical",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=67",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=69",
    "text": "A sinusoidal voltage source of $v(t) = 240\\sqrt{2}\\sin(2\\pi60t)$ V is applied to a nonlinear load, resulting in a nonsinusoidal current which is expressed in Fourier series form as $i(t) = 8\\sin(2\\pi60t) + 4\\sin(4\\pi60t)$ A. Determine (a) the power absorbed by the load, (b) the power factor of the load, (c) the distortion factor of the load current, (d) the total harmonic distortion of the load current, (e) crest factor of the load current.",
    "repeat_of": "",
    "times": 1,
@@ -1100,7 +1100,7 @@
    "subtopic": "Field chopping",
    "type": "theory",
    "marks": 2.5,
-   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=74",
+   "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=76",
    "text": "Draw the circuit diagram to control the speed of a separately excited dc motor by chopping field current supply. Explain the operation using required equations.",
    "repeat_of": "",
    "times": 1,
@@ -1194,7 +1194,7 @@
    "used": [
     {
      "label": "20-21 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=69"
     }
    ]
   },
@@ -1206,7 +1206,7 @@
    "used": [
     {
      "label": "20-21 7(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=67"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=69"
     }
    ]
   },
@@ -1374,7 +1374,7 @@
    "used": [
     {
      "label": "20-21 2(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=23"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=24"
     }
    ]
   },
@@ -1386,7 +1386,7 @@
    "used": [
     {
      "label": "20-21 2(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=23"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=24"
     }
    ]
   },
@@ -1398,7 +1398,7 @@
    "used": [
     {
      "label": "20-21 7(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=66"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=68"
     }
    ]
   },
@@ -1422,7 +1422,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=32"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=33"
     }
    ]
   },
@@ -1434,7 +1434,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=32"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=33"
     }
    ]
   },
@@ -1446,7 +1446,7 @@
    "used": [
     {
      "label": "20-21 8(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=75"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=77"
     }
    ]
   },
@@ -1458,7 +1458,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=32"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=33"
     }
    ]
   },
@@ -1470,7 +1470,7 @@
    "used": [
     {
      "label": "20-21 8(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=75"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=77"
     }
    ]
   },
@@ -1482,7 +1482,7 @@
    "used": [
     {
      "label": "20-21 8(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=75"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=77"
     }
    ]
   },
@@ -1506,7 +1506,7 @@
    "used": [
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=39"
     }
    ]
   },
@@ -1518,7 +1518,7 @@
    "used": [
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=39"
     }
    ]
   },
@@ -1530,7 +1530,7 @@
    "used": [
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=39"
     }
    ]
   },
@@ -1542,7 +1542,7 @@
    "used": [
     {
      "label": "20-21 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=38"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=39"
     }
    ]
   },
@@ -1554,7 +1554,7 @@
    "used": [
     {
      "label": "20-21 8(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=72"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=74"
     }
    ]
   },
@@ -1566,7 +1566,7 @@
    "used": [
     {
      "label": "20-21 8(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=72"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=74"
     }
    ]
   },
@@ -1578,7 +1578,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=42"
     }
    ]
   },
@@ -1590,7 +1590,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=42"
     }
    ]
   },
@@ -1602,7 +1602,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=42"
     }
    ]
   },
@@ -1614,7 +1614,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=42"
     }
    ]
   },
@@ -1626,7 +1626,7 @@
    "used": [
     {
      "label": "20-21 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=43"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=44"
     }
    ]
   },
@@ -1638,7 +1638,7 @@
    "used": [
     {
      "label": "20-21 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=43"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=44"
     }
    ]
   },
@@ -1650,7 +1650,7 @@
    "used": [
     {
      "label": "20-21 8(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=74"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=76"
     }
    ]
   },
@@ -1662,7 +1662,7 @@
    "used": [
     {
      "label": "20-21 8(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=74"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=76"
     }
    ]
   },
@@ -1674,7 +1674,7 @@
    "used": [
     {
      "label": "20-21 8(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=74"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=76"
     }
    ]
   },
@@ -1686,7 +1686,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=36"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=37"
     }
    ]
   },
@@ -1698,7 +1698,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=36"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=37"
     }
    ]
   },
@@ -1710,7 +1710,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=52"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=53"
     }
    ]
   },
@@ -1722,7 +1722,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=52"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=53"
     }
    ]
   },
@@ -1734,7 +1734,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=46"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=47"
     }
    ]
   },
@@ -1746,7 +1746,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -1758,7 +1758,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -1770,7 +1770,7 @@
    "used": [
     {
      "label": "20-21 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=50"
     }
    ]
   },
@@ -1782,7 +1782,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=55"
     }
    ]
   },
@@ -1794,7 +1794,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=55"
     }
    ]
   },
@@ -1806,7 +1806,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=55"
     }
    ]
   },
@@ -1818,7 +1818,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE339-PE/PE-2020-21-pack.pdf#page=55"
     }
    ]
   }

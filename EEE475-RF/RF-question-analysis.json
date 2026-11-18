@@ -1235,7 +1235,7 @@
    "subtopic": "Near and far field",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=51",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=53",
    "text": "Define near field and far field for an antenna.",
    "repeat_of": "2018-19 1(c)",
    "times": 2,
@@ -1289,7 +1289,7 @@
    "subtopic": "Magnetic dipole",
    "type": "derivation",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=17",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=16",
    "text": "For an elemental magnetic dipole derive the equation for electric field and magnetic field intensity.",
    "repeat_of": "",
    "times": 1,
@@ -1425,7 +1425,7 @@
    "subtopic": "Radio link budget",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=52",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=54",
    "text": "Show that for antennas with same aperture the received to transmitted power ratio is inversely proportional to square of wavelength and distance between them.",
    "repeat_of": "",
    "times": 1,
@@ -1441,7 +1441,7 @@
    "subtopic": "Linear arrays",
    "type": "derivation",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=49",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=50",
    "text": "Derive the equation for a uniform linear array and write the conditions for main beam direction, width of main beam and null locations.",
    "repeat_of": "2018-19 2(d)",
    "times": 2,
@@ -1485,7 +1485,7 @@
    "subtopic": "Reciprocity",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=29",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=30",
    "text": "Write short notes on. (i) Lorentz reciprocity theorem.",
    "repeat_of": "",
    "times": 1,
@@ -1502,7 +1502,7 @@
    "subtopic": "Image theory",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=29",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=30",
    "text": "Write short notes on. (ii) Image theory.",
    "repeat_of": "",
    "times": 1,
@@ -1522,7 +1522,7 @@
    "subtopic": "Reading impedance",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=30",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=32",
    "text": "Write the steps to determine line input impedance using Smith Chart.",
    "repeat_of": "",
    "times": 1,
@@ -1559,7 +1559,7 @@
    "subtopic": "Terminated lines",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=58",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=59",
    "text": "Briefly describe input impedance for open circuit termination and short circuit termination.",
    "repeat_of": "",
    "times": 1,
@@ -1582,7 +1582,7 @@
    "subtopic": "Terminated lines",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=31",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=33",
    "text": "A lossless transmission line length $0.434\\lambda$ and characteristic impedance $100~\\Omega$ is terminated in an impedance $260 + j180~\\Omega$. Find the voltage reflection coefficient, standing wave ratio and the location of maximum voltage on the line.",
    "repeat_of": "",
    "times": 1,
@@ -1603,7 +1603,7 @@
    "subtopic": "Terminated lines",
    "type": "derivation",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=39",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=40",
    "text": "Derive the equation for a short circuit terminated transmission line and sketch voltage, current and impedance as a function of line length.",
    "repeat_of": "",
    "times": 1,
@@ -1666,7 +1666,7 @@
    "subtopic": "Single-stub matching",
    "type": "design",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=40",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=41",
    "text": "A 50 $\\Omega$ transmission line is connected to a load impedance of $35 - j47.5~\\Omega$. Find the position and length of a short-circuited stub required to match the line.",
    "repeat_of": "2018-19 3(d)",
    "times": 3,
@@ -1690,7 +1690,7 @@
    "subtopic": "Single-stub matching",
    "type": "design",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=33",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=34",
    "text": "A $50~\\Omega$ transmission line is connected to a load impedance $35 - j47.5~\\Omega$. Find the position and length of a short circuited stub required to match the line.",
    "repeat_of": "",
    "times": 3,
@@ -1714,7 +1714,7 @@
    "subtopic": "RF behaviour of L and C",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=55",
    "text": "Explain how radio frequency affects the inductor and capacitor reactance.",
    "repeat_of": "",
    "times": 1,
@@ -1734,7 +1734,7 @@
    "subtopic": "RF behaviour of L and C",
    "type": "diagram",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=37",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=38",
    "text": "Sketch the equivalent circuit of a high frequency resistor. Also plot a typical frequency versus impedance cure  *[sic: should be curve]* of the resistor.",
    "repeat_of": "",
    "times": 1,
@@ -1778,7 +1778,7 @@
    "subtopic": "Microstrip",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=38",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=39",
    "text": "What is microstrip antenna? Mention some of the applications of microstrip line.",
    "repeat_of": "",
    "times": 2,
@@ -1826,7 +1826,7 @@
    "subtopic": "Quarter-wave transformer",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=37",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=38",
    "text": "Show how quarter wavelength line is used for matching.",
    "repeat_of": "2018-19 4(d)",
    "times": 3,
@@ -1851,7 +1851,7 @@
    "subtopic": "Quarter-wave transformer",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=41",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=42",
    "text": "How is quarter wavelength transmission line used for impedance matching?",
    "repeat_of": "",
    "times": 3,
@@ -1876,7 +1876,7 @@
    "subtopic": "Two-port parameters",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=43",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=44",
    "text": "For high pass filter determine ABCD parameters of a two port system.",
    "repeat_of": "",
    "times": 1,
@@ -1895,7 +1895,7 @@
    "subtopic": "Stability",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=44",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=45",
    "text": "What are stability circles? Explain how it is used.",
    "repeat_of": "",
    "times": 1,
@@ -1915,7 +1915,7 @@
    "subtopic": "Oscillators",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=46",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=47",
    "text": "Explain the working principle of negative resistance oscillator and feedback oscillator.",
    "repeat_of": "",
    "times": 1,
@@ -1938,7 +1938,7 @@
    "subtopic": "Open and short tests",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=47",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=48",
    "text": "A lossless transmission line of length 1.5 m, which is less than quarter wavelength has open circuit impedance $-j54.6~\\Omega$ and short circuit impedance $j103~\\Omega$. Find $Z_o$ and $\\gamma$. Also find the input impedance if the line length is doubled and the length of line if it is to appear as an open circuit at the input.",
    "repeat_of": "",
    "times": 1,
@@ -1956,7 +1956,7 @@
    "subtopic": "Polarization",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=49",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=51",
    "text": "Write short notes on the following topics. (i) Poincare Sphere",
    "repeat_of": "",
    "times": 1,
@@ -1976,7 +1976,7 @@
    "subtopic": "Yagi-Uda antenna",
    "type": "theory",
    "marks": 3.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=49",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=51",
    "text": "Write short notes on the following topics. (ii) Yagi-Uda antenna.",
    "repeat_of": "",
    "times": 1,
@@ -1996,7 +1996,7 @@
    "subtopic": "Paraboloid reflectors",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=50",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=52",
    "text": "For a paraboloid-of-revolution with an isotropic point source what is the ratio of power density and field intensity ratio.",
    "repeat_of": "",
    "times": 1,
@@ -2015,7 +2015,7 @@
    "subtopic": "Horn antennas",
    "type": "derivation",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=54",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=56",
    "text": "For a pyramidal or rectangular horn show that directivity D is $D \\approx 10\\log(\\frac{7.5A_p}{\\lambda^2})$.",
    "repeat_of": "",
    "times": 1,
@@ -2191,7 +2191,7 @@
    "subtopic": "Constant-gain condition",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=28",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29",
    "text": "Explain the condition for constant gain for amplifier.",
    "repeat_of": "",
    "times": 1,
@@ -2211,7 +2211,7 @@
    "subtopic": "Signal flow graphs",
    "type": "derivation",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=30",
    "text": "For the figure shown in Fig. 1 draw the flow graph and derive the input impedance formula at port 1 from the signal flow-graph representation.",
    "repeat_of": "",
    "times": 1,
@@ -2230,7 +2230,7 @@
    "subtopic": "Constant-gain circles",
    "type": "design",
    "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=31",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=32",
    "text": "A FET is operated at $f = 4$ GHz and is biased such that $s_{11} = 0.7\\angle 125^\\circ$. It is assumed that the transistor is unconditionally stable. Find the maximum source gain $G_{Smax}$ and sketch the constant gain circles for several values of $G_S$.",
    "repeat_of": "",
    "times": 1,
@@ -2249,7 +2249,7 @@
    "subtopic": "Reflection coefficient",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35",
    "text": "Write short notes on the following topic (i) Reflection coefficient",
    "repeat_of": "",
    "times": 1,
@@ -2266,7 +2266,7 @@
    "subtopic": "Standing wave ratio",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35",
    "text": "Write short notes on the following topic (ii) Standing wave ratio",
    "repeat_of": "",
    "times": 1,
@@ -2286,7 +2286,7 @@
    "subtopic": "RF hazards",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35",
    "text": "Write short notes on the following topic (iii) RF radiation hazards and safety standard",
    "repeat_of": "",
    "times": 1,
@@ -2327,7 +2327,7 @@
    "subtopic": "Cavity resonators",
    "type": "theory",
    "marks": 2.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35",
    "text": "Write short notes on the following topic (iv) Microwave cavity resonators",
    "repeat_of": "",
    "times": 1,
@@ -2347,7 +2347,7 @@
    "subtopic": "TM waves",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=44",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=45",
    "text": "Derive the equations for wave impedance, cut-off frequency, and phase constant for a transverse magnetic wave.",
    "repeat_of": "",
    "times": 1,
@@ -2367,7 +2367,7 @@
    "subtopic": "Filters",
    "type": "derivation",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=47",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=48",
    "text": "Find the forward voltage gain of a high-pass filter.",
    "repeat_of": "",
    "times": 1,
@@ -2407,7 +2407,7 @@
    "subtopic": "Line equations",
    "type": "derivation",
    "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=56",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=57",
    "text": "From the general equation of transmission line find the expressions for characteristic impedance and reflection coefficient.",
    "repeat_of": "",
    "times": 1,
@@ -2427,7 +2427,7 @@
    "subtopic": "Slotted-line measurement",
    "type": "numerical",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=60",
+   "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=61",
    "text": "The standing wave ratio on a lossless 50 $\\Omega$ transmission line terminated in an unknown load impedance is found to be 2. The distance between the successive voltage minima is 15 cm, and the first minimum is located at 5 cm from the load. Determine reflection coefficient, load impedance and equivalent length and terminating resistance of a line such that the input impedance is equal to $Z_L$.",
    "repeat_of": "",
    "times": 1,
@@ -2819,11 +2819,11 @@
     },
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=57"
     },
     {
      "label": "18-19 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=33"
     }
    ]
   },
@@ -2839,11 +2839,11 @@
     },
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
     },
     {
      "label": "18-19 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=33"
     }
    ]
   },
@@ -2855,7 +2855,7 @@
    "used": [
     {
      "label": "18-19 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=33"
     }
    ]
   },
@@ -2867,7 +2867,7 @@
    "used": [
     {
      "label": "18-19 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=33"
     }
    ]
   },
@@ -2879,7 +2879,7 @@
    "used": [
     {
      "label": "18-19 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=39"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=40"
     }
    ]
   },
@@ -2891,15 +2891,15 @@
    "used": [
     {
      "label": "19-20 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=59"
     },
     {
      "label": "18-19 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=39"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=40"
     },
     {
      "label": "18-19 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=48"
     }
    ]
   },
@@ -2911,11 +2911,11 @@
    "used": [
     {
      "label": "19-20 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=58"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=59"
     },
     {
      "label": "18-19 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=48"
     }
    ]
   },
@@ -2927,7 +2927,7 @@
    "used": [
     {
      "label": "18-19 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=48"
     }
    ]
   },
@@ -2943,7 +2943,7 @@
     },
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=57"
     }
    ]
   },
@@ -2959,7 +2959,7 @@
     },
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=57"
     }
    ]
   },
@@ -2971,7 +2971,7 @@
    "used": [
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=57"
     }
    ]
   },
@@ -2987,7 +2987,7 @@
     },
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=57"
     }
    ]
   },
@@ -3003,7 +3003,7 @@
     },
     {
      "label": "19-20 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=56"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=57"
     }
    ]
   },
@@ -3015,7 +3015,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -3027,7 +3027,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -3063,7 +3063,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=60"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=61"
     }
    ]
   },
@@ -3075,7 +3075,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=60"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=61"
     }
    ]
   },
@@ -3087,7 +3087,7 @@
    "used": [
     {
      "label": "19-20 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=60"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=61"
     }
    ]
   },
@@ -3171,7 +3171,7 @@
    "used": [
     {
      "label": "18-19 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=30"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=32"
     }
    ]
   },
@@ -3239,7 +3239,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=45"
     }
    ]
   },
@@ -3251,7 +3251,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=45"
     }
    ]
   },
@@ -3263,7 +3263,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=45"
     }
    ]
   },
@@ -3279,7 +3279,7 @@
     },
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=45"
     }
    ]
   },
@@ -3291,7 +3291,7 @@
    "used": [
     {
      "label": "19-20 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=45"
     }
    ]
   },
@@ -3327,7 +3327,7 @@
    "used": [
     {
      "label": "19-20 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=30"
     }
    ]
   },
@@ -3339,7 +3339,7 @@
    "used": [
     {
      "label": "19-20 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=30"
     }
    ]
   },
@@ -3387,7 +3387,7 @@
    "used": [
     {
      "label": "19-20 3(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=30"
     }
    ]
   },
@@ -3403,11 +3403,11 @@
     },
     {
      "label": "19-20 4(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=38"
     },
     {
      "label": "18-19 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=41"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=42"
     }
    ]
   },
@@ -3419,11 +3419,11 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=40"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=41"
     },
     {
      "label": "18-19 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=33"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=34"
     }
    ]
   },
@@ -3443,11 +3443,11 @@
     },
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=40"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=41"
     },
     {
      "label": "18-19 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=33"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=34"
     }
    ]
   },
@@ -3459,7 +3459,7 @@
    "used": [
     {
      "label": "19-20 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=40"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=41"
     }
    ]
   },
@@ -3475,7 +3475,7 @@
     },
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -3487,7 +3487,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -3499,7 +3499,7 @@
    "used": [
     {
      "label": "18-19 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=38"
     }
    ]
   },
@@ -3511,7 +3511,7 @@
    "used": [
     {
      "label": "18-19 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=37"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=38"
     }
    ]
   },
@@ -3523,7 +3523,7 @@
    "used": [
     {
      "label": "18-19 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=43"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=44"
     }
    ]
   },
@@ -3535,7 +3535,7 @@
    "used": [
     {
      "label": "18-19 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=43"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=44"
     }
    ]
   },
@@ -3547,7 +3547,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=55"
     }
    ]
   },
@@ -3559,7 +3559,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=55"
     }
    ]
   },
@@ -3571,7 +3571,7 @@
    "used": [
     {
      "label": "19-20 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=55"
     }
    ]
   },
@@ -3583,7 +3583,7 @@
    "used": [
     {
      "label": "19-20 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=48"
     }
    ]
   },
@@ -3595,7 +3595,7 @@
    "used": [
     {
      "label": "19-20 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=48"
     }
    ]
   },
@@ -3607,7 +3607,7 @@
    "used": [
     {
      "label": "19-20 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=47"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=48"
     }
    ]
   },
@@ -3619,7 +3619,7 @@
    "used": [
     {
      "label": "18-19 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=45"
     }
    ]
   },
@@ -3631,7 +3631,7 @@
    "used": [
     {
      "label": "18-19 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=45"
     }
    ]
   },
@@ -3643,7 +3643,7 @@
    "used": [
     {
      "label": "18-19 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=44"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=45"
     }
    ]
   },
@@ -3655,7 +3655,7 @@
    "used": [
     {
      "label": "18-19 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=46"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=47"
     }
    ]
   },
@@ -3667,7 +3667,7 @@
    "used": [
     {
      "label": "18-19 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=46"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=47"
     }
    ]
   },
@@ -3679,7 +3679,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29"
     }
    ]
   },
@@ -3691,7 +3691,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29"
     }
    ]
   },
@@ -3703,7 +3703,7 @@
    "used": [
     {
      "label": "19-20 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=32"
     }
    ]
   },
@@ -3715,7 +3715,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29"
     }
    ]
   },
@@ -3727,7 +3727,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29"
     }
    ]
   },
@@ -3739,7 +3739,7 @@
    "used": [
     {
      "label": "19-20 3(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=29"
     }
    ]
   },
@@ -3751,7 +3751,7 @@
    "used": [
     {
      "label": "18-19 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=52"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=54"
     }
    ]
   },
@@ -3767,7 +3767,7 @@
     },
     {
      "label": "18-19 6(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=52"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=54"
     }
    ]
   },
@@ -3855,7 +3855,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -3867,7 +3867,7 @@
    "used": [
     {
      "label": "19-20 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=34"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=35"
     }
    ]
   },
@@ -3967,7 +3967,7 @@
     },
     {
      "label": "18-19 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=56"
     }
    ]
   },
@@ -4007,7 +4007,7 @@
    "used": [
     {
      "label": "19-20 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=51"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=53"
     },
     {
      "label": "18-19 1(c)",
@@ -4023,7 +4023,7 @@
    "used": [
     {
      "label": "18-19 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=17"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=16"
     }
    ]
   },
@@ -4035,7 +4035,7 @@
    "used": [
     {
      "label": "18-19 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=17"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=16"
     }
    ]
   },
@@ -4047,7 +4047,7 @@
    "used": [
     {
      "label": "18-19 1(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=17"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=16"
     }
    ]
   },
@@ -4059,7 +4059,7 @@
    "used": [
     {
      "label": "18-19 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=50"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=52"
     }
    ]
   },
@@ -4071,7 +4071,7 @@
    "used": [
     {
      "label": "18-19 6(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=50"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=52"
     }
    ]
   },
@@ -4083,7 +4083,7 @@
    "used": [
     {
      "label": "18-19 6(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=54"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=56"
     }
    ]
   },
@@ -4095,7 +4095,7 @@
    "used": [
     {
      "label": "18-19 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2018-19-pack.pdf#page=51"
     }
    ]
   },
@@ -4107,7 +4107,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=50"
     },
     {
      "label": "18-19 2(d)",
@@ -4123,7 +4123,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=50"
     },
     {
      "label": "18-19 2(d)",
@@ -4139,7 +4139,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=50"
     },
     {
      "label": "18-19 2(d)",
@@ -4155,7 +4155,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=50"
     },
     {
      "label": "18-19 2(d)",
@@ -4323,7 +4323,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=50"
     }
    ]
   },
@@ -4335,7 +4335,7 @@
    "used": [
     {
      "label": "19-20 5(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=49"
+     "link": "https://nurmdabd.github.io/study-notes/EEE475-RF/RF-2019-20-pack.pdf#page=50"
     }
    ]
   },
