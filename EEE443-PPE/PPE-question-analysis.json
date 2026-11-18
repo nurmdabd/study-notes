@@ -2,9 +2,17 @@
  "subject": "EEE443",
  "title": "Power Plant Engineering",
  "sessions": [
-  "2020-21"
+  "2020-21",
+  "2019-20"
  ],
  "topics": [
+  {
+   "id": "sources",
+   "title": "Energy sources",
+   "book": "Mehta Ch. 1, 2",
+   "tier": "Likely",
+   "symbols": []
+  },
   {
    "id": "load",
    "title": "Load curves and factors",
@@ -17,19 +25,11 @@
     },
     {
      "symbol": "$E$",
-     "meaning": "energy in the period (kWh)"
-    },
-    {
-     "symbol": "$t$",
-     "meaning": "hours in the period (8760 for a year, 24 for a day)"
+     "meaning": "energy generated in a year (kWh); energy in the period (kWh)"
     },
     {
      "symbol": "$P_{max}$",
      "meaning": "maximum demand on the station (kW)"
-    },
-    {
-     "symbol": "$P_{max,i}$",
-     "meaning": "maximum demand of consumer group $i$"
     },
     {
      "symbol": "$C$",
@@ -37,7 +37,19 @@
     },
     {
      "symbol": "$t_{op}$",
-     "meaning": "hours the plant was in operation"
+     "meaning": "hours in operation in the year (h); hours the plant was in operation"
+    },
+    {
+     "symbol": "$t_{off}$",
+     "meaning": "hours idle in the year (h)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "hours in the period (8760 for a year, 24 for a day)"
+    },
+    {
+     "symbol": "$P_{max,i}$",
+     "meaning": "maximum demand of consumer group $i$"
     },
     {
      "symbol": "$E_{sched}$",
@@ -108,12 +120,44 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$E$",
+     "meaning": "energy generated (kWh)"
+    },
+    {
+     "symbol": "$P_{max}$",
+     "meaning": "maximum demand (kW)"
+    },
+    {
+     "symbol": "$E_{sold}$",
+     "meaning": "kWh reaching consumers"
+    },
+    {
+     "symbol": "$P_{max,i}$",
+     "meaning": "maximum demand of consumer $i$ (kW)"
+    },
+    {
      "symbol": "$a$",
-     "meaning": "Tk per kW connected"
+     "meaning": "demand charge (Tk per kW per year); Tk per kW connected"
     },
     {
      "symbol": "$b$",
-     "meaning": "Tk per kWh"
+     "meaning": "energy charge (Tk per kWh); Tk per kWh"
+    },
+    {
+     "symbol": "$\\phi$",
+     "meaning": "angle between voltage and current"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "active power (kW)"
+    },
+    {
+     "symbol": "$S$",
+     "meaning": "apparent power (kVA)"
+    },
+    {
+     "symbol": "$Q$",
+     "meaning": "reactive power (kVAR)"
     },
     {
      "symbol": "$A$",
@@ -133,7 +177,7 @@
    "id": "sharing",
    "title": "Economic load sharing",
    "book": "Nag Ch. 1; Mehta Ch. 3",
-   "tier": "Must know",
+   "tier": "Likely",
    "symbols": [
     {
      "symbol": "$I$",
@@ -264,7 +308,7 @@
    "id": "turbines",
    "title": "Steam turbines",
    "book": "Nag Ch. 7",
-   "tier": "Must know",
+   "tier": "Likely",
    "symbols": []
   },
   {
@@ -281,8 +325,28 @@
    "tier": "Must know",
    "symbols": [
     {
+     "symbol": "$V$",
+     "meaning": "water reaching the reservoir per year (m$^3$)"
+    },
+    {
+     "symbol": "$K$",
+     "meaning": "yield factor"
+    },
+    {
+     "symbol": "$R$",
+     "meaning": "annual rainfall (m)"
+    },
+    {
+     "symbol": "$A$",
+     "meaning": "catchment area (m$^2$)"
+    },
+    {
+     "symbol": "$Q$",
+     "meaning": "flow (m$^3$/s)"
+    },
+    {
      "symbol": "$P$",
-     "meaning": "power of the water (W)"
+     "meaning": "electrical output (W); power of the water (W)"
     },
     {
      "symbol": "$\\rho$",
@@ -293,16 +357,32 @@
      "meaning": "gravitational acceleration (9.81 m/s$^2$)"
     },
     {
-     "symbol": "$Q$",
-     "meaning": "flow (m$^3$/s)"
-    },
-    {
      "symbol": "$H$",
-     "meaning": "head (m)"
+     "meaning": "effective head (m)"
     },
     {
      "symbol": "$\\eta$",
      "meaning": "overall efficiency"
+    },
+    {
+     "symbol": "$C$",
+     "meaning": "capacity, taken equal to the maximum demand (W)"
+    },
+    {
+     "symbol": "$P_{av}$",
+     "meaning": "average power (W)"
+    },
+    {
+     "symbol": "$\\Delta p$",
+     "meaning": "pressure rise on a sudden stop (Pa)"
+    },
+    {
+     "symbol": "$c$",
+     "meaning": "speed of the pressure wave in the pipe (m/s)"
+    },
+    {
+     "symbol": "$\\Delta v$",
+     "meaning": "change of water velocity (m/s)"
     }
    ]
   },
@@ -311,95 +391,51 @@
    "title": "Nuclear plants",
    "book": "Nag Ch. 9; Mehta Ch. 2",
    "tier": "Must know",
-   "symbols": []
+   "symbols": [
+    {
+     "symbol": "$N$",
+     "meaning": "number of atoms"
+    },
+    {
+     "symbol": "$m$",
+     "meaning": "mass of fuel (kg)"
+    },
+    {
+     "symbol": "$A$",
+     "meaning": "atomic mass (235 kg/kmol for U-235)"
+    },
+    {
+     "symbol": "$N_A$",
+     "meaning": "Avogadro's number ($6.023 \\times 10^{26}$ per kmol)"
+    },
+    {
+     "symbol": "$E$",
+     "meaning": "fission energy (J); energy released (J)"
+    },
+    {
+     "symbol": "$E_f$",
+     "meaning": "energy per fission (200 MeV = $3.204 \\times 10^{-11}$ J)"
+    },
+    {
+     "symbol": "$P$",
+     "meaning": "thermal power (W)"
+    },
+    {
+     "symbol": "$t$",
+     "meaning": "time to use the fuel (s)"
+    },
+    {
+     "symbol": "$\\Delta m$",
+     "meaning": "mass defect (kg)"
+    },
+    {
+     "symbol": "$c$",
+     "meaning": "speed of light ($3 \\times 10^{8}$ m/s)"
+    }
+   ]
   }
  ],
  "questions": [
-  {
-   "id": "2020-21-1(a)",
-   "label": "20-21 1(a)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "steam",
-   "subtopic": "Improvements",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=10",
-   "text": "List the factors that contribute to improving the generating capacity of a thermal power station.",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "points": "Higher steam pressure and temperature, reheating, lower condenser pressure, regenerative feed heating, economiser and air preheater, good combustion, larger units, a high load factor with good maintenance, combined cycle working.",
-   "draws": [
-    "Diagram: steam loop of a thermal station (Rankine cycle)"
-   ]
-  },
-  {
-   "id": "2020-21-1(b)",
-   "label": "20-21 1(b)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "fuels",
-   "subtopic": "Characteristics",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=12",
-   "text": "Briefly discuss the characteristics of fuels.",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "points": "Calorific value, moisture, volatile matter, fixed carbon, ash, sulphur, ignition temperature, ease of handling and storage, cost and availability."
-  },
-  {
-   "id": "2020-21-1(c)",
-   "label": "20-21 1(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "combined",
-   "subtopic": "Operation",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=13",
-   "text": "What is meant by combined cycle power generation?",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "points": "A gas turbine burns the fuel; its hot exhaust raises steam in a heat-recovery boiler that drives a steam turbine; one fuel drives two generators at about 55 to 60 % efficiency.",
-   "draws": [
-    "Block diagram: combined cycle plant"
-   ],
-   "compare": [
-    "Combined cycle vs simple steam plant: gas turbine exhaust reused, 55 to 60 % efficient vs one cycle, about 35 to 40 %"
-   ]
-  },
-  {
-   "id": "2020-21-1(d)",
-   "label": "20-21 1(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "load",
-   "subtopic": "Base and peak load",
-   "type": "theory",
-   "marks": 10.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=14",
-   "text": "What are the requirements of a base load and peak load power plant? The annual peak load on a 30 MW power station is 25 MW. The power station supplies loads having a maximum demands of 10MW, 8.5 MW, 5 MW and 4.5 MW. The annual load factor is 45%. Find: (i) Average load, (ii) Energy supplied every year, (iii) Diversity factor, (iv) Demand/factor. *[sic: should be \"Demand factor\"]*",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "points": "Base load plant: low running cost, steady, reliable, efficient. Peak load plant: quick starting, low capital cost.",
-   "method": "Average load = load factor × peak load; energy = average × 8760 h; diversity factor = sum of maximum demands / peak load; demand factor = peak load / connected capacity.",
-   "answer": "11.25 MW; 98 550 MWh/year; diversity factor 1.12; demand factor 0.833",
-   "draws": [
-    "Graph: daily load curve split into base, intermediate and peak load"
-   ],
-   "compare": [
-    "Base load vs peak load plant: low running cost, runs all the time vs quick starting, low capital cost, runs a few hours"
-   ]
-  },
   {
    "id": "2020-21-2(a)",
    "label": "20-21 2(a)",
@@ -463,6 +499,663 @@
    "answer": "288 MWh/day; reserve 5 MW; 600 MWh/day at full load all day; 360 MWh/day in the 14.4 h scheduled",
    "draws": [
     "Diagram: maximum demand, average load and capacity linked by the factors"
+   ]
+  },
+  {
+   "id": "2019-20-1(a)",
+   "label": "19-20 1(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Factors",
+   "type": "numerical",
+   "marks": 0.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=10",
+   "text": "A central power station has annual factors as follows: Load Factor = 60%, Capacity Factor = 40% and Use Factor = 45%. The power station has a maximum demand of 15,000 kW. Determine the following:",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Average load = load factor × maximum demand; energy = average × 8760 h; plant capacity = average / capacity factor; reserve = capacity − maximum demand; hours in operation = energy / (use factor × capacity); hours idle = 8760 − hours in operation.",
+   "answer": "78.84 × 10⁶ kWh; reserve 7500 kW; 973.3 h not in service",
+   "draws": [
+    "Graph: plant capacity, maximum demand and average load compared"
+   ]
+  },
+  {
+   "id": "2019-20-6(e)",
+   "label": "19-20 6(e)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Factors",
+   "type": "numerical",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=52",
+   "text": "A hydropower plant will be used as a peak load plant at an annual load factor of 30%. The electrical energy obtained during the year is $750\\times10^{5}$ kWh. Determine the maximum demand. If the plant capacity factor is 24%, find the reserve capacity of the plant.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Average load = energy / 8760; maximum demand = average / load factor; capacity = average / capacity factor; reserve = capacity − maximum demand.",
+   "answer": "maximum demand 28 539 kW; reserve 7135 kW"
+  },
+  {
+   "id": "2020-21-1(b)",
+   "label": "20-21 1(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "fuels",
+   "subtopic": "Characteristics",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=12",
+   "text": "Briefly discuss the characteristics of fuels.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Calorific value, moisture, volatile matter, fixed carbon, ash, sulphur, ignition temperature, ease of handling and storage, cost and availability."
+  },
+  {
+   "id": "2019-20-1(b)",
+   "label": "19-20 1(b)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "fuels",
+   "subtopic": "Characteristics",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=13",
+   "text": "Write down the advantages of Gaseous fuels over solid fuels.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Gaseous fuels burn completely with little excess air, give higher efficiency, leave no ash or clinker, burn clean and smokeless, are controlled instantly by a valve, travel by pipeline without coal handling or storage, can be preheated, need a smaller furnace.",
+   "compare": [
+    "Gaseous vs solid fuel: mixes with air, complete burning, no ash vs burns on the surface, more excess air, ash and clinker"
+   ]
+  },
+  {
+   "id": "2019-20-2(b)",
+   "label": "19-20 2(b)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "fuels",
+   "subtopic": "Characteristics",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=18",
+   "text": "Discuss the requirements of fuel for electricity generation.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "High calorific value; low moisture, ash and sulphur; moderate volatile matter and ignition temperature; complete burning and easy control; easy transport, handling and storage; low cost and assured supply; little pollution."
+  },
+  {
+   "id": "2019-20-1(c)",
+   "label": "19-20 1(c)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "nuclear",
+   "subtopic": "Fission energy",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=14",
+   "text": "What is the power output of $_{92}U^{235}$ reactors if it takes 30 days to use up 2 Kg of fuel. Given that energy released per fission is 200 MeV and Avogadro's number=$6.023 \\times 10^{26}$ per Kilomole?",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Atoms $N = (m/235)N_A$; energy $= N \\times 200$ MeV (1 MeV $= 1.602 \\times 10^{-13}$ J); power = energy / time in seconds.",
+   "answer": "$5.126 \\times 10^{24}$ atoms, $1.642 \\times 10^{14}$ J, about 63.4 MW (thermal)",
+   "draws": [
+    "Diagram: fission of a U-235 nucleus by a slow neutron"
+   ]
+  },
+  {
+   "id": "2019-20-2(a)",
+   "label": "19-20 2(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Site",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=17",
+   "text": "What factors should be considered while selecting the site for a steam power plant.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Supply of fuel (near mines or rail or port), plenty of cooling water, transport links, cheap and large land with firm foundations, nearness to the load centre, ash disposal, distance from towns, labour.",
+   "draws": [
+    "Diagram: what a steam plant takes from its site and gives out"
+   ]
+  },
+  {
+   "id": "2019-20-2(c)",
+   "label": "19-20 2(c)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "hydro",
+   "subtopic": "Power from rainfall",
+   "type": "numerical",
+   "marks": 15.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=20",
+   "text": "For a hydroelectric power plant the following data is supplied: Annual rainfall = 1000 mm, Catchment area = 120 sq.km., Effective head = 250 m. Load factor = 40%, Yield factor to allow run-off and evaporation loss = 50%, Efficiency of power plant = 70%. Determine the following: (a) Average power produced (b) Capacity of the power plant",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Water per year $V = K R A$; discharge $Q = V/(8760 \\times 3600)$; average power $\\rho g Q H \\eta$; capacity = average power / load factor.",
+   "answer": "Q = 1.903 m³/s; average power 3266 kW; capacity 8166 kW",
+   "draws": [
+    "Diagram: catchment, reservoir, head and power house"
+   ]
+  },
+  {
+   "id": "2020-21-1(a)",
+   "label": "20-21 1(a)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Improvements",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=10",
+   "text": "List the factors that contribute to improving the generating capacity of a thermal power station.",
+   "repeat_of": "2019-20 3(a)",
+   "times": 2,
+   "asked_in": [
+    "20-21 1(a)",
+    "19-20 3(a)"
+   ],
+   "outline": "",
+   "points": "Higher steam pressure and temperature, reheating, lower condenser pressure, regenerative feed heating, economiser and air preheater, good combustion, larger units, a high load factor with good maintenance, combined cycle working.",
+   "draws": [
+    "Diagram: steam loop of a thermal station (Rankine cycle)"
+   ]
+  },
+  {
+   "id": "2019-20-3(a)",
+   "label": "19-20 3(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Improvements",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=23",
+   "text": "Mention the factors which can improve the generating capacity of a thermal power station.",
+   "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "20-21 1(a)",
+    "19-20 3(a)"
+   ],
+   "outline": "",
+   "points": "Higher steam pressure and temperature, reheating, lower condenser pressure, regenerative feed heating, economiser and air preheater, good combustion, larger units with a high load factor and good maintenance, combined cycle.",
+   "draws": [
+    "Diagram: steam loop of a thermal station (Rankine cycle)"
+   ]
+  },
+  {
+   "id": "2020-21-3(b)",
+   "label": "20-21 3(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Boilers",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=26",
+   "text": "Differentiate between water tube boiler and fire tube boiler.",
+   "repeat_of": "2019-20 3(c)",
+   "times": 2,
+   "asked_in": [
+    "20-21 3(b)",
+    "19-20 3(c)"
+   ],
+   "outline": "",
+   "points": "Water-tube: water inside the tubes, gas outside; high pressure, large output, quick steaming, safer; power stations. Fire-tube: gas inside the tubes in a water shell; low pressure, small output, slow steaming, cheaper.",
+   "draws": [
+    "Diagram: fire-tube and water-tube boilers"
+   ],
+   "compare": [
+    "Water-tube vs fire-tube boiler: water in the tubes, high pressure, large output vs gas in the tubes, low pressure, small output"
+   ]
+  },
+  {
+   "id": "2019-20-3(b)",
+   "label": "19-20 3(b)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Boilers",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=25",
+   "text": "What is a Boiler? Briefly discuss the requirements of a Boiler.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "A boiler is a closed vessel in which water is heated by burning fuel and turned into steam at the required pressure and temperature. Requirements: required steam with minimum fuel, high efficiency, quick starting and response, safety, good circulation, light, compact and cheap, easy access for cleaning, dry steam.",
+   "draws": [
+    "Diagram: furnace, heating surface, water and steam space and mountings of a boiler"
+   ]
+  },
+  {
+   "id": "2019-20-3(c)",
+   "label": "19-20 3(c)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Boilers",
+   "type": "theory",
+   "marks": 12.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=27",
+   "text": "Write short notes on Water tube and Fire tube boilers.",
+   "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "20-21 3(b)",
+    "19-20 3(c)"
+   ],
+   "outline": "",
+   "points": "Fire-tube: hot gas inside tubes in a water shell; up to about 25 bar and 10 t/h, slow steaming, simple and cheap, dangerous on bursting. Water-tube: water inside tubes between steam and mud drums, gas outside; above 160 bar, large output, quick steaming, safer, needs pure water; power stations.",
+   "draws": [
+    "Diagram: fire-tube boiler",
+    "Diagram: water-tube boiler with steam and mud drums"
+   ],
+   "compare": [
+    "Water-tube vs fire-tube boiler: water in the tubes, high pressure, large output vs gas in the tubes, low pressure, small output"
+   ]
+  },
+  {
+   "id": "2020-21-3(d)",
+   "label": "20-21 3(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Boiler efficiency",
+   "type": "numerical",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28",
+   "text": "The following data is supplied for a boiler plant: Boiler: Mass of coal supplied = 220 kg /hr. Calorific value of coal = 7200 kcal /kg. Mass of feed water = 200 kg/hr *[sic: should be 2000 kg/hr]*. Enthalpy of steam produced = 670 kcal/kg. Economizer: Inlet temperature of feed water = 18°C. Outlet temperature of water = 88°C. Atmospheric temperature = 19°C. Temperature of flue gas entering = 350°C. Mass of flue gases = 4150 kg/hr. Determine the following (i) Efficiency of boiler. (ii) Efficiency of economizer. (iii) Efficiency of whole boiler plant.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Boiler efficiency = $m_w(h_s - h_{fw})/(m_cC)$; economiser efficiency = heat to water / heat given by the gas; whole plant with the economiser = heat to steam from the inlet water / heat of the coal.",
+   "answer": "73.48 %; economiser 42.47 %; whole plant 82.32 % (with 2000 kg/h)",
+   "draws": [
+    "Diagram: where the heat of the coal goes"
+   ]
+  },
+  {
+   "id": "2019-20-3(d)",
+   "label": "19-20 3(d)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "steam",
+   "subtopic": "Boiler efficiency",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=30",
+   "text": "What are the causes of Heat loss in boilers?",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Heat lost in the dry flue gas (largest), moisture in the fuel, moisture formed from hydrogen, moisture in the air, incomplete combustion to CO, unburnt carbon in the ash, radiation and unaccounted losses.",
+   "draws": [
+    "Graph: heat balance of a boiler"
+   ]
+  },
+  {
+   "id": "2020-21-5(d)",
+   "label": "20-21 5(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "type": "numerical",
+   "marks": 9.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=42",
+   "text": "An electric supply company having a maximum load of 50 MW generates $18\\times10^7$ units per annum and the supply consumers have an aggregate demand of 75 MW. The annual expenses including capital charges are: For fuel = Taka 90 lakhs. Fixed charges concerning generation = Taka 28 lakhs. Fixed charges concerning transmission and distribution = Taka 32 lakhs. Assuming 90% of the fuel cost is essential to running charges and the loss in transmission and distribution as 15% of KWh generated, deduce a two part tariff to find the actual cost of supply to the consumers.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Split the costs into running (per kWh) and fixed (per kW); kWh sold after losses; running cost / kWh sold; fixed cost / aggregate demand gives Tk per kW.",
+   "answer": "Tk 92 per kW per year + 5.29 paisa per kWh",
+   "draws": [
+    "Diagram: annual cost split into running and fixed charges"
+   ]
+  },
+  {
+   "id": "2019-20-4(a)",
+   "label": "19-20 4(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "type": "numerical",
+   "marks": 0.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=32",
+   "text": "The annual cost of operating a 15,000 KW thermal power stations are as follows: Cost of Plant = 900 taka per KW, Interest, insurance taxes on plant = 5%, Depreciation = 5%, Cost of primary distribution system = 500,000 taka, Interest, insurance, taxes and depreciation on primary distribution system = 5%, Cost of secondary distribution system = 900,000 taka, Interest, taxes, insurance and depreciation on secondary distribution system = 5%, Maintenance of secondary distribution system = 180,000. Plant Maintenance cost (i) Fixed Cost = 30,000 taka (ii) Variable Cost = 40,000 taka",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Sort the costs into fixed (interest, depreciation, insurance, taxes, fixed maintenance, dividend) and running (fuel, variable maintenance, operating); kWh sold = maximum demand × load factor × 8760 × (1 − loss); aggregate demand = diversity factor × maximum demand; fixed / aggregate demand and running / kWh sold.",
+   "answer": "Tk 125.24 per kW per year + 3.16 paisa per kWh",
+   "draws": [
+    "Diagram: annual costs split into fixed and running charges"
+   ]
+  },
+  {
+   "id": "2019-20-4(b)",
+   "label": "19-20 4(b)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Plant design",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=35",
+   "text": "Mention the factors that are considered for designing a power station.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Load (maximum demand, load curve, growth), type of plant, number and size of units with reserve, site, capital and running cost, efficiency and reliability, flexibility, environment and safety, room for extension."
+  },
+  {
+   "id": "2019-20-4(c)",
+   "label": "19-20 4(c)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "tariff",
+   "subtopic": "Power factor",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=37",
+   "text": "What is Power factor tariff? Discuss some important types of power factor tariff.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "A low power factor needs more kVA for the same kW, so the consumer pays more. Types: kVA maximum demand tariff, sliding scale (average power factor) tariff, kW and kVAR tariff.",
+   "draws": [
+    "Graph: power triangles at three power factors"
+   ]
+  },
+  {
+   "id": "2019-20-5(a)",
+   "label": "19-20 5(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "sources",
+   "subtopic": "Conventional and renewable",
+   "type": "theory",
+   "marks": 7.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=39",
+   "text": "Write a comparison between conventional & non-conventional sources of energy. Also, explain why renewable energy is getting popular nowadays.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Conventional: coal, oil, gas, nuclear, large hydro; non-renewable, polluting, fuel cost, mature, continuous. Non-conventional: solar, wind, biomass, geothermal, tidal; renewable, clean, no fuel cost, costly per kW, intermittent. Renewables grow: fossil fuels running out, climate, falling costs, remote supply, policy, cheaper storage.",
+   "compare": [
+    "Conventional vs non-conventional sources: non-renewable, polluting, continuous vs renewable, clean, intermittent"
+   ]
+  },
+  {
+   "id": "2020-21-5(b)",
+   "label": "20-21 5(b)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "econ",
+   "subtopic": "Cost per kWh",
+   "type": "numerical",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39",
+   "text": "Estimate the generating cost per KWh delivered from a generating station from the following data: Plant capacity = 50 MW. Annual load factor = 40%. Capital cost = 1.2 crores. Annual cost of wages, taxation, etc. = Taka 4 lakhs. Cost of fuel, lubrication, maintenance, etc. = 1.0 paisa/kWh generated. Interest 5% per annum, depreciation 6% per annum of initial value.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Energy = capacity × load factor × 8760 h; fixed charges = interest and depreciation on the capital + wages and taxes; fixed cost per kWh = fixed charges / energy; add the running cost per kWh.",
+   "answer": "about 1.98 paisa/kWh (0.98 fixed + 1.0 running)"
+  },
+  {
+   "id": "2019-20-5(b)",
+   "label": "19-20 5(b)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "econ",
+   "subtopic": "Cost per kWh",
+   "type": "numerical",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=40",
+   "text": "In a 60 MW steam power station working at 40% load factor, the energy cost is found to be 1.5 paisa/KWh. Calculate the cost of energy if the power station load factor is improved to 50%. Due to increased energy generation the fuel cost increases the annual generation cost by 6%.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "method": "Energy = rating × load factor × 8760 at each load factor; annual cost = old cost per kWh × old energy, then × 1.06; new cost per kWh = new annual cost / new energy.",
+   "answer": "1.272 paisa/kWh (was 1.5)"
+  },
+  {
+   "id": "2019-20-5(c)",
+   "label": "19-20 5(c)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "nuclear",
+   "subtopic": "Reactor parts",
+   "type": "theory",
+   "marks": 12.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=41",
+   "text": "What is a nuclear reactor? Briefly describe the various parts of a nuclear reactor with their working functions and appropriate figures.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Controlled fission chain reaction. Core; fuel rods (enriched uranium in cladding); moderator (water, heavy water, graphite) slows neutrons; control rods (cadmium, boron) absorb neutrons to set the power; reflector; coolant (water, CO₂, sodium); pressure vessel; biological shield.",
+   "draws": [
+    "Diagram: section of a nuclear reactor with its parts"
+   ]
+  },
+  {
+   "id": "2019-20-6(a)",
+   "label": "19-20 6(a)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "hydro",
+   "subtopic": "Pumped storage and interconnection",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=44",
+   "text": "Write short notes on: (i) Hydro-steam inter-connected system (ii) Pumped storage plant",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Hydro-steam: wet season hydro carries the base and steam the peak; dry season the reverse; saves fuel, uses the water, needs less reserve. Pumped storage: pumps water up with off-peak energy and generates at the peak through a reversible pump-turbine; 70 to 75 % recovered.",
+   "draws": [
+    "Graph: load curve split between hydro and steam in the wet and dry seasons",
+    "Diagram: pumped storage plant with two reservoirs"
+   ],
+   "compare": [
+    "Hydro on base vs hydro on peak: wet season, plenty of water vs dry season, limited water"
+   ]
+  },
+  {
+   "id": "2020-21-4(d)",
+   "label": "20-21 4(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hydro",
+   "subtopic": "Turbines",
+   "type": "theory",
+   "marks": 8.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=35",
+   "text": "With diagram, write short notes on Kaplan and Francis turbine.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Francis: mixed flow (radial in, axial out) reaction turbine, fixed blades, medium heads. Kaplan: axial-flow propeller reaction turbine with adjustable blades, low heads and large flows, efficient over a wide load range.",
+   "draws": [
+    "Diagram: Francis turbine from above and Kaplan turbine in section"
+   ],
+   "compare": [
+    "Francis vs Kaplan turbine: mixed flow, fixed blades, medium head vs axial flow, adjustable blades, low head, large flow"
+   ]
+  },
+  {
+   "id": "2019-20-6(b)",
+   "label": "19-20 6(b)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "hydro",
+   "subtopic": "Turbines",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=47",
+   "text": "Compare a Pelton wheel and a Francis turbine.",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Pelton: impulse, free jet at atmospheric pressure, tangential flow, high head, small discharge, low specific speed, no draft tube, spear valve. Francis: reaction, runs full under pressure, mixed flow, medium head and discharge, medium specific speed, draft tube, guide vanes.",
+   "draws": [
+    "Diagram: Pelton wheel with nozzle and buckets"
+   ],
+   "compare": [
+    "Pelton wheel vs Francis turbine: impulse, high head, free jet vs reaction, medium head, runs full"
+   ]
+  },
+  {
+   "id": "2020-21-5(c)",
+   "label": "20-21 5(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "hydro",
+   "subtopic": "Civil works",
+   "type": "theory",
+   "marks": 6.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=41",
+   "text": "Write short note on- (i) Spillways (ii) Surge tanks (iii) Draft tubes",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Spillway: passes surplus flood water safely past the dam. Surge tank: on the penstock, absorbs water hammer on load drops and supplies water on load rises. Draft tube: widening outlet below a reaction turbine, regains exit energy and lets the turbine sit above the tail race.",
+   "draws": [
+    "Diagram: hydro plant with spillway, surge tank and draft tube"
+   ]
+  },
+  {
+   "id": "2019-20-6(c)",
+   "label": "19-20 6(c)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "hydro",
+   "subtopic": "Civil works",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=49",
+   "text": "What is the water hammer effect? How could it be minimized?",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Water hammer: sudden pressure rise and travelling pressure wave in a penstock when the flow is stopped quickly, $\\Delta p = \\rho c \\Delta v$. Remedies: surge tank, slow gate closing, relief valve or jet deflector, stronger penstock with air valves, shorter pipe.",
+   "draws": [
+    "Diagram: penstock, closing gate and surge tank"
+   ]
+  },
+  {
+   "id": "2020-21-1(c)",
+   "label": "20-21 1(c)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "combined",
+   "subtopic": "Operation",
+   "type": "theory",
+   "marks": 5.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=13",
+   "text": "What is meant by combined cycle power generation?",
+   "repeat_of": "2019-20 6(d)",
+   "times": 2,
+   "asked_in": [
+    "20-21 1(c)",
+    "19-20 6(d)"
+   ],
+   "outline": "",
+   "points": "A gas turbine burns the fuel; its hot exhaust raises steam in a heat-recovery boiler that drives a steam turbine; one fuel drives two generators at about 55 to 60 % efficiency.",
+   "draws": [
+    "Block diagram: combined cycle plant"
+   ],
+   "compare": [
+    "Combined cycle vs simple steam plant: gas turbine exhaust reused, 55 to 60 % efficient vs one cycle, about 35 to 40 %"
+   ]
+  },
+  {
+   "id": "2019-20-6(d)",
+   "label": "19-20 6(d)",
+   "session": "2019-20",
+   "term_test": false,
+   "topic": "combined",
+   "subtopic": "Operation",
+   "type": "theory",
+   "marks": 4.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=50",
+   "text": "Discuss the combined working of the gas turbine plant and steam power plant.",
+   "repeat_of": "",
+   "times": 2,
+   "asked_in": [
+    "20-21 1(c)",
+    "19-20 6(d)"
+   ],
+   "outline": "",
+   "points": "Gas turbine at the top temperature; its 500 to 600 °C exhaust raises steam in a heat-recovery boiler for a steam turbine and a second generator; 55 to 60 % overall efficiency, quick start, low cost per kW.",
+   "draws": [
+    "Block diagram: combined cycle plant"
+   ],
+   "compare": [
+    "Combined cycle vs simple steam plant: gas turbine exhaust reused, 55 to 60 % efficient vs one cycle, about 35 to 40 %"
+   ]
+  },
+  {
+   "id": "2020-21-1(d)",
+   "label": "20-21 1(d)",
+   "session": "2020-21",
+   "term_test": false,
+   "topic": "load",
+   "subtopic": "Base and peak load",
+   "type": "theory",
+   "marks": 10.0,
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=14",
+   "text": "What are the requirements of a base load and peak load power plant? The annual peak load on a 30 MW power station is 25 MW. The power station supplies loads having a maximum demands of 10MW, 8.5 MW, 5 MW and 4.5 MW. The annual load factor is 45%. Find: (i) Average load, (ii) Energy supplied every year, (iii) Diversity factor, (iv) Demand/factor. *[sic: should be \"Demand factor\"]*",
+   "repeat_of": "",
+   "times": 1,
+   "asked_in": [],
+   "outline": "",
+   "points": "Base load plant: low running cost, steady, reliable, efficient. Peak load plant: quick starting, low capital cost.",
+   "method": "Average load = load factor × peak load; energy = average × 8760 h; diversity factor = sum of maximum demands / peak load; demand factor = peak load / connected capacity.",
+   "answer": "11.25 MW; 98 550 MWh/year; diversity factor 1.12; demand factor 0.833",
+   "draws": [
+    "Graph: daily load curve split into base, intermediate and peak load"
+   ],
+   "compare": [
+    "Base load vs peak load plant: low running cost, runs all the time vs quick starting, low capital cost, runs a few hours"
    ]
   },
   {
@@ -543,29 +1236,6 @@
    ]
   },
   {
-   "id": "2020-21-3(b)",
-   "label": "20-21 3(b)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "steam",
-   "subtopic": "Boilers",
-   "type": "theory",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=26",
-   "text": "Differentiate between water tube boiler and fire tube boiler.",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "points": "Water-tube: water inside the tubes, gas outside; high pressure, large output, quick steaming, safer; power stations. Fire-tube: gas inside the tubes in a water shell; low pressure, small output, slow steaming, cheaper.",
-   "draws": [
-    "Diagram: fire-tube and water-tube boilers"
-   ],
-   "compare": [
-    "Water-tube vs fire-tube boiler: water in the tubes, high pressure, large output vs gas in the tubes, low pressure, small output"
-   ]
-  },
-  {
    "id": "2020-21-3(c)",
    "label": "20-21 3(c)",
    "session": "2020-21",
@@ -586,27 +1256,6 @@
    ],
    "compare": [
     "Superheater vs economiser: heats the steam above saturation vs preheats the feed water with flue gas"
-   ]
-  },
-  {
-   "id": "2020-21-3(d)",
-   "label": "20-21 3(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "steam",
-   "subtopic": "Boiler efficiency",
-   "type": "numerical",
-   "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28",
-   "text": "The following data is supplied for a boiler plant: Boiler: Mass of coal supplied = 220 kg /hr. Calorific value of coal = 7200 kcal /kg. Mass of feed water = 200 kg/hr *[sic: should be 2000 kg/hr]*. Enthalpy of steam produced = 670 kcal/kg. Economizer: Inlet temperature of feed water = 18°C. Outlet temperature of water = 88°C. Atmospheric temperature = 19°C. Temperature of flue gas entering = 350°C. Mass of flue gases = 4150 kg/hr. Determine the following (i) Efficiency of boiler. (ii) Efficiency of economizer. (iii) Efficiency of whole boiler plant.",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "method": "Boiler efficiency = $m_w(h_s - h_{fw})/(m_cC)$; economiser efficiency = heat to water / heat given by the gas; whole plant with the economiser = heat to steam from the inlet water / heat of the coal.",
-   "answer": "73.48 %; economiser 42.47 %; whole plant 82.32 % (with 2000 kg/h)",
-   "draws": [
-    "Diagram: where the heat of the coal goes"
    ]
   },
   {
@@ -633,29 +1282,6 @@
    ]
   },
   {
-   "id": "2020-21-4(d)",
-   "label": "20-21 4(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "hydro",
-   "subtopic": "Turbines",
-   "type": "theory",
-   "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=35",
-   "text": "With diagram, write short notes on Kaplan and Francis turbine.",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "points": "Francis: mixed flow (radial in, axial out) reaction turbine, fixed blades, medium heads. Kaplan: axial-flow propeller reaction turbine with adjustable blades, low heads and large flows, efficient over a wide load range.",
-   "draws": [
-    "Diagram: Francis turbine from above and Kaplan turbine in section"
-   ],
-   "compare": [
-    "Francis vs Kaplan turbine: mixed flow, fixed blades, medium head vs axial flow, adjustable blades, low head, large flow"
-   ]
-  },
-  {
    "id": "2020-21-5(a)",
    "label": "20-21 5(a)",
    "session": "2020-21",
@@ -676,65 +1302,6 @@
    ],
    "compare": [
     "Flat demand rate vs straight line meter rate: charged on connected load, no meter vs charged per kWh, ignores maximum demand"
-   ]
-  },
-  {
-   "id": "2020-21-5(b)",
-   "label": "20-21 5(b)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "econ",
-   "subtopic": "Cost per kWh",
-   "type": "numerical",
-   "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39",
-   "text": "Estimate the generating cost per KWh delivered from a generating station from the following data: Plant capacity = 50 MW. Annual load factor = 40%. Capital cost = 1.2 crores. Annual cost of wages, taxation, etc. = Taka 4 lakhs. Cost of fuel, lubrication, maintenance, etc. = 1.0 paisa/kWh generated. Interest 5% per annum, depreciation 6% per annum of initial value.",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "method": "Energy = capacity × load factor × 8760 h; fixed charges = interest and depreciation on the capital + wages and taxes; fixed cost per kWh = fixed charges / energy; add the running cost per kWh.",
-   "answer": "about 1.98 paisa/kWh (0.98 fixed + 1.0 running)"
-  },
-  {
-   "id": "2020-21-5(c)",
-   "label": "20-21 5(c)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "hydro",
-   "subtopic": "Civil works",
-   "type": "theory",
-   "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=41",
-   "text": "Write short note on- (i) Spillways (ii) Surge tanks (iii) Draft tubes",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "points": "Spillway: passes surplus flood water safely past the dam. Surge tank: on the penstock, absorbs water hammer on load drops and supplies water on load rises. Draft tube: widening outlet below a reaction turbine, regains exit energy and lets the turbine sit above the tail race.",
-   "draws": [
-    "Diagram: hydro plant with spillway, surge tank and draft tube"
-   ]
-  },
-  {
-   "id": "2020-21-5(d)",
-   "label": "20-21 5(d)",
-   "session": "2020-21",
-   "term_test": false,
-   "topic": "tariff",
-   "subtopic": "Two-part",
-   "type": "numerical",
-   "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=42",
-   "text": "An electric supply company having a maximum load of 50 MW generates $18\\times10^7$ units per annum and the supply consumers have an aggregate demand of 75 MW. The annual expenses including capital charges are: For fuel = Taka 90 lakhs. Fixed charges concerning generation = Taka 28 lakhs. Fixed charges concerning transmission and distribution = Taka 32 lakhs. Assuming 90% of the fuel cost is essential to running charges and the loss in transmission and distribution as 15% of KWh generated, deduce a two part tariff to find the actual cost of supply to the consumers.",
-   "repeat_of": "",
-   "times": 1,
-   "asked_in": [],
-   "outline": "",
-   "method": "Split the costs into running (per kWh) and fixed (per kW); kWh sold after losses; running cost / kWh sold; fixed cost / aggregate demand gives Tk per kW.",
-   "answer": "Tk 92 per kW per year + 5.29 paisa per kWh",
-   "draws": [
-    "Diagram: annual cost split into running and fixed charges"
    ]
   },
   {
@@ -827,21 +1394,101 @@
  "formulas": [
   {
    "topic": "load",
-   "subtopic": "Base and peak load",
+   "subtopic": "Factors",
    "title": "**Average load**",
-   "eq": "$P_{av} = \\dfrac{E}{t}$",
+   "eq": "$P_{av} = \\dfrac{E}{8760}$",
+   "used": [
+    {
+     "label": "19-20 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=10"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "**Load factor**",
+   "eq": "$\\text{LF} = \\dfrac{P_{av}}{P_{max}}$",
    "used": [
     {
      "label": "20-21 1(d)",
      "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=14"
+    },
+    {
+     "label": "19-20 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=10"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "**Capacity factor**",
+   "eq": "$\\text{CF} = \\dfrac{P_{av}}{C} = \\dfrac{E}{8760\\,C}$",
+   "used": [
+    {
+     "label": "19-20 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=10"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "**Use factor**",
+   "eq": "$\\text{UF} = \\dfrac{E}{C\\,t_{op}}$",
+   "used": [
+    {
+     "label": "19-20 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=10"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "Hours not in service",
+   "eq": "$t_{off} = 8760 - t_{op}$",
+   "used": [
+    {
+     "label": "19-20 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=10"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "**Reserve capacity**",
+   "eq": "$C - P_{max}$",
+   "used": [
+    {
+     "label": "20-21 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33"
+    },
+    {
+     "label": "19-20 6(e)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=52"
+    }
+   ]
+  },
+  {
+   "topic": "load",
+   "subtopic": "Factors",
+   "title": "Factors linked",
+   "eq": "$\\dfrac{\\text{CF}}{\\text{LF}} = \\dfrac{P_{max}}{C}$",
+   "used": [
+    {
+     "label": "19-20 1(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=10"
     }
    ]
   },
   {
    "topic": "load",
    "subtopic": "Base and peak load",
-   "title": "**Load factor**",
-   "eq": "$\\text{LF} = \\dfrac{P_{av}}{P_{max}}$",
+   "title": "**Average load**",
+   "eq": "$P_{av} = \\dfrac{E}{t}$",
    "used": [
     {
      "label": "20-21 1(d)",
@@ -912,8 +1559,8 @@
   {
    "topic": "load",
    "subtopic": "Factors",
-   "title": "Reserve capacity",
-   "eq": "$C - P_{max}$",
+   "title": "Energy at full load as per schedule",
+   "eq": "$E_{sched} = C\\,t_{op} = \\dfrac{E}{\\text{UF}}$",
    "used": [
     {
      "label": "20-21 4(c)",
@@ -922,14 +1569,14 @@
    ]
   },
   {
-   "topic": "load",
-   "subtopic": "Factors",
-   "title": "Energy at full load as per schedule",
-   "eq": "$E_{sched} = C\\,t_{op} = \\dfrac{E}{\\text{UF}}$",
+   "topic": "econ",
+   "subtopic": "Cost per kWh",
+   "title": "**Cost per kWh**",
+   "eq": "$\\dfrac{\\text{annual cost}}{E}$",
    "used": [
     {
-     "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33"
+     "label": "19-20 5(b)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=40"
     }
    ]
   },
@@ -1002,6 +1649,90 @@
     {
      "label": "20-21 6(a)",
      "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=45"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "title": "Energy in a year",
+   "eq": "$E = P_{max} \\times \\text{LF} \\times 8760$",
+   "used": [
+    {
+     "label": "19-20 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=32"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "title": "Energy sold",
+   "eq": "$E_{sold} = (1 - \\text{loss})\\,E$",
+   "used": [
+    {
+     "label": "19-20 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=32"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "title": "Aggregate demand",
+   "eq": "$\\sum P_{max,i} = \\text{DF} \\times P_{max}$",
+   "used": [
+    {
+     "label": "19-20 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=32"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "title": "**Two-part tariff**",
+   "eq": "$\\text{bill} = a \\times \\text{kW} + b \\times \\text{kWh}$",
+   "used": [
+    {
+     "label": "19-20 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=32"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "title": "Demand charge",
+   "eq": "$a = \\dfrac{\\text{annual fixed charges}}{\\sum P_{max,i}}$",
+   "used": [
+    {
+     "label": "19-20 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=32"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Two-part",
+   "title": "Energy charge",
+   "eq": "$b = \\dfrac{\\text{annual running charges}}{E_{sold}}$",
+   "used": [
+    {
+     "label": "19-20 4(a)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=32"
+    }
+   ]
+  },
+  {
+   "topic": "tariff",
+   "subtopic": "Power factor",
+   "title": "Power factor",
+   "eq": "$\\cos\\phi = \\dfrac{P}{S}$, $\\;S^{2} = P^{2} + Q^{2}$",
+   "used": [
+    {
+     "label": "19-20 4(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=37"
     }
    ]
   },
@@ -1187,6 +1918,66 @@
   },
   {
    "topic": "hydro",
+   "subtopic": "Power from rainfall",
+   "title": "**Water available**",
+   "eq": "$V = K\\,R\\,A$",
+   "used": [
+    {
+     "label": "19-20 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=20"
+    }
+   ]
+  },
+  {
+   "topic": "hydro",
+   "subtopic": "Power from rainfall",
+   "title": "Average discharge",
+   "eq": "$Q = \\dfrac{V}{8760 \\times 3600}$",
+   "used": [
+    {
+     "label": "19-20 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=20"
+    }
+   ]
+  },
+  {
+   "topic": "hydro",
+   "subtopic": "Power from rainfall",
+   "title": "**Electrical power**",
+   "eq": "$P = \\rho\\,g\\,Q\\,H\\,\\eta$",
+   "used": [
+    {
+     "label": "19-20 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=20"
+    }
+   ]
+  },
+  {
+   "topic": "hydro",
+   "subtopic": "Power from rainfall",
+   "title": "**Plant capacity**",
+   "eq": "$C = \\dfrac{P_{av}}{\\text{LF}}$",
+   "used": [
+    {
+     "label": "19-20 2(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=20"
+    }
+   ]
+  },
+  {
+   "topic": "hydro",
+   "subtopic": "Civil works",
+   "title": "Water hammer rise",
+   "eq": "$\\Delta p = \\rho\\,c\\,\\Delta v$",
+   "used": [
+    {
+     "label": "19-20 6(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=49"
+    }
+   ]
+  },
+  {
+   "topic": "hydro",
    "subtopic": "Turbines",
    "title": "**Water power**",
    "eq": "$P = \\rho g Q H$ (W); output $= \\eta\\,\\rho g Q H$",
@@ -1194,6 +1985,54 @@
     {
      "label": "20-21 4(d)",
      "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=35"
+    }
+   ]
+  },
+  {
+   "topic": "nuclear",
+   "subtopic": "Fission energy",
+   "title": "**Atoms in a mass**",
+   "eq": "$N = \\dfrac{m}{A}\\,N_A$",
+   "used": [
+    {
+     "label": "19-20 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "nuclear",
+   "subtopic": "Fission energy",
+   "title": "**Energy released**",
+   "eq": "$E = N\\,E_f$",
+   "used": [
+    {
+     "label": "19-20 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "nuclear",
+   "subtopic": "Fission energy",
+   "title": "Reactor power",
+   "eq": "$P = \\dfrac{E}{t}$",
+   "used": [
+    {
+     "label": "19-20 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=14"
+    }
+   ]
+  },
+  {
+   "topic": "nuclear",
+   "subtopic": "Fission energy",
+   "title": "Mass--energy",
+   "eq": "$E = \\Delta m\\,c^{2}$",
+   "used": [
+    {
+     "label": "19-20 1(c)",
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2019-20-pack.pdf#page=14"
     }
    ]
   }
