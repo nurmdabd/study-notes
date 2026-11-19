@@ -833,7 +833,7 @@
    "subtopic": "Factors",
    "type": "theory",
    "marks": 4.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=32",
    "text": "Define plant use factor and plant utility factor.",
    "repeat_of": "",
    "times": 1,
@@ -853,7 +853,7 @@
    "subtopic": "Factors",
    "type": "numerical",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=34",
    "text": "A generating station has a maximum demand of 20 MW, a load factor of 60%, a plant capacity factor of 48% and a plant use factor of 80%. Find: (i) The daily energy produced (ii) The reserve capacity of the plant (iii) The maximum energy that could be produced daily if the plant was running all the time (iv) The maximum energy that could be produced daily if the plant was running fully loaded and operating as per schedule.",
    "repeat_of": "",
    "times": 1,
@@ -1074,7 +1074,7 @@
    "subtopic": "Two-part",
    "type": "numerical",
    "marks": 9.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=42",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=43",
    "text": "An electric supply company having a maximum load of 50 MW generates $18\\times10^7$ units per annum and the supply consumers have an aggregate demand of 75 MW. The annual expenses including capital charges are: For fuel = Taka 90 lakhs. Fixed charges concerning generation = Taka 28 lakhs. Fixed charges concerning transmission and distribution = Taka 32 lakhs. Assuming 90% of the fuel cost is essential to running charges and the loss in transmission and distribution as 15% of KWh generated, deduce a two part tariff to find the actual cost of supply to the consumers.",
    "repeat_of": "",
    "times": 1,
@@ -1199,7 +1199,7 @@
    "subtopic": "Reactors",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=32",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33",
    "text": "Mention the types of reactors used in nuclear power plants.",
    "repeat_of": "",
    "times": 1,
@@ -1372,7 +1372,7 @@
    "subtopic": "Merits",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=50",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=51",
    "text": "Discuss the advantages and disadvantages of a Hydro-electric power plant.",
    "repeat_of": "",
    "times": 1,
@@ -1409,7 +1409,7 @@
    "subtopic": "Civil works",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=41",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=42",
    "text": "Write short note on- (i) Spillways (ii) Surge tanks (iii) Draft tubes",
    "repeat_of": "2018-19 7(d)",
    "times": 2,
@@ -1520,7 +1520,7 @@
    "subtopic": "Depreciation",
    "type": "theory",
    "marks": 7.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=45",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=46",
    "text": "What are the methods of determining depreciation cost in power plants? Briefly explain one of the methods.",
    "repeat_of": "",
    "times": 1,
@@ -1719,7 +1719,7 @@
    "subtopic": "Boiler efficiency",
    "type": "numerical",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=29",
    "text": "The following data is supplied for a boiler plant: Boiler: Mass of coal supplied = 220 kg /hr. Calorific value of coal = 7200 kcal /kg. Mass of feed water = 200 kg/hr *[sic: should be 2000 kg/hr]*. Enthalpy of steam produced = 670 kcal/kg. Economizer: Inlet temperature of feed water = 18°C. Outlet temperature of water = 88°C. Atmospheric temperature = 19°C. Temperature of flue gas entering = 350°C. Mass of flue gases = 4150 kg/hr. Determine the following (i) Efficiency of boiler. (ii) Efficiency of economizer. (iii) Efficiency of whole boiler plant.",
    "repeat_of": "",
    "times": 1,
@@ -1780,7 +1780,7 @@
    "subtopic": "Cost per kWh",
    "type": "numerical",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=40",
    "text": "Estimate the generating cost per KWh delivered from a generating station from the following data: Plant capacity = 50 MW. Annual load factor = 40%. Capital cost = 1.2 crores. Annual cost of wages, taxation, etc. = Taka 4 lakhs. Cost of fuel, lubrication, maintenance, etc. = 1.0 paisa/kWh generated. Interest 5% per annum, depreciation 6% per annum of initial value.",
    "repeat_of": "",
    "times": 1,
@@ -1836,7 +1836,7 @@
    "subtopic": "Turbines",
    "type": "theory",
    "marks": 8.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=35",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=36",
    "text": "With diagram, write short notes on Kaplan and Francis turbine.",
    "repeat_of": "",
    "times": 1,
@@ -2000,7 +2000,7 @@
    "subtopic": "Superheaters and economisers",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=27",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28",
    "text": "A superheater and an economizer improve the performance of a boiler-How?",
    "repeat_of": "",
    "times": 1,
@@ -2023,7 +2023,7 @@
    "subtopic": "Flat and meter rates",
    "type": "theory",
    "marks": 5.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=38",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39",
    "text": "Write short notes on the following type of tariffs: (i) Flat demand rate (ii) Straight line meter rate",
    "repeat_of": "",
    "times": 1,
@@ -2046,7 +2046,7 @@
    "subtopic": "Pulverisation",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=47",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=48",
    "text": "Why is pulverization done in a coal fired power plant? Give description of any basic type of pulverizers.",
    "repeat_of": "",
    "times": 1,
@@ -2066,7 +2066,7 @@
    "subtopic": "Impulse and reaction",
    "type": "theory",
    "marks": 6.0,
-   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=48",
+   "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=49",
    "text": "Write short notes on: (i) Impulse turbine (ii) Reaction turbines",
    "repeat_of": "",
    "times": 1,
@@ -2150,7 +2150,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=34"
     },
     {
      "label": "19-20 6(e)",
@@ -2282,7 +2282,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=34"
     }
    ]
   },
@@ -2294,7 +2294,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=32"
     }
    ]
   },
@@ -2306,7 +2306,7 @@
    "used": [
     {
      "label": "20-21 4(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=31"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=32"
     }
    ]
   },
@@ -2318,7 +2318,7 @@
    "used": [
     {
      "label": "20-21 4(c)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=33"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=34"
     }
    ]
   },
@@ -2366,7 +2366,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=40"
     }
    ]
   },
@@ -2378,7 +2378,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=40"
     }
    ]
   },
@@ -2390,7 +2390,7 @@
    "used": [
     {
      "label": "20-21 5(b)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=40"
     }
    ]
   },
@@ -2402,7 +2402,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -2414,7 +2414,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -2426,7 +2426,7 @@
    "used": [
     {
      "label": "20-21 6(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=45"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=46"
     }
    ]
   },
@@ -2586,7 +2586,7 @@
    "used": [
     {
      "label": "20-21 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=38"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39"
     }
    ]
   },
@@ -2598,7 +2598,7 @@
    "used": [
     {
      "label": "20-21 5(a)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=38"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=39"
     }
    ]
   },
@@ -2610,7 +2610,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=42"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -2622,7 +2622,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=42"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -2634,7 +2634,7 @@
    "used": [
     {
      "label": "20-21 5(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=42"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=43"
     }
    ]
   },
@@ -2778,7 +2778,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=29"
     }
    ]
   },
@@ -2790,7 +2790,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=29"
     }
    ]
   },
@@ -2802,7 +2802,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=29"
     }
    ]
   },
@@ -2814,7 +2814,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=29"
     }
    ]
   },
@@ -2826,7 +2826,7 @@
    "used": [
     {
      "label": "20-21 3(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=28"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=29"
     }
    ]
   },
@@ -2910,7 +2910,7 @@
    "used": [
     {
      "label": "20-21 4(d)",
-     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=35"
+     "link": "https://nurmdabd.github.io/study-notes/EEE443-PPE/PPE-2020-21-pack.pdf#page=36"
     }
    ]
   },
